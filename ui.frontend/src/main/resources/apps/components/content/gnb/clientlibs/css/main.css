@@ -59,6 +59,7 @@
 .header-wrap .user-info-box .user-info__inner .user-info__menu { min-width: 160px; height: auto; background: #ffffff; padding: 16px 0 24px; border-radius: var(--border-base); box-shadow: var(--list-shadow) } 
 /* .header-wrap .user-info-box .user-info__inner .user-info__menu > li { margin-top: 16px; }  */
 .header-wrap .user-info-box .user-info__inner .user-info__menu > li > a { display:block; font-size: 14px; padding:8px 16px; } 
+.header-wrap .user-info-box .user-info__inner .user-info__menu > li > a.underline { text-decoration: underline; } 
 .header-wrap .user-info-box .user-info__inner .user-info__menu > li > a:hover,
 .header-wrap .user-info-box .user-info__inner .user-info__menu > li > a:focus-visible { font-weight: 700;} 
 .header-wrap .user-info-box.active .user-info__inner { display: block; z-index: 9; } 
@@ -196,6 +197,7 @@
  .header-wrap .header-gnb .mo-sign-menu-box .btn-txt.hidden { display:none !important; } 
  .header-wrap .header-gnb .mo-sign-menu-box .btn-txt .btn-txt__txt { font-size: 20px; font-weight: 400; } 
  .header-wrap .header-gnb .mo-sign-menu-box .btn-txt + .btn-txt { margin-top: 40px; } 
+ .header-wrap .header-gnb .mo-sign-menu-box .btn-txt.underline { text-decoration: underline; } 
  .header-wrap .header-gnb .mo-quick-menu-box { padding: 40px 24px 20px; margin-top: 20px; border-top: 1px solid #dadada; } 
  .header-wrap .header-gnb .mo-quick-menu-box .btn-txt { display: flex !important; width: 100%; margin: 0; } 
  .header-wrap .header-gnb .mo-quick-menu-box .btn-txt .btn-txt__txt { flex: auto; font-size: 22px; font-weight: 700; } 
