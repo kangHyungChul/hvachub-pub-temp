@@ -1,0 +1,28 @@
+
+/* search */
+.Select-Project-popup .popup-wrap__inner:not(:has(.popup__footer)) .popup__header { padding-bottom: 32px; } 
+.Select-Project-popup .select_project__search { display: flex; gap: 16px; background: #f7f7f7; font-size: 0; padding:24px; margin-bottom: 32px; border-radius: var(--border-base); } 
+.Select-Project-popup .select_project__search .field-box { flex:none } 
+.Select-Project-popup .select_project__search .field-box .combo-box,
+.Select-Project-popup .select_project__search .field-box .input-datepicker { min-width: 182px; width: 182px; } 
+.Select-Project-popup .select_project__search .field-box .input-datepicker + .txt-p4 { margin: 0 8px; color:#a9a9a9; } 
+.Select-Project-popup .select_project__search .field-box:last-of-type { display: flex; gap: 16px; flex:auto; } 
+.Select-Project-popup .select_project__search .field-box:last-of-type .input-search { flex: auto; } 
+.Select-Project-popup .select_project__search .field-box:last-of-type .input-search .icon-search-delete { right: 16px; } 
+.Select-Project-popup .select_project__search .field-box:last-of-type .input-search .mo-search-btn { display: none; } 
+.Select-Project-popup .select_project__search .field-box:last-of-type .pc-search-btn { flex: none; } 
+.Select-Project-popup .select_project__search .icon-mo-folded { display: none; } 
+
+/* accordion */
+.Select-Project-popup .basic-list__top { display: flex; justify-content: flex-end; align-items: center; padding-bottom:14px; margin-bottom:0; border-bottom:2px solid #000; }
+.Select-Project-popup .accordion-box.sm .accordion__tit { min-height:54px; height:auto; padding:8px 0 8px 8px; }
+.accordion_cont .list-nodata.gray { background-color:#f7f7f7; border-bottom:0; }
+.accordion_cont .list-nodata.gray p { color:#757575; }
+.Select-Project-popup .accordion-box.sm.active { padding-bottom:0; }
+.Select-Project-popup .accordion-box .accordion__tit .left .tit { font-size:16px; color:#000; }
+.Select-Project-popup .accordion-box .left .txt-line-slash { color:#666; }
+.Select-Project-popup .accordion-box .left .txt-line-slash strong { font-weight:700; }
+.Select-Project-popup .accordion-box .accordion_cont .lr-list-data-area .list-data li { padding-bottom:16px; }
+.Select-Project-popup .accordion-box .accordion_cont .left .tit { font-weight: 700; }
+.Select-Project-popup .accordion-box.sm .accordion__tit .icon-accordion { top:clac(50% - 20px); width:48px; height:40px; background-size:24px;}
+

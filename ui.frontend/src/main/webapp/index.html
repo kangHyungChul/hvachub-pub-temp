@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마크업</title>
+<style>
+* {box-sizing:border-box;margin:0;padding:0;font-size:12px;font-family:'맑은 고딕','Malgun Gothic',Arial, sans-serif;color:#222222;line-height:1.25;}
+body{-webkit-text-size-adjust:none;word-wrap:break-word;word-break:break-all;padding:1em;}
+ul,ol{list-style:none}
+a{color:#000;text-decoration:none}
+header {position: sticky;top:0;left:0;width:100%;background: #ffffff;padding:1em 0;border-bottom:3px solid #222}
+header h1 {font-size: 1.3em;}
+header ul {display: flex;align-items: center;gap: 1em;background:#eee;margin-top:10px;padding:1em}
+header ul a{background:none;text-decoration:underline;padding:0.8em}
+header ul a:first-child{padding-left:.1em}
+main h2 {clear:both;padding:2em .1em .4em;border-bottom:1px solid #000;font-size:1.2em}
+main ul {font-size:1.1em}
+main li {padding:.7em .1em .6em;border-bottom:1px solid #dfdfdf}
+main li a {display:block;background:url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100% 50%;}
+main li a span {margin-left:.4em;font-size:.86em;color:#909090}
+</style>
+</head>
+<body>
+    <header role="navigation">
+        <h1>마크업 산출물</h1>
+        <ul>
+         <li><a href="#template">Template</a></li>
+         <li><a href="#common">Common</a></li>
+         <li><a href="#component">Component</a></li>
+         <li><a href="#title1">Title1</a></li>
+         <li><a href="#title2">Title2</a></li>
+         <li><a href="#title3">Title3</a></li>
+        </ul>
+    </header>  
+    <main>
+        <h2 id="template">Template</h2>
+        <ul>
+            <li><a href="/dev/"> <span>/ </span></a></li>
+            <li><a href="/dev/"> <span>/ </span></a></li>
+        </ul>
+
+        <h2 id="common">Common</h2>
+        <ul>
+            <li><a href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-basepage/commonUi.html">commonUi.html</a> </li>
+            <li><a href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-basepage/commonFloat.html">commonFloat.html</a> </li>
+            <li><a href="/apps/components/content/sample-component/component.html">component name<span>/sample-component/component.html</span></a></li>
+            <li><a href="/apps/components/content/  ">  <span> </span></a></li>
+        </ul>
+        <h2 id="component">component</h2>
+        <ul>
+            <li><a href="/apps/components/content/sample-component/component.html">component name<span>/sample-component/component.html</span></a></li>
+            <li><a href="/apps/components/content/  ">  <span> </span></a></li>
+        </ul>
+        <h2 id="title1">Title1</h2>
+        <ul>
+            <li><a href="/apps/components/content/sample-component/component.html">component name<span>/sample-component/component.html</span></a></li>
+            <li><a href="/apps/components/content/  ">  <span> </span></a></li>
+        </ul>
+
+        <h2 id="title2">Title2</h2>
+        <ul>
+            <li><a href="/apps/components/content/sample-component/component.html">component name<span>/sample-component/component.html</span></a></li>
+            <li><a href="/apps/components/content/  ">  <span> </span></a></li>
+        </ul>
+
+        <h2 id="title3">Title3</h2>
+        <ul>
+            <li><a href="/apps/components/content/sample-component/component.html">component name<span>/sample-component/component.html</span></a></li>
+            <li><a href="/apps/components/content/  ">  <span> </span></a></li>
+        </ul>
+    </main>
+</body>
+</html>

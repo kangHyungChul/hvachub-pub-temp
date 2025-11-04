@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Order Status</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  
+  <!-- component -->
+  <section class="order-list-sect">
+    <div class="ord-list-search">
+      <div class="field-box">
+        <label class="txt-label txt-blind">order status search</label>
+        <div class="input-box input-search box-type">
+          <input type="search" class="input-box__input" id="default-search" placeholder="Type a project name or PO number or order user or model code">
+          <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+        </div>
+      </div>
+      <div class="field-box-area">
+        <div class="field-box">
+          <label class="txt-label">Type</label>
+          <div class="combo-box box-type">
+            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">All</button>
+            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+              <ul class="combo-box__menu-list">
+                <li role="menuitem" class="selected">All</li>
+                <li role="menuitem">Online (General)</li>
+                <li role="menuitem">Online (Project)</li>
+                <li role="menuitem">Online (Run-rate)</li>
+                <!-- 2025-09-01 추가 / multi project-->
+                <li role="menuitem">Online (Multi Project)</li>
+                <li role="menuitem">Offline</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="field-box">
+          <label class="txt-label">Credit Block</label>
+          <div class="combo-box box-type">
+            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">All</button>
+            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+              <ul class="combo-box__menu-list">
+                <li role="menuitem" class="selected">All</li>
+                <li role="menuitem">Y</li>
+                <li role="menuitem">N</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 2025-01-10 Status 추가  -->
+        <div class="field-box">
+          <label class="txt-label">Status</label>
+          <div class="combo-box box-type">
+            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">All</button>
+            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+              <ul class="combo-box__menu-list">
+                <li role="menuitem" class="selected">All</li>
+                <li role="menuitem">Open</li>
+                <li role="menuitem">Prepared</li>
+                <li role="menuitem">Shipped</li>
+                <li role="menuitem">Completed</li>
+                <li role="menuitem">Canceled</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="field-box">
+          <label class="txt-label" for="">Order date</label>
+          <div class="datepicker-area">
+            <input type="text" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+            <span class="txt-p5">~</span>
+            <input type="text" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+          </div>
+        </div>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Search</span>
+        </button>
+      </div>
+
+      <!-- [F]모바일용 열기/펼치기 버튼-->
+      <button class="btn-icon icon-mo-folded">
+        <span class="txt-blind">mobile search folded</span>
+      </button>
+    </div>
+
+    <!-- 2025-01-10 class 변경 my-result__wrap ==> basic-list-wrap -->
+    <div class="basic-list-wrap">
+      <!-- 2025-01-10 class 변경 result__num-btn ==> basic-list__top -->
+      <div class="basic-list__top">
+        <p class="txt-fw-b txt-p6">
+          <span class="txt-point1">10</span> Results
+        </p>
+      </div>
+      <!-- 2025-01-10 div 삭제 orser-list-result -->
+      <!-- 2025-01-10 class 변경 result-list__wrap ==> basic-list__result / 태그 변경 ul ==> div -->
+      <div class="basic-list__result">
+        <!-- head -->
+        <!-- 2025-01-10 class 변경 list__head ==> list-head / 태그 변경 li ==> ul-->
+        <ul class="list-head">
+          <!--  2025-01-10 항목 추가 및 순서 변경 / class 추가 list-el / class 변경 ' ord-' ==> ' el- '  -->
+          <li class="list-el el-snum">
+            <span class="txt-p5 txt-fw-b">SO Number</span>
+          </li>
+          <li class="list-el el-num">
+            <span class="txt-p5 txt-fw-b">PO Number</span>
+          </li>
+          <li class="list-el el-type">
+            <span class="txt-p5 txt-fw-b">Type</span>
+          </li>
+          <li class="list-el el-name">
+            <span class="txt-p5 txt-fw-b">Project Name</span>
+            <div class="table-align-box">
+              <!-- [F] 선택된 정렬 상태 : .on -->
+              <button type="button" class="btn-icon icon-align-top">
+                <span class="txt-blind">Ascending</span>
+              </button>
+              <button type="button" class="btn-icon icon-align-bottom on">
+                <span class="txt-blind">descending</span>
+              </button>
+            </div>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Total Amount</span>
+            <div class="table-align-box">
+              <!-- [F] 선택된 정렬 상태 : .on -->
+              <button type="button" class="btn-icon icon-align-top">
+                <span class="txt-blind">Ascending</span>
+              </button>
+              <button type="button" class="btn-icon icon-align-bottom on">
+                <span class="txt-blind">descending</span>
+              </button>
+            </div>
+          </li>
+          <li class="list-el el-date">
+            <span class="txt-p5 txt-fw-b">Order Date</span>
+            <div class="table-align-box">
+              <!-- [F] 선택된 정렬 상태 : .on -->
+              <button type="button" class="btn-icon icon-align-top">
+                <span class="txt-blind">Ascending</span>
+              </button>
+              <button type="button" class="btn-icon icon-align-bottom on">
+                <span class="txt-blind">descending</span>
+              </button>
+            </div>
+          </li>
+          <li class="list-el el-pdf">
+            <span class="txt-p5 txt-fw-b">Proforma</span>
+          </li>
+          <li class="list-el el-credit">
+            <span class="txt-p5 txt-fw-b">Credit block</span>
+          </li>
+          <li class="list-el el-status">
+            <span class="txt-p5 txt-fw-b">Status</span>
+          </li>
+        </ul>
+        <!-- //head -->
+        <!-- result -->
+        <!-- 2025-01-10 class 변경 list__el-box ==> list-body / 태그 변경 li ==> ul -->
+        <ul class="list-body">
+          <!-- 2025-01-10 ul 삭제 : list-data -->
+          <!-- 2025-01-10 class 변경 : list__el ==> list-row   -->
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Online (Run-rate)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  Samsung hvac Aircon
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              <i class="icon-check">
+                <span class="txt-blind">checked</span>
+              </i>
+            </div>
+            <div class="list-el el-status">
+              <!-- 2025-01-10 status class 변경 -->
+              <span class="txt-p6 txt-fw-b">Open</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Online (General)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  -
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              <i class="icon-check">
+                <span class="txt-blind">checked</span>
+              </i>
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Prepared</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Online (Project)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  Elie Saab Bosphorus Kandilli ( Senar - Tor Holding )
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              -
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Shipped</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Offline</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  -
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              -
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Completed</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Online (Project)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  -
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              -
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Canceled</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Online (Project)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  Samsung hvac Aircon
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              -
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Canceled</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Online (Project)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  Samsung hvac Aircon
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              -
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Canceled</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Online (Project)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  Samsung hvac Aircon
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              -
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Canceled</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <!-- 2025-09-01 추가 / multi project-->
+              <span class="txt-p5">Online (Multi Project)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  Samsung hvac Aircon
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              -
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Canceled</span>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-snum">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-num">
+              <span class="txt-p5">PQ12345678</span>
+            </div>
+            <div class="list-el el-type">
+              <span class="txt-p5">Online (Project)</span>
+            </div>
+            <div class="list-el el-name">
+              <span class="txt-p5">
+                <a href="javascript:void(0)" target="_blank">
+                  Samsung hvac Aircon
+                </a>
+              </span>
+            </div>
+            <div class="list-el el-total">
+              <span class="txt-p5 txt-fw-b">808.499,00 TL</span>
+            </div>
+            <div class="list-el el-date">
+              <span class="txt-p5">2024-03-28</span>
+            </div>
+            <div class="list-el el-pdf">
+              <a role="button" class="btn-icon icon-pdf" href="#">
+                <span class="txt-blind">PDF Download</span>
+              </a>
+            </div>
+            <div class="list-el el-credit">
+              -
+            </div>
+            <div class="list-el el-status">
+              <span class="txt-p6 txt-fw-b">Canceled</span>
+            </div>
+          </li>
+        </ul>
+        <!-- result -->
+        <!-- no result -->
+        <div class="list-nodata" >
+          <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5 -->
+          <p class="txt-p5">No matching results found.</p>
+        </div>
+        <!-- //no result -->
+      </div>
+
+      <div class="pagination pc-display">
+        <ul class="page-list">
+          <!-- disabled : aria-disabled="true" -->
+          <li class="btn-icon page-btn__prev" aria-disabled="true">
+            <a aria-label="prev" href="#">
+              <span class="txt-blind">prev</span>
+            </a>
+          </li>
+          <li class="page"> <a href="#" aria-label="Go to page 1" class="page-list__no selected">1</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 2" class="page-list__no">2</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 3" class="page-list__no">3</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 4" class="page-list__no">4</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 5" class="page-list__no">5</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 6" class="page-list__no">6</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 7" class="page-list__no">7</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 8" class="page-list__no">8</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 9" class="page-list__no">9</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 10" class="page-list__no">10</a></li>
+          <li class="btn-icon page-btn__next">
+            <a aria-label="next" href="#">
+              <span class="txt-blind">next</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- [F]모바일 버튼 추가 -->
+      <div class="tal-center mo-display">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">View more</span>
+          <i class="btn-block__icon icon-arrow-bottom"></i>
+        </button>
+      </div>
+    </div>
+
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

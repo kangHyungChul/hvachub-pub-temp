@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Follow-up Inquiry</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/follow-up-inquiry/clientlibs/css/main.css">
+
+</head>
+
+<body>
+  <!-- component -->
+  <section class="follow-up-inquiry">
+    <h2 class="follow-inquiry-tit txt-h3 txt-fw-b">Follow Up Inquiry</h2>
+    <!-- 240531 title 명칭 수정 (Follow-up Inquiry -> Follow Up Inquiry) -->
+    <article class="follow-inquiry-form__wrap">
+      <div class="form__inner"><!-- 240625 div.form__inner 요소 추가 -->
+        <!-- p.form-top 요소 삭제 -->
+        <ul class="inquiry-history-box">
+          <!-- ID -->
+          <li class="history-list__el">
+            <strong class="list__el-tit txt-p5 txt-fw-b">ID</strong>
+            <p class="list__el-cont txt-p5 txt-fw-b">IS20512758</p>
+          </li>
+          <!-- Category -->
+          <li class="history-list__el">
+            <strong class="list__el-tit txt-p5 txt-fw-b">Category</strong>
+            <p class="list__el-cont txt-p5">
+              <!-- 240725 category 텍스트 분리 -->
+              <span class="cate-txt">Product</span><span class="cate-txt">Pre-Sales support</span>
+            </p>
+          </li>
+          <!-- Subject -->
+          <li class="history-list__el">
+            <strong class="list__el-tit txt-p5 txt-fw-b">Subject</strong>
+            <p class="list__el-cont txt-p5">What Should I Do If The Courier Does Not Find Me At Home At The Time Of
+              Delivery?</p>
+          </li>
+          <!-- Type(dvm pro 2.0) -->
+          <!-- 240725 Type 항목 제거 -->
+        </ul>
+        <div class="form-box">
+          <!-- Issue -->
+          <div class="field-box issue">
+            <label class="txt-label txt-req" for="issue-textbox">Issue</label>
+            <div class="box">
+              <!-- 240612 textarea에 error class 추가시 border red로 변경 -->
+              <textarea class="textarea error" maxlength="3000" id="issue-textbox"
+                placeholder="Please explain your issue or questions"></textarea>
+              <p class="maxlength__desc txt-p6">
+                <span>0</span>/3000<!-- 240625 character 텍스트 제거 -->
+              </p>
+              <p class="txt-error">This field is required.</p><!-- 240625 유효성 문구 변경 -->
+            </div>
+          </div>
+          <!-- Attachment File -->
+          <div class="field-box attachment">
+            <label class="txt-label">Attachment File</label>
+            <div class="attach-box">
+              <div class="attach-cont__wrap">
+                <ul class="file-list__wrap">
+                  <li class="file-list__el">
+                    <p class="file-name txt-p6">File name 1 File name 1 File name 1 File name 1 File name 1 File name
+                      1.png</p><!-- 파일명 --><!-- 240812 검수용 파일 확장 노출 -->
+                    <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                  </li>
+                  <li class="file-list__el">
+                    <p class="file-name txt-p6">File name 2.pdf</p><!-- 파일명 -->
+                    <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                  </li>
+                  <li class="file-list__el">
+                    <p class="file-name txt-p6">File name 3.jpeg</p><!-- 파일명 -->
+                    <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                  </li>
+                  <li class="file-list__el">
+                    <p class="file-name txt-p6">File name 4.pptx</p><!-- 파일명 -->
+                    <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                  </li>
+                  <li class="file-list__el">
+                    <p class="file-name txt-p6">File name 5.xlsx</p><!-- 파일명 -->
+                    <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                  </li>
+                </ul>
+                <div class="upload-btn__box">
+                  <input type="file" id="upload-file" accept=".xlsx,.xls,.jpeg,.jpg,.gif,.pdf,.png,.tif,.pptx,.zip."
+                    class="hidden-file-input" name="file-upload" /><!-- 240725 multiple 속성 제거 -->
+                  <label for="upload-file">
+                    <div class="btn-block upload-btn">
+                      <span class="btn-block__txt">Upload</span>
+                    </div>
+                  </label>
+                  <div class="upload-caution">
+                    <span class="icon txt-p7">※</span>
+                    <p class="txt txt-p7">
+                      File must be less than 2GB. Allowed file types : xlsx, xls, jpeg, jpg, gif, pdf, png, tif, pptx,
+                      zip.<br>
+                      Files larger than 50MB will be automatically deleted after 90 days.
+                    </p>
+                  </div>
+                  <p class="txt-error">You can register up to 5 files maximum.</p><!-- 240708 p.txt-error 추가 -->
+                  <p class="txt-error">Please check the file size and types.</p><!-- 240708 p.txt-error 추가 -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- button -->
+        <div class="btn-box">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <!-- 
+              alert
+              button의 data-layer-target 값과 일치하는 div.alert-wrap id 값의 popup open
+              submit alert id = follow-inquiry-submit-alert
+            -->
+          <button type="button" class="btn-block md type2" data-layer-target="follow-inquiry-submit-alert">
+            <span class="btn-block__txt">Submit</span>
+          </button>
+        </div>
+      </div>
+    </article>
+
+    <!-- submit arlert  -->
+    <div class="alert-wrap" id="follow-inquiry-submit-alert">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Submit</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Are you sure you want to submit it?</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md"
+            onclick="window.hvachubFunc.closePopup('create-inquiry-submit-alert')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/follow-up-inquiry/clientlibs/js/main.js"></script><!-- 컴포넌트 js -->
+</body>
+
+</html>

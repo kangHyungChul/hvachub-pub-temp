@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>commonUi</title>
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+  
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <button type="button" class="btn-block" data-layer-target="popup-layer00">
+    <span class="btn-block__txt"> 기본 팝업 </span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="popup-layer01">
+    <span class="btn-block__txt"> 버튼 없는 팝업</span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="popup-layer02">
+    <span class="btn-block__txt"> 타이틀, 버튼 없는 팝업</span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="popup-layer03">
+    <span class="btn-block__txt"> 스크롤이 생기는 기본 팝업 </span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="popup-layer04">
+    <span class="btn-block__txt"> 스크롤이 생기는 버튼 없는 팝업 </span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="popup-layer05">
+    <span class="btn-block__txt"> 스크롤이 생기는 타이틀, 버튼 없는 팝업 </span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="alert-layer00">
+    <span class="btn-block__txt"> default alert </span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="alert-layer01">
+    <span class="btn-block__txt"> Delete alert</span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="alert-layer02">
+    <span class="btn-block__txt"> Share alert</span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="alert-layer03">
+    <span class="btn-block__txt"> Saved Cart alert</span>
+  </button>
+
+  <!-- alert open : .active -->
+  <!-- alert default -->
+  <div class="alert-wrap" id="alert-layer00">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="aler__container">
+        <p class="txt-p6">Are you sure you want to delete it?</p>
+      </div>
+      <div class="alert__footer">
+        <!-- 특정 버튼에 closePopup 적용 예시 -->
+        <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup()">
+          <span class="btn-block__txt">close</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+  <!-- //alert default -->
+  <!-- Delete alert -->
+  <div class="alert-wrap" id="alert-layer01">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="alert__header">
+        <p class="txt-h7">Delete</p>
+      </div>
+      <div class="aler__container">
+        <p class="txt-p6">
+          texttexttexttexttextt exttexttexttexttextt
+          exttexttexttexttextexttexttexttexttexttextttext
+        </p>
+      </div>
+      <div class="alert__footer">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">No</span>
+        </button>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Yes</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+  <!-- //Delete alert -->
+  <!-- share alert -->
+  <div class="alert-wrap" id="alert-layer02">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="alert__header">
+        <p class="txt-h7">Share</p>
+      </div>
+      <div class="aler__container"></div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+  <!-- //share alert -->
+  <!-- save cart alert -->
+  <div class="alert-wrap" id="alert-layer03">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="alert__header">
+        <p class="txt-h7">Saved Cart</p>
+      </div>
+      <div class="aler__container">
+        <p class="txt-p6">
+          Would you like to save to 'Saved Cart'? <br />
+          Please write the Cart name.
+        </p>
+
+        <div class="field-box space-mt24">
+          <label class="txt-label txt-req" for="required-input">Cart Name</label>
+          <div class="input-box">
+            <input type="text" class="input-box__input" id="required-input" placeholder="Type a cart name" required />
+          </div>
+          <p class="txt-error">Cart name is required</p>
+          <p class="txt-error">
+            The cart name is duplicated. Please enter again.
+          </p>
+        </div>
+      </div>
+      <div class="alert__footer">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">Back</span>
+        </button>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Save</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+  <!-- //save cart -->
+
+  <!-- 팝업 오픈 : .active -->
+  <!-- 팝업 기본 -->
+  <div class="popup-wrap" id="popup-layer00">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Popup Title</p>
+      </div>
+      <div class="popup__container">
+        <div class="" style="height: 500px"></div>
+      </div>
+      <div class="popup__footer">
+        <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup()">
+          <span class="btn-block__txt">Cancle</span>
+        </button>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Save</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 팝업 버튼 없는 경우 -->
+  <div class="popup-wrap" id="popup-layer01">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Popup Title</p>
+      </div>
+      <div class="popup__container">
+        <div class="" style="height: 500px"></div>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 팝업 타이틀,버튼 없는 경우 -->
+  <div class="popup-wrap" id="popup-layer02">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__container">
+        <div class="" style="height: 500px"></div>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 스크롤이 생기는 기본 팝업 -->
+  <div class="popup-wrap" id="popup-layer03">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Popup Title</p>
+      </div>
+      <div class="popup__container">
+        <div class="" style="height: 500px"></div>
+      </div>
+      <!-- shadow -->
+      <div class="popup__footer">
+        <button type="button" class="btn-block lg" onclick="window.hvachubFunc.closePopup()">
+          <span class="btn-block__txt">Cancle</span>
+        </button>
+        <button type="button" class="btn-block type2 lg" data-layer-target="popup-layer00">
+          <span class="btn-block__txt">Save</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 스크롤이 생기는 팝업 버튼 없는 경우 -->
+  <div class="popup-wrap" id="popup-layer04">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Popup Title</p>
+      </div>
+      <div class="popup__container">
+        <div class="" style="height: 800px"></div>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 스크롤이 생기는 팝업 버튼 없는 경우 -->
+  <div class="popup-wrap" id="popup-layer05">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__container">
+        <div class="" style="height: 800px"></div>
+      </div>
+      <button type="button" class="btn-icon icon-close">
+        <span class="txt-blind">Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+</body>
+
+</html>

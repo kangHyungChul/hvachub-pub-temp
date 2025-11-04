@@ -1,0 +1,71 @@
+.announcement-list { max-width: 1440px; margin: 0 auto; padding: 0 24px; } 
+.announce-list-search__wrap { display: flex; gap: 12px; background-color: #f7f7f7; padding: 24px; margin-bottom: 24px; border-radius: var(--border-base); } 
+.announce-list-search__wrap .field-box.category { flex: 0 0 227px; } 
+.announce-list-search__wrap .field-box.category .combo-box { width: 100%; } 
+.announce-list-search__wrap .field-box.search { flex: auto; } 
+.announce-list-search__wrap .input-search-box .input-search { min-width: auto; width: 100%; max-width: 640px; } 
+.announce-list-search__wrap .input-search-box .input-search .input-box__input { padding-right: 46px; } 
+.announce-list-search__wrap .input-search-box .input-search .icon-search-delete { right: 16px } 
+
+/* list */
+.announcement-list .basic-list-wrap { padding: 0; border-radius: 0; } 
+/* result */
+.announcement-list .basic-list__result { margin-bottom: 24px; } 
+.announcement-list .basic-list__result .el-no { width: 48px; } 
+.announcement-list .basic-list__result .el-cate { width: 242px; } 
+.announcement-list .basic-list__result .el-title { flex: auto; } 
+.announcement-list .basic-list__result .el-date { width: 144px; } 
+.announcement-list .list-body .el-title { text-align: left; } 
+.announcement-list .list-body .list-row { display: block; padding-block: 0; } 
+.announcement-list .list-body .list-row > a { display: flex; align-items: center; min-height: 56px; } 
+.announcement-list .list-body .list-row:hover .el-title .txt-p5 { font-weight: 700; text-decoration: underline; } 
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .announcement-list { padding: 0 1.667vw; } 
+ .announce-list-search__wrap { gap: 0.833vw; padding: 1.667vw; margin-bottom: 1.667vw; } 
+ .announce-list-search__wrap .field-box.category { flex: 0 0 15.764vw; } 
+ .announce-list-search__wrap .input-search-box .input-search { max-width: 44.444vw; } 
+ .announce-list-search__wrap .input-search-box .input-search .input-box__input { padding-right: 3.194vw; } 
+ .announce-list-search__wrap .input-search-box .input-search .icon-search-delete { right: 1.111vw } 
+ 
+ /* result */
+ .announcement-list .basic-list__result { margin-bottom: 1.667vw; } 
+ .announcement-list .basic-list__result .el-no { width: 3.333vw; } 
+ .announcement-list .basic-list__result .el-cate { width: 16.806vw; } 
+ .announcement-list .basic-list__result .el-date { width: 10vw; } 
+ .announcement-list .list-body .list-row > a { min-height: 3.889vw; } 
+
+/* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .announcement-list { padding: 0; } 
+ .announce-list-search__wrap { border-radius: 0; display: block; } 
+ .announce-list-search__wrap .field-box { width: 100%; } 
+ .announce-list-search__wrap .field-box.category .combo-box,
+ .announce-list-search__wrap .input-search-box .input-search { margin-bottom: 12px; } 
+ .announce-list-search__wrap .input-search-box { display: block; } 
+ .announce-list-search__wrap .input-search-box .input-search { max-width: none; } 
+ .announce-list-search__wrap .input-search-box > .btn-block { margin-left: 0; width: 100%; } 
+
+ /* list */
+ .announcement-list .basic-list-wrap { padding: 0 24px; } 
+ /* result */
+ .announcement-list .basic-list__result .list-el { width: 100%; text-align: left; padding-inline: 0; } 
+ .announcement-list .basic-list__result .el-no,
+ .announcement-list .list-head { display: none; } 
+ .announcement-list .list-body .txt-p5 { font-size: 12px !important; color: #555555; } 
+ .announcement-list .list-body .el-title { overflow: initial; text-overflow: initial; white-space: initial; margin-block: 4px; } 
+ .announcement-list .list-body .el-title .txt-p5 { font-size: 14px !important; font-weight: 700; color: #000000 } 
+ .announcement-list .list-body .el-date .txt-p5 { color: #555555; } 
+ .announcement-list .list-body .list-row > a { display: block; padding:16px 8px; } 
+ .announcement-list .list-body .list-row:hover .el-title .txt-p5 { text-decoration: none } 
+
+
+
+/* [E]Mobile */ } 

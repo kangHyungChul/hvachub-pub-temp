@@ -1,0 +1,279 @@
+.library-detail-sect { max-width: 1440px; width: 100%; margin: 0 auto; padding: 24px 24px 80px; } 
+.library-detail-sect .lib-tit-area { position: relative;  overflow: initial; margin-bottom: 0; } 
+.library-detail-sect .lib-tit-area .txt-h3 { font-size:32px !important; }
+.library-detail-sect .lib-tit-area .list { position: absolute; top:4px; right:0; }
+.library-detail-sect .lib-tit-area .btn-box { margin-top:8px; }
+.library-detail-sect .lib-tit-area .btn-box .icon-share { margin-right: 12px; } 
+
+/* File information */
+.library-detail-sect .lib-file-info { display: flex; flex-wrap: wrap; align-items: flex-start; column-gap: 24px; padding: 16px 16px 24px; margin-bottom:24px; border-bottom: 1px solid #cccccc; } 
+.library-detail-sect .lib-file-info .file-info__tit { flex: none; font-size: 16px; font-weight: 700; padding: 8px 12px; } 
+.library-detail-sect .lib-file-info .file-info__info { flex: auto; padding: 8px 10px 0; margin-left: 24px; } 
+.library-detail-sect .lib-file-info .file-info__info .txt-p5 { line-height:27px; }
+.library-detail-sect .lib-file-info .file-info__info .tag-flag-box { display:flex; justify-content: flex-start; gap:8px 4px; margin-top: 8px; flex-wrap: wrap;  } 
+.library-detail-sect .lib-file-info > li { display: flex; align-items: flex-start;  } 
+.library-detail-sect .lib-file-info > li.material { flex: 1; flex-shrink: 0;} 
+.library-detail-sect .lib-file-info > li.manual,
+.library-detail-sect .lib-file-info > li.desc { flex: none; width: 100%; } 
+.library-detail-sect .lib-file-info > li.desc { margin-top:8px; }
+.library-detail-sect .lib-file-info > li.material .file-info__tit, 
+.library-detail-sect .lib-file-info > li.manual .file-info__tit,
+.library-detail-sect .lib-file-info > li.desc .file-info__tit { width: 121px; word-wrap: break-word; } 
+.library-detail-sect .lib-file-info + .btn-box { padding-bottom: 8px; }  
+
+/* TDB/Capacity file download */
+.library-detail-sect .lib-file-box { padding-top: 8px; } 
+.library-detail-sect .lib-file-box + .lib-file-box { padding-top:40px; }
+.library-detail-sect .lib-file-down-box { overflow-y: scroll; max-height: 257px; margin-right: -8px; } 
+.library-detail-sect .lib-file__download { display: flex; align-items: center; height: 48px; background: #ffffff; padding-inline: 16px; border: 1px solid #dddddd; border-radius: 15px; } 
+.library-detail-sect .lib-file__download > .icon-pdf { flex:none; width: 32px; height: 32px; margin-right: 16px; } 
+.library-detail-sect .lib-file__download .file-name { flex:auto; overflow: hidden; display: flex; align-items: center; } 
+.library-detail-sect .lib-file__download .file-name .txt-p5.file { flex: auto; } 
+.library-detail-sect .lib-file__download .file-name .txt-p5:not(.file) { flex: none; display: block; text-align: center; margin-inline:12px; } 
+.library-detail-sect .lib-file__download > .icon-download { flex: none; margin-left: 20px; } 
+.library-detail-sect .lib-file__download:hover .file-name .txt-p5.file { font-weight: 700; text-decoration: underline; } 
+.library-detail-sect .lib-file__download + .lib-file__download { margin-top: 8px; } 
+.library-detail-sect .lib-file__img {  background: #ffffff; margin-top:24px; margin-right: -8px; } 
+.library-detail-sect .lib-file__img .lib-file__img-inner { overflow-y: scroll; width: 100%;  max-height: 1342px; text-align: center;} 
+.library-detail-sect .lib-file__img .lib-file__img-inner img { width: 100%; max-width:1038px; } 
+/* model img select */
+.library-detail-sect .lib-model-img-tab { position: relative; max-width:1038px; margin: 24px auto 0; padding-bottom: 56px; } 
+.library-detail-sect .lib-model-img-tab .tab-list { position: absolute; bottom:0; left:0; justify-content: center; width: 100%; border-bottom: 0; } 
+.library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab { min-width:100px; padding-inline: 12px; border-bottom:1px solid #aaaaaa; } 
+.library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab::after { content: none; } 
+.library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab:first-of-type { border-radius: 8px 0 0 8px; } 
+.library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab:last-of-type { border-radius: 0 8px 8px 0; } 
+.library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab.active { border-color: #000000; } 
+.library-detail-sect .lib-enlarg-img { position: relative; display: flex; align-items: center; justify-content: center; height:520px; background: #ffffff; text-align: center; border:1px solid #dddddd; border-radius: var(--border-base); } 
+.library-detail-sect .lib-enlarg-img .icon-enlarge { position: absolute; right:24px; bottom:24px; } 
+.library-detail-sect .txt-p6 + .lib-enlarg-img { margin-top: 16px; } 
+/* model code select */
+.library-detail-sect .lib-filed-box { max-width:1038px; margin: 24px auto 0; } 
+.library-detail-sect .lib-filed-box .field-box { margin-right: 16px; vertical-align: middle; } 
+.library-detail-sect .lib-filed-box .field-box .combo-box { width: 200px; } 
+.library-detail-sect .lib-filed-box > .txt-p4 { display: inline-block; } 
+
+/* model code table */
+.library-detail-sect .lib-table-box { max-width:1038px; margin: 16px auto 0; } 
+.library-detail-sect .lib-table-box .lib-bim-table-th1 { width: 360px; } 
+.library-detail-sect .lib-table-box .basic-table th, .library-detail-sect .lib-table-box td { height:40px; padding:8px 12px; }
+
+
+/* Application */
+.lib-application-box { width: 100%; margin-top: 24px; } 
+.lib-application-box .swiper { padding-bottom: 88px; } 
+.lib-application-box .swiper-slide { padding-inline: 156px; } 
+.lib-application-box .swiper-slide img { display: block; width: 100%; max-height: 100%; margin: 0 auto; } 
+.lib-application-box .swiper-slide:only-child { padding: 0; } 
+.lib-application-box .swiper-pagination { display: flex; gap: 16px; width: 864px; left: calc(50% - (864px/2)); bottom: 27px; } 
+.lib-application-box .swiper-pagination .swiper-pagination-bullet { flex: 1; height: 2px; margin: 0; border-radius: 0; } 
+.lib-application-box .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active { background: #000000; } 
+.lib-application-box .swiper:has(.swiper-pagination-bullet:only-child) { padding-bottom: 0; } 
+
+/* video */
+.library-detail-sect .lib-vidio-box { overflow: hidden; width: 1038px; height: 520px; background: #f7f7f7; margin: 32px auto 0; } 
+
+/* note */
+.library-detail-sect .lib-note-box { margin-top: 40px; } 
+.library-detail-sect .lib-note-box .note-box { padding: 24px; margin-top: 8px; } 
+.library-detail-sect .lib-note-box .note-box .txt-dott { font-size: 14px; color: #555555; } 
+.library-detail-sect .lib-note-box .note-box .txt-dott::before { top: 9px; } 
+
+/* Model code list */
+.lib-mc-list { padding: 0; margin-top: 40px; } 
+.lib-mc-list .basic-list__result { overflow-y: scroll; max-height: 287px; } 
+.lib-mc-list .basic-list__result .list-row { display: block; text-align: left; padding-block: 0; } 
+.lib-mc-list .basic-list__result .list-row a { display: flex; align-items: center; gap: 24px; min-height: 56px; padding-inline: 12px; } 
+.lib-mc-list .basic-list__result .list-row a[aria-disabled="true"] { pointer-events: none; cursor: default; }
+.lib-mc-list .basic-list__result .list-row .model-code { flex: none; width: 240px; } 
+.lib-mc-list .basic-list__result .list-row .prd-name { flex: auto; } 
+.lib-mc-list .basic-list__result .list-row > a:hover .model-code,
+.lib-mc-list .basic-list__result .list-row > a:hover .prd-name { font-weight: 700; text-decoration: underline; } 
+.lib-mc-list .lib-mc-list__btn { margin-top: 48px; text-align: center; } 
+
+/* version history */
+.lib-ver-history .basic-list-wrap { margin-top: 16px; padding:0; border-radius: 0; } 
+.lib-ver-history .basic-list__result .el-version,
+.lib-ver-history .basic-list__result .el-date { flex-basis: 160px; } 
+.lib-ver-history .basic-list__result .el-history { flex:auto; } 
+.lib-ver-history .list-body .list-row { min-height: 74px; } 
+.lib-ver-history .list-body .el-history { text-align: left; } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .library-detail-sect { padding: 1.667vw 1.667vw 80px; } 
+ .library-detail-sect .lib-tit-area .btn-box .icon-share { margin-right: 0.833vw; } 
+
+ /* File information */
+ .library-detail-sect .lib-file-info { column-gap: 1.667vw; padding: 1.667vw; } 
+ .library-detail-sect .lib-file-info .file-info__tit { font-size: 1.111vw; padding: 0.556vw 0.833vw; } 
+ .library-detail-sect .lib-file-info .file-info__info { font-size: 1.111vw; padding: 0.556vw 0.833vw; margin-left: 1.111vw; } 
+ .library-detail-sect .lib-file-info .file-info__info .tag-flag-box { margin-top: 0.556vw; } 
+ .library-detail-sect .lib-file-info > li { padding-block: 0.417vw; } 
+ .library-detail-sect .lib-file-info > li.material .file-info__tit,
+ .library-detail-sect .lib-file-info > li.manual .file-info__tit,
+ .library-detail-sect .lib-file-info > li.desc .file-info__tit { width: 8.889vw; } 
+ .library-detail-sect .lib-file-info + .btn-box { margin-block: 1.667vw 1.111vw; } 
+
+ /* TDB/Capacity file download */
+ .library-detail-sect .lib-file-box { margin-top: 2.222vw; } 
+ .library-detail-sect .lib-file-down-box { max-height: 17.847vw; margin-right: -0.556vw; } 
+ .library-detail-sect .lib-file__download { height: 5.208vw; padding-inline: 2.5vw; } 
+ .library-detail-sect .lib-file__download > .icon-pdf { width: 2.222vw; height: 2.222vw; margin-right: 2.778vw; } 
+ .library-detail-sect .lib-file__download .file-name .txt-p5:not(.file) { width: 7.014vw; margin-inline:0.556vw; } 
+ .library-detail-sect .lib-file__download > .icon-download { margin-left: 1.389vw; } 
+ .library-detail-sect .lib-file__download + .lib-file__download { margin-top: 1.111vw; } 
+ .library-detail-sect .lib-file__img { margin-top: 1.667vw; } 
+ .library-detail-sect .lib-file__img .lib-file__img-inner { max-height: 136.458vw; } 
+
+ /* model img select */
+ .library-detail-sect .lib-model-img-tab { max-width: 72.083vw; margin: 1.667vw auto 0; padding-bottom: 3.889vw; } 
+ .library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab { min-width: 6.944vw; padding-inline: 0.833vw; } 
+ .library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab:first-of-type { border-radius: 0.556vw 0 0 0.556vw; } 
+ .library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab:last-of-type { border-radius: 0 0.556vw 0.556vw 0; } 
+ .library-detail-sect .lib-enlarg-img { height: 36.111vw; } 
+ .library-detail-sect .lib-enlarg-img .icon-enlarge { right: 1.667vw; bottom: 1.667vw; } 
+ .library-detail-sect .txt-p6 + .lib-enlarg-img { margin-top: 1.111vw; } 
+ /* model code select */
+ .library-detail-sect .lib-filed-box { max-width: 72.083vw; margin: 1.667vw auto 0; } 
+ .library-detail-sect .lib-filed-box .field-box { margin-right: 1.111vw; } 
+ .library-detail-sect .lib-filed-box .field-box .combo-box { width: 13.889vw; } 
+
+ /* model code table */
+ .library-detail-sect .lib-table-box { max-width: 72.083vw; margin: 1.111vw auto 0; } 
+ .library-detail-sect .lib-table-box .lib-bim-table-th1 { width: 25vw; } 
+
+ /* Application */
+ .lib-application-box { margin-top: 1.667vw; } 
+ .lib-application-box .swiper { padding-bottom: 6.389vw; } 
+ .lib-application-box .swiper-slide { padding-inline: 10.833vw; } 
+ .lib-application-box .swiper-pagination { gap: 1.111vw; width: 60vw; left: calc(50% - (60vw/2)); bottom: 1.875vw; } 
+
+ /* video */
+ .library-detail-sect .lib-vidio-box { width: 72.083vw; height: 36.111vw; margin: 2.222vw auto 0; } 
+
+ /* note */
+ .library-detail-sect .lib-note-box { margin-top: 2.778vw; } 
+ .library-detail-sect .lib-note-box .note-box { padding: 1.667vw 2.222vw; margin-top: 0.556vw; } 
+ .library-detail-sect .lib-note-box .note-box .txt-dott { font-size: 0.972vw; } 
+ .library-detail-sect .lib-note-box .note-box .txt-dott::before { top: 0.625vw; } 
+
+ /* Model code list */
+ .lib-mc-list { margin-top: 2.778vw; } 
+ .lib-mc-list .basic-list__result { max-height: 19.931vw; } 
+ .lib-mc-list .basic-list__result .list-row a { gap: 1.667vw; min-height: 3.889vw; padding-inline: 0.833vw; } 
+ .lib-mc-list .basic-list__result .list-row .model-code { width: 16.667vw; } 
+ .lib-mc-list .lib-mc-list__btn { margin-top: 3.333vw; } 
+
+ /* version history */
+ .lib-ver-history .basic-list-wrap { margin-top: 1.111vw; } 
+ .lib-ver-history .basic-list__result .el-version,
+ .lib-ver-history .basic-list__result .el-date { flex-basis: 11.111vw; } 
+ .lib-ver-history .basic-list__result .list-body .list-row { min-height: 5.139vw; } 
+ 
+
+/* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .library-detail-sect { padding-top: 16px; }
+ .library-detail-sect .lib-tit-area .txt-h3 { font-size: 24px !important; } 
+ .library-detail-sect .lib-tit-area .btn-box { margin-top: 8px; } 
+ .library-detail-sect .lib-tit-area .btn-box .icon-share { margin-right: 16px; } 
+
+ /* File information */
+ .library-detail-sect .lib-file-info { display: block; margin-bottom: 16px; padding: 0; border-bottom: 0; } 
+ .library-detail-sect .lib-file-info .file-info__tit { display: block; width: 100%; padding: 0; margin-bottom: 4px; } 
+ .library-detail-sect .lib-file-info .file-info__info { display: block; width: 100%; font-size: 14px; padding:0; margin-left:0; } 
+ .library-detail-sect .lib-file-info > li { display: block; padding: 12px; border-bottom: 1px solid #cccccc; } 
+ .library-detail-sect .lib-file-info > li.material .file-info__tit, 
+ .library-detail-sect .lib-file-info > li.manual .file-info__tit,
+ .library-detail-sect .lib-file-info > li.desc .file-info__tit { width: 100%; } 
+ .library-detail-sect .lib-file-info > li.desc { margin-top: 0; }
+ 
+ /* TDB/Capacity file download */
+ .library-detail-sect .lib-file-box,
+ .library-detail-sect .lib-file-box + .lib-file-box { margin-top: 24px; padding-top: 0; } 
+ .library-detail-sect .lib-file-down-box { margin-right:0; } 
+ .library-detail-sect .lib-file__download { position: relative; align-items: flex-start; height: auto; padding:16px 60px 16px 16px } 
+ .library-detail-sect .lib-file__download > .icon-pdf { width: 24px; height: 24px; background-size: 22px 22px; margin-right: 2px; margin-bottom: 22px; } 
+ .library-detail-sect .lib-file__download .file-name { display: block; } 
+ .library-detail-sect .lib-file__download .file-name .txt-p5.file { display: block; font-size: 14px !important; font-weight: 700; margin-bottom: 4px; } 
+ .library-detail-sect .lib-file__download:hover .file-name .txt-p5.file { text-decoration: none; } 
+ .library-detail-sect .lib-file__download .file-name .txt-p5:not(.file) { width: auto; display: inline-block; font-size: 12px !important; margin-inline:0; } 
+ .library-detail-sect .lib-file__download .file-name .txt-p5.lang { position: relative; padding-right: 9px; } 
+ .library-detail-sect .lib-file__download .file-name .txt-p5.lang::after { content: ""; position: absolute; right: 4px; top:calc(50% - 5px); width: 1px; height: 10px; background: #D9D9D9; } 
+ .library-detail-sect .lib-file__download > .icon-download { position: absolute; top: calc(50% - 20px); right: 16px; width: 40px; height: 40px; background-size: 24px 24px; margin-left:0; } 
+ .library-detail-sect .lib-file__download + .lib-file__download { margin-top: 16px; } 
+ .library-detail-sect .lib-file__img { margin-top: 16px; margin-right: 0; } 
+ .library-detail-sect .lib-file__img .lib-file__img-inner { aspect-ratio: 0.703; max-height: initial; } 
+
+ /* model img select */
+ .library-detail-sect .lib-model-img-tab { position: relative; max-width:1038px; margin: 24px auto 0; padding-bottom: 56px; } 
+ .library-detail-sect .lib-model-img-tab .tab-list { position: absolute; bottom:0; left:0; justify-content: center; width: 100%; border-bottom: 0; } 
+ .library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab { min-width:100px; padding-inline: 12px; border-bottom:1px solid #aaaaaa; } 
+ .library-detail-sect .lib-model-img-tab .tab-list .tab-list__tab .tab-list__tab-txt { font-size: 14px; } 
+ .library-detail-sect .lib-enlarg-img { height:auto; width: 100%; aspect-ratio: 1.147; } 
+ .library-detail-sect .lib-enlarg-img .icon-enlarge { right:16px; bottom:16px; width: 32px; height: 32px; } 
+ .library-detail-sect .txt-p6 + .lib-enlarg-img { margin-top: 8px; } 
+ /* model code select */
+ .library-detail-sect .lib-filed-box { width: 100%; max-width:100%; } 
+ .library-detail-sect .lib-filed-box .field-box { width: 100%; margin-right:0; } 
+ .library-detail-sect .lib-filed-box .field-box .combo-box { width: 100%; } 
+ .library-detail-sect .lib-filed-box > .txt-p4 { display: block; font-size: 16px !important; margin-top: 16px; } 
+
+ /* model code table */
+ .library-detail-sect .lib-table-box .basic-table td { font-size: 14px; } 
+ .library-detail-sect .lib-table-box .lib-bim-table-th1 { width: 120px; } 
+
+ /* Application */
+ .lib-application-box { width: 100%; margin-top: 24px; } 
+ .lib-application-box .swiper { padding-bottom: 92px; } 
+ .lib-application-box .swiper-slide { padding-inline: 156px; } 
+ .lib-application-box .swiper-slide img { display: block; width: 100%; max-height: 100%; margin: 0 auto; } 
+ .lib-application-box .swiper-slide:only-child { padding: 0; } 
+ .lib-application-box .swiper-pagination { display: flex; gap: 16px; width: 864px; left: calc(50% - (864px/2)); bottom: 27px; } 
+ .lib-application-box .swiper-pagination .swiper-pagination-bullet { flex: 1; height: 2px; margin: 0; border-radius: 0; } 
+ .lib-application-box .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active { background: #000000; } 
+ .lib-application-box .swiper:has(.swiper-pagination-bullet:only-child) { padding-bottom: 0; } 
+
+ /* video */
+ .library-detail-sect .lib-vidio-box { height:auto; width: 100%; aspect-ratio: 1.147; margin-block: 24px 32px; } 
+
+ /* note */
+ .library-detail-sect .lib-note-box { margin-top: 16px; } 
+ .library-detail-sect .lib-note-box > .txt-p4 { font-size: 16px !important; } 
+ .library-detail-sect .lib-note-box .note-box { padding: 16px; } 
+ .library-detail-sect .lib-note-box .note-box .txt-dott { font-size: 12px; } 
+ .library-detail-sect .lib-note-box .note-box .txt-dott::before { top: 7px; } 
+
+ /* Model code list */
+ .lib-mc-list { margin-top: 24px; } 
+ .lib-mc-list .basic-list__result { max-height: 396px; } 
+ .lib-mc-list .basic-list__result .list-row > a { display: block; min-height: auto; padding: 8px; } 
+ .lib-mc-list .basic-list__result .list-row .model-code,
+ .lib-mc-list .basic-list__result .list-row .prd-name { display: block; width: 100%; } 
+ .lib-mc-list .basic-list__result .list-row .model-code { font-size: 12px !important; margin-bottom: 4px; } 
+ .lib-mc-list .basic-list__result .list-row .prd-name { font-size: 14px !important; font-weight: 700; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap: break-word; } 
+ .lib-mc-list .lib-mc-list__btn { margin-top: 24px; } 
+
+ /* version history */
+ .lib-ver-history .popup-wrap__inner .popup__container { overflow: hidden; padding: 0 16px 8px 16px !important; } 
+ .lib-ver-history .popup-wrap__inner .popup__container > .txt-p6 { font-size: 12px !important; } 
+ .lib-ver-history .basic-list-wrap { height: calc(100% - 30px); margin-top: 12px; } 
+ .lib-ver-history .basic-list__result { overflow-y: auto; height: 100%; } 
+ .lib-ver-history .basic-list__result .list-el { text-align: left; width: 100%; padding-inline: 0; } 
+ .lib-ver-history .basic-list__result .list-head { display: none; } 
+ .lib-ver-history .list-body .list-row { position: relative; display: block; min-height: auto; padding: 16px 8px 38px; } 
+ .lib-ver-history .list-body .el-version { margin-bottom: 4px; } 
+ .lib-ver-history .list-body .el-version .txt-p5 { font-size: 14px !important; font-weight: 700; } 
+ .lib-ver-history .list-body .el-date { position: absolute; left:0; bottom: 16px; padding-inline: 8px; } 
+ .lib-ver-history .list-body .el-date .txt-p5 { font-size: 12px !important; color:#555555 } 
+
+
+
+
+/* [E]mobile */ } 

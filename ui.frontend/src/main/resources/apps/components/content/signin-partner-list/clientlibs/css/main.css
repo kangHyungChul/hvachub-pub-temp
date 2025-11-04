@@ -1,0 +1,118 @@
+/* singup header 관련 */
+#singin-container {
+  overflow-x:auto;
+  min-width:1440px;  
+  min-height:calc(100vh - 80px);
+}
+
+.singin-wrap {
+  max-width:1022px;
+  width:100%; 
+  padding:42px 24px 100px;
+  margin:0 auto;
+}
+
+.tit-area { 
+  padding-bottom:32px;
+  text-align: center;  
+}
+
+.tit-area .txt-h3 {
+  margin-bottom:16px;
+}
+
+/* partner-registion-list */
+.partner-registion-list .form__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap:24px;
+}
+
+.partner-registion-list .field-box {
+  width:100%;
+}
+
+.partner-registion-list .checkbox-group ~ .txt-error {
+  margin-top:4px;
+}
+
+.partner-registion-list + .page-bottom-btn.right {
+  margin-top:24px;
+  text-align: right;
+}
+
+.checkbox-group-box .btn-checkbox {
+ margin-right:20px;
+}
+
+.singin-wrap .page-bottom-btn {
+  padding-top: 48px;
+  text-align: center;
+}
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 1440px) {
+
+  #singin-container { 
+    min-width:100%; 
+  }
+
+  .singin-wrap {   
+    padding:24px 0 0;
+  }
+
+  .tit-area { 
+    margin:0 24px;
+    padding:0  0 32px; 
+    text-align: left;;
+  }
+
+  .tit-area .txt-h3 {
+    font-size:24px !important;
+    line-height:36px;
+  }
+
+  .tit-area .txt-p5 {
+    font-size:14px !important;
+  }
+
+  .partner-registion-list {
+    margin-top:24px;
+    padding:0 24px;
+  }
+  
+ /* [E]Tablet */ }
+
+
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px) { 
+  
+
+  .checkbox-group-box {
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+  }
+
+  .checkbox-group-box .btn-checkbox {    
+    display:flex;
+  }
+
+  .singin-wrap .page-bottom-btn {
+    margin-top:54px;
+    padding:16px 24px;
+    border-top:1px solid #ccc;
+  }
+
+  .singin-wrap .page-bottom-btn .btn-block {
+    width:100%;
+    height:40px;
+    font-size:14px;
+  }
+
+
+ /* [E]Mobile */ }

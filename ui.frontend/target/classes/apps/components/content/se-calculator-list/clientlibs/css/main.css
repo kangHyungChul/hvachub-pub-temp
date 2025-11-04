@@ -1,0 +1,21 @@
+.se-cal-list { max-width: 1440px; margin: 0 auto; padding: 0 24px; } 
+.se-cal-list-tit { margin-bottom: 32px; } 
+.se-cal-list-search__wrap { background-color: #f7f7f7; border-radius: var(--border-base); padding: 24px; margin-bottom: 24px; } 
+.se-cal-list-search__wrap .field-box { width: 100%; } 
+.se-cal-list-search__wrap .input-search-box__inner { flex-basis: 775px; } 
+.se-cal-list-search__wrap .input-box.box-type { width: 100%; } 
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .se-cal-list-search__wrap { padding: 1.667vw; margin-bottom: 2.222vw; } 
+ .se-cal-list-search__wrap .input-search-box__inner { flex-basis: 53.819vw; } 
+ }
+
+@media only screen and (max-width: 768px){
+ .se-list-sect .filter-wrap__top { border-top: 1px solid #dddddd; } 
+ .se-cal-list { padding: 0; } 
+ .se-cal-list-search__wrap { border-radius: 0; margin-bottom: 0; } 
+ .se-cal-list .input-search-box { display: block; } 
+ .se-cal-list .input-search-box__inner { margin-bottom: 12px; } 
+ .se-cal-list-search__wrap .btn-block { margin-left: 0; width: 100%; } 
+ }

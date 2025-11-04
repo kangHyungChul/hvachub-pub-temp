@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Setting</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/template-setting/clientlibs/css/main.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- component -->
+  <section class="temp-setting">
+    <h2 class="temp__tit txt-h3 txt-fw-b">Template</h2>
+    <article class="box type-box">
+      <div class="type-wrap">
+        <div class="type">
+          <label class="btn-radio">
+            <input type="radio" class="btn-radio__input" name="type" value="a type" checked />
+            <span class="btn-radio__icon"></span>
+            <div class="icon-wrap">
+              <span class="btn-radio__txt">A type</span>
+              <button class="pdf-viewer-btn" data-layer-target="pdf-viewer-popup"></button>
+            </div>
+          </label>
+        </div>
+        <div class="type">
+          <label class="btn-radio">
+            <input type="radio" class="btn-radio__input" name="type" value="b type" />
+            <span class="btn-radio__icon"></span>
+            <div class="icon-wrap">
+              <span class="btn-radio__txt">B type</span>
+              <button class="pdf-viewer-btn" data-layer-target="pdf-viewer-popup"></button>
+            </div>
+          </label>
+        </div>
+        <div class="type">
+          <label class="btn-radio">
+            <input type="radio" class="btn-radio__input" name="type" value="c type" />
+            <span class="btn-radio__icon"></span>
+            <div class="icon-wrap">
+              <span class="btn-radio__txt">C type</span>
+              <button class="pdf-viewer-btn" data-layer-target="pdf-viewer-popup"></button>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="type-btn-wrap">
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Save</span>
+        </button>
+      </div>
+    </article>
+    <div class="box-wrap">
+      <article class="box logo-box">
+        <div class="box-inner">
+          <p class="txt-h6 txt-fw-b box-tit">Logo</p>
+          <div class="img-area">
+            <!-- [F] 업로드 버튼 클릭시 해당 영역에 이미지 추가 및 기존 .prev-img 영역 삭제 -->
+            <div class="prev-img"></div>
+          </div>
+          <div class="file-input-wrap">
+            <div class="field-box">
+              <div class="input-box">
+                <p class="file-name txt-p6"></p>
+                <button class="file-name-btn" type="button"></button>
+                <input type="file" id="logo-file" accept=".jpg,.png,.svg" class="hidden-file-input" />
+              </div>
+              <label for="logo-file">
+                <div class="btn-block upload-btn">
+                  <span class="btn-block__txt">Upload</span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <p class="caution txt-p7">
+            File must be less than 10MB.<br class="mo-display" />
+            Allowed file types : jpg, png, svg
+          </p>
+          <p class="txt-error">Please check the file size and types.</p>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+      </article>
+      <article class="box sign-box">
+        <div class="box-inner">
+          <p class="txt-h6 txt-fw-b box-tit">E-sign</p>
+          <div class="img-area">
+            <!-- [F] 업로드 버튼 클릭시 해당 영역에 이미지 추가 및 기존 .prev-img 영역 삭제 -->
+            <div class="prev-img"></div>
+          </div>
+          <div class="file-input-wrap">
+            <div class="field-box">
+              <div class="input-box">
+                <p class="file-name txt-p6"></p>
+                <button class="file-name-btn" type="button"></button>
+                <input type="file" id="sign-file" accept=".jpg,.png,.svg" class="hidden-file-input" />
+              </div>
+              <label for="sign-file">
+                <div class="btn-block upload-btn">
+                  <span class="btn-block__txt">Upload</span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <p class="caution txt-p7">
+            File must be less than 10MB.<br class="mo-display" />
+            Allowed file types : jpg, png, svg
+          </p>
+          <p class="txt-error">Please check the file size and types.</p>
+        </div>
+        <div class="btn-wrap">
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+      </article>
+    </div>
+    <div class="my-result__wrap">
+      <p class="result-tit txt-h6 txt-fw-b">Terms & Conditions</p>
+      <div class="add-wrap">
+        <p class="caution quantity__desc txt-p7">
+          You can add up to 5 terms & conditions maximum. (<span>4</span>/5)
+        </p>
+        <button type="button" class="btn-block md add-btn" data-layer-target="setting-popup">
+          <span class="btn-block__txt">Add</span>
+        </button>
+      </div>
+
+      <ul class="result-list__wrap">
+        <li class="list__head">
+          <p class="title txt-p5 txt-fw-b">Title</p>
+          <p class="status txt-p5 txt-fw-b">Status</p>
+        </li>
+        <li class="list__el-box">
+          <ul class="list-data">
+            <li class="list__el">
+              <p class="list-tit txt-p5">
+                User Rights and Responsibilities Agreement User Rights and
+                Responsibilities Agreement User Rights and Responsibilities
+                Agreement User Rights and Responsibilities Agreement
+              </p>
+              <p class="list-status txt-p5">Active</p>
+              <div class="list-btn-wrap">
+                <button type="button" class="edit-btn" data-layer-target="setting-popup"></button>
+                <button type="button" class="delete-btn"></button>
+              </div>
+            </li>
+            <li class="list__el">
+              <p class="list-tit txt-p5">
+                User Rights and Responsibilities Agreement2
+              </p>
+              <p class="list-status txt-p5">Inactive</p>
+              <div class="list-btn-wrap">
+                <button type="button" class="edit-btn" data-layer-target="setting-popup"></button>
+                <button type="button" class="delete-btn"></button>
+              </div>
+            </li>
+            <li class="list__el">
+              <p class="list-tit txt-p5">
+                User Rights and Responsibilities Agreement3
+              </p>
+              <p class="list-status txt-p5">Inactive</p>
+              <div class="list-btn-wrap">
+                <button type="button" class="edit-btn" data-layer-target="setting-popup"></button>
+                <button type="button" class="delete-btn"></button>
+              </div>
+            </li>
+            <li class="list__el">
+              <p class="list-tit txt-p5">
+                User Rights and Responsibilities Agreement4
+              </p>
+              <p class="list-status txt-p5">Inactive</p>
+              <div class="list-btn-wrap">
+                <button type="button" class="edit-btn" data-layer-target="setting-popup"></button>
+                <button type="button" class="delete-btn"></button>
+              </div>
+            </li>
+          </ul>
+
+          <!-- [F] data가 없을때  -->
+          <!-- <div class="list-nodata">
+                <p class="txt-p6">There is no registered content.</p>
+              </div> -->
+        </li>
+      </ul>
+    </div>
+
+    <!-- pdf viewer popup -->
+    <div class="popup-wrap pdf-viewer-popup" id="pdf-viewer-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__container">
+          <!-- .pdf viewer 영역 -->
+          <div class="pdf-viewer"></div>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+    <!-- Terms & Conditions setting popup -->
+    <div class="popup-wrap setting-popup" id="setting-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="popup__tit txt-h4">Terms & Conditions Setting</p>
+        </div>
+        <div class="popup__container">
+          <div class="setting-popup-inner">
+            <div class="field-box">
+              <p class="txt-req txt-p4 txt-fw-b category">Status</p>
+              <label class="btn-radio">
+                <input type="radio" class="btn-radio__input" name="add-status" value="active" checked />
+                <span class="btn-radio__icon"></span>
+                <span class="btn-radio__txt">Active</span>
+              </label>
+              <label class="btn-radio">
+                <input type="radio" class="btn-radio__input" name="add-status" value="inactive" />
+                <span class="btn-radio__icon"></span>
+                <span class="btn-radio__txt">Inactive</span>
+              </label>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-req" for="required-input">Title</label>
+              <div class="input-box">
+                <!-- [F] 유효성 검사시 : required 추가 -->
+                <input type="text" class="input-box__input" id="default-input" placeholder="Type a Title" maxlength="70" required />
+              </div>
+              <p class="txt-error">Title field is required</p>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-req" for="default-input">Description</label>
+              <textarea class="textarea" maxlength="3000" placeholder="Type a description"></textarea>
+              <!-- 2025-08-20 div 추가 // -->
+              <div class="maxlength-area">
+                <p class="maxlength__desc txt-p6"><span>0</span>/3000</p>
+                <p class="txt-error">This field is required.</p>
+              </div>
+              <!-- // 2025-08-20 div 추가  -->              
+            </div>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <button type="button" class="btn-block type2 lg">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/template-setting/clientlibs/js/main.js"></script>
+</body>
+
+</html>

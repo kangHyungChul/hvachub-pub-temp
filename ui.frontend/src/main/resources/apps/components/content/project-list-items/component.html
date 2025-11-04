@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Project List Items</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+  
+
+</head>
+
+<body>
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- 2025-01-20 이전 주석 삭제 (2025-01-24일 기준)-->
+
+  <!-- component -->
+  <section class="project-list-items">
+    <!-- [F] PC용 ( 모바일 용을 filter에서 노출) -->
+    <div class="list-top">
+      <p class="txt-p6 txt-fw-b"><span class="txt-point1">4</span> Results</p>
+      <!-- 2025-08-26 추가 신규 버튼타입 & 버튼 .btn-box 그룹핑 -->
+      <div class="btn-box">
+        <button type="button" class="btn-block type3 md">
+          <!-- 2025-09-05 버튼명 변경 -->
+          <span class="btn-block__txt">Place Multi Order</span>
+        </button>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">New</span>
+        </button>
+      </div>
+    </div>
+    <!-- [F] 
+        검색결과가 있는 경우 ul.list-data 노출
+        검색결과가 없는 경우 & 프로젝트 없는 경우 div.list-nodata 노출 
+      -->
+    <!-- no data -->
+    <div class="list-nodata">
+      <!-- 2025-03-02 class 삭제 no-result-txt  -->
+      <p class="txt-p5">No matching results found.</p>
+    </div>
+    <!-- //no data -->
+
+    <!-- result -->
+    <!-- 2025-09-05 // 리스트 케이스별 재정리 -->
+    <div class="list-data-area">
+      <ul class="list-data">
+        
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-ellipsis">Project Samsung e-Biz Samsung e-Biz Samsung e-Biz
+                e-Biz e-Biz e-Biz e-Biz e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+              <!-- 2025-01-20 위치이동( el-data 내에서 list-el__left 자식으로), class 추가 el-creat  -->
+              <p class="el-creat txt-p6 ">
+                <strong>Creator</strong>Brandon Smith/brandonsmith@concentrix.com
+              </p>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block type3" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Place Order</span>
+                </button>
+                <button type="button" class="btn-block type2" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Schedule</span>
+                </button>
+                <!-- 2025-01-20 class 추가 -->
+                <button type="button" class="btn-block copy-btn" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">WON</span>
+                </li>
+                <li class="status-el status4 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+              <p class="el-creat txt-p6 ">
+                <strong>Creator</strong>Brandon Smith/brandonsmith@concentrix.com
+              </p>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block type3" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Place Order</span>
+                </button>
+                <button type="button" class="btn-block type2" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Schedule</span>
+                </button>
+                <button type="button" class="btn-block copy-btn" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">WON</span>
+                </li>
+                <li class="status-el status4 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-p6 txt-point2 ">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>Non-DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+              <p class="el-creat txt-p6 ">
+                <strong>Creator</strong>Brandon Smith/brandonsmith@concentrix.com
+              </p>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block type2" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Schedule</span>
+                </button>
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">WON</span>
+                </li>
+                <li class="status-el status4">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>Non-DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block type2">
+                  <span class="btn-block__txt">Schedule</span>
+                </button>
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2 ">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">WON</span>
+                </li>
+                <li class="status-el status4">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>Non-DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">LOST</span>
+                </li>
+                <li class="status-el status4">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>Non-DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">DROP</span>
+                </li>
+                <li class="status-el status4">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">LOST</span>
+                </li>
+                <li class="status-el status4">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">DROP</span>
+                </li>
+                <li class="status-el status4">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">DROP</span>
+                </li>
+                <li class="status-el status4">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+              <!-- [F] status 단계에 따라 .active class 추가-->
+              <ul class="status-box">
+                <li class="status-el status1 active">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <!-- 2025-09-05 pc/mo 텍스트 합침 -> Quote로 통일 -->
+                  <span class="txt txt-p7">Quote</span>
+                </li>
+                <li class="status-el status2">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Proposal</span>
+                </li>
+                <li class="status-el status3">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">DROP</span>
+                </li>
+                <li class="status-el status4">
+                  <span class="round-box">
+                    <i class="round"></i>
+                  </span>
+                  <span class="txt txt-p7">Ordered</span>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </li>
+
+        <!-- [F] General User인 경우 -->
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <div class="list-el__left">
+              <p class="el-name txt-h8 txt-fw-b txt-ellipsis">Project Samsung e-Biz</p>
+              <span class="el-id txt-point2 txt-p6">PJ2024083000000000</span>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-break"><strong>Estimated Closing Date :</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-break"><strong>Vertical Type :</strong>Office</p>
+                  <p class="txt-line-break"><strong>Product Type :</strong>DVM</p>
+                </div>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <div class="list-el__right">
+              <div class="btn-box">
+                <button type="button" class="btn-block copy-btn">
+                  <span class="btn-block__txt">Copy</span>
+                  <i class="btn-block__icon icon-copy"></i>
+                </button>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <!-- infinite scroll -->
+      <div class="icon-loading-box">
+        <span class="icon-loading"></span>
+      </div>
+    </div>
+    <!-- //result -->
+  </section>
+  <!-- component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

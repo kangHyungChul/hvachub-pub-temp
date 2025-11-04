@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Inquiry</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/create-inquiry/clientlibs/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->   
+
+  <!-- component -->
+  <section class="create-inquiry">
+    <h2 class="create-inquiry-tit txt-h3">Create Inquiry</h2>
+    <article class="create-inquiry-form__wrap">
+      
+      <!-- S: form 영역 -->
+      <div class="form-box">
+       <!-- Category(default) -->
+       <div class="field-box">
+        <!-- required label -> label에 txt-req 클래스 추가 (모든 label 동일) -->
+        <label class="txt-label txt-req">Category</label>
+        <div class="multi-combo-box">
+          <div class="box">
+            <div class="combo-box">
+              <!-- 유효성 검사시 button에 aria-required="true" 속성 추가되어야 빨간라인으로 변경됨 (모든 combo-box 동일) -->
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false">
+                <span class="txt-placeholder">Category 1</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+            <p class="txt-error" >This field is required.</p><!-- 240625 유효성 문구 변경 -->
+          </div>
+          <div class="combo-box">
+            <!-- disabled = false 시 button.combo-box__txt 의 disabled 속성 제거 -->
+            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+              aria-expanded="false" disabled>
+              <span class="txt-placeholder">Category 2</span>
+            </button>
+            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+              <ul class="combo-box__menu-list">
+                <li role="menuitem">옵션 1</li>
+                <li role="menuitem">옵션 2</li>
+                <li role="menuitem">옵션 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+       </div>
+
+        <div class="field-box quote">
+          <div class="quote-area">
+            <div class="quote-item">
+              <p class="file-name"><span class="txt-p6">Project Name (Project ID)</span><span class="txt-p6">Quote Name (Quote ID)</span></p>   
+              <!-- quote에서 진입시 display:none 속성을 삽입해주세요. //-->
+              <button class="file-name-btn" type="button" ></button><!-- x 버튼 -->
+            </div>  
+            <!-- quote에서 진입시 display:none 속성을 삽입해주세요. //-->
+            <button type="button" class="btn-block type2">
+              <span class="btn-block__txt">Select</span>
+            </button>
+          </div> 
+        </div>
+      
+        <!-- Subject(default) -->
+        <div class="field-box subject">
+          <label class="txt-label txt-req" for="subject-input">Subject</label>
+          <div class="box">
+            <div class="input-box">
+              <!-- 240521 유효성 검사시 input에 required 속성 추가되어야 빨간라인으로 변경됨 (모든 input 동일) -->
+              <input type="text" class="input-box__input" id="subject-input" placeholder="Type a subject"
+                maxlength="1000">
+            </div>
+            <p class="txt-error" style="display: none">This field is required.</p>
+          </div>
+        </div>
+        <!-- Issue(default) -->
+        <div class="field-box issue">
+          <label class="txt-label txt-req" for="issue-textbox">Issue</label>
+          <div class="box">
+            <!-- textarea에 error class 추가시 border red로 변경 -->
+            <textarea class="textarea" maxlength="3000" id="issue-textbox"
+              placeholder="Please explain your issue or questions"></textarea>
+            <p class="maxlength__desc txt-p6">
+              <span>0</span>/3000
+            </p>
+            <p class="txt-error" style="display: none">This field is required.</p>
+          </div>
+        </div>
+        <!-- Attachment File(default) -->
+        <div class="field-box attachment">
+          <label class="txt-label">Attachment File</label>
+          <div class="attach-box">
+            <div class="attach-cont__wrap">
+              <ul class="file-list__wrap">
+                <li class="file-list__el">
+                  <p class="file-name txt-p6">File name 1.png</p>
+                  <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <li class="file-list__el">
+                  <p class="file-name txt-p6">File name 2 File name 2 File name 2 File name 2 File name 2 File name
+                    2.pdf</p>
+                  <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <li class="file-list__el">
+                  <p class="file-name txt-p6">File name 3.jpeg</p>
+                  <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <li class="file-list__el">
+                  <p class="file-name txt-p6">File name 4.pptx</p>                 
+                  <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <li class="file-list__el">
+                  <p class="file-name txt-p6">File name 5.xlsx</p>
+                  <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+              </ul>
+              <div class="upload-btn__box">
+                <input type="file" id="upload-file" accept=".xlsx,.xls,.jpeg,.jpg,.gif,.pdf,.png,.tif,.pptx,.zip."
+                  class="hidden-file-input" name="file-upload" />
+                <label for="upload-file">
+                  <div class="btn-block upload-btn">
+                    <span class="btn-block__txt">Upload</span>
+                  </div>
+                </label>
+                <div class="upload-caution">
+                  <span class="icon txt-p7">※</span>
+                  <p class="txt txt-p7">
+                     File must be less than 50MB. Allowed file types : xlsx, xls, jpeg, jpg, gif, pdf, png, tif, pptx, zip.                                    
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p class="txt-error" style="display: none">You can register up to 5 files maximum.</p>
+            <p class="txt-error" style="display: block">Please check the file size and types.</p>
+          </div>
+        </div>
+      </div>
+      <!-- E: form 영역 -->
+
+      <div class="btn-box">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">Cancel</span>
+        </button>
+        <!-- 
+            alert
+            button의 data-layer-target 값과 일치하는 div.alert-wrap id 값의 popup open
+            submit alert id = create-inquiry-submit-alert
+            dvm pro submit alert id = dvm-submit-alert
+          -->
+        <button type="button" class="btn-block md type2" data-layer-target="create-inquiry-submit-alert">
+          <span class="btn-block__txt">Submit</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- submit arlert  -->
+    <div class="alert-wrap" id="create-inquiry-submit-alert">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Submit</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Are you sure you want to submit it?</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md"
+            onclick="window.hvachubFunc.closePopup('create-inquiry-submit-alert')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- dvm pro submit alert -->
+    <div class="alert-wrap dvm-alert" id="dvm-submit-alert">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">DVM Pro Inquiry Submit</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Are you sure you want to submit it?</p>
+          <p class="txt-error">※ Attaching a file will expedite our response to your inquiry.</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('dvm-submit-alert')">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span></button>
+      </div>
+    </div>
+
+    <!-- S: 240708 product selector popup 추가 -->
+    <div class="popup-wrap pop-prd-select-wrap" id="pop-search-prd">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Product Selector</p>
+        </div>
+        <div class="popup__container">
+          <div class="pop-prd-select__cont">
+            <!-- combo box search -->
+            <section class="select-prd-wrap">
+              <p class="txt-p5">Please select the products</p>
+              <div class="combo-box-search-wrap">
+                <div class="multi-combo-box">
+                  <!-- category1 -->
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">category1</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                        aria-expanded="false">
+                        <span class="txt-placeholder">Category1</span>
+                      </button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션옵션옵션옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- category2 -->
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">category2</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                        aria-expanded="false" disabled>
+                        <span class="txt-placeholder">Category2</span>
+                      </button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션옵션옵션옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- category3 -->
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">category3</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                        aria-expanded="false" disabled>
+                        <span class="txt-placeholder">Category3</span>
+                      </button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션옵션옵션옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- category4 -->
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">category4</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                        aria-expanded="false" disabled>
+                        <span class="txt-placeholder">Category4</span>
+                      </button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션옵션옵션옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- category5 -->
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">category5</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                        aria-expanded="false" disabled>
+                        <span class="txt-placeholder">Category5</span>
+                      </button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션옵션옵션옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn-block type2">
+                  <span class="btn-block__txt">Search</span>
+                </button>
+                <!-- 240725 button.btn-icon 영역 추가 --><!-- 240731 [HVCHB-1142] button.btn-icon 영역 이동 -->
+                <button type="button" class="btn-icon arrow-btn mo-display">
+                  <span class="icon-btn-arrow"></span>
+                  <span class="txt-blind">open</span>
+                </button>
+              </div>
+            </section>
+
+            <!-- search list -->
+            <section class="prd-card-list-wrap">
+              <div class="result-count txt-p6 txt-fw-b">
+                <span class="txt-p6 txt-fw-b txt-point1">9</span> Results
+              </div>
+              <div class="prd-list-wrap">
+                <!-- list1 -->
+                <!-- list 선택시 div.pdp-product-list에 select class 추가 -->
+                <div class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6 txt-fw-b"><span class="txt-arrow">DVM</span><span
+                          class="txt-arrow txt-fw-b">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">235.2</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">261.1</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">254.8</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">249.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">523.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">456.3</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">380.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">234.5</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">432.1</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn"></div>
+                    <div class="swiper-button-prev unit__prev-btn"></div>
+                    <div class="unit__unit-text"><span class="txt-p7">(kW)</span></div>
+                  </div>
+                  <div class="link-btn">
+                    <!-- 미노출시 div.link-btn display: none -> 240710 미노출 display:none 태그 변경 div.link-btn -> a -->
+                    <a role="button" class="btn-txt-underline xsm" href="" style="display:none">
+                      <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                    </a>
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-16 stock 변경 -->
+                    <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In
+                      Stock</span>
+                    <!-- <span class="txt-p6 txt-stock yellow" aria-label="Stock available for the next 10~20 days.">In Stock</span>
+                      <span class="txt-p6 txt-stock red" aria-label="The stock is expected to be depleted within 10 days">In Stock</span> -->
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b">'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 240814 hvac-price-flag 클래스 추가 -->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block md type2" disabled>
+                      <span class="btn-block__txt">Selected</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- list2 -->
+                <!-- list 선택시 div.pdp-product-list에 select class 추가 -->
+                <div class="pdp-product-list select">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6 txt-fw-b"><span class="txt-arrow">DVM</span><span
+                          class="txt-arrow txt-fw-b">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">235.2</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">261.1</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">254.8</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">249.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">523.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">456.3</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">380.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">234.5</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">432.1</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn"></div>
+                    <div class="swiper-button-prev unit__prev-btn"></div>
+                    <div class="unit__unit-text"><span class="txt-p7">(Btu/h)</span></div>
+                  </div>
+                  <div class="link-btn">
+                    <!-- 미노출시 div.link-btn display: none -> 240710 미노출 display:none 태그 변경 div.link-btn -> a -->
+                    <a role="button" class="btn-txt-underline xsm" href="" style="display:none">
+                      <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                    </a>
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-16 stock 변경 -->
+                    <!-- <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span> -->
+                    <!-- <span class="txt-p6 txt-stock yellow" aria-label="Stock available for the next 10~20 days.">In Stock</span>-->
+                    <span class="txt-p6 txt-stock red"
+                      aria-label="The stock is expected to be depleted within 10 days">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b">'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 240814 hvac-price-flag 클래스 추가 -->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block md type2" disabled>
+                      <span class="btn-block__txt">Selected</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- list3 -->
+                <!-- list 선택시 div.pdp-product-list에 select class 추가 -->
+                <div class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6 txt-fw-b"><span class="txt-arrow">DVM</span><span
+                          class="txt-arrow txt-fw-b">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">235.2</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">261.1</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">254.8</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">249.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">523.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">456.3</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">380.4</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">234.5</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">432.1</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn"></div>
+                    <div class="swiper-button-prev unit__prev-btn"></div>
+                    <div class="unit__unit-text"><span class="txt-p7">(kW)</span></div>
+                  </div>
+                  <div class="link-btn">
+                    <!-- 미노출시 div.link-btn display: none -> 240710 미노출 display:none 태그 변경 div.link-btn -> a -->
+                    <a role="button" class="btn-txt-underline xsm" href="">
+                      <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                    </a>
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-16 stock 변경 -->
+                    <!-- <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span> -->
+                    <span class="txt-p6 txt-stock yellow" aria-label="Stock available for the next 10~20 days.">In
+                      Stock</span>
+                    <!--<span class="txt-p6 txt-stock red" aria-label="The stock is expected to be depleted within 10 days">In Stock</span> -->
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b">'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 240814 hvac-price-flag 클래스 추가 -->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block md type2">
+                      <span class="btn-block__txt">Select</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+        <!-- shadow -->
+        <div class="popup__footer">
+          <div class="selected-items-wrap">
+            <div class="items-box">
+              <strong class="txt-h9 txt-fw-b">Selected Products</strong>
+              <ul>
+                <!-- selected 1 -->
+                <li class="items__el">
+                  <span class="el__code txt-p6">AJ016TNNDKGEU</span>
+                  <button class="close-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <!-- selected 2 -->
+                <li class="items__el">
+                  <span class="el__code txt-p6">AJ016TNNDKGEU</span>
+                  <button class="close-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <!-- selected 3 -->
+                <li class="items__el">
+                  <span class="el__code txt-p6">AJ016TNNDKGEU</span>
+                  <button class="close-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <!-- selected 4 -->
+                <li class="items__el">
+                  <span class="el__code txt-p6">AJ016TNNDKGEU</span>
+                  <button class="close-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+              </ul>
+            </div>
+            <div class="btn-box"><!-- 240731 [HVCHB-1142] div.btn-box 추가 -->
+              <button type="button" class="btn-block type2">
+                <span class="btn-block__txt">Add</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-icon icon-close"><span class="txt-blind">Close</span></button>
+      </div>
+    </div>
+    <!-- E: 240708 product selector popup 추가 -->
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/create-inquiry/clientlibs/js/main.js"></script><!-- 컴포넌트 js -->
+</body>
+
+</html>

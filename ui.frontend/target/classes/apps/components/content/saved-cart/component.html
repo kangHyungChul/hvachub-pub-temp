@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saved Cart</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/saved-cart/clientlibs/css/main.css">
+</head>
+
+<body>
+  <!-- component -->
+  <section class="saved-cart">
+    <h2 class="saved-cart-tit txt-h3">Saved Cart</h2>
+    <!-- S: search 영역 -->
+    <article class="saved-cart-search__wrap">
+      <div class="field-box"><!-- 240625 select box 위치 변경 -->
+        <label class="txt-label txt-blind">category</label>
+        <div class="combo-box box-type">
+          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+            aria-expanded="false">
+            <span class="txt-placeholder">Product Group</span><!-- 240625 placeholder text 변경 -->
+          </button>
+          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+            <ul class="combo-box__menu-list">
+              <li role="menuitem">RAC</li>
+              <li role="menuitem">FAC</li>
+              <li role="menuitem">WAC</li>
+              <li role="menuitem">CAC</li>
+              <li role="menuitem">EHS</li>
+              <li role="menuitem">FJM</li>
+              <li role="menuitem">DVM</li>
+              <li role="menuitem">Chiller</li>
+              <li role="menuitem">Ventilation</li>
+              <li role="menuitem">Accessory</li>
+              <li role="menuitem">Controls System</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="field-box search-box">
+        <label class="txt-label txt-blind" for="default-search">search</label>
+        <div class="input-box input-search box-type" aria-label="hidden label">
+          <input type="search" class="input-box__input" id="default-search"
+            placeholder="Type a cart name or model code">
+          <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+        </div>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Search</span>
+        </button>
+      </div>
+    </article>
+    <!-- E: search 영역 -->
+
+    <!-- S: search result 영역 -->
+    <article class="saved-cart-result__wrap">
+      <!-- select all 영역 -> no result인 경우 div.btn-checkbox__wrap 제거 -->
+      <div class="btn-checkbox__wrap">
+        <label class="btn-checkbox">
+          <input type="checkbox" class="btn-checkbox__input checkbox-all" name="selectAll" value="selectAll">
+          <span class="btn-checkbox__icon"></span>
+          <span class="btn-checkbox__txt">Select All</span>
+        </label>
+        <!-- 
+            alert popup
+            button의 data-layer-target 값과 일치하는 div.alert-wrap id 값의 popup open
+            delete alert id = seved-cart-alert-delete
+          -->
+        <button type="button" class="btn-block md" data-layer-target="seved-cart-alert-delete">
+          <span class="btn-block__txt">Delete</span><!-- 240625 button명 변경 : Select Delete -> Delete -->
+        </button>
+      </div>
+      <div class="result-list__wrap">
+        <!-- S: cart list data 있는 경우 -->
+        <section class="cart-list__box">
+          <!-- cart name1 -->
+          <div class="saved-cart-accor__wrap">
+            <div class="saved-cart-accor__tit">
+              <label class="btn-checkbox">
+                <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list01">
+                <span class="btn-checkbox__icon"></span>
+                <!--
+                    Keyword Hightlight
+                    span.hightlight로 감싼 영역은 #2189ff색상으로 노출됨
+                  -->
+                <span class="btn-checkbox__txt"><span class="hightlight">Cart</span> name
+                  1</span><!-- cart name 노출 영역 -->
+              </label>
+              <button class="btn-icon icon-arrow accor-arrow">
+                <span class="txt-blind">arrow</span>
+              </button>
+            </div>
+            <div class="saved-cart-accor__cont">
+              <ul>
+                <!-- list1 -->
+                <li class="list-el">
+                  <a class="list-el__img" href="#none"><!-- 240725 태그변경 (div -> a) -->
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" /><!-- 240528 이미지 경로 변경 -->
+                  </a>
+                  <div class="box"><!-- 240725 div.box 추가 -->
+                    <div class="list-el__txt">
+                      <p class="txt-cate txt-p6">Outdoor</p>
+                      <a href="#none" class="txt-prd txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER High EER
+                        High EER High EER High EER High EER High EER High EER</a>
+                      <p class="txt-code txt-p6">AM200AXVAGH</p>
+                    </div>
+                    <div class="list-el__quantity txt-p5">
+                      Qty <span class="txt-fw-b">999</span>
+                    </div>
+                  </div>
+                  <div class="list-el__trash">
+                    <button type="button"
+                      class="btn-icon icon-trash"><!-- 버튼 미노출시 div.list-el__trash 영역 전체가 아닌 button.btn-icon 영역만 제거 -->
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="list-el">
+                  <a class="list-el__img" href="#none"><!-- 240725 태그변경 (div -> a) -->
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" /><!-- 240528 이미지 경로 변경 -->
+                  </a>
+                  <div class="box"><!-- 240725 div.box 추가 -->
+                    <div class="list-el__txt">
+                      <p class="txt-cate txt-p6">Outdoor</p>
+                      <a href="#none" class="txt-prd txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER High EER
+                        High EER High EER High EER High EER High EER High EER</a>
+                      <p class="txt-code txt-p6">AM200AXVAGH</p>
+                    </div>
+                    <div class="list-el__quantity txt-p5">
+                      Qty <span class="txt-fw-b">999</span>
+                    </div>
+                  </div>
+                  <div class="list-el__trash">
+                    <button type="button"
+                      class="btn-icon icon-trash"><!-- 버튼 미노출시 div.list-el__trash 영역 전체가 아닌 button.btn-icon 영역만 제거 -->
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="list-el">
+                  <a class="list-el__img" href="#none"><!-- 240725 태그변경 (div -> a) -->
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" /><!-- 240528 이미지 경로 변경 -->
+                  </a>
+                  <div class="box"><!-- 240725 div.box 추가 -->
+                    <div class="list-el__txt">
+                      <p class="txt-cate txt-p6">Outdoor</p>
+                      <a href="#none" class="txt-prd txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER High EER
+                        High EER High EER High EER High EER High EER High EER</a>
+                      <p class="txt-code txt-p6">AM200AXVAGH</p>
+                    </div>
+                    <div class="list-el__quantity txt-p5">
+                      Qty <span class="txt-fw-b">999</span>
+                    </div>
+                  </div>
+                  <div class="list-el__trash">
+                    <button type="button"
+                      class="btn-icon icon-trash"><!-- 버튼 미노출시 div.list-el__trash 영역 전체가 아닌 button.btn-icon 영역만 제거 -->
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="list-el">
+                  <a class="list-el__img" href="#none"><!-- 240725 태그변경 (div -> a) -->
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" /><!-- 240528 이미지 경로 변경 -->
+                  </a>
+                  <div class="box"><!-- 240725 div.box 추가 -->
+                    <div class="list-el__txt">
+                      <p class="txt-cate txt-p6">Outdoor</p>
+                      <a href="#none" class="txt-prd txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER High EER
+                        High EER High EER High EER High EER High EER High EER</a>
+                      <p class="txt-code txt-p6">AM200AXVAGH</p>
+                    </div>
+                    <div class="list-el__quantity txt-p5">
+                      Qty <span class="txt-fw-b">999</span>
+                    </div>
+                  </div>
+                  <div class="list-el__trash">
+                    <button type="button"
+                      class="btn-icon icon-trash"><!-- 버튼 미노출시 div.list-el__trash 영역 전체가 아닌 button.btn-icon 영역만 제거 -->
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <div class="accror-cont__btn">
+                <!-- 
+                    alert popup
+                    button의 data-layer-target 값과 일치하는 div.alert-wrap id 값의 popup open
+                    cart name1 alert id = seved-cart-alert01
+                  -->
+                <!-- [F]. color style: white(-) ,black(default), blue(.type3)
+                    -> button.btn-block에 해당 클래스 추가
+                  -->
+                <button type="button" class="btn-block type2 md" data-layer-target="seved-cart-alert01">
+                  <span class="btn-block__txt">Cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- cart name2 -->
+          <div class="saved-cart-accor__wrap">
+            <div class="saved-cart-accor__tit">
+              <label class="btn-checkbox">
+                <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list02">
+                <span class="btn-checkbox__icon"></span>
+                <span class="btn-checkbox__txt"><span class="highlight">Cart</span> name
+                  2</span><!-- cart name 노출 영역 -->
+              </label>
+              <button class="btn-icon icon-arrow accor-arrow">
+                <span class="txt-blind">arrow</span>
+              </button>
+            </div>
+            <div class="saved-cart-accor__cont">
+              <ul>
+                <!-- list1 -->
+                <li class="list-el">
+                  <a class="list-el__img" href="#none"><!-- 240725 태그변경 (div -> a) -->
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" /><!-- 240528 이미지 경로 변경 -->
+                  </a>
+                  <div class="box"><!-- 240725 div.box 추가 -->
+                    <div class="list-el__txt">
+                      <p class="txt-cate txt-p6">Outdoor</p>
+                      <a href="#none" class="txt-prd txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER High EER
+                        High EER High EER High EER High EER High EER High EER</a>
+                      <p class="txt-code txt-p6">AM200AXVAGH</p>
+                    </div>
+                    <div class="list-el__quantity txt-p5">
+                      Qty <span class="txt-fw-b">999</span>
+                    </div>
+                  </div>
+                  <div class="list-el__trash">
+                    <button type="button"
+                      class="btn-icon icon-trash"><!-- 버튼 미노출시 div.list-el__trash 영역 전체가 아닌 button.btn-icon 영역만 제거 -->
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="list-el">
+                  <a class="list-el__img" href="#none"><!-- 240725 태그변경 (div -> a) -->
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" /><!-- 240528 이미지 경로 변경 -->
+                  </a>
+                  <div class="box"><!-- 240725 div.box 추가 -->
+                    <div class="list-el__txt">
+                      <p class="txt-cate txt-p6">Outdoor</p>
+                      <a href="#none" class="txt-prd txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER High EER
+                        High EER High EER High EER High EER High EER High EER</a>
+                      <p class="txt-code txt-p6">AM200AXVAGH</p>
+                    </div>
+                    <div class="list-el__quantity txt-p5">
+                      Qty <span class="txt-fw-b">999</span>
+                    </div>
+                  </div>
+                  <div class="list-el__trash">
+                    <button type="button"
+                      class="btn-icon icon-trash"><!-- 버튼 미노출시 div.list-el__trash 영역 전체가 아닌 button.btn-icon 영역만 제거 -->
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="list-el">
+                  <a class="list-el__img" href="#none"><!-- 240725 태그변경 (div -> a) -->
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" /><!-- 240528 이미지 경로 변경 -->
+                  </a>
+                  <div class="box"><!-- 240725 div.box 추가 -->
+                    <div class="list-el__txt">
+                      <p class="txt-cate txt-p6">Outdoor</p>
+                      <a href="#none" class="txt-prd txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER High EER
+                        High EER High EER High EER High EER High EER High EER</a>
+                      <p class="txt-code txt-p6">AM200AXVAGH</p>
+                    </div>
+                    <div class="list-el__quantity txt-p5">
+                      Qty <span class="txt-fw-b">999</span>
+                    </div>
+                  </div>
+                  <div class="list-el__trash">
+                    <button type="button"
+                      class="btn-icon icon-trash"><!-- 버튼 미노출시 div.list-el__trash 영역 전체가 아닌 button.btn-icon 영역만 제거 -->
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="list-el">
+                  <a class="list-el__img" href="#none"><!-- 240725 태그변경 (div -> a) -->
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" /><!-- 240528 이미지 경로 변경 -->
+                  </a>
+                  <div class="box"><!-- 240725 div.box 추가 -->
+                    <div class="list-el__txt">
+                      <p class="txt-cate txt-p6">Outdoor</p>
+                      <a href="#none" class="txt-prd txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER High EER
+                        High EER High EER High EER High EER High EER High EER</a>
+                      <p class="txt-code txt-p6">AM200AXVAGH</p>
+                    </div>
+                    <div class="list-el__quantity txt-p5">
+                      Qty <span class="txt-fw-b">999</span>
+                    </div>
+                  </div>
+                  <div class="list-el__trash">
+                    <button type="button"
+                      class="btn-icon icon-trash"><!-- 버튼 미노출시 div.list-el__trash 영역 전체가 아닌 button.btn-icon 영역만 제거 -->
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <div class="accror-cont__btn">
+                <!-- 
+                    alert popup
+                    button의 data-layer-target 값과 일치하는 div.alert-wrap id 값의 popup open
+                    cart name2 alert id = seved-cart-alert02
+                  -->
+                <!-- [F]. color style: white(-) ,black(default), blue(.type3)
+                    -> button.btn-block에 해당 클래스 추가
+                  -->
+                <button type="button" class="btn-block type2 md" data-layer-target="seved-cart-alert02">
+                  <span class="btn-block__txt">Cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- E: cart list data 있는 경우 -->
+
+        <!-- S: cart list data 없는 경우 (no result, empty saved cart) -->
+        <section class="cart-nodata__box" style="display: none;">
+          <p class="nodata__txt txt-p6">No matching results found.</p>
+          <!-- 240619 문구변경 (검색결과가 없는경우와 등록된 콘텐츠가 없을 경우의 문구가 다름) -->
+        </section>
+      </div>
+
+      <!-- 240625 pagination 제거 & View more 버튼 추가 -->
+      <div class="btn-box">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">View More</span>
+          <i class="btn-block__icon icon-arrow-bottom"></i>
+        </button>
+      </div>
+
+    </article>
+    <!-- E: search result 영역 -->
+
+    <!-- delete alert -->
+    <div class="alert-wrap" id="seved-cart-alert-delete">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Delete</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Are you sure you want to delete it?</p><!-- 240625 txt-fw-b class 제거 -->
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('seved-cart-alert-delete')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- cart alert01 -->
+    <div class="alert-wrap" id="seved-cart-alert01">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Cart</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Product Add to cart.<br class="mo-dispaly"><!-- 240725 br.mo-display 추가 --> Would you like
+            to proceed to the cart?</p><!-- 240625 txt-fw-b class 제거 -->
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('seved-cart-alert01')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- cart alert02 -->
+    <div class="alert-wrap" id="seved-cart-alert02">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Cart</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Product Add to cart. Would you like to proceed to the cart?</p>
+          <!-- 240625 txt-fw-b class 제거 -->
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('seved-cart-alert02')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/saved-cart/clientlibs/js/main.js"></script><!-- 컴포넌트 js -->
+</body>
+
+</html>

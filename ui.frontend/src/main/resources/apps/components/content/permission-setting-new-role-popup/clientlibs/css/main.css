@@ -1,0 +1,16 @@
+.tbl-wrap { border-top:2px solid #000; }
+.tbl-wrap table {width:100%;}
+.tbl-wrap table th, .tbl-wrap table td { padding:0 12px; }
+.tbl-wrap table thead { border-bottom:1px solid #000; }
+.tbl-wrap table thead th { height:56px; font-size:16px; font-weight:700; }
+.tbl-wrap table thead tr:first-child {background-color:#f2f2f2;}
+.tbl-wrap table thead tr th:last-child { border-left:1px solid #dadada; }
+.tbl-wrap table tbody tr td { height:56px; border-left:1px solid #dadada; border-bottom:1px solid #dadada; text-align: center;}
+.tbl-wrap table tbody tr th { border-bottom:1px solid #dadada; font-size:16px; font-weight: 400;}
+.tbl-wrap table tbody tr:not(:first-child) th,
+.tbl-wrap table tbody tr:first-child th:nth-child(2) {border-left:1px solid #dadada;text-align: left; }
+
+.tbl-wrap + .txt-p6 { padding-top:8px; }
+.txt-red { color: #EF3434;}
+
+.bg-white { background-color:#fff !important; }

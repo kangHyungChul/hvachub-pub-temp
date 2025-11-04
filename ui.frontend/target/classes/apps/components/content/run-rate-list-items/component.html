@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Run rate list items</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+
+<body>
+  <!-- component -->
+  <section class="run-rate-list-items">
+    <!-- [F] PC용 ( 모바일 용을 filter에서 노출) -->
+    <div class="list-top">
+      <p class="txt-p6 txt-fw-b"><span class="txt-point1">50</span> Results</p>
+      <button type="button" class="btn-block type2 md">
+        <span class="btn-block__txt">New</span>
+      </button>
+    </div>
+    <!-- [F]
+        검색결과가 있는 경우 ul.list-data 노출
+        검색결과가 없는 경우 & 프로젝트 없는 경우 div.list-nodata 노출 
+      -->
+    <!-- no data -->
+    <div class="list-nodata">
+      <!-- 2025-03-02 class 삭제 no-result-txt  -->
+      <p class="txt-p5">No matching results found.</p>
+    </div>
+    <!-- //no data -->
+    <!-- result -->
+    <div class="list-data-area">
+      <ul class="list-data">
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <!-- left -->
+            <div class="list-el__left">
+              <p class="el-name  txt-h8 txt-ellipsis">Project Samsung e-Biz Samsung e-Biz Samsung e-Biz e-Biz e-Biz e-Biz e-Biz e-Biz</p>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+                <!-- [F] all data 권한이 있는 경우 -->
+                <p class="el-creat txt-p6">
+                  <strong>Creator</strong>Brandon Smith/brandonsmith@concentrix.com
+                </p>
+              </div>
+            </div>
+            <!-- right -->
+            <div class="list-el__right">
+              <div class="el-total">
+                <span class="txt-p6">Total Amount</span>
+                <span class="txt-p3 txt-fw-b">RR2024083000000000</span>
+              </div>
+              <div class="btn-box">
+                <button type="button" class="btn-block type3" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Place Order</span>
+                </button>
+                <button type="button" class="btn-block type2" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Schedule</span>
+                </button>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <!-- left -->
+            <div class="list-el__left">
+              <p class="el-name  txt-h8 txt-ellipsis">RR2024083000000000</p>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <!-- right -->
+            <div class="list-el__right">
+              <div class="el-total">
+                <span class="txt-p6">Total Amount</span>
+                <span class="txt-p3 txt-fw-b">1,373,108.00 TL</span>
+              </div>
+              <div class="btn-box">
+                <button type="button" class="btn-block type2" onclick="window.open('https://', '_blank')">
+                  <span class="btn-block__txt">Schedule</span>
+                </button>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="list-el">
+          <a class="el-box" href="#none">
+            <!-- left -->
+            <div class="list-el__left">
+              <p class="el-name  txt-h8 txt-ellipsis">RR2024083000000000</p>
+              <div class="el-date">
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created</strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated</strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+            </div>
+            <!-- right -->
+            <div class="list-el__right">
+              <div class="el-total">
+                <span class="txt-p6">Total Amount</span>
+                <span class="txt-p3 txt-fw-b">1,373,108.00 TL</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <!-- infinite scroll -->
+      <div class="icon-loading-box">
+        <span class="icon-loading"></span>
+      </div>
+      <!-- //infinite scroll -->
+    </div>
+    <!-- //result -->
+  </section>
+  <!-- component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

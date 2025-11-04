@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <title>LCC Simulator List</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/title/clientlibs/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/inner-content/filter/clientlibs/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/lcc-simulator-list/clientlibs/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/lcc-simulator-list-items/clientlibs/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/quoted-linked-popup/clientlibs/css/main.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- [F]Title component (임시 확인 용) -->
+  <!-- <section style="margin: 32px auto 24px; max-width: 1440px; padding: 0 24px">
+      <h2 class="txt-h6 txt-fw-b">Life Cycle Cost</h2>
+    </section> -->
+  <!-- [F]Title component (임시 확인 용) -->
+
+  <!-- [F]lcc simulator component -->
+  <section class="lcc-list-sect">
+    <section class="lcc-simul-list">
+      <!-- LCC Simulator List search -->
+      <div class="lcc-simul-list-search__wrap">
+        <div class="field-box">
+          <label class="txt-label txt-blind" for="btn-required-search">search</label>
+          <div class="input-search-box">
+            <!-- focus가 되면 active -->
+            <div class="input-search-box__inner">
+              <div class="input-box input-search box-type">
+                <input type="search" class="input-box__input" id="btn-required-search" placeholder="ID, Name, City" />
+                <button type="button" class="btn-icon icon-search-delete">
+                  <span class="txt-blind">삭제</span>
+                </button>
+              </div>
+              <div class="search-box__auto">
+                <ul class="search-box__auto-list">
+                  <li class="autoitem">auto text</li>
+                  <li class="autoitem">auto text</li>
+                  <li class="autoitem">auto text</li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="btn-block type2 md">
+              <span class="btn-block__txt">Search</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- [F]filter component -->
+    <div class="filter-wrap">
+      <div class="filter-wrap__top">
+        <!-- filter Top -->
+        <div class="filter-wrap__top-inner">
+          <div class="filter-left">
+            <!-- 2024-07-16 class 추가 : filter-btn-->
+            <p class="txt-p6 txt-fw-b filter-btn">Filters</p>
+            <!-- 2024-07-16 태그 추가 -->
+            <p class="mo-display txt-point2">00</p>
+            <!-- 2024-07-16 class 추가 : pc-clear-all-->
+            <button type="button" class="btn-txt-underline pc-clear-all">
+              <span class="btn-txt__txt">Clear all</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- [F] Filter가 펼쳐져 있을때 .on-filter -->
+      <div class="filter-wrap__cont on-filter">
+        <!-- filter -->
+        <article class="filter-wrap__menu">
+          <!-- 2024-07-16 모바일용 -->
+          <div class="mo-filter-tit-box mo-display">
+            <p class="filter__tit">Filters</p>
+            <button type="button" class="btn-icon icon-close">
+              <span class="txt-blind">close</span>
+            </button>
+          </div>
+          <ul class="filter-list">
+            <li class="accordion-box sm active">
+              <div class="accordion__tit">
+                <p class="txt-p6">Date</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <!-- updated date select -->
+                <div class="field-box field-select">
+                  <label class="txt-label txt-blind">Updated date</label>
+                  <div class="combo-box box-type">
+                    <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                      Created date
+                      <!-- <span class="txt-placeholder">Updated date</span> --><!-- placeholder -->
+                    </button>
+                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                      <ul class="combo-box__menu-list">
+                        <li role="menuitem">Created date</li>
+                        <li role="menuitem">Updated date</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- date calendar -->
+                <div class="date-box">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">start date</label>
+                    <input type="text" id="datepicker1" class="input-datepicker box-type" placeholder="YYYY-MM-DD" />
+                  </div>
+                  <span>~</span>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">end date</label>
+                    <input type="text" id="datepicker2" class="input-datepicker box-type" placeholder="YYYY-MM-DD" />
+                  </div>
+                </div>
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Date" />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">2024</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Date" />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">2023</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Date" />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">2022</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm active">
+              <div class="accordion__tit">
+                <p class="txt-p6">Product Group</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Product_group" checked />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">DVM</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Product_group" />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">EHS</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm active">
+              <div class="accordion__tit">
+                <p class="txt-p6">Combination Table</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Combination_table" checked />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Combination Table Name</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Combination_table" />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Combination Table Name</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Combination_table" />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Combination Table Name</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Combination_table" />
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Combination Table Name</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <!-- 2024-07-16 모바일용 -->
+          <div class="mo-filter-result-box mo-display">
+            <button type="button" class="btn-txt-underline">
+              <span class="btn-txt__txt">Clear all</span>
+            </button>
+            <button class="btn-block type2 md">
+              <span class="btn-block__txt">
+                (<em class="txt-point2">###</em>) Results
+              </span>
+            </button>
+          </div>
+        </article>
+        <!-- //filter -->
+        <section class="filter-wrap__result">
+          <!-- [F] 2024-06-17 .filter-center 위치 이동(search, library, project, tools) -->
+          <div class="filter-center">
+            <p class="filter-txt">
+              <span class="txt-p6">Outdoeer Unit</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="filter-txt">
+              <span class="txt-p6">DVM</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="filter-txt">
+              <span class="txt-p6">kW1-50</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="filter-txt">
+              <span class="txt-p6">kW1-50</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+          </div>
+          <!-- //-->
+          <!-- component -->
+          <section class="lcc-simul-list-items">
+            <div class="prj-items-result__wrap">
+              <div class="result-num-btn-box">
+                <p class="result-num txt-p6 txt-fw-b">
+                  <span class="txt-point1">4</span> Results
+                </p>
+                <button type="button" class="btn-block type2 md">
+                  <span class="btn-block__txt">New</span>
+                </button>
+              </div>
+
+              <!-- [F] No Result -->
+              <div class="list-nodata">
+                <p class="txt-p5">No matching results found.</p>
+              </div>
+              <!-- //No Result -->
+              <!-- [F] Result -->
+              <ul class="list-data">
+                <!-- list1 -->
+                <li class="prj-list-card">
+                  <a class="card-el-box" href="#none">
+                    <!-- left prj info -->
+                    <div class="el-prj-info__wrap">
+                      <p class="el__prj-name txt-h8 txt-fw-b txt-ellipsis">
+                        Life Cycle Cost Name Life Cycle Cost Name Life Cycle
+                        Cost Name Life Cycle Cost Name Life Cycle Cost Name
+                        Life Cycle Cost Name
+                      </p>
+                      <!-- project name -->
+                      <span class="el__prj-id txt-point2 txt-p6">ID. 123456789​</span><!-- project id -->
+                      <div class="el__creat-update">
+                        <p class="creat-date">
+                          <!-- created date -->
+                          <strong class="date-tit txt-fw-b">Created.</strong>
+                          <span class="date">YYYY-MM-DD</span>
+                        </p>
+                        <p class="update">
+                          <!-- updated date -->
+                          <strong class="date-tit txt-fw-b">Updated.</strong>
+                          <span class="date">YYYY-MM-DD</span>
+                        </p>
+                      </div>
+                      <div class="el__type-name">
+                        <span class="type txt-fw-b">State Name / City name</span>
+                        <span class="product txt-fw-b">Samsung / Water-cooled Chiller
+                        </span>
+                      </div>
+                    </div>
+                    <!-- right copy -->
+                    <div class="el-copy-btn__wrap">
+                      <div class="copy-btn-box">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Copy</span>
+                          <i class="btn-block__icon icon-copy"></i>
+                        </button>
+                      </div>
+                      <div class="btn-box">
+                        <!-- 240710 .md 클래스 제거 -->
+                        <button type="button" class="btn-block type3">
+                          <span class="btn-block__txt txt-p7">SEASONAL EFFICIENCY</span>
+                        </button>
+                        <button type="button" class="btn-block type2" data-layer-target="quote-linked-popup">
+                          <span class="btn-block__txt txt-p7">QUOTE</span>
+                        </button>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="prj-list-card">
+                  <a class="card-el-box" href="#none">
+                    <!-- left prj info -->
+                    <div class="el-prj-info__wrap">
+                      <p class="el__prj-name txt-h8 txt-fw-b txt-ellipsis">
+                        Life Cycle Cost Name
+                      </p>
+                      <!-- project name -->
+                      <span class="el__prj-id txt-point2 txt-p6">
+                        ID. 123456789
+                      </span>
+                      <!-- project id -->
+                      <div class="el__creat-update">
+                        <p class="creat-date">
+                          <!-- created date -->
+                          <strong class="date-tit txt-fw-b">Created.</strong>
+                          <span class="date">YYYY-MM-DD</span>
+                        </p>
+                        <p class="update">
+                          <!-- updated date -->
+                          <strong class="date-tit txt-fw-b">Updated.</strong>
+                          <span class="date">YYYY-MM-DD</span>
+                        </p>
+                      </div>
+                      <div class="el__type-name">
+                        <span class="type txt-fw-b">State Name / City name</span>
+                        <span class="product txt-fw-b">
+                          Samsung / Water-cooled Chiller
+                        </span>
+                      </div>
+                    </div>
+                    <!-- right copy -->
+                    <div class="el-copy-btn__wrap">
+                      <div class="copy-btn-box">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Copy</span>
+                          <i class="btn-block__icon icon-copy"></i>
+                        </button>
+                      </div>
+                      <div class="btn-box">
+                        <!-- 240710 .md 클래스 제거 -->
+                        <button type="button" class="btn-block type3">
+                          <span class="btn-block__txt txt-p7">
+                            SEASONAL EFFICIENCY
+                          </span>
+                        </button>
+                        <!-- 버튼 생성 전 상태 => .prev-create 클래스 추가 필요 -->
+                        <button type="button" class="btn-block type2 prev-create" data-layer-target="quote-linked-popup">
+                          <span class="btn-block__txt txt-p7">QUOTE</span>
+                        </button>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- //Result -->
+              <!-- 2025-03-02 class 변경 list-loading ==> icon-loading-box-->
+              <div class="icon-loading-box">
+                <span class="icon-loading"></span>
+              </div>
+            </div>
+          </section>
+
+          <!-- quote linked popup -->
+          <div class="popup-wrap quote-linked-popup" id="quote-linked-popup">
+            <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+              <div class="popup__header">
+                <p class="txt-h4">‘Quote’ Linked</p>
+              </div>
+              <div class="popup__container">
+                <div class="quote-popup-inner">
+                  <div class="tab-wrap">
+                    <div role="tablist" class="tab-list type5" aria-label="‘Quote’ Linked">
+                      <!--[F] 선택시 .active 추가 -->
+                      <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+                        <span class="tab-list__tab-txt txt-p4">New Project</span>
+                      </button>
+                      <button type="button" class="tab-list__tab" role="tab">
+                        <span class="tab-list__tab-txt txt-p4">
+                          Existing Project
+                        </span>
+                      </button>
+                    </div>
+                    <div role="presentation" class="tab-wrap__contents">
+                      <!-- 240722 .new-project-tab 클래스 추가 -->
+                      <div role="tabpanel" aria-labelledby="New Project" tabindex="0" class="new-project-tab">
+                        <div class="proj-inner">
+                          <div class="field-box">
+                            <label class="txt-label txt-req" for="proj-name-input">
+                              Project Name
+                            </label>
+                            <div class="input-box">
+                              <input type="text" class="input-box__input" id="proj-name-input" placeholder="Please enter a name." maxlength="1000" />
+                            </div>
+                            <p class="txt-error">This field is required.</p>
+                          </div>
+                          <div class="field-box">
+                            <label class="txt-label txt-req">Vertical Type</label>
+                            <div class="combo-box">
+                              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" aria-required="true">
+                                <span class="txt-placeholder">
+                                  Please select a vertical type.
+                                </span>
+                              </button>
+                              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                <ul class="combo-box__menu-list">
+                                  <li role="menuitem">옵션 1</li>
+                                  <li role="menuitem">옵션 2</li>
+                                  <li role="menuitem">옵션 3</li>
+                                </ul>
+                              </div>
+                            </div>
+                            <p class="txt-error">This field is required.</p>
+                          </div>
+                          <div class="field-box">
+                            <!-- 240718 .txt-req 클래스 추가 -->
+                            <label class="txt-label txt-req">
+                              Estimated Closing
+                            </label>
+                            <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD" required />
+                            <p class="txt-error">This field is required.</p>
+                          </div>
+                          <div class="field-box">
+                            <label class="txt-label txt-req" for="quote-name-input">Quote Name</label>
+                            <div class="input-box">
+                              <input type="text" class="input-box__input" id="quote-name-input" placeholder="Please enter a name." maxlength="1000" required />
+                            </div>
+                            <p class="txt-error">This field is required.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div role="tabpanel" aria-labelledby="Existing Project" hidden="hidden" class="tab-panel">
+                        <!-- 240722 .active 클래스 있을 경우 search 영역 .field-box 전부 show -->
+                        <div class="search-bar active">
+                          <div class="date-field-wrap">
+                            <div class="field-box">
+                              <label class="txt-label txt-blind">Updated date</label>
+                              <div class="combo-box box-type">
+                                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                                  <span class="txt-placeholder">Updated date</span>
+                                </button>
+                                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                  <ul class="combo-box__menu-list">
+                                    <li role="menuitem">옵션 1</li>
+                                    <li role="menuitem">옵션 2</li>
+                                    <li role="menuitem">옵션 3</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="datepicker-field">
+                              <div class="field-box">
+                                <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="YYYY-MM-DD" />
+                              </div>
+                              <div class="field-box">
+                                <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="YYYY-MM-DD" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="field-box name-field-box">
+                            <label class="txt-label txt-blind" for="prod_name_input">
+                              product name
+                            </label>
+                            <div class="input-box input-search box-type">
+                              <input type="search" class="input-box__input" id="prod_name_input" placeholder="Product Name or ID" />
+                              <button type="button" class="btn-icon icon-search-delete">
+                                <span class="txt-blind">delete</span>
+                              </button>
+                              <button type="button" class="btn-icon icon-search">
+                                <span class="txt-blind">search</span>
+                              </button>
+                            </div>
+                          </div>
+                          <button type="button" class="btn-block search-open-btn">
+                            <i class="btn-block__icon icon-arrow"></i>
+                          </button>
+                        </div>
+                        <div class="search-result">
+                          <!-- 노출되야 하는 영역에 .active 클래스 추가 필요 -->
+                          <!-- 검색하기 전인 경우 -->
+                          <div class="before-search">
+                            <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-search-result.svg" alt="search result image" />
+                            <p class="search-desc">
+                              Search for and select a project.
+                            </p>
+                          </div>
+
+                          <!-- 검색후 인 경우 -->
+                          <div class="after-search active">
+                            <div class="my-result__wrap">
+                              <div class="result__num-btn">
+                                <p class="txt-fw-b txt-p6">
+                                  <span class="txt-point1">10</span> Results
+                                </p>
+                              </div>
+                              <ul class="result-list__wrap">
+                                <li class="list__el-box">
+                                  <ul class="list-data">
+                                    <li class="list__el">
+                                      <p class="proj-name txt-h8 txt-fw-b">
+                                        Project Name 1
+                                      </p>
+                                      <div class="proj-detail">
+                                        <div class="proj-date">
+                                          <p class="create">
+                                            <strong class="date-tit txt-p6 txt-fw-b">
+                                              Created.
+                                            </strong>
+                                            <span class="date txt-p6">
+                                              YYYY-MM-DD
+                                            </span>
+                                          </p>
+                                          <p class="update">
+                                            <strong class="date-tit txt-p6 txt-fw-b">
+                                              Updated.
+                                            </strong>
+                                            <span class="date txt-p6">
+                                              YYYY-MM-DD
+                                            </span>
+                                          </p>
+                                        </div>
+                                        <p class="proj-status txt-p6 txt-fw-b">
+                                          Status<span>Quotation</span>
+                                        </p>
+                                      </div>
+                                    </li>
+                                    <li class="list__el">
+                                      <p class="proj-name txt-h8 txt-fw-b">
+                                        Project Name 2
+                                      </p>
+                                      <div class="proj-detail">
+                                        <div class="proj-date">
+                                          <p class="create">
+                                            <strong class="date-tit txt-p6 txt-fw-b">
+                                              Created.
+                                            </strong>
+                                            <span class="date txt-p6">
+                                              YYYY-MM-DD
+                                            </span>
+                                          </p>
+                                          <p class="update">
+                                            <strong class="date-tit txt-p6 txt-fw-b">
+                                              Updated.
+                                            </strong>
+                                            <span class="date txt-p6">
+                                              YYYY-MM-DD
+                                            </span>
+                                          </p>
+                                        </div>
+
+                                        <p class="proj-status txt-p6 txt-fw-b">
+                                          Status<span>Quotation</span>
+                                        </p>
+                                      </div>
+                                    </li>
+                                    <li class="list__el">
+                                      <p class="proj-name txt-h8 txt-fw-b">
+                                        Project Name 3
+                                      </p>
+                                      <div class="proj-detail">
+                                        <div class="proj-date">
+                                          <p class="create">
+                                            <strong class="date-tit txt-p6 txt-fw-b">
+                                              Created.
+                                            </strong>
+                                            <span class="date txt-p6">
+                                              YYYY-MM-DD
+                                            </span>
+                                          </p>
+                                          <p class="update">
+                                            <strong class="date-tit txt-p6 txt-fw-b">
+                                              Updated.
+                                            </strong>
+                                            <span class="date txt-p6">
+                                              YYYY-MM-DD
+                                            </span>
+                                          </p>
+                                        </div>
+
+                                        <p class="proj-status txt-p6 txt-fw-b">
+                                          Status<span>Quotation</span>
+                                        </p>
+                                      </div>
+                                    </li>
+                                    <li class="list__el">
+                                      <p class="proj-name txt-h8 txt-fw-b">
+                                        Project Name 3
+                                      </p>
+                                      <div class="proj-detail">
+                                        <div class="proj-date">
+                                          <p class="create">
+                                            <strong class="date-tit txt-p6 txt-fw-b">
+                                              Created.
+                                            </strong>
+                                            <span class="date txt-p6">
+                                              YYYY-MM-DD
+                                            </span>
+                                          </p>
+                                          <p class="update">
+                                            <strong class="date-tit txt-p6 txt-fw-b">
+                                              Updated.
+                                            </strong>
+                                            <span class="date txt-p6">
+                                              YYYY-MM-DD
+                                            </span>
+                                          </p>
+                                        </div>
+
+                                        <p class="proj-status txt-p6 txt-fw-b">
+                                          Status<span>Quotation</span>
+                                        </p>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                  <!-- 2025-03-02 class 변경 list-loading ==> icon-loading-box-->
+                                  <div class="icon-loading-box">
+                                    <span class="icon-loading"></span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- 프로젝트 선택 완료인 경우 -->
+                          <div class="select-proj-complete">
+                            <div class="field-box">
+                              <label class="txt-label txt-req" for="proj_input">
+                                Project Name
+                              </label>
+                              <div class="input-box">
+                                <input type="text" class="input-box__input" id="proj_input" placeholder="Please enter a name." disabled />
+                              </div>
+                            </div>
+                            <div class="field-box">
+                              <label class="txt-label txt-req" for="vertical_type_input">
+                                Vertical Type
+                              </label>
+                              <div class="combo-box">
+                                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" aria-required="true" disabled>
+                                  <span class="txt-placeholder">
+                                    Please select a vertical type.
+                                  </span>
+                                </button>
+                                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                  <ul class="combo-box__menu-list">
+                                    <li role="menuitem">옵션 1</li>
+                                    <li role="menuitem">옵션 2</li>
+                                    <li role="menuitem">옵션 3</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="field-box">
+                              <label class="txt-label txt-req">
+                                Estimated Closing
+                              </label>
+                              <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD" disabled />
+                            </div>
+                            <div class="field-box">
+                              <label class="txt-label txt-req" for="quote_name_input">
+                                Quote Name
+                              </label>
+                              <div class="input-box">
+                                <input type="text" class="input-box__input" id="quote_name_input" placeholder="Please enter a name." maxlength="1000" required />
+                              </div>
+                              <p class="txt-error">This field is required.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__footer">
+                <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup()">
+                  <span class="btn-block__txt">Cancle</span>
+                </button>
+                <button type="button" class="btn-block type2 md">
+                  <span class="btn-block__txt">Save</span>
+                </button>
+              </div>
+              <button type="button" class="btn-icon icon-close">
+                <span class="txt-blind">Close</span>
+              </button>
+            </div>
+          </div>
+          <!-- quote linked popup -->
+        </section>
+      </div>
+    </div>
+
+    <!-- //[F]filter component -->
+  </section>
+  <!-- //[F]library component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/inner-content/filter/clientlibs/js/main.js"></script>
+  <script src="/apps/components/content/library-list-items/clientlibs/js/main.js"></script>
+  <!-- 컴포넌트 js -->
+  <script src="/apps/components/content/lcc-simulator-list-items/clientlibs/js/main.js"></script>
+  <script src="/apps/components/content/quoted-linked-popup/clientlibs/js/main.js"></script>
+</body>
+
+</html>

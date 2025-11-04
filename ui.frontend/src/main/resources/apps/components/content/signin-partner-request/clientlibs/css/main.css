@@ -1,0 +1,92 @@
+/* singup 관련 */
+#company-request-container {
+  overflow-x:auto;
+  min-width:1440px; 
+  min-height:calc(100vh - 80px);
+}
+
+.compay-request-inner {
+  max-width:1022px;
+  width:100%;
+  padding:42px 0 100px;
+  margin:0 auto;
+}
+
+.msg-icon-box + .info-list-area {
+  padding-top:40px;
+}
+
+.compay-request-inner .page-bottom-btn {
+  padding-top:24px;
+  text-align: center;
+}
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 1440px) {
+
+  #company-request-container {
+    min-width:100%;
+  }
+
+  .compay-request-inner {
+    padding:24px 0 0;
+  }
+
+  .msg-icon-box { 
+    margin:0 24px;
+    padding:40px 16px;
+  }
+
+  .msg-icon-box .icon:before {
+    width:64px;
+    height:64px;
+    margin:0 auto 8px;
+  }
+
+  .msg-icon-box .icon.txt-h3 {
+    font-size:22px !important;
+    line-height: 33px;
+    text-align: center; 
+  }
+
+  .msg-icon-box .txt {
+    padding-top:12px;
+    font-size:14px !important;
+    line-height:21px;
+  }
+
+  .msg-icon-box + .info-list-area {
+    padding-top:24px;
+  }
+
+  .info-list-area  {
+    padding:0 24px;
+  }
+
+  .info-list-area .tit {
+    padding-bottom:12px;
+  }
+
+/* [E]Tablet */  }
+
+
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px) { 
+
+  .compay-request-inner .page-bottom-btn {
+    margin-top:24px;
+    padding:16px 24px;
+    border-top:1px solid #ccc;
+  }
+
+  .compay-request-inner .page-bottom-btn .btn-block {
+    width:100%;
+  }
+
+ /* [E]Mobile */ }
+  
+ 

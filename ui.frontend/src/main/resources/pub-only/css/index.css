@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "맑은 고딕", "Malgun Gothic", Arial, sans-serif;
+  color: #222222;
+  line-height: 1.25;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 0 20px 20px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.navigation {
+  position: sticky;
+  top: -1px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: #eee;
+  border-bottom: 2px solid #222;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.navigation a {
+  background: none;
+  text-decoration: underline;
+  padding: 0.8em;
+}
+
+.navigation a:first-child {
+  padding-left: 0.1em;
+}
+
+h2 {
+  clear: both;
+  padding: 40px 3px 3px;
+  border-bottom: 1px solid #000;
+  font-size: 1.2em;
+}
+
+.list ul {
+  font-size: 12px;
+}
+
+.list li {
+  padding: 5px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.list li a {
+  display: block;
+  background: url(http://static.naver.com/www/m/cm/im/bu_lk.gif) no-repeat 100%
+    50%;
+}
+
+.list li a span {
+  margin-left: 10px;
+  font-size: 11px;
+  color: #9a9a9a;
+}
+
+.list .state {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  background: #00838f;
+  color: #ffffff;
+  font-size: 9px;
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+.list .mobile {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  background: #006bea;
+  color: #ffffff;
+  font-size: 9px;
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+.list .confirm {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  background: gray;
+  color: #ffffff;
+  font-size: 9px;
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+.list .except {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  background: lightgrey;
+  color: #888888;
+  font-size: 9px;
+  margin-left: 0;
+  margin-right: 4px;
+}
+
+.del {
+  text-decoration: line-through;
+  color:#666;
+}
+.del  span {
+  display:block;
+  color:#666;
+}
+
+/******* MOBILE *******/
+@media only screen and (max-width: 768px) { 
+      .navigation {
+        overflow-x: auto;
+      }
+      .navigation a {
+        flex: none;
+        white-space: nowrap;
+      }
+      .list li {
+        padding-right: 0;
+      }
+      .list li a span:not(.state, .mobile, .confirm, .except) {
+        display: block;
+        margin-top: 5px;
+      }
+      
+/* [E]mobile */    
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>BIM Spec Popup</title>
+    <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/apps/components/content/pop-bim-spec/clientlibs/css/main.css"><!-- 컴포넌트 css -->
+
+    <!-- 2025-04-11 요청으로 삽입 //-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <div>
+    <button type="button" class="btn-block md icon-member" data-layer-target="pop-bim-spec">
+      <span class="btn-block__txt">BIM Spec</span>
+    </button>
+
+    <!-- BIM Spec Popup -->
+    <div class="popup-wrap pop-bim-spec-wrap" id="pop-bim-spec">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">BIM Spec</p>
+        </div>
+        <div class="popup__container">
+          <div class="pop-bim-spec__cont">
+            <!-- inner-top // -->
+            <div class="inner-top">
+              <button type="button" class="btn-block">
+                <span class="btn-block__txt">Spec Download</span>
+                <i class="btn-block__icon icon-download"></i>
+              </button>
+            </div>
+            <!-- // inner-top  -->
+
+            <!-- inner-cont // -->
+            <div class="inner-cont">
+              <!-- bim-item (Control Type) // -->
+              <div class="bim-item">
+                <p class="tit">Control Type</p>
+                <table>                  
+                  <colgroup>
+                    <col style="width:27%;"/>
+                    <col style="width:37%;"/>
+                    <col style="width:auto;"/>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td rowspan="3">Pressure Drop</td>
+                      <td>Pressure Drop (Set. Nominal)</td>
+                      <td>10 mAq</td>
+                    </tr>
+                    <tr>
+                      <td class="line">Inlet (Diameter)</td>
+                      <td>150 mm</td>
+                    </tr>
+                    <tr>
+                      <td class="line">Outlet (Diameter)</td>
+                      <td>120 mm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // bim-item (Control Type)  -->
+
+              <!-- bim-item(Piping Connection) // -->
+              <div class="bim-item">
+                <p class="tit">Piping Connection</p>
+                <table>                  
+                  <colgroup>
+                    <col style="width:27%;"/>
+                    <col style="width:37%;"/>
+                    <col style="width:auto;"/>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>Liquid Pipe</td>
+                      <td>Diameter (Diameter)</td>
+                      <td>70 mm</td>
+                    </tr>
+                    <tr>
+                      <td>Gas Pipe</td>
+                      <td>Diameter (Diameter)</td>
+                      <td>100 mm</td>
+                    </tr>
+                    <tr>
+                      <td>Current input</td>
+                      <td>High Pressure Gas Pipe (Diameter)</td>
+                      <td>50 mm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // bim-item(Piping Connection)  -->
+
+              <!-- bim-item(Wiring Connection) // -->
+              <div class="bim-item">
+                <p class="tit">Wiring Connection</p>
+                <table>                  
+                  <colgroup>
+                    <col style="width:27%;"/>
+                    <col style="width:37%;"/>
+                    <col style="width:auto;"/>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>Power Source Wire</td>
+                      <td>Power Source Wire (Power Source Wire)</td>
+                      <td>60 ㎟</td>
+                    </tr>
+                    <tr>
+                      <td>Transmission Cable</td>
+                      <td>Min. (Min.)</td>
+                      <td>20 ㎟</td>
+                    </tr>
+                    <tr>
+                      <td>Transmission Cable</td>
+                      <td>Min. (Min.)</td>
+                      <td>15 AWG</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // bim-item(Wiring Connection)  -->
+
+              <!-- bim-item(Refrigerant) // -->
+              <div class="bim-item">
+                <p class="tit">Refrigerant</p>
+                <table>                  
+                  <colgroup>
+                    <col style="width:27%;"/>
+                    <col style="width:37%;"/>
+                    <col style="width:auto;"/>
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>Type</td>
+                      <td>Type (Type)</td>
+                      <td>HFOs</td>
+                    </tr>
+                    <tr>
+                      <td>Control Type</td>
+                      <td>Control Type (Control Type)</td>
+                      <td>On/Off Control</td>
+                    </tr>
+                    <tr>
+                      <td>Factory Charge</td>
+                      <td>Factory Charge (Factory Charge)</td>
+                      <td>50 kg</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- // bim-item(Refrigerant)  -->
+            </div>
+            <!-- // inner-cont -->
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block type2 lg prj-btn" onclick="window.hvachubFunc.closePopup()">
+            <span class="btn-block__txt">Cancle</span>
+          </button> 
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span></button>
+      </div>
+    </div>
+  </div>
+
+
+<!-- common.js -->
+<script src="/pub-only/js/main-lib.js"></script>
+<script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+
+<script src="/apps/components/content/inner-content/pop-member-share/clientlibs/js/main.js"></script><!-- 컴포넌트 js -->
+</body>
+</html>

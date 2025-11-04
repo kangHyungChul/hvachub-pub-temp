@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon Column</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/apps/components/content/icon-column/clientlibs/css/main.css"
+    />
+
+    <!-- 2025-04-11 요청으로 삽입 //-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+    <!-- End Google Tag Manager -->
+
+  </head>
+  <body>
+
+    <!-- 2025-04-11 요청으로 삽입 //-->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) --> 
+
+    <div>
+      <!-- component -->
+      <section class="icon-column">
+        <!-- 240718 구조 변경 -->
+        <!-- mobile 인 경우에 carousel 타입 선택시 .swiper 영역에 .mo-swiper 클래스 추가 필요 -->
+        <div class="swiper icon-col-swiper">
+          <!-- Additional required wrapper -->
+          <!-- 240618 .box-wrap 클래스 추가 -->
+          <!-- column type에 따른 클래스 추가
+              type 2 column (default) / type 3 column -> .col3 -->
+          <ul class="swiper-wrapper box-wrap col3">
+            <!-- Slides -->
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">Technical Data Book</span>
+                    <span class="mo-txt">Technical Data Book</span>
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-tdb.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <p class="icon-column-box__desc txt-p4">
+                    Provides dimension drawing files<br />
+                    for CAD
+                  </p>
+                </div>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-drawing.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">BIM</span>
+                    <span class="mo-txt">BIM</span>
+                  </p>
+                  <p class="icon-column-box__desc txt-p4">
+                    Provides Revit files for building<br />
+                    information Modeling
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-bim.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">Tech, Video</span>
+                    <span class="mo-txt">Tech, Video</span>
+                  </p>
+                  <p class="icon-column-box__desc txt-p4">
+                    Provides Technical Video information
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-video.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">Catalog</span>
+                    <span class="mo-txt">Catalog</span>
+                  </p>
+                  <p class="icon-column-box__desc txt-p4">
+                    Provide HVAC Catalog
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-catalog.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">Manual</span>
+                    <span class="mo-txt">Manual</span>
+                  </p>
+                  <p class="icon-column-box__desc txt-p4">
+                    Provide User/Installation<br />
+                    Manuals and installer<br />
+                    Reference Guide
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-manual.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+          </ul>
+
+          <div class="swiper-button-wrap">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+        <!-- 화면 확인용 임시 여백 -->
+        <div style="height: 50px"></div>
+        <!-- 화면 확인용 임시 여백 -->
+
+        <!--[HVCHB-761] S: 240711 확인용 col3 노출영역 -->
+        <!-- mobile 인 경우에 carousel 타입 선택시 .swiper 영역에 .mo-swiper 클래스 추가 필요 -->
+        <div class="swiper icon-col-swiper mo-swiper">
+          <!-- Additional required wrapper -->
+          <!-- column type에 따른 클래스 추가
+              type 2 column (default) / type 3 column -> .col3 -->
+          <ul class="swiper-wrapper box-wrap col3">
+            <!-- Slides -->
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">Technical Data Book</span>
+                    <span class="mo-txt">Technical Data Book</span>
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-tdb.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <p class="icon-column-box__desc txt-p4">
+                    Provides dimension drawing files<br />
+                    for CAD
+                  </p>
+                </div>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-drawing.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">BIM</span>
+                    <span class="mo-txt">BIM</span>
+                  </p>
+                  <p class="icon-column-box__desc txt-p4">
+                    Provides Revit files for building<br />
+                    information Modeling
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-bim.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">Tech, Video</span>
+                    <span class="mo-txt">Tech, Video</span>
+                  </p>
+                  <p class="icon-column-box__desc txt-p4">
+                    Provides Technical Video information
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-video.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">Catalog</span>
+                    <span class="mo-txt">Catalog</span>
+                  </p>
+                  <p class="icon-column-box__desc txt-p4">
+                    Provide HVAC Catalog
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-catalog.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+            <li class="swiper-slide icon-column-box">
+              <div class="icon-column-box__cont">
+                <!-- 240523 heading 태그 -> p태그 수정 -->
+                <!-- 240618 .txt-wrap 구조 추가 -->
+                <div class="txt-wrap">
+                  <!-- 240809 pc/mo 텍스트 분기처리 -->
+                  <p class="icon-column-box__title txt-h4 txt-fw-b">
+                    <span class="pc-txt">Manual</span>
+                    <span class="mo-txt">Manual</span>
+                  </p>
+                  <p class="icon-column-box__desc txt-p4">
+                    Provide User/Installation<br />
+                    Manuals and installer<br />
+                    Reference Guide Provide User/Installation<br />
+                    Manuals and installer<br />
+                    Reference Guide
+                  </p>
+                </div>
+                <a role="button" href="#" class="btn-block type2" target="">
+                  <span class="btn-block__txt">Learn more</span>
+                </a>
+              </div>
+              <img
+                src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-manual.svg"
+                alt="image with text icon"
+                class="icon-column-box__icon"
+              />
+            </li>
+          </ul>
+
+          <!-- 240718 접근성 관련 swiper 텍스트 추가 -->
+          <div class="swiper-button-wrap">
+            <div class="swiper-button-prev">
+              <span class="txt-blind">prev</span>
+            </div>
+            <div class="swiper-button-next">
+              <span class="txt-blind">next</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- common.js -->
+    <script src="/pub-only/js/main-lib.js"></script>
+    <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+    <!-- 컴포넌트 js -->
+    <script src="/apps/components/content/icon-column/clientlibs/js/main.js"></script>
+  </body>
+</html>

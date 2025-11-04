@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+    <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+    <!-- 2025-04-11 요청으로 삽입 //-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+    <!-- 2025-04-11 요청으로 삽입 //-->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) --> 
+
+    <button type="button" class="btn-block" data-layer-target="alert-layer00"> <span class="btn-block__txt"> default alert </span> </button> 
+    <button type="button" class="btn-block" data-layer-target="alert-delete"> <span class="btn-block__txt"> Delete alert</span> </button>
+    <button type="button" class="btn-block" data-layer-target="alert-save"> <span class="btn-block__txt"> save alert</span> </button>
+    <button type="button" class="btn-block" data-layer-target="alert-credit-block"> <span class="btn-block__txt"> credit-block-alert</span> </button>
+    <button type="button" class="btn-block" data-layer-target="alert-selectadd"> <span class="btn-block__txt"> select address alert</span> </button>
+    <button type="button" class="btn-block" data-layer-target="alert-share"> <span class="btn-block__txt"> Share alert</span> </button>
+    <button type="button" class="btn-block" data-layer-target="alert-saved-cart"> <span class="btn-block__txt"> Saved Cart alert</span> </button>
+
+    <!-- alert open : .active -->
+    <!-- default alert -->
+    <div class="alert-wrap" id="alert-layer00">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="aler__container">
+                <p class="txt-p4">Are you sure you want to delete it?</p>
+            </div>
+            <div class="alert__footer">
+                <!-- 특정 버튼에 closePopup 적용 예시 -->
+                <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup('alert-layer00')">
+                    <span class="btn-block__txt">close</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+        </div>
+    </div>
+    <!-- //default alert -->
+    <!-- Delete alert -->
+    <div class="alert-wrap" id="alert-delete">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+                <p class="txt-h7">Delete</p>
+            </div>
+            <div class="aler__container">
+                <p class="txt-p4">Are you sure you want to delete it?</p>
+            </div>
+            <div class="alert__footer">
+                <button type="button" class="btn-block md">
+                    <span class="btn-block__txt">No</span>
+                </button>
+                <button type="button" class="btn-block type2 md">
+                    <span class="btn-block__txt">Yes</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+        </div>
+    </div>
+    <!-- //Delete alert -->
+    <!-- save alert -->
+    <div class="alert-wrap" id="alert-save">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+                <p class="txt-h7">Save</p>
+            </div>
+            <div class="aler__container">
+                <p class="txt-p4">Are you sure want to save it?</p>
+            </div>
+            <div class="alert__footer">
+                <button type="button" class="btn-block md">
+                    <span class="btn-block__txt">No</span>
+                </button>
+                <button type="button" class="btn-block type2 md">
+                    <span class="btn-block__txt">Yes</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+        </div>
+    </div>
+    <!-- //save alert -->
+    <!-- Credit Block alert -->
+    <div class="alert-wrap" id="alert-credit-block">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+                <p class="txt-h7">Credit Block</p>
+            </div>
+            <div class="aler__container">
+                <p class="txt-p4">
+                    Your credit is in a Blocked state. <br>
+                    Please contact your contacts at Samsung.
+                </p>
+
+            </div>
+            <div class="alert__footer">
+                <button type="button" class="btn-block type2 md" alert-selectadd>
+                    <span class="btn-block__txt">Close</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+        </div>
+    </div>
+    <!-- //Credit Block alert -->
+    <!-- select address alert -->
+    <div class="alert-wrap" id="alert-selectadd">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+                <p class="txt-h7">Select Address</p>
+            </div>
+            <div class="aler__container">
+                <p class="txt-p4">There is no registered address.</p>
+            </div>
+            <div class="alert__footer">
+                <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup('alert-selectadd')">
+                    <span class="btn-block__txt">Close</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+        </div>
+    </div>
+    <!-- //select address alert -->
+    <!-- share alert -->
+    <div class="alert-wrap" id="alert-share">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+                <p class="txt-h7">Share</p>
+            </div>
+            <div class="aler__container">
+                <div class="share-list-box">
+                    <button type="button" class="btn-txt">
+                        <i class="btn-txt__icon icon-share-in"></i>
+                        <span class="btn-txt__txt">Linkedin</span>
+                    </button>
+                    <button type="button" class="btn-txt">
+                        <i class="btn-txt__icon icon-share-email"></i>
+                        <span class="btn-txt__txt">E-mail</span>
+                    </button>
+                    <button type="button" class="btn-txt">
+                        <i class="btn-txt__icon icon-share-link"></i>
+                        <span class="btn-txt__txt">Copy the link</span>
+                    </button>
+                </div>
+            </div>
+            <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+        </div>
+    </div>
+    <!-- //share alert -->
+    <!-- save cart alert -->
+    <div class="alert-wrap" id="alert-saved-cart">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+                <p class="txt-h7">Saved Cart</p>
+            </div>
+            <div class="aler__container">
+                <p class="txt-p6">Would you like to save to 'Saved Cart'? <br> Please write the Cart name.</p>
+            
+                <div class="field-box space-mt24">
+                    <label class="txt-label txt-req" for="required-input">Cart Name</label>
+                    <div class="input-box">
+                        <input type="text" class="input-box__input" id="required-input" placeholder="Type a cart name" required>
+                    </div>
+                    <p class="txt-error">Cart name is required</p>
+                    <p class="txt-error">The cart name is duplicated. Please enter again.</p>
+                </div>
+            </div>
+            <div class="alert__footer">
+                <button type="button" class="btn-block md">
+                    <span class="btn-block__txt">Back</span>
+                </button>
+                <button type="button" class="btn-block type2 md">
+                    <span class="btn-block__txt">Save</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+        </div>
+    </div>
+    <!-- //save cart -->
+    
+
+<!-- common.js -->
+<script src="/pub-only/js/main-lib.js"></script>
+<script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+<script src="clientlibs/js/main.js"></script>    
+</body>
+</html>

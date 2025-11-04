@@ -1,0 +1,64 @@
+.lib-list-sect {
+  padding-inline: 24px;
+}
+/* search area */
+.lib-list-sect .lib-search-area {
+  display: block;
+  max-width: 1392px;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 24px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  border-radius: var(--border-base);
+}
+.lib-search-area .input-search-box .input-box.input-search {
+  position: relative;
+  width: 775px;
+  z-index: 9;
+}
+.lib-list-sect .filter-wrap {
+  margin-inline: -24px;
+}
+
+/* ===================== Tablet ===================== */
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  /* search area */
+  .lib-list-sect .lib-search-area {
+    padding: 1.667vw;
+    margin-bottom: 0.556vw;
+  }
+  .lib-search-area .input-search-box .input-box.input-search {
+    width: 53.819vw;
+  }
+/* [E]Tablet */
+}
+/* ===================== Mobile ===================== */
+@media only screen and (max-width: 768px) {
+  .lib-list-sect {
+    padding: 0;
+  }
+  /* search area */
+  .lib-list-sect .lib-search-area {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .lib-search-area .input-search-box {
+    display: block;
+  }
+  .lib-search-area .input-search-box .input-box.input-search {
+    width: 100%;
+  }
+  .lib-search-area .input-search-box > .btn-block {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 12px;
+  }
+  .lib-list-sect .filter-wrap {
+    margin-inline: 0;
+  }
+  .lib-list-sect .filter-wrap .filter-wrap__top {
+    border-top: 1px solid #dddddd;
+  }
+/* [E]Mobile */
+}

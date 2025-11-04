@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Order Details</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+  
+
+  <!-- component -->
+  <section class="order-datail-sect">
+    <div class="tit-area">
+      <h1 class="txt-h3">Order Details</h1>
+      <div class="btn-box">
+        <a role="button" class="btn-block md" href="" target="_blank">
+          <span class="btn-block__txt">Proforma</span>
+          <i class="btn-block__icon icon-download"></i>
+        </a>
+        <button type="button" class="btn-block type2 md" data-layer-target="cancel-order-alert">
+          <span class="btn-block__txt">Cancel Order</span>
+        </button>
+        <button type="button" class="btn-block  md">
+          <span class="btn-block__txt">List</span>
+        </button>
+      </div>
+    </div>
+    <ul class="od-cm-info">
+      <!-- [F] Run-rate, buy online 인 경우 삭제-->
+      <li class="od-cm-info__item">
+        <p class="item-dt txt-p5">Project Name</p>
+        <div class="item-dd">
+          <p class="txt-p5">Samsung hvac Aircon</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col2">
+        <p class="item-dt txt-p5">SO Number</p>
+        <div class="item-dd">
+          <!-- 2024-01-10 class 삭제 : txt-fw-b -->
+          <p class="txt-p5 txt-point2">8123456789</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col2">
+        <p class="item-dt txt-p5">Status</p>
+        <div class="item-dd">
+          <!-- 2024-01-10 class 변경 -->
+          <span class="txt-p6 txt-fw-b">Open</span>
+          <!-- 2024-01-10 버튼 추가 -->
+          <button type="button" class="btn-block sm">
+            <span class="btn-block__txt">e-POD</span>
+          </button>
+        </div>
+      </li>
+      <li class="od-cm-info__item col2">
+        <p class="item-dt txt-p5">Order Date</p>
+        <div class="item-dd">
+          <p class="txt-p5">2024-04-12</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col2">
+        <p class="item-dt txt-p5">Type</p>
+        <div class="item-dd">
+          <p class="txt-p5">Online (Multi Project)</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col2">
+        <p class="item-dt txt-p5">PO Number</p>
+        <div class="item-dd">
+          <p class="txt-p5">PQ123456789</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col2">
+        <p class="item-dt txt-p5">Payment Terms</p>
+        <div class="item-dd">
+          <p class="txt-p5">150 days</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item">
+        <p class="item-dt txt-p5">Shipping Address</p>
+        <div class="item-dd">
+          <!-- 2025-01-10 ship to name 추가 -->
+          <p class="txt-p5">ALTUNCU MUHENDISLIK <span class="txt-p6 txt-gray">(0002015712)</span> </p>
+          <p class="txt-p5">Alaçam Sok. No:5, Cinnah Caddesi, Çankaya/Ankara, 06690, Turkey</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item">
+        <p class="item-dt txt-p5">Contact Info.</p>
+        <div class="item-dd">
+          <p class="txt-p5">Yuri***</p>
+          <p class="txt-p5"><a class="txt-underline txt-point2" href="mailto:test@test.com">bced123@samsung.com</a></p>
+          <p class="txt-p5">90212368****</p>
+        </div>
+      </li>
+    </ul>
+    <ul class="total-amount-box">
+      <li class="total-amount__item">
+        <p class="total__text txt-h8">Net Amount</p>
+        <div class="total__price">
+          <!-- 2025-01-10 태그변경 : span= => p -->
+          <!-- 2025-01-16 RRP 추가 -->
+          <p class="txt-del txt-gray">808.499,00 TL </p>
+          <!-- 2025-01-16 class 변경 txt-p5 ==> txt-p4 -->
+          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+          <p class="txt-p4">Exchange Rate <span class="txt-fw-b">($1 = 38.33 TL)</span></p>
+        </div>
+      </li>
+      <li class="total-amount__item">
+        <p class="total__text txt-p5">
+          <span class="txt-fw-b">Tax Included</span>
+          <span class="txt-gray">VAT(20%)</span>
+        </p>
+        <p class="total__price txt-p4 txt-gray txt-fw-b">80.84 TL</p>
+      </li>
+      <li class="total-amount__item">
+        <p class="total__text txt-h8">Total Amount (Tax Included)</p>
+        <p class="total__price txt-h7">717.499,99 TL</p>
+      </li>
+    </ul>
+
+    <!-- 2025-01-10 class 변경 my-result__wrap ==> basic-list-wrap -->
+    <div class="basic-list-wrap">
+      <!-- 2025-01-10 class 변경 result__num-btn ==> basic-list__top -->
+      <div class="basic-list__top">
+        <p class="txt-fw-b txt-p6">Item <span class="txt-point1">10</span></p>
+      </div>
+      <!-- [F] project -->
+      <!-- 2025-01-10 div 삭제 orser-detail -->
+      <!-- 2025-01-10 class 변경 result-list__wrap ==> basic-list__result / 태그 변경 ul ==> div -->
+      <div class="basic-list__result">
+        <!-- head -->
+        <!-- 2025-01-10 class 변경 list__head ==> list-head / 태그 변경 li ==> ul-->
+        <ul class="list-head">
+          <!--  2025-01-10 항목 추가 및 순서 변경 / class 추가 list-el / class 변경 ' ord-' ==> ' el- '  -->
+          <li class="list-el el-material">
+            <span class="txt-p5 txt-fw-b">Material</span>
+          </li>
+          <li class="list-el el-qud">
+            <span class="txt-p5 txt-fw-b">Quantity</span>
+          </li>
+          <li class="list-el el-price">
+            <span class="txt-p5 txt-fw-b">Unit Price(USD)</span>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Net Amount (USD)​</span>
+          </li>
+          <li class="list-el el-price">
+            <span class="txt-p5 txt-fw-b">Unit Price(TL)</span>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Net Amount (TL)​</span>
+          </li>
+          <li class="list-el el-rdd">
+            <span class="txt-p5 txt-fw-b">RDD</span>
+          </li>
+          <li class="list-el el-date">
+            <span class="txt-p5 txt-fw-b">Estimated Date</span>
+          </li>
+          <li class="list-el el-date">
+            <span class="txt-p5 txt-fw-b">Delivered Date</span>
+          </li>
+          <li class="list-el el-status">
+            <span class="txt-p5 txt-fw-b">Status</span>
+          </li>
+        </ul>
+        <!-- head -->
+        <!-- result -->
+        <!-- 2025-01-10 class 변경 list__el-box ==> list-body / 태그 변경 li ==> ul -->
+        <ul class="list-body">
+          <li class="lis-row-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Open</span>
+              </li>
+            </ul>
+          </li>
+          <li class="lis-row-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">-</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Shipped</span>
+              </li>
+            </ul>
+          </li>
+          <!-- [F] 모듈 형태인 경우 : class 추가 module-box-->
+          <li class="lis-row-box module-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Completed</span>
+              </li>
+            </ul>
+            <!-- [F] 모듈 : class 추가 row-module -->
+            <ul class="list-row row-module">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Prepared</span>
+              </li>
+            </ul>
+            <ul class="list-row row-module">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Canceled</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- result -->       
+          
+        <!-- no data(2025-07-10 add start) // -->
+        <div class="list-nodata">
+          <p class="txt-p5">There is no registered content.</p>
+        </div>
+        <!-- //no data(2025-07-10 add end) -->
+
+      </div>
+      <!-- //project -->
+
+      <!-- [F] Run-rate, buy online -->
+      <div class="basic-list__result">
+        <!-- head -->
+        <ul class="list-head">
+          <li class="list-el el-material">
+            <span class="txt-p5 txt-fw-b">Material</span>
+          </li>
+          <li class="list-el el-qud">
+            <span class="txt-p5 txt-fw-b">Quantity</span>
+          </li>
+          <li class="list-el el-price">
+            <span class="txt-p5 txt-fw-b">Unit Price</span>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Net Amount</span>
+          </li>
+          <li class="list-el el-rdd">
+            <span class="txt-p5 txt-fw-b">RDD</span>
+          </li>
+          <li class="list-el el-date">
+            <span class="txt-p5 txt-fw-b">Estimated Date</span>
+          </li>
+          <li class="list-el el-date">
+            <span class="txt-p5 txt-fw-b">Delivered Date</span>
+          </li>
+          <li class="list-el el-status">
+            <span class="txt-p5 txt-fw-b">Status</span>
+          </li>
+        </ul>
+        <!-- head -->
+        <!-- result -->
+        <ul class="list-body">
+          <li class="lis-row-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5 txt-del">808.499,00 TL</span>
+                <span class="txt-p5">74.198,94 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-del">140.998,00 TL</span>
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Open</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- result -->
+      </div>
+      <!-- // Run-rate, buy online  -->
+
+      <!-- 2025-09-01 추가 / multi project / class 추가 basic-list__resulit--multiple -->
+      <div class="basic-list__result basic-list__resulit--multiple"> 
+        <!-- head -->
+        <ul class="list-head">
+          <li class="list-el el-material">
+            <span class="txt-p5 txt-fw-b">Material</span>
+          </li>
+          <li class="list-el el-qud">
+            <span class="txt-p5 txt-fw-b">Quantity</span>
+          </li>
+          <li class="list-el el-price">
+            <span class="txt-p5 txt-fw-b">Unit Price(USD)</span>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Net Amount(USD)</span>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Unit Price(TL)</span>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Net Amount(TL)</span>
+          </li>
+          <li class="list-el el-rdd">
+            <span class="txt-p5 txt-fw-b">RDD</span>
+          </li>
+          <li class="list-el el-date">
+            <span class="txt-p5 txt-fw-b">Estimated<br>Date</span>
+          </li>
+          <li class="list-el el-date">
+            <span class="txt-p5 txt-fw-b">Delivered<br>Date</span>
+          </li>
+          <li class="list-el el-status">
+            <span class="txt-p5 txt-fw-b">Status</span>
+          </li>
+        </ul>
+        <!-- head -->
+        <!-- result -->
+        <ul class="list-body">
+          <li class="lis-row-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">2</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-25</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">-</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Open</span>
+              </li>
+            </ul>
+          </li>
+          <li class="lis-row-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">2</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">74.198,94 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">148.397,88 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-22</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-04-01</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Shipped</span>
+              </li>
+            </ul>
+          </li>
+          <li class="lis-row-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">3</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">148.397,88 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-23</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-04-02</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Completed</span>
+              </li>
+            </ul>
+          </li>
+          <li class="lis-row-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">888</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">148.397,88 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-21</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">-</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Canceled</span>
+              </li>
+            </ul>
+          </li>
+          <li class="lis-row-box">
+            <ul class="list-row">
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">888</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">$21,053.75</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">148.397,88 TL</span>
+              </li>
+              <li class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">2024-03-25</span>
+              </li>
+              <li class="list-el el-date">
+                <span class="txt-p5">-</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Prepared</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- result -->
+      </div>
+      <!-- //multi project -->
+    </div>
+  </section>
+
+  <!-- Cancel Order alert -->
+  <div class="alert-wrap" id="cancel-order-alert">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="alert__header">
+        <p class="txt-p3 txt-fw-b">Cancel Order</p>
+      </div>
+      <div class="aler__container">
+        <!-- 2025-01-10 class 변경 txt-p6 ==> txt-p4-->
+        <p class="txt-p4">Would you like to cancel the order?</p>
+      </div>
+      <div class="alert__footer">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">Back</span>
+        </button>
+        <button type="button" class="btn-block type2 md" data-layer-target="cancel-order-confirm">
+          <span class="btn-block__txt">Cancel Order</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //Cancel Order alert -->
+  <!-- Cancel Order confirm alert -->
+  <div class="alert-wrap" id="cancel-order-confirm">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="alert__header">
+        <p class="txt-p3 txt-fw-b">Cancel Order</p>
+      </div>
+      <div class="aler__container">
+        <!-- 2025-01-10 class 변경 txt-p6 ==> txt-p4-->
+        <p class="txt-p4">Your order has been canceled.</p>
+      </div>
+      <div class="alert__footer">
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Confirm</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //Cancel Order confirm -->
+
+  <!-- //component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

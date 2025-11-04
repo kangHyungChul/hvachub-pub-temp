@@ -1,0 +1,17 @@
+.quick-menu { position: fixed; bottom: 56px; right: 56px; z-index: 9; } 
+.quick-menu .quick-btn { overflow: hidden; display: block; width: 48px; height: 48px; } 
+.quick-menu .quick-btn img { max-height: 100%; } 
+.quick-menu #gotop-btn { width: 48px; height: 0; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-goto-top.svg); margin-top: 12px; opacity: 0; visibility: hidden; transform: translateY(20px); transition: opacity .3s, transform .3s, visibility .3s, height .3s .2s; } 
+.quick-menu #gotop-btn.active { height: 48px; opacity: 1; visibility: visible; transform: translateY(0); } 
+
+/******* MOBILE *******/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+  .quick-menu { bottom: 3.889vw; right: 3.889vw; } 
+  .quick-menu .quick-btn { width: 3.333vw; height: 3.333vw; } 
+  .quick-menu #gotop-btn { width: 3.333vw; } 
+  .quick-menu #gotop-btn.active { height: 3.333vw;} 
+}
+@media only screen and (max-width: 768px){
+  .quick-menu {bottom: 16px; right: 16px;} 
+/* [E]mobile */ 
+}

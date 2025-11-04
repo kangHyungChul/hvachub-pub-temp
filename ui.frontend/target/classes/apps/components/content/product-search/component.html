@@ -1,0 +1,2931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Product Search/Selector </title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+  <button type="button" class="btn-block" data-layer-target="product-search-popup">
+    <span class="btn-block__txt">Product Search</span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="selected-products-popup2">
+    <span class="btn-block__txt">Product Selector </span>
+  </button>
+
+  <!-- product search pop-->
+  <div class="popup-wrap prd-sh-wrap" id="product-search-popup">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Product Search</p>
+      </div>
+      <div class="popup__container">
+
+        <!-- 2024-08-02 모바일용 -->
+        <div class="mo-ord-sh__search mo-display">
+          <!-- 2024-08-21 class 변경 type3 ===> type2 -->
+          <button type="button" class="btn-block md type2">
+            <span class="btn-block__txt">Search</span>
+          </button>
+        </div>
+
+        <!-- search area -->
+        <div class="prd-sh__search">
+          <!-- 2024-08-02 모바일용 -->
+          <div class="prd-sh__tit mo-display">
+            <p class="txt-h8">Product Search</p>
+            <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+          </div>
+
+          <div class="field-box">
+            <label class="txt-label txt-blind" for="product-search">Model Code or Product Name</label>
+            <div class="input-search-box">
+              <!-- test text : auto -->
+              <div class="input-search-box__inner">
+                <div class="input-box input-search box-type">
+                  <input type="search" class="input-box__input" id="product-search" placeholder="Type a model code or product name">
+                  <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+                </div>
+                <div class="search-box__auto">
+                  <!-- [F] search-box__auto-list li가 비어 있을때 .search-box__no-list 노출-->
+                  <ul class="search-box__auto-list">
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                  </ul>
+                  <!-- 2024-07-15 검색 결과 없을 경우 추가 -->
+                  <div class="search-box__no-list">
+                    <p class="txt-p6">There are no related products.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field-area">
+            <!-- 2024-08-02 모바일용 txt-label 추가 -->
+            <p class="txt-label mo-display">Category</p>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category1</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                  <span class="txt-placeholder">Category1</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem" onclick="filterShow(this)">RAC</li> <!-- test click here -->
+                    <li role="menuitem">CAC</li>
+                    <li role="menuitem">EHS</li>
+                    <li role="menuitem">FJM</li>
+                    <li role="menuitem">DVM</li>
+                    <li role="menuitem">Chiller</li>
+                    <li role="menuitem">Ventilation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category2</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" disabled>
+                  <span class="txt-placeholder">Category2</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">Indoor Unit</li>
+                    <li role="menuitem">Outdoor Unit</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category3</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" disabled>
+                  <span class="txt-placeholder">Category3</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">DVM Home</li>
+                    <li role="menuitem">옵션 2</li>
+                    <li role="menuitem">옵션 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category4</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" disabled>
+                  <span class="txt-placeholder">Category4</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">옵션 1</li>
+                    <li role="menuitem">옵션 2</li>
+                    <li role="menuitem">옵션 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category5</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" disabled>
+                  <span class="txt-placeholder">Category5</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">옵션 1</li>
+                    <li role="menuitem">옵션 2</li>
+                    <li role="menuitem">옵션 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="prd-filter-box">
+            <div class="prd-filter-box__inner">
+              <!-- [F][Category 1 RAC, FAC, FJM, WAC 선택 시 노출되는 Filter 항목] -->
+              <ul class="prd-filter__list" style="display: none;">
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">Capacity</span> </div>
+                  <div class="prd-filter__type">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="Capacity" checked>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt">kW</span>
+                    </label>
+                    <!-- [F] disabled 시  -->
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="Capacity" checked>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt">Btu/h</span>
+                    </label>
+                    <!-- [F] disabled 시 : aria-disabled="true" -->
+                    <div class="range-slider">
+                      <div class="range-slider__inner">
+                        <div class="range-slider__bar" style="left: 25.6%; width: 63.6%;"></div>
+                        <div tabindex="0" class="range-slider__hadler" style="left: 25.6%;">
+                          <span class="range-slider__hadler-icon">
+                            <em class="range-slider__txt">5.5</em>
+                          </span>
+                        </div>
+                        <div tabindex="0" class="range-slider__hadler" style="left: 89.2%;">
+                          <span class="range-slider__hadler-icon">
+                            <em class="range-slider__txt">5.5</em>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">Operation mode</span> </div>
+                  <div class="prd-filter__type">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Cooling only</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Heat Pump</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Heat Pump / Heat Recovery</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">Refrigerant</span> </div>
+                  <div class="prd-filter__type">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R410A</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R22</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R410A(GWP>150)</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R32</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R32/R410A</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R290</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R32/R290</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <!-- //[Category 1 RAC, FAC, FJM, WAC 선택 시 노출되는 Filter 항목] -->
+              <!-- [F] [Category 1 DVM, Chiller, EHS. CAC, PAC 선택 시 노출되는 Filter 항목] -->
+              <ul class="prd-filter__list">
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">Capacity</span> </div>
+                  <div class="prd-filter__type">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="Capacity" checked>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt">kW</span>
+                    </label>
+                    <!-- [F] disabled 시  -->
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="Capacity" checked>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt">Btu/h</span>
+                    </label>
+                    <!-- [F] disabled 시 : aria-disabled="true" -->
+                    <div class="range-slider">
+                      <div class="range-slider__inner">
+                        <div class="range-slider__bar" style="left: 25.6%; width: 63.6%;"></div>
+                        <div tabindex="0" class="range-slider__hadler" style="left: 25.6%;">
+                          <span class="range-slider__hadler-icon">
+                            <em class="range-slider__txt">5.5</em>
+                          </span>
+                        </div>
+                        <div tabindex="0" class="range-slider__hadler" style="left: 89.2%;">
+                          <span class="range-slider__hadler-icon">
+                            <em class="range-slider__txt">5.5</em>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">Operation mode</span> </div>
+                  <div class="prd-filter__type">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Cooling only</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Heat Pump</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Heat Recovery</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">Refrigerant</span> </div>
+                  <div class="prd-filter__type">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant" checked>
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R410A</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R22</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R410A(GWP>150)</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R32</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R32/R410A</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R290</span>
+                    </label>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R32/R290</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">PowerSupply</span> </div>
+                  <div class="prd-filter__type">
+                    <div class="prd-filter__type-sub">
+                      <span class="txt-p6">Phase (Ø)</span>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Phase" checked>
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">1</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Phase">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">3</span>
+                      </label>
+                    </div>
+                    <div class="prd-filter__type-sub">
+                      <span class="txt-p6">Line (#)</span>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Line" checked>
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">2</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Line">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">3</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Line">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">4</span>
+                      </label>
+                    </div>
+                    <!-- 2024-12-30 class 추가 : vertical-type -->
+                    <div class="prd-filter__type-sub vertical-type">
+                      <span class="txt-p6">Voltage (V)</span>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage" checked>
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">24</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">115</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">120</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">208 ~ 230</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">220</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">220 ~ 240</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">230</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">380</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">380 ~ 415</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">400</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">460</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">DC 19V</span>
+                      </label>
+                    </div>
+                    <!-- 2024-12-30 class 추가 : vertical-type -->
+                    <div class="prd-filter__type-sub vertical-type">
+                      <span class="txt-p6">Hertz(Hz)</span>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Hertz" checked>
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">50</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Hertz">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">60</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Hertz">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">50/60</span>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- // [Category 1 DVM, Chiller, EHS. CAC, PAC 선택 시 노출되는 Filter 항목] -->
+              <!-- [F][Category 1 Ventilation 선택 시 노출되는 Filter 항목] -->
+              <ul class="prd-filter__list" style="display: none;">
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">PowerSupply</span> </div>
+                  <div class="prd-filter__type">
+                    <div class="prd-filter__type-sub">
+                      <span class="txt-p6">Phase (Ø)</span>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Phase" checked>
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">1</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Phase">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">3</span>
+                      </label>
+                    </div>
+                    <div class="prd-filter__type-sub">
+                      <span class="txt-p6">Line (#)</span>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Line" checked>
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">2</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Line">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">3</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Line">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">4</span>
+                      </label>
+                    </div>
+                    <!-- 2024-12-30 class 추가 : vertical-type -->
+                    <div class="prd-filter__type-sub vertical-type">
+                      <span class="txt-p6">Voltage (V)</span>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage" checked>
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">24</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">115</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">120</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">208 ~ 230</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">220</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">220 ~ 240</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">230</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">380</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">380 ~ 415</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">400</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">460</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Voltage">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">DC 19V</span>
+                      </label>
+                    </div>
+                    <!-- 2024-12-30 class 추가 : vertical-type -->
+                    <div class="prd-filter__type-sub vertical-type">
+                      <span class="txt-p6">Hertz(Hz)</span>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Hertz" checked>
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">50</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Hertz">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">60</span>
+                      </label>
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="PowerSupply-Hertz">
+                        <span class="btn-checkbox__icon"></span>
+                        <span class="btn-checkbox__txt">50/60</span>
+                      </label>
+                    </div>
+                  </div>
+                </li>
+                <li class="prd-filter__list-item">
+                  <div class="prd-filter__name"> <span class="txt-p6">Air Flow Rate</span> </div>
+                  <div class="prd-filter__type">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="Air Flow Rate" checked>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt">CMM</span>
+                    </label>
+                    <!-- [F] disabled 시  -->
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="Air Flow Rate">
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt">CFM</span>
+                    </label>
+                    <!-- [F] disabled 시 : aria-disabled="true" -->
+                    <div class="range-slider">
+                      <div class="range-slider__inner">
+                        <div class="range-slider__bar" style="left: 25.6%; width: 63.6%;"></div>
+                        <div tabindex="0" class="range-slider__hadler" style="left: 25.6%;">
+                          <span class="range-slider__hadler-icon">
+                            <em class="range-slider__txt">5.5</em>
+                          </span>
+                        </div>
+                        <div tabindex="0" class="range-slider__hadler" style="left: 89.2%;">
+                          <span class="range-slider__hadler-icon">
+                            <em class="range-slider__txt">5.5</em>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- //[Category 1 Ventilation 선택 시 노출되는 Filter 항목] -->
+              <button type="button" class="btn-txt-underline filter-reset">
+                <span class="btn-txt__txt">Clear all</span>
+              </button>
+            </div>
+            <div class="filter-close-box">
+              <button type="button" class="btn-icon icon-arrow-bottom">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="btn-box">
+            <!-- [F] 검색결과가 없을경우 노출 -->
+            <!-- <button type="button" class="btn-txt-underline" disabled>
+                            <span class="btn-txt__txt">Clear all</span>
+                        </button> -->
+
+            <!-- 2024-08-02 기본 disabled 상태로 노출, filter 1개 이상 선택시 활성 -->
+            <button type="button" class="btn-txt-underline mo-display" disabled>
+              <span class="btn-txt__txt">Clear all</span>
+            </button>
+            <!-- // 검색결과가 없을경우 노출 -->
+            <button type="button" class="btn-block type2 md prd-sh__btn">
+              <span class="btn-block__txt">Search</span>
+            </button>
+          </div>
+
+        </div>
+        <!-- //search area -->
+        <div class="prd-sh__result">
+          <div class="tit-area">
+            <p class="txt-h6">Product</p>
+            <p class="txt-p6 txt-fw-b"><span class="txt-point1">0</span> Results</p>
+          </div>
+          <!-- [F] PDP를 통해 진입한 경우, 검색 결과 -->
+          <div class="prd-result-box">
+            <ul class="prd-result__list">
+              <!-- [F] Case1. -->
+              <li class="prd-list__item">
+                <div class="prd-list__item-top">
+                  <div class="prd-img-box">
+                    <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                  </div>
+                  <div class="prd-tit-area">
+                    <div class="prd-category">
+                      <p class="txt-p6"> <span class="txt-arrow">RAC</span><span class="txt-arrow">Outdoor Unit</span> </p>
+                    </div>
+                    <p class="prd-tit txt-h8 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                    <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                  </div>
+                  <div class="prd-stock-box pc-display">
+                    <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                    <!-- 2024-11-22 가격 추가 -->
+                    <p class="txt-del-price">800.500,00 TL</p>
+                    <!-- 2024-11-22 class 추가 : stock-box-inner -->
+                    <div class="stock-box-inner">
+                      <!-- [F] Stock class : green, yellow, red -->
+                      <span class="txt-p6 txt-stock green">Stock</span>
+                      <div class="tooltip">
+                        <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                        <div class="tooltip__contents">
+                          <div class="tooltip__contents-inner">
+                            <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                            <div class="cont">
+                              <!-- 툴팁 문구 -->
+                              <p class="txt-fw-b">'Stock' availability </p>
+                              <div class="sotck-box">
+                                <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prd-list__item-detail">
+                  <div class="prd-detail__top">
+                    <div class="swiper-box">
+                      <div class="swiper capacity-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide capa__item active"> <span class="txt-p6">235.2</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                        </div>
+                        <div class="swiper-button-next capa__next-btn">
+                          <span class="txt-blind">next</span>
+                        </div>
+                        <div class="swiper-button-prev capa__prev-btn">
+                          <span class="txt-blind">prev</span>
+                        </div>
+                        <div class="capa__unit-text"><span class="txt-p7">(Btu/h)</span> </div>
+                      </div>
+                    </div>
+                    <!-- Mo전용(stock) -->
+                    <div class="prd-stock-box mo-display">
+                      <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                      <p class="txt-del-price">800.500,00 TL</p>
+                      <div class="stock-box-inner">
+                        <!-- [F] Stock class : green, yellow, red -->
+                        <span class="txt-p6 txt-stock green">Stock</span>
+                        <div class="tooltip">
+                          <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                          <div class="tooltip__contents">
+                            <div class="tooltip__contents-inner">
+                              <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                              <div class="cont">
+                                <!-- 툴팁 문구 -->
+                                <p class="txt-fw-b">'Stock' availability </p>
+                                <div class="sotck-box">
+                                  <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                  <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                  <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //Mo전용(stock) -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">Qty</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                    <div class="add-cart-box">
+                      <button class="btn-block type2 md add-cart__btn" data-layer-target="add-cart-alert">
+                        <span class="btn-block__txt">Cart</span>
+                      </button>
+                    </div>
+                    <div class="fold-btn-box">
+                      <button type="button" class="btn-icon icon-arrow-bottom">
+                        <span class="txt-blind">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- 2024-07-03 추가/변경 case1. -->
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controls systems (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                  <!-- 2024-07-03 compatibility product시 class 추가 : comp-type -->
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Indoor Unit (<span class="txt-point2">AJ016TNNDKGEU</span>) </p>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">RAC</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                          <p class="prd-unit txt-p7 txt-fw-b">99,999 Btu/h</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                            <!-- 2025-02-05 Validation 문구 추가 -->
+                            <p class="txt-error">Excess quantity</p>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">708.499,12 TL</p>
+                            <p class="txt-del-price">800.500,00 TL</p>
+                            <div class="stock-box-inner">
+                              <!-- [F] Stock class : green, yellow, red -->
+                              <span class="txt-p6 txt-stock green">Stock</span>
+                              <div class="tooltip">
+                                <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                                <div class="tooltip__contents">
+                                  <div class="tooltip__contents-inner">
+                                    <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                                    <div class="cont">
+                                      <!-- 툴팁 문구 -->
+                                      <p class="txt-fw-b">'Stock' availability </p>
+                                      <div class="sotck-box">
+                                        <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                        <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                        <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controls systems (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                </div>
+              </li>
+              <!-- [F] Case2. -->
+              <li class="prd-list__item">
+                <div class="prd-list__item-top">
+                  <div class="prd-img-box">
+                    <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                  </div>
+                  <div class="prd-tit-area">
+                    <div class="prd-category">
+                      <p class="txt-p6"> <span class="txt-arrow">WAC</span><span class="txt-arrow">Outdoor Unit</span> </p>
+                    </div>
+                    <p class="prd-tit txt-h8 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                    <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                  </div>
+                  <div class="prd-stock-box pc-display">
+                    <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                    <p class="txt-del-price">800.500,00 TL</p>
+                    <!-- 2024-11-22 class 추가 : stock-box-inner -->
+                    <div class="stock-box-inner">
+                      <!-- [F] Stock class : green, yellow, red -->
+                      <span class="txt-p6 txt-stock green">Stock</span>
+                      <div class="tooltip">
+                        <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                        <div class="tooltip__contents">
+                          <div class="tooltip__contents-inner">
+                            <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                            <div class="cont">
+                              <!-- 툴팁 문구 -->
+                              <p class="txt-fw-b">'Stock' availability </p>
+                              <div class="sotck-box">
+                                <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prd-list__item-detail">
+                  <div class="prd-detail__top">
+                    <!-- 2024-07-03 추가/변경 case4. swiper-box 추가 -->
+                    <div class="swiper-box">
+                      <div class="swiper capacity-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide capa__item active"> <span class="txt-p6">235.2</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                        </div>
+                        <div class="swiper-button-next capa__next-btn">
+                          <span class="txt-blind">next</span>
+                        </div>
+                        <div class="swiper-button-prev capa__prev-btn">
+                          <span class="txt-blind">prev</span>
+                        </div>
+                        <div class="capa__unit-text"><span class="txt-p7">(Btu/h)</span> </div>
+                      </div>
+                    </div>
+                    <!-- Mo전용(stock) -->
+                    <div class="prd-stock-box mo-display">
+                      <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                      <p class="txt-del-price">800.500,00 TL</p>
+                      <!-- 2024-11-22 class 추가 : stock-box-inner -->
+                      <div class="stock-box-inner">
+                        <!-- [F] Stock class : green, yellow, red -->
+                        <span class="txt-p6 txt-stock green">Stock</span>
+                        <div class="tooltip">
+                          <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                          <div class="tooltip__contents">
+                            <div class="tooltip__contents-inner">
+                              <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                              <div class="cont">
+                                <!-- 툴팁 문구 -->
+                                <p class="txt-fw-b">'Stock' availability </p>
+                                <div class="sotck-box">
+                                  <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                  <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                  <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //Mo전용(stock) -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">Qty</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                    <div class="add-cart-box">
+                      <button class="btn-block type2 md add-cart__btn" data-layer-target="add-cart-alert">
+                        <span class="btn-block__txt">Cart</span>
+                      </button>
+                    </div>
+                    <div class="fold-btn-box">
+                      <button type="button" class="btn-icon icon-arrow-bottom">
+                        <span class="txt-blind">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controls systems (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                </div>
+              </li>
+              <!-- [F] Case3. -->
+              <li class="prd-list__item">
+                <div class="prd-list__item-top">
+                  <div class="prd-img-box">
+                    <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                  </div>
+                  <div class="prd-tit-area">
+                    <div class="prd-category">
+                      <p class="txt-p6"> <span class="txt-arrow">CAC</span><span class="txt-arrow">Outdoor Unit</span> </p>
+                    </div>
+                    <p class="prd-tit txt-h8 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                    <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                  </div>
+                  <div class="prd-stock-box pc-display">
+                    <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                    <p class="txt-del-price">800.500,00 TL</p>
+                    <!-- 2024-11-22 class 추가 : stock-box-inner -->
+                    <div class="stock-box-inner">
+                      <!-- [F] Stock class : green, yellow, red -->
+                      <span class="txt-p6 txt-stock green">Stock</span>
+                      <div class="tooltip">
+                        <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                        <div class="tooltip__contents">
+                          <div class="tooltip__contents-inner">
+                            <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                            <div class="cont">
+                              <!-- 툴팁 문구 -->
+                              <p class="txt-fw-b">'Stock' availability </p>
+                              <div class="sotck-box">
+                                <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prd-list__item-detail">
+                  <div class="prd-detail__top">
+                    <!-- 2024-07-03 추가/변경 case4. swiper-box 추가 -->
+                    <div class="swiper-box">
+                      <div class="swiper capacity-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide capa__item active"> <span class="txt-p6">235.2</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                        </div>
+                        <div class="swiper-button-next capa__next-btn">
+                          <span class="txt-blind">next</span>
+                        </div>
+                        <div class="swiper-button-prev capa__prev-btn">
+                          <span class="txt-blind">prev</span>
+                        </div>
+                        <div class="capa__unit-text"><span class="txt-p7">(Btu/h)</span> </div>
+                      </div>
+                    </div>
+                    <!-- Mo전용(stock) -->
+                    <div class="prd-stock-box mo-display">
+                      <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                      <p class="txt-del-price">800.500,00 TL</p>
+                      <div class="stock-box-inner">
+                        <!-- [F] Stock class : green, yellow, red -->
+                        <span class="txt-p6 txt-stock green">Stock</span>
+                        <div class="tooltip">
+                          <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                          <div class="tooltip__contents">
+                            <div class="tooltip__contents-inner">
+                              <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                              <div class="cont">
+                                <!-- 툴팁 문구 -->
+                                <p class="txt-fw-b">'Stock' availability </p>
+                                <div class="sotck-box">
+                                  <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                  <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                  <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //Mo전용(stock) -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">Qty</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                    <div class="add-cart-box">
+                      <button class="btn-block type2 md add-cart__btn" data-layer-target="add-cart-alert">
+                        <span class="btn-block__txt">Cart</span>
+                      </button>
+                    </div>
+                    <div class="fold-btn-box">
+                      <button type="button" class="btn-icon icon-arrow-bottom">
+                        <span class="txt-blind">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controls systems (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Indoor Unit</p>
+                      <div class="field-box sm">
+                        <label class="txt-label txt-blind">model code</label>
+                        <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">AJ016TNNDKGEU</button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                            <ul class="combo-box__menu-list">
+                              <li role="menuitem" class="selected">AJ016TNNDKGEU</li>
+                              <li role="menuitem">옵션 2</li>
+                              <li role="menuitem">옵션 3</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">RAC</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                          <p class="prd-unit txt-p7 txt-fw-b">99,999 Btu/h</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">708.499,12 TL</p>
+                            <p class="txt-del-price">800.500,00 TL</p>
+                            <div class="stock-box-inner">
+                              <!-- [F] Stock class : green, yellow, red -->
+                              <span class="txt-p6 txt-stock green">Stock</span>
+                              <div class="tooltip">
+                                <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                                <div class="tooltip__contents">
+                                  <div class="tooltip__contents-inner">
+                                    <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                                    <div class="cont">
+                                      <!-- 툴팁 문구 -->
+                                      <p class="txt-fw-b">'Stock' availability </p>
+                                      <div class="sotck-box">
+                                        <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                        <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                        <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controls systems (<span class="txt-point2">0</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <!-- [F] 상품 추가시 <ul class="prd-list-el">  <li class="prd-list-el__item"> ... </ul> 생성 -->
+                  </div>
+                </div>
+              </li>
+              <!-- [F] Case4. Capacity 단품 선택 시 노출되는 화면 -->
+              <li class="prd-list__item">
+                <div class="prd-list__item-top">
+                  <div class="prd-img-box">
+                    <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                  </div>
+                  <div class="prd-tit-area">
+                    <div class="prd-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="prd-tit txt-h8 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                    <p class="prd-desc txt-p6">AM840DXVGGH/SA</p>
+                  </div>
+                  <div class="prd-stock-box pc-display">
+                    <p class="txt-p3 txt-fw-b">$149,999.99</p>
+                  </div>
+                </div>
+                <div class="prd-list__item-detail">
+                  <div class="prd-detail__top">
+                    <div class="swiper-box">
+                      <div class="swiper capacity-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide capa__item active"> <span class="txt-p6">235.2</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                        </div>
+                        <div class="swiper-button-next capa__next-btn">
+                          <span class="txt-blind">next</span>
+                        </div>
+                        <div class="swiper-button-prev capa__prev-btn">
+                          <span class="txt-blind">prev</span>
+                        </div>
+                        <div class="capa__unit-text"><span class="txt-p7">(Btu/h)</span> </div>
+                      </div>
+                      <div class="multi-modules">
+                        <p class="txt-p7 txt-fw-b">Modules</p>
+                        <div class="swiper capacity-swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">235.2</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">523.4</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">456.3</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">380.4</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">234.5</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">432.1</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">456.3</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">380.4</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">234.5</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">432.1</span> </div>
+                          </div>
+                          <div class="swiper-button-next capa__next-btn">
+                            <span class="txt-blind">next</span>
+                          </div>
+                          <div class="swiper-button-prev capa__prev-btn">
+                            <span class="txt-blind">prev</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mo전용(stock) -->
+                    <div class="prd-stock-box mo-display">
+                      <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                    </div>
+                    <!-- //Mo전용(stock) -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">Qty</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                    <div class="add-cart-box">
+                      <button class="btn-block type2 md add-cart__btn" data-layer-target="add-cart-alert">
+                        <span class="btn-block__txt">Cart</span>
+                      </button>
+                    </div>
+                    <div class="fold-btn-box">
+                      <button type="button" class="btn-icon icon-arrow-bottom">
+                        <span class="txt-blind">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">1</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">Accessory</span><span class="txt-arrow">External Control kit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">Air Conditioning System Remote MWR-SH00N</a></p>
+                          <p class="prd-desc txt-p6">AGSS1181W</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down"><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">$39,999.99</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controller (<span class="txt-point2">1</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">Controller</span><span class="txt-arrow">Individual Control</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">Control MIM-B16RN</a></p>
+                          <p class="prd-desc txt-p6">AR-EC03</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down"><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">$2,249.99</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- [F] Case4. Capacity 단품 선택 시 노출되는 화면 -->
+              <li class="prd-list__item">
+                <div class="prd-list__item-top">
+                  <div class="prd-img-box">
+                    <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                  </div>
+                  <div class="prd-tit-area">
+                    <div class="prd-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="prd-tit txt-h8 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                    <p class="prd-desc txt-p6">AM840DXVGGH/SA</p>
+                  </div>
+                  <div class="prd-stock-box pc-display">
+                    <p class="txt-p3 txt-fw-b">$149,999.99</p>
+                  </div>
+                </div>
+                <div class="prd-list__item-detail">
+                  <div class="prd-detail__top">
+                    <div class="swiper-box">
+                      <div class="swiper capacity-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">235.2</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                        </div>
+                        <div class="swiper-button-next capa__next-btn">
+                          <span class="txt-blind">next</span>
+                        </div>
+                        <div class="swiper-button-prev capa__prev-btn">
+                          <span class="txt-blind">prev</span>
+                        </div>
+                        <div class="capa__unit-text"><span class="txt-p7">(Btu/h)</span> </div>
+                      </div>
+                      <div class="multi-modules">
+                        <p class="txt-p7 txt-fw-b">Modules</p>
+                        <div class="swiper capacity-swiper">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide capa__item active"> <span class="txt-p6">235.2</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">523.4</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">456.3</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">380.4</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">234.5</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">432.1</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">456.3</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">380.4</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">234.5</span> </div>
+                            <div class="swiper-slide capa__item"> <span class="txt-p6">432.1</span> </div>
+                          </div>
+                          <div class="swiper-button-next capa__next-btn">
+                            <span class="txt-blind">next</span>
+                          </div>
+                          <div class="swiper-button-prev capa__prev-btn">
+                            <span class="txt-blind">prev</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Mo전용(stock) -->
+                    <div class="prd-stock-box mo-display">
+                      <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                    </div>
+                    <!-- //Mo전용(stock) -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">Qty</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                    <div class="add-cart-box">
+                      <button class="btn-block type2 md add-cart__btn" data-layer-target="add-cart-alert">
+                        <span class="btn-block__txt">Cart</span>
+                      </button>
+                    </div>
+                    <div class="fold-btn-box">
+                      <button type="button" class="btn-icon icon-arrow-bottom">
+                        <span class="txt-blind">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <ul class="prd-list-el">
+                      <!-- [F] Add product 버튼 클릭시 : 상품추가 li단위 -->
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                          <p class="prd-unit txt-p7 txt-fw-b">99,999 Btu/h</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number" aria-readonly="true">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">$39,999.99</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <ul class="prd-list-el">
+                      <!-- [F] Add product 버튼 클릭시 : 상품추가 li단위 -->
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                          <p class="prd-unit txt-p7 txt-fw-b">99,999 Btu/h</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number" aria-readonly="true">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">$39,999.99</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <ul class="prd-list-el">
+                      <!-- [F] Add product 버튼 클릭시 : 상품추가 li단위 -->
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                          <p class="prd-unit txt-p7 txt-fw-b">99,999 Btu/h</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number" aria-readonly="true">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">$39,999.99</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">1</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">Accessory</span><span class="txt-arrow">External Control kit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">Air Conditioning System Remote MWR-SH00N</a></p>
+                          <p class="prd-desc txt-p6">AGSS1181W</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down"><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">$39,999.99</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controller (<span class="txt-point2">1</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">Controller</span><span class="txt-arrow">Individual Control</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">Control MIM-B16RN</a></p>
+                          <p class="prd-desc txt-p6">AR-EC03</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down"><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">$2,249.99</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- [F] Case5. -->
+              <li class="prd-list__item">
+                <div class="prd-list__item-top">
+                  <div class="prd-img-box">
+                    <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                  </div>
+                  <div class="prd-tit-area">
+                    <div class="prd-category">
+                      <p class="txt-p6"> <span class="txt-arrow">Controller</span><span class="txt-arrow">Individual Control</span> </p>
+                    </div>
+                    <p class="prd-tit txt-h8 txt-ellipsis2"><a href="#">CTRL, WIRELESS REMOTE CONTROLLER</a></p>
+                    <p class="prd-desc txt-p6">AM080AXVGGREU</p>
+                  </div>
+                  <div class="prd-stock-box pc-display">
+                    <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                    <p class="txt-del-price">800.500,00 TL</p>
+                    <div class="stock-box-inner">
+                      <!-- [F] Stock class : green, yellow, red -->
+                      <span class="txt-p6 txt-stock green">Stock</span>
+                      <div class="tooltip">
+                        <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                        <div class="tooltip__contents">
+                          <div class="tooltip__contents-inner">
+                            <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                            <div class="cont">
+                              <!-- 툴팁 문구 -->
+                              <p class="txt-fw-b">'Stock' availability </p>
+                              <div class="sotck-box">
+                                <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prd-list__item-detail">
+                  <div class="prd-detail__top">
+                    <!-- 2024-08-02 Mo전용(stock) class 추가 : mo-display-->
+                    <div class="prd-stock-box mo-display">
+                      <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                      <div class="stock-box-inner">
+                        <!-- [F] Stock class : green, yellow, red -->
+                        <span class="txt-p6 txt-stock green">Stock</span>
+                        <div class="tooltip">
+                          <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip view</span> </button>
+                          <div class="tooltip__contents">
+                            <div class="tooltip__contents-inner">
+                              <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                              <div class="cont">
+                                <!-- 툴팁 문구 -->
+                                <p class="txt-fw-b">'Stock' availability </p>
+                                <div class="sotck-box">
+                                  <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                                  <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is available in 2 ~ 4 weeks later from now.</p>
+                                  <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //Mo전용(stock) -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">Qty</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                    <div class="add-cart-box">
+                      <button class="btn-block type2 md add-cart__btn" data-layer-target="add-cart-alert">
+                        <span class="btn-block__txt">Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- [F] Quote details를 통해 진입 (global버전) -->
+              <li class="prd-list__item">
+                <div class="prd-list__item-top">
+                  <div class="prd-img-box">
+                    <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                  </div>
+                  <div class="prd-tit-area">
+                    <div class="prd-category">
+                      <p class="txt-p6"> <span class="txt-arrow">RAC</span><span class="txt-arrow">Outdoor Unit</span> </p>
+                    </div>
+                    <p class="prd-tit txt-h8 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                    <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                  </div>
+                </div>
+                <div class="prd-list__item-detail">
+                  <div class="prd-detail__top">
+                    <div class="swiper-box">
+                      <div class="swiper capacity-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide capa__item active"> <span class="txt-p6">235.2</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">523.4</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">456.3</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">380.4</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">234.5</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">432.1</span> </div>
+                        </div>
+                        <div class="swiper-button-next capa__next-btn">
+                          <span class="txt-blind">next</span>
+                        </div>
+                        <div class="swiper-button-prev capa__prev-btn">
+                          <span class="txt-blind">prev</span>
+                        </div>
+                        <div class="capa__unit-text"><span class="txt-p7">(Btu/h)</span> </div>
+                      </div>
+                    </div>
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">Qty</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                    <div class="add-cart-box">
+                      <button class="btn-block type2 md add-cart__btn" data-layer-target="add-cart-alert">
+                        <span class="btn-block__txt">Cart</span>
+                      </button>
+                    </div>
+                    <div class="fold-btn-box">
+                      <button type="button" class="btn-icon icon-arrow-bottom">
+                        <span class="txt-blind">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">1</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">Accessory</span><span class="txt-arrow">External Control kit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High HighHigh EER High EERHigh EER EEREEREER</a></p>
+                          <p class="prd-desc txt-p6">AGSS1181W</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down"><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <!-- [F] prd-stock-box 공간 유지 -->
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Indoor Unit</p>
+                      <div class="field-box sm">
+                        <label class="txt-label txt-blind">model code</label>
+                        <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">AJ016TNNDKGEU</button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                            <ul class="combo-box__menu-list">
+                              <li role="menuitem" class="selected">AJ016TNNDKGEU</li>
+                              <li role="menuitem">옵션 2</li>
+                              <li role="menuitem">옵션 3</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">CAC</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                          <p class="prd-unit txt-p7 txt-fw-b">99,999 Btu/h</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <!-- [F] prd-stock-box 공간 유지 -->
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">2</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <!-- [F] Add product 버튼 클릭시 : 상품추가 li단위 -->
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">Accessory</span><span class="txt-arrow">External Control kit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <!-- [F] prd-stock-box 공간 유지 -->
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                      <!-- //Add product 버튼 클릭시 : 상품추가 li단위 -->
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                        </div>
+                        <!-- 2024-08-02 div 추가 : .prd-flexp-area -->
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <!-- [F] prd-stock-box 공간 유지 -->
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controls systems (<span class="txt-point2">1</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                        </div>
+                        <!-- 2024-08-02 div 추가 : .prd-flexp-area -->
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <!-- [F] prd-stock-box 공간 유지 -->
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <!-- [F] Run-rate 를 통해 제품 검색한 경우 -->
+              <li class="prd-list__item">
+                <div class="prd-list__item-top">
+                  <div class="prd-img-box">
+                    <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                  </div>
+                  <div class="prd-tit-area">
+                    <div class="prd-category">
+                      <p class="txt-p6"> <span class="txt-arrow">RAC</span><span class="txt-arrow">Outdoor Unit</span> </p>
+                    </div>
+                    <p class="prd-tit txt-h8 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                    <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                  </div>
+                  <div class="prd-stock-box pc-display">
+                    <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                    <p class="txt-del-price">800.500,00 TL</p>
+                  </div>
+                </div>
+                <div class="prd-list__item-detail">
+                  <div class="prd-detail__top">
+                    <div class="swiper-box">
+                      <div class="swiper capacity-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide capa__item active"> <span class="txt-p6">235.2</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">261.1</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">254.8</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">249.4</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">523.4</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">456.3</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">380.4</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">234.5</span> </div>
+                          <div class="swiper-slide capa__item"> <span class="txt-p6">432.1</span> </div>
+                        </div>
+                        <div class="swiper-button-next capa__next-btn">
+                          <span class="txt-blind">next</span>
+                        </div>
+                        <div class="swiper-button-prev capa__prev-btn">
+                          <span class="txt-blind">prev</span>
+                        </div>
+                        <div class="capa__unit-text"><span class="txt-p7">(Btu/h)</span> </div>
+                      </div>
+                    </div>
+                    <!-- Mo전용(stock) -->
+                    <div class="prd-stock-box mo-display">
+                      <p class="txt-p3 txt-fw-b">708.499,12 TL</p>
+                      <p class="txt-del-price">800.500,00 TL</p>
+                    </div>
+                    <!-- //Mo전용(stock) -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">Qty</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                    <div class="add-cart-box">
+                      <button class="btn-block type2 md add-cart__btn" data-layer-target="add-cart-alert">
+                        <span class="btn-block__txt">Cart</span>
+                      </button>
+                    </div>
+                    <div class="fold-btn-box">
+                      <button type="button" class="btn-icon icon-arrow-bottom">
+                        <span class="txt-blind">Close</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="prd-detail__list">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">1</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">Accessory</span><span class="txt-arrow">External Control kit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High HighHigh EER High EERHigh EER EEREEREER</a></p>
+                          <p class="prd-desc txt-p6">AGSS1181W</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down"><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">708.499,12 TL</p>
+                            <p class="txt-del-price">95.500,00 TL</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Indoor Unit</p>
+                      <div class="field-box sm">
+                        <label class="txt-label txt-blind">model code</label>
+                        <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">AJ016TNNDKGEU</button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                            <ul class="combo-box__menu-list">
+                              <li role="menuitem" class="selected">AJ016TNNDKGEU</li>
+                              <li role="menuitem">옵션 2</li>
+                              <li role="menuitem">옵션 3</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">CAC</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                          <p class="prd-unit txt-p7 txt-fw-b">99,999 Btu/h</p>
+                        </div>
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <!-- [F] readonly 시, aria-readonly="true" -->
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">708.499,12 TL</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Accessory (<span class="txt-point2">2</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <!-- [F] Add product 버튼 클릭시 : 상품추가 li단위 -->
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">Accessory</span><span class="txt-arrow">External Control kit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                        </div>
+                        <!-- 2024-08-02 div 추가 : .prd-flexp-area -->
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">708.499,12 TL</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                      <!-- //Add product 버튼 클릭시 : 상품추가 li단위 -->
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                        </div>
+                        <!-- 2024-08-02 div 추가 : .prd-flexp-area -->
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">708.499,12 TL</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="prd-detail__list comp-type">
+                    <div class="prd-detail__list-tit">
+                      <p class="txt-p5 txt-fw-b">Controls systems (<span class="txt-point2">1</span>) </p>
+                      <button type="button" class="btn-block sm">
+                        <span class="btn-block__txt">Add product</span>
+                      </button>
+                    </div>
+                    <ul class="prd-list-el">
+                      <li class="prd-list-el__item">
+                        <div class="prd-img-box">
+                          <img src="/pub-only/images/prd-thum-sample.png" alt="">
+                        </div>
+                        <div class="prd-tit-area">
+                          <div class="prd-category">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                          </div>
+                          <p class="prd-tit txt-h9 txt-ellipsis2"><a href="#">DVM S2 Outdoor Heat Recovery High EER</a></p>
+                          <p class="prd-desc txt-p6">AM200AXVAGH</p>
+                        </div>
+                        <!-- 2024-08-02 div 추가 : .prd-flexp-area -->
+                        <div class="prd-flexp-area">
+                          <div class="field-box">
+                            <label class="txt-label txt-blind">hidden label</label>
+                            <div class="input-number">
+                              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                              <input type="text" class="input-number__input" value="1">
+                              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                            </div>
+                          </div>
+                          <div class="prd-stock-box">
+                            <p class="txt-p5 txt-fw-b">708.499,12 TL</p>
+                          </div>
+                        </div>
+                        <div class="btn-box">
+                          <button type="button" class="btn-icon icon-trash">
+                            <span class="txt-blind">Delete</span>
+                          </button>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- [F] 검색결과가 없는 경우 -->
+          <!-- 2025-03-02 class 변경 plp-no-result ==> list-nodata -->
+          <div class="list-nodata" style="display: none;">
+            <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5 -->
+            <p class="txt-p5">Sorry, no results were found.</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //product search pop-->
+
+  <!-- 2024-08-06 add product cart alert -->
+  <div class="alert-wrap" id="add-cart-alert">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="aler__container">
+        <p class="txt-p6">Successfully added to cart.</p>
+      </div>
+      <div class="alert__footer">
+        <!-- 특정 버튼에 closePopup 적용 예시 -->
+        <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup('add-cart-alert')">
+          <span class="btn-block__txt">Yes</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //add product cart alert -->
+
+  <!-- 2024-08-06 notification alert -->
+  <div class="alert-wrap" id="notification-alert">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="aler__container">
+        <p class="txt-p6">
+          If you change the capacity,<br>
+          all sub-products compatible with this product will be removed.<br>
+          Do you want to Proceed?<br>
+        </p>
+      </div>
+      <div class="alert__footer">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">No</span>
+        </button>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Yes</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //notification alert -->
+
+  <!-- Accessory / Controller Selected Products -->
+  <div class="popup-wrap prd-select-wrap" id="selected-products-popup2">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Product Selector </p>
+      </div>
+      <div class="popup__container">
+        <p class="txt-p5">Please select the products.</p>
+        <div class="tab-wrap">
+          <div role="tablist" class="tab-list type4" aria-label="Accessory / Controller product Selected">
+            <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+              <span class="tab-list__tab-txt">Accessory (<em>##</em>)</span>
+            </button>
+            <button type="button" class="tab-list__tab" role="tab">
+              <span class="tab-list__tab-txt">Controller (<em>##</em>)</span>
+            </button>
+          </div>
+          <div role="presentation" class="tab-wrap__contents">
+            <!-- Accessory -->
+            <div role="tabpanel" tabindex="0">
+              <ul class="prd-slc-list">
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+                <!-- [F] 선택시 .active -->
+                <li class="pdp-product-list active">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" disabled data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Added</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$149,999.99</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$149,999.99</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$149,999.99</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" disabled data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Added</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <!-- [F] 2개의 tab 중 1개의 tab이 호환되는 상품이 없는 경우 -->
+              <!-- 2025-03-02 class 변경 no-result-box ==> list-nodata -->
+              <div class="list-nodata" style="display: none;">
+                <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5 -->
+                <p class="txt-p5">There is no registered content.</p>
+              </div>
+
+            </div>
+            <!-- //Accessory -->
+            <!-- Controller -->
+            <div role="tabpanel" hidden>
+              <ul class="prd-slc-list" style="display: none;">
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">Controls Systems </span><span class="txt-arrow">Individual Control </span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Added</span>
+                    </button>
+                  </div>
+                </li>
+                <!-- [F] 선택시 .active -->
+                <li class="pdp-product-list active">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">Controls Systems </span><span class="txt-arrow">Individual Control </span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" disabled data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Added</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">Controls Systems </span><span class="txt-arrow">Individual Control </span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" disabled data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Added</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">Controls Systems </span><span class="txt-arrow">Individual Control </span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">Controls Systems </span><span class="txt-arrow">Individual Control </span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">Controls Systems </span><span class="txt-arrow">Individual Control </span> </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">8.500,00 TL</p>
+                    <p class="txt-del-price">900.000,00 TL</p>
+                  </div>
+                  <div class="tal-center">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind">hidden label</label>
+                      <div class="input-number">
+                        <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span> </button>
+                        <input type="text" class="input-number__input" value="1">
+                        <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span> </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-box">
+                    <button type="button" class="btn-block type2 md" data-layer-target="add-product-alert">
+                      <span class="btn-block__txt">Add</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+
+              <!-- [F] 2개의 tab 중 1개의 tab이 호환되는 상품이 없는 경우 -->
+              <!-- 2025-03-02 class 변경 no-result-box ==> list-nodata -->
+              <div class="list-nodata">
+                <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5 -->
+                <p class="txt-p5">There is no registered content.</p>
+              </div>
+            </div>
+            <!-- //Controller -->
+          </div>
+        </div>
+        <!-- [F] 호환되는 상품이 없는 경우 -->
+        <!-- 2025-03-02 class 변경 no-result-box ==> list-nodata -->
+        <div class="list-nodata" style="display: none;">
+          <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5 -->
+          <p class="txt-p5">There is no registered content.</p>
+        </div>
+      </div>
+      <div class="prd-slc-bottom-box">
+        <!-- 2024-08-02 div 추가 : .prd-slc-bottom__inner -->
+        <div class="prd-slc-bottom__inner">
+          <!-- [F] 호환되는 상품이 없는 경우 태그 제거 (2025-02-06)-->
+          <div class="prd-slc-bottom__tit">
+            <div class="left">
+              <p class="txt-h9">Selected products</p>
+              <div class="line-break">
+                <p class="txt-p5 txt-fw-b ">Accessory (<span class="txt-point2">2</span>) </p>
+                <p class="txt-p5 txt-fw-b ">Controls systems  (<span class="txt-point2">3</span>) </p>
+              </div>
+            </div>
+            <div class="right">
+              <button type="button" class="btn-txt-underline">
+                <span class="btn-txt__txt">Clear all</span>
+              </button>
+              <button type="button" class="btn-block type2">
+                <span class="btn-block__txt">Add</span>
+              </button>
+            </div>
+          </div>
+          <div class="prd-slc-bottom__info">
+            <p class="prd-slc-name txt-p5 txt-fw-b">DVM S2 Outdoor Heat Recovery High EER</p>
+            <p class="prd-slc-code txt-p6">AM080AXVGGREU</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //Accessory / Controller Selected Products -->
+
+  <!-- 2024-08-06 add product cart alert -->
+  <div class="alert-wrap" id="add-product-alert">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="aler__container">
+        <p class="txt-p6">Successfully added to product.</p>
+      </div>
+      <div class="alert__footer">
+        <!-- 특정 버튼에 closePopup 적용 예시 -->
+        <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup('add-product-alert')">
+          <span class="btn-block__txt">Yes</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //add product cart alert -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+  <script>
+    // PUB only
+    const swiperLength = document.querySelectorAll('.swiper-box')
+    swiperLength.forEach(swiper => {
+      const children = swiper.getElementsByClassName("capacity-swiper")
+      if (children.length === 2) {
+        const items = swiper.querySelectorAll('.capa__item')
+        items.forEach(item => {
+          item.addEventListener('click', () => {
+            items.forEach(etc => {
+              etc.classList.remove('active')
+            })
+            item.classList.add('active')
+          })
+        })
+      }
+    })
+  </script>
+</body>
+
+</html>

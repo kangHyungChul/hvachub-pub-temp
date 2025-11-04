@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <title>singuup</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css" />
+
+  <!-- header -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/template-with-logo/clientlibs/css/main.css" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body> 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- template-width-logo component -->
+  <header class="logo-with-header">
+    <div class="header-inner">
+      <div class="logo-box">
+        <a href="#" target="_self" aria-label="samsung hvac hub">
+          <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/hvachub-logo.svg" alt="samsung hvac hub logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- //template-width-logo component -->
+
+
+  <!-- company-search-container start // -->
+  <div id="company-search-container">
+    <div class="compay-search-inner">
+
+      <div class="tit-area noline">
+        <h1 class="txt-h3">Welcome to Samsung Business Partner Registration</h1>
+        <p class="txt-h9">
+          Please select your company for partner registration.​<br/>
+          If your company is not in the search results, click the 'Create Company' button.​
+        </p>
+      </div> 
+
+      <!-- search start // -->
+      <div class="company-list-search">        
+        <div class="field-box-area">
+          <div class="field-box">
+            <label class="txt-label txt-req">Business Location</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" disabled>Türkiye</button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem" class="selected">Türkiye</li>
+                </ul>
+              </div>
+            </div>
+            <p class="txt-error">This field is required</p>
+          </div>         
+          <div class="field-box">
+            <label class="txt-label txt-req" for="company-name">Company Name</label>
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" id="company-name" placeholder="Company Name" value="Company" required>
+              <button type="button" class="btn-icon icon-search-delete">
+                <span class="txt-blind">delete</span>
+              </button>
+            </div>
+            <p class="txt-error">This field is required</p>
+          </div>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Search</span>
+          </button>
+        </div>              
+      </div>   
+      <!-- // search end -->  
+
+      <!-- company-list-item start // -->
+      <div class="company-list-item">       
+         
+        <!-- [F] PC용 ( 모바일 용을 filter에서 노출) -->
+        <!-- 2025-05-16 상단 search 버튼 클릭시 노출해 주세요. -->
+        <div class="list-top">
+          <p class="txt-p6 txt-fw-b"><span class="txt-point1">50</span> Results</p>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">New</span>
+          </button>
+        </div>
+
+        <!-- [F]
+            검색결과가 있는 경우 ul.list-data 노출
+            검색결과가 없는 경우 & 프로젝트 없는 경우 div.list-nodata 노출 
+          -->
+        <!-- no data -->
+        <div class="list-nodata">       
+          <!-- 검색 결과 없을 경우 문구(2025-05-07 추가) //-->
+          <p class="txt-p5">No matching results found.</p>
+          <!-- 검색 실행 전 문구 //-->
+          <p class="txt-p5">Search for a company</p> 
+        </div>
+        <!-- //no data -->
+        
+        <div class="list-data">        
+
+          <!-- basic-list-wrap start // -->
+          <div class="basic-list__result">
+            <!-- head -->
+            <ul class="list-head">
+              <li class="list-el el-radio">
+                <label class="btn-radio">
+                  <input type="radio" class="btn-radio__input" name="other Select">
+                  <span class="btn-radio__icon"></span>
+                  <span class="btn-radio__txt txt-blind">other Select</span>
+                </label>
+              </li>
+              <li class="list-el el-company-name">
+                <span class="txt-p5 txt-fw-b">Company name</span>
+              </li>
+              <li class="list-el el-business-loc">
+                <span class="txt-p5 txt-fw-b">Business Location</span>
+              </li>
+              <!-- 2025-07-07 삭제 //-->
+              <!-- <li class="list-el el-biz-license">
+                <span class="txt-p5 txt-fw-b">BIZ License No1.</span>
+              </li> -->
+              <li class="list-el el-city">
+                <span class="txt-p5 txt-fw-b">City</span>
+              </li>
+              <li class="list-el el-district">
+                <span class="txt-p5 txt-fw-b">District</span>
+              </li>
+              <li class="list-el el-address-line">
+                <span class="txt-p5 txt-fw-b">Address Line</span>
+              </li>
+              <li class="list-el el-postal-code">
+                <span class="txt-p5 txt-fw-b">Postal Code</span>
+              </li>
+              <li class="list-el el-status">
+                <span class="txt-p5 txt-fw-b">Status</span>
+              </li>
+            </ul>
+            <!-- //head -->
+            <!-- body -->
+            <ul class="list-body">         
+              <li class="list-row-box">
+                <ul class="list-row">
+                  <li class="list-el el-radio">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="other Select">
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt txt-blind">other Select</span>
+                    </label>
+                  </li>
+                  <li class="list-el el-company-name txt-ellipsis">
+                    <span class="txt-p5">Company A</span>
+                  </li>
+                  <li class="list-el el-business-loc txt-ellipsis">
+                    <span class="txt-p5">Türkiye</span>
+                  </li>                 
+                  <li class="list-el el-city txt-ellipsis">
+                    <span class="txt-p5">Ankara</span>
+                  </li> 
+                  <li class="list-el el-district txt-ellipsis">
+                    <span class="txt-p5">Çankaya</span>
+                  </li>
+                  <li class="list-el el-address-line txt-ellipsis">
+                    <span class="txt-p5">Atatürk Bulvarı No: 123</span>
+                  </li>
+                  <li class="list-el  el-postal-code">
+                    <span class="txt-p5">06680</span>
+                  </li>
+                  <li class="list-el el-status">
+                    <span class="txt-p7 txt-fw-b">Open</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-row-box">
+                <ul class="list-row">
+                  <li class="list-el el-radio">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="other Select">
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt txt-blind">other Select</span>
+                    </label>
+                  </li>
+                  <li class="list-el el-company-name txt-ellipsis">
+                    <span class="txt-p5">Company B</span>
+                  </li>
+                  <li class="list-el el-business-loc txt-ellipsis">
+                    <span class="txt-p5">Türkiye</span>
+                  </li>
+                  <!-- 2025-07-07 삭제 //-->
+                  <!-- <li class="list-el el-biz-license txt-ellipsis">
+                    <span class="txt-p5">1234567891</span>
+                  </li> -->
+                  <li class="list-el el-city txt-ellipsis">
+                    <span class="txt-p5">Istanbul</span>
+                  </li>
+                  <li class="list-el el-district txt-ellipsis">
+                    <span class="txt-p5">Şişli</span>
+                  </li>
+                  <li class="list-el el-address-line txt-ellipsis">
+                    <span class="txt-p5">Cumhuriyet Caddesi No: 45</span>
+                  </li>
+                  <li class="list-el el-postal-code">
+                    <span class="txt-p5">34360</span>
+                  </li>
+                  <li class="list-el el-status">
+                    <span class="txt-p7 txt-fw-b">Dormant</span>
+                  </li>
+                </ul>
+              </li>        
+              <!-- 항목중 status가 Blocked, expired, Rejected 일때 비활성화 상태(클래스 deactive)를 삽입, input radio disabled 상태입니다. // -->
+              <li class="list-row-box deactive">
+                <ul class="list-row">
+                  <li class="list-el el-radio">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="other Select" disabled>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt txt-blind">other Select</span>
+                    </label>
+                  </li>
+                  <li class="list-el el-company-name txt-ellipsis">
+                    <span class="txt-p5">Company C</span>
+                  </li>
+                  <li class="list-el el-business-loc txt-ellipsis">
+                    <span class="txt-p5">Türkiye</span>
+                  </li>
+                  <!-- 2025-07-07 삭제 //-->
+                  <!-- <li class="list-el el-biz-license txt-ellipsis">
+                    <span class="txt-p5">1234567892</span>
+                  </li> -->
+                  <li class="list-el el-city txt-ellipsis">
+                    <span class="txt-p5">Izmir</span>
+                  </li>
+                  <li class="list-el el-district txt-ellipsis">
+                    <span class="txt-p5">Konak</span>
+                  </li>
+                  <li class="list-el el-address-line txt-ellipsis">
+                    <span class="txt-p5">İnönü Caddesi No: 78</span>
+                  </li>
+                  <li class="list-el el-postal-code">
+                    <span class="txt-p5">35250</span>
+                  </li>
+                  <li class="list-el el-status">
+                    <span class="txt-p7 txt-fw-b">Blocked</span>
+                  </li>
+                </ul>
+              </li>  
+              <li class="list-row-box deactive">
+                <ul class="list-row">
+                  <li class="list-el el-radio">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="other Select" disabled>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt txt-blind">other Select</span>
+                    </label>
+                  </li>
+                  <li class="list-el el-company-name txt-ellipsis">
+                    <span class="txt-p5">Company D</span>
+                  </li>
+                  <li class="list-el el-business-loc txt-ellipsis">
+                    <span class="txt-p5">Türkiye</span>
+                  </li>
+                  <!-- 2025-07-07 삭제 //-->
+                  <!-- <li class="list-el el-biz-license txt-ellipsis">
+                    <span class="txt-p5">1234567892</span>
+                  </li> -->
+                  <li class="list-el el-city txt-ellipsis">
+                    <span class="txt-p5">Istanbul</span>
+                  </li>
+                  <li class="list-el el-district txt-ellipsis">
+                    <span class="txt-p5">Beşiktaş</span>
+                  </li>
+                  <li class="list-el el-address-line txt-ellipsis">
+                    <span class="txt-p5">Barbaros Bulvarı No: 56</span>
+                  </li>
+                  <li class="list-el el-postal-code">
+                    <span class="txt-p5">34349</span>
+                  </li>
+                  <li class="list-el el-status">
+                    <span class="txt-p7 txt-fw-b">Expired</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-row-box deactive">
+                <ul class="list-row">
+                  <li class="list-el el-radio">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="other Select" disabled>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt txt-blind">other Select</span>
+                    </label>
+                  </li>
+                  <li class="list-el el-company-name txt-ellipsis">
+                    <span class="txt-p5">Company E</span>
+                  </li>
+                  <li class="list-el el-business-loc txt-ellipsis">
+                    <span class="txt-p5">Türkiye</span>
+                  </li>
+                  <!-- 2025-07-07 삭제 //-->
+                  <!-- <li class="list-el el-biz-license txt-ellipsis">
+                    <span class="txt-p5">1234567892</span>
+                  </li> -->
+                  <li class="list-el el-city txt-ellipsis">
+                    <span class="txt-p5">Antalya</span>
+                  </li>
+                  <li class="list-el el-district txt-ellipsis">
+                    <span class="txt-p5">Muratpaşa</span>
+                  </li>
+                  <li class="list-el el-address-line txt-ellipsis">
+                    <span class="txt-p5">Talatpaşa Bulvarı No: 89</span>
+                  </li>
+                  <li class="list-el el-postal-code">
+                    <span class="txt-p5">07100</span>
+                  </li>
+                  <li class="list-el el-status">
+                    <span class="txt-p7 txt-fw-b">Rejected</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-row-box">
+                <ul class="list-row">
+                  <li class="list-el el-radio">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="other Select">
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt txt-blind">other Select</span>
+                    </label>
+                  </li>
+                  <li class="list-el el-company-name txt-ellipsis">
+                    <span class="txt-p5">Company F</span>
+                  </li>
+                  <li class="list-el el-business-loc txt-ellipsis">
+                    <span class="txt-p5">Türkiye</span>
+                  </li>
+                  <!-- 2025-07-07 삭제 //-->
+                  <!-- <li class="list-el el-biz-license txt-ellipsis">
+                    <span class="txt-p5">1234567892</span>
+                  </li> -->
+                  <li class="list-el el-city txt-ellipsis">
+                    <span class="txt-p5">Kevin</span>
+                  </li>
+                  <li class="list-el el-district txt-ellipsis">
+                    <span class="txt-p5">Beyoğlu</span>
+                  </li>
+                  <li class="list-el el-address-line txt-ellipsis">
+                    <span class="txt-p5">İstiklal Caddesi No: 150</span>
+                  </li>
+                  <li class="list-el el-postal-code">
+                    <span class="txt-p5">34430</span>
+                  </li>
+                  <li class="list-el el-status">
+                    <span class="txt-p7 txt-fw-b">Open</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-row-box">
+                <ul class="list-row">
+                  <li class="list-el el-radio">
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="other Select">
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt txt-blind">other Select</span>
+                    </label>
+                  </li>
+                  <li class="list-el el-company-name txt-ellipsis">
+                    <span class="txt-p5">Company G</span>
+                  </li>
+                  <li class="list-el el-business-loc txt-ellipsis">
+                    <span class="txt-p5">Türkiye</span>
+                  </li>
+                  <!-- 2025-07-07 삭제 //-->
+                  <!-- <li class="list-el el-biz-license txt-ellipsis">
+                    <span class="txt-p5">1234567893</span>
+                  </li> -->
+                  <li class="list-el el-city txt-ellipsis">
+                    <span class="txt-p5">Kai</span>
+                  </li>
+                  <li class="list-el el-district txt-ellipsis">
+                    <span class="txt-p5">Beyoğlu</span>
+                  </li>
+                  <li class="list-el el-address-line txt-ellipsis">
+                    <span class="txt-p5">İstiklal Caddesi No: 150</span>
+                  </li>
+                  <li class="list-el el-postal-code">
+                    <span class="txt-p5">01060</span>
+                  </li>
+                  <li class="list-el el-status">
+                    <span class="txt-p7 txt-fw-b">Dormant</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- //body -->       
+          </div>
+          <!-- // basic-list-wrap end -->
+
+          <!-- infinite scroll -->
+          <div class="icon-loading-box">
+            <span class="icon-loading"></span>
+          </div>
+
+        </div>  
+      </div>
+      <!-- // company-list-item end -->
+
+      <div class="btn-box page-bottom-btn">
+        <button type="button" class="btn-block md type3">
+          <span class="btn-block__txt">Select</span>
+        </button>
+      </div>
+
+    </div>  
+      
+  </div>
+  <!-- // company-search-container end  -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script> 
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inquiry Detail</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/inquiry-detail/clientlibs/css/main.css">
+</head>
+
+<body>
+  <!-- component -->
+  <section class="inquiry-detail">
+    <h2 class="inquiry-detail-tit txt-h3 txt-fw-b">Inquiry Details</h2><!-- 240725 inquiry-detail-tit 클래스 추가 -->
+    <div class="inquiry-detail-cont__wrap">
+      <div class="btn-box">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">List</span><!-- 240619 버튼명 변경 Go to List -> List -->
+        </button>
+        <button type="button" class="btn-block md type2">
+          <span class="btn-block__txt">Follow Up</span><!-- 240531 btn명 변경 (Follow-up inquiry -> Follow Up) -->
+        </button>
+      </div>
+      <div class="inquiry-detail-info__wrap">
+        <!-- S: info -->
+        <article class="inquiry-detail-info__top">
+          <!-- inquiry info -->
+          <div class="info-box">
+            <p class="txt-h7 txt-fw-b">Inquiry Info</p>
+            <ul class="info-list__wrap">
+              <!-- ID -->
+              <li class="info-list__el">
+                <strong class="list-el__tit txt-p5 txt-fw-b">ID</strong>
+                <p class="list-el__cont txt-p5">IS20512758</p>
+              </li>
+              <!-- Date -->
+              <li class="info-list__el">
+                <strong class="list-el__tit txt-p5 txt-fw-b">Date</strong>
+                <p class="list-el__cont txt-p5">2023-12-31</p>
+              </li>
+              <!-- Status -->
+              <li class="info-list__el">
+                <!--
+                    status
+                      - In progress인 경우 : span.progres 클래스로 변경
+                      - Completed인 경우 : span.completed 클래스로 변경
+                  -->
+                <strong class="list-el__tit txt-p5 txt-fw-b">Status</strong>
+                <p class="list-el__cont"><span class="tag-flag completed">Completed</span></p>
+              </li>
+            </ul>
+          </div>
+          <ul class="other-list__wrap">
+            <!-- Category(default) -->
+            <li class="other-list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Category</strong>
+              <p class="list-el__cont txt-p5">
+                <!-- 240725 category 텍스트 분리 -->
+                <span class="cate-txt">Product</span><span class="cate-txt">Pre-Sales support</span>
+              </p>
+            </li>
+            <!-- Product Info(product) -->
+            <li class="other-list__el product">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Product Info</strong>
+              <ul class="list-el__cont">
+                <!-- 
+                    product-list 가 한개인 경우 : li.product-list__el 구조 1개만 노출
+                    product-list 가 여러개인 경우 : li.product-list__el 구조 추가 
+                  -->
+                <li class="product-list__el">
+                  <span class="product-img"><img src="/pub-only/images/inquiry-detail-sample.png"
+                      alt="sample image" /></span>
+                  <div class="product-info">
+                    <span class="product__name txt-h9 txt-fw-b">2 Way Cassette Type Air
+                      Conditioner</span><!-- 240822 클래스명 변경(txt-p5 -> txt-h9) -->
+                    <span class="product__code txt-p6">AM056CN2DKH/TK</span>
+                    <span class="product__capa txt-p6">5.6kW</span>
+                  </div>
+                </li>
+                <li class="product-list__el">
+                  <span class="product-img"><img src="/pub-only/images/inquiry-detail-sample.png"
+                      alt="sample image" /></span>
+                  <div class="product-info">
+                    <span class="product__name txt-h9 txt-fw-b">2 Way Cassette Type Air
+                      Conditioner</span><!-- 240822 클래스명 변경(txt-p5 -> txt-h9) -->
+                    <span class="product__code txt-p6">AM056CN2DKH/TK</span>
+                    <span class="product__capa txt-p6">5.6kW</span>
+                  </div>
+                </li>
+                <li class="product-list__el">
+                  <span class="product-img"><img src="/pub-only/images/inquiry-detail-sample.png"
+                      alt="sample image" /></span>
+                  <div class="product-info">
+                    <span class="product__name txt-h9 txt-fw-b">2 Way Cassette Type Air
+                      Conditioner</span><!-- 240822 클래스명 변경(txt-p5 -> txt-h9) -->
+                    <span class="product__code txt-p6">AM056CN2DKH/TK</span>
+                    <span class="product__capa txt-p6">5.6kW</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!-- Program Type(DVM Pro 2.0) -->
+            <li class="other-list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Program Type</strong>
+              <p class="list-el__cont txt-p5">Sales Mode, Designer Mode</p>
+            </li>
+            <!-- Order Info(order) -->
+            <li class="other-list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Order Info</strong>
+              <p class="list-el__cont txt-p5 txt-error" style="background-color: #eee;">TBD - Order 확정 후 작업 진행</p>
+            </li>
+            <!-- Subject(default) -->
+            <li class="other-list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Subject</strong>
+              <p class="list-el__cont txt-p5">What Should I Do If The Courier Does Not Find Me At Home At The Time Of
+                Delivery?</p>
+            </li>
+            <!-- Issue(default) -->
+            <li class="other-list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Issue</strong>
+              <p class="list-el__cont txt-p5">
+                What Should I Do If The Courier Does Not Find Me At Home At The Time Of Delivery?<br>
+                What Should I Do If The Courier Does Not Find Me At Home At The Time Of Delivery?<br>
+                What Should I Do If The Courier Does Not Find Me At Home At The Time Of Delivery?<br>
+                What Should I Do If The Courier Does Not Find Me At Home At The Time Of Delivery?<br>
+                What Should I Do If The Courier Does Not Find Me At Home At The Time Of Delivery?<br>
+                What Should I Do If The Courier Does Not Find Me At Home At The Time Of Delivery?
+              </p>
+            </li>
+            <!-- Attachment file(default) -> 미노출시 li 삭제 -->
+            <li class="other-list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Attachment file</strong>
+              <p class="list-el__cont file-box">
+                <a download="" class="el-file txt-p6">File name 1.png</a>
+                <a download="" class="el-file txt-p6">File name 2 File name 2 File name 2 File name 2 File name
+                  2.pdf</a><!-- 240812 검수용 파일 확장 노출 -->
+                <a download="" class="el-file txt-p6">File name 3.jpeg</a>
+                <a download="" class="el-file txt-p6">File name 4.pptx</a>
+                <a download="" class="el-file txt-p6">File name 5.xlsx</a>
+              </p>
+            </li>
+          </ul>
+        </article>
+        <!-- E: info -->
+
+        <!-- S: message box -->
+        <article class="inquiry-detail-msg__wrap">
+          <!--
+              msg box : answer인 경우 div.inquiry-msg-box에 answer class 추가
+                -> 추가시 arrow display: none, tag-flag 색상 변경
+            -->
+          <!-- msg box1 - answer -->
+          <div class="inquiry-msg-box answer">
+            <div class="icon-box"><!-- 240725 div.icon-box 추가 -->
+              <span class="icon-answer-arrow"></span>
+              <span class="icon-profile"></span>
+            </div>
+            <div class="msg-cont__wrap">
+              <div class="msg-cont-top">
+                <p class="name-tag-box">
+                  <strong class="txt-p5 txt-fw-b">Admin Name</strong>
+                  <span class="tag-flag md">Answered</span>
+                </p>
+                <span class="date txt-p6">2024-01-25</span>
+              </div>
+              <p class="msg txt-p5">
+                Hello. This is Samsung.com.<br>
+                The warranty period for Product Z is typically one year from the date of purchase.<br>
+                During this period, if the product experiences any malfunction or defects due to manufacturing
+                processes,<br>
+                we will provide free replacement or repair services. Additionally, any issues occurring under normal
+                usage conditions within the warranty period will be supported free of charge.<br>
+                For more detailed information, please refer to the warranty certificate or visit our website.
+              </p>
+              <p class="file-box">
+                <a download="" class="el-file txt-p6">File name 1.png</a>
+                <a download="" class="el-file txt-p6">File name 2 File name 2 File name 2 File name 2 File name 2 File
+                  name 2.pdf</a><!-- 240812 검수용 파일 확장 노출 -->
+              </p>
+            </div>
+          </div>
+          <!-- msg box2 - follow-up inquiry -->
+          <div class="inquiry-msg-box">
+            <div class="icon-box"><!-- 240725 div.icon-box 추가 -->
+              <span class="icon-answer-arrow"></span>
+              <span class="icon-profile"></span>
+            </div>
+            <div class="msg-cont__wrap">
+              <div class="msg-cont-top">
+                <p class="name-tag-box">
+                  <strong class="txt-p5 txt-fw-b">User Name</strong>
+                  <span class="tag-flag md">Follow
+                    Up</span><!-- 240531 flag 명칭 변경 (Follow-up Inquiry -> Follow Up Inquiry) --><!-- 240625 flag 명칭 변경 (Follow Up Inquiry -> Follow Up) -->
+                </p>
+                <span class="date txt-p6">2024-01-25</span>
+              </div>
+              <p class="msg txt-p5">
+                Hello, I recently purchased Product Z and I have some inquiries regarding the warranty period.<br>
+                I would like to know the duration of the warranty for Product Z, as well as the type of support
+                available for any issues that may arise
+              </p>
+              <p class="file-box">
+                <a download="" class="el-file txt-p6">File name 1.png</a>
+                <a download="" class="el-file txt-p6">File name 2.pdf</a>
+              </p>
+            </div>
+          </div>
+        </article>
+        <!-- E: message box -->
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/inquiry-detail/clientlibs/js/main.js"></script>
+</body>
+
+</html>

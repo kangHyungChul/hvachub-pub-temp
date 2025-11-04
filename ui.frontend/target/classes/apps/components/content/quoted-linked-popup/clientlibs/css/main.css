@@ -1,0 +1,129 @@
+.quote-linked-popup .popup-wrap__inner { height: min(864px, 80vh); } 
+.quote-linked-popup .popup-wrap__inner .popup__container { overflow-y: hidden; padding: 0 !important; } 
+
+/* container contents */
+.quote-linked-popup .tab-wrap { height: 100%; } 
+.quote-linked-popup .tab-wrap .tab-list { margin-inline: 40px; } 
+.quote-linked-popup .tab-wrap .tab-wrap__contents { height: calc(100% - 56px); } 
+.quote-linked-popup .new-project-tab { overflow-y: scroll; height: 100%; padding-top: 24px; padding-inline:40px 32px; } 
+.quote-linked-popup .new-project-tab .field-box { display: block; width: 100%; margin-bottom: 12px; } 
+
+/* tab2 contents */
+.quote-linked-popup .tab-panel { height: 100%; padding-top: 24px; padding-inline: 40px; } 
+.quote-linked-popup .search-bar { background: #f7f7f7; padding: 24px; margin-bottom: 24px; border-radius: var(--border-base); } 
+.quote-linked-popup .search-bar .date-field-wrap { display: flex; gap: 24px; margin-bottom: 12px; } 
+.quote-linked-popup .search-bar .date-field-wrap > .field-box { flex: none; width: 312px; } 
+.quote-linked-popup .search-bar .date-field-wrap .combo-box { width: 100%; } 
+.quote-linked-popup .search-bar .datepicker-field { display: flex; flex: auto; } 
+.quote-linked-popup .search-bar .datepicker-field .field-box { position: relative; width: calc(50% - 14px); } 
+.quote-linked-popup .search-bar .datepicker-field .field-box:first-of-type { width: calc(50% + 14px); padding-right: 27px; } 
+.quote-linked-popup .search-bar .datepicker-field .field-box:first-of-type:after { content: "~"; display: block; position: absolute; right: 9px; top: 50%; transform: translateY(-50%); color: #a9a9a9; } 
+.quote-linked-popup .search-bar .datepicker-field .input-datepicker { width: 100%; } 
+.quote-linked-popup .search-bar .name-field-box { width: 100%; } 
+
+/* tab2 contents - result */
+.quote-linked-popup .search-result { height: calc(100% - 164px); } 
+.quote-linked-popup .search-result > div { display: none; } 
+.quote-linked-popup .search-result > div.active { display: block; } 
+.quote-linked-popup .before-search { height: 250px; text-align: center; padding-top: 60px; } 
+.quote-linked-popup .before-search img { width: 64px; height: 64px; } 
+.quote-linked-popup .before-search .search-desc { margin-top: 12px; color: #757575; } 
+.quote-linked-popup .after-search { height: 100%; padding-bottom: 12px; } 
+.quote-linked-popup .after-search .my-result__wrap { height: 100%; padding: 0; } 
+.quote-linked-popup .after-search .result-list__wrap { overflow-y: scroll; height: calc(100% - 39px); padding-inline: 16px 8px; } 
+.quote-linked-popup .after-search .list__el { display: block; padding: 16px 0; cursor: pointer; } 
+.quote-linked-popup .after-search .proj-detail { display: flex; justify-content: space-between; } 
+.quote-linked-popup .after-search .proj-name { margin-bottom: 8px; text-align: left; } 
+.quote-linked-popup .after-search .proj-date { display: flex; color: #555; } 
+.quote-linked-popup .after-search .create { position: relative; margin-right: 8px; } 
+.quote-linked-popup .after-search .create:after { content: "/"; display: inline-block; position: absolute; right: -8px; top: 0; } 
+.quote-linked-popup .after-search .update { margin-left: 4px; } 
+.quote-linked-popup .after-search .proj-status { color: #1c1c1c; } 
+.quote-linked-popup .after-search .proj-status span { font-weight: 400; margin-left: 7px; } 
+.quote-linked-popup .select-proj-complete { overflow-y: scroll; height: 100%; margin-right: -40px; padding-right: 32px; } 
+.quote-linked-popup .select-proj-complete .field-box { display: block; width: 100%; margin-bottom: 12px; } 
+.quote-linked-popup .search-open-btn { display: none; } 
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .quote-linked-popup .popup-wrap__inner { height: min(60vw, 90vh); } 
+ .quote-linked-popup .tab-wrap .tab-list { margin-inline: 2.778vw; } 
+ .quote-linked-popup .tab-wrap .tab-wrap__contents { height: calc(100% - 3.889vw); } 
+
+ /* container contents */
+ .quote-linked-popup .new-project-tab { padding-top: 1.667vw; padding-inline:2.778vw 2.222vw; } 
+ .quote-linked-popup .new-project-tab .field-box { margin-bottom: 0.833vw; } 
+
+ /* tab2 contents */
+ .quote-linked-popup .tab-panel { padding-top: 1.667vw; padding-inline: 2.778vw; } 
+ .quote-linked-popup .search-bar { padding: 1.667vw; margin-bottom: 1.667vw; } 
+ .quote-linked-popup .search-bar .date-field-wrap { gap: 1.667vw; margin-bottom: 0.833vw; } 
+ .quote-linked-popup .search-bar .date-field-wrap > .field-box { width: 21.667vw; } 
+ .quote-linked-popup .search-bar .datepicker-field .field-box { width: calc(50% - 0.972vw); } 
+ .quote-linked-popup .search-bar .datepicker-field .field-box:first-of-type { width: calc(50% + 0.972vw); padding-right: 1.875vw; } 
+ .quote-linked-popup .search-bar .datepicker-field .field-box:first-of-type:after { right: 0.625vw; } 
+
+ /* tab2 contents - result */
+ .quote-linked-popup .search-result { height: calc(100% - 11.389vw); } 
+ .quote-linked-popup .before-search { height: 17.361vw; padding-top: 4.167vw; } 
+ .quote-linked-popup .before-search img { width: 4.444vw; height: 4.444vw; } 
+ .quote-linked-popup .before-search .search-desc { margin-top: 0.833vw; } 
+ .quote-linked-popup .after-search { padding-bottom: 0.833vw; } 
+ .quote-linked-popup .after-search .result-list__wrap { height: calc(100% - 2.708vw); padding-inline: 1.111vw 0.556vw; } 
+ .quote-linked-popup .after-search .list__el { padding: 1.111vw 0; } 
+ .quote-linked-popup .after-search .proj-name { margin-bottom: 0.556vw; } 
+ .quote-linked-popup .after-search .create { margin-right: 0.556vw; } 
+ .quote-linked-popup .after-search .create:after { right: -0.556vw; } 
+ .quote-linked-popup .after-search .update { margin-left: 0.278vw; } 
+ .quote-linked-popup .after-search .proj-status span { margin-left: 0.486vw; } 
+ .quote-linked-popup .select-proj-complete { margin-right: -2.778vw; padding-right: 2.222vw; } 
+ .quote-linked-popup .select-proj-complete .field-box { margin-bottom: 0.833vw; } 
+ }
+
+@media only screen and (max-width: 768px){
+ .quote-linked-popup { padding: 0; } 
+ .quote-linked-popup .popup-wrap__inner { height: 100%; padding: 0; border-radius: 0; } 
+ .quote-linked-popup .popup-wrap__inner .popup__header { display: flex; align-items: center; height: 56px; padding: 0 24px; var(--base-shadow); } 
+ .quote-linked-popup .popup-wrap__inner .popup__footer { height: 72px; border-top: 1px solid #cccccc; } 
+ .quote-linked-popup .popup-wrap__inner > .btn-icon.icon-close { right: 24px; } 
+
+ /* container contents */
+ .quote-linked-popup .tab-wrap .tab-list { column-gap: 24px; height: 48px; padding: 0 24px; margin-inline: 0; } 
+ .quote-linked-popup .tab-wrap .tab-list .tab-list__tab { flex: none; } 
+ .quote-linked-popup .tab-wrap .tab-list .tab-list__tab .tab-list__tab-txt { font-size: 14px !important; } 
+ .quote-linked-popup .tab-wrap .tab-wrap__contents { height: calc(100% - 48px); } 
+ .quote-linked-popup .new-project-tab { overflow-y: auto; width: 100%; margin-right: 0; padding-inline: 24px; } 
+ .quote-linked-popup .new-project-tab .field-box { margin-bottom: 24px; } 
+ .quote-linked-popup .new-project-tab .field-box .input-datepicker { width: 100%; } 
+
+ /* tab2 contents */
+ .quote-linked-popup .tab-panel { padding-top: 0; padding-inline: 0; } 
+ .quote-linked-popup .search-bar { position: relative; margin-bottom: 26px; padding-bottom: 34px; border-bottom: 1px solid #aaa; border-radius: 0; } 
+ .quote-linked-popup .search-bar .date-field-wrap { display: block; margin-bottom: 0; } 
+ .quote-linked-popup .search-bar .date-field-wrap > .field-box { width: 100%; margin-bottom: 12px; } 
+ .quote-linked-popup .search-bar .name-field-box { display: none; margin-bottom: 0; } 
+ .quote-linked-popup .search-bar .search-open-btn { display: block; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); height: 20px; width: 60px; background-color: #fff; z-index: 1; } 
+ .quote-linked-popup .search-bar .search-open-btn .icon-arrow { display: block; width: 16px; height: 16px; margin: 0 auto; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-accordion-sm.svg); transform: rotate(180deg); } 
+ .quote-linked-popup .search-bar.active .name-field-box { display: block; margin-top: 12px; } 
+ .quote-linked-popup .search-bar.active .search-open-btn { background-color: #555; } 
+ .quote-linked-popup .search-bar.active .search-open-btn .icon-arrow { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-accordion-white.svg); transform: rotate(0deg); } 
+
+ /* tab2 contents - result */
+ .quote-linked-popup .search-result { height: calc(100% - 178px); padding-inline: 0; } 
+ .quote-linked-popup .search-bar.active + .search-result { height: calc(100% - 230px); } 
+ .quote-linked-popup .before-search { height: 240px; padding: 110px 24px 0; } 
+ .quote-linked-popup .before-search img { display: none; } 
+ .quote-linked-popup .before-search .search-desc { margin-top: 0; font-size: 14px !important; } 
+ .quote-linked-popup .after-search { padding-bottom: 0; padding-inline: 0; } 
+ .quote-linked-popup .after-search .result__num-btn { margin: 0 24px; padding-bottom: 12px; border-bottom: 2px solid #000000; } 
+ .quote-linked-popup .after-search .result-list__wrap { overflow-y: auto; height: calc(100% - 35px); padding-inline: 24px; border-top: 0; } 
+ .quote-linked-popup .after-search .list__el { border: 1px solid #dadada; border-radius: var(--border-base); margin: 16px 0 0; padding: 16px; } 
+ .quote-linked-popup .after-search .proj-detail { display: block; text-align: left; } 
+ .quote-linked-popup .after-search .proj-name { font-size: 14px !important; margin-bottom: 2px; } 
+ .quote-linked-popup .after-search .proj-detail .date-tit { font-size: 10px !important; } 
+ .quote-linked-popup .after-search .proj-detail .date { font-size: 12px !important; } 
+ .quote-linked-popup .after-search .create:after { top: 4px; font-size: 12px; } 
+ .quote-linked-popup .after-search .proj-status { font-size: 12px; } 
+ .quote-linked-popup .select-proj-complete { overflow-y: auto; margin-right: 0; padding-inline: 24px; } 
+ .quote-linked-popup .select-proj-complete .field-box { margin-bottom: 24px; } 
+ }

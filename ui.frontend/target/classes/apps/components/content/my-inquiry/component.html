@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <!-- 공통 css -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/my-inquiry/clientlibs/css/main.css">
+  <!-- 컴포넌트 css -->
+  <title>My Inquiry</title>
+</head>
+
+<body>
+  <!-- component -->
+  <section class="my-inquiry">
+    <h2 class="my-inquiry-tit txt-h3">My Inquiry</h2>
+    <!-- S: search 영역 -->
+    <article class="my-inquiry-search__wrap">
+      <div class="search-top__wrap">
+        <!-- category -->
+        <div class="field-box search-cate-box">
+          <label class="txt-label">Category</label>
+          <div class="multi-combo-box">
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false">
+                <!--<span class="txt-placeholder">All</span> 240731 [HVCHB-1137] placeholder 주석처리 -->
+                All
+              </button><!-- 240731 [HVCHB-1137] All 텍스트 추가 -->
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">All</li>
+                  <li role="menuitem">Product</li>
+                  <li role="menuitem">Orders</li>
+                  <li role="menuitem">System Error</li>
+                  <li role="menuitem">Dvm Pro 2.0</li>
+                  <li role="menuitem">Etc</li>
+                  <li role="menuitem">Airsol</li>
+                </ul>
+              </div>
+            </div>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false" disabled>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- status -->
+        <div class="field-box search-status-box">
+          <label class="txt-label">Status</label>
+          <div class="combo-box">
+            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+              aria-expanded="false">
+              <!--<span class="txt-placeholder">All</span> 240731 [HVCHB-1137] placeholder 주석처리 -->
+              All
+            </button><!-- 240731 [HVCHB-1137] All 텍스트 추가 -->
+            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+              <ul class="combo-box__menu-list">
+                <li role="menuitem">All</li>
+                <li role="menuitem">In Progress</li>
+                <li role="menuitem">Completed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Date Range -->
+        <div class="field-box search-date-box">
+          <!-- 유효성 검사시 label.required 클래스 추가 -> text color red로 변경 -->
+          <label class="txt-label">Date
+            Range</label><!-- 240708 required 클래스 제거 / txt-blind 클래스 추가 --><!-- 240725 txt-blind 클래스 삭제, mo-display 클래스 추가 --><!-- 240812 mo-display 클래스 제거 -->
+          <div class="datepicker-box">
+            <!-- 유효성 검사시 input에 required 속성 추가되어야 빨간라인으로 변경됨 -->
+            <input type="text" id="datepicker" class="input-datepicker"
+              placeholder="YYYY-MM-DD"><!-- 240708 required 속성제거 -->
+            <span>~</span>
+            <input type="text" class="input-datepicker" placeholder="YYYY-MM-DD">
+          </div>
+          <!-- p.txt-error 제거 -->
+        </div>
+      </div>
+      <div class="search-bottom__wrap">
+        <!-- ID/ Subject -->
+        <div class="field-box search-id-box">
+          <label class="txt-label" for="btn-required-search">ID/ Subject</label>
+          <div class="input-box input-search">
+            <input type="text" class="input-box__input" id="btn-required-search" placeholder="Type an ID or Subject">
+            <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+          </div>
+        </div>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Search</span>
+        </button>
+      </div>
+
+      <!-- 240725 button.btn-icon 영역 추가 -->
+      <button type="button" class="btn-icon arrow-btn mo-display">
+        <span class="icon-btn-arrow"></span>
+        <span class="txt-blind">open</span>
+      </button>
+    </article>
+    <!-- E: search 영역 -->
+
+    <!-- S: search result 영역 -->
+    <article class="my-result__wrap my-inquiry-result__wrap"><!-- 240527 my-result__wrap class 추가 -->
+      <div class="result__num-btn">
+        <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">Create Inquiry </span>
+        </button>
+      </div>
+      <ul class="result-list__wrap">
+        <!-- list head -->
+        <li class="list__head">
+          <strong class="list-no txt-p5 txt-fw-b">No.</strong>
+          <strong class="list-id txt-p5 txt-fw-b">ID</strong>
+          <strong class="list-cate1 txt-p5 txt-fw-b">Category 1</strong>
+          <strong class="list-cate2 txt-p5 txt-fw-b">Category 2</strong>
+          <strong class="list-subj txt-p5 txt-fw-b">Subject</strong>
+          <strong class="list-status txt-p5 txt-fw-b">Status</strong>
+          <div class="list-date txt-p5 txt-fw-b">
+            <strong>Date</strong>
+            <!--
+                date 정렬 버튼 (사용시)
+                  - default : 최신순 -> arrow 아이콘 하단이 active
+                  - 등록일순 : button.regist -> arrow 아이콘 상단 active 형식으로 변경됨
+                date 정렬 버튼 (미사용시 - default) : button.sort-btn 제거
+              -->
+            <button class="btn-icon sort-btn">
+              <span class="txt-blind">date sort</span>
+            </button>
+          </div>
+        </li>
+        <!-- list content -->
+        <li class="list__el-box">
+          <!-- 검색결과가 있는 경우 ul.list-data 노출 & 검색결과가 없는 경우 div.list-nodata 노출 -->
+          <ul class="list-data">
+            <!-- list1 -->
+            <li class="list__el">
+              <span class="list-no txt-p5">1</span><!-- no -->
+              <div class="box el__wrap"><!-- 240725 div.box.el__wrap 영역 추가 -->
+                <div class="box id-cate__wrap"><!-- 240725 div.box.id-cate__wrap 영역 추가 -->
+                  <span class="list-id txt-p5">IS123456795</span><!-- id -->
+                  <span class="list-cate1 txt-p5">Product</span><!-- category1 -->
+                  <span class="list-cate2 txt-p5">Pre-Sales Product</span><!-- category2 -->
+                </div>
+                <a href="#none" class="list-subj txt-p5 txt-ellipsis2">What Should I Do If The Courier Does Not Find
+                  Me At Home At The Time Of
+                  Delivery?</a><!-- subject --><!-- 240531 txt-ellipsis2 class 추가 --><!-- 240731 tag 변경 p -> a -->
+                <!--
+                    status
+                      - In progress인 경우 : div.progress 클래스로 변경 240625 span.progress -> div.progress로 변경
+                      - Completed인 경우 : div.completed 클래스로 변경 240625 span.completed -> div.completed 변경
+                  -->
+                <div class="list-status progress txt-p6 txt-fw-b"><span class="status-dot"></span>In progressprogress
+                </div><!-- status --><!-- span.tag-flag요소 제거 / span.status-dot 추가 / div.txt-fw-b.txt-p6 class 추가 -->
+                <span class="list-date txt-p5">2023-01-31</span><!-- date -->
+              </div>
+            </li>
+            <!-- list2 -->
+            <li class="list__el">
+              <span class="list-no txt-p5">2</span><!-- no -->
+              <div class="box el__wrap"><!-- 240725 div.box.el__wrap 영역 추가 -->
+                <div class="box id-cate__wrap"><!-- 240725 div.box.id-cate__wrap 영역 추가 -->
+                  <span class="list-id txt-p5">IS123456794</span><!-- id -->
+                  <span class="list-cate1 txt-p5">Product</span><!-- category1 -->
+                  <span class="list-cate2 txt-p5">Pre-Sales Product</span><!-- category2 -->
+                </div>
+                <a href="#none" class="list-subj txt-p5 txt-ellipsis2">What Are The Available Payment
+                  Methods?​</a><!-- subject --><!-- 240531 txt-ellipsis2 class 추가 --><!-- 240731 tag 변경 p -> a -->
+                <!--
+                    status
+                      - In progress인 경우 : div.progress 클래스로 변경 240625 span.progress -> div.progress로 변경
+                      - Completed인 경우 : div.completed 클래스로 변경 240625 span.completed -> div.completed 변경
+                  -->
+                <div class="list-status progress txt-p6 txt-fw-b"><span class="status-dot"></span>In progress</div>
+                <!-- status --><!-- span.tag-flag요소 제거 / span.status-dot 추가 / div.txt-fw-b.txt-p6 class 추가 -->
+                <span class="list-date txt-p5">2023-01-31</span><!-- date -->
+              </div>
+            </li>
+            <!-- list3 -->
+            <li class="list__el">
+              <span class="list-no txt-p5">3</span><!-- no -->
+              <div class="box el__wrap"><!-- 240725 div.box.el__wrap 영역 추가 -->
+                <div class="box id-cate__wrap"><!-- 240725 div.box.id-cate__wrap 영역 추가 -->
+                  <span class="list-id txt-p5">IS123456794</span><!-- id -->
+                  <span class="list-cate1 txt-p5">Etc</span><!-- category1 -->
+                  <span class="list-cate2 txt-p5">Pre-Sales Product</span><!-- category2 -->
+                </div>
+                <a href="#none" class="list-subj txt-p5 txt-ellipsis2">Inquiry subject
+                  3​</a><!-- subject --><!-- 240531 txt-ellipsis2 class 추가 --><!-- 240731 tag 변경 p -> a -->
+                <!--
+                    status
+                      - In progress인 경우 : div.progress 클래스로 변경 240625 span.progress -> div.progress로 변경
+                      - Completed인 경우 : div.completed 클래스로 변경 240625 span.completed -> div.completed 변경
+                  -->
+                <div class="list-status progress txt-p6 txt-fw-b"><span class="status-dot"></span>In progress</div>
+                <!-- status --><!-- span.tag-flag요소 제거 / span.status-dot 추가 / div.txt-fw-b.txt-p6 class 추가 -->
+                <span class="list-date txt-p5">2023-01-31</span><!-- date -->
+              </div>
+            </li>
+          </ul>
+
+          <!-- 검색결과가 있는 경우 ul.list-data 노출 & 검색결과가 없는 경우 or 등록된 콘텐츠가 없는 경우 div.list-nodata 노출 -->
+          <div class="list-nodata" style="display:none;">
+            <p class="txt-p6">There is no registered content.</p>
+            <!-- 240619 문구변경 (검색결과가 없는경우와 등록된 콘텐츠가 없을 경우의 문구가 다름) -->
+          </div>
+        </li>
+      </ul>
+      <!-- pagination -->
+      <div class="pagination pc-display"><!-- 240725 pc-display 클래스 추가 -->
+        <ul class="page-list">
+          <li class="btn-icon page-btn__prev" aria-disabled="true"> <a aria-label="prev" href=""></a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 1" class="page-list__no selected">1</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 2" class="page-list__no">2</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 3" class="page-list__no">3</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 4" class="page-list__no">4</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 5" class="page-list__no">5</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 6" class="page-list__no">6</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 7" class="page-list__no">7</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 8" class="page-list__no">8</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 9" class="page-list__no">9</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 10" class="page-list__no">10</a></li>
+          <li class="btn-icon page-btn__next"> <a aria-label="next" href=""></a> </li>
+        </ul>
+      </div>
+      <!-- 240725 MO 전용 View more 버튼 추가-->
+      <div class="more-btn mo-display">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">View more</span>
+          <i class="btn-block__icon icon-arrow-bottom"></i>
+        </button>
+      </div>
+    </article>
+    <!-- E: search result 영역 -->
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/my-inquiry/clientlibs/js/main.js"></script><!-- 240725 컴포넌트 js 추가 -->
+</body>
+
+</html>

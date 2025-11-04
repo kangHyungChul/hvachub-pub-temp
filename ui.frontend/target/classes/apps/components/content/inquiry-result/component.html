@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"> <!-- 공통 css -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/inquiry-result/clientlibs/css/main.css"><!-- 컴포넌트 css -->
+  <!-- 240620 jquery script 제거 -->
+  <title>Inquiry Result</title>
+</head>
+<body>
+  <div>
+    <!-- component -->
+    <section class="inquiry-result">
+      <!-- S: inquiry result success
+        inquiry result success 일때 노출되는 영역
+        -> 해당영역 노출시 article.inquiry-result__wrap.failure 영역 제거
+      -->
+      <article class="inquiry-result__wrap success">
+        <!-- title 영역 -->
+        <div class="inquiry-result-msg__wrap">
+          <div class="msg-box">
+            <span class="msg-icon"></span>
+            <h2 class="msg-tit txt-h3 txt-fw-b">Thanks for Your Inquiry</h2>
+            <div class="msg-txt__wrap">
+              <strong class="txt-p4 txt-fw-b">Your inquiry has been submitted.</strong>
+              <p class="msg-txt txt-p4">Please check the inquiry information sent via email<br>
+                and review the response Status on the My inquiry page.</p>
+            </div>
+          </div>
+        </div>
+        <!-- inquiry information 영역 -->
+        <div class="inquiry-result-info__wrap">
+          <p class="info-tit txt-h6 txt-fw-b">Inquiry Information</p>
+          <ul class="info-list__wrap">
+            <!-- Inquiry ID -->
+            <li class="list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Inquiry ID</strong>
+              <p class="list-el__cont txt-p5 txt-point2">IS20512758</p>
+            </li>
+            <!-- Category -->
+            <li class="list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Category</strong>
+              <p class="list-el__cont txt-p5">
+                <!-- 240725 category 텍스트 분리 -->
+                <span class="cate-txt">Product</span><span class="cate-txt">Pre-Sales support</span>
+              </p>
+            </li>
+            <!-- Order Status -->
+            <li class="list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Subject</strong><!-- 240708 text 변경 Order Status -> Subject -->
+              <p class="list-el__cont txt-p5">What Should I Do If The Courier Does Not Find Me At Home At The Time Of Delivery?​</p>
+            </li>
+            <!-- Date -->
+            <li class="list__el">
+              <strong class="list-el__tit txt-p5 txt-fw-b">Date</strong>
+              <p class="list-el__cont txt-p5">YYYY-MM-DD</p>
+            </li>
+          </ul>
+          <div class="btn-box">
+            <!-- [F]. color style: white(default) ,black(.type2), blue(.type3)
+              -> button.btn-block에 해당 클래스 추가
+            -->
+            <button type="button" class="btn-block md">  
+              <span class="btn-block__txt">List</span><!-- 240619 버튼명 변경 Go to List -> List -->
+            </button>
+            <!-- [F]. color style: white(-) ,black(default), blue(.type3)
+              -> button.btn-block에 해당 클래스 추가
+            -->
+            <!-- 240619 Go to Main 버튼 제거 -->
+          </div>
+        </div>
+      </article>
+      <!-- E: inquiry result success -->
+
+      <!-- S: inquiry result failure
+        inquiry result failure 일때 노출되는 영역
+        -> 해당영역 노출시 article.inquiry-result__wrap.success 영역 제거
+      -->
+      <article class="inquiry-result__wrap failure">
+        <!-- title 영역 -->
+        <div class="inquiry-result-msg__wrap">
+          <div class="msg-box">
+            <span class="msg-icon"></span>
+            <h2 class="msg-tit txt-h3 txt-fw-b">Sorry for your inconvenience</h2>
+            <div class="msg-txt__wrap">
+              <strong class="txt-p4 txt-fw-b">Inquiry submission failed.</strong>
+              <p class="msg-txt txt-p4">Please try again or contact support team to fix this problem.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Support Information 영역 -->
+        <div class="inquiry-result-info__wrap">
+          <p class="info-tit txt-h6 txt-fw-b">Support Information</p>
+          <!-- 
+            Left Items만 사용시 : ul.support-box 영역 추가 (div.support-list__wrap 영역 안에 ul.support-box 한개)
+            Left Items & Right Items 모두 사용시 : ul.support-box 영역 제거 (div.support-list__wrap 영역 안에 ul.support-box 두개)
+          -->
+            <div class="support-list__wrap">
+              <!-- left -->
+              <ul class="support-box">
+                <li class="list__el">
+                  <span class="list-el__dot"></span>
+                  <span class="list-el__txt txt-p5">Monday - Friday 9:00am - 5:00pm</span>
+                </li>
+                <li class="list__el">
+                  <span class="list-el__dot"></span>
+                  <span class="list-el__txt txt-p5">Saturday 9:00am - 3:00pm</span>
+                </li>
+                <li class="list__el">
+                  <span class="list-el__dot"></span>
+                  <span class="list-el__txt txt-p5">Closed Sunday and Bank Holidays</span>
+                </li>
+              </ul>
+              <!-- right -->
+              <ul class="support-box">
+                <li class="list__el">
+                  <span class="list-el__dot"></span>
+                  <span class="list-el__txt txt-p5">UK 0344 847 5454</span>
+                </li>
+                <li class="list__el">
+                  <span class="list-el__dot"></span>
+                  <span class="list-el__txt txt-p5">IE 01 686 9454</span>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-box">
+              <!-- [F]. color style: white(default) ,black(.type2), blue(.type3)
+                -> button.btn-block에 해당 클래스 추가
+              -->
+              <button type="button" class="btn-block md">  
+                <span class="btn-block__txt">List</span><!-- 240619 버튼명 변경 Go to List -> List -->
+              </button>
+              <!-- [F]. color style: white(-) ,black(default), blue(.type3)
+                -> button.btn-block에 해당 클래스 추가
+              -->
+              <button type="button" class="btn-block md type2">  
+                <span class="btn-block__txt">Retry</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- E: inquiry result failure -->
+    </section>
+  </div>
+
+<!-- common.js -->
+<script src="/pub-only/js/main-lib.js"></script>
+<script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+</body>
+</html>

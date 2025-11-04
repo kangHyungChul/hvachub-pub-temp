@@ -1,0 +1,86 @@
+.invoice-list-sect { max-width: 1440px; width: 100%; margin: 0 auto; padding-inline: 24px; } 
+
+/* search */
+.ord-list-search { background: #f7f7f7; padding: 24px; border-radius: var(--border-base); margin-bottom: 24px; } 
+.ord-list-search > .field-box .input-search { width: 770px; } 
+.ord-list-search .field-box-area { display: flex; align-items: flex-end; gap: 24px; margin-top: 24px; } 
+.ord-list-search .field-box-area .field-box { flex-grow: 0; flex-basis: 240px; } 
+.ord-list-search .field-box-area .field-box:has(.datepicker-area) { flex-basis: 428px; } 
+.ord-list-search .field-box-area .combo-box { width: 100%; } 
+.ord-list-search .field-box-area .input-datepicker { width: calc(50% - 14px); } 
+.ord-list-search .field-box-area .input-datepicker + .txt-p5 { color: #a9a9a9; margin-inline: 4px 5px; } 
+.ord-list-search .field-box-area > .btn-block { flex: none; } 
+.ord-list-search .icon-mo-folded { display: none; } 
+
+/* list */
+.invoice-list-sect .basic-list-wrap { padding: 0; border-radius: 0; } 
+/* result */
+.invoice-list-sect .basic-list__result { overflow-x: scroll; margin-bottom: 16px; } 
+.invoice-list-sect .basic-list__result .el-status { flex: auto; } 
+.invoice-list-sect .basic-list__result .el-num,
+.invoice-list-sect .basic-list__result .el-doc,
+.invoice-list-sect .basic-list__result .el-date,
+.invoice-list-sect .basic-list__result .el-price,
+.invoice-list-sect .basic-list__result .el-total { width: 133px; } 
+.invoice-list-sect .basic-list__result .el-pdf { width: 75px; } 
+.invoice-list-sect .list-head, 
+.invoice-list-sect .list-body { width: fit-content; min-width: 100%; } 
+.invoice-list-sect .list-body .el-num a:hover { text-decoration: underline; font-weight: 700; } 
+.invoice-list-sect .list-body .el-price,
+.invoice-list-sect .list-body .el-total { text-align: right; } 
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+ .invoice-list-sect { padding-inline: 1.667vw; } 
+ /* search */
+ .ord-list-search { padding: 1.667vw; margin-bottom: 1.667vw; } 
+ .ord-list-search > .field-box .input-search { width: 53.472vw; } 
+ .ord-list-search .field-box-area { gap: 1.667vw; margin-top: 1.667vw; } 
+ .ord-list-search .field-box-area .field-box { flex-basis: 16.667vw; } 
+ .ord-list-search .field-box-area .field-box:has(.datepicker-area) { flex-basis: 29.722vw; } 
+
+ /* list */
+ .invoice-list-sect .basic-list__result { margin-bottom: 1.111vw; } 
+ .invoice-list-sect .basic-list__result .el-num,
+ .invoice-list-sect .basic-list__result .el-doc,
+ .invoice-list-sect .basic-list__result .el-date,
+ .invoice-list-sect .basic-list__result .el-price,
+ .invoice-list-sect .basic-list__result .el-total { width: 9.236vw; } 
+ .invoice-list-sect .basic-list__result .el-pdf { width: 5.208vw; } 
+
+
+/* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px) { 
+ .ord-list-search { position: relative; padding-bottom: 34px; margin-inline: -24px; border-radius: 0; margin-bottom: 25px; } 
+ .ord-list-search .field-box { width: 100%; } 
+ .ord-list-search > .field-box .input-search { width: 100%; } 
+ .ord-list-search .field-box-area { flex-direction: column; align-items: initial; gap: 12px; margin-top: 12px; } 
+ .ord-list-search .field-box-area > .field-box { display: none; flex-basis: 100%; } 
+ .ord-list-search .field-box-area .field-box:has(.datepicker-area) { flex-basis: 100%; } 
+ .ord-list-search .field-box-area .combo-box { width: 100%; } 
+ .ord-list-search .field-box-area > .btn-block { width: 100%; } 
+ .ord-list-search .icon-mo-folded { display: block; position: absolute; left: calc(50% - 30px); bottom: -10px; width: 60px; height: 20px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-mo-folded.svg); } 
+ .ord-list-search.mo-active .field-box-area > .field-box { display: block; } 
+ .ord-list-search.mo-active .icon-mo-folded { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-mo-folded-open.svg); } 
+
+ /* list */
+ .invoice-list-sect .basic-list__result {overflow-x: auto;  margin-bottom: 24px; } 
+ .invoice-list-sect .basic-list__result .el-status { flex: none; width: 120px; } 
+ .invoice-list-sect .basic-list__result .el-doc,
+ .invoice-list-sect .basic-list__result .el-date,
+ .invoice-list-sect .basic-list__result .el-price { width: 120px; } 
+ .invoice-list-sect .basic-list__result .el-num { width: 132px; } 
+ .invoice-list-sect .basic-list__result .el-total { width: 100px; } 
+ .invoice-list-sect .basic-list__result .el-pdf { width: 70px; } 
+ .invoice-list-sect .list-head .txt-p5,
+ .invoice-list-sect .list-body .txt-p5,
+ .invoice-list-sect .list-body .txt-p6 { font-size: 12px !important; } 
+
+
+/* [E]Mobile */ } 

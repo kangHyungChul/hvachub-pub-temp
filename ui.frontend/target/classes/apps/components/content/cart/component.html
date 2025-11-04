@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Cart</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+
+<body>
+
+  <!-- component -->
+  <section class="cart-sect">
+    <div class="cart-sect-inner">
+      <!-- left -->
+      <div class="cart-item-area">
+        <div class="tit-area">
+          <h1 class="txt-h3">Cart</h1>
+          <p class="txt-p5 txt-fw-b">Product : <span class="txt-point1">999</span></p>
+        </div>
+        <!-- product list -->
+        <div class="cart-list-box">
+          <div class="cart-list-top">
+            <!-- [F] empty cart 일경우 미노출 -->
+            <label class="btn-checkbox">
+              <input type="checkbox" class="btn-checkbox__input" name="selectAll" value="">
+              <span class="btn-checkbox__icon"></span>
+              <span class="btn-checkbox__txt">Select All</span>
+            </label>
+            <div class="btn-box">
+              <!-- [F] empty cart 일경우 미노출 -->
+              <button type="button" class="btn-block md" data-layer-target="alert-delete">
+                <span class="btn-block__txt">Delete</span>
+              </button>
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Add Product</span>
+              </button>
+            </div>
+          </div>
+          <!-- 2025-03-02 class 변경 no-result ==> list-nodata -->
+          <div class="list-nodata">
+            <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5 -->
+            <p class="txt-p5">There are no item in Cart.</p>
+          </div>
+          <ul class="cart-list">
+            <li class="list-item">
+              <ul class="list-item-inner">
+                <li class="el-checkbox tal-center">
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="selectList" value="">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                </li>
+                <li class="el-img">
+                  <a href="#">
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                  </a>
+                </li>
+                <li class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-arrow">Outdoor</span>
+                    <span class="txt-arrow">Indoor Unit</span>
+                  </p>
+                  <a href="#none" class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER High EER High
+                    EER High EER High EER High EER</a>
+                  <p class="txt-p6">AM200AXVAGH</p>
+                </li>
+                <li class="el-qty tal-center">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">qty</label>
+                    <div class="input-number module" aria-label="qty">
+                      <button type="button" class="btn-icon btn-number__down" disabled>
+                        <span class="txt-blind">minus</span>
+                      </button>
+                      <input type="text" class="input-number__input" value="1">
+                      <button type="button" class="btn-icon btn-number__up">
+                        <span class="txt-blind">plus</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-price-stock">
+                  <div class="price-box">
+                    <p class="txt-p4 txt-fw-b">999.999.999.999,99 TL</p>
+                    <p class="txt-del">1.808.499,12 TL</p>
+                  </div>
+                  <div class="stock-box">
+                    <!-- [F ] color : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green">Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black">
+                        <span class="txt-blind">tooltip view</span>
+                      </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn">
+                            <span class="txt-blind">tooltip close</span>
+                          </button>
+                          <div class="cont">
+                            <!-- 툴팁 문구 -->
+                            <p class="txt-fw-b">‘Stock' availability</p>
+                            <div class="sotck-box">
+                              <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                              <p class="txt-p7 txt-stock yellow">Stock has limited availability now.</p>
+                              <p class="txt-p7 txt-stock red">Stock is not currently available.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-delete tal-center">
+                  <button type="button" class="btn-icon icon-trash">
+                    <span class="txt-blind">delete</span>
+                  </button>
+                </li>
+              </ul>
+              <!-- [F] 판매중지 및 판매할 수 없는 상품일경우 & 가격 미 노출시 노출문구 -->
+              <!-- <p class="txt-disabled txt-p5">The product is discontinued or not available for purchase.​</p> -->
+            </li>
+            <!-- [F] 판매중지 및 판매할 수 없는 상품일경우 : aria-disabled="true" 추가 -->
+            <li class="list-item" aria-disabled="true">
+              <ul class="list-item-inner">
+                <li class="el-checkbox tal-center">
+                  <label class="btn-checkbox">
+                    <!-- [F] 판매중지 및 판매할 수 없는 상품일경우 : disabled 추가-->
+                    <input type="checkbox" class="btn-checkbox__input" name="selectList" value="" disabled>
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                </li>
+                <li class="el-img">
+                  <a href="#">
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                  </a>
+                </li>
+                <li class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-arrow">Outdoor</span>
+                    <span class="txt-arrow">Indoor Unit</span>
+                  </p>
+                  <a href="#none" class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER High EER High
+                    EER High EER High EER High EER</a>
+                  <p class="txt-p6">AM200AXVAGH</p>
+                </li>
+                <li class="el-qty tal-center">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">qty</label>
+                    <!-- [F] 판매중지 및 판매할 수 없는 상품일경우 : disabled 추가-->
+                    <div class="input-number module" aria-label="qty">
+                      <button type="button" class="btn-icon btn-number__down" disabled>
+                        <span class="txt-blind">minus</span>
+                      </button>
+                      <input type="text" class="input-number__input" value="1" disabled>
+                      <button type="button" class="btn-icon btn-number__up" disabled>
+                        <span class="txt-blind">plus</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-price-stock">
+                  <div class="price-box">
+                    <p class="txt-p4 txt-fw-b">1.808.499,12 TL</p>
+                    <p class="txt-del">1.808.499,12 TL</p>
+                  </div>
+                  <div class="stock-box">
+                    <!-- [F ] color : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green">Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black">
+                        <span class="txt-blind">tooltip view</span>
+                      </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn">
+                            <span class="txt-blind">tooltip close</span>
+                          </button>
+                          <div class="cont">
+                            <!-- 툴팁 문구 -->
+                            <p class="txt-fw-b">‘Stock' availability</p>
+                            <div class="sotck-box">
+                              <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                              <p class="txt-p7 txt-stock yellow">Stock has limited availability now.</p>
+                              <p class="txt-p7 txt-stock red">Stock is not currently available.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-delete tal-center">
+                  <button type="button" class="btn-icon icon-trash">
+                    <span class="txt-blind">delete</span>
+                  </button>
+                </li>
+              </ul>
+              <!-- [F] 판매중지 및 판매할 수 없는 상품일경우 & 가격 미 노출시 노출문구 -->
+              <p class="txt-disabled txt-p5">The product is discontinued or not available for purchase.​</p>
+            </li>
+            <!-- [F] 가격 미 노출시 : aria-disabled="true" 추가 -->
+            <li class="list-item" aria-disabled="true">
+              <ul class="list-item-inner">
+                <li class="el-checkbox tal-center">
+                  <label class="btn-checkbox">
+                    <!-- [F] 가격 미 노출시 : disabled 추가-->
+                    <input type="checkbox" class="btn-checkbox__input" name="selectList" value="" disabled>
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                </li>
+                <li class="el-img">
+                  <a href="#">
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                  </a>
+                </li>
+                <li class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-arrow">RAC</span>
+                    <span class="txt-arrow">Outdoor Unit</span>
+                  </p>
+                  <a href="#none" class="txt-p5 txt-fw-b txt-ellipsis2">RAC, OUTDOOR UNIT, WindFree Geo, 1,800btu/h</a>
+                  <p class="txt-p6">AR18TY3CAWKN</p>
+                </li>
+                <li class="el-qty tal-center">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">qty</label>
+                    <!-- [F] 가격 미 노출시 : disabled 추가-->
+                    <div class="input-number module" aria-label="qty">
+                      <button type="button" class="btn-icon btn-number__down" disabled>
+                        <span class="txt-blind">minus</span>
+                      </button>
+                      <input type="text" class="input-number__input" value="1" disabled>
+                      <button type="button" class="btn-icon btn-number__up" disabled>
+                        <span class="txt-blind">plus</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-price-stock">
+                  <!-- [F] 가격 미 노출시 : price-box 유지-->
+                  <div class="price-box">
+                    <p class="txt-p4 txt-fw-b"></p>
+                    <p class="txt-del"></p>
+                  </div>
+                  <div class="stock-box">
+                    <!-- [F ] color : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green">Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black">
+                        <span class="txt-blind">tooltip view</span>
+                      </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn">
+                            <span class="txt-blind">tooltip close</span>
+                          </button>
+                          <div class="cont">
+                            <!-- 툴팁 문구 -->
+                            <p class="txt-fw-b">‘Stock' availability</p>
+                            <div class="sotck-box">
+                              <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                              <p class="txt-p7 txt-stock yellow">Stock has limited availability now.</p>
+                              <p class="txt-p7 txt-stock red">Stock is not currently available.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-delete tal-center">
+                  <button type="button" class="btn-icon icon-trash">
+                    <span class="txt-blind">delete</span>
+                  </button>
+                </li>
+              </ul>
+              <!-- [F] 판매중지 및 판매할 수 없는 상품일경우 & 가격 미 노출시 노출문구 -->
+              <p class="txt-disabled txt-p5">The product is discontinued or not available for purchase.​</p>
+            </li>
+            <li class="list-item">
+              <ul class="list-item-inner">
+                <li class="el-checkbox tal-center">
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="selectList" value="">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                </li>
+                <li class="el-img">
+                  <a href="#">
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                  </a>
+                </li>
+                <li class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-arrow">Accessory</span>
+                    <span class="txt-arrow">External Control kit</span>
+                  </p>
+                  <a href="#none" class="txt-p5 txt-fw-b txt-ellipsis2">Air Conditioning System Remote MWR-WE11N</a>
+                  <p class="txt-p6">MWR-WE11N</p>
+                </li>
+                <li class="el-qty tal-center">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">qty</label>
+                    <div class="input-number module" aria-label="qty">
+                      <button type="button" class="btn-icon btn-number__down">
+                        <span class="txt-blind">minus</span>
+                      </button>
+                      <input type="text" class="input-number__input" value="999">
+                      <button type="button" class="btn-icon btn-number__up">
+                        <span class="txt-blind">plus</span>
+                      </button>
+                    </div>
+                    <!-- [F] 수량 초과시 문구 삭제 (2025-02-05)-->
+                  </div>
+                </li>
+                <li class="el-price-stock">
+                  <div class="price-box">
+                    <p class="txt-p4 txt-fw-b">1.808.499,12 TL</p>
+                    <p class="txt-del">1.808.499,12 TL</p>
+                  </div>
+                  <div class="stock-box">
+                    <!-- [F ] color : green / yellow / red -->
+                    <span class="txt-p6 txt-stock red">Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black">
+                        <span class="txt-blind">tooltip view</span>
+                      </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn">
+                            <span class="txt-blind">tooltip close</span>
+                          </button>
+                          <div class="cont">
+                            <!-- 툴팁 문구 -->
+                            <p class="txt-fw-b">‘Stock' availability</p>
+                            <div class="sotck-box">
+                              <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                              <p class="txt-p7 txt-stock yellow">Stock has limited availability now.</p>
+                              <p class="txt-p7 txt-stock red">Stock is not currently available.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-delete tal-center">
+                  <button type="button" class="btn-icon icon-trash">
+                    <span class="txt-blind">delete</span>
+                  </button>
+                </li>
+              </ul>
+              <!-- [F] 판매중지 및 판매할 수 없는 상품일경우 & 가격 미 노출시 노출문구 -->
+              <!-- <p class="txt-disabled txt-p5">The product is discontinued or not available for purchase.​</p> -->
+            </li>
+            <li class="list-item">
+              <ul class="list-item-inner">
+                <li class="el-checkbox tal-center">
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="selectList" value="">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                </li>
+                <li class="el-img">
+                  <a href="#">
+                    <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                  </a>
+                </li>
+                <li class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-arrow">Controller Systems</span>
+                    <span class="txt-arrow">Individual Control</span>
+                  </p>
+                  <a href="#none" class="txt-p5 txt-fw-b txt-ellipsis2">CTRL, WIRELESS REMOTE CONTROLLER</a>
+                  <p class="txt-p6">AR-EC05</p>
+                </li>
+                <li class="el-qty tal-center">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">qty</label>
+                    <div class="input-number module" aria-label="qty">
+                      <button type="button" class="btn-icon btn-number__down">
+                        <span class="txt-blind">minus</span>
+                      </button>
+                      <input type="text" class="input-number__input" value="20">
+                      <button type="button" class="btn-icon btn-number__up">
+                        <span class="txt-blind">plus</span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-price-stock">
+                  <div class="price-box">
+                    <p class="txt-p4 txt-fw-b">1.808.499,12 TL</p>
+                    <p class="txt-del">1.808.499,12 TL</p>
+                  </div>
+                  <div class="stock-box">
+                    <!-- [F ] color : green / yellow / red -->
+                    <span class="txt-p6 txt-stock yellow">Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black">
+                        <span class="txt-blind">tooltip view</span>
+                      </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn">
+                            <span class="txt-blind">tooltip close</span>
+                          </button>
+                          <div class="cont">
+                            <!-- 툴팁 문구 -->
+                            <p class="txt-fw-b">‘Stock' availability</p>
+                            <div class="sotck-box">
+                              <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                              <p class="txt-p7 txt-stock yellow">Stock has limited availability now.</p>
+                              <p class="txt-p7 txt-stock red">Stock is not currently available.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="el-delete tal-center">
+                  <button type="button" class="btn-icon icon-trash">
+                    <span class="txt-blind">delete</span>
+                  </button>
+                </li>
+              </ul>
+              <!-- [F] 판매중지 및 판매할 수 없는 상품일경우 & 가격 미 노출시 노출문구 -->
+              <!-- <p class="txt-disabled txt-p5">The product is discontinued or not available for purchase.​</p> -->
+            </li>
+          </ul>
+          <!-- 2025-02-06 Infinite scroll 추가 -->
+          <div class="icon-loading-box">
+            <i class="icon-loading"></i>
+          </div>
+        </div>
+        <!-- //product list -->
+        <!-- 문의처 -->
+        <div class="noti-box">
+          <p class="txt-dott txt-p6">
+            Any questions, call<a href="tel:">444 77 11</a>
+          </p>
+        </div>
+        <!-- //문의처 -->
+        <!-- 약관안내 -->
+        <p class="txt-ref-mark">By submitting your order, you agree to the <a href="#none">Terms & conditions</a> and we will use your personal data in accordance with our <a href="#none">Privacy policy.</a>
+        </p>
+        <!-- //약관안내 -->
+      </div>
+      <!-- //left -->
+      <!-- right -->
+      <div class="cart-total-box">
+        <div class="cart-total-title-box">
+          <p class="txt-h7">Total Amount</p>
+          <p class="txt-p5 txt-del">808.499,00 TL</p>
+          <p class="txt-h7 txt-total">717.499,00 TL</p>
+        </div>
+        <div class="btn-box">
+          <button type="button" class="btn-block lg" data-layer-target="alert-savecart">
+            <span class="btn-block__txt">Saved Cart</span>
+          </button>
+          <button type="button" class="btn-block lg type2">
+            <span class="btn-block__txt">Checkout</span>
+          </button>
+        </div>
+      </div>
+      <!-- //right -->
+    </div>
+
+    <!-- save cart alert -->
+    <div class="alert-wrap save-cart-alert" id="alert-savecart">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-h7">Saved Cart</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Would you like to save to 'Saved Cart'? <br> Please write the Cart name.</p>
+          <div class="field-box">
+            <label class="txt-label txt-req" for="required-input">Cart Name</label>
+            <div class="input-box">
+              <input type="text" class="input-box__input" id="required-input" placeholder="Type a cart name" required>
+            </div>
+            <p class="txt-error">This field is required.</p>
+            <!-- require error msg 변경 -->
+            <p class="txt-error">The cart name is duplicated. Please enter again.</p>
+          </div>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('alert-savecart')">
+            <span class="btn-block__txt">Back</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- delete alert -->
+    <div class="alert-wrap" id="alert-delete">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-h7">Delete</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p4">Are you sure you want to delete it?</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('alert-delete')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- system maintenance alert -->
+    <div class="alert-wrap" id="alert-maintenance">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="aler__container">
+          <p class="txt-p4">You have exceeded the maximum order quantity.​</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup('alert-maintenance')">
+            <span class="btn-block__txt">Close</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+
+  </section>
+  <!-- component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+
+</body>
+
+</html>

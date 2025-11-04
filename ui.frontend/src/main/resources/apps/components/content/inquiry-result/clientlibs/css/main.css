@@ -1,0 +1,66 @@
+/* 공통 */
+.inquiry-result { max-width: 1152px; width: 100%; background-color: #f7f7f7; padding: 48px 24px 80px 56px; } 
+.inquiry-result-msg__wrap { text-align: center; padding: 40px 0; } 
+.inquiry-result-msg__wrap .msg-tit { margin-bottom: 16px; } 
+.inquiry-result-msg__wrap .msg-icon { display: inline-block; width: 80px; height: 80px; background-repeat: no-repeat; background-position: center; margin-bottom: 16px; background-size: 100%; } 
+.inquiry-result-info__wrap { margin-top: 40px; padding: 24px; background-color: #fff; border-radius: var(--border-base); } 
+.inquiry-result-info__wrap .info-tit { border-bottom: 2px solid #000; padding-bottom: 18px; } 
+.inquiry-result-info__wrap .btn-box { margin-top: 24px; } 
+.inquiry-result-info__wrap .btn-box .btn-block:not(:first-child) { margin-left: 16px; } 
+
+/* success */
+.inquiry-result__wrap.success .msg-icon { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-success.svg); } 
+.inquiry-result__wrap.success .info-list__wrap .list__el { display: flex; min-height: 56px; padding: 16px 12px; border-bottom: 1px solid #ccc; gap: 32px; align-items: center; } 
+.inquiry-result__wrap.success .info-list__wrap .list-el__tit { flex-basis: 246px; } 
+.inquiry-result__wrap.success .info-list__wrap .list-el__cont { flex: 1; word-break: break-all; /* 240709 jira HVCHB-1245 수정 */ } 
+.inquiry-result__wrap.success .info-list__wrap .cate-txt { display: inline-block; } 
+.inquiry-result__wrap.success .info-list__wrap .cate-txt:last-child { margin-left: 16px; position: relative; } 
+.inquiry-result__wrap.success .info-list__wrap .cate-txt:last-child::after { content: ''; width: 1.5px; height: 10px; display: block; background-color: #aaa; position: absolute; top: 50%; transform: translateY(-50%); left: -9px; } 
+
+/* failure */
+.inquiry-result__wrap.failure .msg-icon { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-failed.svg); } 
+.support-list__wrap { display: flex; gap: 24px; padding: 24px; border-bottom: 1px solid #ccc; } 
+.support-list__wrap .support-box { flex: 1; } 
+.support-list__wrap .list__el { display: flex; margin-bottom: 16px; } 
+.support-list__wrap .list__el:last-child { margin-bottom: 0; } 
+.support-list__wrap .list__el .list-el__txt { word-break: break-all; /* 240709 jira HVCHB-1245 수정 */ } 
+.support-list__wrap .list-el__dot { display: inline-block; width: 7px; height: 7px; border-radius: 100%; background-color: #000; margin-right: 10px; min-width: 7px; position: relative; top: 9px; } 
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .inquiry-result { max-width: 80vw; padding: 3.333vw 1.667vw 5.556vw 3.889vw; } 
+ .inquiry-result-msg__wrap { padding: 2.778vw 0; } 
+ .inquiry-result__wrap .msg-icon { height: 5.556vw; width: 5.556vw; margin-bottom: 1.111vw; } 
+ .inquiry-result-msg__wrap .msg-tit,
+ .support-list__wrap .list__el { margin-bottom: 1.111vw; } 
+ .inquiry-result-info__wrap { margin-top: 2.778vw; padding: 1.667vw; } 
+ .inquiry-result-info__wrap .info-tit { padding-bottom: 1.667vw; border-bottom-width: 0.139vw; } 
+ .inquiry-result__wrap.success .info-list__wrap .list__el { min-height: 3.889vw; padding: 1.111vw 0.833vw; gap: 2.222vw; } 
+ .inquiry-result__wrap.success .info-list__wrap .list-el__tit { flex-basis: 17.083vw; } 
+ .inquiry-result__wrap.success .info-list__wrap .cate-txt:last-child { margin-left: 1.111vw; } 
+ .inquiry-result__wrap.success .info-list__wrap .cate-txt:last-child::after { width: 0.104vw; height: 0.694vw; left: -0.625vw; } 
+ .inquiry-result-info__wrap .btn-box { margin-top: 1.667vw; } 
+ .support-list__wrap { gap: 1.667vw; padding: 1.667vw; } 
+ .support-list__wrap .list-el__dot { width: 0.417vw; height: 0.417vw; margin-right: 0.694vw; min-width: 0.417vw; top: 0.625vw; } 
+ .inquiry-result-info__wrap .btn-box .btn-block:not(:first-child) { margin-left: 1.111vw; } 
+ }
+
+@media only screen and (max-width: 768px){
+ .inquiry-result { padding: 24px 24px 80px; background-color: #fff; } 
+ .inquiry-result-msg__wrap { border-radius: var(--border-base); background-color: #f7f7f7; padding: 40px 16px; } 
+ .inquiry-result-msg__wrap .msg-icon { width: 64px; height: 64px; margin-bottom: 8px; } 
+ .inquiry-result-msg__wrap .msg-tit { font-size: 20px !important; margin-bottom: 12px; } 
+ .inquiry-result-msg__wrap .msg-txt__wrap > strong,
+ .inquiry-result-msg__wrap .msg-txt__wrap .msg-txt { font-size: 16px !important; } 
+ .inquiry-result-info__wrap { margin-top: 24px; padding: 0; border-radius: 0; } 
+ .inquiry-result-info__wrap .info-tit { font-size: 18px !important; padding-bottom: 12px; } 
+ .inquiry-result__wrap.success .info-list__wrap .list__el { display: block; } 
+ .inquiry-result__wrap.success .info-list__wrap .list-el__tit { font-size: 14px !important; display: inline-block; margin-bottom: 4px; } 
+ .inquiry-result__wrap.success .info-list__wrap .list-el__cont { font-size: 14px !important; } 
+ .inquiry-result-info__wrap .btn-box { text-align: center; } 
+ .support-list__wrap { padding: 0; } 
+ .support-list__wrap .support-box { padding: 16px 24px; } 
+ .support-list__wrap .support-box:not(:last-child) { border-bottom: 1px solid #ddd; } 
+ .inquiry-result__wrap.failure .btn-box .btn-block { width: calc(50% - 8px); } 
+ .support-list__wrap { display: block; } 
+ }

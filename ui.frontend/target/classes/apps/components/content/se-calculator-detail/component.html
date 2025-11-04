@@ -1,0 +1,2756 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SE Calculator Detail</title>
+    <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/apps/components/content/se-calculator-detail/clientlibs/css/main.css">
+</head>
+
+<body>
+    <!-- component -->
+    <header id="detail-header" class="detail-header">
+        <div class="header-inner">
+            <!-- .ham-menu 모바일인 경우에만 노출됨 -->
+            <a href="#" role="button" class="ham-menu">
+                <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-hamburger-wh.svg"
+                    alt="seasonal efficiency hamburger icon">
+            </a>
+            <p class="header__tit txt-h6">Seasonal Efficiency</p>
+            <!-- 화면 확인용 임시 버튼 -->
+            <div style="
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 22%;
+            z-index: 200;
+            display: flex;
+          ">
+                <button class="view view1 btn-block">R1</button>
+                <button class="view view2 btn-block">R2</button>
+                <button class="view view3 btn-block">R3</button>
+            </div>
+            <!-- //화면 확인용 임시 버튼 -->
+            <!-- .home-btn 모바일인 경우에만 노출됨 -->
+            <a href="#" role="button" class="home-btn">
+                <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-home-wh.svg"
+                    alt="seasonal efficiency home icon">
+            </a>
+            <!-- 240730 .head-btn-wrap 클래스 추가 -->
+            <div class="btn-wrap head-btn-wrap">
+                <!-- 240730 .view-result-btn 버튼 추가 -->
+                <button type="button" class="view-result-btn btn-block md">
+                    <span class="btn-block__txt">View Result</span>
+                </button>
+                <!-- 240730 .pdf-btn 클래스 추가 및 mo 구조 추가 -->
+                <a href="#" role="button" class="btn-block md pdf-btn" download>
+                    <span class="btn-block__txt pc-txt">PDF</span>
+                    <span class="btn-block__txt mo-txt">Download PDF</span>
+                    <i class="btn-block__icon icon-download pc-txt"></i>
+                </a>
+                <!-- 240730 .save-calc-btn 클래스 추가 -->
+                <button type="button" class="save-calc-btn btn-block type3 md"
+                    data-layer-target="save-calc-success-popup">
+                    <span class="btn-block__txt">Save & Calculate</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!--  2024-10-07 
+         div 삭제 : se-calc-detail__container, se-detail-inner   
+         class 변경 se-calc-detail__container ==> se-calc-detail
+         before-count class 위치 변경 : se-detail-inner ==> se-calc-detail
+    -->
+    <div id="container" class="se-calc-detail before-count">
+        <div class="info-area">
+            <div class="info-top">
+                <div class="about-info">
+                    <p class="info-id txt-p4 txt-fw-b">ID.
+                        <span>123456789</span>
+                    </p>
+                    <div class="info-date">
+                        <p class="create">
+                            <!-- created date -->
+                            <strong class="date-tit txt-p6 txt-fw-b">Created</strong>
+                            <span class="date txt-p6">YYYY-MM-DD</span>
+                        </p>
+                        <p class="update">
+                            <!-- updated date -->
+                            <strong class="date-tit txt-p6 txt-fw-b">Updated</strong>
+                            <span class="date txt-p6">YYYY-MM-DD</span>
+                        </p>
+                    </div>
+                    <div class="btn-box">
+                        <a role="button" class="btn-block type3" aria-disabled="true">
+                            <span class="btn-block__txt txt-p7">
+                                SEASONAL EFFICIENCY
+                            </span>
+                        </a>
+                        <!-- 2024-10-07 class 삭제 : quote-btn -->
+                        <a role="button" class="btn-block type2" aria-disabled="true">
+                            <span class="btn-block__txt txt-p7">QUOTE</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn-icon icon-member" data-layer-target="popup-member-share">
+                        <span class="txt-blind">member&share</span>
+                    </button>
+                    <button type="button" class="btn-icon icon-copy" data-layer-target="copy-alert-popup">
+                        <span class="txt-blind">copy</span>
+                    </button>
+                </div>
+            </div>
+            <div class="info-field-box">
+                <div class="field-box name-field-box">
+                    <!-- 240808 .txt-req 클래스 추가 -->
+                    <label class="txt-label txt-req" for="name-input">Name</label>
+                    <div class="required-wrap">
+                        <div class="input-box box-type" aria-label="Name">
+                            <input type="text" class="input-box__input" id="name-input"
+                                placeholder="Please enter a name." required>
+                        </div>
+                        <p class="txt-error">This field is required.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-box sm active">
+                <div class="accordion__tit">
+                    <p class="txt-h8">Location Information</p>
+                    <button type="button" class="btn-icon icon-accordion">
+                        <span class="txt-blind">close</span>
+                    </button>
+                </div>
+                <div class="accordion_cont">
+                    <p class="cont__tit txt-p5 txt-fw-b">Country</p>
+                    <!--2024-10-07 class 삭제 : vertical -->
+                    <div class="info-field-box">
+                        <!--2024-10-07 class 변경 : txt-p5 txt-fw-b country-tit ==> txt-label -->
+                        <p class="txt-label">United Kingdom</p>
+                        <div class="field-box-wrap">
+                            <!-- .field-box에 .hidden 클래스 추가시 영역 숨김처리 -->
+                            <!--2024-10-07 class 삭제 : state-field-box -->
+                            <div class="field-box">
+                                <label class="txt-label">State</label>
+                                <div class="combo-box box-type">
+                                    <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                        aria-controls="combo-box__menu" aria-expanded="false">
+                                        State Name
+                                    </button>
+                                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                        <ul class="combo-box__menu-list">
+                                            <li role="menuitem">옵션옵션옵션옵션 1</li>
+                                            <li role="menuitem">옵션 2</li>
+                                            <li role="menuitem">옵션 3</li>
+                                            <li role="menuitem">옵션옵션옵션옵션 1</li>
+                                            <li role="menuitem">옵션 2</li>
+                                            <li role="menuitem">옵션 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--2024-10-07 class 삭제 : city-field-box -->
+                            <div class="field-box">
+                                <!--2024-10-07 class 삭제 : txt-fw-r -->
+                                <label class="txt-label">City</label>
+                                <div class="combo-box box-type">
+                                    <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                        aria-controls="combo-box__menu" aria-expanded="false">
+                                        London/Heathrow
+                                    </button>
+                                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                        <ul class="combo-box__menu-list">
+                                            <li role="menuitem">옵션옵션옵션옵션 1</li>
+                                            <li role="menuitem">옵션 2</li>
+                                            <li role="menuitem">옵션 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-box sm active">
+                <div class="accordion__tit">
+                    <p class="txt-h8">Option</p>
+                    <button type="button" class="btn-icon icon-accordion">
+                        <span class="txt-blind">close</span>
+                    </button>
+                </div>
+                <div class="accordion_cont option_cont">
+                    <div class="info-field-box">
+                        <div class="field-box">
+                            <p class="txt-label">Electricity</p>
+                            <div class="horizontal">
+                                <label for="elec-input">
+                                    CO2 Emission Factor &#40;kg/kWh&#41;
+                                </label>
+                                <div class="input-box box-type" aria-label="Electricity">
+                                    <input type="text" class="input-box__input" id="elec-input" value="0.275">
+                                </div>
+                                <p class="txt-error">This field is required.</p>
+                            </div>
+                        </div>
+                        <div class="field-box">
+                            <p class="txt-label">Type of Indoor Unit</p>
+                            <div class="checkbox-wrap">
+                                <label class="btn-checkbox">
+                                    <input type="radio" class="btn-checkbox__input" name="indoor_unit_type"
+                                        value="ducted">
+                                    <span class="btn-checkbox__icon"></span>
+                                    <span class="btn-checkbox__txt">Ducted</span>
+                                </label>
+                                <label class="btn-checkbox">
+                                    <input type="radio" class="btn-checkbox__input" name="indoor_unit_type"
+                                        value="non_ducted" checked>
+                                    <span class="btn-checkbox__icon"></span>
+                                    <span class="btn-checkbox__txt">Non Ducted</span>
+                                </label>
+                                <label class="btn-checkbox">
+                                    <input type="radio" class="btn-checkbox__input" name="indoor_unit_type"
+                                        value="mixed">
+                                    <span class="btn-checkbox__icon"></span>
+                                    <span class="btn-checkbox__txt">Mixed</span>
+                                </label>
+                                <p class="txt-error">This field is required.</p>
+                            </div>
+                        </div>
+                        <div class="field-box">
+                            <p class="txt-label">IEER</p>
+                            <div class="checkbox-wrap">
+                                <label class="btn-checkbox">
+                                    <input type="radio" class="btn-checkbox__input" name="ieer"
+                                        value="include_in_report">
+                                    <span class="btn-checkbox__icon"></span>
+                                    <span class="btn-checkbox__txt">Include in report</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field-box">
+                            <p class="txt-label">EN12825</p>
+                            <div class="checkbox-wrap">
+                                <label class="btn-checkbox">
+                                    <input type="radio" class="btn-checkbox__input" name="EN12825"
+                                        value="include_in_report">
+                                    <span class="btn-checkbox__icon"></span>
+                                    <span class="btn-checkbox__txt">Include in report</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-box sm active">
+                <div class="accordion__tit">
+                    <p class="txt-h8">Product</p>
+                    <button type="button" class="btn-icon icon-accordion">
+                        <span class="txt-blind">close</span>
+                    </button>
+                </div>
+                <div class="accordion_cont">
+                    <div class="my-result__wrap">
+                        <div class="result__num-btn">
+                            <div class="btn-wrap">
+                                <button type="button" class="btn-block type2">
+                                    <span class="btn-block__txt">DVM Pro</span>
+                                    <i class="btn-block__icon icon-link"></i>
+                                </button>
+                                <button type="button" class="btn-block type2">
+                                    <span class="btn-block__txt">Project</span>
+                                    <i class="btn-block__icon icon-link"></i>
+                                </button>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="btn-block" disabled>
+                                    <span class="btn-block__txt">Delete</span>
+                                </button>
+                                <button type="button" class="btn-block type2">
+                                    <span class="btn-block__txt">Add</span>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="result-list__wrap">
+                            <li class="list__head">
+                                <label class="btn-checkbox">
+                                    <input type="radio" class="btn-checkbox__input" name="outdoor_unit" value="all">
+                                    <span class="btn-checkbox__icon"></span>
+                                    <!-- 2024-10-07 class 삭제 : txt-h8 txt-fw-b -->
+                                    <span class="btn-checkbox__txt">Outdoor Unit</span>
+                                </label>
+                            </li>
+                            <li class="list__el-box">
+                                <ul class="list-data">
+                                    <li class="list__el">
+                                        <div class="prod-unit-box">
+                                            <label class="btn-checkbox">
+                                                <input type="checkbox" class="btn-checkbox__input" name="outdoor_unit"
+                                                    value="outdoor_unit_item01">
+                                                <span class="btn-checkbox__icon"></span>
+                                            </label>
+                                            <img src="/pub-only/images/add-product-sample.png" alt="outdoor unit image">
+                                            <div class="txt-btn__cont">
+                                                <div class="unit">
+                                                    <div class="tag-wrap">
+                                                        <span class="tag-flag">R410A</span>
+                                                        <span class="tag-flag">Heat Recovery</span>
+                                                    </div>
+                                                    <p class="level txt-p7">DVM &gt; DVM S2</p>
+                                                    <!-- 240822 .txt-p5 -> .txt-h9 으로 클래스 변경 -->
+                                                    <p class="product-name txt-h9 txt-fw-b">
+                                                        Product Name
+                                                    </p>
+                                                    <p class="combi-table txt-p7 txt-fw-b">
+                                                        Premium Energy Efficiency
+                                                    </p>
+                                                    <div class="model-code">
+                                                        <!-- 240722 줄 떨어짐 관련 span 태그 추가 -->
+                                                        <p class="txt-p7 detail-code">
+                                                            AM460AXVHJH1SY
+                                                            <span>
+                                                                &#40;AM660AXVHJH1SYx2,AM320NXVSHH1SYx1&#41;
+                                                            </span>
+                                                        </p>
+                                                        <p class="txt-p7 detail-unit">
+                                                            3Ø, 380~415V, 50Hz
+                                                            <span class="unit-kw"> 22.4kW</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn-block checked">
+                                                    <span class="btn-block__txt">Result</span>
+                                                    <i class="btn-txt__icon icon-checked"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list__el">
+                                        <div class="prod-unit-box">
+                                            <label class="btn-checkbox">
+                                                <input type="checkbox" class="btn-checkbox__input" name="outdoor_unit"
+                                                    value="outdoor_unit_item02">
+                                                <span class="btn-checkbox__icon"></span>
+                                            </label>
+                                            <img src="/pub-only/images/add-product-sample.png" alt="outdoor unit image">
+                                            <div class="txt-btn__cont">
+                                                <div class="unit">
+                                                    <div class="tag-wrap">
+                                                        <span class="tag-flag">R410A</span>
+                                                        <span class="tag-flag">Heat Recovery</span>
+                                                    </div>
+                                                    <p class="level txt-p7">DVM &gt; DVM S2</p>
+                                                    <!-- 240822 .txt-p5 -> .txt-h9 으로 클래스 변경 -->
+                                                    <p class="product-name txt-h9 txt-fw-b">
+                                                        Product Name
+                                                    </p>
+                                                    <p class="combi-table txt-p7 txt-fw-b">
+                                                        Premium Energy Efficiency
+                                                    </p>
+                                                    <div class="model-code">
+                                                        <!-- 240722 줄떨어짐 관련 span 태그 추가 -->
+                                                        <p class="txt-p7 detail-code">
+                                                            AM460AXVHJH1SY
+                                                            <span>
+                                                                &#40;AM660AXVHJH1SYx2,AM320NXVSHH1SYx1&#41;
+                                                            </span>
+                                                        </p>
+                                                        <p class="txt-p7 detail-unit">
+                                                            3Ø, 380~415V, 50Hz
+                                                            <span class="unit-kw"> 22.4kW</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn-block">
+                                                    <span class="btn-block__txt">Result</span>
+                                                    <i class="btn-txt__icon icon-checked"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- data가 없을때  -->
+                                <div class="list-nodata">
+                                    <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5 -->
+                                    <p class="txt-p5">
+                                        Click the ‘Project’ or ‘DVM Pro’ or
+                                        <br>
+                                        ‘Add Product’ button to add an outdoor unit.
+                                    </p>
+                                </div>
+                            </li>
+                            <p class="txt-error">Add one or more outdoor units.</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 2024-10-07 div 추가 : result-area-wrap -->
+        <div class="result-area-wrap">
+            <!-- notice area -->
+            <div class="notice-area">
+                <div class="notice-box">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-use-tool.svg"
+                        alt="how to use this tool image">
+                    <p class="txt-h3 notice-tit">How to use this tool</p>
+                    <div class="notice-desc">
+                        <p class="desc-item txt-p3 txt-fw-r">
+                            <span class="num">1</span>
+                            Please enter a Name.
+                        </p>
+                        <p class="desc-item txt-p3 txt-fw-r">
+                            <span class="num">2</span>
+                            Set up 'Location Information’.
+                        </p>
+                        <p class="desc-item txt-p3 txt-fw-r">
+                            <span class="num">3</span>
+                            Please register an outdoor unit using one of the following
+                            methods : Existing Project, DVM Pro File Upload, or Product
+                            Search.
+                        </p>
+                        <p class="desc-item txt-p3 txt-fw-r">
+                            <span class="num">4</span>
+                            Click the “Save & Calculate" button.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- result area (tab 2개인 경우) -->
+            <!-- 개발 시 .view2 클래스는 필요없음 (화면 확인용 클래스)-->
+            <div class="result-area view2">
+                <!-- 240730 result-head 영역 추가 -->
+                <div class="result-head">
+                    <p class="mo-result-head txt-h8 txt-fw-b">
+                        Seasonal Efficiency Result
+                    </p>
+                    <!-- 240730 icon-close 버튼 추가 -->
+                    <button type="button" class="btn-icon icon-close">
+                        <span class="txt-blind">Close</span>
+                    </button>
+                </div>
+                <!-- 240808 .prod-code 위치 변경 및 클래스 변경 -->
+                <p class="prod-code txt-h8 txt-fw-b">
+                    Product :
+                    <span class="code">AM460AXVHJH1SY</span>
+                </p>
+                <!-- 240718 구조 변경 -->
+                <div class="result-box">
+                    <div class="result-top">
+                        <!-- 240730 모바일인 경우에만 노출 -->
+                        <div class="info-field-box">
+                            <div class="field-box">
+                                <label class="txt-label">Product</label>
+                                <div class="combo-box box-type">
+                                    <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                        aria-controls="combo-box__menu" aria-expanded="false">
+                                        <span class="txt-placeholder">Type a description</span>
+                                    </button>
+                                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                        <ul class="combo-box__menu-list">
+                                            <li role="menuitem">옵션옵션옵션옵션 1</li>
+                                            <li role="menuitem">옵션 2</li>
+                                            <li role="menuitem">옵션 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-wrap">
+                        <div class="tab-list-box__inner">
+                            <!-- tab EHS 아닌 경우 -->
+                            <div role="tablist" class="tab-list type5" aria-label="Seasonal Efficiency Detail Tab">
+                                <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+                                    <span class="tab-list__tab-txt">SEER</span>
+                                </button>
+                                <button type="button" class="tab-list__tab" role="tab">
+                                    <span class="tab-list__tab-txt">SCOP</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div role="presentation" class="tab-wrap__contents">
+                            <div role="tabpanel" aria-labelledby="SEER" tabindex="0" class="tab-cont__inner">
+                                <!-- 240808 .result-type-field 위치 이동 -->
+                                <!-- 중남미 인 경우 해당 부분 노출필요없음 -->
+                                <div class="field-box result-type-field">
+                                    <label class="txt-label txt-blind">Result Type</label>
+                                    <div class="combo-box box-type">
+                                        <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                            aria-controls="combo-box__menu" aria-expanded="false">
+                                            <span class="txt-placeholder">By Selected City</span>
+                                        </button>
+                                        <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                            <ul class="combo-box__menu-list">
+                                                <li role="menuitem" class="selected">By Country</li>
+                                                <li role="menuitem">Average</li>
+                                                <li role="menuitem">Warmer</li>
+                                                <li role="menuitem">Colder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 240808 .result-cont-wrap 구조 추가 -->
+                                <div class="result-cont-wrap">
+                                    <!-- 240910 cont-data 구조 추가 -->
+                                    <div class="cont-data">
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center result-table">
+                                                <colgroup>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Climate</th>
+                                                        <th scope="col">Nominal Capacity</th>
+                                                        <th scope="col">Tbivalent</th>
+                                                        <th scope="col">Tdesignc</th>
+                                                        <th scope="col">Pdesignc</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Average</td>
+                                                        <td>22.4 kW</td>
+                                                        <td>-</td>
+                                                        <td>-10°C</td>
+                                                        <td>22.4 kW</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Energy Efficiency</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .energy-table 구조 및 태그 수정 -->
+                                            <ul class="energy-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SEERon</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">7.77</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SEER</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">7.58</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Performance data</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table perform-data-table">
+                                                <colgroup>
+                                                    <col style="width: 8.887%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Condition</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared Capacity
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared
+                                                            <br>
+                                                            EER
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Degradation Coefficient
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Capacity
+                                                            <br>
+                                                            Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            EER at
+                                                            <br>
+                                                            Part Load
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">kW/kW</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="border-t-0">A</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>B</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>C</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>D</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">
+                                            IEER &#40;AHRI1230&#41;
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .ieer-table 클래스 추가 -->
+                                            <table class="basic-table tal-center ieer-table">
+                                                <colgroup>
+                                                    <col style="width: 10.973%">
+                                                    <col style="width: 22.256%">
+                                                    <col style="width: 22.256%">
+                                                    <col style="width: 22.256%">
+                                                    <col style="width: 22.256%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Condition</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">Capacity</th>
+                                                        <th scope="col" class="border-b-0">EER</th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°F&#40;DB&#41;</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">MBH</th>
+                                                        <th scope="col">MBH/kW</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="border-t-0">A</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>B</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>C</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>D</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3" class="blank"></td>
+                                                        <td class="txt-fw-b">IEER</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Bin Calculation</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center bin-calc-table">
+                                                <colgroup>
+                                                    <col style="width: 4.636%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Bin</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">Hours</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Cooling Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Cooling Capacity of the Heat Pump
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            EERbin&#40;Tj&#41;
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Cooling Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Electricity Consumption
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">h</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">kWh</th>
+                                                        <th scope="col">kWh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="7" class="blank"></td>
+                                                        <td class="txt-fw-b">21,367 kWh</td>
+                                                        <td class="txt-fw-b">2,752 kWh</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Graph</p>
+                                        <!-- 240827 쿨래스 추가 -->
+                                        <!-- 240909 id 변경 -->
+                                        <div id="seer-graph" class="seer-graph"></div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">
+                                            CO
+                                            <sub>²</sub>
+                                            Emission
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .co2-emis-table 구조 및 태그 변경 -->
+                                            <ul class="co2-emis-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            Annual Electricity Consumption
+                                                        </li>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            CO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-cont txt-p5 txt-fw-b">0 kWh</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">
+                                                            0.00 tCO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="notice-desc__wrap">
+                                            <p class="notice-item">
+                                                This material is for reference purposes only and may
+                                                not be applicable to all installation projects.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation is based on non-standard SEER and
+                                                SCOP founded on the regulations EN 14825 and the
+                                                values are references to each country's climate
+                                                condition.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation should be used as a guideline only
+                                                and the report does not guarantee real SEER and
+                                                SCOP, varying by system performance, environmental
+                                                element and installation condition.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" aria-labelledby="SCOP" class="tab-cont__inner" hidden>
+                                <!-- 240808 .result-type-field 추가 -->
+                                <div class="field-box result-type-field">
+                                    <label class="txt-label txt-blind">Result Type</label>
+                                    <div class="combo-box box-type">
+                                        <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                            aria-controls="combo-box__menu" aria-expanded="false">
+                                            <span class="txt-placeholder">By Selected City</span>
+                                        </button>
+                                        <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                            <ul class="combo-box__menu-list">
+                                                <li role="menuitem" class="selected">By Country</li>
+                                                <li role="menuitem">Average</li>
+                                                <li role="menuitem">Warmer</li>
+                                                <li role="menuitem">Colder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 240808 .result-cont-wrap 구조 추가 -->
+                                <div class="result-cont-wrap">
+                                    <!-- 유럽,계산 불가인 경우 -->
+                                    <div class="no-count">
+                                        <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-sh-noresult.svg"
+                                            alt="no count img" class="no-count-img">
+                                        <p class="nodata-desc">
+                                            The city provides the "Average"
+                                            <br class="mo-display">
+                                            result according to EN14825.
+                                        </p>
+                                    </div>
+                                    <div class="cont-data">
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center result-table">
+                                                <colgroup>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Climate</th>
+                                                        <th scope="col">Nominal Capacity</th>
+                                                        <th scope="col">Tbivalent</th>
+                                                        <th scope="col">Tdesignh</th>
+                                                        <th scope="col">Pdesignh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Average</td>
+                                                        <td>22.4 kW</td>
+                                                        <td>-</td>
+                                                        <td>-10°C</td>
+                                                        <td>22.4 kW</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Energy Efficiency</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .energy-table 구조 및 태그 수정 -->
+                                            <ul class="energy-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SCOPon</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">4.08</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SCOP</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">4.06</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Performance data</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table perform-data-table">
+                                                <colgroup>
+                                                    <col style="width: 8.887%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Condition</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air
+                                                            <br>
+                                                            Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared Capacity
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared COP
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Degradation Coefficient
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Capacity Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            COP at Part Load
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">kW/kW</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="border-t-0">A</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>B</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>C</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>D</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>TOL</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!-- tab EHS 제품인 경우에만 필요 -->
+                                                    <tr>
+                                                        <th>G</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Bin Calculation</p>
+                                        <p class="notice-item bin-notice-item">
+                                            Temperature occurrence times less than "TOL" are
+                                            calculated by adding them to the "TOL" occurrence
+                                            time.
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center bin-calc-table">
+                                                <colgroup>
+                                                    <col style="width: 4.636%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Bin</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">Hours</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Heating Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Heating Capacity of the Heat Pump
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            COP bin&#40;Tj&#41;
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Heating Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Electricity Consumption with Electrical
+                                                            Back Up Heater
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">h</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">kWh</th>
+                                                        <th scope="col">kWh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="7" class="blank"></td>
+                                                        <td class="txt-fw-b">21,367 kWh</td>
+                                                        <td class="txt-fw-b">2,752 kWh</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Graph</p>
+                                        <!-- 240827 쿨래스 추가 -->
+                                        <!-- 240909 id 변경 -->
+                                        <div id="scop-graph" class="scop-graph"></div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">
+                                            CO
+                                            <sub>²</sub>
+                                            Emission
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .co2-emis-table 구조 및 태그 변경 -->
+                                            <ul class="co2-emis-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            Annual Electricity Consumption
+                                                        </li>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            CO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-cont txt-p5 txt-fw-b">0 kWh</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">
+                                                            0.00 tCO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="notice-desc__wrap">
+                                            <p class="notice-item">
+                                                This material is for reference purposes only and may
+                                                not be applicable to all installation projects.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation is based on non-standard SEER and
+                                                SCOP founded on the regulations EN 14825 and the
+                                                values are references to each country's climate
+                                                condition.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation should be used as a guideline only
+                                                and the report does not guarantee real SEER and
+                                                SCOP, varying by system performance, environmental
+                                                element and installation condition.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- 관리자에게 문의가 필요한 경우 -->
+                                    <div class="cont-nodata">
+                                        <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-sh-noresult.svg"
+                                            alt="contact administrator img" class="no-result-img">
+                                        <p class="nodata-desc">
+                                            The current region can't be calculated.
+                                            <br>
+                                            Please contact your administrator.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- result area (tab 3개인 경우) -->
+            <!-- 개발 시 .view3 클래스는 필요없음 (화면 확인용 클래스), style 제거 필요 -->
+            <div class="result-area view3" style="display: none">
+                <!-- 240730 result-head 영역 추가 -->
+                <div class="result-head">
+                    <p class="mo-result-head txt-h8 txt-fw-b">
+                        Seasonal Efficiency Result
+                    </p>
+                    <!-- 240730 icon-close 버튼 추가 -->
+                    <button type="button" class="btn-icon icon-close">
+                        <span class="txt-blind">Close</span>
+                    </button>
+                </div>
+                <!-- 240808 .prod-code 추가 -->
+                <p class="prod-code txt-h8 txt-fw-b">
+                    Product :
+                    <span class="code">AM460AXVHJH1SY</span>
+                </p>
+                <!-- 240718 구조 변경 -->
+                <div class="result-box">
+                    <div class="result-top">
+                        <!-- 240730 모바일인 경우에만 노출 -->
+                        <div class="info-field-box">
+                            <div class="field-box">
+                                <label class="txt-label">Product</label>
+                                <div class="combo-box box-type">
+                                    <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                        aria-controls="combo-box__menu" aria-expanded="false">
+                                        <span class="txt-placeholder">Type a description</span>
+                                    </button>
+                                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                        <ul class="combo-box__menu-list">
+                                            <li role="menuitem">옵션옵션옵션옵션 1</li>
+                                            <li role="menuitem">옵션 2</li>
+                                            <li role="menuitem">옵션 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2024-10-07 중복인거 같은데? 확인 필요-->
+                        <!-- <p class="prod-code txt-h6 txt-fw-b">
+                     Product : <span class="code">AM460AXVHJH1SY</span>
+                  </p> -->
+                    </div>
+                    <div class="tab-wrap">
+                        <div class="tab-list-box__inner">
+                            <!-- tab EHS 인 경우 -->
+                            <div role="tablist" class="tab-list type5" aria-label="Seasonal Efficiency Detail Tab">
+                                <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+                                    <span class="tab-list__tab-txt">SEER</span>
+                                </button>
+                                <button type="button" class="tab-list__tab" role="tab">
+                                    <span class="tab-list__tab-txt">SCOP &#40;35°C&#41;</span>
+                                </button>
+                                <button type="button" class="tab-list__tab" role="tab">
+                                    <span class="tab-list__tab-txt">SCOP &#40;55°C&#41;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div role="presentation" class="tab-wrap__contents">
+                            <div role="tabpanel" aria-labelledby="SEER" tabindex="0" class="tab-cont__inner">
+                                <!-- 240808 .result-type-field 추가 -->
+                                <div class="field-box result-type-field">
+                                    <label class="txt-label txt-blind">Result Type</label>
+                                    <div class="combo-box box-type">
+                                        <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                            aria-controls="combo-box__menu" aria-expanded="false">
+                                            <span class="txt-placeholder">By Selected City</span>
+                                        </button>
+                                        <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                            <ul class="combo-box__menu-list">
+                                                <li role="menuitem" class="selected">By Country</li>
+                                                <li role="menuitem">Average</li>
+                                                <li role="menuitem">Warmer</li>
+                                                <li role="menuitem">Colder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 240808 .result-cont-wrap 구조 추가 -->
+                                <div class="result-cont-wrap">
+                                    <!-- 240910 cont-data 구조 추가 -->
+                                    <div class="cont-data">
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center result-table">
+                                                <colgroup>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Climate</th>
+                                                        <th scope="col">Nominal Capacity</th>
+                                                        <th scope="col">Tbivalent</th>
+                                                        <th scope="col">Tdesignc</th>
+                                                        <th scope="col">Pdesignc</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Average</td>
+                                                        <td>22.4 kW</td>
+                                                        <td>-</td>
+                                                        <td>-10°C</td>
+                                                        <td>22.4 kW</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Energy Efficiency</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .energy-table 구조 및 태그 수정 -->
+                                            <ul class="energy-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SEERon</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">7.77</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SEER</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">7.58</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Performance data</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table perform-data-table">
+                                                <colgroup>
+                                                    <col style="width: 8.887%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Condition</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared Capacity
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared
+                                                            <br>
+                                                            EER
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Degradation Coefficient
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Capacity
+                                                            <br>
+                                                            Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            EER at
+                                                            <br>
+                                                            Part Load
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">kW/kW</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="border-t-0">A</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>B</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>C</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>D</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">
+                                            IEER &#40;AHRI1230&#41;
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .ieer-table 클래스 추가 -->
+                                            <table class="basic-table tal-center ieer-table">
+                                                <colgroup>
+                                                    <col style="width: 10.973%">
+                                                    <col style="width: 22.256%">
+                                                    <col style="width: 22.256%">
+                                                    <col style="width: 22.256%">
+                                                    <col style="width: 22.256%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Condition</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">Capacity</th>
+                                                        <th scope="col" class="border-b-0">EER</th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°F&#40;DB&#41;</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">MBH</th>
+                                                        <th scope="col">MBH/kW</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="border-t-0">A</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>B</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>C</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>D</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3" class="blank"></td>
+                                                        <td class="txt-fw-b">IEER</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Bin Calculation</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center bin-calc-table">
+                                                <colgroup>
+                                                    <col style="width: 4.636%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Bin</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">Hours</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Cooling Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Cooling Capacity of the Heat Pump
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            EERbin&#40;Tj&#41;
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Cooling Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Electricity Consumption
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">h</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">kWh</th>
+                                                        <th scope="col">kWh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="7" class="blank"></td>
+                                                        <td class="txt-fw-b">21,367 kWh</td>
+                                                        <td class="txt-fw-b">2,752 kWh</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Graph</p>
+                                        <!-- 240827 쿨래스 추가 -->
+                                        <!-- 240909 id 변경 -->
+                                        <div id="seer-ehs-graph" class="seer-graph"></div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">
+                                            CO
+                                            <sub>²</sub>
+                                            Emission
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .co2-emis-table 구조 및 태그 변경 -->
+                                            <ul class="co2-emis-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            Annual Electricity Consumption
+                                                        </li>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            CO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-cont txt-p5 txt-fw-b">0 kWh</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">
+                                                            0.00 tCO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="notice-desc__wrap">
+                                            <p class="notice-item">
+                                                This material is for reference purposes only and may
+                                                not be applicable to all installation projects.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation is based on non-standard SEER and
+                                                SCOP founded on the regulations EN 14825 and the
+                                                values are references to each country's climate
+                                                condition.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation should be used as a guideline only
+                                                and the report does not guarantee real SEER and
+                                                SCOP, varying by system performance, environmental
+                                                element and installation condition.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" aria-labelledby="SCOP (35°C)" class="tab-cont__inner" hidden>
+                                <!-- 240808 .result-type-field 추가 -->
+                                <div class="field-box result-type-field">
+                                    <label class="txt-label txt-blind">Result Type</label>
+                                    <div class="combo-box box-type">
+                                        <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                            aria-controls="combo-box__menu" aria-expanded="false">
+                                            <span class="txt-placeholder">By Selected City</span>
+                                        </button>
+                                        <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                            <ul class="combo-box__menu-list">
+                                                <li role="menuitem" class="selected">By Country</li>
+                                                <li role="menuitem">Average</li>
+                                                <li role="menuitem">Warmer</li>
+                                                <li role="menuitem">Colder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 240808 .result-cont-wrap 구조 추가 -->
+                                <div class="result-cont-wrap">
+                                    <!-- 유럽,계산 불가인 경우 -->
+                                    <div class="no-count">
+                                        <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-sh-noresult.svg"
+                                            alt="no count img" class="no-count-img">
+                                        <p class="nodata-desc">
+                                            The city provides the "Average"
+                                            <br class="mo-display">
+                                            result according to EN14825.
+                                        </p>
+                                    </div>
+                                    <div class="cont-data">
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center result-table">
+                                                <colgroup>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Climate</th>
+                                                        <th scope="col">Nominal Capacity</th>
+                                                        <th scope="col">Tbivalent</th>
+                                                        <th scope="col">Tdesignh</th>
+                                                        <th scope="col">Pdesignh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Average</td>
+                                                        <td>22.4 kW</td>
+                                                        <td>-</td>
+                                                        <td>-10°C</td>
+                                                        <td>22.4 kW</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Energy Efficiency</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .energy-table 구조 및 태그 수정 -->
+                                            <ul class="energy-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SCOPon</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">4.08</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SCOP</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">4.06</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Performance data</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table perform-data-table">
+                                                <colgroup>
+                                                    <col style="width: 8.887%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Condition</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air
+                                                            <br>
+                                                            Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared Capacity
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared COP
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Degradation Coefficient
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Capacity Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            COP at Part Load
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">kW/kW</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="border-t-0">A</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>B</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>C</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>D</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>TOL</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!-- tab EHS 제품인 경우에만 필요 -->
+                                                    <tr>
+                                                        <th>G</th>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Bin Calculation</p>
+                                        <p class="notice-item bin-notice-item">
+                                            Temperature occurrence times less than "TOL" are
+                                            calculated by adding them to the "TOL" occurrence
+                                            time.
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center bin-calc-table">
+                                                <colgroup>
+                                                    <col style="width: 4.636%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Bin</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">Hours</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Heating Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Heating Capacity of the Heat Pump
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            COP bin&#40;Tj&#41;
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Heating Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Electricity Consumption with Electrical
+                                                            Back Up Heater
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">h</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">kWh</th>
+                                                        <th scope="col">kWh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="7" class="blank"></td>
+                                                        <td class="txt-fw-b">21,367 kWh</td>
+                                                        <td class="txt-fw-b">2,752 kWh</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Graph</p>
+                                        <!-- 240827 클래스 추가 -->
+                                        <!-- 240909 id 변경 -->
+                                        <div id="scop-s-graph" class="scop-graph"></div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">
+                                            CO
+                                            <sub>²</sub>
+                                            Emission
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .co2-emis-table 구조 및 태그 변경 -->
+                                            <ul class="co2-emis-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            Annual Electricity Consumption
+                                                        </li>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            CO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-cont txt-p5 txt-fw-b">0 kWh</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">
+                                                            0.00 tCO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="notice-desc__wrap">
+                                            <p class="notice-item">
+                                                This material is for reference purposes only and may
+                                                not be applicable to all installation projects.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation is based on non-standard SEER and
+                                                SCOP founded on the regulations EN 14825 and the
+                                                values are references to each country's climate
+                                                condition.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation should be used as a guideline only
+                                                and the report does not guarantee real SEER and
+                                                SCOP, varying by system performance, environmental
+                                                element and installation condition.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- 관리자에게 문의가 필요한 경우 -->
+                                    <div class="cont-nodata">
+                                        <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-sh-noresult.svg"
+                                            alt="contact administrator img" class="no-result-img">
+                                        <p class="nodata-desc">
+                                            The current region can't be calculated.
+                                            <br>
+                                            Please contact your administrator.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" aria-labelledby="SCOP (55°C)" class="tab-cont__inner" hidden>
+                                <!-- 240808 .result-type-field 추가 -->
+                                <div class="field-box result-type-field">
+                                    <label class="txt-label txt-blind">Result Type</label>
+                                    <div class="combo-box box-type">
+                                        <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                            aria-controls="combo-box__menu" aria-expanded="false">
+                                            <span class="txt-placeholder">By Selected City</span>
+                                        </button>
+                                        <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                            <ul class="combo-box__menu-list">
+                                                <li role="menuitem" class="selected">By Country</li>
+                                                <li role="menuitem">Average</li>
+                                                <li role="menuitem">Warmer</li>
+                                                <li role="menuitem">Colder</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 240808 .result-cont-wrap 구조 추가 -->
+                                <div class="result-cont-wrap">
+                                    <!-- 240910 cont-data 구조 추가 -->
+                                    <div class="cont-data">
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center result-table">
+                                                <colgroup>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                    <col>
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Climate</th>
+                                                        <th scope="col">Nominal Capacity</th>
+                                                        <th scope="col">Tbivalent</th>
+                                                        <th scope="col">Tdesignh</th>
+                                                        <th scope="col">Pdesignh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Average</td>
+                                                        <td>22.4 kW</td>
+                                                        <td>-10°C</td>
+                                                        <td>2°C</td>
+                                                        <td>7.4 kW</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Energy Efficiency</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .energy-table 구조 및 태그 수정 -->
+                                            <ul class="energy-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SCOPon</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">5.89</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">SCOP</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">5.66</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Performance data</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center perform-data-table">
+                                                <colgroup>
+                                                    <col style="width: 8.887%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                    <col style="width: 11.389%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Condition</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared Capacity
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Declared COP
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Degradation Coefficient
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Capacity Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            COP at Part Load
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">-</th>
+                                                        <th scope="col">kW/kW</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="border-t-0">A</th>
+                                                        <td>-7</td>
+                                                        <td>88</td>
+                                                        <td>12.12</td>
+                                                        <td>12.1</td>
+                                                        <td>2.4</td>
+                                                        <td>0.25</td>
+                                                        <td>1.00</td>
+                                                        <td>2.4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>B</th>
+                                                        <td>-7</td>
+                                                        <td>88</td>
+                                                        <td>12.12</td>
+                                                        <td>12.1</td>
+                                                        <td>2.4</td>
+                                                        <td>0.25</td>
+                                                        <td>1.00</td>
+                                                        <td>2.4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>C</th>
+                                                        <td>-7</td>
+                                                        <td>88</td>
+                                                        <td>12.12</td>
+                                                        <td>12.1</td>
+                                                        <td>2.4</td>
+                                                        <td>0.25</td>
+                                                        <td>1.00</td>
+                                                        <td>2.4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>D</th>
+                                                        <td>-7</td>
+                                                        <td>88</td>
+                                                        <td>12.12</td>
+                                                        <td>12.1</td>
+                                                        <td>2.4</td>
+                                                        <td>0.25</td>
+                                                        <td>1.00</td>
+                                                        <td>2.4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>TOL</th>
+                                                        <td>-7</td>
+                                                        <td>88</td>
+                                                        <td>12.12</td>
+                                                        <td>12.1</td>
+                                                        <td>2.4</td>
+                                                        <td>0.25</td>
+                                                        <td>1.00</td>
+                                                        <td>2.4</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Bin Calculation</p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <table class="basic-table tal-center bin-calc-table">
+                                                <colgroup>
+                                                    <col style="width: 4.636%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                    <col style="width: 11.92%">
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">Bin</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Outdoor Air Temperature
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">Hours</th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Part Load Ratio
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Heating Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Cooling Capacity of the Heat Pump
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            COP bin&#40;Tj&#41;
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Heating Demand
+                                                        </th>
+                                                        <th scope="col" class="border-b-0">
+                                                            Annual Electricity Consumption with Electrical
+                                                            Back Up Heater
+                                                        </th>
+                                                    </tr>
+                                                    <tr class="unit">
+                                                        <th scope="col">°C&#40;DB&#41;</th>
+                                                        <th scope="col">h</th>
+                                                        <th scope="col">%</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW</th>
+                                                        <th scope="col">kW/kW</th>
+                                                        <th scope="col">kWh</th>
+                                                        <th scope="col">kWh</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>17</td>
+                                                        <td>205</td>
+                                                        <td>5</td>
+                                                        <td>1.2</td>
+                                                        <td>1.2</td>
+                                                        <td>21.0</td>
+                                                        <td>242</td>
+                                                        <td>12</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="7" class="blank"></td>
+                                                        <td class="txt-fw-b">21,367 kWh</td>
+                                                        <td class="txt-fw-b">2,752 kWh</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">Graph</p>
+                                        <!-- 240827 클래스 추가 -->
+                                        <!-- 240909 id 변경 -->
+                                        <div id="scop-l-graph" class="scop-graph"></div>
+                                        <p class="txt-h6 txt-fw-b sec-tit">
+                                            CO
+                                            <sub>²</sub>
+                                            Emission
+                                        </p>
+                                        <!-- 240730 table-wrap 구조 추가 -->
+                                        <div class="table-wrap">
+                                            <!-- 240730 .co2-emis-table 구조 및 태그 변경 -->
+                                            <ul class="co2-emis-table">
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            Annual Electricity Consumption
+                                                        </li>
+                                                        <li class="el-head txt-p5 txt-fw-b">
+                                                            CO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="list-el">
+                                                    <ul>
+                                                        <li class="el-cont txt-p5 txt-fw-b">0 kWh</li>
+                                                        <li class="el-cont txt-p5 txt-fw-b">
+                                                            0.00 tCO
+                                                            <sub>²</sub>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="notice-desc__wrap">
+                                            <p class="notice-item">
+                                                This material is for reference purposes only and may
+                                                not be applicable to all installation projects.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation is based on non-standard SEER and
+                                                SCOP founded on the regulations EN 14825 and the
+                                                values are references to each country's climate
+                                                condition.
+                                            </p>
+                                            <p class="notice-item">
+                                                The calculation should be used as a guideline only
+                                                and the report does not guarantee real SEER and
+                                                SCOP, varying by system performance, environmental
+                                                element and installation condition.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- IEER 북미 인 경우 -->
+            <!-- 개발 시 style 제거 필요 -->
+            <div class="result-area type-north-america" style="display: none">
+                <!-- 240730 result-head 영역 추가 -->
+                <div class="result-head">
+                    <p class="mo-result-head txt-h8 txt-fw-b">
+                        Seasonal Efficiency Result
+                    </p>
+                    <!-- 240730 icon-close 버튼 추가 -->
+                    <button type="button" class="btn-icon icon-close">
+                        <span class="txt-blind">Close</span>
+                    </button>
+                </div>
+                <!-- 240808 .prod-code 위치 이동 -->
+                <p class="prod-code txt-h8 txt-fw-b">
+                    Product :
+                    <span class="code">AM460AXVHJH1SY</span>
+                </p>
+                <div class="result-box">
+                    <!-- 240730 .result-top 영역 추가 -->
+                    <div class="result-top">
+                        <!-- 240730 모바일인 경우에만 노출 -->
+                        <div class="info-field-box">
+                            <div class="field-box">
+                                <label class="txt-label">Name</label>
+                                <div class="combo-box box-type">
+                                    <button type="button" class="combo-box__txt" aria-haspopup="true"
+                                        aria-controls="combo-box__menu" aria-expanded="false">
+                                        AM460AXVHJH1SY
+                                    </button>
+                                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                                        <ul class="combo-box__menu-list">
+                                            <li role="menuitem">옵션옵션옵션옵션 1</li>
+                                            <li role="menuitem">옵션 2</li>
+                                            <li role="menuitem">옵션 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 240808 prod-code 구조 삭제 -->
+                    <div class="tab-list-box__inner">
+                        <div role="tablist" class="tab-list type5" aria-label="Seasonal Efficiency Detail Tab">
+                            <button type="button" class="tab-list__tab active tal-left" role="tab" aria-selected="true">
+                                <span class="tab-list__tab-txt">IEER</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div role="presentation" class="tab-wrap__contents">
+                        <div role="tabpanel" aria-labelledby="IEER" tabindex="0" class="tab-cont__inner">
+                            <!-- 240808 .result-cont-wrap 구조 추가 -->
+                            <div class="result-cont-wrap">
+                                <!-- 240910 cont-data 구조 추가 -->
+                                <div class="cont-data">
+                                    <div class="ieer-data-result">
+                                        <div class="data-head txt-p5 txt-fw-b">
+                                            Nominal Capacity
+                                        </div>
+                                        <div class="data-detail txt-p5 txt-fw-b">366.0 MBH</div>
+                                    </div>
+                                    <p class="txt-h6 txt-fw-b sec-tit">Performance data</p>
+                                    <!-- 240730 table-wrap 구조 추가 -->
+                                    <div class="table-wrap">
+                                        <table class="basic-table tal-center perform-data-table">
+                                            <colgroup>
+                                                <col style="width: 8.887%">
+                                                <col style="width: 22.778%">
+                                                <col style="width: 22.778%">
+                                                <col style="width: 22.778%">
+                                                <col style="width: 22.778%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" rowspan="2">Load</th>
+                                                    <th scope="col" class="border-b-0">Capacity</th>
+                                                    <th scope="col" class="border-b-0">
+                                                        Power Input
+                                                    </th>
+                                                    <th scope="col" class="border-b-0">EIR</th>
+                                                    <th scope="col" class="border-b-0">EER</th>
+                                                </tr>
+                                                <tr class="unit">
+                                                    <th scope="col">MBH</th>
+                                                    <th scope="col">kW</th>
+                                                    <th scope="col">kW/kW</th>
+                                                    <th scope="col">MBH/kW</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>100%</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>75%</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>50%</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>25%</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="blank" colspan="3"></td>
+                                                    <td class="txt-fw-b">IEER</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="txt-h6 txt-fw-b sec-tit">Graph</p>
+                                    <!-- 240827 id graph -> graph-ieer로 수정 -->
+                                    <!-- 240909 class 추가 -->
+                                    <div id="graph-ieer" class="ieer-graph"></div>
+                                    <div class="notice-desc__wrap">
+                                        <p class="notice-item">
+                                            The calculator calculates the IEER values according to
+                                            AHRI 1230 standard.
+                                        </p>
+                                        <p class="notice-item">
+                                            Samsung Electronics Co. Ltd. reserves the right to
+                                            change specifications without notice for continual
+                                            product development.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- save & calculate 버튼 클릭시 저장 및 계산 성공인 경우 뜨는 alert-popup -->
+    <div class="alert-wrap save-calc-success-popup" id="save-calc-success-popup">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="aler__container">
+                <p class="txt-p6">The save and calculation is complete.</p>
+            </div>
+            <div class="alert__footer">
+                <!-- 특정 버튼에 closePopup 적용 예시 -->
+                <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup()">
+                    <span class="btn-block__txt">Yes</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close">
+                <span class="txt-blind">Close</span>
+            </button>
+        </div>
+    </div>
+    <!-- 단종 상품이 있는 경우 뜨는 alert-popup -->
+    <div class="alert-wrap discontinued-prod-popup" id="discontinued-prod-popup">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="aler__container">
+                <p class="txt-p6">Discontinued products are excluded.</p>
+            </div>
+            <div class="alert__footer">
+                <!-- 특정 버튼에 closePopup 적용 예시 -->
+                <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup()">
+                    <span class="btn-block__txt">Yes</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close">
+                <span class="txt-blind">Close</span>
+            </button>
+        </div>
+    </div>
+    <!-- copy alert-popup -->
+    <div class="alert-wrap copy-alert-popup" id="copy-alert-popup">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+                <p class="txt-h7">Copy</p>
+            </div>
+            <div class="aler__container">
+                <p class="txt-p6">Do you want to copy it?</p>
+            </div>
+            <div class="alert__footer">
+                <button type="button" class="btn-block md">
+                    <span class="btn-block__txt">No</span>
+                </button>
+                <button type="button" class="btn-block type2 md">
+                    <span class="btn-block__txt">Yes</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close">
+                <span class="txt-blind">Close</span>
+            </button>
+        </div>
+    </div>
+    <!-- related alert-popup -->
+    <div class="alert-wrap related-link-popup" id="related-link-popup">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+                <p class="txt-h7">Related Link</p>
+            </div>
+            <div class="aler__container">
+                <p class="txt-p6">
+                    You can't add or delete products after the link is complete.
+                    <br>
+                    Do you want to continue?
+                </p>
+            </div>
+            <div class="alert__footer">
+                <button type="button" class="btn-block md">
+                    <span class="btn-block__txt">No</span>
+                </button>
+                <button type="button" class="btn-block type2 md">
+                    <span class="btn-block__txt">Yes</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close">
+                <span class="txt-blind">Close</span>
+            </button>
+        </div>
+    </div>
+    <!-- 등록 상품이 없는 경우 뜨는 alert-popup -->
+    <div class="alert-wrap no-prod-popup" id="no-prod-popup">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="aler__container">
+                <p class="txt-p6">
+                    There is no product information.
+                    <br>
+                    Add a product and then proceed.
+                </p>
+            </div>
+            <div class="alert__footer">
+                <!-- 특정 버튼에 closePopup 적용 예시 -->
+                <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup()">
+                    <span class="btn-block__txt">Yes</span>
+                </button>
+            </div>
+            <button type="button" class="btn-icon icon-close">
+                <span class="txt-blind">Close</span>
+            </button>
+        </div>
+    </div>
+    <!-- common.js -->
+    <script src="/pub-only/js/main-lib.js"></script>
+    <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+    <!-- 컴포넌트 js -->
+    <script src="/apps/components/content/se-calculator-detail/clientlibs/js/main.js"></script>
+    <script>
+        //  화면 확인
+        const btnView = document.querySelector('.detail-header .view-result-btn')
+        if (btnView) {
+            btnView.addEventListener('click', function () {
+
+                const resultArea = document.querySelector('.result-area-wrap .view2')
+
+                if (resultArea.classList.contains('active')) {
+                    resultArea.classList.remove('active')
+                } else {
+                    resultArea.classList.add('active')
+                }
+
+                const btnPdf = document.querySelector('.detail-header .pdf-btn')
+                const btnSave = document.querySelector('.detail-header .save-calc-btn')
+                const btnView = document.querySelector('.detail-header .view-result-btn')
+
+                if (btnPdf.style.display === 'flex') {
+                    btnPdf.style.display = 'none'
+                    btnSave.style.display = 'flex'
+                    btnView.style.display = 'flex'
+                } else {
+                    btnPdf.style.display = 'flex'
+                    btnSave.style.display = 'none'
+                    btnView.style.display = 'none'
+                }
+            })
+        }
+
+        //화면 확인용 임시 이벤트
+        $(".view").removeClass("show");
+        $(".view").on("click", function () {
+            if ($(window).width() > 768) {
+                if ($(this).index() == 0) {
+                    $(".result-area").hide();
+                    $(".result-area.view2").show();
+                } else if ($(this).index() == 1) {
+                    $(".result-area").hide();
+                    $(".result-area.view3").show();
+                } else if ($(this).index() == 2) {
+                    $(".result-area").hide();
+                    $(".result-area.type-north-america").show();
+                }
+            } else if ($(window).width() <= 768) {
+                if ($(this).index() == 0) {
+                    $(".result-area").hide();
+                    $(".result-area").removeClass("active");
+                    $(".result-area.view2").addClass("active");
+                    $(".result-area.view2").show();
+                } else if ($(this).index() == 1) {
+                    $(".result-area").hide();
+                    $(".result-area").remove("active");
+                    $(".result-area.view3").addClass("active");
+                    $(".result-area.view3").show();
+                } else if ($(this).index() == 2) {
+                    $(".result-area").hide();
+                    $(".result-area").remove("active");
+                    $(".result-area.type-north-america").addClass("active");
+                    $(".result-area.type-north-america").show();
+                }
+                $(".btn-wrap").find(".btn-block").css("display", "none");
+                $(".btn-wrap").find(".pdf-btn").css("display", "flex");
+            }
+        });
+        //화면 확인용 임시 script
+        $(".save-calc-btn").on("click", function () {
+            $(".se-calc-detail").toggleClass("before-count");
+        });
+    </script>
+</body>
+
+</html>

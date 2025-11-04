@@ -1,0 +1,125 @@
+.blog-list { max-width: 1440px; width: 100%; margin: 0 auto; padding: 0 24px; } 
+.blog-list > section:not(:last-child) { margin-bottom: 40px; } 
+.blog-list .section-tit { margin-bottom: 24px; } 
+
+/* cm list */
+.blog-item-list .list-el { display: flex; } 
+.blog-item-list .el-img { flex: none; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: var(--border-base); } 
+.blog-item-list .el-txt { flex: auto; } 
+.blog-item-list .el-txt .date-view-box { font-size: 16px; color: #555; margin-top: 8px; } 
+.blog-item-list .el-txt .title { margin-block: 16px; } 
+.blog-item-list .el-txt .btn-block { margin-top: 32px; } 
+
+/* Recommended */
+.blog-list__recomm .blog-item-list .list-el { gap: 64px; padding: 0 103px; } 
+.blog-list__recomm .blog-item-list .el-img { width: 560px; height: 360px; } 
+.blog-list__recomm .blog-item-list .el-txt .sub-tit { color: #555555; } 
+.blog-list__recomm .swiper-pagination { width: 100%; display: flex; align-items: center; justify-content: center; position: unset; height: 56px; margin-top: 24px; } 
+.blog-list__recomm .swiper-button-prev,
+.blog-list__recomm .swiper-button-next { top: calc(50% - 30px) } 
+.blog-list__recomm .swiper-pagination-bullet { width: 160px; max-width: 160px; height: 3px; border-radius: 0; margin: 0 8px !important; background: #ececec; opacity: 1; } 
+.blog-list__recomm .swiper-pagination .swiper-pagination-bullet:first-of-type { margin-left: 0 !important; } 
+.blog-list__recomm .swiper-pagination .swiper-pagination-bullet:last-of-type { margin-right: 0 !important; } 
+.blog-list__recomm .swiper-pagination-bullet-active { background: #929292 !important; } 
+
+/* Popular */
+.blog-list__popular .blog-item-list { display: flex; gap: 24px; } 
+.blog-list__popular .blog-item-list .list-el { flex-direction: column; gap: 32px; max-width: calc(33% - (24px/2)); } 
+.blog-list__popular .blog-item-list .el-img,
+.blog-list__popular .blog-item-list .el-txt { width: 100%; } 
+.blog-list__popular .blog-item-list .el-txt .btn-block { margin-top: 16px; } 
+
+/* Latest */
+.blog-list__latest .category { margin-bottom: 24px; } 
+.blog-list__latest .latest-list { margin-top: 16px; border-top: 2px solid #000; margin-bottom: 48px; } 
+.blog-list__latest .blog-item-list .list-el { gap: 24px; padding: 24px; border-bottom: 1px solid #dadada; } 
+.blog-list__latest .blog-item-list .el-img { width: 200px; height: 200px; } 
+.blog-list__latest .blog-item-list .el-txt { flex: auto; max-width: 956px; } 
+.blog-list__latest .blog-item-list .el-btn { flex: 0 0 136px; padding-top: 30px; text-align: right; } 
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .blog-list { padding: 0 1.667vw; } 
+ .blog-list > section:not(:last-child) { margin-bottom: 2.778vw; } 
+ .blog-list .section-tit { margin-bottom: 1.667vw; } 
+ .blog-item-list .el-txt .date-view-box { font-size: 1.111vw; margin-top: 0.556vw; } 
+ .blog-item-list .el-txt .title { margin-block: 1.111vw; } 
+ .blog-item-list .el-txt .btn-block { margin-top: 2.222vw; } 
+ 
+ /* Recommended */
+ .blog-list__recomm .blog-item-list .list-el { gap: 4.444vw; padding: 0 7.153vw; } 
+ .blog-list__recomm .blog-item-list .el-img { width: 38.889vw; height: 25vw; } 
+ .blog-list__recomm .swiper-pagination { height: 3.889vw; margin-top: 1.667vw; } 
+ .blog-list__recomm .swiper-button-prev,
+ .blog-list__recomm .swiper-button-next { top: calc(50% - 2.083vw); } 
+ .blog-list__recomm .swiper-pagination-bullet { width: 11.111vw; max-width: 11.111vw; height: 0.208vw; margin: 0 0.556vw !important; } 
+ 
+ /* Popular */
+ .blog-list__popular .blog-item-list { gap: 1.667vw; } 
+ .blog-list__popular .blog-item-list .list-el { gap: 2.222vw; max-width: calc(33% - (1.667vw / 2)); } 
+ .blog-list__popular .blog-item-list .el-txt .btn-block { margin-top: 1.111vw; } 
+ 
+ /* Latest */
+ .blog-list__latest .category { margin-bottom: 1.667vw; } 
+ .blog-list__latest .latest-list { margin-top: 1.111vw; border-top-width: 0.139vw; margin-bottom: 3.333vw; } 
+ .blog-list__latest .blog-item-list .list-el { gap: 1.667vw; padding: 1.667vw; } 
+ .blog-list__latest .blog-item-list .el-img { width: 13.889vw; height: 13.889vw; } 
+ .blog-list__latest .blog-item-list .el-txt { max-width: 66.389vw; } 
+ .blog-list__latest .blog-item-list .el-btn { flex: 0 0 9.444vw; padding-top: 2.083vw; } 
+
+/* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .blog-list > section:not(:last-child) { margin-bottom: 36px; } 
+ .blog-list .section-tit { font-size: 22px !important; margin-bottom: 16px; } 
+
+ /* cm list */
+ .blog-item-list .el-img img { min-width: 100%; min-height: 100%; max-width: none; max-height: none; } 
+ .blog-item-list .el-txt { flex: auto; } 
+ .blog-item-list .el-txt .date-view-box { font-size: 14px; } 
+ .blog-item-list .el-txt .date-view-box .txt-line-break::before { background: #555; } 
+ .blog-item-list .el-txt .title { font-size: 16px !important; margin-block: 8px; } 
+ .blog-item-list .el-txt .sub-tit { font-size: 14px !important; } 
+ .blog-item-list .el-txt .btn-block { margin-top: 16px; } 
+
+ /* Recommended */
+ .blog-list__recomm { margin: 0 -24px; } 
+ .blog-list__recomm .section-tit { padding-inline: 24px; } 
+ .blog-list__recomm .blog-item-list .list-el { flex-direction: column; gap: 0; padding: 0 24px; } 
+ .blog-list__recomm .blog-item-list .el-img { width: 100%; height: 178px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; } 
+ .blog-list__recomm .blog-item-list .el-txt { background: #f7f7f7; padding: 16px 24px; border-radius: 0 0 20px 20px; } 
+ .blog-list__recomm .blog-item-list .el-txt .title { -webkit-line-clamp: 2; } 
+ .blog-list__recomm .blog-item-list .el-txt .sub-tit { color: #000000; padding-top: 8px; } 
+ .blog-list__recomm .swiper-button-next, 
+ .blog-list__recomm .swiper-button-prev { top: var(--swiper-navigation-top-offset, 45%); } 
+ .blog-list__recomm .swiper-button-next { right: 16px; } 
+ .blog-list__recomm .swiper-button-prev { left: 16px; } 
+ .blog-list__recomm .swiper-pagination-wrap { position: relative; width: fit-content; left: 50%; transform: translateX(-50%); } 
+ .blog-list__recomm .swiper-pagination { height: 20px; margin-top: 24px; border: 1px solid #dadada; border-radius: 999px; padding: 8.5px 16px; width: fit-content; } 
+ .blog-list__recomm .swiper-pagination-bullet { width: 8px; height: 8px; border-radius: 999px; margin: 0 6px !important; background-color: #8f8f8f; } 
+ .blog-list__recomm .swiper-pagination-bullet-active { background-color: #000 !important; } 
+
+ /* Popular */
+ .blog-list__popular .blog-item-list { flex-direction: column; gap: 32px; } 
+ .blog-list__popular .blog-item-list .list-el { gap: 16px; max-width: 100%; } 
+ .blog-list__popular .blog-item-list .el-img { height: 140px; } 
+ .blog-list__popular .blog-item-list .el-txt .btn-block { margin-top: 8px; } 
+
+ /* Latest */
+ .blog-list__latest .category { width: 100%; margin-bottom: 16px; } 
+ .blog-list__latest .latest-list { margin-top: 12px; margin-bottom: 16px; } 
+ .blog-list__latest .blog-item-list .list-el { position: relative; align-items: center; gap: 16px; padding: 70px 0 16px; } 
+ .blog-list__latest .blog-item-list .el-img { width: 80px; height: 80px; border-radius: 8px; } 
+ .blog-list__latest .blog-item-list .el-txt { flex: auto; max-width: calc(100% - 96px); } 
+ .blog-list__latest .blog-item-list .el-txt .title { display: -webkit-box; -webkit-box-orient: vertical; word-wrap: break-word; -webkit-line-clamp: 2; white-space: initial; margin-block: 0 4px; } 
+ .blog-list__latest .blog-item-list .el-txt .tag-flag { position: absolute; left: 0; top: 16px; } 
+ .blog-list__latest .blog-item-list .el-txt .date-view-box { position: absolute; left: 0; top: 42px; margin-top: 0; } 
+ .blog-list__latest .blog-item-list .el-btn { display: none; } 
+
+
+ /* [E]Mobile */ } 

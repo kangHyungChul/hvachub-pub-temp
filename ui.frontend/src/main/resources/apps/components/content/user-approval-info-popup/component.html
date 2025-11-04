@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Approve User</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <button type="button" class="btn-block" data-layer-target="popup-layer00"> <span class="btn-block__txt">Approve User popup</span> </button>
+
+  <!-- 팝업 오픈 : .active -->
+  <!-- 팝업 기본 -->
+  <div class="popup-wrap" id="popup-layer00">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Approve User</p>
+      </div>
+      <div class="popup__container user-approval">
+        <!-- 2025-05-07 div 추가 // -->
+        <div class="inner">
+          <p class="txt-p5">Please select the user role to proceed with the approval. ​You can specify one of predefined roles.</p>
+          <!-- field-box-wrap start // -->
+          <div class="field-box-wrap">
+            <!-- form__wrap start //-->
+            <div class="form__wrap">           
+              <div class="field-row-item">
+                <div class="field-box">
+                  <label class="txt-label txt-req">User Role</label>
+                  <div class="combo-box">
+                    <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                      <span class="txt-placeholder">Select Role.</span>
+                    </button>
+                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                      <ul class="combo-box__menu-list">
+                        <li role="menuitem" class="active">All</li>       
+                        <li role="menuitem" class="active">All</li>   
+                        <li role="menuitem" class="active">All</li>   
+                        <li role="menuitem" class="active">All</li>   
+                        <li role="menuitem" class="active">All</li>              
+                      </ul>
+                    </div>
+                  </div>
+                  <p class="txt-error">This field is required.​</p>
+                </div>
+              </div>  
+            </div>
+            <!-- form__wrap end //--> 
+          </div> 
+          <!-- // field-box-wrap start -->
+        </div>        
+      </div>
+      <div class="popup__footer">
+        <button type="button" class="btn-block lg">
+          <span class="btn-block__txt">Cancle</span>
+        </button>
+        <button type="button" class="btn-block type2 lg">
+          <span class="btn-block__txt">Save</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>
+</html>

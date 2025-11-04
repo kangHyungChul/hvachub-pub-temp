@@ -1,0 +1,44 @@
+.logo-with-header {
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+    border-bottom: 1px solid #cccccc;
+}
+.logo-with-header .header-inner {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    height: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+.logo-with-header .logo-box {
+    height: 51px;
+}
+
+.logo-with-header .logo-box a {
+    display:block;
+}
+
+.logo-with-header .logo-box img {
+    max-height: 100%;
+}
+
+
+/******* MOBILE *******/
+@media only screen and (min-width: 769px) and (max-width: 1440px)  { 
+    .logo-with-header .header-inner {
+        padding: 0 1.667vw;
+    }
+}
+
+@media only screen and (max-width: 768px) { 
+    .logo-with-header {
+        height: 56px;      
+    }
+    .logo-with-header .logo-box,  .logo-with-header .logo-box a {
+        height: 36px;
+    }    
+
+/* [E]mobile */    
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <button type="button" class="btn-block" data-layer-target="popup-layer00"> <span class="btn-block__txt"> 기본팝업</span> </button>
+  <button type="button" class="btn-block" data-layer-target="popup-layer01"> <span class="btn-block__txt"> 버튼 없는팝업</span> </button>
+  <button type="button" class="btn-block" data-layer-target="popup-layer02"> <span class="btn-block__txt"> 타이틀, 버튼 없는팝업</span> </button>
+  <button type="button" class="btn-block" data-layer-target="expand-popup-sample"> <span class="btn-block__txt">expand-popup</span> </button>
+  <button type="button" class="btn-block" data-layer-target="video-popup-sample"> <span class="btn-block__txt">video-popup</span> </button>
+
+  <!-- 팝업 오픈 : .active -->
+  <!-- 팝업 기본 -->
+  <div class="popup-wrap" id="popup-layer00">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Popup Title</p>
+      </div>
+      <div class="popup__container">
+
+      </div>
+      <div class="popup__footer">
+        <button type="button" class="btn-block lg">
+          <span class="btn-block__txt">Cancle</span>
+        </button>
+        <button type="button" class="btn-block type2 lg">
+          <span class="btn-block__txt">Save</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+
+  <!-- 팝업 버튼 없는 경우 -->
+  <div class="popup-wrap" id="popup-layer01">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Popup Title</p>
+      </div>
+      <div class="popup__container">
+
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+
+  <!-- 팝업 타이틀,버튼 없는 경우 -->
+  <div class="popup-wrap" id="popup-layer02">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__container">
+
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+
+  <!-- expand popup -->
+  <div class="popup-wrap" id="expand-popup-sample">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__container">
+        <div class="expand-img-area" style="height:616px; max-height:616px;">
+          <img class="expand-popup-img" src="/pub-only/images/product-popup-expand-sample.png" alt="" style="top:0; left:0; transform: scale(1);">
+          <div class="button-box">
+            <button type="button" class="ico-btn zoom-in">줌인</button>
+            <button type="button" class="ico-btn reset">초기화</button>
+            <button type="button" class="ico-btn zoom-out">줌아웃</button>            
+          </div>
+        </div>       
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+
+  <!-- video popup -->
+  <div class="popup-wrap" id="video-popup-sample">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__container">
+        <div class="popup-video-box">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AmK4VEmmFOM?si=BjsMSYPK3ZyBHEOl&amp;controls=0" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

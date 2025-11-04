@@ -1,0 +1,149 @@
+.simulation-request-detail { max-width: 1440px; width: 100%; margin: 0 auto; padding: 24px 24px 80px; } 
+.simulation-request-detail .tit-area .tit__left { display: flex; align-items: center; gap: 8px; } 
+.simulation-request-detail .tit-area .tit__left .txt-h3 { margin-right: 16px; } 
+.simulation-request-detail .tit-area .tit__right { display: flex; justify-content: flex-end; gap: 16px; } 
+.simulation-request-detail .tit-area .btn-block { margin: 0; } 
+.simulation-request-detail .txt-file-name { display: inline-block; font-weight: 700; line-height: 1.5; text-decoration: underline; } 
+.simulation-request-detail .txt-file-name + .txt-file-name { margin-left: 16px; } 
+
+/* info table */
+.request-info-table .col-th1 { width: 168px; } 
+.request-info-table .col-th2 { width: auto; } 
+.request-info-table th { vertical-align: baseline; text-align: left; padding-block: 0; } 
+.request-info-table th span { display: flex; align-items: center; min-height: 56px; } 
+.request-info-table td { padding-inline:32px; } 
+.request-info-table .tooltip .tooltip__contents { top: 0; right: auto; left: 100%; } 
+.request-info-table .tooltip .tooltip__contents .tooltip__contents-inner { white-space: nowrap; min-width: auto; min-height: auto; } 
+
+/* subject list */
+.subject-info-list { margin-top: 24px; border-top: 2px solid #000000; } 
+.subject-info-list .list-item { display: flex; gap: 32px; min-height: 56px; padding-block: 16px; border-bottom: 1px solid #cccccc; } 
+.subject-info-list .list-item .list-el { padding-inline: 12px; } 
+.subject-info-list .list-item .el-tit { flex: 0 0 264px; } 
+.subject-info-list .list-item .el-cont { flex: auto; } 
+.subject-info-list .desc-box { overflow: hidden; max-height: 135px; } 
+.subject-info-list .desc-btn { display: none; margin-top: 16px; } 
+.subject-info-list .desc-box.view + .desc-btn { display: inline-flex; } 
+.subject-info-list .show .desc-box { max-height: none; } 
+.subject-info-list .show .desc-btn .icon-arrow-bottom { transform: rotate(180deg); } 
+
+/* comment list */
+.comment-area { margin-top: 24px; padding-top: 24px; border-top: 2px solid #000000; } 
+.comment-area .txt-h6 { margin-bottom: 16px; } 
+.comment-area .field-box { width: 100%; } 
+.comment-area .field-box .textarea { height: 178px; } 
+.comment-area .field-upload-list { margin-block:12px 16px; } 
+.comment-area .field-upload-list .txt-ref-mark { color: #555; } 
+.comment-area .field-upload-list .txt-error { margin-top: 2px; } 
+.comment-area .file-list-box { display: flex; flex-direction: column; row-gap: 8px; padding-bottom: 16px; } 
+.comment-area .file-list-box:empty { padding-bottom: 0; margin-bottom: 0; } 
+.comment-area .file-list-box .file-list__el { flex: none; display: inline-flex; align-items: center; gap: 8px; } 
+.comment-area .file-list-box .file-list__el .txt-file-name { font-weight: 400; text-decoration: none; } 
+.comment-area .file-list-box .file-list__el .file-name-btn { width: 16px; height: 16px; vertical-align: middle; background: center / contain no-repeat
+ url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-search-delete.svg); } 
+.comment-area .upload-btn-box { font-size: 0; margin-bottom: 16px; } 
+.comment-area .upload-btn-box .btn-block { cursor: pointer; margin-right: 16px; } 
+.comment-list { padding-top: 8px; } 
+.comment-list .list-item { background-color: #ffffff; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-profile.svg); background-repeat: no-repeat; background-position: 16px 24px; background-size: 56px 56px; padding: 16px 24px 16px 88px; } 
+.comment-list .list-item:not(:first-of-type) { margin-top: 24px; } 
+.comment-list .list-item .el-top { display: flex; align-items: center; justify-content: space-between; height: 56px; margin-bottom: 8px; } 
+.comment-list .list-item .el-top .txt-p6 { color: #555555; } 
+.comment-list .list-item .el-file { margin-top: 12px; } 
+.comment-list .list-item.answer { background-color: #f7f7f7; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-profile-answer.svg); border-radius: var(--border-base); } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .simulation-request-detail { padding: 1.667vw 1.667vw 5.556vw; } 
+ .simulation-request-detail .tit-area .tit__left { gap: 0.556vw; } 
+ .simulation-request-detail .tit-area .tit__left .txt-h3 { margin-right: 1.111vw; } 
+ .simulation-request-detail .tit-area .tit__right { gap: 1.111vw; } 
+ .simulation-request-detail .txt-file-name + .txt-file-name { margin-left: 1.111vw; } 
+
+ /* info table */
+ .request-info-table .col-th1 { width: 11.667vw; } 
+ .request-info-table th span { min-height: 3.889vw; } 
+ .request-info-table td { padding-left: 2.222vw; } 
+
+ /* subject list */
+ .subject-info-list { margin-top: 1.667vw; border-top-width: 0.139vw; } 
+ .subject-info-list .list-item { gap: 2.222vw; min-height: 3.889vw; padding-block: 1.111vw; } 
+ .subject-info-list .list-item .list-el { padding-inline: 0.833vw; } 
+ .subject-info-list .list-item .el-tit { flex: 0 0 18.333vw; } 
+ .subject-info-list .desc-box { max-height: 9.375vw; } 
+ .subject-info-list .desc-btn { margin-top: 1.111vw; } 
+
+ /* comment list */
+ .comment-area { margin-top: 1.667vw; padding-top: 1.667vw; border-top-width: 0.139vw; } 
+ .comment-area .txt-h6 { margin-bottom: 1.111vw; } 
+ .comment-area .field-box .textarea { height: 12.361vw; } 
+ .comment-area .field-upload-list { margin-block: 0.833vw 1.111vw; } 
+ .comment-area .field-upload-list .txt-error { margin-top: 0.139vw; } 
+ .comment-area .file-list-box { row-gap: 0.556vw; padding-bottom: 1.111vw; } 
+ .comment-area .file-list-box .file-list__el { gap: 0.556vw; } 
+ .comment-area .file-list-box .file-list__el .file-name-btn { width: 1.111vw; height: 1.111vw; } 
+ .comment-area .upload-btn-box { margin-bottom: 1.111vw; } 
+ .comment-area .upload-btn-box .btn-block { margin-right: 1.111vw; } 
+ .comment-list { padding-top: 0.556vw; } 
+ .comment-list .list-item { background-position: 1.111vw 1.667vw; background-size: 3.889vw 3.889vw; padding: 1.111vw 1.667vw 1.111vw 6.111vw; } 
+ .comment-list .list-item:not(:first-of-type) { margin-top: 1.667vw; } 
+ .comment-list .list-item .el-top { height: 3.889vw; margin-bottom: 0.556vw; } 
+ .comment-list .list-item .el-file { margin-top: 0.833vw; } 
+ 
+/* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .simulation-request-detail .tit-area { padding-bottom: 12px; } 
+ .simulation-request-detail .tit-area .tit__left { flex-wrap: wrap; align-items: initial; gap: 16px 8px; } 
+ .simulation-request-detail .tit-area .tit__left .txt-h3 { width: 100%; font-size: 24px !important; margin-right: 0; } 
+ .simulation-request-detail .tit-area .tit__right { display: flex; justify-content: initial; gap: 8px; margin-top: 16px; } 
+ .simulation-request-detail .tit-area .tit__right .btn-block { flex: 1; } 
+ .simulation-request-detail .txt-file-name { font-size: 14px !important; font-weight: 500; text-decoration: underline; } 
+ .simulation-request-detail .txt-file-name + .txt-file-name { margin-left: 0; } 
+
+ /* info table */
+ .request-info-table .col-th1 { width: 104px; } 
+ .request-info-table th, 
+ .request-info-table td { font-size: 14px; } 
+ .request-info-table th span { padding-block: 8px; } 
+ .request-info-table td { padding:8px 12px; } 
+ .request-info-table .file-list .list-item:not(:last-of-type) { margin-bottom: 8px; } 
+ .request-info-table .file-list .list-item .txt-p5 { font-size: 14px !important; } 
+ .request-info-table .tooltip .tooltip__contents { top: 100%; right: 0; left: auto; } 
+
+ /* subject list */
+ .subject-info-list .list-item { display: block; } 
+ .subject-info-list .list-item .list-el { width: 100%; } 
+ .subject-info-list .list-item .el-tit .txt-p4 { font-size: 16px !important; } 
+ .subject-info-list .list-item .el-cont { margin-top: 8px; } 
+ .subject-info-list .list-item .el-cont .txt-p4 { font-size: 14px !important; } 
+ .subject-info-list .desc-box { max-height: 105px; } 
+ .subject-info-list .desc-btn { margin-top: 8px; } 
+ .subject-info-list .file-box { display: flex; flex-direction: column; gap: 8px; } 
+
+ /* comment list */
+ .comment-area { margin-top: 24px; padding-top: 0; border-top: 0; } 
+ .comment-area .txt-h6 { font-size: 18px !important; margin-bottom: 8px; } 
+ .comment-area .field-box .textarea { height: 240px; } 
+ .comment-area .field-upload-list { margin-block:8px 24px; } 
+ .comment-area .field-upload-list .txt-ref-mark { margin-bottom: 4px; } 
+ .comment-area .field-upload-list .txt-error { margin-top: 2px; } 
+ .comment-area .file-list-box { padding-bottom: 8px; } 
+ .comment-area .upload-btn-box { margin-bottom: 8px; } 
+ .comment-area .upload-btn-box .btn-block { height: 32px; padding-inline: 16px; margin-right: 8px; } 
+ .comment-area .upload-btn-box .btn-block .btn-block__txt {font-size: 12px ;}
+ .comment-list { padding-top: 24px; border-top: 2px solid #000000; } 
+ .comment-list .list-item { background-position: 16px 16px; background-size: 48px 48px; padding: 16px 16px 16px 68px; border: 1px solid #dadada; border-radius: var(--border-base); } 
+ .comment-list .list-item:not(:first-of-type) { margin-top: 16px; } 
+ .comment-list .list-item .txt-p5 { font-size: 14px !important; } 
+ .comment-list .list-item .el-top { display: block; height: auto; padding-block: 6px; margin-bottom: 16px; } 
+ .comment-list .list-item .el-top .txt-p6 { color: #666666; font-size: 12px !important; margin-top: 2px; } 
+ .comment-list .list-item .el-file { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; } 
+ .comment-list .list-item.answer { border: 0; } 
+ 
+ 
+
+/* [E]Mobile */ } 

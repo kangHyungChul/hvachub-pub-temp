@@ -1,0 +1,36 @@
+/* product list */
+.product-list__result { display: flex; flex-wrap: wrap; gap: 24px; max-width: 1440px; width: 100%; margin: 0 auto; } 
+.product-list__result .pdp-product-list { cursor: pointer; max-width: calc((100% - (24px * 3)) / 4); } 
+.product-list__result .pdp-product-list .pdp-product__tit .flag-area { display: flex; justify-content: center; gap: 4px; flex-wrap: wrap; height: auto; min-height: 20px; } 
+.product-list__result .pdp-product-list .pdp-product__tit .flag-area .tag-flag { flex: none; margin: 0; } 
+.product-list__result .pdp-product-list .swiper-unit-box { height: 56px; margin-top:8px;} 
+.product-list__result .pdp-product-list .link-area { height: 24px; margin: 4px 0 8px; } 
+.product-list__result .pdp-product-list .link-area .energy-tag-area { padding-top: 0; } 
+.product-list__result .pdp-product-list .pdp-stock-box { height: 21px; } 
+.product-list__result .pdp-product-list .pdp-price { height: 52px; margin-top:8px;} 
+.product-list__result-btn { text-align: center; margin-block: 48px 24px; } 
+
+.list-nodata {border-bottom: 0;}
+.filter-wrap__cont.on-filter .product-list__result .pdp-product-list { max-width: calc((100% - (24px * 2)) / 3); padding:16px 24px;} 
+
+/* ===================== Tablet ===================== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+  .product-list__result { gap: 1.667vw; } 
+  .product-list__result .pdp-product-list { max-width: calc((100% - (1.667vw * 3)) / 4); } 
+  .product-list__result .pdp-product-list .pdp-product__tit .flag-area { gap: 0.278vw; min-height: 1.389vw; } 
+  .product-list__result .pdp-product-list .swiper-unit-box { height: 3.819vw; } 
+  .product-list__result .pdp-product-list .link-area { height: 1.667vw; margin-block: 0.556vw; } 
+  .product-list__result .pdp-product-list .pdp-stock-box { height: 1.458vw; } 
+  .product-list__result .pdp-product-list .pdp-price { height: 3.611vw; } 
+
+ .filter-wrap__cont.on-filter .product-list__result .pdp-product-list { max-width: calc((100% - (1.667vw * 2)) / 3); } 
+
+/* [E]Tablet */ } 
+/* ===================== Mobile ===================== */
+@media only screen and (max-width: 768px){
+ .product-list__result .pdp-product-list { max-width: 100%; } 
+ .product-list__result .pdp-product-list .pdp-product__tit .flag-area { min-height: auto; } 
+ .product-list__result-btn { margin-block: 24px 32px; } 
+ .filter-wrap__cont.on-filter .product-list__result .pdp-product-list { max-width: 100%; } 
+
+/* [E]Mobile */ } 

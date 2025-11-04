@@ -1,0 +1,96 @@
+.order-list-sect { max-width: 1440px; width: 100%; margin: 0 auto; padding-inline: 24px; } 
+
+/* search */
+.ord-list-search { background: #f7f7f7; padding: 24px; border-radius: var(--border-base); margin-bottom: 24px; } 
+.ord-list-search > .field-box .input-search { width: 775px; } 
+.ord-list-search .field-box-area { display: flex; align-items: flex-end; gap: 24px; margin-top: 24px; } 
+.ord-list-search .field-box-area .field-box { flex-grow: 0; flex-basis: 236px; } 
+.ord-list-search .field-box-area .field-box:has(.datepicker-area) { flex-basis: 500px; } 
+.ord-list-search .field-box-area .combo-box { width: 100%; } 
+.ord-list-search .field-box-area .input-datepicker { width: calc(50% - 14px); } 
+.ord-list-search .field-box-area .input-datepicker + .txt-p5 { color: #a9a9a9; margin-inline: 4px 5px; } 
+.ord-list-search .field-box-area > .btn-block { flex: none; } 
+.ord-list-search .icon-mo-folded { display: none; } 
+
+/* list */
+.order-list-sect .basic-list-wrap { padding: 0; border-radius: 0; } 
+/* result */
+.order-list-sect .basic-list__result { overflow-x: scroll; margin-bottom: 16px; } 
+.order-list-sect .basic-list__result .el-snum { width: 168px; } 
+.order-list-sect .basic-list__result .el-num { width: 126px; } 
+.order-list-sect .basic-list__result .el-type,
+.order-list-sect .basic-list__result .el-total { width: 180px; } 
+.order-list-sect .basic-list__result .el-date { width: 170px; } 
+.order-list-sect .basic-list__result .el-name { flex: auto; } 
+.order-list-sect .basic-list__result .el-pdf { width: 92px; } 
+.order-list-sect .basic-list__result .el-credit { width: 120px; } 
+.order-list-sect .basic-list__result .el-status { width: 110px; } 
+.order-list-sect .list-head,
+.order-list-sect .list-body { width: fit-content; min-width: 100%; } 
+.order-list-sect .list-body .el-name { text-align: left; } 
+.order-list-sect .list-body .el-name a:hover { text-decoration: underline; font-weight: 700; color: inherit; } 
+.order-list-sect .list-body .el-total { text-align: right; } 
+.order-list-sect .list-body .el-credit .icon-check { display: inline-block; width: 16px; height: 16px; background: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-checked-bk.svg) no-repeat center center; background-size: 100%; } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+
+ .order-list-sect { padding-inline: 1.667vw; } 
+ /* search */
+ .ord-list-search { padding: 1.667vw; margin-bottom: 1.667vw; } 
+ .ord-list-search > .field-box .input-search { width: 53.819vw; } 
+ .ord-list-search .field-box-area { gap: 1.667vw; margin-top: 1.667vw; } 
+ .ord-list-search .field-box-area .field-box { flex-basis: 16.389vw; } 
+ .ord-list-search .field-box-area .field-box:has(.datepicker-area) { flex-basis: 34.722vw; } 
+
+ /* list */
+ .order-list-sect .basic-list__result { margin-bottom: 1.111vw; } 
+ .order-list-sect .basic-list__result .el-snum { width: 11.667vw; } 
+ .order-list-sect .basic-list__result .el-num { width: 8.75vw; } 
+ .order-list-sect .basic-list__result .el-type,
+ .order-list-sect .basic-list__result .el-total,
+ .order-list-sect .basic-list__result .el-date { width: 12.5vw; } 
+ .order-list-sect .basic-list__result .el-pdf { width: 6.389vw; } 
+ .order-list-sect .basic-list__result .el-credit { width: 8.333vw; } 
+ .order-list-sect .basic-list__result .el-status { width: 7.639vw; } 
+ .order-list-sect .list-body .el-credit .icon-check { width: 1.111vw; height: 1.111vw; } 
+
+/* [E]Tablet */}
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px) { 
+  
+  /* search */
+ .ord-list-search { position: relative; padding-bottom: 34px; margin-inline: -24px; border-radius: 0; border-bottom: 1px solid #aaaaaa; margin-bottom: 25px; } 
+ .ord-list-search .field-box { width: 100%; } 
+ .ord-list-search > .field-box .input-search { width: 100%; } 
+ .ord-list-search .field-box-area { flex-direction: column; align-items: initial; gap: 12px; margin-top: 12px; } 
+ .ord-list-search .field-box-area > .field-box { display: none; flex-basis: 100%; } 
+ .ord-list-search .field-box-area .field-box:has(.datepicker-area) { flex-basis: 100%; } 
+ .ord-list-search .field-box-area .combo-box { width: 100%; } 
+ .ord-list-search .field-box-area > .btn-block { width: 100%; } 
+ .ord-list-search .icon-mo-folded { display: block; position: absolute; left: calc(50% - 30px); bottom: -10px; width: 60px; height: 20px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-mo-folded.svg); } 
+ .ord-list-search.mo-active .field-box-area > .field-box { display: block; } 
+ .ord-list-search.mo-active .icon-mo-folded { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-mo-folded-open.svg); } 
+
+ /* list */
+ .order-list-sect .basic-list__result { overflow-x: auto; margin-bottom: 24px; } 
+ .order-list-sect .basic-list__result .el-snum,
+ .order-list-sect .basic-list__result .el-num { width: 120px; } 
+ .order-list-sect .basic-list__result .el-type { width: 113px; } 
+ .order-list-sect .basic-list__result .el-name { flex: none; width: 240px; } 
+ .order-list-sect .basic-list__result .el-total { width: 122px; } 
+ .order-list-sect .basic-list__result .el-date { width: 122px; } 
+ .order-list-sect .basic-list__result .el-pdf { width: 76px; } 
+ .order-list-sect .basic-list__result .el-credit { width: 90px; } 
+ .order-list-sect .basic-list__result .el-status { width: 122px; } 
+ .order-list-sect .list-head .txt-p5,
+ .order-list-sect .list-body .txt-p5,
+ .order-list-sect .list-body .txt-p6 { font-size: 12px !important; } 
+ .order-list-sect .list-body .el-name a { font-weight: 700; } 
+ .order-list-sect .list-body .el-name a:hover { text-decoration: none; } 
+
+/* [E]Mobile */}

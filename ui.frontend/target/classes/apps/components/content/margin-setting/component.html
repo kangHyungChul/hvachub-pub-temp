@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Margin Setting</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/margin-setting/clientlibs/css/main.css" />
+</head>
+
+<body>
+  <!-- component -->
+  <section class="margin">
+    <h2 class="margin__tit txt-h3">Margin</h2>
+    <!-- 240805 Samsung product 영역 구조 변경 -->
+    <article class="my-result__wrap product">
+      <div class="tit-wrap">
+        <p class="txt-h6 txt-fw-b">Samsung Product</p>
+        <div class="tit-btn">
+          <!-- [F]. color style: white(-) ,black(.type2), blue(.type3) => button.btn-block에 해당 클래스 추가 -->
+          <button type="button" class="btn-block md" data-layer-target="samsung-margin-popup">
+            <span class="btn-block__txt">Add Margin</span>
+          </button>
+        </div>
+      </div>
+      <ul class="result-list__wrap">
+        <li class="list__head">
+          <span class="category txt-p5 txt-fw-b">Category</span>
+          <span class="margin-val txt-p5 txt-fw-b">Margin &#40;%&#41;
+          </span>
+        </li>
+        <li class="list__el-box">
+          <ul class="list-data">
+            <li class="list__el">
+              <button type="button" class="category">
+                <span class="txt-p6">RAC > All</span>
+              </button>
+              <span class="margin-val txt-p6">12%</span>
+              <div class="list__btn">
+                <!-- 2024-09-19 class 추가 : .btn-icon / 접근성 추가 : txt-blind  하기 버튼 동일 -->
+                <button type="button" class="btn-icon edit-btn" data-layer-target="samsung-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+                <!-- //2024-09-19 -->
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category">
+                <span class="txt-p6">FJM > Indoor Unit > All</span>
+              </button>
+              <span class="margin-val txt-p6">11%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="samsung-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category">
+                <span class="txt-p6">FJM > Outdoor Unit > Cooling Only > All</span>
+              </button>
+              <span class="margin-val txt-p6">8%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="samsung-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category">
+                <span class="txt-p6">DVM > Indoor Unit > CST > 1way > All
+                </span>
+              </button>
+              <span class="margin-val txt-p6">2%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="samsung-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category">
+                <span class="txt-p6">FJM > Outdoor Unit > Cooling Only > All</span>
+              </button>
+              <span class="margin-val txt-p6">4%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="samsung-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <!-- 2024-09-19 10개 초과시 : loading bar -->
+          <!-- <div class="icon-loading-box">
+                            <div class="icon-loading"></div>
+                        </div> -->
+
+          <!-- data가 없을때  -->
+          <!-- 240626 문구 수정 -->
+          <!-- <div class="list-nodata">
+                            <p class="txt-p6">There is no registered content.</p>
+                        </div> -->
+        </li>
+      </ul>
+    </article>
+    <article class="my-result__wrap offering">
+      <div class="tit-wrap">
+        <p class="txt-h6 txt-fw-b">Offering</p>
+        <div class="tit-btn">
+          <!-- [F]. color style: white(-) ,black(.type2), blue(.type3) => button.btn-block에 해당 클래스 추가 -->
+          <button type="button" class="btn-block md" data-layer-target="offering-margin-popup">
+            <span class="btn-block__txt">Add Margin</span>
+          </button>
+        </div>
+      </div>
+      <ul class="result-list__wrap">
+        <li class="list__head">
+          <!-- 240805 .category 수정 -->
+          <span class="category txt-p5 txt-fw-b">Category</span>
+          <span class="margin-val txt-p5 txt-fw-b">Margin &#40;%&#41;
+          </span>
+        </li>
+        <li class="list__el-box">
+          <ul class="list-data">
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 1</span>
+              </button>
+              <span class="margin-val txt-p6">12%</span>
+              <div class="list__btn">
+                <!-- 2024-09-19 class 추가 : .btn-icon / 접근성 추가 : txt-blind  하기 버튼 동일 -->
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+                <!-- //2024-09-19 -->
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 2</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 3</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 2</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 3</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 3</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 2</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 3</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 2</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+            <li class="list__el">
+              <button type="button" class="category" data-layer-target="category-detail-popup">
+                <!-- 240626 .txt-p5 -> .txt-p6으로 변경 -->
+                <span class="txt-p6">Category Name 3</span>
+              </button>
+              <span class="margin-val txt-p6">10%</span>
+              <div class="list__btn">
+                <button type="button" class="btn-icon edit-btn" data-layer-target="offering-margin-popup">
+                  <span class="txt-blind">edit</span>
+                </button>
+                <button type="button" class="btn-icon delete-btn">
+                  <span class="txt-blind">delete</span>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <!-- 2024-09-19 10개 초과시 : loading bar -->
+          <div class="icon-loading-box">
+            <div class="icon-loading"></div>
+          </div>
+
+          <!-- data가 없을때  -->
+          <!-- 240626 문구 수정 -->
+          <!-- <div class="list-nodata">
+                            <p class="txt-p6">There is no registered content.</p>
+                        </div> -->
+        </li>
+      </ul>
+    </article>
+
+    <!-- margin (offering) popup -->
+    <div class="alert-wrap offering-margin-popup" id="offering-margin-popup">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Margin &#40;Offering&#41;</p>
+        </div>
+        <div class="aler__container">
+          <div class="margin-popup-inner">
+            <div class="field-box">
+              <label class="txt-label txt-req" for="required-input">Category</label>
+              <div class="combo-box">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                  aria-expanded="false" aria-required="true">
+                  <span class="txt-placeholder">Select category</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">Category Name 1</li>
+                    <li role="menuitem">Category Name 2</li>
+                    <li role="menuitem">Category Name 3</li>
+                    <li role="menuitem">Category Name 4</li>
+                    <li role="menuitem">Category Name 4</li>
+                    <li role="menuitem" class="selected">
+                      Category Name 5
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 240626 문구 수정 -->
+              <p class="txt-error">This field is required.</p>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-req" for="required-input">Margin</label>
+              <div class="input-box">
+                <input type="text" class="input-box__input" id="required-input" placeholder="00.0%" required />
+              </div>
+              <!-- 240626 문구 수정 -->
+              <p class="txt-error">This field is required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- margin (samsung product) popup -->
+    <div class="popup-wrap samsung-margin-popup" id="samsung-margin-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Margin &#40;Samsung Product&#41;</p>
+        </div>
+        <div class="popup__container">
+          <div class="margin-popup-inner product">
+            <div class="field-box">
+              <label class="txt-label txt-req" for="required-input">Category</label>
+              <div class="combo-box-wrap">
+                <div class="combo-box">
+                  <!-- 240626 .txt-ellipsis 추가 -->
+                  <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true"
+                    aria-controls="combo-box__menu" aria-expanded="false" aria-required="true">
+                    <span class="txt-placeholder">Category 1</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">All</li>
+                      <li role="menuitem">RAC</li>
+                      <li role="menuitem">FAC</li>
+                      <li role="menuitem">WAC</li>
+                      <li role="menuitem">CAC</li>
+                      <li role="menuitem">EHS</li>
+                      <li role="menuitem">FJM</li>
+                      <li role="menuitem" class="selected">DVM</li>
+                      <li role="menuitem">Chiller</li>
+                      <li role="menuitem">Ventilation</li>
+                      <li role="menuitem">Accessory</li>
+                      <li role="menuitem">Controls Systems</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="combo-box">
+                  <!-- 240626 .txt-ellipsis 추가 -->
+                  <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true"
+                    aria-controls="combo-box__menu" aria-expanded="false" aria-required="true" disabled>
+                    <span class="txt-placeholder">Category 2</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">All</li>
+                      <li role="menuitem">Indoor Unit</li>
+                      <li role="menuitem" class="selected">Outdoor Unit</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="combo-box">
+                  <!-- 240626 .txt-ellipsis 추가 -->
+                  <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true"
+                    aria-controls="combo-box__menu" aria-expanded="false" aria-required="true" disabled>
+                    <span class="txt-placeholder">Category 3</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <!-- 240709 br 태그 제거 -->
+                      <li role="menuitem">All</li>
+                      <li role="menuitem">
+                        DVM Home &#40;Single Piping&#41;
+                      </li>
+                      <li role="menuitem" class="selected">
+                        DVM Home &#40;Multi Piping&#41;
+                      </li>
+                      <li role="menuitem">DVM Slim</li>
+                      <li role="menuitem">DVM S Eco</li>
+                      <li role="menuitem">DVM S</li>
+                      <li role="menuitem" class="selected">DVM S2</li>
+                      <li role="menuitem">DVM S Water</li>
+                      <li role="menuitem">GHP</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="combo-box">
+                  <!-- 240626 .txt-ellipsis 추가 -->
+                  <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true"
+                    aria-controls="combo-box__menu" aria-expanded="false" aria-required="true" disabled>
+                    <span class="txt-placeholder">Category 4</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">All</li>
+                      <li role="menuitem">Cooling only</li>
+                      <li role="menuitem" class="selected">Heat Pump</li>
+                      <li role="menuitem">Heat Recovery</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="combo-box">
+                  <!-- 240626 .txt-ellipsis 추가 -->
+                  <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true"
+                    aria-controls="combo-box__menu" aria-expanded="false" aria-required="true" disabled>
+                    <span class="txt-placeholder">Category 5</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">All</li>
+                      <li role="menuitem" class="selected">Normal</li>
+                      <li role="menuitem">Low ambient</li>
+                      <li role="menuitem">High ambient</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- 240626 문구 수정 -->
+              <p class="txt-error">This field is required.</p>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-req" for="required-input">Margin</label>
+              <div class="input-box">
+                <input type="text" class="input-box__input" id="required-input" placeholder="00.0%" />
+              </div>
+              <!-- 240626 문구 수정 -->
+              <p class="txt-error">This field is required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg" onclick="window.hvachubFunc.closePopup()">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <button type="button" class="btn-block type2 lg">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category detail popup -->
+    <!-- 240805 .category-detail-popup 클래스 추가 -->
+    <div class="popup-wrap category-detail-popup" id="category-detail-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Category Name 1</p>
+        </div>
+        <div class="popup__container">
+          <div class="detail-popup-inner">
+            <ul class="list__wrap">
+              <li class="list__head">
+                <span class="txt-p5 txt-fw-b no">No.</span>
+                <span class="txt-p5 txt-fw-b image">Image</span>
+                <span class="txt-p5 txt-fw-b code">Modelcode</span>
+                <span class="txt-p5 txt-fw-b name">Name</span>
+                <span class="txt-p5 txt-fw-b desc">Description</span>
+                <span class="txt-p5 txt-fw-b val-unit">Value/Unit</span>
+                <span class="txt-p5 txt-fw-b price">Price</span>
+              </li>
+              <li class="list__el-box">
+                <ul class="list-data">
+                  <li class="list__el">
+                    <!-- 240626 태그 변경 / .txt-p5 -> .txt-p6 로 변경 -->
+                    <p class="no txt-p6">1</p>
+                    <p class="image txt-p6">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </p>
+                    <!-- 240805 el-item_wrap 추가 -->
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY12</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2 years
+                        Available only within the warranty period of 2 years
+                        Available only within the warranty period of 2 years
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <!-- 240626 태그 변경 / .txt-p5 -> .txt-p6 로 변경 -->
+                    <p class="no txt-p6">2</p>
+                    <p class="image txt-p6">
+                      <img src="/pub-only/images/offering-category-img-sample.png" alt="category image" />
+                    </p>
+                    <!-- 240805 el-item_wrap 추가 -->
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY13</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <!-- 240626 태그 변경 / .txt-p5 -> .txt-p6 로 변경 -->
+                    <p class="no txt-p6">3</p>
+                    <p class="image txt-p6">
+                      <img src="/pub-only/images/offering-category-img-sample.png" alt="category image" />
+                    </p>
+                    <!-- 240805 el-item_wrap 추가 -->
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">-</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <!-- 240626 태그 변경 / .txt-p5 -> .txt-p6 로 변경 -->
+                    <p class="no txt-p6">4</p>
+                    <p class="image txt-p6">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </p>
+                    <!-- 240805 el-item_wrap 추가 -->
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY13</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <p class="no txt-p6">5</p>
+                    <p class="image txt-p6">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </p>
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY13</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <p class="no txt-p6">6</p>
+                    <p class="image txt-p6">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </p>
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY13</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <p class="no txt-p6">7</p>
+                    <p class="image txt-p6">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </p>
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY13</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <p class="no txt-p6">8</p>
+                    <p class="image txt-p6">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </p>
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY13</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <p class="no txt-p6">9</p>
+                    <p class="image txt-p6">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </p>
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY13</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <p class="no txt-p6">10</p>
+                    <p class="image txt-p6">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </p>
+                    <div class="el-item__wrap">
+                      <p class="code txt-ellipsis3 txt-p6">ABCCOMPANY13</p>
+                      <p class="name txt-ellipsis3 txt-p6">
+                        Paid Product name 1
+                      </p>
+                      <p class="desc txt-ellipsis3 txt-p6">
+                        Available only within the warranty period of 2
+                        years.
+                      </p>
+                      <p class="val-unit txt-ellipsis3 txt-p6">3/m</p>
+                      <p class="price txt-ellipsis3 txt-p6">
+                        420,480,000 TL
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <!-- 2024-09-19 : 10개 초과일 경우 스크롤시 로딩 노출 -->
+                <div class="icon-loading-box">
+                  <div class="icon-loading"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- offering no registered product popup -->
+    <div class="alert-wrap no-product-popup" id="no-product-popup">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">No registered product</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">
+            There are no registered products.<br />
+            Would you like to register a product?
+          </p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/margin-setting/clientlibs/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+  <!-- component -->
+  <section class="my-favorite-sect">
+    <div class="tit-area no-line fav-tit-area">
+      <h2 class="txt-h3">My Favorit</h2>
+    </div>
+    <div class="tab-wrap fav-tab-wrap">
+      <div role="tablist" class="tab-list type5" aria-label="My Favorit">
+        <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+          <span class="tab-list__tab-txt">Product</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">Library</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">Other</span>
+        </button>
+      </div>
+      <div role="presentation" class="tab-wrap__contents">
+        <!-- Product -->
+        <div role="tabpanel" tabindex="0">
+          <div class="fav-field-box">
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category 1</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                  aria-expanded="false">
+                  <span class="txt-placeholder">Category 1</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">옵션 1</li>
+                    <li role="menuitem">옵션 2</li>
+                    <li role="menuitem">옵션 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category 2</label>
+              <div class="combo-box box-type">
+                <!-- [F] disabled시, aria-disabled="true" -->
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                  aria-expanded="false" disabled>
+                  <span class="txt-placeholder">Category 2</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">옵션 1</li>
+                    <li role="menuitem">옵션 2</li>
+                    <li role="menuitem">옵션 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category 3</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                  aria-expanded="false" disabled>
+                  <span class="txt-placeholder">Category 3</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">옵션 1</li>
+                    <li role="menuitem">옵션 2</li>
+                    <li role="menuitem">옵션 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category 4</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                  aria-expanded="false" disabled>
+                  <span class="txt-placeholder">Category 4</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">옵션 1</li>
+                    <li role="menuitem">옵션 2</li>
+                    <li role="menuitem">옵션 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category 5</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                  aria-expanded="false" disabled>
+                  <span class="txt-placeholder">Category 5</span>
+                </button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem">옵션 1</li>
+                    <li role="menuitem">옵션 2</li>
+                    <li role="menuitem">옵션 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-block type2 md">
+              <span class="btn-block__txt">Search</span>
+            </button>
+
+            <!-- 2024-07-24 모바일용 열기/펼치기 버튼-->
+            <button class="btn-icon icon-mo-folded">
+              <span class="txt-blind">mobile search folded</span>
+            </button>
+          </div>
+          <div class="my-result__wrap fav-result-wrap">
+            <div class="result__num-btn">
+              <div class="result__num">
+                <!-- [F] 결과없을 때, selectAll 미노출.-->
+                <label class="btn-checkbox">
+                  <input type="checkbox" class="btn-checkbox__input checkbox-all" name="selectAll" value="all">
+                  <span class="btn-checkbox__icon"></span>
+                  <span class="btn-checkbox__txt">Select All</span>
+                </label>
+                <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+              </div>
+              <!-- [F] 결과없을 때, Delete 버튼 미노출.-->
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Delete</span>
+              </button>
+            </div>
+            <div class="result-list__wrap">
+              <!-- 결과 리스트 -->
+              <ul class="fav-pdp-result">
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EEREER EEREER EEREEREER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">5,800</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">70,00</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <!-- [F] Multi Modules more 미노출시에는 .link-area 유지됨 -->
+                    <!-- <a role="button" class="btn-txt-underline xsm" href="#">
+                                            <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                                        </a> -->
+                    <!-- 2024-09-19 에너지 라벨 추가 -->
+                    <div class="energy-tag-area">
+                      <a role="button" class="btn-txt-underline sm" href="#">
+                        <span class="btn-txt__txt">
+                          <em class="pc-txt">Product Information Sheet</em>
+                          <em class="mo-txt">Product Information Sheet</em>
+                        </span>
+                      </a>
+                      <a role="button" class="tag-badge-icon" href="#">
+                        <img
+                          src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-g.svg"
+                          alt="energy level A">
+                      </a>
+                    </div>
+                    <!-- //2024-09-19 -->
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">5,800</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">70,00</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <a role="button" class="btn-txt-underline xsm" href="#">
+                      <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                    </a>
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock red"
+                      aria-label="The stock is expected to be depleted within 10 days">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">5,800</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">70,00</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">200</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">700</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">100</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <a role="button" class="btn-txt-underline xsm" href="#">
+                      <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                    </a>
+                    <div class="energy-tag-area">
+                      <a role="button" class="btn-txt-underline sm" href="#">
+                        <span class="btn-txt__txt">
+                          <em class="pc-txt">Product Information Sheet</em>
+                          <em class="mo-txt">Product Information Sheet</em>
+                        </span>
+                      </a>
+                      <a role="button" class="tag-badge-icon" href="#">
+                        <img
+                          src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-a.svg"
+                          alt="energy level A">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock yellow" aria-label="Stock available for the next 10~20 days.">In
+                      Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <!-- [F] Multi Modules more 미노출시에는 .link-area 유지됨 -->
+                    <!-- <a role="button" class="btn-txt-underline xsm" href="#">
+                                            <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                                        </a> -->
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <!-- [F] Multi Modules more 미노출시에는 .link-area 유지됨 -->
+                    <!-- <a role="button" class="btn-txt-underline xsm" href="#">
+                                            <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                                        </a> -->
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <!-- [F] Multi Modules more 미노출시에는 .link-area 유지됨 -->
+                    <!-- <a role="button" class="btn-txt-underline xsm" href="#">
+                                            <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                                        </a> -->
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <!-- [F] Multi Modules more 미노출시에는 .link-area 유지됨 -->
+                    <!-- <a role="button" class="btn-txt-underline xsm" href="#">
+                                            <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                                        </a> -->
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <!-- [F] Multi Modules more 미노출시에는 .link-area 유지됨 -->
+                    <!-- <a role="button" class="btn-txt-underline xsm" href="#">
+                                            <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                                        </a> -->
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+                <li class="pdp-product-list">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="pdp-product__tit">
+                    <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <div class="swiper unit-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                      <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                    </div>
+                    <div class="swiper-button-next unit__next-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="swiper-button-prev unit__prev-btn">
+                      <span class="txt-blind">next</span>
+                    </div>
+                    <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                  </div>
+                  <div class="link-area">
+                    <!-- [F] Multi Modules more 미노출시에는 .link-area 유지됨 -->
+                    <!-- <a role="button" class="btn-txt-underline xsm" href="#">
+                                            <span class="btn-txt__txt txt-point2">Multi Modules more</span>
+                                        </a> -->
+                  </div>
+                  <div class="pdp-stock-box">
+                    <!-- 2024-08-09 stock class / tooltip 변경 -->
+                    <!-- [F] .txt-stock : green / yellow / red -->
+                    <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <p class="cont">
+                            <!-- 툴팁 문구 -->
+                          <p class="txt-fw-b"> 'Stock' availability </p>
+                          <div class="sotck-box">
+                            <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                            <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                            <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days</p>
+                          </div>
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //stock class / tooltip 변경 -->
+                  </div>
+                  <!-- 2024-08-14 class 추가 : hvac-price-flag-->
+                  <div class="tal-center hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">$949.00</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 수정 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+              <div class="fav-result__btn">
+                <button type="button" class="btn-block md">
+                  <span class="btn-block__txt">View more</span>
+                  <i class="btn-block__icon icon-btn-arrow"></i>
+                </button>
+              </div>
+              <!-- //결과 리스트 -->
+
+              <!-- 결과 없음 -->
+              <!-- <div class="list-nodata">
+                                <p class="txt-p6">There are no registered favorite lists.</p>
+                            </div> -->
+              <!-- //결과 없음 -->
+            </div>
+          </div>
+        </div>
+        <!-- //Product -->
+        <!-- Library -->
+        <div role="tabpanel" hidden="hidden">
+          <div class="fav-field-box">
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category 1</label>
+              <div class="combo-box box-type w-190">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                  aria-expanded="false">All</button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem" class="selected">All</li>
+                    <li role="menuitem">Technical Data Book</li>
+                    <li role="menuitem">DWG</li>
+                    <li role="menuitem">BIM</li>
+                    <li role="menuitem">Catalog</li>
+                    <li role="menuitem">Tech. Video</li>
+                    <li role="menuitem">User Manual</li>
+                    <li role="menuitem">Installation Manual</li>
+                    <li role="menuitem">CE DoC</li>
+                    <li role="menuitem">Exploded View</li>
+                    <li role="menuitem">Others</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-result__wrap fav-result-wrap">
+            <div class="result__num-btn">
+              <div class="result__num">
+                <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+              </div>
+              <!-- [F] 결과없을 때, Delete 버튼 미노출.-->
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Delete</span>
+              </button>
+            </div>
+            <ul class="result-list__wrap fav-lib-result">
+              <li class="list__head">
+                <div class="fav-col-check">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-product" value="all">
+                    <span class="btn-checkbox__icon"></span>
+                    <!-- 2024-07-24 모바일용 -->
+                    <span class="btn-checkbox__txt mo-display">Select All</span>
+                  </label>
+                </div>
+                <div class="fav-col-type">
+                  <p class="txt-p5 txt-fw-b">Material Type</p>
+                </div>
+                <div class="fav-col-title">
+                  <p class="txt-p5 txt-fw-b">Title</p>
+                </div>
+                <div class="fav-col-date">
+                  <p class="txt-p5 txt-fw-b">Date</p>
+                </div>
+                <div class="fav-col-btn">
+                  <p class="txt-p5 txt-fw-b">Learn More</p>
+                </div>
+              </li>
+              <li class="list__el-box">
+                <!-- 결과 리스트 -->
+                <ul class="list-data">
+                  <li class="list__el">
+                    <div class="fav-col-check">
+                      <label class="btn-checkbox fav-pdp-list__check">
+                        <input type="checkbox" class="btn-checkbox__input" name="fav-lib">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="fav-col-type">
+                      <span class="txt-p5 txt-point2">Technical Data Book</span>
+                    </div>
+                    <div class="fav-col-title">
+                      <p class="txt-p5">DVM</p>
+                      <!-- 2024-07-09 class 추가 txt-ellipsis / a 태그 추가-->
+                      <p class="txt-p5 txt-fw-b txt-ellipsis">
+                        <a href="#">SINGLE 4Way Cassette (INV, R410A, 60Hz, HP)</a>
+                      </p>
+                    </div>
+                    <div class="fav-col-date">
+                      <span class="txt-p5">2024-12-14</span>
+                    </div>
+                    <div class="fav-col-btn">
+                      <a role="button" class="btn-block" href="#" target="">
+                        <span class="btn-block__txt">Learn more</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <div class="fav-col-check">
+                      <label class="btn-checkbox fav-pdp-list__check">
+                        <input type="checkbox" class="btn-checkbox__input" name="fav-lib">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="fav-col-type">
+                      <span class="txt-p5 txt-point2">DWG</span>
+                    </div>
+                    <div class="fav-col-title">
+                      <p class="txt-p5">DVM</p>
+                      <!-- 2024-07-09 class 추가 txt-ellipsis / a 태그 추가-->
+                      <p class="txt-p5 txt-fw-b txt-ellipsis">
+                        <a href="#">SINGLESINGLESINGLESINGLESINGLESINGLESINGLE 4Way Cassette (INV, R410A, 60Hz, HP)</a>
+                      </p>
+                    </div>
+                    <div class="fav-col-date">
+                      <span class="txt-p5">2024-05-30</span>
+                    </div>
+                    <div class="fav-col-btn">
+                      <a role="button" class="btn-block" href="#" target="">
+                        <span class="btn-block__txt">Learn more</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+                <div class="fav-result__btn">
+                  <button type="button" class="btn-block md">
+                    <span class="btn-block__txt">View more</span>
+                    <i class="btn-block__icon icon-btn-arrow"></i>
+                  </button>
+                </div>
+                <!-- //결과 리스트 -->
+
+                <!-- 결과없음 -->
+                <!-- <div class="list-nodata">
+                                    <p class="txt-p6">There are no registered favorite lists.</p>
+                                </div> -->
+                <!-- //결과없음  -->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //Library -->
+        <!-- Other -->
+        <div role="tabpanel" hidden="hidden">
+          <div class="fav-field-box">
+            <div class="field-box">
+              <label class="txt-label txt-blind">Category 1</label>
+              <div class="combo-box box-type w-190">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                  aria-expanded="false">All</button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem" class="selected">All</li>
+                    <li role="menuitem">Announcement</li>
+                    <li role="menuitem">Blog</li>
+                    <li role="menuitem">Case Study</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-result__wrap fav-result-wrap">
+            <div class="result__num-btn">
+              <div class="result__num">
+                <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+              </div>
+              <!-- [F] 결과없을 때, Delete 버튼 미노출.-->
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Delete</span>
+              </button>
+            </div>
+            <ul class="result-list__wrap fav-other-result">
+              <li class="list__head">
+                <!-- [F]결과 없음때 미노출. -->
+                <div class="fav-col-check">
+                  <label class="btn-checkbox fav-pdp-list__check">
+                    <input type="checkbox" class="btn-checkbox__input" name="fav-other" value="all">
+                    <span class="btn-checkbox__icon"></span>
+                    <!-- 2024-07-24 모바일용 -->
+                    <span class="btn-checkbox__txt mo-display">Select All</span>
+                  </label>
+                </div>
+                <div class="fav-col-menu">
+                  <p class="txt-p5 txt-fw-b">Menu</p>
+                </div>
+                <div class="fav-col-ctg">
+                  <p class="txt-p5 txt-fw-b">Category/Vertical</p>
+                </div>
+                <div class="fav-col-title">
+                  <p class="txt-p5 txt-fw-b">Title</p>
+                </div>
+                <!-- 2024-06-26 col 추가 -->
+                <div class="fav-col-date">
+                  <p class="txt-p5 txt-fw-b">Date</p>
+                </div>
+                <div class="fav-col-btn">
+                  <p class="txt-p5 txt-fw-b">Learn More</p>
+                </div>
+              </li>
+              <li class="list__el-box">
+                <!-- 결과 리스트 -->
+                <ul class="list-data">
+                  <li class="list__el">
+                    <div class="fav-col-check">
+                      <label class="btn-checkbox fav-pdp-list__check">
+                        <input type="checkbox" class="btn-checkbox__input" name="fav-other">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="fav-col-menu">
+                      <span class="txt-p5 txt-point2">Announcement</span>
+                    </div>
+                    <div class="fav-col-ctg">
+                      <span class="txt-p5">Notice</span>
+                    </div>
+                    <div class="fav-col-title">
+                      <!-- 2024-07-09 class 추가 txt-fw-b / a 태그 추가-->
+                      <p class="txt-p5 txt-fw-b txt-ellipsis3">
+                        <a href="#">Introducing Galaxy Book4 Series: The Most Intelligent and Powerful Galaxy Book
+                          Yet</a>
+                      </p>
+                    </div>
+                    <!-- 2024-06-26 col 추가 -->
+                    <div class="fav-col-date">
+                      <span class="txt-p5">2024-05-30</span>
+                    </div>
+                    <div class="fav-col-btn">
+                      <a role="button" class="btn-block" href="#" target="">
+                        <span class="btn-block__txt">Learn more</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="list__el">
+                    <div class="fav-col-check">
+                      <label class="btn-checkbox fav-pdp-list__check">
+                        <input type="checkbox" class="btn-checkbox__input" name="fav-other">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="fav-col-menu">
+                      <span class="txt-p5 txt-point2">Blog AI</span>
+                    </div>
+                    <div class="fav-col-ctg">
+                      <span class="txt-p5">Climate crisis</span>
+                    </div>
+                    <div class="fav-col-title">
+                      <!-- 2024-07-09 class 추가 txt-fw-b / a 태그 추가-->
+                      <p class="txt-p5 txt-fw-b txt-ellipsis3">
+                        <a href="#">Samsung and Google Cloud Join Google Cloud Join Google Cloud Join Forces to Bring
+                          Generative Forces to Bring 1234 Generative AI to Samsung Galaxy S24 AI Samsung Sam
+                          sungSamsungSamsun gSamsungSam sungSamsungSamsungSamsungSamsung</a>
+                      </p>
+                    </div>
+                    <div class="fav-col-date">
+                      <span class="txt-p5">2024-12-30</span>
+                    </div>
+                    <div class="fav-col-btn">
+                      <a role="button" class="btn-block" href="#" target="">
+                        <span class="btn-block__txt">Learn more</span>
+                      </a>
+                    </div>
+
+                  </li>
+                </ul>
+                <div class="fav-result__btn">
+                  <button type="button" class="btn-block md">
+                    <span class="btn-block__txt">View more</span>
+                    <i class="btn-block__icon icon-btn-arrow"></i>
+                  </button>
+                </div>
+                <!-- //결과 리스트 -->
+
+                <!-- 결과 없음 -->
+                <!-- <div class="list-nodata">
+                                    <p class="txt-p6">There are no registered favorite lists.</p>
+                                </div> -->
+                <!-- //결과 없음 -->
+
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- //Other -->
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+
+  <script>
+    // pub only All check table
+    const checkTable = document.querySelectorAll('.fav-result-wrap')
+    checkTable.forEach(table => {
+      const AllCeck = table.querySelector('.btn-checkbox input[value="all"]');
+      const check = table.querySelectorAll('.list__el .btn-checkbox input');
+
+      AllCeck.addEventListener('change', () => {
+        check.forEach(checkbox => {
+          checkbox.checked = AllCeck.checked;
+        });
+      });
+
+      check.forEach(el => {
+        el.addEventListener('change', () => {
+          const allChecked = Array.from(check).every(cb => cb.checked);
+          AllCeck.checked = allChecked;
+        });
+      });
+
+    })
+
+    // pub only All check list
+    const AllListCeck = document.querySelector('.btn-checkbox .checkbox-all');
+    const ListCheck = document.querySelectorAll('.pdp-product-list .btn-checkbox input');
+
+    AllListCeck.addEventListener('change', () => {
+      ListCheck.forEach(checkbox => {
+        checkbox.checked = AllListCeck.checked;
+      });
+    });
+
+    ListCheck.forEach(el => {
+      el.addEventListener('change', () => {
+        const allChecked = Array.from(ListCheck).every(cb => cb.checked);
+        AllListCeck.checked = allChecked;
+      });
+    });
+
+  </script>
+</body>
+
+</html>

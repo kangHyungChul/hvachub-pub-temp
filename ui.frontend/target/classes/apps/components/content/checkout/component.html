@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+
+<body>
+
+  <!-- component -->
+  <section class="checkout-sect">
+    <!--[F] h1 blind(화면에 미노출)-->
+    <h1 class="txt-blind">Checkout</h1>
+    <div class="checkout-sect-inner">
+      <!-- left -->
+      <div class="checkout-details-area">
+        <section class="detail__delivery">
+          <div class="tit-area">
+            <h2 class="txt-h3">Delivery Details</h2>
+          </div>
+          <div class="sect-box">
+            <div class="sect-box-top">
+              <p class="txt-h7">Shipping Address </p>
+              <button type="button" class="btn-block md" data-layer-target="popup-select-address">
+                <span class="btn-block__txt">Select</span>
+              </button>
+            </div>
+            <ul class="shipping-list">
+              <li class="list-el">
+                <p class="el-label">Ship to Name</p>
+                <p class="el-info">ALTUNCU MUHENDISLIK SANAYI VE TICAR ​(0002015712)</p>
+              </li>
+              <li class="list-el">
+                <p class="el-label">Address</p>
+                <p class="el-info">Alaçam Sok. No:5, Cinnah Caddesi, Çankaya/Ankara, 06690, Turkey</p>
+              </li>
+            </ul>
+          </div>
+          <div class="sect-box">
+            <div class="sect-box-top">
+              <p class="txt-h7">Contact Info. </p>
+            </div>
+            <ul class="contact-list">
+              <li class="field-box">
+                <label class="txt-label txt-req" for="first-name">First Name</label>
+                <div class="field-box-inner">
+                  <div class="input-box box-type">
+                    <input type="text" class="input-box__input" id="first-name" value="Gildone">
+                  </div>
+                  <p class="txt-error">This field is required.</p>
+                </div>
+              </li>
+              <li class="field-box">
+                <label class="txt-label txt-req" for="last-name">Last Name</label>
+                <div class="field-box-inner">
+                  <div class="input-box box-type">
+                    <input type="text" class="input-box__input" id="last-name" value="hong">
+                  </div>
+                  <p class="txt-error">This field is required.</p>
+                </div>
+              </li>
+              <li class="field-box">
+                <label class="txt-label" for="email">Email</label>
+                <div class="input-box box-type">
+                  <input type="text" class="input-box__input" id="email" maxlength="100" value="aaa@aaa.com">
+                </div>
+              </li>
+              <li class="field-box">
+                <label class="txt-label" for="t-phone-number">Phone Number</label>
+                <div class="input-box box-type">
+                  <input type="number" class="input-box__input" id="t-phone-number" value="902123688368">
+                </div>
+              </li>
+            </ul>
+            <label class="btn-checkbox">
+              <input type="checkbox" class="btn-checkbox__input" name="agreebox1" value="agreebox1" checked>
+              <span class="btn-checkbox__icon"></span>
+              <span class="btn-checkbox__txt">I agree to the consent form for the provision of personal information to third parties. (Required)</span>
+            </label>
+          </div>
+        </section>
+        <section class="detail__product">
+          <!-- [F]buy online 진입시  -->
+          <div class="prd-box">
+            <div class="tit-area">
+              <h2 class="txt-h6">Product Details</h2>
+              <!-- 2025-02-05 div 추가 : btn-box -->
+              <div class="btn-box">
+                <button type="button" class="btn-icon icon-arrow-bottom">
+                  <span class="txt-blind">folded</span>
+                </button>
+              </div>
+            </div>
+            <!-- product list -->
+            <ul class="prd-list">
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__right">
+                    <p class="txt-p4 txt-fw-b txt-total">Total</p>
+                    <p class="txt-p5 txt-del">808.499,00 TL</p>
+                    <p class="txt-p2 txt-fw-b">717.499,00 TL</p>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER Heat Recovery High EER Heat Recovery High EER Heat Recovery High EER Heat Recovery High EER High EER</p>
+                          <!-- 2025-02-05 class 추가 : txt-code-->
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <!-- 2025-02-05 추가 (MO용 수량) -->
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <!-- 2025-02-05 class 추가 : pc-display (PC용 수량)-->
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                          <p class="txt-p6">Grade : A</p>
+                          <div class="stock-box">
+                            <!-- [F ] color : green / yellow / red -->
+                            <span class="txt-p6 txt-stock green">Stock</span>
+                            <div class="tooltip">
+                              <button type="button" class="btn-icon tooltip__btn type-black">
+                                <span class="txt-blind">tooltip view</span>
+                              </button>
+                              <div class="tooltip__contents">
+                                <div class="tooltip__contents-inner">
+                                  <button type="button" class="btn-icon tooltip-close__btn">
+                                    <span class="txt-blind">tooltip close</span>
+                                  </button>
+                                  <div class="cont">
+                                    <!-- 툴팁 문구 -->
+                                    <p class="txt-fw-b">‘Stock' availability</p>
+                                    <div class="sotck-box">
+                                      <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                                      <p class="txt-p7 txt-stock yellow">Stock has limited availability now.</p>
+                                      <p class="txt-p7 txt-stock red">Stock is not currently available.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <a href="#none" class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</a>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                          <div class="stock-box">
+                            <!-- [F ] color : green / yellow / red -->
+                            <span class="txt-p6 txt-stock yellow">Stock</span>
+                            <div class="tooltip">
+                              <button type="button" class="btn-icon tooltip__btn type-black">
+                                <span class="txt-blind">tooltip view</span>
+                              </button>
+                              <div class="tooltip__contents">
+                                <div class="tooltip__contents-inner">
+                                  <button type="button" class="btn-icon tooltip-close__btn">
+                                    <span class="txt-blind">tooltip close</span>
+                                  </button>
+                                  <div class="cont">
+                                    <!-- 툴팁 문구 -->
+                                    <p class="txt-fw-b">‘Stock' availability</p>
+                                    <div class="sotck-box">
+                                      <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                                      <p class="txt-p7 txt-stock yellow">Stock has limited availability now.</p>
+                                      <p class="txt-p7 txt-stock red">Stock is not currently available.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                          <div class="stock-box">
+                            <!-- [F ] color : green / yellow / red -->
+                            <span class="txt-p6 txt-stock red">Stock</span>
+                            <div class="tooltip">
+                              <button type="button" class="btn-icon tooltip__btn type-black">
+                                <span class="txt-blind">tooltip view</span>
+                              </button>
+                              <div class="tooltip__contents">
+                                <div class="tooltip__contents-inner">
+                                  <button type="button" class="btn-icon tooltip-close__btn">
+                                    <span class="txt-blind">tooltip close</span>
+                                  </button>
+                                  <div class="cont">
+                                    <!-- 툴팁 문구 -->
+                                    <p class="txt-fw-b">‘Stock' availability</p>
+                                    <div class="sotck-box">
+                                      <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                                      <p class="txt-p7 txt-stock yellow">Stock has limited availability now.</p>
+                                      <p class="txt-p7 txt-stock red">Stock is not currently available.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+            </ul>
+            <!-- //product list -->
+          </div>
+          <!-- //buy online dafault -->
+          <!-- [F] poject / run-rate 진입시 class 추가 : project-type -->
+          <div class="prd-box project-type">
+            <div class="tit-area">
+              <h2 class="txt-h6">Product Details</h2>
+              <!-- 2025-02-05 div 추가 : btn-box -->
+              <div class="btn-box">
+                <!-- 2025-02-05 PC/MO 분리 : PC용 -->
+                <div class="prj-name-pc">
+                  <p class="prd-name txt-p4">
+                    <span>Project name </span>
+                    <span class="txt-fw-b">Samsung hvac Aircon</span>
+                  </p>
+                  <button type="button" class="btn-block">
+                    <span class="btn-block__txt">Edit</span>
+                  </button>
+                </div>
+                <button type="button" class="btn-icon icon-arrow-bottom ">
+                  <span class="txt-blind">folded</span>
+                </button>
+              </div>
+
+            </div>
+            <!-- 2025-02-05 PC/MO 분리 : 모바일용 -->
+            <div class="prj-name-mo mo-display">
+              <p class="prd-name txt-p6">
+                <span class="txt-fw-b">Project name </span>
+                <span>Samsung hvac Aircon</span>
+              </p>
+              <button type="button" class="btn-block">
+                <span class="btn-block__txt">Edit</span>
+              </button>
+            </div>
+
+            <!-- product list -->
+            <ul class="prd-list">
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                    <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <!-- 2025-02-05 class 추가 -->
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <!-- 2025-02-05 추가 (MO용 수량) -->
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <!-- 2025-02-05 class 추가 : pc-display (PC용)-->
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6">Grade : A</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6">Grade : B</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6">Grade : C</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                    <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6">Grade : A</p>
+                        </li>
+                      </ul>
+                      <!-- [F] 모듈이 있는 경우 -->
+                      <div class="module-box">
+                        <ul class="list-el">
+                          <li class="el-img">
+                            <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                          </li>
+                          <li class="el-txt">
+                            <p class="txt-p6">
+                              <span class="txt-arrow">Outdoor</span>
+                              <span class="txt-arrow">Indoor Unit</span>
+                            </p>
+                            <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                            <p class="txt-code txt-p6">AM200AXVAGH</p>
+                            <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                          </li>
+                          <li class="el-qty pc-display">
+                            <span class="txt-p6 txt-fw-b">999</span>
+                          </li>
+                          <li class="el-price">
+                            <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                            <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                            <p class="txt-p6">Grade : A</p>
+                          </li>
+                        </ul>
+                        <ul class="list-el">
+                          <li class="el-img">
+                            <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                          </li>
+                          <li class="el-txt">
+                            <p class="txt-p6">
+                              <span class="txt-arrow">Outdoor</span>
+                              <span class="txt-arrow">Indoor Unit</span>
+                            </p>
+                            <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                            <p class="txt-code txt-p6">AM200AXVAGH</p>
+                            <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                          </li>
+                          <li class="el-qty pc-display">
+                            <span class="txt-p6 txt-fw-b">999</span>
+                          </li>
+                          <li class="el-price">
+                            <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                            <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                            <p class="txt-p6">Grade : A</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6">Grade : A</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6">Grade : A</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                    <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6">Grade : A</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6">Grade : A</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <!-- <p class="txt-p6">Grade : A</p> -->
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+            </ul>
+            <!-- //product list -->
+          </div>
+          <!-- Terms & conditions -->
+          <div class="terms-box">
+            <div class="accordion-box sm">
+              <div class="accordion__tit">
+                <label class="btn-checkbox">
+                  <input type="checkbox" class="btn-checkbox__input" name="agreebox2" value="agreebox2">
+                  <span class="btn-checkbox__icon"></span>
+                  <span class="btn-checkbox__txt">Terms & Conditions</span>
+                </label>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                Our prices do not include VAT (18%). Any and all special consumption tax, duty, fund, additional burdens that may arise from changes in tax legislation that must be paid by law will be the responsibility of the buyer.<br>
+                <strong>PAYMENT</strong>: The entire amount will be paid in advance to be received at the time of order.<br>
+                <strong>EXCHANGE RATE</strong>: The bid amount is stated in USD. In case of agreement, TL invoice will be based on the TCMB foreign exchange sales rate on the invoice date.<br>
+                <strong>DELIVERY TIME and FORM</strong>: Our devices are delivered to your warehouse on a vehicle. Our devices can be delivered immediately for our products in stock after order approval.<br>
+                The delivery time range for products out of stock may vary between 4-16 weeks. Please contact your sales representative.<br>
+                <strong>WARRANTY</strong>: All units belonging to our air conditioning systems are under Samsung Electronics Turkey warranty against manufacturing defects for a period of 24 months from the date of commissioning by
+                authorized services.<br>
+                In case of improper storage and storage conditions of Samsung products, failures caused by energy quality and electrical infrastructure, failures caused by usage and maintenance errors; Samsung Turkey reserves the right not
+                to provide warranty.<br>
+                <strong>COMMISSIONING</strong>: Systems that are not commissioned by Samsung System Air Conditioning Authorized Service Centers are out of warranty.<br>
+                The power values ​​of the air conditioning units are specified in the technical catalogs, and it is the customer's responsibility to ensure that the installed power, voltage values ​​and correct grounding line required for
+                the operation of the system are provided.<br>
+                <strong>INSTALLATION and WORKMANSHIP</strong>: All kinds of assembly and workmanship costs of the products are not included in the device prices.<br>
+                Installation authority is only in Samsung VRF authorized services. Services suitable for the projects will be recommended by our after-sales services department. Devices whose copper pipe assembly is not performed by
+                companies that have a Samsung Assembly Certificate will be evaluated outside the scope of warranty. Commissioning costs are included in the device unit prices.<br>
+                <strong>OPTION</strong>: The offer validity period is one (1) week.<br>
+                Product visuals and descriptions may vary, it is recommended to review the current Technical Databooks.<br>
+                Samsung Turkey may make changes in the offers prepared in Turkish Lira depending on the increases in the exchange rate and the list prices published by Samsung Turkey on a monthly basis.
+              </div>
+            </div>
+            <p class="txt-error">Please accept Tearms & Conditions.</p>
+          </div>
+        </section>
+      </div>
+      <!-- //left -->
+      <!-- right -->
+      <div class="checkout-total-box">
+        <div class="total-box-inner">
+          <div class="box net">
+            <p class="box-tit txt-h7">Net Amount</p>
+            <!-- 2025-02-19 가격 추가 -->
+            <p class="txt-del tal-right">808.499,00 TL</p>
+            <p class="txt-h7 tal-right">$21,053.75</p>
+            <p class="txt-h7 tal-right">717.499,00 TL</p>
+            <p class="txt-p3 tal-right">Exchange Rate <span class="txt-fw-b">($1 = 38.33 TL)</span></p>
+          </div>
+          <div class="box tax">
+            <p class="box-tit txt-p4">Tax Included</p>
+            <p class="txt-gray">
+              <span class="txt-p5 tal-left">VAT(20%)</span>
+              <span class="txt-p4 txt-fw-b tal-right">80.84 TL</span>
+            </p>
+          </div>
+          <div class="box total">
+            <p class="box-tit txt-h7">Total Amount (Tax Included)</p>
+            <p class="txt-h5 tal-right">717.579,84 TL</p>
+          </div>
+          <div class="box field">
+            <!-- [F] project 진입시 삭제 -->
+            <div class="field-box">
+              <label class="txt-label txt-req">Request Delivery Date</label>
+              <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+              <p class="txt-error">This field is required.</p>
+            </div>
+            <div class="field-box">
+              <label class="txt-label txt-req" for="">PO Number</label>
+              <div class="input-box box-type">
+                <input type="text" class="input-box__input" id="" placeholder="Type a PO number">
+              </div>
+              <p class="txt-error">This field is required.</p>
+            </div>
+          </div>
+          <div class="box btn">
+            <button type="button" class="btn-block lg type3">
+              <span class="btn-block__txt">Place Order</span>
+            </button>
+          </div>
+        </div>
+        <div class="credit-terms-box">
+          <p class="txt-p5">
+            <span class="tal-left">Available Credit</span>
+            <span class="tal-right">33.999.999,00 TL</span>
+          </p>
+          <p class="txt-p5">
+            <span class="tal-left">Payment Terms</span>
+            <span class="tal-right">150 days​</span>
+          </p>
+        </div>
+      </div>
+      <!-- //right -->
+    </div>
+
+    <!-- select address popup -->
+    <div class="popup-wrap pop-select-address" id="popup-select-address">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Select Address</p>
+        </div>
+        <div class="popup__container">
+          <!-- 2025-02-05 search box 변경 -->
+          <div class="field-box address-search">
+            <label class="txt-label txt-blind" for="btn-required-search">search</label>
+            <div class="input-search-box">
+              <div class="input-box box-type input-search">
+                <input type="search" class="input-box__input" id="" placeholder="Type a description">
+                <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              </div>
+              <button type="button" class="btn-block type2 md add-sh-btn">
+                <span class="btn-block__txt">Search</span>
+              </button>
+            </div>
+          </div>
+          <div class="address-list-box">
+            <!-- no result -->
+            <!-- 2025-03-02 class 변경 no-result ==> list-nodata -->
+            <div class="list-nodata" style="display: none;">
+              <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5 -->
+              <p class="txt-p5">No matching results found.​</p>
+            </div>
+            <!-- //no result -->
+            <!-- result -->
+            <ul class="address-list">
+              <li class="list-el">
+                <div class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-line-slash">COST LOJISTIK</span>
+                    <span class="txt-line-slash">0002015709</span>
+                  </p>
+                  <p class="txt-p6">123 Main Street, Central District, Anytown, 12345, United States</p>
+                </div>
+                <!-- [F] 선택시 class 추가 : type2 -->
+                <button type="button" class="btn-block type2">
+                  <span class="btn-block__txt">Select</span>
+                </button>
+              </li>
+              <li class="list-el">
+                <div class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-line-slash">COST LOJISTIK</span>
+                    <span class="txt-line-slash">0002015709</span>
+                  </p>
+                  <p class="txt-p6">123 Main Street, Central District, Anytown, 12345, United States</p>
+                </div>
+                <button type="button" class="btn-block">
+                  <span class="btn-block__txt">Select</span>
+                </button>
+              </li>
+              <li class="list-el">
+                <div class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-line-slash">COST LOJISTIK</span>
+                    <span class="txt-line-slash">0002015709</span>
+                  </p>
+                  <p class="txt-p6">123 Main Street, Central District, Anytown, 12345, United States</p>
+                </div>
+                <button type="button" class="btn-block">
+                  <span class="btn-block__txt">Select</span>
+                </button>
+              </li>
+              <li class="list-el">
+                <div class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-line-slash">COST LOJISTIK</span>
+                    <span class="txt-line-slash">0002015709</span>
+                  </p>
+                  <p class="txt-p6">123 Main Street, Central District, Anytown, 12345, United States</p>
+                </div>
+                <button type="button" class="btn-block">
+                  <span class="btn-block__txt">Select</span>
+                </button>
+              </li>
+              <li class="list-el">
+                <div class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-line-slash">COST LOJISTIK</span>
+                    <span class="txt-line-slash">0002015709</span>
+                  </p>
+                  <p class="txt-p6">123 Main Street, Central District, Anytown, 12345, United States</p>
+                </div>
+                <button type="button" class="btn-block">
+                  <span class="btn-block__txt">Select</span>
+                </button>
+              </li>
+              <li class="list-el">
+                <div class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-line-slash">COST LOJISTIK</span>
+                    <span class="txt-line-slash">0002015709</span>
+                  </p>
+                  <p class="txt-p6">123 Main Street, Central District, Anytown, 12345, United States</p>
+                </div>
+                <button type="button" class="btn-block">
+                  <span class="btn-block__txt">Select</span>
+                </button>
+              </li>
+              <li class="list-el">
+                <div class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-line-slash">COST LOJISTIK</span>
+                    <span class="txt-line-slash">0002015709</span>
+                  </p>
+                  <p class="txt-p6">123 Main Street, Central District, Anytown, 12345, United States</p>
+                </div>
+                <button type="button" class="btn-block">
+                  <span class="btn-block__txt">Select</span>
+                </button>
+              </li>
+            </ul>
+            <!-- //result -->
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block type2 lg" onclick="window.hvachubFunc.closePopup('popup-select-address')">
+            <span class="btn-block__txt">Close</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+    <!-- //select address popup -->
+    <!-- System maintenance alert -->
+    <div class="alert-wrap" id="alert-maintenance">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-h7">System maintenance​</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p4">
+            Due to the exchange rate system check, the service is not available for about 20 minutes<br>
+            (14:50 to 15:10)​ <br>
+            I'm sorry for the inconvenience
+          </p>
+        </div>
+        <div class="alert__footer">
+          <!-- 특정 버튼에 closePopup 적용 예시 -->
+          <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup('alert-maintenance')">
+            <span class="btn-block__txt">Close</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+    <!-- //error alert -->
+  </section>
+  <!-- //component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+  <script>
+    // 퍼블 확인
+    // product detail list 접고 펼치기
+    checkoutFoldedEvent()
+    function checkoutFoldedEvent() {
+      const prdBoxs = document.querySelectorAll(".checkout-sect .prd-box");
+      prdBoxs.forEach((box) => {
+        const btnAllFold = box.querySelector(".tit-area .icon-arrow-bottom");
+        const items = box.querySelectorAll(".prd-list .item__total");
+        items.forEach((item) => {
+          const pElement = item.querySelector(".icon-arrow-bottom");
+          if (pElement) {
+            pElement.addEventListener("click", () => {
+              if (item.classList.contains("active")) {
+                item.classList.remove("active");
+              } else {
+                item.classList.add("active");
+              }
+              updateBtn();
+            });
+          }
+        });
+        btnAllFold.addEventListener("click", function () {
+          if (btnAllFold.classList.contains("folded")) {
+            items.forEach((item) => item.classList.remove("active"));
+            btnAllFold.classList.add("folded");
+          } else {
+            items.forEach((item) => item.classList.add("active"));
+            btnAllFold.classList.remove("folded");
+          }
+          updateBtn();
+        });
+        function updateBtn() {
+          const allActive = Array.from(items).every((item) => item.classList.contains("active"));
+          if (allActive) {
+            btnAllFold.classList.add("folded");
+          } else {
+            btnAllFold.classList.remove("folded");
+          }
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

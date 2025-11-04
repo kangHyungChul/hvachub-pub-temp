@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>Member & Share Popup</title>
+    <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/apps/components/content/inner-content/pop-member-share/clientlibs/css/main.css"><!-- 컴포넌트 css -->
+
+    <!-- 2025-04-11 요청으로 삽입 //-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <div>
+    <button type="button" class="btn-block md icon-member" data-layer-target="popup-member-share">
+      <span class="btn-block__txt">Member & Share</span>
+    </button>
+
+    <!-- Member & Share Popup -->
+    <div class="popup-wrap pop-member-share-wrap" id="popup-member-share">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Member & Share</p>
+        </div>
+        <div class="popup__container">
+          <div class="pop-member-share__cont">
+            <!-- S: 240806 mo tab 버튼 추가 -->
+            <div class="mo-tab-wrap mo-display">
+              <button type="button" class="btn-txt tab-tit first-tit active">
+                <span class="btn-block__txt">All Members</span>
+              </button>
+              <button type="button" class="btn-txt tab-tit second-tit prj-mem">
+                <span class="btn-block__txt">Project Members</span>
+              </button>
+            </div>
+            <!-- E: 240806 mo tab 버튼 추가 -->
+            <!-- S: all members -->
+            <article class="all-member__wrap">
+              <strong class="txt-h8 pc-display">All Members</strong><!-- 240806 pc-dispay 클래스 추가 --><!-- 240806 pc에서만 노출 -> mo 에서는 탭으로 노출 -->
+              <ul class="member-table checkbox-list__wrap">
+                <!-- table head -->
+                <li class="table-head">
+                  <div class="list-check">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input checkbox-all" name="selectAll" value="selectAll">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt txt-blind">Select All</span>
+                    </label>
+                  </div>
+                  <strong class="list-id txt-p5">User ID</strong>
+                </li>
+                <!-- table body -->
+                <li class="table-body">
+                  <ul class="body__inner">
+                    <!-- list 1 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <!-- checkbox disabled -> input.btn-checkbox__input에 disabled 속성 추가 (checkbox 전체 동일) -->
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list01" disabled>
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p><!-- user id -->
+                    </li>
+                    <!-- list 2 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list02">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p><!-- user id -->
+                    </li>
+                    <!-- list 3 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list03">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p><!-- user id -->
+                    </li>
+                    <!-- list 4 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list04">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p><!-- user id -->
+                    </li>
+                    <!-- list 5 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list05">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p><!-- user id -->
+                    </li>
+                    <!-- list 6 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list06">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 7 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list07">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 8 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list08">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 9 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list09">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 10 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list10">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 11 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list11">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 12 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list12">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 13 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list13">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 14 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list14">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                    <!-- list 15 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list15">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </article>
+            <!-- E: all members -->
+
+            <!-- list add & delete btn -->
+            <div class="add-del-btn__wrap">
+              <button type="button" class="btn-icon icon-add" disabled> 
+                <span class="txt-blind">add</span> 
+              </button>
+              <button type="button" class="btn-icon icon-del" disabled> 
+                <span class="txt-blind">delete</span> 
+              </button>
+            </div>
+            <!-- S: project members -->
+            <article class="prj-member__wrap">
+              <strong class="txt-h8 pc-display">Project Members</strong><!-- 240806 pc-dispay 클래스 추가 --><!-- 240806 pc에서만 노출 -> mo 에서는 탭으로 노출 -->
+              <div class="btn-box mo-display"><!-- 240806 div.mo-display 영역 추가 -->
+                <button type="button" class="btn-block type2">
+                  <span class="btn-block__txt">Delete</span>
+                </button>
+              </div>
+              <ul class="member-table checkbox-list__wrap">
+                <!-- table head -->
+                <li class="table-head">
+                  <div class="list-check">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input checkbox-all" name="selectAll" value="selectAll">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt txt-blind">Select All</span>
+                    </label>
+                  </div>
+                  <strong class="list-id txt-p5">User ID</strong><!-- user id -->
+                  <strong class="list-auth txt-p5">Permissions</strong><!-- 240723 text 변경 : 권한 -> Permissions -->
+                </li>
+                <!-- table body -->
+                <li class="table-body">
+                  <ul class="body__inner">
+                    <!-- list 1 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list01">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p><!-- user id -->
+                      <div class="list-auth">
+                        <div class="field-box sm">
+                          <label class="txt-label txt-blind">Permissions</label><!-- 240723 text 변경 : 권한 -> Permissions -->
+                          <div class="combo-box box-type">
+                            <!-- select disabled -> button.combo-box__txt에 disabled 속성 추가 (select 전체 동일) -->
+                            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" disabled>Viewer</button>
+                            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                              <ul class="combo-box__menu-list" >
+                                <li role="menuitem">Viewer</li>
+                                <li role="menuitem">Editor</li>
+                                <li role="menuitem">Owner</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- list 2 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list02">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p><!-- user id -->
+                      <div class="list-auth">
+                        <div class="field-box sm">
+                          <label class="txt-label txt-blind">Permissions</label><!-- 240723 text 변경 : 권한 -> Permissions -->
+                          <div class="combo-box box-type">
+                            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Viewer</button>
+                            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                              <ul class="combo-box__menu-list" >
+                                <li role="menuitem">Viewer</li>
+                                <li role="menuitem">Editor</li>
+                                <li role="menuitem">Owner</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!-- list 3 -->
+                    <li class="body-list">
+                      <div class="list-check">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="selectList" value="list03">
+                          <span class="btn-checkbox__icon"></span>
+                          <span class="btn-checkbox__txt txt-blind">Select</span>
+                        </label>
+                      </div>
+                      <p class="list-id txt-p5">userid001@mail.com</p><!-- user id -->
+                      <div class="list-auth">
+                        <div class="field-box sm">
+                          <label class="txt-label txt-blind">Permissions</label><!-- 240723 text 변경 : 권한 -> Permissions -->
+                          <div class="combo-box box-type">
+                            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Viewer</button>
+                            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                              <ul class="combo-box__menu-list" >
+                                <li role="menuitem">Viewer</li>
+                                <li role="menuitem">Editor</li>
+                                <li role="menuitem">Owner</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+            </article>
+            <!-- E: project members -->
+          </div>
+        </div>
+        <div class="popup__footer">
+          <!-- 240806 mo용 add to project members 버튼 추가 -->
+          <button type="button" class="btn-block md type2 all-btn">
+            <span class="btn-block__txt">Add To Project Members</span>
+          </button>
+          <button type="button" class="btn-block lg prj-btn" onclick="window.hvachubFunc.closePopup()"><!-- 240806 prj-btn 클래스 추가 -->
+            <span class="btn-block__txt">Cancle</span>
+          </button>
+          <!-- 
+            alert
+            button의 data-layer-target 값과 일치하는 div.alert-wrap id 값의 alert open
+          -->
+          <button type="button" class="btn-block type2 lg prj-btn" data-layer-target="alert-change-owner">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span></button>
+      </div>
+    </div>
+  </div>
+
+
+<!-- common.js -->
+<script src="/pub-only/js/main-lib.js"></script>
+<script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+
+<script src="/apps/components/content/inner-content/pop-member-share/clientlibs/js/main.js"></script><!-- 컴포넌트 js -->
+</body>
+</html>

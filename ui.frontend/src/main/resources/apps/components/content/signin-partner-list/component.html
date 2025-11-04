@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <title>singuin</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css" />
+
+  <!-- header -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/template-with-logo/clientlibs/css/main.css" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body> 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- template-width-logo component -->
+  <header class="logo-with-header">
+    <div class="header-inner">
+      <div class="logo-box">
+        <a href="#" target="_self" aria-label="samsung hvac hub">
+          <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/hvachub-logo.svg" alt="samsung hvac hub logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- //template-width-logo component -->
+
+  <!-- singin-container start //-->
+  <div id="singin-container">
+    <section class="singin-wrap">
+
+      <div class="tit-area">
+        <h1 class="txt-h3">Request Access to HVAC Hub</h1>
+        <p class="txt-p5">
+          To request access to HVAC Hub, please provide the required details below.<br />
+          Once your request is submitted, our team will review it and notify you of the next steps.
+        </p>
+      </div>   
+
+      <div class="partner-registion-list">
+        <div class="form__wrap">
+          <!-- Organization Level //-->
+          <div class="field-box">
+            <label class="txt-label txt-req">Organization Level</label>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" aria-required="true">
+                <span class="txt-placeholder">Please select the appropriate level that aligns with your role.</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">Please select the appropriate level that aligns with your role.</li> 
+                </ul>
+              </div>
+            </div>
+            <p class="txt-error">This field is required.</p>
+          </div>         
+          
+          <!-- AD Login 시도한 EP 계정이 "HVAC Hub" 권한이 없는 경우(RHQ, Subsidiary) -->
+          <!-- Organization //-->
+          <div class="field-box">
+            <label class="txt-label txt-req">Organization</label>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" aria-required="true">
+                <span class="txt-placeholder">Select a organization</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">Select a organization</li> 
+                </ul>
+              </div>
+            </div>
+            <p class="txt-error">This field is required.</p>
+          </div>   
+
+          <!-- AD Login 시도한 EP 계정이 "HVAC Hub" 권한이 없는 경우(HQ, RHQ, Subsidiary)  -->
+          <!-- Request Service //-->
+          <div class="field-box">
+            <label class="txt-label txt-req">Request Service</label>
+
+            <!-- 2025-04-29 radio -> checkbox로 수정 // -->
+            <div class="checkbox-group-box">
+              <label class="btn-checkbox">
+                <input type="checkbox" class="btn-checkbox__input" name="" value="">
+                <span class="btn-checkbox__icon"></span>
+                <span class="btn-checkbox__txt">HVAC Hub / DVM Pro / Air Solution app.​</span>
+              </label>
+
+              <label class="btn-checkbox">
+                <input type="checkbox" class="btn-checkbox__input" name="" value="">
+                <span class="btn-checkbox__icon"></span>
+                <span class="btn-checkbox__txt">HVAC Hub Admin​</span>
+              </label>
+
+              <label class="btn-checkbox">
+                <input type="checkbox" class="btn-checkbox__input" name="" value="">
+                <span class="btn-checkbox__icon"></span>
+                <span class="btn-checkbox__txt">Product Admin​</span>
+              </label>
+            </div>
+             <!-- // 2025-04-29 radio -> checkbox로 수정 -->
+            <p class="txt-error">Select One or more.​</p>
+          </div>  
+          
+          <!-- Reason for Request​ //-->
+          <div class="field-box">
+            <label class="txt-label">Reason for Request​</label>
+            <div class="field-box__inner">
+              <!-- [F] 유효성체크 : required -->
+              <textarea class="textarea" maxlength="3000" placeholder="Please explain your issue or questions​ "></textarea>             
+              <p class="txt-error">This field is required.</p>
+            </div>
+          </div>   
+
+          
+        </div>
+      </div>   
+
+      <div class="btn-box page-bottom-btn">       
+        <button type="button" class="btn-block">
+          <span class="btn-block__txt">Request</span>
+        </button>
+      </div>
+
+    </section>
+  </div>
+  <!-- // singin-container end -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script> 
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

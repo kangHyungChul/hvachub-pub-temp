@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image with Text</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/apps/components/content/image-with-text/clientlibs/css/main.css"
+    />
+  </head>
+  <body>
+    <div>
+      <!-- component -->
+      <section class="img-with-txt">
+        <div class="swiper img-with-txt__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- img align 오른쪽으로 변경시 .img-right 클래스 추가 (default -> left) -->
+              <article class="img-with-txt__contwrap">
+                <div class="img-with-txt__img">
+                  <!-- 임시 이미지 경로 -->
+                  <!-- 240618 pc/mo 이미지 분기처리 -->
+                  <img
+                    src="https://picsum.photos/560/360"
+                    alt="dashboard main swiper image"
+                    class="pc-display"
+                  />
+                  <img
+                    src="https://picsum.photos/279/140"
+                    alt="dashboard main swiper image"
+                    class="mo-display"
+                  />
+                </div>
+                <div class="img-with-txt__cont tal-left">
+                  <!-- 240523 heading 태그 -> p태그 수정 -->
+                  <p class="img-with-txt__title txt-h2 txt-fw-b">
+                    <span class="pc-txt">DVM Pro 2.0</span>
+                    <span class="mo-txt">DVM Pro 2.0</span>
+                  </p>
+                  <p class="img-with-txt__desc txt-p4">
+                    All design processes, including product selection, piping,
+                    wiring and system checks, are seamlessly integrated to
+                    provide a streamlined user experience, so you can respond to
+                    client requests rapidly. And, it includes an intuitive
+                    interface and a range of convenient features to simplify and
+                    speed-up the whole design process.
+                  </p>
+                  <div class="btn-box">
+                    <!-- [F]. color style:  white(-) ,black(.type2), blue(.type3) -->
+                    <!-- 240618 .more-btn 클래스 추가 -->
+                    <a
+                      role="button"
+                      href="#"
+                      class="btn-block type2 md more-btn"
+                      target=""
+                    >
+                      <span class="btn-block__txt"
+                        ><em class="pc-txt">Learn more</em>
+                        <em class="mo-txt">Learn more</em>
+                      </span>
+                    </a>
+                    <!-- [F]. size(font): large(-), small bold (.sm), small reqular (.xsm) -->
+                    <!-- 240618 .more-btn 클래스 추가 -->
+                    <!-- <a
+                      role="button"
+                      href="#"
+                      class="btn-txt-underline more-btn"
+                      target=""
+                    >
+                      <span class="btn-txt__txt"
+                        ><em class="pc-txt">Learn more</em
+                        ><em class="mo-txt">Learn more</em>
+                      </span>
+                    </a> [HVCHB-754] 240711 a.btn-txt-underline.more-btn 영역 제거  -->
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+          </div>
+
+          <!-- 240718 접근성 관련 swiper 텍스트 추가 -->
+          <div class="swiper-pagination-wrap">
+            <div class="swiper-pagination">
+              <span class="txt-blind">prev</span> /
+              <span class="txt-blind">next</span>
+            </div>
+            <div class="swiper-button-autoplay">
+              <span class="txt-blind">pause</span>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev">
+            <span class="txt-blind">prev</span>
+          </div>
+          <div class="swiper-button-next">
+            <span class="txt-blind">next</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- common.js -->
+    <script src="/pub-only/js/main-lib.js"></script>
+    <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+    <!-- 컴포넌트 js -->
+    <script src="/apps/components/content/image-with-text/clientlibs/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Error Code Finder</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+</head>
+
+<body>
+
+  <!-- component -->
+  <section class="error-code-finder">
+    <!-- S: search input 영역 -->
+    <div class="field-box error-code-search__wrap">
+      <div class="input-search-box">
+        <!-- focus가 되면 active -->
+        <div class="input-search-box__inner">
+          <div class="input-box box-type input-search">
+            <input type="search" class="input-box__input" id="btn-required-search" placeholder="Type an Error Code">
+            <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+          </div>
+          <div class="search-box__auto">
+            <ul class="search-box__auto-list">
+              <li class="autoitem">auto text</li>
+              <li class="autoitem">auto text</li>
+              <li class="autoitem">auto text</li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Search</span>
+        </button>
+      </div>
+    </div>
+    <!-- E: search input 영역 -->
+    <!-- S: search 결과 영역 -->
+
+    <!-- 2025-02-26 class 변경 my-result__wrap ==> basic-list-wrap / error-code-result__wrap 삭제-->
+    <div class="basic-list-wrap">
+      <!-- 2025-02-26 class 변경 result__num-btn ==> basic-list__top -->
+      <div class="basic-list__top">
+        <p class="txt-p6 txt-fw-b"><span class="txt-point1">10</span> Results</p>
+      </div>
+      <!-- 2025-02-26 class 변경 result-list__wrap ==> basic-list__result / 태그 변경 ul ==> div -->
+      <div class="basic-list__result">
+        <!-- 2025-02-26 class 변경 list__head ==> list-head / 태그 변경 li ==> ul-->
+        <ul class="list-head">
+          <!--  2025-02-26 box, text 분리  -->
+          <li class="list-el el-code">
+            <span class="txt-p5 txt-fw-b">Error Code</span>
+          </li>
+          <li class="list-el el-desc">
+            <span class="txt-p5 txt-fw-b">Description</span>
+          </li>
+          <li class="list-el el-guide">
+            <span class="txt-p5 txt-fw-b">Trouble Shooting Guide</span>
+          </li>
+        </ul>
+        <!-- 2025-02-26 li 삭제 : list__el-box -->
+        <!-- 2025-02-26 class 변경 list-data ==> list-body -->
+        <ul class="list-body">
+          <!-- 2025-02-26 class 변경 list__el ==> list-row -->
+          <li class="list-row">
+            <!--  2025-02-26 box, text 분리  -->
+            <div class="list-el el-code">
+              <span class="txt-p5">
+                <strong class="mo-txt">Error Code</strong>E010
+              </span>
+            </div>
+            <div class="list-el el-desc">
+              <span class="txt-p5">DVM.DPM.DBS: Communication error between indoor and outdoor units (in case of failure to receive signals from the indoor unit). SINGLE:Communication error between indoor unit panel and main unit.</span>
+            </div>
+            <div class="list-el el-guide">
+              <strong class="mo-txt">Trouble Shooting Guide</strong>
+              <button type="button" class="btn-block md" data-layer-target="ts-popup01">
+                <span class="btn-block__txt">Learn More</span>
+              </button>
+            </div>
+          </li>
+          <li class="list-row">
+            <div class="list-el el-code">
+              <span class="txt-p5">
+                <strong class="mo-txt">Error Code</strong>E011
+              </span>
+            </div>
+            <div class="list-el el-desc">
+              <span class="txt-p5">Pressure Sensor Sort/Open Error</span>
+            </div>
+            <div class="list-el el-guide">
+              <!-- 버튼이 없는 경우 -->
+            </div>
+          </li>
+          <!-- list3 -->
+          <li class="list-row">
+            <div class="list-el el-code">
+              <span class="txt-p5">
+                <strong class="mo-txt">Error Code</strong>E012
+              </span>
+            </div>
+            <div class="list-el el-desc">
+              <span class="txt-p5">
+                Error Code Description<br>
+                Error Code Description<br>
+                Error Code Description
+              </span>
+            </div>
+            <div class="list-el el-guide">
+              <!-- 버튼이 없는 경우 -->
+            </div>
+          </li>
+        </ul>
+
+        <!-- [F] 검색 결과가 없는 경우 -->
+        <div class="list-nodata">
+          <p class="txt-p5">There are no registered error codes.</p>
+        </div>
+
+      </div>
+      <!-- pagination -->
+      <div class="pagination pc-display">
+        <ul class="page-list">
+          <li class="btn-icon page-btn__prev" aria-disabled="true"> <a aria-label="prev" href=""></a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 1" class="page-list__no selected">1</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 2" class="page-list__no">2</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 3" class="page-list__no">3</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 4" class="page-list__no">4</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 5" class="page-list__no">5</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 6" class="page-list__no">6</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 7" class="page-list__no">7</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 8" class="page-list__no">8</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 9" class="page-list__no">9</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 10" class="page-list__no">10</a></li>
+          <li class="btn-icon page-btn__next"> <a aria-label="next" href=""></a> </li>
+        </ul>
+      </div>
+
+      <!-- 2025-02-26 class 변경 list-more__btn ==> tal-center -->
+      <div class="tal-center mo-display">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">View more</span>
+          <i class="btn-block__icon icon-arrow-bottom"></i>
+        </button>
+      </div>
+    </div>
+    <!-- E: search 결과 영역 -->
+
+    <!-- ts-popup01 -->
+    <div class="popup-wrap ts-popup" id="ts-popup01">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__container">
+          <!-- [F] 영역 미노출시 section.ts-pop__txt-box 제거 -->
+          <section class="ts-pop__txt-box">
+            <strong class="code txt-p2 txt-fw-b">E010</strong>
+            <p class="desc txt-p6">
+              DVM.DPM.DBS: Communication error between indoor and outdoor units (in case of failure to receive signals from the indoor unit). SINGLE: Communication error between indoor unit panel and main unit.
+            </p>
+          </section>
+          <section class="ts-pop__txt-box">
+            <strong class="code txt-p2 txt-fw-b">Posiible Causes</strong>
+            <p class="desc txt-p6">
+              1. Signal Cable Issue: The signal cable connecting the indoor and outdoor units might be damaged or loosely connected.<br>
+              2. Power Issue: If the power supply to the indoor or outdoor unit is unstable or disconnected, communication errors can occur.<br>
+              3. Communication Module Issue: There may be a fault in the communication module of either the indoor or outdoor unit.<br>
+              4. Electromagnetic Interference: Electromagnetic interference from the surrounding environment can disrupt signal transmission.
+            </p>
+          </section>
+          <section class="ts-pop__txt-box">
+            <strong class="code txt-p2 txt-fw-b">Solutions</strong>
+            <p class="desc txt-p6">
+              1. Inspect and Replace Cables: Check the signal cable connecting the indoor and outdoor units and fix or replace any damaged or loose connections.<br>
+              2. Verify Power Supply: Ensure that the power supply to both the indoor and outdoor units is stable and continuous.<br>
+              3. Replace Communication Module: If there is a fault in the communication module, replace the faulty part.<br>
+              4.Eliminate Electromagnetic Interference: Reduce electromagnetic interference by adjusting the placement of electronic devices near the air conditioner or installing protective measures.
+            </p>
+          </section>
+
+          <!-- 2025-02-26 class 변경 : ts-pop__img-box ==> ts-pop__swiper-box -->
+          <section class="ts-pop__swiper-box">
+            <span class="tag-flag">RAC</span>
+            <!-- 2025-02-26 class 변경 : error-code-pop-swiper ==> video-swiper -->
+            <div class="swiper video-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <!-- 2025-02-26 class 삭제 youtube-box__tit -->
+                  <p class="txt-h6 txt-fw-b">Testing a Return Air sensor Testing a Return Air sensor Testing a Return Air sensor Testing a Return Air sensor</p>
+                  <iframe src="https://www.youtube.com/embed/qySDWFTWeX8?si=ZWlFcn0Wl7MWziNb" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide">
+                  <p class="txt-h6 txt-fw-b">Video Title 2</p>
+                  <iframe src="https://www.youtube.com/embed/qySDWFTWeX8?si=ZWlFcn0Wl7MWziNb" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide"></div>
+              </div>
+
+              <!-- 2025-02-26 슬라이드 기본 좌우 버튼 추가-->
+              <div class="swiper-button-prev">
+                <span class="txt-blind">prev</span>
+              </div>
+              <div class="swiper-button-next">
+                <span class="txt-blind">next</span>
+              </div>
+
+              <!-- 2025-02-26 class 변경 pagination-btn-wrap ==> pagination-box -->
+              <div class="pagination-box">
+                <!-- 2025-02-26 페이지네이션 좌우 버튼 class 변경 -->
+                <div class="swiper-pagination-button-prev">
+                  <span class="txt-blind">prev</span>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- 2025-02-26 페이지네이션 좌우 버튼 class 변경 -->
+                <div class="swiper-pagination-button-next">
+                  <span class="txt-blind">next</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2025-02-26 class 변경 : ts-pop__img-box ==> ts-pop__swiper-box -->
+          <section class="ts-pop__swiper-box">
+            <span class="tag-flag">RAC</span>
+            <!-- 2025-02-26 class 변경 : error-code-pop-swiper ==> img-swiper -->
+            <div class="swiper img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/pub-only/images/error-code-finder-sample.png" alt="sample image" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/pub-only/images/error-code-finder-sample.png" alt="sample image" />
+                </div>
+                <div class="swiper-slide"></div>
+              </div>
+
+              <!-- 2025-02-26 슬라이드 기본 좌우 버튼 추가-->
+              <div class="swiper-button-prev">
+                <span class="txt-blind">slide prev</span>
+              </div>
+              <div class="swiper-button-next">
+                <span class="txt-blind">slide next</span>
+              </div>
+
+              <!-- 2025-02-26 class 변경 pagination-btn-wrap ==> pagination-box -->
+              <div class="pagination-box">
+                <!-- 2025-02-26 페이지네이션 좌우 버튼 class 변경 -->
+                <div class="swiper-pagination-button-prev">
+                  <span class="txt-blind">pagination prev</span>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- 2025-02-26 페이지네이션 좌우 버튼 class 변경 -->
+                <div class="swiper-pagination-button-next">
+                  <span class="txt-blind">pagination next</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- slide 가 하나일때 sample -->
+          <section class="ts-pop__swiper-box">
+            <span class="tag-flag">RAC</span>
+            <div class="swiper video-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <p class="txt-h6 txt-fw-b">Testing a Return Air sensor Testing a Return Air sensor Testing a Return Air sensor Testing a Return Air sensor</p>
+                  <iframe src="https://www.youtube.com/embed/qySDWFTWeX8?si=ZWlFcn0Wl7MWziNb" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="swiper-button-prev">
+                <span class="txt-blind">prev</span>
+              </div>
+              <div class="swiper-button-next">
+                <span class="txt-blind">next</span>
+              </div>
+              <div class="pagination-box">
+                <div class="swiper-pagination-button-prev">
+                  <span class="txt-blind">prev</span>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination-button-next">
+                  <span class="txt-blind">next</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="ts-pop__swiper-box">
+            <span class="tag-flag">RAC</span>
+            <div class="swiper img-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/pub-only/images/error-code-finder-sample.png" alt="sample image" />
+                </div>
+              </div>
+              <div class="swiper-button-prev">
+                <span class="txt-blind">slide prev</span>
+              </div>
+              <div class="swiper-button-next">
+                <span class="txt-blind">slide next</span>
+              </div>
+              <div class="pagination-box">
+                <div class="swiper-pagination-button-prev">
+                  <span class="txt-blind">pagination prev</span>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination-button-next">
+                  <span class="txt-blind">pagination next</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- //slide 가 하나일때 sample -->
+
+          <!-- 2025-02-26  -->
+          <section class="ts-pop__file-box">
+            <ul class="file-list">
+              <li class="list-el">
+                <i class="icon-block icon-pdf"></i>
+                <div class="file-name">
+                  <span class="txt-p5 file">SINGLE 4Way Cassette_Ver 1.0_231218.pdf</span>
+                  <span class="txt-p5 unit">1.65 MB</span>
+                </div>
+                <a role="button" class="btn-icon icon-download" href="#">
+                  <span class="txt-blind">Download</span>
+                </a>
+              </li>
+              <li class="list-el">
+                <i class="icon-block icon-pdf"></i>
+                <div class="file-name">
+                  <span class="txt-p5 file">SINGLE 4Way Cassette_Ver 1.0_231218.pdf</span>
+                  <span class="txt-p5 unit">1.65 MB</span>
+                </div>
+                <a role="button" class="btn-icon icon-download" href="#">
+                  <span class="txt-blind">Download</span>
+                </a>
+              </li>
+              <li class="list-el">
+                <i class="icon-block icon-pdf"></i>
+                <div class="file-name">
+                  <span class="txt-p5 file">SINGLE 4Way Cassette_Ver 1.0_231218.pdf</span>
+                  <span class="txt-p5 unit">1.65 MB</span>
+                </div>
+                <a role="button" class="btn-icon icon-download" href="#">
+                  <span class="txt-blind">Download</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

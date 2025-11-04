@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Create Simulation Request</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- component -->
+  <section class="supp-create-sim-sect">
+
+    <div class="form-box">
+      <!-- 2025-02-20 항목 추가 / 항목명 변경 -->
+      <div class="field-box">
+        <div class="label-box">
+          <label class="txt-label txt-req">Project ID/Quote ID</label>
+        </div>
+        <div class="field-box__inner">
+          <div class="inputbox-group">
+            <div class="input-box">
+              <input type="text" class="input-box__input" placeholder="Project ID" disabled>
+            </div>
+            <div class="input-box">
+              <input type="text" class="input-box__input" placeholder="Quote ID" disabled>
+            </div>
+            <button type="button" class="btn-block md type2" data-layer-target="popup-project-id">
+              <span class="btn-block__txt">Search</span>
+            </button>
+          </div>
+          <p class="txt-error">This field is required.</p>
+        </div>
+      </div>
+      <div class="field-box">
+        <div class="label-box">
+          <label class="txt-label txt-req">Simulation Type</label>
+        </div>
+        <div class="field-box__inner">
+          <div class="checkbox-group">
+            <label class="btn-checkbox">
+              <input type="checkbox" class="btn-checkbox__input" name="Simulation Type" value="">
+              <span class="btn-checkbox__icon"></span>
+              <span class="btn-checkbox__txt">CFD</span>
+            </label>
+            <label class="btn-checkbox">
+              <input type="checkbox" class="btn-checkbox__input" name="Simulation Type" value="">
+              <span class="btn-checkbox__icon"></span>
+              <span class="btn-checkbox__txt">Noise Analysis</span>
+            </label>
+            <label class="btn-checkbox">
+              <input type="checkbox" class="btn-checkbox__input" name="Simulation Type" value="">
+              <span class="btn-checkbox__icon"></span>
+              <span class="btn-checkbox__txt">Energy Simulation​​</span>
+            </label>
+          </div>
+          <p class="txt-error">This field is required.</p>
+        </div>
+      </div>
+      <div class="field-box">
+        <div class="label-box">
+          <label class="txt-label txt-req">Subject</label>
+        </div>
+        <div class="field-box__inner">
+          <div class="input-box">
+            <input type="text" class="input-box__input" placeholder="Type a subject" disabled>
+          </div>
+          <p class="txt-error">This field is required.</p>
+        </div>
+      </div>
+      <div class="field-box">
+        <div class="label-box">
+          <label class="txt-label txt-req">Description</label>
+        </div>
+        <div class="field-box__inner">
+          <!-- [F] 유효성체크 : required -->
+          <textarea class="textarea" maxlength="3000" placeholder="Please explain your issue or questions​ " required></textarea>
+          <p class="maxlength__desc txt-p6">
+            <span>0</span>/3000
+          </p>
+          <p class="txt-error">This field is required.</p>
+        </div>
+      </div>
+
+      <!-- 251023 추가 -->
+      <div class="grid-box">
+
+        <div class="field-box">
+          <div class="label-box">
+            <label class="txt-label" for="quote-status">Quote Status</label>
+          </div>
+          <div class="field-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-box__input" placeholder="Quote Status" id="quote-status" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-box">
+          <div class="label-box">
+            <label class="txt-label" for="sfdc-no">SFDC No.<br><span>(Opportunity No)</span></label>
+          </div>
+          <div class="field-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-box__input" placeholder="SFDC No." id="sfdc-no" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-box">
+          <div class="label-box">
+            <label class="txt-label" for="country">Country</label>
+          </div>
+          <div class="field-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-box__input" placeholder="Country" id="country" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-box">
+          <div class="label-box">
+            <label class="txt-label" for="vertical">Vertical</label>
+          </div>
+          <div class="field-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-box__input" placeholder="Vertical" id="vertical" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-box">
+          <div class="label-box">
+            <label class="txt-label" for="total-capacity">Total Capacity</label>
+          </div>
+          <div class="field-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-box__input" placeholder="Total Capacity" id="total-capacity" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-box">
+          <div class="label-box">
+            <label class="txt-label" for="amount">Amount</label>
+          </div>
+          <div class="field-box__inner">
+            <div class="input-box">
+              <input type="text" class="input-box__input" placeholder="Amount" id="amount" disabled>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 251023 추가 / Design Condition -->
+    <div class="form-box">
+      <strong class="form-box__header txt-h7">Design Condition</strong>
+      <div class="field-box">
+        <div class="label-box lg-width">
+          <label class="txt-label txt-req">The Indoor Temperature (DB/WB)</label>
+        </div>
+        <div class="field-box__inner">
+          <div class="input-box">
+            <input type="text" class="input-box__input" placeholder="Type a Indoor Temperature" id="indoor-temperature">
+          </div>
+        </div>
+      </div>
+      <div class="field-box">
+        <div class="label-box lg-width">
+          <label class="txt-label txt-req">The Outdoor Temperature (DB/WB)</label>
+        </div>
+        <div class="field-box__inner">
+          <div class="input-box">
+            <input type="text" class="input-box__input" placeholder="Type a Outdoor Temperature" id="outdoor-temperature">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 251023 추가 / attachments, equipment list -->
+    <div class="form-box">
+      <!-- 251023 미사용 -->
+      <!-- <div class="field-box">
+        <div class="label-box">
+          <label class="txt-label">Request Form</label>
+        </div>
+        <div class="field-box__inner">
+          <button type="button" class="btn-block req-down-btn">
+            <span class="btn-block__txt">Request Form Download</span>
+            <i class="btn-block__icon icon-download"></i>
+          </button>
+          <p class="txt-p5">Download the Request Form and fill in the details → Upload the file under 'Attachments'</p>
+          <p class="txt-error">File download failed.</p>
+        </div>
+      </div> -->
+      <div class="field-box">
+        <div class="label-box">
+          <!-- 2025-02-20 txt-labe 위치 확인 -->
+          <div class="tooltip">
+            <label class="txt-label txt-req">Attachments/CAD File</label>
+            <button type="button" class="btn-icon tooltip__btn"> <span class="txt-blind">tooltip view</span> </button>
+            <div class="tooltip__contents">
+              <div class="tooltip__contents-inner">
+                <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span> </button>
+                <p class="txt-fw-b">Sample CAD File</p>
+                <!-- 2025-02-20 텍스트 위치 변경 -->
+                <p class="txt-p7">&lt;Floor Plan Drawing file&gt;</p>
+                <ul class="flex-division">
+                  <li>
+                    <div class="img-box">
+                      <img src="/pub-only/images/img-cad1.png" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="/pub-only/images/img-cad1.png" alt="">
+                    </div>
+                  </li>
+                </ul>
+                <p class="txt-p7">&lt;Elevation plan / Cross Section Drawing File&gt;</p>
+                <ul class="flex-division">
+                  <li>
+                    <div class="img-box">
+                      <img src="/pub-only/images/img-cad1.png" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="/pub-only/images/img-cad1.png" alt="">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field-box__inner">
+          <!-- 2025-02-20 div 삭제 file-list-area -->
+          <!-- [F] .file-list-box 첨부된 파일이 없을 시, 공백없이 <ul class="file-list-box"></ul>   , dispaly: none 처리 -->
+          <ul class="file-list-box">
+            <li class="file-list__el">
+              <p class="file-name txt-p6">File namenameFilenamenameFile nameFile name 1.png</p>
+              <button class="file-name-btn" type="button"></button>
+            </li>
+            <li class="file-list__el">
+              <p class="file-name txt-p6">File name 2.pdf</p>
+              <button class="file-name-btn" type="button"></button>
+            </li>
+            <li class="file-list__el">
+              <p class="file-name txt-p6">File name 3.jpeg</p>
+              <button class="file-name-btn" type="button"></button>
+            </li>
+            <li class="file-list__el">
+              <p class="file-name txt-p6">File name 4.pptx</p>
+              <button class="file-name-btn" type="button"></button>
+            </li>
+            <li class="file-list__el">
+              <p class="file-name txt-p6">File name 5.xlsx</p>
+              <button class="file-name-btn" type="button"></button>
+            </li>
+          </ul>
+          <div class="upload-btn-box">
+            <label class="btn-block">
+              <span class="btn-block__txt">Upload</span>
+              <input type="file" multiple class="hidden-file-input" name="file-upload" />
+            </label>
+          </div>
+          <!-- 2025-02-20 문구 수정 -->
+          <p class="txt-ref-mark txt-p7">ach file must be under 2GB.</p>
+          <p class="txt-ref-mark txt-p7">Files larger than 50MB will be automatically deleted after 90 days.</p>
+          <p class="txt-error">This field is required.</p>
+          <p class="txt-error">Please check the file size.</p>
+          <p class="txt-error">File upload failed.</p>
+        </div>
+      </div>
+      <div class="field-box">
+        <div class="label-box">
+          <span class="txt-label">Equipment List</span>
+        </div>
+        <div class="table-box">
+          <table class="basic-table">
+            <colgroup>
+              <col class="type">
+              <col class="model-code">
+              <col class="product-name">
+              <col class="unit">
+              <col class="qty">
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">Type (IDU/ODU)</th>
+                <th scope="col">Model Code</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Qty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ODU</td>
+                <td>AM120AXVANH/TL</td>
+                <td>DVM S2</td>
+                <td>EA</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>ODU</td>
+                <td>AM120AXVANH/TL</td>
+                <td>DVM S2</td>
+                <td>EA</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2025-02-20 class 삭제 supp-bottom-btn -->
+    <div class="btn-box supp-bottom-btn">
+      <button type="button" class="btn-block md">
+        <span class="btn-block__txt">Cancel</span>
+      </button>
+      <button type="button" class="btn-block md type2" data-layer-target="submin-save">
+        <span class="btn-block__txt">Submit</span>
+      </button>
+    </div>
+
+    <!-- submin alert -->
+    <div class="alert-wrap" id="submin-save">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Submit</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Are you sure you want to submit it?</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+    <!-- //submin alert -->
+
+    <!-- 2025-02-20 popup 추가 :  Project ID  -->
+    <div class="popup-wrap popup-id" id="popup-project-id">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Project ID</p>
+        </div>
+        <div class="popup__container">
+          <div class="basic-list__top">
+            <p class="txt-h7">Select Project ID</p>
+          </div>
+          <div class="basic-list__result">
+            <ul class="list-head">
+              <li class="list-el el-check"></li>
+              <li class="list-el el-id">
+                <span class="txt-p6 txt-fw-b">Project ID</span>
+              </li>
+              <li class="list-el el-name">
+                <span class="txt-p6 txt-fw-b">Project Name </span>
+              </li>
+            </ul>
+            <ul class="list-body">
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <!-- 2025-03-07 checkbox ==> radio 교체 -->
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Project name Samsung e-Biz</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Need CFD Report for DVM S Installation</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">CFD Data Request for Energy Performance Evaluation</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">CFD Simulation Needed for HVAC System Design</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Request for CFD Analysis for New Construction Project</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Need CFD Report for DVM S Installation​</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">CFD Data Request for Energy Performance Evaluation​​</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">CFD Data Request for Energy Performance Evaluation​​</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Project ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">CFD Data Request for Energy Performance Evaluation​​</span>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div class="list-nodata" style="display: none;">
+            <p class="txt-p5">No Project is registered. Please register a project before creating a Simulation Request</p>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block type2 lg" data-layer-target="popup-quote-id">
+            <span class="btn-block__txt">Next</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- 2025-02-20 popup 추가 :  Quote ID  -->
+    <div class="popup-wrap popup-id" id="popup-quote-id">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Quote ID</p>
+        </div>
+        <div class="popup__container">
+          <div class="basic-list__top">
+            <p class="txt-h7">Select Quote ID</p>
+          </div>
+          <div class="basic-list__result">
+            <ul class="list-head">
+              <li class="list-el el-check"></li>
+              <li class="list-el el-id">
+                <span class="txt-p6 txt-fw-b">Quote ID</span>
+              </li>
+              <li class="list-el el-name">
+                <span class="txt-p6 txt-fw-b">Quote Name</span>
+              </li>
+            </ul>
+            <ul class="list-body">
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Quote ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">QT2024082400000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Quote name Samsung e-Biz</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Quote ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Quote name AA</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Quote ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Quote name BB</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Quote ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Quote name CC</span>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="list-el el-check">
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Select Quote ID" value="">
+                    <span class="btn-radio__icon"></span>
+                  </label>
+                </div>
+                <div class="list-el el-id">
+                  <span class="txt-p5">PJ2024083000000000</span>
+                </div>
+                <div class="list-el el-name">
+                  <span class="txt-p5 ">Quote name DD</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg">
+            <span class="btn-block__txt">Back</span>
+          </button>
+          <button type="button" class="btn-block type2 lg">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

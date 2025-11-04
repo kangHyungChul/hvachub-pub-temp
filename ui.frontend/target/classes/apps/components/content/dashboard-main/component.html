@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Main</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/apps/components/content/dashboard-main/clientlibs/css/main.css"
+    />
+  </head>
+  <body>
+    <div>
+      <!-- component -->
+      <section class="dashboard-main">
+        <!-- S: 로그인 후 personal & order 권한이 없는 출력 화면 -->
+        <div class="dashboard__inner">
+          <div class="dashboard__bg">
+            <!-- 240613 pc/mo 이미지 분기처리 -->
+            <img
+              src="https://picsum.photos/1920/880"
+              alt="dashboard background image"
+              class="pc-display"
+            />
+            <!-- mobile (partner 360*1784) -->
+            <img
+              src="https://picsum.photos/360/1284"
+              alt="dashboard background image"
+              class="mo-display"
+            />
+            <!-- mobile (personal 360*1560) -->
+            <!-- <img
+              src="https://picsum.photos/1920/880"
+              alt="dashboard background image"
+              class="mo-display"
+            /> -->
+          </div>
+          <div class="dashboard__cont">
+            <article class="dashboard-box box-col2">
+              <!-- 240718 box-col2 class 추가 -->
+              <div class="dashboard-box__tit">
+                <img
+                  src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-myproject.svg"
+                  alt="dashboard list title icon"
+                />
+                <a href="#" target="">
+                  <!-- 240523 heading 태그 -> p태그 수정 -->
+                  <!-- 240613 .tit-name 클래스 추가 및 구조 수정-->
+                  <p class="txt-h4 txt-fw-b tit-name">
+                    <span class="pc-txt">My Project</span>
+                    <span class="mo-txt">My Project</span>
+                  </p>
+                  <button type="button" class="list-view__btn"></button
+                ></a>
+              </div>
+              <p class="dashboard-box__desc txt-p5">Confirm Project Progress</p>
+              <ul class="project-list">
+                <!-- S: 데이터 있는 경우 -->
+                <!-- 데이터 없는 경우 .dashboard-box__list 에 .nodata 클래스 추가 필요 -->
+                <li class="dashboard-box__list">
+                  <p class="list__about txt-p3">Quote</p>
+                  <!-- 240613 구조수정 및 .status-flag__inner 클래스 추가 -->
+                  <ul class="status-flag__inner">
+                    <li class="tag-flag-wrap">
+                      <div>
+                        <!-- 240718 dot 색상 옵션 class
+                          span.dot.app : blue -> approved
+                          span.dot.req : green -> requested
+                          span.dot.prg : orange -> in progress
+                          span.dot.rej : gray -> rejected
+                        -->
+                        <span class="dot app"></span
+                        ><!-- 240718 span.dot 추가 -->
+                        <span class="txt">Approved</span
+                        ><!-- 240718 class명 변경 : tag-flag -> txt -->
+                      </div>
+                      <div>
+                        <span class="dot app"></span
+                        ><!-- 240718 span.dot 추가 -->
+                        <span class="txt">Approved</span
+                        ><!-- 240718 class명 변경 : tag-flag -> txt -->
+                      </div>
+                      <div>
+                        <span class="dot req"></span
+                        ><!-- 240718 span.dot 추가 -->
+                        <span class="txt">Requested</span
+                        ><!-- 240718 class명 변경 : tag-flag -> txt -->
+                      </div>
+                      <div>
+                        <span class="dot req"></span
+                        ><!-- 240718 span.dot 추가 -->
+                        <span class="txt">Requested</span
+                        ><!-- 240718 class명 변경 : tag-flag -> txt -->
+                      </div>
+                    </li>
+                    <li class="proj-nm-wrap">
+                      <a href="#" target="" class="txt-p5 txt-ellipsis proj-nm"
+                        >Samsung ‘A’ Quote Name 1 Samsung 111111</a
+                      >
+                      <a href="#" target="" class="txt-p5 txt-ellipsis proj-nm"
+                        >Samsung ‘A’ Quote Name 1 Samsung 222222</a
+                      >
+                      <a href="#" target="" class="txt-p5 txt-ellipsis proj-nm"
+                        >Samsung ‘A’ Quote Name 1 Samsung 333333</a
+                      >
+                      <a href="#" target="" class="txt-p5 txt-ellipsis proj-nm"
+                        >Samsung ‘A’ Quote Name 1 Samsung 444444</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <!-- E: 데이터 있는 경우 -->
+
+                <!-- S: 데이터 없는 경우 -->
+                <li class="dashboard-box__list nodata">
+                  <p class="list__about txt-p3">Proposal</p>
+                  <!-- 240613 .status-flag__inner 클래스 추가 -->
+                  <ul class="status-flag__inner">
+                    <li class="list__item">
+                      <p class="txt-p5">There is no registered content.</p>
+                    </li>
+                  </ul>
+                </li>
+                <!-- E: 데이터 없는 경우 -->
+              </ul>
+            </article>
+
+            <div class="dashboard-boxWrap">
+              <article class="dashboard-box">
+                <div class="dashboard-box__tit">
+                  <img
+                    src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-myfavorite.svg"
+                    alt="dashboard list title icon"
+                  />
+                  <a href="#" target="">
+                    <!-- 240523 heading 태그 -> p태그 수정 -->
+                    <!-- 240613 .tit-name 클래스 추가 및 구조 수정 -->
+                    <p class="txt-h4 txt-fw-b tit-name">
+                      <span class="pc-txt">My Favorite</span>
+                      <span class="mo-txt">My Favorite</span>
+                    </p>
+                    <button type="button" class="list-view__btn"></button>
+                  </a>
+                </div>
+                <p class="dashboard-box__desc txt-p5">
+                  Check the favorite menu I set
+                </p>
+                <div class="dashboard-box__listwrap">
+                  <!-- 240613 category-menu 관련 구조수정 -->
+                  <div class="category-menu">
+                    <img
+                      src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-product.svg"
+                      alt="favorite menu icon"
+                    />
+                    <div class="list__titwrap">
+                      <p class="txt-point2 txt-fw-b list__num">7</p>
+                      <p class="txt-p5 list__tit">Product</p>
+                    </div>
+                  </div>
+                  <div class="category-menu">
+                    <img
+                      src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-library.svg"
+                      alt="favorite menu icon"
+                    />
+                    <div class="list__titwrap">
+                      <p class="txt-point2 txt-fw-b list__num">7</p>
+                      <p class="txt-p5 list__tit">Library</p>
+                    </div>
+                  </div>
+                  <div class="category-menu">
+                    <img
+                      src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-others.svg"
+                      alt="favorite menu icon"
+                    />
+                    <div class="list__titwrap">
+                      <p class="txt-point2 txt-fw-b list__num">7</p>
+                      <p class="txt-p5 list__tit">Others</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="dashboard-box">
+                <div class="dashboard-box__tit">
+                  <img
+                    src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-myinquiry.svg"
+                    alt="dashboard list title icon"
+                  />
+                  <a href="#" target="">
+                    <!-- 240523 heading 태그 -> p태그 수정 -->
+                    <!-- 240613 .tit-name 클래스 추가 및 구조 수정 -->
+                    <p class="txt-h4 txt-fw-b tit-name">
+                      <span class="pc-txt"> My Inquiry</span>
+                      <span class="mo-txt"> My Inquiry</span>
+                    </p>
+                    <button type="button" class="list-view__btn"></button
+                  ></a>
+                </div>
+                <p class="dashboard-box__desc txt-p5">
+                  Confirm Inquiry Progress
+                </p>
+                <div class="progress-menu__wrap">
+                  <div class="progress-menu">
+                    <div class="list__titwrap">
+                      <p class="txt-p3 list__tit">In Progress</p>
+                      <p class="txt-p3 txt-point2 txt-fw-b list__num">7</p>
+                    </div>
+                  </div>
+                  <div class="progress-menu">
+                    <div class="list__titwrap">
+                      <p class="txt-p3 list__tit">Completed</p>
+                      <p class="txt-p3 txt-point2 txt-fw-b list__num">9</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <article class="dashboard-box">
+              <div class="dashboard-box__tit">
+                <img
+                  src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-announcement.svg"
+                  alt="dashboard list title icon"
+                />
+                <a href="#" target="">
+                  <!-- 240523 heading 태그 -> p태그 수정 -->
+                  <!-- 240613 .tit-name 클래스 추가 및 구조 수정 -->
+                  <p class="txt-h4 txt-fw-b tit-name">
+                    <span class="pc-txt">Announcement<br />Announcement</span>
+                    <span class="mo-txt">Announcement<br />Announcement</span>
+                  </p>
+                  <button type="button" class="list-view__btn"></button
+                ></a>
+              </div>
+
+              <p class="dashboard-box__desc txt-p5">Confirm Announcement</p>
+              <!-- 데이터 없는 경우 .dashboard-box__list 에 .nodata 클래스 추가 필요 -->
+              <!-- 240613 .full-date-list 클래스 추가 -->
+              <div class="dashboard-box__list full-date-list">
+                <!-- S: 데이터 있는 경우 -->
+                <div class="list__inner">
+                  <p class="list__date txt-p6">2024-03-22</p>
+                  <a href="#" target="" class="list__title txt-p5">
+                    Introducing HVAC Hub launching new launching new launching
+                    new launching new launching new launching new launching new
+                  </a>
+                </div>
+                <div class="list__inner">
+                  <p class="list__date txt-p6">2024-03-22</p>
+                  <a href="#" target="" class="list__title txt-p5">
+                    Introducing HVAC Hub launching new launching new launching
+                    new
+                  </a>
+                </div>
+                <div class="list__inner">
+                  <p class="list__date txt-p6">2024-03-22</p>
+                  <a href="#" target="" class="list__title txt-p5">
+                    Introducing HVAC Hub launching new launching new launching
+                    new
+                  </a>
+                </div>
+                <div class="list__inner">
+                  <p class="list__date txt-p6">2024-03-22</p>
+                  <a href="#" target="" class="list__title txt-p5">
+                    Introducing HVAC Hub launching new launching new launching
+                    new
+                  </a>
+                </div>
+                <div class="list__inner">
+                  <p class="list__date txt-p6">2024-03-22</p>
+                  <a href="#" target="" class="list__title txt-p5">
+                    Introducing HVAC Hub launching new launching new launching
+                    new
+                  </a>
+                </div>
+                <!-- E: 데이터 있는 경우 -->
+
+                <!-- S: 데이터 없는 경우 -->
+                <!-- <div class="list__inner">
+                  <p class="txt-p5">There is no registered content.</p>
+                </div> -->
+                <!-- E: 데이터 없는 경우 -->
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- E: 로그인 후 personal & order 권한이 없는 출력 화면 -->
+
+        <!-- 화면 확인용 임시 여백 -->
+        <div style="width: 100%; height: 200px"></div>
+
+        <!-- S: 로그인 후 personal & order 권한이 있는 출력 화면 -->
+        <div class="dashboard__inner">
+          <div class="dashboard__bg">
+            <!-- 240613 pc/mo 이미지 분기처리 -->
+            <img
+              src="https://picsum.photos/1920/880"
+              alt="dashboard background image"
+              class="pc-display"
+            />
+            <!-- mobile (partner 360*1784) -->
+            <img
+              src="https://picsum.photos/1920/880"
+              alt="dashboard background image"
+              class="mo-display"
+            />
+            <!-- mobile (personal 360*1560) -->
+            <!-- <img
+              src="https://picsum.photos/1920/880"
+              alt="dashboard background image"
+              class="mo-display"
+            /> -->
+          </div>
+          <div class="dashboard__cont">
+            <article class="dashboard-box box-col2">
+              <!-- 240718 box-col2 class 추가 -->
+              <div class="dashboard-box__tit">
+                <img
+                  src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-myproject.svg"
+                  alt="dashboard list title icon"
+                />
+                <a href="#" target="">
+                  <!-- 240523 heading 태그 -> p태그 수정 -->
+                  <!-- 240613 .tit-name 클래스 추가 및 구조 수정 -->
+                  <p class="txt-h4 txt-fw-b tit-name">
+                    <span class="pc-txt">My Project</span>
+                    <span class="mo-txt">My Project</span>
+                  </p>
+                  <button type="button" class="list-view__btn"></button
+                ></a>
+              </div>
+              <p class="dashboard-box__desc txt-p5">Confirm Project Progress</p>
+              <ul class="project-list">
+                <!-- 데이터 없는 경우 .dashboard-box__list 에 .nodata 클래스 추가 필요 -->
+                <!-- S: 데이터 있는 경우 -->
+                <li class="dashboard-box__list">
+                  <p class="list__about txt-p3">Upcoming orders</p>
+                  <!-- 데이터 있는 경우 -->
+                  <ul>
+                    <!-- 
+                        7일 이하 프로젝트 폰트 컬러 관련 설정 시, .list__item에 .imminent 클래스 명 추가 필요
+                        7일 이상 프로젝트 폰트 컬러 관련 설정 시, .list__item에 .more-seven 클래스 명 추가 필요 (240613 업데이트)
+                    -->
+                    <li class="list__item imminent">
+                      <span class="tag-flag">-1 Day</span>
+                      <span class="tag-date txt-p7">2024-03-22</span>
+                      <a href="#" target="" class="txt-p6"
+                        >Samsung ‘A’ Quote Name 1 Samsung 111111</a
+                      >
+                    </li>
+                    <li class="list__item imminent">
+                      <span class="tag-flag">-7 Day</span>
+                      <span class="tag-date txt-p7">2024-03-22</span>
+                      <a href="#" target="" class="txt-p6"
+                        >Samsung ‘A’ Quote Name 1 Samsung 222222</a
+                      >
+                    </li>
+                    <li class="list__item more-seven">
+                      <span class="tag-flag">-20 Day</span>
+                      <span class="tag-date txt-p7">2024-03-22</span>
+                      <a href="#" target="" class="txt-p6"
+                        >Samsung ‘A’ Quote Name 1 Samsung 333333</a
+                      >
+                    </li>
+                    <li class="list__item more-seven">
+                      <span class="tag-flag">-20 Day</span>
+                      <span class="tag-date txt-p7">2024-03-22</span>
+                      <a href="#" target="" class="txt-p6"
+                        >Samsung ‘A’ Quote Name 1 Samsung 444444</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- 데이터 있는 경우 -->
+
+                  <!-- 데이터 없는 경우 -->
+                  <!-- <ul>
+                    <li class="list__item">
+                      <p class="txt-p5">There is no registered content.</p>
+                    </li>
+                  </ul> -->
+                  <!-- 데이터 없는 경우 -->
+                </li>
+                <!-- E: 데이터 있는 경우 -->
+
+                <!-- S: 데이터 없는 경우 -->
+                <li class="dashboard-box__list nodata">
+                  <p class="list__about txt-p3">Quote</p>
+                  <!-- 데이터 있는 경우 -->
+                  <ul style="display: none">
+                    <li class="list__item">
+                      <!--240718 div.tag-flag-wrap 영역 추가 -->
+                      <div class="tag-flag-wrap">
+                        <!-- 240718 dot 색상 옵션 class
+                          span.dot.app : blue -> approved
+                          span.dot.req : green -> requested
+                          span.dot.prg : orange -> in progress
+                          span.dot.rej : gray -> rejected
+                        -->
+                        <span class="dot app"></span>
+                        <span class="txt">Approved</span>
+                      </div>
+                      <!-- span.tag-flag 영역 제거 -->
+                      <a href="#" target="" class="txt-p5"
+                        >Samsung ‘A’ Quote Name 1 Samsung 111111</a
+                      >
+                    </li>
+                    <li class="list__item">
+                      <!--240718 div.tag-flag-wrap 영역 추가 -->
+                      <div class="tag-flag-wrap">
+                        <!-- 240718 dot 색상 옵션 class
+                          span.dot.app : blue -> approved
+                          span.dot.req : green -> requested
+                          span.dot.prg : orange -> in progress
+                          span.dot.rej : gray -> rejected
+                        -->
+                        <span class="dot rej"></span>
+                        <span class="txt">Rejected</span>
+                      </div>
+                      <!-- span.tag-flag 영역 제거 -->
+                      <a href="#" target="" class="txt-p5"
+                        >Samsung ‘A’ Quote Name 1 Samsung 222222</a
+                      >
+                    </li>
+                    <li class="list__item">
+                      <!--240718 div.tag-flag-wrap 영역 추가 -->
+                      <div class="tag-flag-wrap">
+                        <!-- 240718 dot 색상 옵션 class
+                          span.dot.app : blue -> approved
+                          span.dot.req : green -> requested
+                          span.dot.prg : orange -> in progress
+                          span.dot.rej : gray -> rejected
+                        -->
+                        <span class="dot prg"></span>
+                        <span class="txt">In Progress</span>
+                      </div>
+                      <!-- span.tag-flag 영역 제거 -->
+                      <a href="#" target="" class="txt-p5"
+                        >Samsung ‘A’ Quote Name 1 Samsung 333333</a
+                      >
+                    </li>
+                    <li class="list__item">
+                      <!--240718 div.tag-flag-wrap 영역 추가 -->
+                      <div class="tag-flag-wrap">
+                        <!-- 240718 dot 색상 옵션 class
+                          span.dot.app : blue -> approved
+                          span.dot.req : green -> requested
+                          span.dot.prg : orange -> in progress
+                          span.dot.rej : gray -> rejected
+                        -->
+                        <span class="dot req"></span>
+                        <span class="txt">Requested</span>
+                      </div>
+                      <!-- span.tag-flag 영역 제거 -->
+                      <a href="#" target="" class="txt-p5"
+                        >Samsung ‘A’ Quote Name 1 Samsung 444444</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- 데이터 있는 경우 -->
+
+                  <!-- 데이터 없는 경우 -->
+                  <ul>
+                    <li class="list__item">
+                      <p class="txt-p5">There is no registered content.</p>
+                    </li>
+                  </ul>
+                  <!-- 데이터 없는 경우 -->
+                </li>
+                <!-- E: 데이터 없는 경우 -->
+              </ul>
+            </article>
+
+            <div class="dashboard-boxWrap">
+              <article class="dashboard-box">
+                <div class="dashboard-box__tit">
+                  <img
+                    src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-order.svg"
+                    alt="dashboard list title icon"
+                  />
+                  <a href="#" target="">
+                    <!-- 240523 heading 태그 -> p태그 수정 -->
+                    <!-- 240613 .tit-name 클래스 추가 및 구조 수정 -->
+                    <p class="txt-h4 txt-fw-b tit-name">
+                      <span class="pc-txt">My Order</span>
+                      <span class="mo-txt">My Order</span>
+                    </p>
+                    <button type="button" class="list-view__btn"></button>
+                  </a>
+                </div>
+                <p class="dashboard-box__desc txt-p5">Confirm Order Progress</p>
+                <ul class="dashboard-box__list order-list">
+                  <!-- 7일 이하 프로젝트 폰트 컬러 관련 설정 시, .list__item에 .imminent 클래스 명 추가 필요 -->
+                  <li class="list__item txt-p4 txt-fw-b">
+                    <!-- 240718 imminent class 제거 -->
+                    <p class="order-status">Open</p>
+                    <span class="order-num">11</span>
+                  </li>
+                  <li class="list__item txt-p4 txt-fw-b imminent">
+                    <!-- 240718 imminent class 추가 -->
+                    <p class="order-status">Credit blocked</p>
+                    <span class="order-num">10</span>
+                  </li>
+                  <li class="list__item txt-p4 txt-fw-b">
+                    <p class="order-status">Prepared</p>
+                    <span class="order-num">10</span>
+                  </li>
+                  <li class="list__item txt-p4 txt-fw-b">
+                    <p class="order-status">Shipped</p>
+                    <span class="order-num">10</span>
+                  </li>
+                </ul>
+              </article>
+              <article class="dashboard-box">
+                <div class="dashboard-box__tit">
+                  <img
+                    src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-account.svg"
+                    alt="dashboard list title icon"
+                  />
+                  <a href="#" target="">
+                    <!-- 240523 heading 태그 -> p태그 수정 -->
+                    <!-- 240613 .tit-name 클래스 추가 및 구조 수정 -->
+                    <p class="txt-h4 txt-fw-b tit-name">
+                      <span class="pc-txt">My Account</span>
+                      <span class="mo-txt">My Account</span>
+                    </p>
+                    <!-- [HVCHB-746] 240711 button.list-view__btn 제거 -->
+                  </a>
+                </div>
+                <p class="dashboard-box__desc txt-p5 account-desc">
+                  Confirm Account balance Progress
+                </p>
+                <ul class="account-list">
+                  <li class="account-box">
+                    <div class="list__inner">
+                      <!-- 240613 .list__tit 구조 수정 -->
+                      <a href="#">
+                        <span class="list__tit txt-p6 txt-fw-b">
+                          <em class="pc-txt">Account balance</em>
+                          <em class="mo-txt">Account balance</em>
+                        </span>
+                      </a>
+                      <ul class="list-menu__contwrap">
+                        <li class="list-menu__cont">
+                          <p class="category txt-p6">Balance</p>
+                          <p class="amount txt-p6">10.000.000,00 TL</p>
+                        </li>
+                        <li class="list-menu__cont">
+                          <p class="category txt-p6">Overdue</p>
+                          <p class="amount txt-p6">10.000.000,00 TL</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="account-box">
+                    <div class="list__inner">
+                      <!-- 240613 .list__tit 구조 수정 -->
+                      <a href="#" target="">
+                        <span class="list__tit txt-p6 txt-fw-b">
+                          <em class="pc-txt">Invoice</em>
+                          <em class="mo-txt">Invoice</em>
+                        </span>
+                      </a>
+                      <p class="invoice-num txt-h4 txt-fw-b">10</p>
+                    </div>
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="dashboard-boxWrap">
+              <article class="dashboard-box">
+                <div class="dashboard-box__tit">
+                  <img
+                    src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-announcement.svg"
+                    alt="dashboard list title icon"
+                  />
+                  <a href="#" target="">
+                    <!-- 240523 heading 태그 -> p태그 수정 -->
+                    <!-- 240613 .tit-name 클래스 추가 및 구조 수정 -->
+                    <p class="txt-h4 tit-name">
+                      <span class="pc-txt">Announcement</span>
+                      <span class="mo-txt">Announcement</span>
+                    </p>
+                    <button type="button" class="list-view__btn"></button
+                  ></a>
+                </div>
+                <p class="dashboard-box__desc txt-p5">Confirm Announcement</p>
+                <!-- 데이터 없는 경우 .dashboard-box__list 에 .nodata 클래스 추가 필요 -->
+                <!-- 240613 .half-date-list 클래스 추가 -->
+                <div class="dashboard-box__list half-date-list">
+                  <!-- S: 데이터 있는 경우 -->
+                  <div class="list__inner">
+                    <p class="list__date txt-p6">2024-03-22</p>
+                    <a href="#" target="" class="list__title txt-p5">
+                      Introducing HVAC Hub launching new launching new launching
+                      new launching new launching new launching new launching
+                      new
+                    </a>
+                  </div>
+                  <div class="list__inner">
+                    <p class="list__date txt-p6">2024-03-22</p>
+                    <a href="#" target="" class="list__title txt-p5">
+                      Introducing HVAC Hub launching new launching new launching
+                      new
+                    </a>
+                  </div>
+                  <!-- E: 데이터 있는 경우 -->
+
+                  <!-- S: 데이터 없는 경우 -->
+                  <!-- <div class="list__inner">
+                    <p class="txt-p5">There is no registered content.</p>
+                  </div> -->
+                  <!-- E: 데이터 없는 경우 -->
+                </div>
+              </article>
+
+              <article class="dashboard-box">
+                <div class="dashboard-box__tit">
+                  <img
+                    src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-myinquiry.svg"
+                    alt="dashboard list title icon"
+                  />
+                  <a href="#" target="">
+                    <!-- 240523 heading 태그 -> p태그 수정 -->
+                    <!-- 240613 .tit-name 클래스 추가 및 구조 수정 -->
+                    <p class="txt-h4 tit-name">
+                      <span class="pc-txt">My Inquiry</span>
+                      <span class="mo-txt">My Inquiry</span>
+                    </p>
+                    <button type="button" class="list-view__btn"></button
+                  ></a>
+                </div>
+                <p class="dashboard-box__desc txt-p5">
+                  Confirm Inquiry Progress
+                </p>
+                <div class="progress-menu__wrap">
+                  <div class="progress-menu">
+                    <div class="list__titwrap">
+                      <p class="txt-p3 list__tit">In Progress</p>
+                      <p class="txt-p2 txt-point2 txt-fw-b list__num">7</p>
+                    </div>
+                  </div>
+                  <div class="progress-menu">
+                    <div class="list__titwrap">
+                      <p class="txt-p3 list__tit">Completed</p>
+                      <p class="txt-p2 txt-point2 txt-fw-b list__num">9</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!-- E: 로그인 후 personal & order 권한이 있는 출력 화면 -->
+      </section>
+    </div>
+
+    <!-- 240613 common js 관련 수정 -->
+    <!-- common.js -->
+    <script src="/pub-only/js/main-lib.js"></script>
+    <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+    <!-- 컴포넌트 js -->
+    <script src="/apps/components/content/dashboard-main/clientlibs/js/main.js"></script>
+  </body>
+</html>

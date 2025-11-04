@@ -1,0 +1,57 @@
+.img-with-txt { max-width: 1440px; margin: 0 auto; } 
+.img-with-txt .img-with-txt__contwrap { display: flex; justify-content: center; gap: 64px; padding: 0 104px 136px; } 
+.img-with-txt .img-with-txt__contwrap.img-right { flex-direction: row-reverse; } 
+.img-with-txt .img-with-txt__img { border-radius: var(--border-base); width: 47.3%; max-width: 560px; height: 360px; overflow: hidden; } 
+.img-with-txt .img-with-txt__img img { width: 100%; height: 100%; } 
+.img-with-txt .img-with-txt__cont { width: 50%; max-width: 556px; } 
+.img-with-txt .img-with-txt__title { font-size:38px !important; margin-bottom: 16px; color: #000; line-height: 58px; } 
+.img-with-txt .img-with-txt__desc { margin-bottom: 24px; font-size:16px !important; color: #000; line-height: 24px; opacity: 0.6;  } 
+.img-with-txt .swiper-button-prev:after,
+.img-with-txt .swiper-button-next:after { background-size: 100%; } 
+.img-with-txt .swiper-button-prev,
+.img-with-txt .swiper-button-next { top:calc(50% - 92px); }  
+.img-with-txt .swiper-button-prev { left: 24px; } 
+.img-with-txt .swiper-button-next { right: 24px; } 
+.img-with-txt .swiper-pagination-wrap { height: 56px; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; z-index: 1; display: flex; align-items: center; justify-content: center; } 
+.img-with-txt .swiper-pagination { position: unset; font-size: 0; width: fit-content !important; transform: none; } 
+.img-with-txt .swiper-pagination-bullet { width: 160px; max-width: 160px; height: 2px; border-radius: 0; margin: 0 8px !important; opacity: 0.2; background: #000; } 
+.img-with-txt .swiper-pagination .swiper-pagination-bullet:first-of-type { margin-left: 0 !important; } 
+.img-with-txt .swiper-pagination-bullet-active { opacity: 1; } 
+.img-with-txt .swiper-button-autoplay { width: 10px; height: 13px; background:
+ center / contain no-repeat
+ url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-pause-black.svg),
+ 100%; cursor: pointer; margin-left: 8px; } 
+.img-with-txt .swiper-button-autoplay.stop { background:
+ center / contain no-repeat
+ url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-play-black.svg),
+ 100%; } 
+.img-with-txt .btn-box { font-size: 0; text-align: left; } 
+.img-with-txt .btn-box .more-btn + .more-btn { margin-left: 24px; } 
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .img-with-txt .img-with-txt__contwrap { gap: 4.444vw; padding: 0 8.889vw 8.333vw; } 
+ .img-with-txt .img-with-txt__img { max-width: 38.889vw; height: 25vw; } 
+ .img-with-txt .img-with-txt__cont { max-width: 38.611vw; } 
+ .img-with-txt .img-with-txt__title { margin-bottom: 1.667vw; line-height: 4.028vw; } 
+ .img-with-txt .img-with-txt__desc { line-height: 1.875vw; margin-bottom: 2.222vw; } 
+ .img-with-txt .swiper-pagination-wrap { height: 3.889vw; } 
+ .img-with-txt .swiper-pagination-bullet { width: 11.111vw; max-width: 11.111vw; height: 0.139vw; margin: 0 0.556vw !important; } 
+ .img-with-txt .swiper-button-autoplay { width: 0.694vw; height: 0.903vw; margin-left: 0.556vw; } 
+ .img-with-txt .swiper-button-prev { left: 1.667vw; } 
+ img-with-txt .swiper-button-next { right: 1.667vw; } 
+ }
+
+@media only screen and (max-width: 768px){
+ .img-with-txt .img-with-txt__contwrap { display: block; padding: 32px 40px calc(48px + 25px); }
+ .img-with-txt .img-with-txt__img { max-width: unset; width: 100%; height: unset; min-height: 140px; margin-bottom: 16px; } 
+ .img-with-txt .swiper-button-prev,
+ .img-with-txt .swiper-button-next { display: none; } 
+ .img-with-txt .img-with-txt__title { margin-bottom: 16px; font-size: 20px !important; line-height: 1.5; } 
+ .img-with-txt .img-with-txt__desc { width: 100%; margin-bottom: 16px; font-size: 14px !important; line-height: 21px; } 
+ .img-with-txt .img-with-txt__cont { max-width: unset; width: 100%; } 
+ .img-with-txt .swiper-pagination-wrap { height: 25px; border: 1px solid #dadada; border-radius: var(--border-base); width: fit-content; padding: 6px 12px; } 
+ .img-with-txt .swiper-pagination-bullet { width: 8px; height: 8px; border-radius: 50%; background-color: #8f8f8f; opacity: 1; } 
+ .img-with-txt .swiper-pagination-bullet-active { background-color: #000; } 
+ .img-with-txt .more-btn { margin-bottom: 0; } 
+ }

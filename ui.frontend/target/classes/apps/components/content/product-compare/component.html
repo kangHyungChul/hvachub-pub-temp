@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <button type="button" class="btn-block" data-layer-target="compare-product">
+    <span class="btn-block__txt">Compare Products</span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="compare-product-close">
+    <span class="btn-block__txt">Compare close</span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="compare-models">
+    <span class="btn-block__txt">Compare models</span>
+  </button>
+
+  <!-- compare popup -->
+  <div class="popup-wrap compare-list-popup" id="compare-product">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Compare Products</p>
+      </div>
+      <div class="popup__container">
+        <p class="compared-desc txt-p5">Please select the products to compare.</p>
+        <div class="compare-category">
+          <p class="txt-p6">Category : <span class="txt-arrow">DVM</span><span class="txt-arrow">ODU</span></p>
+          <p class="txt-p6"><span class="txt-point1">9</span> Results</p>
+        </div>
+        <ul class="compare-list">
+          <li class="pdp-product-list">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <!-- 2025-01-14 div 추가 swiper-unit-box-->
+            <div class="swiper-unit-box">
+              <div class="swiper unit-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">12,300</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">200</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                </div>
+                <div class="swiper-button-next unit__next-btn">
+                  <span class="txt-blind">next</span>
+                </div>
+                <div class="swiper-button-prev unit__prev-btn">
+                  <span class="txt-blind">next</span>
+                </div>
+                <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+              </div>
+            </div>
+            <!-- 2024-09-19 에너지 라벨 추가 -->
+            <div class="energy-tag-area">
+              <a role="button" class="btn-txt-underline sm" href="#">
+                <span class="btn-txt__txt">
+                  <em class="pc-txt">Product Information Sheet</em>
+                  <em class="mo-txt">Product Information Sheet</em>
+                </span>
+              </a>
+              <a role="button" class="tag-badge-icon" href="#">
+                <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-a.svg" alt="energy level A">
+              </a>
+            </div>
+            <!-- //2024-09-19 -->
+            <div class="pdp-stock-box">
+              <!-- 2024-11-22 stock 변경 -->
+              <span class="txt-p6 txt-stock green">Stock</span>
+              <div class="tooltip">
+                <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                    view</span> </button>
+                <div class="tooltip__contents">
+                  <div class="tooltip__contents-inner">
+                    <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                        close</span> </button>
+                    <div class="cont">
+                      <!-- 툴팁 문구 -->
+                      <p class="txt-fw-b">'Stock' availability </p>
+                      <div class="sotck-box">
+                        <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                        <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is
+                          available in 2 ~ 4 weeks later from now.</p>
+                        <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2025-03-04 class 추가 : pdp-price -->
+            <div class="tal-center pdp-price hvac-price-flag">
+              <p class="txt-p4 txt-fw-b">$949.00</p>
+            </div>
+            <div class="btn-box">
+              <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+              <button type="button" class="btn-block type2 md" disabled>
+                <span class="btn-block__txt">Added</span>
+              </button>
+            </div>
+          </li>
+          <!-- [F] 선택시 .active -->
+          <li class="pdp-product-list active">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <!-- 2025-01-14 div 추가 swiper-unit-box-->
+            <div class="swiper-unit-box">
+              <div class="swiper unit-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">12,300</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">200</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                </div>
+                <div class="swiper-button-next unit__next-btn">
+                  <span class="txt-blind">next</span>
+                </div>
+                <div class="swiper-button-prev unit__prev-btn">
+                  <span class="txt-blind">next</span>
+                </div>
+                <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+              </div>
+            </div>
+            <!-- 2024-09-19 에너지 라벨 추가 -->
+            <div class="energy-tag-area">
+              <a role="button" class="btn-txt-underline sm" href="#">
+                <span class="btn-txt__txt">
+                  <em class="pc-txt">Product Information Sheet</em>
+                  <em class="mo-txt">Product Information Sheet</em>
+                </span>
+              </a>
+              <a role="button" class="tag-badge-icon" href="#">
+                <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-a.svg" alt="energy level A">
+              </a>
+            </div>
+            <!-- //2024-09-19 -->
+            <div class="pdp-stock-box">
+              <!-- 2024-11-22 stock 변경 -->
+              <span class="txt-p6 txt-stock yellow">Stock</span>
+              <div class="tooltip">
+                <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                    view</span> </button>
+                <div class="tooltip__contents">
+                  <div class="tooltip__contents-inner">
+                    <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                        close</span> </button>
+                    <div class="cont">
+                      <!-- 툴팁 문구 -->
+                      <p class="txt-fw-b">'Stock' availability </p>
+                      <div class="sotck-box">
+                        <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                        <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is
+                          available in 2 ~ 4 weeks later from now.</p>
+                        <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2025-03-04 class 추가 : pdp-price -->
+            <div class="tal-center pdp-price hvac-price-flag">
+              <!-- [F] 가격 미노출시 영역유지, global(가격 미노출) 영역삭제 -->
+            </div>
+            <div class="btn-box">
+              <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+              <button type="button" class="btn-block type2 md" disabled>
+                <span class="btn-block__txt">Added</span>
+              </button>
+            </div>
+          </li>
+          <li class="pdp-product-list">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <!-- 2025-01-14 div 추가 swiper-unit-box-->
+            <div class="swiper-unit-box">
+              <div class="swiper unit-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">12,300</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">200</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                </div>
+                <div class="swiper-button-next unit__next-btn">
+                  <span class="txt-blind">next</span>
+                </div>
+                <div class="swiper-button-prev unit__prev-btn">
+                  <span class="txt-blind">next</span>
+                </div>
+                <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+              </div>
+            </div>
+            <!-- 2024-09-19 에너지 라벨 추가 -->
+            <div class="energy-tag-area">
+              <a role="button" class="btn-txt-underline sm" href="#">
+                <span class="btn-txt__txt">
+                  <em class="pc-txt">Product Information Sheet</em>
+                  <em class="mo-txt">Product Information Sheet</em>
+                </span>
+              </a>
+              <a role="button" class="tag-badge-icon" href="#">
+                <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-a.svg" alt="energy level A">
+              </a>
+            </div>
+            <!-- //2024-09-19 -->
+            <div class="pdp-stock-box">
+              <!-- 2024-11-22 stock 변경 -->
+              <span class="txt-p6 txt-stock red">Stock</span>
+              <div class="tooltip">
+                <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                    view</span> </button>
+                <div class="tooltip__contents">
+                  <div class="tooltip__contents-inner">
+                    <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                        close</span> </button>
+                    <div class="cont">
+                      <!-- 툴팁 문구 -->
+                      <p class="txt-fw-b">'Stock' availability </p>
+                      <div class="sotck-box">
+                        <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                        <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is
+                          available in 2 ~ 4 weeks later from now.</p>
+                        <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2025-03-04 class 추가 : pdp-price -->
+            <div class="tal-center pdp-price hvac-price-flag">
+              <p class="txt-p4 txt-fw-b">$949.00</p>
+              <p class="txt-del-price">808.499,00 TL</p>
+            </div>
+            <div class="btn-box">
+              <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+              <button type="button" class="btn-block type2 md" disabled>
+                <span class="btn-block__txt">Added</span>
+              </button>
+            </div>
+          </li>
+          <li class="pdp-product-list">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <div class="swiper unit-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+              </div>
+              <div class="swiper-button-next unit__next-btn">
+                <span class="txt-blind">next</span>
+              </div>
+              <div class="swiper-button-prev unit__prev-btn">
+                <span class="txt-blind">next</span>
+              </div>
+              <div class="unit__unit-text"><span class="txt-p7">(kW)</span> </div>
+            </div>
+            <div class="pdp-stock-box">
+              <!-- 2024-11-22 stock 변경 -->
+              <span class="txt-p6 txt-stock green">Stock</span>
+              <div class="tooltip">
+                <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                    view</span> </button>
+                <div class="tooltip__contents">
+                  <div class="tooltip__contents-inner">
+                    <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                        close</span> </button>
+                    <div class="cont">
+                      <!-- 툴팁 문구 -->
+                      <p class="txt-fw-b">'Stock' availability </p>
+                      <div class="sotck-box">
+                        <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                        <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is
+                          available in 2 ~ 4 weeks later from now.</p>
+                        <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2025-03-04 class 추가 : pdp-price -->
+            <div class="tal-center pdp-price hvac-price-flag">
+              <p class="txt-p4 txt-fw-b">1,808,499,12 TL</p>
+              <p class="txt-del-price">808.499,00 TL</p>
+            </div>
+            <div class="btn-box">
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Add</span>
+              </button>
+            </div>
+          </li>
+          <li class="pdp-product-list">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <div class="swiper unit-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+              </div>
+              <div class="swiper-button-next unit__next-btn">
+                <span class="txt-blind">next</span>
+              </div>
+              <div class="swiper-button-prev unit__prev-btn">
+                <span class="txt-blind">next</span>
+              </div>
+              <div class="unit__unit-text"><span class="txt-p7">(kW)</span> </div>
+            </div>
+            <div class="pdp-stock-box">
+              <!-- 2024-11-22 stock 변경 -->
+              <span class="txt-p6 txt-stock yellow">Stock</span>
+              <div class="tooltip">
+                <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                    view</span> </button>
+                <div class="tooltip__contents">
+                  <div class="tooltip__contents-inner">
+                    <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                        close</span> </button>
+                    <div class="cont">
+                      <!-- 툴팁 문구 -->
+                      <p class="txt-fw-b">'Stock' availability </p>
+                      <div class="sotck-box">
+                        <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                        <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is
+                          available in 2 ~ 4 weeks later from now.</p>
+                        <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2025-03-04 class 추가 : pdp-price -->
+            <div class="tal-center pdp-price hvac-price-flag">
+              <p class="txt-p4 txt-fw-b">1,808,499,12 TL</p>
+            </div>
+            <div class="btn-box">
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Add</span>
+              </button>
+            </div>
+          </li>
+          <li class="pdp-product-list">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <div class="swiper unit-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+              </div>
+              <div class="swiper-button-next unit__next-btn">
+                <span class="txt-blind">next</span>
+              </div>
+              <div class="swiper-button-prev unit__prev-btn">
+                <span class="txt-blind">next</span>
+              </div>
+              <div class="unit__unit-text"><span class="txt-p7">(kW)</span> </div>
+            </div>
+            <div class="pdp-stock-box">
+              <!-- 2024-11-22 stock 변경 -->
+              <span class="txt-p6 txt-stock red">Stock</span>
+              <div class="tooltip">
+                <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                    view</span> </button>
+                <div class="tooltip__contents">
+                  <div class="tooltip__contents-inner">
+                    <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                        close</span> </button>
+                    <div class="cont">
+                      <!-- 툴팁 문구 -->
+                      <p class="txt-fw-b">'Stock' availability </p>
+                      <div class="sotck-box">
+                        <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                        <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is
+                          available in 2 ~ 4 weeks later from now.</p>
+                        <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2025-03-04 class 추가 : pdp-price -->
+            <div class="tal-center pdp-price hvac-price-flag">
+              <p class="txt-p4 txt-fw-b">1,808,499,12 TL</p>
+              <p class="txt-del-price">808.499,00 TL</p>
+            </div>
+            <div class="btn-box">
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Add</span>
+              </button>
+            </div>
+          </li>
+          <!-- [F] Global-->
+          <li class="pdp-product-list">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <!-- 2025-01-14 div 추가 swiper-unit-box-->
+            <div class="swiper-unit-box">
+              <div class="swiper unit-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide unit__item active"> <span class="txt-p7">200</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">75,00</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">12,300</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">200</span> </div>
+                  <div class="swiper-slide unit__item"> <span class="txt-p7">5,800</span> </div>
+                </div>
+                <div class="swiper-button-next unit__next-btn">
+                  <span class="txt-blind">next</span>
+                </div>
+                <div class="swiper-button-prev unit__prev-btn">
+                  <span class="txt-blind">next</span>
+                </div>
+                <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+              </div>
+            </div>
+            <!-- 2024-09-19 에너지 라벨 추가 -->
+            <div class="energy-tag-area">
+              <a role="button" class="btn-txt-underline sm" href="#">
+                <span class="btn-txt__txt">
+                  <em class="pc-txt">Product Information Sheet</em>
+                  <em class="mo-txt">Product Information Sheet</em>
+                </span>
+              </a>
+              <a role="button" class="tag-badge-icon" href="#">
+                <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-a.svg" alt="energy level A">
+              </a>
+            </div>
+            <!-- //2024-09-19 -->
+            <div class="btn-box">
+              <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+              <button type="button" class="btn-block type2 md" disabled>
+                <span class="btn-block__txt">Added</span>
+              </button>
+            </div>
+          </li>
+          <!-- [F] Global Accessory / Controller -->
+          <li class="pdp-product-list">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <div class="swiper-unit-box">
+              <!-- [F] swiper-unit-box 영역 유지 -->
+            </div>
+            <!-- 2024-09-19 에너지 라벨 추가 -->
+            <div class="energy-tag-area">
+              <!-- [F] 영역유지 -->
+            </div>
+            <!-- //2024-09-19 -->
+            <div class="btn-box">
+              <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+              <button type="button" class="btn-block type2 md" disabled>
+                <span class="btn-block__txt">Added</span>
+              </button>
+            </div>
+          </li>
+          <!-- [F] Global Accessory / Controller -->
+          <li class="pdp-product-list">
+            <div class="pdp-product__tit">
+              <div class="pdp-category">
+                <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                </p>
+              </div>
+              <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+              <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+            </div>
+            <div class="img-box">
+              <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+            </div>
+            <div class="swiper-unit-box">
+              <!-- [F] swiper-unit-box 영역 유지 -->
+            </div>
+            <!-- 2024-09-19 에너지 라벨 추가 -->
+            <div class="energy-tag-area">
+              <!-- [F] 영역유지 -->
+            </div>
+            <!-- //2024-09-19 -->
+            <div class="btn-box">
+              <!-- [F] 추가되면 disabled 처리, text : add ==> added -->
+              <button type="button" class="btn-block type2 md" disabled>
+                <span class="btn-block__txt">Added</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="compare-add-list-box">
+        <!-- 2024-07-25 div 추가 : <div class="compare-add-list-box__inner"> ... </div> -->
+        <div class="compare-add-list-box__inner">
+          <div class="compare-add-list__tit">
+            <div class="left">
+              <p class="txt-h9">Selected products</p>
+              <p class="txt-error">You can choose up to 3 products to compare.</p>
+            </div>
+            <div class="right">
+              <button type="button" class="btn-txt-underline">
+                <span class="btn-txt__txt">Clear all</span>
+              </button>
+              <button type="button" class="btn-block type2">
+                <span class="btn-block__txt">Compare (<em>3</em>/4)</span>
+              </button>
+            </div>
+          </div>
+          <ul class="add-list">
+            <li class="add-list__item">
+              <div class="add-product">
+                <div class="img-box">
+                  <img src="/pub-only/images/add-product-sample.png" alt="">
+                </div>
+                <div class="txt-box">
+                  <p class="txt-p7 txt-fw-b">One Way Cassette Type Air Conditioner</p>
+                  <p class="txt-p7">AM056NN1DEH/EU</p>
+                </div>
+                <button type="button" class="btn-icon icon-close">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </li>
+            <li class="add-list__item">
+              <div class="add-product">
+                <div class="img-box">
+                  <img src="/pub-only/images/add-product-sample.png" alt="">
+                </div>
+                <div class="txt-box">
+                  <p class="txt-p7 txt-fw-b">One Way Cassette Type Air Conditioner</p>
+                  <p class="txt-p7">AM056NN1DEH/EU</p>
+                </div>
+                <button type="button" class="btn-icon icon-close">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </li>
+            <li class="add-list__item">
+              <div class="no-add-product">
+                <!-- 2024-07-09 문구삭제 -->
+                <!-- <p class="txt-p7">Add another product from the list</p> -->
+              </div>
+            </li>
+            <!-- 2024-12-30 삭제 : item 최대 3개   -->
+            <!-- <li class="add-list__item">
+              <div class="no-add-product">
+              </div>
+            </li> -->
+          </ul>
+
+          <!-- 2024-07-25 모바일용 열기/펼치기 버튼-->
+          <button class="btn-icon icon-mo-folded">
+            <span class="txt-blind">mobile search folded</span>
+          </button>
+        </div>
+      </div>
+
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //compare popup -->
+
+  <!-- compare close alert -->
+  <div class="alert-wrap" id="compare-product-close">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="alert__header">
+        <p class="txt-p3 txt-fw-b">Compare Close</p>
+      </div>
+      <div class="aler__container">
+        <p class="txt-p6">If you close this, the current comparison <br>
+          won't be saved. Would you like to exit the compare?</p>
+      </div>
+      <div class="alert__footer">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">Keep browsing</span>
+        </button>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Continue</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //compare close alert -->
+
+  <!-- compare models popup -->
+  <div class="popup-wrap compare-models-popup" id="compare-models">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Compare Models</p>
+        <div class="models-diff-box">
+          <label class="btn-switch">
+            <input role="switch" type="checkbox" class="btn-switch__input" />
+            <span class="btn-switch__icon"></span>
+            <span class="btn-switch__txt">Show me the differences</span>
+          </label>
+          <a role="button" class="btn-block" href="#" target="">
+            <span class="btn-block__txt">PDF</span>
+            <i class="btn-block__icon icon-download"></i>
+          </a>
+        </div>
+      </div>
+      <div class="popup__container">
+
+        <div class="swiper compare-models-swiper">
+          <ul class="swiper-wrapper compare-models-list">
+            <!-- 2024-12-30 class 추가 : tit-mode-->
+            <li class="swiper-slide models__item tit-mode">
+              <div class="sticky-area">
+                <!-- 2024-12-30 class 추가 :model-info-->
+                <div class="model-info txt-tit-box">
+                  <span class="txt-p5 txt-fw-b">Model</span>
+                </div>
+
+              </div>
+              <!-- 2024-12-30 model-detail 내 구조 변경 / aria-label 추가 -->
+              <ul class="model-detail">
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="modelName">
+                    <span class="txt-fw-b txt-p5">Model Name</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="powerSupply">
+                    <span class="txt-fw-b txt-p5">Power Supply</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="mode">
+                    <span class="txt-fw-b txt-p5">Mode</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-col">
+                    <span class="txt-fw-b txt-p5">Capacity</span>
+                  </div>
+                  <div class="item-col">
+                    <div class="item-row row" aria-label="capacity-cooling">
+                      <span class="txt-p5">Cooling</span>
+                    </div>
+                    <div class="item-row row" aria-label="capacity-heating">
+                      <span class="txt-p5">Heating</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-col">
+                    <span class="txt-fw-b txt-p5">Power Input</span>
+                  </div>
+                  <div class="item-col">
+                    <div class="item-row" aria-label="power-cooling">
+                      <span class="txt-p5">Cooling</span>
+                    </div>
+                    <div class="item-row" aria-label="power-heating">
+                      <span class="txt-p5">Heating</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-col">
+                    <span class="txt-fw-b txt-p5">Current Input</span>
+                  </div>
+                  <div class="item-col">
+                    <div class="item-row" aria-label="current-cooling">
+                      <span class="txt-p5">Cooling</span>
+                    </div>
+                    <div class="item-row" aria-label="current-heating">
+                      <span class="txt-p5">Heating</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-col">
+                    <span class="txt-fw-b txt-p5">FAN</span>
+                  </div>
+                  <div class="item-col">
+                    <div class="item-row" aria-label="fan-motor">
+                      <span class="txt-p5">Motor Type​</span>
+                    </div>
+                    <div class="item-row" aria-label="fan-output">
+                      <span class="txt-p5">Output x n</span>
+                    </div>
+                    <div class="item-row" aria-label="fan-air">
+                      <span class="txt-p5">Air Flow Rate​ H/M/L (UL)</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-col">
+                    <span class="txt-fw-b txt-p5">Sound</span>
+                  </div>
+                  <div class="item-col">
+                    <div class="item-row" aria-label="sound-pressure">
+                      <span class="txt-p5">Pressure High / Mid / Low</span>
+                    </div>
+                    <div class="item-row" aria-label="sound-power">
+                      <span class="txt-p5">Power Cooling</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-col">
+                    <span class="txt-fw-b txt-p5">Dimension</span>
+                  </div>
+                  <div class="item-col">
+                    <div class="item-row" aria-label="dimension-netWeight">
+                      <span class="txt-p5">Net Weight</span>
+                    </div>
+                    <div class="item-row" aria-label="dimension-shipWeight">
+                      <span class="txt-p5">Shipping Weight</span>
+                    </div>
+                    <div class="item-row" aria-label="dimension-netDim">
+                      <span class="txt-p5">Net Dimensions (WxHxD)</span>
+                    </div>
+                    <div class="item-row" aria-label="dimension-shipDim">
+                      <span class="txt-p5">Shipping Dimensions (WxHxD)</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-col">
+                    <span class="txt-fw-b txt-p5">Panel Size</span>
+                  </div>
+                  <div class="item-col">
+                    <div class="item-row" aria-label="panel-model">
+                      <span class="txt-p5">Panel model</span>
+                    </div>
+                    <div class="item-row" aria-label="panel-netWeight">
+                      <span class="txt-p5">Panel Net Weight</span>
+                    </div>
+                    <div class="item-row" aria-label="panel-shipWeight">
+                      <span class="txt-p5">Shipping Weight</span>
+                    </div>
+                    <div class="item-row" aria-label="panel-netDim">
+                      <span class="txt-p5">Net Dimensions (WxHxD)</span>
+                    </div>
+                    <div class="item-row" aria-label="panel-shipDim">
+                      <span class="txt-p5">Shipping Dimensions (WxHxD)</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="swiper-slide models__item selected">
+              <div class="sticky-area">
+                <!-- 2024-12-30 class 추가 :model-info-->
+                <div class="model-info pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                      </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High HighHigh HighHighEER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2025-01-14 div 추가 swiper-unit-box-->
+                  <div class="swiper-unit-box">
+                    <div class="swiper unit-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide unit__item active"> <span class="txt-p7">235.2</span> </div>
+                      </div>
+                      <div class="swiper-button-next unit__next-btn">
+                        <span class="txt-blind">next</span>
+                      </div>
+                      <div class="swiper-button-prev unit__prev-btn">
+                        <span class="txt-blind">next</span>
+                      </div>
+                      <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                    </div>
+                  </div>
+                  <!-- 2024-09-19 에너지 라벨 추가 -->
+                  <div class="energy-tag-area">
+                    <a role="button" class="btn-txt-underline sm" href="#">
+                      <span class="btn-txt__txt">
+                        <em class="pc-txt">Product Information Sheet</em>
+                        <em class="mo-txt">Product Information Sheet</em>
+                      </span>
+                    </a>
+                    <a role="button" class="tag-badge-icon" href="#">
+                      <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-a.svg" alt="energy level A">
+                    </a>
+                  </div>
+                  <!-- //2024-09-19 -->
+                  <div class="pdp-stock-box">
+                    <!-- 2024-11-22 stock 변경 -->
+                    <span class="txt-p6 txt-stock green">Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <div class="cont">
+                            <!-- 툴팁 문구 -->
+                            <p class="txt-fw-b">'Stock' availability </p>
+                            <div class="sotck-box">
+                              <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                              <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is
+                                available in 2 ~ 4 weeks later from now.</p>
+                              <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 2025-03-04 class 추가 : pdp-price -->
+                  <div class="tal-center pdp-price hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">1.808.499,12 TL</p>
+                    <p class="txt-del-price">1.900.500,00 TL</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 변경 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- 2024-12-30 model-detail 내 구조 변경 / aria-label 추가 -->
+              <ul class="model-detail">
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="modelName">
+                    <!-- [F] differences 일때, <em class="is-highlight"> text </em> -->
+                    <span class="txt-p5">
+                      <em class="is-highlight">AJ016TNNDKGEU</em>
+                    </span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="powerSupply">
+                    <span class="txt-p5">1,2,220-240,50</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="mode">
+                    <span class="txt-p5">Heat Pump / Heat Recovery ​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="capacity-cooling">
+                    <div class="item-row">
+                      <span class="txt-p5">1.7 kW​</span>
+                    </div>
+                    <div class="item-row">
+                      <span class="txt-p5">5,800 Btu/h​</span>
+                    </div>
+                  </div>
+                  <div class="item-row" aria-label="capacity-heating">
+                    <div class="item-row">
+                      <span class="txt-p5">1.9 kW​</span>
+                    </div>
+                    <div class="item-row">
+                      <span class="txt-p5">6,500 Btu/h​</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="power-cooling">
+                    <span class="txt-p5">0.14 A​</span>
+                  </div>
+                  <div class="item-row" aria-label="power-heating">
+                    <span class="txt-p5">0.14 A​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="current-cooling">
+                    <span class="txt-p5">0.14 A​</span>
+                  </div>
+                  <div class="item-row" aria-label="currentt-heating">
+                    <span class="txt-p5">0.14 A​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="fan-motor">
+                    <span class="txt-p5">Crossflow Fan​</span>
+                  </div>
+                  <div class="item-row" aria-label="fan-output">
+                    <span class="txt-p5">27 x 1 w​</span>
+                  </div>
+                  <div class="item-row" aria-label="fan-air">
+                    <span class="txt-p5">4.80 / 4.30 / 4.10 CMM​​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="sound-pressure">
+                    <span class="txt-p5">27 / 24 / 21 dB(A)​</span>
+                  </div>
+                  <div class="item-row" aria-label="sound-power">
+                    <span class="txt-p5">43 dB(A)​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="dimension-netWeight">
+                    <span class="txt-p5">8.0 kg</span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-shipWeight">
+                    <span class="txt-p5">Shipping Weight</span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-netDim">
+                    <span class="txt-p5">740 x 135 x 360 mm</span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-shipDim">
+                    <span class="txt-p5">895 x 223 x 435 mm</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="panel-model">
+                    <span class="txt-p5">PC1MWSKAN</span>
+                  </div>
+                  <div class="item-row" aria-label="panel-netWeight">
+                    <span class="txt-p5">2.6 kg</span>
+                  </div>
+                  <div class="item-row" aria-label="panel-shipWeight">
+                    <span class="txt-p5">4.2 kg</span>
+                  </div>
+                  <div class="item-row" aria-label="panel-netDim">
+                    <span class="txt-p5">900 x 25 x 420 mm</span>
+                  </div>
+                  <div class="item-row" aria-label="panel-shipDim">
+                    <span class="txt-p5">958 x 112 x 482 mm</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="swiper-slide models__item">
+              <div class="sticky-area">
+                <!-- 2024-12-30 class 추가 :model-info-->
+                <div class="model-info pdp-product-list">
+                  <div class="pdp-product__tit">
+                    <div class="pdp-category">
+                      <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                      </p>
+                    </div>
+                    <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+                    <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+                  </div>
+                  <div class="img-box">
+                    <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+                  </div>
+                  <!-- 2025-01-14 div 추가 swiper-unit-box-->
+                  <div class="swiper-unit-box">
+                    <div class="swiper unit-swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide unit__item active"> <span class="txt-p7">235.2</span> </div>
+                      </div>
+                      <div class="swiper-button-next unit__next-btn">
+                        <span class="txt-blind">next</span>
+                      </div>
+                      <div class="swiper-button-prev unit__prev-btn">
+                        <span class="txt-blind">next</span>
+                      </div>
+                      <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+                    </div>
+                  </div>
+                  <!-- 2024-09-19 에너지 라벨 추가 -->
+                  <div class="energy-tag-area">
+                    <a role="button" class="btn-txt-underline sm" href="#">
+                      <span class="btn-txt__txt">
+                        <em class="pc-txt">Product Information Sheet</em>
+                        <em class="mo-txt">Product Information Sheet</em>
+                      </span>
+                    </a>
+                    <a role="button" class="tag-badge-icon" href="#">
+                      <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-a.svg" alt="energy level A">
+                    </a>
+                  </div>
+                  <!-- //2024-09-19 -->
+                  <div class="pdp-stock-box">
+                    <!-- 2024-11-22 stock 변경 -->
+                    <span class="txt-p6 txt-stock green">Stock</span>
+                    <div class="tooltip">
+                      <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                          view</span> </button>
+                      <div class="tooltip__contents">
+                        <div class="tooltip__contents-inner">
+                          <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                              close</span> </button>
+                          <div class="cont">
+                            <!-- 툴팁 문구 -->
+                            <p class="txt-fw-b">'Stock' availability </p>
+                            <div class="sotck-box">
+                              <p class="txt-p7 txt-stock green">Stock is available in current week.</p>
+                              <p class="txt-p7 txt-stock yellow">Stock is not available in current week, but stock is
+                                available in 2 ~ 4 weeks later from now.</p>
+                              <p class="txt-p7 txt-stock red">Stock is not available until 4 weeks later from now. </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 2025-03-04 class 추가 : pdp-price -->
+                  <div class="tal-center pdp-price hvac-price-flag">
+                    <p class="txt-p4 txt-fw-b">1.808.499,12 TL</p>
+                    <p class="txt-del-price">1.900.500,00 TL</p>
+                  </div>
+                  <div class="btn-box">
+                    <!-- 2024-06-26 버튼 타입 변경 : type2 추가 -->
+                    <button type="button" class="btn-block type2 md">
+                      <span class="btn-block__txt">Learn more</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- 2024-12-30 model-detail 내 구조 변경 / aria-label 추가 -->
+              <ul class="model-detail">
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="modelName">
+                    <span class="txt-p5">
+                      <em class="is-highlight">AM036NN1DKH/EU</em>
+                    </span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="powerSupply">
+                    <span class="txt-p5">1,2,220-240,50</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="mode">
+                    <span class="txt-p5">Heat Pump / Heat Recovery ​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="capacity-cooling">
+                    <div class="item-row">
+                      <span class="txt-p5">2.2 kW​</span>
+                    </div>
+                    <div class="item-row">
+                      <span class="txt-p5">7,500 Btu/h​</span>
+                    </div>
+                  </div>
+                  <div class="item-row" aria-label="capacity-heating">
+                    <div class="item-row">
+                      <span class="txt-p5">2.5 kW​</span>
+                    </div>
+                    <div class="item-row">
+                      <span class="txt-p5">8,500 Btu/h​</span>
+                    </div>
+                  </div>
+
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="power-cooling">
+                    <span class="txt-p5">0.20A​</span>
+                  </div>
+                  <div class="item-row" aria-label="power-heating">
+                    <span class="txt-p5">0.20A​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="current-cooling">
+                    <span class="txt-p5">0.20A​</span>
+                  </div>
+                  <div class="item-row" aria-label="currentt-heating">
+                    <span class="txt-p5">0.20A​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="fan-motor">
+                    <span class="txt-p5">Crossflow Fan​</span>
+                  </div>
+                  <div class="item-row" aria-label="fan-output">
+                    <span class="txt-p5">17 x 1 w​</span>
+                  </div>
+                  <div class="item-row" aria-label="fan-air">
+                    <span class="txt-p5">6.00 / 5.00 / 4.00 CMM​​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="sound-pressure">
+                    <span class="txt-p5">27 / 25 / 23 dB(A)​</span>
+                  </div>
+                  <div class="item-row" aria-label="sound-power">
+                    <span class="txt-p5">45 dB(A)​</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="dimension-netWeight">
+                    <span class="txt-p5">10.5 kg</span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-shipWeight">
+                    <span class="txt-p5">13.0 kg</span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-netDim">
+                    <span class="txt-p5">970 x 135 x 410 mm</span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-shipDim">
+                    <span class="txt-p5">1,164 x 212 x 478 mm</span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="panel-model">
+                    <span class="txt-p5">PC1NUSMAN</span>
+                  </div>
+                  <div class="item-row" aria-label="panel-netWeight">
+                    <span class="txt-p5">3.1 kg</span>
+                  </div>
+                  <div class="item-row" aria-label="panel-shipWeight">
+                    <span class="txt-p5">6.4 kg</span>
+                  </div>
+                  <div class="item-row" aria-label="panel-netDim">
+                    <span class="txt-p5">1,198 x 25 x 500 mm</span>
+                  </div>
+                  <div class="item-row" aria-label="panel-shipDim">
+                    <span class="txt-p5">1,262 x 144 x 542 mm</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="swiper-slide models__item">
+              <div class="sticky-area">
+                <!-- 2024-12-30 class 추가 :model-info-->
+                <div class="model-info no-add-product"></div>
+              </div>
+              <!-- 2024-12-30 model-detail 내 구조 변경 / aria-label 추가 -->
+              <ul class="model-detail">
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="modelName">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="powerSupply">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="mode">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="capacity-cooling">
+                    <div class="item-row">
+                      <span class="txt-p5"></span>
+                    </div>
+                    <div class="item-row">
+                      <span class="txt-p5"></span>
+                    </div>
+                  </div>
+                  <div class="item-row" aria-label="capacity-heating">
+                    <div class="item-row">
+                      <span class="txt-p5"></span>
+                    </div>
+                    <div class="item-row">
+                      <span class="txt-p5"></span>
+                    </div>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="power-cooling">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="power-heating">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="current-cooling">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="currentt-heating">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="fan-motor">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="fan-output">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="fan-air">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="sound-pressure">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="sound-power">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="dimension-netWeight">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-shipWeight">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-netDim">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="dimension-shipDim">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+                <li class="model-detail__item">
+                  <div class="item-row" aria-label="panel-model">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="panel-netWeight">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="panel-shipWeight">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="panel-netDim">
+                    <span class="txt-p5"></span>
+                  </div>
+                  <div class="item-row" aria-label="panel-shipDim">
+                    <span class="txt-p5"></span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- compare models popup -->
+
+
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

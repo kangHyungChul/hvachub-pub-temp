@@ -1,0 +1,245 @@
+/* singup header 관련 */
+#company-search-container {
+  /* overflow-x:auto; */
+  overflow: hidden;
+  min-width:1440px; 
+  min-height:calc(100vh - 80px);
+}
+
+.compay-search-inner {
+  max-width:1022px;
+  width:100%;
+  padding:42px 0 100px;
+  margin:0 auto;
+}
+
+.compay-search-inner .tit-area {
+  text-align: center;
+}
+
+.tit-area .txt-h9 {  
+  padding-top:16px;
+  font-weight: 400;
+  line-height:1.5;  
+}
+
+.company-list-search {  
+  background-color: #f7f7f7;
+  padding:24px;
+  border-radius: var(--border-base);
+  margin-bottom:40px;
+}
+
+.company-list-search .field-box-area {
+  display:flex;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  gap:16px;
+  width:100%;
+}
+
+.company-list-search .field-box-area .field-box {
+  width:50%;
+}
+.company-list-search .field-box-area .field-box .combo-box.box-type {
+  width:100%;
+}
+.company-list-search .field-box-area .txt-error { 
+  min-height:18px;
+}
+.company-list-search .btn-block.type2 { 
+ margin-bottom:22px;  
+}
+
+.compay-search-inner .page-bottom-btn {
+  margin-top: 48px;
+  text-align: center;
+}
+
+.company-list-item .list-top {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom:16px;
+}
+
+/* table */
+.company-list-item .list-nodata {
+  display: flex;
+  flex-direction: column; 
+  height:390px;
+  border-top:2px solid #000;
+  margin-bottom:20px;
+}
+
+.compay-search-inner .basic-list__result .list-el {
+  text-align: center;
+}
+
+.compay-search-inner .basic-list__result .el-radio {
+  width:40px;
+}
+.compay-search-inner .basic-list__result .el-company-name { 
+  width:255px;  
+  text-align: left; 
+}
+
+
+.compay-search-inner .basic-list__result .el-business-loc,
+.compay-search-inner .basic-list__result .el-biz-license {
+  width:125px;
+}
+
+.compay-search-inner .basic-list__result .el-city,
+.compay-search-inner .basic-list__result .el-district {
+  width:120px;
+}
+
+.compay-search-inner .basic-list__result .el-address-line {
+  width:215px;
+  text-align: left;
+}
+
+.compay-search-inner .basic-list__result .el-postal-code {
+  width:70px; 
+}
+
+.compay-search-inner .basic-list__result .el-status {
+  width:77px;
+  white-space: nowrap;
+}
+
+.basic-list__result .list-row-box.deactive {
+  background-color:#eee;
+}
+
+.compay-search-inner .basic-list__result .list-row-box .el-postal-code {
+  white-space: nowrap;
+}
+
+.basic-list__result .list-head {
+  position: sticky;
+  top:0;
+  left:0;
+  z-index:2;
+  background-color:#fff;
+ }
+
+ .basic-list__result .list-body {
+    overflow-y: auto;
+    max-height:560px; 
+    margin-right:-16px;
+    padding-right:8px;
+ }
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen  and (max-width: 1440px) {
+  #company-search-container {
+    min-width:100%;    
+  }
+
+  .compay-search-inner {
+    padding:24px 0 0;
+  }
+
+  .compay-search-inner .tit-area {
+    padding:0 24px;
+  }
+
+  .compay-search-inner .tit-area .txt-h3 {
+    font-size:24px !important;
+    line-height:36px;
+    text-align: left;
+  }
+
+  .compay-search-inner .tit-area .txt-h9 {
+    font-size:14px !important;
+    line-height: 21px;
+    text-align: left;
+  }
+  .company-list-search { 
+    padding:16px;
+    margin:0 24px;
+  }
+
+  .company-list-item {
+    margin:0 24px;
+  }
+
+  .compay-search-inner .basic-list__result .list-head, .compay-search-inner .basic-list__result .list-body {
+    width: fit-content;
+    min-width:100%;
+    overflow-x: auto;
+  }
+  
+ .basic-list__result .list-body {
+    height:300px; 
+  }
+
+
+
+/* [E]Tablet */ } 
+
+ /************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+
+  .company-list-search  {
+    margin:0 24px 24px;
+  }
+
+  .company-list-search .field-box-area { 
+    flex-direction: column;
+    align-items: flex-start;
+    gap:8px;
+  }
+
+  .company-list-search .field-box-area .field-box  {
+    width:100%;
+  }
+
+  .company-list-item .list-nodata {
+    height:240px;
+  }
+
+  .company-list-search .btn-block.type2 {
+    width:100%;
+    margin-bottom: 0px;
+    margin-top:4px;
+  }
+
+  .company-list-item {
+    margin:0 24px 100px;
+  }
+
+  .compay-search-inner .page-bottom-btn {
+    position: fixed;
+    bottom:0;
+    z-index:10;
+    margin-top:24px;
+    padding:16px 24px;
+    border-top:1px solid #ccc;
+    background-color:#fff;
+  }
+
+  .compay-search-inner .page-bottom-btn .btn-block {
+    width:100%;
+  }
+
+  .compay-search-inner .basic-list__result {
+    overflow-x: auto;;
+  }
+
+   .compay-search-inner .basic-list__result .list-body {
+      height:auto;
+      overflow-y: visible;
+      max-height:none;
+      margin-right:0;
+      padding-right:0;
+   }     
+
+/* [E]Mobile */ } 

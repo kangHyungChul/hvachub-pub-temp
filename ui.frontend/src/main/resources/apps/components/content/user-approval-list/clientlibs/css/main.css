@@ -1,0 +1,37 @@
+.user-approval { max-width: 1152px; width: 100%; background-color: #f7f7f7; padding: 24px 24px 80px 32px; } 
+.user-approval .address__title { margin-bottom: 24px; } 
+
+.user-approval .search-box .label__title { margin-bottom:8px; font-size:18px; color:#000; line-height: 1.5;}
+.user-approval .search-box .sear-item-box { display:flex; gap:24px;}
+.user-approval .search-box .sear-item-box .field-box:nth-child(2) { flex:auto; } 
+.user-approval .search-box .sear-item-box .field-box:nth-child(2) .input-search-box .input-search-box__inner  { display:flex; flex:auto; }
+.user-approval .search-box .sear-item-box .field-box:nth-child(2) .input-search-box .input-search-box__inner .input-box { width:100%; }
+
+.flex-btw { display: flex; justify-content: space-between; align-items: center;}
+
+.flex-btw + .chkbox-list-area {margin-top:16px;}
+
+.chkbox-list-area .list-data { display:flex; flex-direction: column; gap:16px;}
+
+.line-check-box { display: flex; justify-content: flex-start; align-items: center; padding:24px; border-radius: var(--border-base); border:1px solid #dadada; }
+.line-check-box .btn-checkbox { display:flex; flex-basis: 48px; justify-content: center; align-items: center; }
+.line-check-box .info_area p { padding-top:8px; }
+.line-check-box .info_area p:first-child {padding-top:0;}
+.line-check-box .info_area .name { font-size:16px; font-weight: 700; color:#000; line-height: 24px; }
+.line-check-box .info_area p span, .line-check-box .info_area p em { font-size:14px; font-weight:400; font-style: normal; }
+.line-check-box .info_area .each_info span {position: relative; display: inline-block; padding:0 8px;}
+.line-check-box .info_area .each_info span:before { content: ''; position: absolute; top: calc(50% - 7px); left:0px; display:block; width:1px; height:12px; background-color: #000; }
+.line-check-box .info_area .each_info span:first-child { padding-left:0; }
+.line-check-box .info_area .each_info span:first-child:before {display:none;}
+
+.list-data-area .pagination {margin-top:24px;}
+
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ 
+ }
+
+@media only screen and (max-width: 768px){
+ 
+ }

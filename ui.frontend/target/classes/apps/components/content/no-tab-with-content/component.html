@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+   <!-- 공통 css -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /><!-- swiper css -->
+   <link rel="stylesheet" type="text/css" href="/apps/components/content/no-tab-with-content/clientlibs/css/main.css">
+   <!-- 컴포넌트 css-->
+   <title>No Tab with Content</title>
+</head>
+
+<body>
+   <!-- component -->
+   <section class="no-tab-with-content">
+      <div class="tab-wrap">
+         <div role="tablist" class="tab-list type5" aria-label="탭타이틀" style="display:none">
+            <!-- default로 활성화되는 탭에 .active 추가 -->
+            <button type="button" class="tab-list__tab active" role="tab" aria-controls="" tabindex=""
+               aria-selected="true">
+               <span class="tab-list__tab-txt txt-h6 txt-fw-b">Sales Mode</span><!-- tab1 title -->
+            </button>
+            <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+               <span class="tab-list__tab-txt txt-h6 txt-fw-b">Designer Mode</span><!-- tab2 title -->
+            </button>
+         </div>
+         <div role="presentation" class="tab-wrap__contents">
+            <!-- tab1 content -->
+            <div role="tabpanel" class="content-box" aria-labelledby="" tabindex="0">
+               <p class="intro-txt txt-p5"><!-- description -->
+                  All design processes, including product selection, piping, wiring and system checks, are seamlessly
+                  integrated to provide a streamlined user experience,<br />
+                  so you can respond to client requests rapidly.<br />
+                  And, it includes an intuitive interface and a range of convenient features to simplify and speed-up
+                  the whole design process.
+               </p>
+               <div class="swiper no-tab-with-content__swiper">
+                  <div class="swiper-wrapper">
+                     <!-- slide1 -->
+                     <div class="swiper-slide">
+                        <!-- img align 오른쪽으로 변경시 article.tab-with-content__contwrap에 img-right 클래스 추가 (default -> left) -->
+                        <article class="no-tab-with-content__contwrap">
+                           <div class="no-tab-with-content__img">
+                              <img src="/pub-only/images/tab-with-content-sample01.png" alt="swiper sample image" />
+                           </div>
+                           <div class="no-tab-with-content__cont tal-left">
+                              <strong class="title txt-h4 txt-fw-b">Product Selection</strong>
+                              <p class="desc txt-p5">
+                                 Simply find and quickly select any Samsung air conditioners
+                                 with product thumbnails and “favorites” functions.
+                                 with product thumbnails and “favorites” functions.
+                                 with product thumbnails and “favorites” functions.
+                                 with product thumbnails and “favorites” functions.
+                              </p>
+                           </div>
+                        </article>
+                     </div>
+                     <!-- slide2 -->
+                     <div class="swiper-slide">
+                        <!-- img align 오른쪽으로 변경시 article.tab-with-content__contwrap에 img-right 클래스 추가 (default -> left) -->
+                        <article class="no-tab-with-content__contwrap img-right">
+                           <div class="no-tab-with-content__img">
+                              <img src="/pub-only/images/tab-with-content-sample01.png" alt="swiper sample image" />
+                           </div>
+                           <div class="no-tab-with-content__cont tal-left">
+                              <strong class="title txt-h4 txt-fw-b">Equipment selection</strong>
+                              <p class="desc txt-p5">You can select from the full range of Samsung Electronics system
+                                 air conditioner products. Intuitive product selection through images and a favorite
+                                 function enable quick selection.</p>
+                           </div>
+                        </article>
+                     </div>
+                     <!-- slide3 -->
+                     <div class="swiper-slide">
+                        <article class="no-tab-with-content__contwrap">Slide 3</article>
+                     </div>
+                     <!-- slide4 -->
+                     <div class="swiper-slide">
+                        <article class="no-tab-with-content__contwrap">Slide 4</article>
+                     </div>
+                     <!-- slide5 -->
+                     <div class="swiper-slide">
+                        <article class="no-tab-with-content__contwrap">Slide 5</article>
+                     </div>
+                  </div>
+
+                  <div class="swiper-pagination-wrap">
+                     <div class="swiper-pagination">
+                        <span class="txt-blind">prev</span> / <span class="txt-blind">next</span>
+                     </div>
+                     <div class="swiper-button-autoplay">
+                        <span class="txt-blind">pause</span>
+                     </div>
+                  </div>
+
+                  <div class="swiper-button-prev">
+                     <span class="txt-blind">prev</span>
+                  </div>
+                  <div class="swiper-button-next">
+                     <span class="txt-blind">next</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </section>
+   <!-- //component -->
+    
+   <!-- common.js -->
+   <script src="/pub-only/js/main-lib.js"></script>
+   <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+   <script src="/apps/components/content/no-tab-with-content/clientlibs/js/main.js"></script><!-- 컴포넌트 js -->
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+.case-study-list { max-width: 1440px; width: 100%; margin: 0 auto; padding: 0 24px; } 
+.case-result { margin-top: 24px; } 
+.case-result .case-list { margin-block:16px 48px; border-top: 2px solid #000; } 
+.case-result .case-list .list-data { display: flex; flex-wrap: wrap; gap: 48px 60px; padding: 48px 60px 0; } 
+.case-result .case-list .list-el { width: calc(33.33% - ((60px*2)/3) ); min-width: 384px; } 
+.case-result .case-list .el-img { overflow: hidden; display: flex; align-items: center; justify-content: center; width: 100%; height: 240px; margin-bottom: 16px; border-radius: var(--border-base); } 
+.case-result .case-list .el-img img { min-width: 100%; min-height: 100%; max-width: none; max-height: none; } 
+.case-result .case-list .el-title { height: 100px; margin-block: 8px; } 
+.case-result .case-list .date-btn-box { display: flex; align-items: center; } 
+.case-result .case-list .date-btn-box .date { flex: auto; font-size: 14px; color: #555; } 
+.case-result .case-list .date-btn-box .btn-box { flex: none; width: auto; } 
+.case-result .case-list .date-btn-box .icon-share { margin-right: 12px; } 
+.case-result .case-list .el-btn { display: flex; gap: 16px; margin-top: 16px; } 
+.case-result .case-list .el-btn .btn-block { flex: 1; margin: 0; } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .case-study-list { padding: 0 1.667vw; } 
+ .case-result { margin-top: 1.667vw; } 
+ .case-result .case-list { margin-block: 1.111vw 3.333vw; border-top-width: 2px; } 
+ .case-result .case-list .list-data { gap: 3.333vw 4.167vw; padding: 3.333vw 4.167vw 0; } 
+ .case-result .case-list .list-el { width: calc(33.33% - ((4.167vw * 2) / 3)); min-width: auto; } 
+ .case-result .case-list .el-img { height: 16.667vw; margin-bottom: 1.111vw; } 
+ .case-result .case-list .el-title { height: 6.944vw; margin-block: 0.556vw; } 
+ .case-result .case-list .date-btn-box .date { font-size: 0.972vw; } 
+ .case-result .case-list .date-btn-box .icon-share { margin-right: 0.833vw; } 
+ .case-result .case-list .el-btn { gap: 1.111vw; margin-top: 1.111vw; } 
+ 
+
+/* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .case-study-list .vertial { width: 100%; } 
+ .case-result .case-list { margin-block:12px 24px; } 
+ .case-result .case-list .list-data { display: block; padding: 0; } 
+ .case-result .case-list .list-el { width: 100%; min-width: auto; padding-block: 24px; border-bottom: 1px solid #dddddd; } 
+ .case-result .case-list .el-img { height: 140px; margin-bottom: 16px; } 
+ .case-result .case-list .el-title { height: auto; } 
+ .case-result .case-list .date-btn-box .icon-share { margin-right: 16px; } 
+ .case-result .case-list .el-btn { gap: 8px; } 
+ }

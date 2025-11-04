@@ -1,0 +1,74 @@
+.simulation-request-result { max-width: 1440px; margin: 0 auto; padding: 48px 24px 80px; } 
+.simulation-request-result .msg-box { text-align: center; padding: 136px 40px 40px; background-color: #f7f7f7; background-repeat: no-repeat; background-position: center 40px; background-size: 80px 80px; border-radius: var(--border-base); } 
+.simulation-request-result .msg-box .txt-h3 { margin-bottom: 16px; } 
+.simulation-request-result .result-box { margin-top: 40px; } 
+.simulation-request-result .result-box .txt-h6 { margin-bottom: 16px; } 
+.simulation-request-result .result-box .btn-box { margin-top: 24px; } 
+.simulation-request-result .result-list { border-top: 2px solid #000000; } 
+
+/* success */
+.result__success .msg-box { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-success.svg); } 
+.result__success .result-list .list-el { display: flex; align-items: center; column-gap: 32px; min-height: 56px; padding: 16px 12px; border-bottom: 1px solid #ccc; } 
+.result__success .result-list .list-el__tit { flex:0 0 240px; } 
+.result__success .result-list .list-el__cont { flex: auto; word-break: break-all; } 
+
+/* failure */
+.result__failure .msg-box { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-failed.svg); } 
+.result__failure .result-list { display: flex; column-gap: 24px; padding: 40px 24px; border-bottom: 1px solid #ccc; } 
+.result__failure .result-list .list-item { flex: 1; } 
+.result__failure .result-list .list-column { margin-top: 16px; } 
+.result__failure .result-list .list-el:not(:last-of-type) { margin-bottom: 16px; } 
+.result__failure .result-list .txt-dott { word-break: break-all; } 
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .simulation-request-result { padding: 3.333vw 1.667vw 5.556vw; } 
+ .simulation-request-result .msg-box { padding: 9.444vw 2.778vw 2.778vw; background-position: center 2.778vw; background-size: 5.556vw 5.556vw; } 
+ .simulation-request-result .msg-box .txt-h3 { margin-bottom: 1.111vw; } 
+ .simulation-request-result .result-box { margin-top: 2.778vw; } 
+ .simulation-request-result .result-box .txt-h6 { margin-bottom: 1.111vw; } 
+ .simulation-request-result .result-box .btn-box { margin-top: 1.667vw; } 
+ .simulation-request-result .result-list { border-top-width: 0.139vw; } 
+
+ /* success */
+ .result__success .result-list .list-el { column-gap: 2.222vw; min-height: 3.889vw; padding: 1.111vw 0.833vw; } 
+ .result__success .result-list .list-el__tit { flex: 0 0 16.667vw; } 
+
+ /* failure */
+ .result__failure .result-list { column-gap: 1.667vw; padding: 2.778vw 1.667vw; } 
+ .result__failure .result-list .list-column { margin-top: 1.111vw; } 
+ .result__failure .result-list .list-el:not(:last-of-type) { margin-bottom: 1.111vw; } 
+
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .simulation-request-result { padding-top: 24px; } 
+ .simulation-request-result .msg-box { padding: 104px 16px 32px; background-size: 64px 64px; background-position-y: 32px; } 
+ .simulation-request-result .msg-box .txt-h3 { font-size: 22px !important; margin-bottom: 12px; } 
+ .simulation-request-result .msg-box .txt-p4 { font-size: 14px !important; } 
+ .simulation-request-result .msg-box .txt-p4 strong { font-size: 16px; } 
+ .simulation-request-result .result-box { margin-top: 24px; } 
+ .simulation-request-result .result-box .txt-h6 { font-size: 18px !important; margin-bottom: 12px; } 
+ .simulation-request-result .result-box .btn-box { text-align: center; } 
+
+ /* success */
+ .result__success .result-list .list-el { display: block; padding: 8px 12px; } 
+ .result__success .result-list .list-el__tit { font-size: 14px !important; margin-bottom: 4px; } 
+ .result__success .result-list .list-el__cont { font-size: 14px !important; word-wrap: break-word;} 
+
+ /* failure */
+ .result__failure .result-box .btn-box { display: flex; } 
+ .result__failure .result-box .btn-box .btn-block { flex: 1; } 
+ .result__failure .result-list { display: block; padding: 0; border-bottom: 0; } 
+ .result__failure .result-list .list-item { padding: 8px 12px; border-bottom: 1px solid #ddd; } 
+ .result__failure .result-list .list-item .txt-p4 { font-size: 14px !important; } 
+ .result__failure .result-list .list-column { margin-top: 8px; } 
+ .result__failure .result-list .list-el:not(:last-of-type) { margin-bottom: 4px; } 
+ .result__failure .result-list .txt-dott { font-size: 14px !important; margin-left: 4px; } 
+
+ /* [E]Mobile */ } 

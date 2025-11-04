@@ -1,0 +1,116 @@
+.invoice-datail-sect { max-width: 1440px; width: 100%; margin: 0 auto; padding: 24px 24px 80px; } 
+/* info */
+.od-cm-info { display: flex; flex-wrap: wrap; gap: 16px 24px; padding: 16px 24px; } 
+.od-cm-info .od-cm-info__item { display: flex; align-items: flex-start; column-gap: 24px; width: 100%; } 
+.od-cm-info .od-cm-info__item.col2 { width: calc(50% - (24px / 2)); } 
+.od-cm-info .od-cm-info__item.col3 { width: calc(33.33% - ((24px * 2) / 3)); } 
+.od-cm-info .od-cm-info__item .item-dt { width: 240px; font-weight: 700; } 
+.od-cm-info .od-cm-info__item.col3 .item-dt { width: 152px; } 
+
+/* total-amount */
+.total-amount-box { background: #f2f2f2; text-align: right; margin-top: 24px; padding: 16px 24px 16px 708px; border-top: 1px solid #cccccc; border-bottom: 1px solid #aaaaaa; } 
+.total-amount-box .total-amount__item { display: flex; justify-content: space-between; width: 100%; } 
+.total-amount-box .total-amount__item + .total-amount__item { margin-top: 16px; } 
+.total-amount-box .txt-gray { color: #757575; } 
+.total-amount-box .txt-del { text-decoration: line-through; text-decoration-color: #858585; line-height: 27px; } 
+.total-amount-box .total__price > span { display: block; } 
+
+/* list */
+.invoice-datail-sect .basic-list-wrap { padding: 0; margin-top: 24px; border-radius: 0; } 
+/* result */
+.invoice-datail-sect .basic-list__result { overflow-x: scroll; } 
+.invoice-datail-sect .basic-list__result .el-item { width: 57px; } 
+.invoice-datail-sect .basic-list__result .el-material { flex: auto; } 
+.invoice-datail-sect .basic-list__result .el-qud { width: 90px; } 
+.invoice-datail-sect .basic-list__result .el-price,
+.invoice-datail-sect .basic-list__result .el-total { width: 242px; } 
+.invoice-datail-sect .list-head, 
+.invoice-datail-sect .list-body { width: fit-content; min-width: 100%; } 
+.invoice-datail-sect .list-body .el-material > a { display: flex; align-items: center; gap: 24px; width: 100%; height: 100%; } 
+.invoice-datail-sect .list-body .el-material > a:hover .txt-p5 { text-decoration: underline; font-weight: 700; } 
+.invoice-datail-sect .list-body .el-material .img-box { flex: none; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; } 
+.invoice-datail-sect .list-body .el-qud,
+.invoice-datail-sect .list-body .el-price,
+.invoice-datail-sect .list-body .el-total { text-align: right; } 
+.invoice-datail-sect .module-box .row-module .el-material { background: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 6.83011H8.5V8H0.5V6.83011ZM0.5 0H1.78754V7.26022H0.5V0Z' fill='black'/%3E%3C/svg%3E") no-repeat 24px 50%; padding-left: 56px; } 
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .invoice-datail-sect { padding: 1.667vw 1.667vw 5.556vw; } 
+
+ /* info */
+ .od-cm-info { gap: 1.111vw 1.667vw; padding: 1.111vw 1.667vw; } 
+ .od-cm-info .od-cm-info__item { column-gap: 1.667vw; } 
+ .od-cm-info .od-cm-info__item.col2 { width: calc(50% - (1.667vw / 2)); } 
+ .od-cm-info .od-cm-info__item.col3 { width: calc(33.33% - ((1.667vw * 2) / 3)); } 
+ .od-cm-info .od-cm-info__item .item-dt { width: 16.667vw; } 
+ .od-cm-info .od-cm-info__item.col3 .item-dt { width: 10.556vw; } 
+
+ /* total-amount */
+ .total-amount-box { margin-top: 1.667vw; padding: 1.111vw 1.667vw 1.111vw 49.167vw; } 
+ .total-amount-box .total-amount__item + .total-amount__item { margin-top: 1.111vw; } 
+ .total-amount-box .txt-del { line-height: 1.875vw; } 
+
+ /* list */
+ .invoice-datail-sect .basic-list-wrap { margin-top: 1.667vw; } 
+ /* result */
+ .invoice-datail-sect .basic-list__result .el-item { width: 3.958vw; } 
+ .invoice-datail-sect .basic-list__result .el-qud { width: 6.25vw; } 
+ .invoice-datail-sect .basic-list__result .el-price,
+ .invoice-datail-sect .basic-list__result .el-total { width: 16.806vw; } 
+ .invoice-datail-sect .list-body .el-material > a { gap: 1.667vw; } 
+ .invoice-datail-sect .list-body .el-material .img-box { width: 3.333vw; height: 3.333vw; } 
+ .invoice-datail-sect .module-box .row-module .el-material { background-position: 1.667vw 50%; padding-left: 3.889vw; } 
+
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .invoice-datail-sect .tit-area { margin-bottom: 16px; } 
+ .invoice-datail-sect .tit-area .txt-h3 { font-size: 24px !important; } 
+ .invoice-datail-sect .tit-area .btn-box { display: flex; flex-wrap: wrap; gap: 8px; text-align: left; margin-top: 16px; } 
+ .invoice-datail-sect .tit-area .btn-box .btn-block { height: 32px; padding-inline: 16px; margin: 0; } 
+ .invoice-datail-sect .tit-area .btn-box .btn-block .btn-block__txt { font-size: 12px; } 
+
+ /* info */
+ .od-cm-info { flex-direction: column; gap: 0; padding: 0; border-bottom: 0; } 
+ .od-cm-info .od-cm-info__item { flex-direction: column; gap: 4px; width: 100%; padding: 0 12px 16px; border-bottom: 1px solid #cccccc; } 
+ .od-cm-info .od-cm-info__item + .od-cm-info__item { padding-top: 16px; } 
+ .od-cm-info .od-cm-info__item.col2 { width: 100%; } 
+ .od-cm-info .od-cm-info__item.col3 { width: 100%; } 
+ .od-cm-info .od-cm-info__item .txt-p5 { font-size: 14px !important; } 
+ .od-cm-info .od-cm-info__item .item-dt { width: 100%; } 
+ .od-cm-info .od-cm-info__item.col3 .item-dt,
+ .od-cm-info:has(.od-cm-info__item.col3) .item-dt { width: 100%; } 
+
+ /* total-amount */
+ .total-amount-box { background: #f7f7f7; margin-top: 0; padding: 16px 16px 8px 16px; border-bottom-color: #aaaaaa; } 
+ .total-amount-box .total-amount__item { flex-wrap: wrap; align-items: center; min-height: 40px; } 
+ .total-amount-box .total-amount__item:first-of-type { padding-bottom: 0; } 
+ .total-amount-box .total-amount__item + .total-amount__item { margin-top: 8px; padding-top: 8px; border-top: 1px solid #dddddd; } 
+ .total-amount-box .total-amount__item .total__text.txt-p5 .txt-point1 { font-size: 16px !important; } 
+ .total-amount-box .total-amount__item .total__text.txt-p5 .txt-gray { font-size: 14px !important; } 
+ .total-amount-box .total-amount__item .total__text.txt-h8,
+ .total-amount-box .total-amount__item .total__text.txt-h8 + .total__price { width: 100%; } 
+ .total-amount-box .total-amount__item .total__text.txt-h8 { font-size: 16px !important; text-align: left; padding-bottom: 2px; } 
+ .total-amount-box .total-amount__item .total__text.txt-h8 + .total__price.txt-h7 { font-size: 20px !important; margin-top: 16px; } 
+ .total-amount-box .total-amount__item .total__price .txt-p5 { font-size: 14px !important; line-height: 18px; } 
+ .total-amount-box .total-amount__item .total__price.txt-p4 { font-size: 14px !important; } 
+
+ /* list */
+ .invoice-datail-sect .basic-list__result { overflow-x: auto; } 
+ .invoice-datail-sect .basic-list__result .el-item { width: 50px; } 
+ .invoice-datail-sect .basic-list__result .el-material { flex: none; width: 200px; } 
+ .invoice-datail-sect .basic-list__result .el-qud { width: 72px; } 
+ .invoice-datail-sect .basic-list__result .el-price,
+ .invoice-datail-sect .basic-list__result .el-total { width: 122px; } 
+ .invoice-datail-sect .list-head .txt-p5,
+ .invoice-datail-sect .list-body .txt-p5,
+ .invoice-datail-sect .list-body .txt-p6 { font-size: 12px !important; } 
+ .invoice-datail-sect .list-body .el-material .img-box { width: 40px; height: 40px; } 
+
+/* [E]Mobile */ } 

@@ -1,0 +1,54 @@
+.pdf-wrap { width:100%; }
+
+/* pdf header */
+.pdf-header { display: flex; justify-content: space-between; align-items: center; padding:0 40px; height: 68px; background-color:#f7f7f7; }
+.head-list li strong, .pdf-header .head-list li span { display:inline-block; font-size:12px; font-weight: 700; color:#000; line-height: 18px; font-family: var(--font-tit)}
+.pdf-logo { width:80px; height:12px; background: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/img-samsung-logo.svg) no-repeat center/ cover; font-size: 0; text-indent: -9999px; }
+
+
+/* content */
+.pdf-content { padding:60px 40px; }
+.pdf-page-tit { display: flex; align-items: center; width:100%; height:60px; border-bottom:2px solid #000; font-size:28px; font-weight:700; font-family: var(--font-tit);  }
+.gray-list-box { padding:12px 20px; margin-top:33px; background-color:#f7f7f7; }
+.gray-list-box  ul li { margin-top:8px }
+.gray-list-box  ul li:first-child { margin-top:0; }
+.gray-list-box  ul li strong, .gray-list-box  ul li span { display: inline-block; font-size:11px; color:#000; font-family: var(--font-txt);  line-height: 16px;; }
+.gray-list-box  ul li strong { font-weight: 700; }
+.gray-list-box  ul li.blue strong {font-weight: 400;}
+.gray-list-box  ul li.blue strong, .gray-list-box  ul li.blue span { color:#006bea;}
+
+.line-box { padding:12px 20px; margin-top:33px; border:1px solid #ddd;  font-size:11px; font-family: var(--font-txt);  line-height: 16px;} 
+.block-title { margin-top:66px; font-size:38px; font-family: var(--font-tit); font-weight: 700;  }
+.pdf-sub-tit { margin-bottom:6px; font-size:16px; font-weight: 700; font-family: var(--font-tit); line-height: 48px;  }
+.block-title + .table-area { margin-top:24px; }
+.col2-line-box { display: flex; align-items: stretch; gap:20px; width:100%; margin-top:33px; flex-wrap:nowrap;  }
+.col2-line-box > div { display:flex; flex-direction: column; flex-wrap: nowrap; flex-basis: 50%; flex-shrink: 1; }
+.col2-line-box > div .line-box { height:100%; margin-top:0; }
+
+.company-list li { margin-top:10px; display: flex; justify-content: flex-start; align-items: center; }
+.company-list li:first-child { margin-top:0; }
+.company-list li strong, .company-list li span { display: inline-block; font-size: 11px; color:#000; font-family: var(--font-tit);  line-height: 16px; }
+.company-list li strong { font-weight: 700; white-space: nowrap; letter-spacing: -0.5px;}
+.company-list li span { display:block; width:100%; padding-left: 16px; white-space: wrap; word-break: break-all;}
+
+.img-box-area { display: flex; justify-content: flex-end; align-items: center; margin-top:12px;}
+.imb-box { display: flex; justify-content: center; align-items: center; width:80px; height:40px; border:1px solid #eee; background-color:#f7f7f7; }
+
+.table-area { margin-top:33px; }
+.table-area table { width:100%; }
+.table-area table th, .table-area table td { height:28px; padding:12px; border:1px solid #ddd; font-size:11px; line-height:16px; text-align: center; vertical-align: middle; }
+.table-area table thead th { background-color: #f7f7f7; font-weight: 700; } 
+.table-area table tr th:first-child, .table-area table tr td:first-child { border-left:0;}
+.table-area table tr th:last-child, .table-area table tr td:last-child { border-right:0;}
+.table-area table tfoot td { background-color:#f7f7f7; border-bottom:1px solid #ddd; font-weight:700;}
+
+.line-box-wrap { margin-top:33px; }
+.line-box-wrap .line-box { margin-top:0; }
+
+
+/* pdf-footer */
+.pdf-footer { padding:0 40px; }
+.pdf-footer .copyright { margin-bottom:12px; font-size: 11px; line-height: 16px; color:#000; }
+.pdf-footer .page-num {display:flex; justify-content: center; align-items: center;  border-top:2px solid #000; }
+.pdf-footer .page-num > span {display: inline-flex; justify-content: center; align-items: center; padding-top:20px;  }
+.pdf-footer .page-num  span { font-size: 16px; color:#000;}

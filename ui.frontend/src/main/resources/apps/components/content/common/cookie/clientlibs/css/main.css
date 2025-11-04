@@ -1,0 +1,97 @@
+.cookie-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: flex-end;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.cookie-bar .cookie-bar__inner {
+  width: 100%;
+  background: #ffffff;
+}
+.cookie-bar .cookie-bar__inner .cookie-box {
+  position: relative; 
+  max-width: 1440px;
+  width: 100%;
+  min-height: 124px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+.cookie-bar .cookie-bar__inner .cookie-box .cookie {
+  flex: auto;
+}
+.cookie-bar .cookie-bar__inner .cookie-box .cookie .tit-box {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom:24px;
+}
+
+.cookie-bar .cookie-bar__inner .cookie-box .cookie .tit-box a {   
+  position: relative;  
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.cookie-bar .cookie-bar__inner .cookie-box .cookie .txt-p6 {
+  display: inline-block; 
+}
+.cookie-bar .cookie-bar__inner .cookie-box .cookie .txt-p6 a {
+  text-decoration: underline;
+  color: var(--primary_color2);
+  text-underline-offset: 3px;
+}
+.cookie-bar .cookie-bar__inner .cookie-box .btn-box {
+  flex: none;
+  width: auto; 
+  margin-top:24px;
+}
+
+.cookie-bar.active {
+  display: flex;
+}
+
+/******* MOBILE *******/
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  .cookie-bar .cookie-bar__inner .cookie-box {
+    min-height: 8.611vw;
+    padding: 1.667vw 3.333vw 1.667vw 1.667vw;
+  }
+  .cookie-bar .cookie-bar__inner .cookie-box .cookie .txt-p5 {
+    margin-bottom: 1.111vw;
+  }
+  .cookie-bar .cookie-bar__inner .cookie-box .btn-box {
+    margin-right: 3.889vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cookie-bar .cookie-bar__inner .cookie-box {
+    display: block;
+  }
+  .cookie-bar .cookie-bar__inner .cookie-box .cookie .txt-p5 {
+    font-size: 20px !important;
+  }
+  .cookie-bar .cookie-bar__inner .cookie-box .cookie .txt-p7 {
+    font-size: 14px !important;
+  }
+  .cookie-bar .cookie-bar__inner .cookie-box .cookie .txt-p7 .txt-underline {
+    display: inherit;
+  }
+  .cookie-bar .cookie-bar__inner .cookie-box .btn-box {
+    text-align: left;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .cookie-bar .cookie-bar__inner .cookie-box .btn-box .btn-block {
+    height: 40px;
+    min-width: 128px;
+  }
+  .cookie-bar .cookie-bar__inner .cookie-box .btn-box .btn-block .btn-block__txt {
+    font-size: 14px;
+  }
+  /* [E]mobile */
+}

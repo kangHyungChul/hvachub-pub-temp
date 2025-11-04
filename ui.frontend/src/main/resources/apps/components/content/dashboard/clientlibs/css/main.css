@@ -1,0 +1,90 @@
+.dashboard { max-width: 1152px; width: 100%; background-color: #f7f7f7; padding: 32px 24px 80px 32px; } 
+.dashboard .dashboard__title { margin-bottom: 8px; font-size:32px !important; } 
+.dashboard .tab-list__tab-txt { line-height: 36px !important; } 
+.dashboard .profile__boxWrap { width: 100%; display: flex; gap: 24px; flex-wrap: wrap; margin-top: 24px; } 
+.dashboard .order-tab .profile__boxWrap { margin-top: 16px; } 
+.dashboard .profile__box { width: calc((100% - 24px) / 2);  background-color: #fff; border-radius: var(--border-base); padding: 16px 24px;} 
+.dashboard .box-top { display: flex; justify-content: space-between; margin-bottom: 12px; height: 40px; } 
+.dashboard .box-top .txt-h6 { font-size:18px !important; line-height:27px; } 
+.dashboard .chart__area { width: 100%; min-height: 352px; background-color: #f7f7f7; border-radius: var(--border-base); padding: 16px 24px; } 
+.dashboard .chart__area.no-bg { background: unset; min-height: 339px; display: flex; gap: 24px; padding: 0; } 
+.dashboard .chart__area .total__desc { margin-bottom: 16px; } 
+.dashboard .combo-box { width: 190px; } 
+.dashboard .order-tab .combo-box { margin-bottom: 16px; margin-top: 24px; } 
+.dashboard .amount-box { width: 100%; } 
+.dashboard .amount-box .chart-tit { padding-bottom: 8px; } 
+.dashboard .chart__areaWrap { display: flex; gap: 24px; } 
+.dashboard .chart__areaWrap .chart__area { min-height: 380px; } 
+.dashboard .order-tab .box-top { padding-bottom: 8px; } 
+.dashboard .box-desc { padding-bottom: 16px; } 
+.dashboard .detail__amount { background-color: #f7f7f7; border-radius: var(--border-base); min-width: 224px; padding: 111.5px 50.5px; text-align: center; } 
+.dashboard .detail__chart { width: auto; height: 100%; } 
+.dashboard .total__price { line-height: 72px; } 
+.dashboard .rate-wrap { display: flex; gap: 8px; justify-content: center; align-items: baseline; margin-top:4px; } 
+.dashboard .rate-up { color: var(--secondary-color4); } 
+.dashboard .rate-down { color: var(--primary_color2); } 
+.dashboard .rate-up span,
+.dashboard .rate-down span { color: #000; font-family: var(--font-txt); } 
+.dashboard .stage-box-wrap { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 16px; padding: 0 10px 0 24px; } 
+.dashboard .stage-box { width: calc((100% - 16px) / 2); max-width:112px; background-color: #fff; border-radius: var(--border-base); padding: 21px 0; text-align: center; height: fit-content;  } 
+.dashboard .stage-box .about { margin-bottom: 8px; line-height: 18px; } 
+.dashboard .chart { display: flex; } 
+.dashboard .stage-img { max-width: 154px; } 
+.dashboard .stage-box .amount { font-size:24px !important; line-height: 36px; color: var(--primary_color1); } 
+.dashboard .stage-box .amount span { font-size: 16px; font-family: var(--font-txt); } 
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .dashboard { padding: 1.667vw 1.667vw 5.556vw 2.222vw; } 
+ .dashboard .dashboard__title { margin-bottom: 1.667vw; } 
+ .dashboard .tab-list__tab-txt { line-height: 2.5vw !important; } 
+ .dashboard .profile__boxWrap { gap: 1.667vw; margin-top: 6.111vw; } 
+ .dashboard .order-tab .profile__boxWrap { margin-top: 1.111vw; } 
+ .dashboard .profile__box { width: calc((100% - 1.667vw) / 2); padding: 1.667vw; } 
+ .dashboard .box-top { padding-bottom: 1.667vw; height: 4.444vw; } 
+ .dashboard .chart__area { min-height: 25.556vw; padding: 1.667vw; } 
+ .dashboard .chart__area.no-bg { min-height: 24.583vw; gap: 1.667vw; } 
+ .dashboard .chart__area .total__desc { margin-bottom: 1.111vw; } 
+ .dashboard .combo-box { width: 13.194vw; } 
+ .dashboard .order-tab .combo-box { margin-bottom: 1.111vw; margin-top: 2.222vw; } 
+ .dashboard .amount-box .chart-tit { padding-bottom: 1.111vw; } 
+ .dashboard .chart__areaWrap { gap: 1.667vw; } 
+ .dashboard .chart__areaWrap .chart__area { min-height: 26.389vw; } 
+ .dashboard .order-tab .box-top { padding-bottom: 0.556vw; } 
+ .dashboard .box-desc { padding-bottom: 1.111vw; } 
+ .dashboard .detail__amount { padding: 8.264vw 3.507vw; } 
+ .dashboard .total__price { line-height: 5vw; } 
+ .dashboard .rate-wrap { gap: 0.556vw; } 
+ .dashboard .stage-box-wrap { gap: 1.111vw; padding: 0 0.694vw 0 1.667vw; } 
+ .dashboard .stage-box { width: calc((100% - 1.111vw) / 2); padding: 1.042vw 0; } 
+ .dashboard .stage-box .about { margin-bottom: 0.556vw; line-height: 1.25vw; } 
+ .dashboard .stage-box .amount span { font-size: 1.111vw; } 
+ }
+
+@media only screen and (max-width: 768px){
+ .dashboard { background-color: #fff; padding: 0; } 
+ .dashboard .dashboard__title { font-size: 24px !important; padding: 16px 24px 8px; margin-bottom: 0; } 
+ .dashboard .tab-wrap__contents { background-color: #f7f7f7; padding: 16px 24px 80px; } 
+ .dashboard .profile__boxWrap { display: block; margin-top: 0; } 
+ .dashboard .profile__box { width: 100%; padding: 12px 16px; } 
+ .dashboard .profile__box + .profile__box { margin-top: 24px; } 
+ .dashboard .box-top { display: block; height: auto; margin-bottom: 0; padding-bottom: 16px; } 
+ .dashboard .box-top p { font-size: 18px !important; line-height: 27px; } 
+ .dashboard .combo-box { width: 100%; margin-top: 8px; } 
+ .dashboard .chart__area { padding: 16px; overflow-x: scroll; } 
+ .dashboard .chart__area .total__desc { font-size: 14px !important; line-height: 21px; } 
+ .dashboard .stage-box-wrap { gap: 8px; padding: 0; margin-top: 16px; width: 100%; } 
+ .dashboard .stage-box { width: calc((100% - 8px) / 2); padding: 8px 0; } 
+ .dashboard .stage-box .amount { font-size: 18px !important; } 
+ .dashboard .tab-list .tab-list__tab .tab-list__tab-txt { font-size: 16px !important; } 
+ .dashboard .order-tab .combo-box { margin-bottom: 24px; margin-top: 0; } 
+ .dashboard .chart__area.no-bg { display: block; } 
+ .dashboard .detail__amount { padding: 16px; display: flex; align-items: center; justify-content: center; gap: 35px; } 
+ .dashboard .total__price { line-height: 48px; } 
+ .dashboard .total__price span { font-size: 32px !important; } 
+ .dashboard .rate-wrap { line-height: 48px; } 
+ .dashboard .order-tab .box-top { padding-bottom: 0; } 
+ .dashboard .chart__areaWrap { display: block; } 
+ .dashboard .chart__areaWrap .chart__area { padding: 16px 15.5px; } 
+ .dashboard .chart__areaWrap .chart__area + .chart__area { margin-top: 16px; } 
+ }

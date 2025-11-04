@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"> <!-- 공통 css -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/simulation-request-result/clientlibs/css/main.css"><!-- 컴포넌트 css -->
+  <title>Simulation Request Result</title>
+</head>
+
+<body>
+
+  <!-- component -->
+  <section class="simulation-request-result">
+    <article class="result__success">
+      <!-- title 영역 -->
+      <div class="msg-box">
+        <p class="txt-h3">Thanks for Your request</p>
+        <p class="txt-p4">
+          <strong> Your Simulation Request has been submitted​.​</strong><br>
+          Please check the Simulation Request information sent via email and review the response status on the Simulation Request page.​
+        </p>
+      </div>
+      <div class="result-box">
+        <p class="txt-h6">Simulation Request Information</p>
+        <ul class="result-list">
+          <li class="list-el">
+            <p class="list-el__tit txt-p4 txt-fw-b">Request ID</p>
+            <p class="list-el__cont txt-p4 txt-point1 txt-fw-b">IS20512758</p>
+          </li>
+          <!-- 2025-02-20 항목 추가 -->
+          <li class="list-el">
+            <p class="list-el__tit txt-p4 txt-fw-b">Project ID / Quote ID</p>
+            <p class="list-el__cont txt-p4">
+              <span>PJ2024083000000000</span>&nbsp;/&nbsp;
+              <span>QT2024082400000000​</span>
+          </li>
+          <li class="list-el">
+            <p class="list-el__tit txt-p4 txt-fw-b">Simulation Type</p>
+            <p class="list-el__cont txt-p4">CFD, Noise Analysis, Energy Simulation​Simulation​Simulation​</p>
+          </li>
+          <li class="list-el">
+            <p class="list-el__tit txt-p4 txt-fw-b">Subject</p>
+            <p class="list-el__cont txt-p4">Project name​</p>
+          </li>
+          <li class="list-el">
+            <p class="list-el__tit txt-p4 txt-fw-b">Request Date</p>
+            <p class="list-el__cont txt-p4">YYYY-MM-DD</p>
+          </li>
+        </ul>
+        <div class="btn-box">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">List</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="result__failure">
+      <!-- title 영역 -->
+      <div class="msg-box">
+        <p class="txt-h3">Sorry for your inconvenience</p>
+        <p class="txt-p4">
+          <strong>Simulation Request submission failed.</strong><br>
+          Please try again or contact consumer support team to fix this problem.
+        </p>
+      </div>
+      <div class="result-box">
+        <p class="txt-h6">Contact Information​</p>
+        <!-- 2025-02-20 태그 변경 div ==> li -->
+        <ul class="result-list">
+          <!-- 2025-02-20 li 추가 : list-item -->
+          <li class="list-item">
+            <!-- 2025-02-20 p 추가 : txt-p4 -->
+            <p class="txt-p4 txt-fw-b">Phone</p>
+            <!-- 2025-02-20 class 변경 : list-column -->
+            <ul class="list-column">
+              <li class="list-el">
+                <span class="txt-dott txt-p5">UK 0344 847 5454</span>
+              </li>
+              <li class="list-el">
+                <span class="txt-dott txt-p5">IE 01 686 9454</span>
+              </li>
+            </ul>
+          </li>
+          <li class="list-item">
+            <p class="txt-p4 txt-fw-b">Open Hour​</p>
+            <ul class="list-column">
+              <li class="list-el">
+                <span class="txt-dott txt-p5">Mon-Fri : 9am - 5pm </span>
+              </li>
+              <li class="list-el">
+                <span class="txt-dott txt-p5">Sat : 9am - 3pm</span>
+              </li>
+              <li class="list-el">
+                <span class="txt-dott txt-p5">Sun/Holiday : Closed ​</span>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+        <div class="btn-box">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">List</span>
+          </button>
+          <button type="button" class="btn-block md type2">
+            <span class="btn-block__txt">Retry</span>
+          </button>
+        </div>
+      </div>
+      </div>
+    </article>
+  </section>
+  <!-- //component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+</body>
+
+</html>

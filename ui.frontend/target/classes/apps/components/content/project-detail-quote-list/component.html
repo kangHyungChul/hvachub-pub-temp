@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Project Detail Quote List</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"> <!-- 공통 css -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/project-detail-quote-list/clientlibs/css/main.css"><!-- 컴포넌트 css -->
+</head>
+
+<body>
+  <!-- component -->
+  <section class="project-detail-quote-list">
+    <div class="tit-area no-line">
+
+      <div class="tit__left">
+        <!-- 2025-01-20 모바일 back 버튼 추가 -->
+        <div class="mo-display">
+          <button type="button" class="btn-icon icon-page-back">
+            <span class="txt-blind">back</span>
+          </button>
+        </div>
+        <h1 class="txt-h3">Project Samsung e-Biz</h1>
+        <!-- 2025-01-20 PC용 edit, copy 버튼 class 추가 pc-display -->
+        <a role="button" class="btn-icon icon-edit2 pc-display" href="" target="">
+          <span class="txt-blind">edit</span>
+        </a>
+        <a role="button" class="btn-icon icon-copy2 pc-display" href="" target="">
+          <span class="txt-blind">copy</span>
+        </a>
+        <!-- //PC용 edit, copy 버튼 -->
+      </div>
+      <div class="tit__right">
+        <!-- 2025-01-10 모바일 더보기 버튼 추가  -->
+        <button type="button" class="btn-icon icon-more mo-display">
+          <span class="txt-blind">모바일 더보기</span>
+        </button>
+        <!-- 2025-01-20 ui 추가 -->
+        <ul class="btn-more-list">
+          <li class="list-item">
+            <a role="button" class="btn-block md list-btn" href="" target="">
+              <span class="btn-block__txt">List</span>
+            </a>
+          </li>
+          <!-- 모바일용 edit, copy 버튼 -->
+          <li class="list-item mo-display">
+            <a role="button" class="btn-txt" href="" target="">
+              <span class="btn-txt__txt">Edit</span>
+            </a>
+          </li>
+          <li class="list-item mo-display">
+            <a role="button" class="btn-txt" href="" target="">
+              <span class="btn-txt__txt">Copy</span>
+            </a>
+          </li>
+          <!-- //모바일용 edit, copy 버튼 -->
+        </ul>
+      </div>
+    </div>
+    <!-- [F] icon-folded 클릭시 toggle : active (접힘: 기본/ 펼침: active) -->
+    <!-- 2025-01-10 General User인 경우 class 추가 global-display -->
+    <div class="prj-detail">
+      <!-- 2025-01-20 ul ==> div 변경 -->
+      <div class="prj-detail__left">
+        <!-- 2025-01-20 ul 추가 prj-info-list -->
+        <ul class="prj-info-list">
+          <li class="prj-info-item">
+            <p class="tit">Vertical Type</p>
+            <p class="info">Office</p>
+          </li>
+          <li class="prj-info-item">
+            <p class="tit">Customer</p>
+            <p class="info">Company AA</p>
+          </li>
+          <li class="prj-info-item">
+            <p class="tit">Estimated Closing Date</p>
+            <p class="info">Daikin</p>
+          </li>
+          <li class="prj-info-item">
+            <p class="tit">Roll-out Period</p>
+            <p class="info">2024-11-01 ~ 2025-05-30</p>
+          </li>
+          <li class="prj-info-item fold-display">
+            <p class="tit">Competitor</p>
+            <p class="info">Company BB</p>
+          </li>
+          <li class="prj-info-item fold-display">
+            <p class="tit">Consultant</p>
+            <p class="info">Company CC</p>
+          </li>
+          <li class="prj-info-item fold-display">
+            <p class="tit">End-customer</p>
+            <p class="info">Company BB</p>
+          </li>
+          <li class="prj-info-item fold-display">
+            <p class="tit">Jobsite Location</p>
+            <p class="info">509-1, Teheran-ro, Gangnam-gu Seoul, Repub</p>
+          </li>
+        </ul>
+        <!-- 2025-01-20 모바일용 아이디/날짜정보 추가 -->
+        <div class="id-date-box mo-display ">
+          <p><span class="txt-fw-b">ID :&nbsp;</span>PJ2024083000000000</p>
+          <p><span class="txt-fw-b">Created :&nbsp;</span>2024-07-11</p>
+          <p><span class="txt-fw-b">Updated :&nbsp;</span>2024-10-11</p>
+        </div>
+      </div>
+      <div class="prj-detail__right">
+        <p class="creator-info txt-p6">
+          <span class="txt-fw-b">Creator</span>Brandon Smith/brandonsmith@concentrix.com
+        </p>
+        <!-- [F] status 단계에 따라 .active class 추가-->
+        <ul class="status-box">
+          <li class="status-el status1">
+            <span class="round-box">
+              <i class="round"></i>
+            </span>
+            <span class="txt txt-p7">
+              <em class="pc-txt">Quotation</em>
+              <em class="mo-txt">Quote</em>
+            </span>
+          </li>
+          <li class="status-el status2 active">
+            <span class="round-box">
+              <i class="round"></i>
+            </span>
+            <span class="txt txt-p7">Proposal</span>
+          </li>
+          <li class="status-el status3">
+            <span class="round-box">
+              <i class="round"></i>
+            </span>
+            <span class="txt txt-p7">WON</span>
+          </li>
+          <li class="status-el status4">
+            <span class="round-box">
+              <i class="round"></i>
+            </span>
+            <span class="txt txt-p7">Ordered</span>
+          </li>
+        </ul>
+        <div class="select-opt-box">
+          <div class="combo-box box-type">
+            <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+              WON
+              <!-- <span class="txt-placeholder">Select Won/Drop/Lost</span> -->
+            </button>
+            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+              <ul class="combo-box__menu-list">
+                <li role="menuitem" class="click">WON</li>
+                <li role="menuitem">DROP</li>
+                <li role="menuitem">LOST</li>
+              </ul>
+            </div>
+          </div>
+          <button type="button" class="btn-block md" data-layer-target="popup-wdl">
+            <span class="btn-block__txt">Confirm</span>
+          </button>
+        </div>
+        <!-- [F] General User인 경우 단독 노출 (PC용 아이디/날짜정보) -->
+        <div class="id-date-box fold-display">
+          <p class="txt-p6 txt-point2">Project ID : <span>PJ2024083000000000</span></p>
+          <div class="date-info">
+            <!-- 2024-12-17 strong 변경 -->
+            <p class="txt-line-slash txt-p6"><strong>Created</strong> 2024-07-11</p>
+            <p class="txt-line-slash txt-p6"><strong>Updated</strong> 2024-10-11</p>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-icon icon-folded">
+        <span class="txt-blind">fold</span>
+      </button>
+    </div>
+    <!-- quote list -->
+    <div class="quote-list">
+      <div class="tit-area no-line">
+        <h2 class="txt-h6">Quote List</h2>
+      </div>
+      <div class="quote-list-result">
+        <div class="quote-list-inner">
+          <div class="list-top">
+            <p class="txt-p6 txt-fw-b"><span class="txt-point1">5</span> Results</p>
+            <a role="button" class="btn-block md type2" href="" target="">
+              <span class="btn-block__txt">New</span>
+            </a>
+          </div>
+          <!-- [F] no result -->
+          <div class="list-nodata">
+            <!-- 2025-01-06 class 삭제 no-result-txt  -->
+            <p class="txt-p5">No matching results found.
+            </p>
+          </div>
+          <!-- [F] result -->
+          <div class="list-data-area">
+            <ul class="list-data">
+              <!-- [F] Partner User인 경우 -->
+              <li class="list-data-item">
+                <a href="#none" target="">
+                  <div class="list-item__left">
+                    <p class="quote-name txt-h8 txt-ellipsis">Samsung e-Biz Quote 1</p>
+                    <p class="quote-id txt-point2 txt-p6">QT2024082400000000</p>
+                    <div class="quote-date">
+                      <!-- 2024-12-17 strong 변경 -->
+                      <p class="txt-line-slash txt-p6"><strong>Created</strong> 2024-07-11</p>
+                      <p class="txt-line-slash txt-p6"><strong>Updated</strong> 2024-10-11</p>
+                    </div>
+                    <!-- 2025-01-20 모바일 사용을 위해 ui변경  -->
+                    <div class="btn-area">
+                      <div class="quote-btn-box">
+                        <button type="button" class="quote-btn__placeholder mo-display">Linked</button>
+                        <ul class="quote-btn__list">
+                          <li class="list-item">
+                            <!-- [F]연결전 비활성 상태 disabled-->
+                            <button type="button" class="btn-block" disabled>
+                              <span class="btn-block__txt">SEASONAL EFFICIENCY​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <!-- [F]연결전 비활성 상태 disabled-->
+                            <button type="button" class="btn-block" disabled>
+                              <span class="btn-block__txt">LIFE CYCLE COST​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <!-- [F]연결전 비활성 상태 disabled-->
+                            <button type="button" class="btn-block" disabled>
+                              <span class="btn-block__txt">SIMULATION​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <!-- 2025-01-20 [F]연결전 비활성 상태 disabled 추가-->
+                            <button type="button" class="btn-block type2" disabled>
+                              <span class="btn-block__txt">PROPOSAL​​</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 2025-01-20 모바일용 스케줄 버튼 -->
+                      <div class="btn-box mo-display">
+                        <button type="button" class="btn-block md type2" onclick="window.open('https://', '_blank')">
+                          <span class="btn-block__txt">Schedule</span>
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="list-item__right">
+                    <div class="status-amount-box">
+                      <!-- [F] 상태별 dot 색상 적용
+                        - in progress : .inp
+                        - approved : .appd
+                        - inactive : .active
+                        - requested : .req
+                        - rejected : .rej
+                      -->
+                      <p class="tag-status appd">Approved</p>
+                      <p class="tag-flag">Won</p>
+                      <div class="amount-box">
+                        <p class="txt-p6">Total Amount</p>
+                        <p class="txt-p4 txt-fw-b">$ 9999.99</p>
+                      </div>
+                      <!-- 2025-01-20 class 추가 : copy-btn -->
+                      <button type="button" class="btn-block copy-btn" onclick="window.open('https://', '_blank')">
+                        <span class="btn-block__txt">Copy</span>
+                        <i class="btn-block__icon icon-copy"></i>
+                      </button>
+                    </div>
+                    <!-- 2025-01-20 PC용 스케줄 버튼 class 추가 : pc-display-->
+                    <div class="btn-box pc-display">
+                      <button type="button" class="btn-block md type2" onclick="window.open('https://', '_blank')">
+                        <span class="btn-block__txt">Schedule</span>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-data-item">
+                <a href="#none" target="">
+                  <div class="list-item__left">
+                    <p class="quote-name txt-h8 txt-ellipsis">Samsung e-Biz Quote 1</p>
+                    <p class="quote-id txt-point2 txt-p6">QT2024082400000000</p>
+                    <div class="quote-date">
+                      <p class="txt-line-slash txt-p6"><strong>Created</strong> 2024-07-11</p>
+                      <p class="txt-line-slash txt-p6"><strong>Updated</strong> 2024-10-11</p>
+                    </div>
+                    <div class="btn-area">
+                      <div class="quote-btn-box">
+                        <button type="button" class="quote-btn__placeholder mo-display">Linked</button>
+                        <ul class="quote-btn__list">
+                          <li class="list-item">
+                            <!-- [F]연결전 활성 상태 class : before-->
+                            <button type="button" class="btn-block before" data-layer-target="alert-note">
+                              <span class="btn-block__txt">SEASONAL EFFICIENCY​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <!-- [F]연결전 활성 상태 class : before -->
+                            <button type="button" class="btn-block before" data-layer-target="alert-note">
+                              <span class="btn-block__txt">LIFE CYCLE COST​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <!-- [F]연결전 활성 상태 class : before -->
+                            <button type="button" class="btn-block before">
+                              <span class="btn-block__txt">SIMULATION​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="btn-block type2">
+                              <span class="btn-block__txt">PROPOSAL​​</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 2025-01-20 모바일용 스케줄 버튼 -->
+                      <div class="btn-box mo-display">
+                        <button type="button" class="btn-block md type2" onclick="window.open('https://', '_blank')">
+                          <span class="btn-block__txt">Schedule</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item__right">
+                    <div class="status-amount-box">
+                      <p class="tag-status inp">In progress</p>
+                      <p class="tag-flag">Won</p>
+                      <div class="amount-box">
+                        <p class="txt-p6">Total Amount</p>
+                        <p class="txt-p4 txt-fw-b">$ 9999.99</p>
+                      </div>
+                      <button type="button" class="btn-block copy-btn" onclick="window.open('https://', '_blank')">
+                        <span class="btn-block__txt">Copy</span>
+                        <i class="btn-block__icon icon-copy"></i>
+                      </button>
+                    </div>
+                    <div class="btn-box pc-display">
+                      <button type="button" class="btn-block md type2" onclick="window.open('https://', '_blank')">
+                        <span class="btn-block__txt">Schedule</span>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-data-item">
+                <a href="#none" target="">
+                  <div class="list-item__left">
+                    <p class="quote-name txt-h8 txt-ellipsis">Samsung e-Biz Quote 1</p>
+                    <p class="quote-id txt-point2 txt-p6">QT2024082400000000</p>
+                    <div class="quote-date">
+                      <p class="txt-line-slash txt-p6"><strong>Created</strong> 2024-07-11</p>
+                      <p class="txt-line-slash txt-p6"><strong>Updated</strong> 2024-10-11</p>
+                    </div>
+                    <div class="btn-area">
+                      <div class="quote-btn-box">
+                        <button type="button" class="quote-btn__placeholder mo-display">Linked</button>
+                        <ul class="quote-btn__list">
+                          <li class="list-item">
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">SEASONAL EFFICIENCY​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">LIFE CYCLE COST​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">SIMULATION​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="btn-block type2">
+                              <span class="btn-block__txt">PROPOSAL​​</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item__right">
+                    <div class="status-amount-box">
+                      <p class="tag-status rej">Rejected</p>
+                      <div class="amount-box">
+                        <p class="txt-p6">Total Amount</p>
+                        <p class="txt-p4 txt-fw-b">$ 9999.99</p>
+                      </div>
+                      <button type="button" class="btn-block copy-btn" onclick="window.open('https://', '_blank')">
+                        <span class="btn-block__txt">Copy</span>
+                        <i class="btn-block__icon icon-copy"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <!-- [F] General User인 경우 -->
+              <li class="list-data-item">
+                <a href="#none" target="">
+                  <div class="list-item__left">
+                    <p class="quote-name txt-h8 txt-ellipsis">Samsung e-Biz Quote 2</p>
+                    <p class="quote-id txt-point2 txt-p6">QT2024082400000000</p>
+                    <div class="quote-date">
+                      <p class="txt-line-slash txt-p6"><strong>Created</strong> 2024-07-11</p>
+                      <p class="txt-line-slash txt-p6"><strong>Updated</strong> 2024-10-11</p>
+                    </div>
+                    <div class="btn-area">
+                      <div class="quote-btn-box">
+                        <button type="button" class="quote-btn__placeholder mo-display">Linked</button>
+                        <ul class="quote-btn__list">
+                          <li class="list-item">
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">SEASONAL EFFICIENCY​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">LIFE CYCLE COST​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">SIMULATION​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item__right">
+                    <div class="status-amount-box">
+                      <p class="tag-status req">Requested</p>
+                      <button type="button" class="btn-block copy-btn" onclick="window.open('https://', '_blank')">
+                        <span class="btn-block__txt">Copy</span>
+                        <i class="btn-block__icon icon-copy"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="list-data-item">
+                <a href="#none" target="">
+                  <div class="list-item__left">
+                    <p class="quote-name txt-h8 txt-ellipsis">Samsung e-Biz Quote 2</p>
+                    <p class="quote-id txt-point2 txt-p6">QT2024082400000000</p>
+                    <div class="quote-date">
+                      <p class="txt-line-slash txt-p6"><strong>Created</strong> 2024-07-11</p>
+                      <p class="txt-line-slash txt-p6"><strong>Updated</strong> 2024-10-11</p>
+                    </div>
+                    <div class="btn-area">
+                      <div class="quote-btn-box">
+                        <button type="button" class="quote-btn__placeholder mo-display">Linked</button>
+                        <ul class="quote-btn__list">
+                          <li class="list-item">
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">SEASONAL EFFICIENCY​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">LIFE CYCLE COST​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                          <li>
+                            <button type="button" class="btn-block">
+                              <span class="btn-block__txt">SIMULATION​</span>
+                              <i class="btn-block__icon icon-window2"></i>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-item__right">
+                    <div class="status-amount-box">
+                      <p class="tag-status active">Inactive</p>
+                      <button type="button" class="btn-block copy-btn" onclick="window.open('https://', '_blank')">
+                        <span class="btn-block__txt">Copy</span>
+                        <i class="btn-block__icon icon-copy"></i>
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- [F]infinite scroll -->
+            <div class="icon-loading-box">
+              <span class="icon-loading"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //quote list -->
+
+    <!-- WON / DROP / LOST popup 위치이동 (project list popup component) -->
+
+    <!-- Notification of whether to save -->
+    <div class="alert-wrap" id="alert-save">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="aler__container">
+          <p class="txt-p6">Save the current screen and move. Do you want to move?</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('alert-save')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- Tools Connection Notification (Popup) -->
+    <div class="alert-wrap" id="alert-note">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="aler__container">
+          <p class="txt-p6">Product editing is not possible when connecting ‘{0}’. Would you like to connect?
+          </p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('alert-note')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- Tools Connection Notification After Saving (Popup) -->
+    <div class="alert-wrap" id="alert-after-saving">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="aler__container">
+          <p class="txt-p6">Product editing is not possible when connecting ‘{0}’.
+            After saving your current product list, you will be connected. Would you like to connect?
+          </p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('alert-after-saving')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- 2024-12-01 copy popup ==> page로 변경되어 삭제 -->
+    <!-- 2024-12-01 history popup v1.5 삭제 -->
+
+  </section>
+  <!-- component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/project-detail-quote-list/clientlibs/js/main.js"></script>
+</body>
+
+</html>

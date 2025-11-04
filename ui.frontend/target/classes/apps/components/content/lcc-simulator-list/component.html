@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LCC Simulator List</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/apps/components/content/lcc-simulator-list/clientlibs/css/main.css"
+    />
+  </head>
+  <body>
+    <!-- 240708 title 관련 태그제거 -->
+    <!-- component -->
+    <section class="lcc-simul-list">
+      <!-- LCC Simulator List search -->
+      <div class="lcc-simul-list-search__wrap">
+        <div class="field-box">
+          <label class="txt-label txt-blind" for="btn-required-search"
+            >search</label
+          >
+          <div class="input-search-box">
+            <!-- focus가 되면 active -->
+            <div class="input-search-box__inner">
+              <div class="input-box input-search box-type">
+                <input
+                  type="search"
+                  class="input-box__input"
+                  id="btn-required-search"
+                  placeholder="ID, Name, City"
+                />
+                <button type="button" class="btn-icon icon-search-delete">
+                  <span class="txt-blind">삭제</span>
+                </button>
+              </div>
+              <div class="search-box__auto">
+                <ul class="search-box__auto-list">
+                  <li class="autoitem">auto text</li>
+                  <li class="autoitem">auto text</li>
+                  <li class="autoitem">auto text</li>
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="btn-block type2 md">
+              <span class="btn-block__txt">Search</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- common.js -->
+    <script src="/pub-only/js/main-lib.js"></script>
+    <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  </body>
+</html>

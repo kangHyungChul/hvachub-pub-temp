@@ -1,0 +1,78 @@
+/* singup header 관련 */
+#singup-container {
+  overflow-x:auto;
+  min-width:1440px;
+  background-color: #f7f7f7;
+  min-height:calc(100vh - 80px);
+}
+
+.singup-gray-wrap {
+  max-width:1440px;
+  width:100%; 
+  padding:42px 24px 100px;
+  margin:0 auto;
+}
+
+.tit-area.noline { 
+  text-align: center;  
+}
+
+/* partner-registion-list */
+.partner-registion-list {
+  background-color: #fff;
+  border-radius: var(--border-base);
+  padding:48px;
+}
+
+.partner-registion-list .form__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap:24px;
+}
+
+.partner-registion-list .field-box {
+  width:100%;
+}
+
+.partner-registion-list .checkbox-group ~ .txt-error {
+  margin-top:4px;
+}
+
+.partner-registion-list + .page-bottom-btn.right {
+  margin-top:24px;
+  text-align: right;
+}
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 1440px) {
+
+  #singup-container {
+    min-width:100%;
+  }
+
+  .singup-gray-wrap {
+    padding:24px 24px 0;  
+  }
+   
+  .singup-gray-wrap .tit-area {
+    margin-bottom:0;
+  }
+
+  .singup-gray-wrap .txt-h3 {
+    font-size: 24px !important;
+    line-height: 36px;
+    text-align: left;
+  }
+
+  
+/* [E]Tablet */  }
+
+
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px) { 
+
+/* [E]Mobile */ }

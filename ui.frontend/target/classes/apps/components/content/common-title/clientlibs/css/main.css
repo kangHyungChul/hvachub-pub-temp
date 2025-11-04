@@ -1,0 +1,96 @@
+.cmc-tit-area {
+   max-width: 1392px;
+   width: 100%;
+   margin: 0 auto;
+}
+.cmc-tit-area.border-b {
+   padding-bottom: 16px;
+   border-bottom: 2px solid #000000;
+}
+.cmc-tit-area .cmc-desc-box {
+   margin-top: 24px;
+}
+.cmc-tit-area .txt-52 {
+   font-family: var(--font-tit);
+   font-size: 52px;
+   color: #000000;
+   font-weight: 700;
+}
+.cmc-tit-area .cmc-desc-box .txt-gray {
+   color: #555555;
+}
+.cmc-tit-area .btn-box {
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   text-align: initial;
+   margin-top: 24px;
+}
+.cmc-tit-area .cmc-desc-box + .btn-box {
+   margin-top: 32px;
+}
+.cmc-tit-area.tal-center .btn-box {
+   justify-content: center;
+}
+.cmc-tit-area.tal-right .btn-box {
+   justify-content: flex-end;
+}
+
+/* ===================== Tablet ===================== */
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+   .cmc-tit-area {
+      width: calc(100% - 3.333vw);
+      margin-inline: 1.667vw;
+   }
+   .cmc-tit-area.border-b {
+      padding-bottom: 1.111vw;
+      border-bottom-width: 0.139vw;
+   }
+   .cmc-tit-area .cmc-desc-box {
+      margin-top: 1.667vw;
+   }
+   .cmc-tit-area .txt-52 {
+      font-size: 3.611vw;
+   }
+   .cmc-tit-area .btn-box {
+      gap: 1.111vw;
+      margin-top: 1.667vw;
+   }
+   .cmc-tit-area .cmc-desc-box + .btn-box {
+      margin-top: 2.222vw;
+   }
+/* [E]Tablet */
+}
+/* ===================== Mobile ===================== */
+@media only screen and (max-width: 768px) {
+   .cmc-tit-area {
+      width: calc(100% - 48px);
+      margin-inline: 24px;
+   }
+   .cmc-tit-area.border-b {
+      padding-bottom: 8px;
+   }
+   .cmc-tit-area .txt-h3 {
+      font-size: 24px !important;
+   }
+   .cmc-tit-area .txt-h4 {
+      font-size: 22px !important;
+   }
+   .cmc-tit-area .txt-52 {
+      font-size: 28px !important;
+   }
+   .cmc-tit-area .cmc-desc-box {
+      margin-top: 16px;
+   }
+   .cmc-tit-area .cmc-desc-box .txt-p4 {
+      font-size: 14px !important;
+   }
+   .cmc-tit-area .cmc-desc-box .txt-p3 {
+      font-size: 14px !important;
+   }
+   .cmc-tit-area .btn-box {
+      gap: 8px;
+      margin-top: 16px;
+   }
+/* [E]Mobile */ 
+}

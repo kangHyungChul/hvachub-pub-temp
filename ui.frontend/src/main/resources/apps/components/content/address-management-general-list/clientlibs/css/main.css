@@ -1,0 +1,23 @@
+.address-managemtnt { max-width: 1152px; width: 100%; background-color: #f7f7f7; padding: 32px 24px 80px 32px; } 
+.address-managemtnt .address__title { margin-bottom: 8px; font-size: 32px !important; line-height: 48px; } 
+.address-managemtnt .tab-list__tab-txt { line-height: 36px !important; } 
+.address-managemtnt .my-list-items, .address-managemtnt .customer-list-items { padding:16px 24px; }
+
+.white-box { margin-top:24px; padding:24px 24px 16px 24px; background-color: #fff;border-radius: var(--border-base);}
+.list-top.flex-end { display: flex; justify-content: flex-end; }
+.list-top + .lr-box-item-list { margin-top:16px; }
+
+.lr-box-item-list { border-top:2px solid #000; }
+.lr-box-item-list .list-nodata { border-bottom:0; }
+
+.lr-box-item-list .list-data {display:flex; flex-direction: column; gap:8px; margin-top:16px;}
+
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ 
+ }
+
+@media only screen and (max-width: 768px){
+ 
+ }

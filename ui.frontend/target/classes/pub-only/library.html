@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/library-list/clientlibs/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/inner-content/filter/clientlibs/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/library-list-items/clientlibs/css/main.css" />
+</head>
+
+<body>
+  <!-- [F]library component -->
+  <section class="lib-list-sect">
+    <div class="field-box lib-search-area">
+      <label class="txt-label txt-blind">Library search</label>
+      <div class="input-search-box">
+        <div class="input-search-box__inner">
+          <div class="input-box input-search box-type">
+            <input type="search" class="input-box__input" placeholder="Type a model code or product name">
+            <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+          </div>
+          <div class="search-box__auto">
+            <ul class="search-box__auto-list">
+              <li class="autoitem">auto text</li>
+              <li class="autoitem">auto text</li>
+              <li class="autoitem">auto text</li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Search</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- [F]filter component -->
+    <div class="filter-wrap">
+      <div class="filter-wrap__top">
+        <!-- filter Top -->
+        <div class="filter-wrap__top-inner">
+          <div class="filter-left">
+            <!-- 2024-07-16 class 추가 : filter-btn-->
+            <p class="txt-p6 txt-fw-b filter-btn">Filters</p>
+            <!-- 2024-07-16 태그 추가 -->
+            <p class="mo-display txt-point2">00</p>
+            <!-- 2024-07-16 class 추가 : pc-clear-all-->
+            <button type="button" class="btn-txt-underline pc-clear-all">
+              <span class="btn-txt__txt">Clear all</span>
+            </button>
+          </div>
+          <div class="filter-right">
+            <div class="view-type">
+              <!-- [F] 선택시 .on -->
+              <button type="button" class="btn-icon icon-view-list on">
+                <span class="txt-blind">list view</span>
+              </button>
+              <button type="button" class="btn-icon icon-view-table">
+                <span class="txt-blind">table view</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- //filter Top -->
+      </div>
+      <!-- [F] Filter가 펼쳐져 있을때 .on-filter -->
+      <div class="filter-wrap__cont on-filter">
+        <!-- filter -->
+        <article class="filter-wrap__menu">
+
+          <!-- 2024-07-16 모바일용 -->
+          <div class="mo-filter-tit-box mo-display">
+            <p class="filter__tit">Filters</p>
+            <button type="button" class="btn-icon icon-close">
+              <span class="txt-blind">close</span>
+            </button>
+          </div>
+          <ul class="filter-list">
+            <li class="accordion-box sm active">
+              <div class="accordion__tit">
+                <p class="txt-p6">Material Type</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type" checked>
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Technical Data Book</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">DWG</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type" disabled>
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">BIM</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">User Manual</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Installation Manual</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Exploded View</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">IRG</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Energy Label</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Product Fiche</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Eco Design</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Disassembly info</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm active">
+              <div class="accordion__tit">
+                <p class="txt-p6">Category</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category" checked>
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">RAC</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">FAC</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">WAC</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">CAC</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">EHS</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">FJM</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">DVM</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Chiller</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Ventilation</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Accessary</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Category">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Controls Systems</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm">
+              <div class="accordion__tit">
+                <p class="txt-p6">Unit Type</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Unit Type" checked>
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Indoor Unit</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Unit Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Outdoor Unit</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm">
+              <div class="accordion__tit">
+                <p class="txt-p6">Type</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Cassette</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Duct</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Type">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Wall mounted</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm">
+              <div class="accordion__tit">
+                <p class="txt-p6">Family</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Family">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">1 way</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Family">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">2 way</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Family">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">3 way</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Family">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">4 way(600x600)</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Family">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">4 way</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Family">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">360</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm">
+              <div class="accordion__tit">
+                <p class="txt-p6">Technology</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Technology">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">WindFree</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm">
+              <div class="accordion__tit">
+                <p class="txt-p6">Capacity</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-inline-box">
+                  <li>
+
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="Capacity" checked>
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt">kW</span>
+                    </label>
+                  </li>
+                  <li>
+                    <!-- [F] disabled 시 disabled -->
+                    <label class="btn-radio">
+                      <input type="radio" class="btn-radio__input" name="Capacity">
+                      <span class="btn-radio__icon"></span>
+                      <span class="btn-radio__txt">Btu/h</span>
+                    </label>
+                  </li>
+                </ul>
+                <!-- [F] disabled 시 : aria-disabled="true" -->
+                <div class="range-slider">
+                  <div class="range-slider__inner">
+                    <div class="range-slider__bar" style="left: 25.6%; width: 63.6%;"></div>
+                    <div tabindex="0" class="range-slider__hadler" style="left: 25.6%;">
+                      <span class="range-slider__hadler-icon">
+                        <em class="range-slider__txt">5.5</em>
+                      </span>
+                    </div>
+                    <div tabindex="0" class="range-slider__hadler" style="left: 89.2%;">
+                      <span class="range-slider__hadler-icon">
+                        <em class="range-slider__txt">5.5</em>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="accordion-box sm">
+              <div class="accordion__tit">
+                <p class="txt-p6">Operation mode</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Cooling only</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">heat Pump</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">Heat Recovery</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm">
+              <div class="accordion__tit">
+                <p class="txt-p6">Refrigerant</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R410A</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R32</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">R290</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion-box sm">
+              <div class="accordion__tit">
+                <p class="txt-p6">Power Supply</p>
+                <button type="button" class="btn-icon icon-accordion">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+              <div class="accordion_cont">
+                <p class="align-box__tit txt-p7">hase (Ø)</p>
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply hase (Ø)" checked>
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">1</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply hase (Ø)">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">3</span>
+                    </label>
+                  </li>
+                </ul>
+
+                <p class="align-box__tit txt-p7">Voltage(V)</p>
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply Voltage(V)">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">220</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply Voltage(V)">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">221~240</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply Voltage(V)">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">380</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply Voltage(V)">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">381~415</span>
+                    </label>
+                  </li>
+                </ul>
+
+                <p class="align-box__tit txt-p7">Hertz(Hz)</p>
+                <ul class="align-block-box">
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply Hertz(Hz)">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">50</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply Hertz(Hz)">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">60</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Power Supply Hertz(Hz)">
+                      <span class="btn-checkbox__icon"></span>
+                      <span class="btn-checkbox__txt">50/60</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <!-- 2024-07-16 모바일용 -->
+          <div class="mo-filter-result-box mo-display">
+            <button type="button" class="btn-txt-underline">
+              <span class="btn-txt__txt">Clear all</span>
+            </button>
+            <button class="btn-block type2 md">
+              <span class="btn-block__txt"> (<em class="txt-point2">###</em>) Results </span>
+            </button>
+          </div>
+
+        </article>
+        <!-- //filter -->
+        <section class="filter-wrap__result">
+
+          <!-- [F] 2024-06-17 .filter-center 위치 이동(search, library, project, tools) -->
+          <div class="filter-center">
+            <p class="filter-txt">
+              <span class="txt-p6">Outdoeer Unit</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="filter-txt">
+              <span class="txt-p6">DVM</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="filter-txt">
+              <span class="txt-p6">kW1-50</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="filter-txt">
+              <span class="txt-p6">kW1-50</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+          </div>
+          <!-- //-->
+
+
+          <!-- [F]library-list-items -->
+          <!-- Library - img card -->
+          <div class="lib-view__imgcard">
+            <div class="lib-view-result">
+              <p class="txt-p6 txt-fw-b"><span class="txt-point1">10</span> Results</p>
+              <div class="lib-down-btn">
+                <a role="button" class="btn-block md type2 lib-down__btn" href="javascript:void();">
+                  <span class="btn-block__txt">Download Selected (<em>##</em>) </span>
+                  <i class="btn-block__icon icon-download-wh"></i>
+                </a>
+                <!-- 5초 후 사라짐 -->
+                <div class="lib-down__tooltip">
+                  <div class="lib-down__tooltip-inner">
+                    <p class="txt-p7">You have selected more than 30 items to download.<br>
+                      Please reduce the number of files to download and try again.</p>
+
+                    <button type="button" class="btn-icon icon-close-xsm">
+                      <span class="txt-blind">close</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2024-08-12 div 추가 : .lib__result-->
+            <div class="lib__result">
+              <div class="lib-view-select-all">
+                <label class="btn-checkbox">
+                  <input type="checkbox" class="btn-checkbox__input" name="all-lib-view" value="all">
+                  <span class="btn-checkbox__icon"></span>
+                  <span class="btn-checkbox__txt">Select All</span>
+                </label>
+              </div>
+              <ul class="lib-img-list">
+                <!-- [F] TDB, Exploded view, Others인 경우 aria-disabled="true"-->
+                <li class="lib-view-list__item" aria-disabled="true">
+                  <label class="btn-checkbox">
+                    <!-- [F] aria-disabled="true" 일때 disabled -->
+                    <input type="checkbox" class="btn-checkbox__input" name="lib-view-img" disabled>
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="lib-list__img">
+                    <img src="/pub-only/images/search-img-sample.png" alt="">
+                  </div>
+                  <!-- 2024-07-16 div 추가 : lib-tit-btn-area -->
+                  <div class="lib-tit-btn-area">
+                    <div class="lib-list__tit">
+                      <div class="lib-flag-area">
+                        <div class="tag-flag-box">
+                          <span class="tag-flag">Technical Data Book</span>
+                        </div>
+                        <!-- 2024-07-16 div 추가 : tag-lineflag-box -->
+                        <div class="tag-lineflag-box">
+                          <span class="tag-flag line-type">R410A</span>
+                          <span class="tag-flag line-type">HP</span>
+                        </div>
+                        <!-- 2024-07-16 위치이동 -->
+                        <p class="txt-p6">DVM</p>
+                      </div>
+                      <p class="lib-tit"><a href="#">SINGLE 4Way Cassette</a></p>
+                      <p class="lib-date txt-p6">2024-02-14</p>
+                    </div>
+                    <div class="lib-list__btn">
+                      <div class="btn-share-box">
+                        <!-- 2024-06-20 share, favorite 위치 변경 -->
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                        <div class="favorite-area">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a role="button" class="btn-block type2" href="#">
+                        <span class="btn-block__txt">Download</span>
+                        <i class="btn-block__icon icon-download-wh"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                </li>
+                <li class="lib-view-list__item">
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="lib-view-img">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="lib-list__img">
+                    <img src="/pub-only/images/search-img-sample.png" alt="">
+                  </div>
+                  <div class="lib-tit-btn-area">
+                    <div class="lib-list__tit">
+                      <div class="lib-flag-area">
+                        <div class="tag-flag-box">
+                          <span class="tag-flag">Technical Data Book</span>
+                        </div>
+                        <div class="tag-lineflag-box">
+                          <span class="tag-flag line-type">R410A</span>
+                          <span class="tag-flag line-type">HP</span>
+                        </div>
+                        <p class="txt-p6">RAC</p>
+                      </div>
+                      <p class="lib-tit"><a href="#">SINGLE 4Way Cassette</a></p>
+                      <p class="lib-date txt-p6">2024-02-14</p>
+                    </div>
+                    <div class="lib-list__btn">
+                      <div class="btn-share-box">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                        <div class="favorite-area">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a role="button" class="btn-block type2" href="#">
+                        <span class="btn-block__txt">Download</span>
+                        <i class="btn-block__icon icon-download-wh"></i>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="lib-view-list__item">
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="lib-view-img">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="lib-list__img">
+                    <!-- 2024-07-10 유튜브 썸네일 이미지로만 노출 -->
+                    <img src="/pub-only/images/search-img-sample.png" alt="">
+                  </div>
+                  <div class="lib-tit-btn-area">
+                    <div class="lib-list__tit">
+                      <div class="lib-flag-area">
+                        <div class="tag-flag-box">
+                          <span class="tag-flag">Tech. Video</span>
+                        </div>
+                        <p class="txt-p6">Chiller</p>
+                      </div>
+                      <p class="lib-tit"><a href="#">4Way Cassette_Introduction</a></p>
+                      <p class="lib-date txt-p6">2024-02-14</p>
+                    </div>
+                    <div class="lib-list__btn">
+                      <div class="btn-share-box">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                        <div class="favorite-area">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Tech. Video시 다운버튼 미노출 -->
+                      <!-- <a role="button" class="btn-block type2" href="#">
+                                                <span class="btn-block__txt">Download</span>
+                                                <i class="btn-block__icon icon-download-wh"></i>
+                                            </a> -->
+                    </div>
+                  </div>
+                </li>
+                <li class="lib-view-list__item" aria-disabled="true">
+                  <label class="btn-checkbox">
+                    <!-- [F] aria-disabled="true" 일때 disabled -->
+                    <input type="checkbox" class="btn-checkbox__input" name="lib-view-img" disabled>
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="lib-list__img">
+                    <!-- [F]  BO에 등록된 이미지가 없을 경우, 삼성 로고 이미지 노출-->
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/img-lib-noimg.png" alt="">
+                  </div>
+                  <div class="lib-tit-btn-area">
+                    <div class="lib-list__tit">
+                      <div class="lib-flag-area">
+                        <div class="tag-flag-box">
+                          <span class="tag-flag">DWG</span>
+                        </div>
+                        <p class="txt-p6">CAC</p>
+                      </div>
+                      <p class="lib-tit"><a href="#">4Way Cassette_Introduction</a></p>
+                      <p class="lib-date txt-p6">2024-02-14</p>
+                    </div>
+                    <div class="lib-list__btn">
+                      <div class="btn-share-box">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                        <div class="favorite-area">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a role="button" class="btn-block type2" href="#">
+                        <span class="btn-block__txt">Download</span>
+                        <i class="btn-block__icon icon-download-wh"></i>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="lib-view-list__item">
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="lib-view-img">
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                  <div class="lib-list__img">
+                    <!-- [F]  BO에 등록된 이미지가 없을 경우, 삼성 로고 이미지 노출-->
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/img-lib-noimg.png" alt="">
+                  </div>
+                  <div class="lib-tit-btn-area">
+                    <div class="lib-list__tit">
+                      <div class="lib-flag-area">
+                        <div class="tag-flag-box">
+                          <span class="tag-flag">DWG</span>
+                        </div>
+                        <p class="txt-p6">CAC</p>
+                      </div>
+                      <p class="lib-tit"><a href="#">4Way Cassette_Introduction</a></p>
+                      <p class="lib-date txt-p6">2024-02-14</p>
+                    </div>
+                    <div class="lib-list__btn">
+                      <div class="btn-share-box">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                        <div class="favorite-area">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a role="button" class="btn-block type2" href="#">
+                        <span class="btn-block__txt">Download</span>
+                        <i class="btn-block__icon icon-download-wh"></i>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="lib-list__more">
+                <button type="button" class="btn-block md">
+                  <span class="btn-block__txt">View more</span>
+                  <i class="btn-block__icon icon-btn-arrow"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2024-08-12 no result 추가 -->
+            <div class="lib__no-result" style="display: none;">
+              <p class="txt-p5">No matching results found.</p>
+            </div>
+
+
+          </div>
+          <!-- //Library - img card -->
+
+          <!-- Library - table -->
+          <div class="lib-view__table">
+            <div class="lib-view-result">
+              <p class="txt-p6 txt-fw-b"><span class="txt-point1">10</span> Results</p>
+              <div class="lib-down-btn">
+                <a role="button" class="btn-block md type2 lib-down__btn" href="javascript:void();">
+                  <span class="btn-block__txt">Download Selected (<em>##</em>) </span>
+                  <i class="btn-block__icon icon-download-wh"></i>
+                </a>
+                <!-- 5초 후 사라짐 -->
+                <div class="lib-down__tooltip">
+                  <div class="lib-down__tooltip-inner">
+                    <p class="txt-p7">You have selected more than 30 items to download.<br>
+                      Please reduce the number of files to download and try again.</p>
+
+                    <button type="button" class="btn-icon icon-close-xsm">
+                      <span class="txt-blind">close</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 2024-08-12 div 추가 : .lib__result-->
+            <div class="lib__result">
+              <ul class="table-list">
+                <li class="table-list__head">
+                  <div class="check-td">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="lib-view-table" value="all">
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </div>
+                  <div class="type-td">
+                    <span class="txt-p5 txt-fw-b">Material Type</span>
+                  </div>
+                  <div class="tit-td">
+                    <span class="txt-p5 txt-fw-b">File Name</span>
+                  </div>
+                  <div class="date-td">
+                    <span class="txt-p5 txt-fw-b">date</span>
+                  </div>
+                  <!-- 2024-06-20  share, down 위치 변경-->
+                  <div class="share-td"></div>
+                  <div class="favorite-td"></div>
+                  <div class="down-td"></div>
+
+                </li>
+                <li class="table-list__body">
+                  <ul class="tl-body__inner">
+                    <!-- [F] TDB, Exploded view, Others인 경우 aria-disabled="true"-->
+                    <li class="tl-tr" aria-disabled="true">
+                      <div class="check-td">
+                        <label class="btn-checkbox">
+                          <!-- [F] aria-disabled="true" 일때 disabled -->
+                          <input type="checkbox" class="btn-checkbox__input" name="lib-table" disabled>
+                          <span class="btn-checkbox__icon"></span>
+                        </label>
+                      </div>
+                      <div class="type-td">
+                        <p class="txt-p5"> <span class="txt-point2">Technical Data Book</span> </p>
+                      </div>
+                      <div class="tit-td">
+                        <!-- 2024-07-10 .txt-p5(material type) 위치이동 -->
+                        <div class="lib-flag-area">
+                          <p class="txt-p5">DVM</p>
+                          <span class="tag-flag line-type">R410A</span>
+                          <span class="tag-flag line-type">HP</span>
+                        </div>
+                        <!-- //2024-07-10 -->
+                        <p class="lib-tit"><a href="#">SINGLE 4Way Cassette</a> </p>
+                      </div>
+                      <div class="date-td">
+                        <span class="txt-p5">2024-02-14</span>
+                      </div>
+                      <!-- 2024-06-20  share, down 위치 변경-->
+                      <div class="share-td">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                      </div>
+                      <div class="favorite-td">
+                        <div class="favorite-area dp-inline">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-td">
+                        <a role="button" class="btn-icon icon-download" href="#">
+                          <span class="txt-blind">Download</span>
+                        </a>
+                      </div>
+                      <!-- //2024-06-20 -->
+                    </li>
+                    <li class="tl-tr">
+                      <div class="check-td">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="lib-table">
+                          <span class="btn-checkbox__icon"></span>
+                        </label>
+                      </div>
+                      <div class="type-td">
+                        <p class="txt-p5"> <span class="txt-point2">DWG</span> </p>
+                      </div>
+                      <div class="tit-td">
+                        <div class="lib-flag-area">
+                          <p class="txt-p5">RAC</p>
+                          <span class="tag-flag line-type">R410A</span>
+                          <span class="tag-flag line-type">HP</span>
+                        </div>
+                        <p class="lib-tit"><a href="#">IDU_Duct_Global DUCT_2</a></p>
+                      </div>
+                      <div class="date-td">
+                        <span class="txt-p5">2024-02-14</span>
+                      </div>
+                      <div class="share-td">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                      </div>
+                      <div class="favorite-td">
+                        <div class="favorite-area dp-inline">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-td">
+                        <a role="button" class="btn-icon icon-download" href="#">
+                          <span class="txt-blind">Download</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="tl-tr">
+                      <div class="check-td">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="lib-table">
+                          <span class="btn-checkbox__icon"></span>
+                        </label>
+                      </div>
+                      <div class="type-td">
+                        <p class="txt-p5"> <span class="txt-point2">Tech. Video</span> </p>
+                      </div>
+                      <div class="tit-td">
+                        <div class="lib-flag-area">
+                          <p class="txt-p5">PAC</p>
+                        </div>
+                        <p class="lib-tit"><a href="#">4Way Cassette_Introduction</a></p>
+                      </div>
+                      <div class="date-td">
+                        <span class="txt-p5">2024-02-14</span>
+                      </div>
+                      <div class="share-td">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                      </div>
+                      <div class="favorite-td">
+                        <div class="favorite-area dp-inline">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-td">
+                        <!-- <a role="button" class="btn-icon icon-download" href="#">
+                                                    <span class="txt-blind">Download</span>
+                                                </a> -->
+                      </div>
+                    </li>
+                    <li class="tl-tr" aria-disabled="true">
+                      <div class="check-td">
+                        <label class="btn-checkbox">
+                          <!-- [F] aria-disabled="true" 일때 disabled -->
+                          <input type="checkbox" class="btn-checkbox__input" name="lib-table" disabled>
+                          <span class="btn-checkbox__icon"></span>
+                        </label>
+                      </div>
+                      <div class="type-td">
+                        <p class="txt-p5"><span class="txt-point2">User Manual</span> </p>
+                      </div>
+                      <div class="tit-td">
+                        <div class="lib-flag-area">
+                          <p class="txt-p5">Chiller</p>
+                        </div>
+                        <p class="lib-tit"><a href="#">DB68-08703A-01_IM_AR9500T_Smart</a></p>
+                      </div>
+                      <div class="date-td">
+                        <span class="txt-p5">2024-02-14</span>
+                      </div>
+                      <div class="share-td">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                      </div>
+                      <div class="favorite-td">
+                        <div class="favorite-area dp-inline">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-td">
+                        <a role="button" class="btn-icon icon-download" href="#">
+                          <span class="txt-blind">Download</span>
+                        </a>
+                      </div>
+                    </li>
+                    <li class="tl-tr">
+                      <div class="check-td">
+                        <label class="btn-checkbox">
+                          <input type="checkbox" class="btn-checkbox__input" name="lib-table">
+                          <span class="btn-checkbox__icon"></span>
+                        </label>
+                      </div>
+                      <div class="type-td">
+                        <p class="txt-p5"><span class="txt-point2">User Manual</span> </p>
+                      </div>
+                      <div class="tit-td">
+                        <div class="lib-flag-area">
+                          <p class="txt-p5">Chiller</p>
+                        </div>
+                        <p class="lib-tit"><a href="#">DB68-08703A-01_IM_AR9500T_Smart</a></p>
+                      </div>
+                      <div class="date-td">
+                        <span class="txt-p5">2024-02-14</span>
+                      </div>
+                      <div class="share-td">
+                        <button type="button" class="btn-icon icon-share" data-layer-target="share-alert">
+                          <span class="txt-blind">share btn</span>
+                        </button>
+                      </div>
+                      <div class="favorite-td">
+                        <div class="favorite-area dp-inline">
+                          <button class="btn-icon icon-favorite">
+                            <span class="txt-blind">favorite</span>
+                          </button>
+
+                          <!-- favorite list 추가시 -->
+                          <!-- 2024-07-09 닫기 버튼 추가 -->
+                          <div class="favorite__contents favorite__contents-on">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Add to Favorite List</p>
+                              <a role="button" class="btn-txt-underline xsm" href="#">
+                                <span class="btn-txt__txt">Favorite List</span>
+                              </a>
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                          <!-- favorite list 삭제시 -->
+                          <div class="favorite__contents favorite__contents-off">
+                            <div class="favorite__contents-inner">
+                              <p class="txt-p7">Remove from Favorite List</p>
+
+                              <!-- 닫기 -->
+                              <button type="button" class="btn-icon icon-close-xsm">
+                                <span class="txt-blind">close</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-td">
+                        <a role="button" class="btn-icon icon-download" href="#">
+                          <span class="txt-blind">Download</span>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="lib-list__more">
+                <button type="button" class="btn-block md">
+                  <span class="btn-block__txt">View more</span>
+                  <i class="btn-block__icon icon-btn-arrow"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2024-08-12 no result 추가 -->
+            <div class="lib__no-result" style="display: none;">
+              <p class="txt-p5">No matching results found.</p>
+            </div>
+
+          </div>
+          <!-- //Library - table -->
+          <!-- share alert -->
+          <div class="alert-wrap" id="share-alert">
+            <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+              <div class="alert__header">
+                <p class="txt-p3 txt-fw-b">Share</p>
+              </div>
+              <div class="aler__container">
+                <div class="share-list-box">
+                  <button type="button" class="btn-txt">
+                    <i class="btn-txt__icon icon-share-in"></i>
+                    <span class="btn-txt__txt">Linkedin</span>
+                  </button>
+                  <button type="button" class="btn-txt">
+                    <i class="btn-txt__icon icon-share-email"></i>
+                    <span class="btn-txt__txt">E-mail</span>
+                  </button>
+                  <button type="button" class="btn-txt" data-layer-target="url-copy-alert">
+                    <i class="btn-txt__icon icon-share-link"></i>
+                    <span class="btn-txt__txt">Copy the link</span>
+                  </button>
+                </div>
+              </div>
+              <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+            </div>
+          </div>
+          <!-- //share alert -->
+          <!-- url copy alert -->
+          <div class="alert-wrap" id="url-copy-alert">
+            <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+              <div class="aler__container">
+                <p class="txt-p6">The URL has been copied to the clipboard.</p>
+              </div>
+              <div class="alert__footer">
+                <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup('url-copy-alert')">
+                  <span class="btn-block__txt">Close</span>
+                </button>
+              </div>
+              <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+            </div>
+          </div>
+          <!-- //url copy alert -->
+          <!-- //[F]library-list-items -->
+
+
+        </section>
+      </div>
+    </div>
+
+    <!-- //[F]filter component -->
+
+  </section>
+  <!-- //[F]library component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/inner-content/filter/clientlibs/js/main.js"></script>
+</body>
+
+</html>

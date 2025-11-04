@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project List</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+
+<body>
+
+  <!-- component -->
+  <section class="project-list">
+    <!-- 2025-01-20 타이틀 추가(기존 타이틀 컴포넌트 제거) -->
+    <div class="tit-area no-line">
+      <h1 class="txt-h3">
+        <span class="pc-txt">Project</span>
+        <span class="mo-txt">Project</span>
+      </h1>
+
+      <!-- 2025-01-20 모바일 버튼 -->
+      <div class="btn-box mo-display">
+        <button type="button" class="btn-icon icon-search">
+          <span class="txt-blind">project search</span>
+        </button>
+        <button type="button" class="btn-icon icon-home">
+          <span class="txt-blind">go home</span>
+        </button>
+      </div>
+      
+    </div>
+    <!-- 2025-01-06 class 변경 project-list-search__wrap ==> prj-search -->
+    <div class="prj-search">
+      <div class="field-box">
+        <label class="txt-label txt-blind" for="btn-required-search">search</label>
+        <div class="input-search-box">
+          <!-- focus가 되면 active -->
+          <div class="input-search-box__inner">
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" id="btn-required-search" placeholder="ID, Name">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+            </div>
+            <div class="search-box__auto">
+              <ul class="search-box__auto-list">
+                <li class="autoitem">auto text</li>
+                <li class="autoitem">auto text</li>
+                <li class="autoitem">auto text</li>
+              </ul>
+            </div>
+          </div>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Search</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- [F] filter 컴포넌트 추가 -->
+    <!-- [F] filter 컴포넌트 내부에 project-list-items 추가 -->
+
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+</body>
+
+</html>

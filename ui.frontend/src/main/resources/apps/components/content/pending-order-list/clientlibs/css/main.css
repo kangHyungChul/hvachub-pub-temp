@@ -1,0 +1,86 @@
+/********* quote list **********/
+.pending-order-list { margin-top: 24px;} 
+.pending-order-list .pending-order-list-result { border-top: 1px solid #dddddd; } 
+.pending-order-list .pending-order-list-inner { max-width: 1392px; width: 100%; background: #f7f7f7; padding: 24px 24px 80px; margin:0 auto; } 
+.pending-order-list .list-top { display: flex; align-items: flex-end; justify-content: space-between; padding-bottom: 16px; border-bottom: 2px solid #000000; } 
+.pending-order-list .list-nodata { height: 400px; } 
+.pending-order-list .list-data { margin-top: 16px; } 
+.pending-order-list .list-data .list-data-item { display: flex; align-items: center; justify-content: space-between; min-height: 121px; background: #ffffff; padding: 16px 24px; margin-top: 8px; border-radius: var(--border-base); border: 1px solid #dadada; } 
+
+/* left */
+.list-data-item .list-item__left .pending-order-name { line-height:24px; }
+.list-data-item .list-item__left .pending-order-date { margin-top: 8px; color: #1c1c1c; } 
+.list-data-item .list-item__left .pending-order-address { margin-top: 8px; color: #1c1c1c; }
+.list-data-item .list-item__left .pending-order-date strong,
+.list-data-item .list-item__left .pending-order-address strong { padding-right: 4px; }
+/* right */
+.list-data-item .status-amount-box { display: flex; align-items: center; column-gap: 24px; } 
+.list-data-item .status-amount-box .amount-box { padding-left: 12px; text-align: right; } 
+.list-data-item .status-amount-box + .btn-box { margin-top: 8px; }
+.list-data-item .status-amount-box + .btn-box .btn-block { height:32px; min-width:50px; padding:0 16px; }
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+
+ /********* quote list **********/
+ .pending-order-list { margin-top: 1.667vw; } 
+ .pending-order-list .pending-order-list-inner { max-width: 96.667vw; padding: 1.667vw 1.667vw 5.556vw; } 
+ .pending-order-list .list-top { padding-bottom: 1.111vw; border-bottom-width: 0.139vw; } 
+ .pending-order-list .list-nodata { height: 27.778vw; } 
+ .pending-order-list .list-data { margin-top: 1.111vw; } 
+ .pending-order-list .list-data .list-data-item { min-height: 8.056vw; padding: 1.667vw; margin-top: 1.111vw; } 
+ /* left */
+ .list-data-item .list-item__left .pending-order-date { margin-top: 0.556vw; } 
+ .list-data-item .list-item__left .pending-order-address { margin-top: 0.278vw; } 
+ /* right */
+ .list-data-item .status-amount-box { column-gap: 1.667vw; } 
+ .list-data-item .status-amount-box .amount-box { padding-left: 0.833vw; } 
+ .list-data-item .status-amount-box + .btn-box { margin-top: 0.556vw; }
+ .list-data-item .status-amount-box + .btn-box .btn-block { height: 2.778vw; min-width: 3.333vw; padding: 0 1.111vw; }
+
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+
+ /********* quote list **********/
+ .pending-order-list { margin-top: 0; } 
+ .pending-order-list .tit-area { display: none; } 
+ .pending-order-list .pending-order-list-result { border-top: 0; } 
+ .pending-order-list .pending-order-list-inner { background: #ffffff; } 
+ .pending-order-list .list-top { align-items: center; padding-bottom: 12px; } 
+ .pending-order-list .list-top .btn-block { height: 32px; padding-inline: 16px; } 
+ .pending-order-list .list-top .btn-block .btn-block__txt { font-size: 12px !important; } 
+ .pending-order-list .list-nodata { height: 240px; } 
+ .pending-order-list .list-data .list-data-item { position: relative; display: block; margin-top: 16px; padding: 12px 16px; } 
+
+ /* left */
+ .list-data-item .list-item__left { margin-bottom: 12px; } 
+ .list-data-item .list-item__left .pending-order-name { font-size: 14px !important; } 
+ .list-data-item .list-item__left .pending-order-date { margin-top: 4px; line-height: 1; }
+ .list-data-item .list-item__left .pending-order-address { margin-top: 2px; line-height: 1;  }
+ .list-data-item .list-item__left .txt-line-slash { line-height: 1.5 !important; }
+ .list-data-item .list-item__left .quote-name { font-size: 14px !important; } 
+ .list-data-item .list-item__left .txt-p6 { font-size: 11px !important; } 
+ .list-data-item .list-item__left .quote-id { margin-top: 4px; } 
+ .list-data-item .list-item__left .quote-date { margin-top: 0; } 
+ .list-data-item .list-item__left .quote-date .txt-line-slash::before { content: none; } 
+
+ /* right */
+ .list-data-item .status-amount-box { justify-content: flex-end; column-gap: 12px; height: auto; } 
+ .list-data-item .status-amount-box .txt-p6 { font-size: 11px !important; } 
+ .list-data-item .status-amount-box .txt-p3 { font-size: 16px !important; }
+ .list-data-item .status-amount-box + .btn-box { margin-top: 12px; text-align: left; }
+
+
+ /* header, breadcrumb hide */
+ #wrap .header-wrap,
+ #wrap .breadcrumb { display: none !important; } 
+
+
+
+ /* [E]Mobile */ } 

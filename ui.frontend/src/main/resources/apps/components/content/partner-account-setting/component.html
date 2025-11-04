@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css" />
+  <!-- header -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/template-with-logo/clientlibs/css/main.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- template-width-logo component -->
+  <header class="logo-with-header">
+    <div class="header-inner">
+      <div class="logo-box">
+        <a href="#" target="_self" aria-label="samsung hvac hub">
+          <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/hvachub-logo.svg" alt="samsung hvac hub logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- //template-width-logo component -->
+  <div id="container">
+    <!-- partner account setting component -->
+    <div class="partner-acc-set">
+      <!-- Role Setting -->
+      <!-- 2024-11-12 class 추가 : is-show / display :none/block 에서 class add/remove 로 변경-->
+      <section class="partner-acc-set__inner setting-role is-show">
+        <div class="tit-area no-line">
+          <h1 class="txt-h4">Step 1. Role setting</h1>
+          <div class="pas-desc">
+            <p class="txt-p5">
+              - You can add new roles and define menu-specific permissions.<br>
+              - Changes can also be made on My Page.<br>
+              - You can add up to 20 roles maximum.
+            </p>
+          </div>
+        </div>
+        <!-- 2024-10-22 class 변경 : 
+          my-result__wrap ==> basic-list-wrap 
+          result__num-btn ==> basic-list__top
+      -->
+        <section class="basic-list-wrap pas-result-wrap">
+          <div class="basic-list__top">
+            <!-- 2024-11-12 tooltip-btn-box 위치이동. -->
+            <div class="tooltip-btn-box">
+              <p class="txt-p5">Menu Description</p>
+              <button type="button" class="btn-icon icon-tootip" data-layer-target="menu-desc-popup">
+                <span class="txt-blind">menu description button</span>
+              </button>
+            </div>
+
+            <!-- 2024-11-12 div 삭제 : quantity__desc  -->
+
+            <button type="button" class="btn-block md col-add-btn">
+              <span class="btn-block__txt" data-layer-target="popup-layer03">Add</span>
+            </button>
+          </div>
+          <div class="role-list">
+            <ul class="list-menu">
+              <!-- 2024-10-22 box/text 분리 / class 통일 -->
+              <li class="list__top">
+                <span class="txt-p5 txt-fw-b">Role</span>
+              </li>
+              <li class="list__item">
+                <span class="txt-p5">All Data Access</span>
+              </li>
+              <!-- 2024-11-12 div 추가 : 
+                .list__item-box
+                .list__menu
+                .list__item-inner
+            -->
+              <li class="list__item-box">
+                <div class="list__menu">
+                  <span class="txt-p5">Menu</span>
+                </div>
+                <ul class="list__item-inner">
+                  <li class="list__item">
+                    <span class="txt-p5">Quote</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Tools</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Simulation<br>Request</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Order</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Account<br>Balance</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">User Management</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Proposal<br>Setting</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-delete">
+                <span class="txt-p5">Delete</span>
+              </li>
+            </ul>
+            <ul class="list-check">
+              <!-- [F] Add 버튼 클릭시 .list-check__role 영역 최신순으로 좌측정렬 추가되어야 함. -->
+              <li class="list-check__role">
+                <ul class="list-check__inner">
+                  <li class="list__top">
+                    <!-- 2024-11-12 div 삭제 : list__top-row -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">label</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" maxlength="16" />
+                      </div>
+                    </div>
+                  </li>
+                  <!-- 2024-11-12 위치 이동( list__top ==> list__item ) : btn-checkbox  -->
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="" value="" />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="undefined-2" value="quote" />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="undefined-2" value="tools" />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="undefined-2" value="simulation request" />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="undefined-2" value="order" />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="undefined-2" value="account balance" />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="undefined-2" value="user managemnet" />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="undefined-2" value="proposal setting" />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="menu-delete">
+                    <!-- 2024-11-12 delete alert 삭제로 data-layer-target 삭제 -->
+                    <button type="button" class="btn-icon delete-btn">
+                      <span class="txt-blind">delete</span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <!-- [F] Default Role 인 경우 : .default 추가  -->
+              <li class="list-check__role default">
+                <ul class="list-check__inner">
+                  <li class="list__top">
+                    <span class="txt-p5">Default</span>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="" value="" disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="quote" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="tools" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="simulation request" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="order" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="account balance" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="user Management" disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="proposal setting" disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="menu-delete"></li>
+                </ul>
+              </li>
+              <li class="list-check__role sub-admin">
+                <ul class="list-check__inner">
+                  <li class="list__top">
+                    <span class="txt-p5">Sub Admin</span>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="" value="" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="quote" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="tools" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="simulation request" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="order" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="account balance" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="user Management" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="list__item">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="default" value="proposal settings" checked disabled />
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                  </li>
+                  <li class="menu-delete"></li>
+                </ul>
+              </li>
+              <!-- [F] 디자인 style을 위함 빈 column (.js 파일) -->
+              <li class="list-check__role blank">
+                <ul class="list-check__inner">
+                  <li class="list__top"></li>
+                  <!-- 2024-11-12 li 추가 : list__item  -->
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="menu-delete"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="error-msg-wrap">
+            <p class="txt-error">This field is required.</p>
+            <p class="txt-error">The same content cannot be registered.</p>
+          </div>
+          <div class="setting-btn-wrap">
+            <button type="button" class="btn-block md type2">
+              <span class="btn-block__txt">Next</span>
+            </button>
+          </div>
+        </section>
+
+      </section>
+      <!-- //Role Setting -->
+      <!-- permission Setting -->
+      <!-- 2024-11-12  style="display: none" 삭제 -->
+      <section class="partner-acc-set__inner setting-permission">
+        <div class="tit-area no-line">
+          <h1 class="txt-h4">Step 2. Permission Management</h1>
+          <div class="pas-desc">
+            <p class="txt-p5">
+              - Please assign appropriate roles to each member.<br>
+              - Changes can also be made on My Page.
+            </p>
+          </div>
+          <!-- 2024-10-22 class 삭제 : sm -->
+          <div class="field-box">
+            <label class="txt-label txt-blind">Select Role</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                View All Roles
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem" class="active">View All Roles</li>
+                  <li role="menuitem">Sub Admin</li>
+                  <li role="menuitem">Default</li>
+                  <li role="menuitem">New1</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2024-10-22 class 변경 : my-result__wrap ==> basic-list-wrap -->
+        <div class="basic-list-wrap pas-result-wrap">
+          <!-- 2024-11-12 div 추가 : basic-list__top, tooltip-btn-box 위치 이동 -->
+          <div class="basic-list__top">
+            <div class="tooltip-btn-box">
+              <p class="txt-p5">Menu Description</p>
+              <button type="button" class="btn-icon icon-tootip" data-layer-target="menu-desc-popup">
+                <span class="txt-blind">menu description button</span>
+              </button>
+            </div>
+          </div>
+          <div class="role-list">
+            <ul class="list-menu">
+              <!-- 2024-11-12 li 삭제 : user-id ( list__top 통합 )-->
+              <li class="list__top">
+                <div class="list__top-row">
+                  <span class="txt-p5 txt-fw-b">User ID</span>
+                </div>
+                <div class="list__top-row">
+                  <span class="txt-p5 txt-fw-b">Role</span>
+                </div>
+              </li>
+              <!-- 2024-11-12 all chechk 부분 분리, div 추가 : list__item -->
+              <li class="list__item">
+                <span class="txt-p5">AllAllAll DataDataDataDataData AccessAccessAccessAccessAccessAccessAccessAccess</span>
+              </li>
+              <li class="list__item-box">
+                <div class="list__menu">
+                  <span class="txt-p5">Menu</span>
+                </div>
+                <ul class="list__item-inner">
+                  <li class="list__item">
+                    <span class="txt-p5">Quote</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Tools</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Simulation<br>Request</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Order</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Account<br>Balance</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">User Management</span>
+                  </li>
+                  <li class="list__item">
+                    <span class="txt-p5">Proposal<br>Setting</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="list-check">
+              <li class="list-check__role">
+                <ul class="list-check__inner">
+                  <!-- 2024-11-12 li 삭제 : user-id (list__top 통합) -->
+                  <li class="list__top">
+                    <div class="list__top-row">
+                      <span class="txt-p5 txt-fw-b txt-ellipsis">Honggildongggg.heo</span>
+                      <button type="button" class="btn-icon delete-btn" data-layer-target="delete-alert">
+                        <span class="txt-blind">삭제</span>
+                      </button>
+                    </div>
+                    <div class="list__top-row">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind">hidden label</label>
+                        <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">defaultdefaultdefaultdefault</button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                            <ul class="combo-box__menu-list">
+                              <li role="menuitem" data-layer-target="new-role-popup">+ New Role</li>
+                              <li role="menuitem">Sub Admin</li>
+                              <li role="menuitem" class="selected">Default</li>
+                              <li role="menuitem">Sales</li>
+                              <li role="menuitem">Service</li>
+                              <li role="menuitem">Engineer</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list__item">
+                    -
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-check">
+                      <span class="txt-blind">role setting checked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-check">
+                      <span class="txt-blind">role setting checked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-check">
+                      <span class="txt-blind">role setting checked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-uncheck">
+                      <span class="txt-blind">role setting unchecked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-uncheck">
+                      <span class="txt-blind">role setting unchecked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-uncheck">
+                      <span class="txt-blind">role setting unchecked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-uncheck">
+                      <span class="txt-blind">role setting unchecked</span>
+                    </i>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-check__role">
+                <ul class="list-check__inner">
+                  <li class="list__top">
+                    <div class="list__top-row">
+                      <span class="txt-p5 txt-fw-b txt-ellipsis">Honggildongggg.heo</span>
+                      <button type="button" class="btn-icon delete-btn" data-layer-target="delete-alert">
+                        <span class="txt-blind">삭제</span>
+                      </button>
+                    </div>
+                    <div class="list__top-row">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind">hidden label</label>
+                        <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">defaultdefaultdefaultdefault</button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                            <ul class="combo-box__menu-list">
+                              <li role="menuitem" data-layer-target="new-role-popup">+ New Role</li>
+                              <li role="menuitem">Sub Admin</li>
+                              <li role="menuitem" class="selected">Default</li>
+                              <li role="menuitem">Sales</li>
+                              <li role="menuitem">Service</li>
+                              <li role="menuitem">Engineer</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list__item">
+                    <i class="txt-checked"> <span class="txt-blind">checked</span> </i>
+                  </li>
+
+                  <li class="list__item">
+                    <i class="icon-block icon-role-check">
+                      <span class="txt-blind">role setting checked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-check">
+                      <span class="txt-blind">role setting checked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-check">
+                      <span class="txt-blind">role setting checked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-uncheck">
+                      <span class="txt-blind">role setting unchecked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-uncheck">
+                      <span class="txt-blind">role setting unchecked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-uncheck">
+                      <span class="txt-blind">role setting unchecked</span>
+                    </i>
+                  </li>
+                  <li class="list__item">
+                    <i class="icon-block icon-role-uncheck">
+                      <span class="txt-blind">role setting unchecked</span>
+                    </i>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- [F] 디자인 style을 위함 빈 column (.js 파일) -->
+              <li class="list-check__role blank">
+                <ul class="list-check__inner">
+                  <!-- 2024-11-12 li 삭제 : user-id -->
+                  <li class="list__top"></li>
+                  <!-- 2024-11-12 li 추가 : list__item -->
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                  <li class="list__item"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="setting-btn-wrap">
+            <button type="button" class="btn-block md type2">
+              <span class="btn-block__txt">Confirm</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2024-10-22 New Role popup -->
+        <div class="popup-wrap new-role-popup" id="new-role-popup">
+          <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="popup__header">
+              <p class="txt-h4">New Role</p>
+            </div>
+            <div class="popup__container">
+              <div class="basic-list__result">
+                <ul class="list-head">
+                  <li class="el__menu"><span class="txt-p5 txt-fw-b">Role</span></li>
+                  <li class="el__check">
+                    <!-- 2024-11-12 div 삭제 : list-row -->
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">menu name</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="list-body">
+                  <!-- 2024-11-12 li 추가 : list-row  -->
+                  <li class="list-row">
+                    <div class="el__menu">
+                      <span class="txt-p5">All Data Access</span>
+                    </div>
+                    <div class="el__check">
+                      <!-- 2024-11-12 위치이동( list-head ==> list-body ) : btn-checkbox  -->
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="role setting" value="All" />
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <!-- 2024-11-12 li/div 추가 : 
+                    list-row-box 
+                    list-col
+                    list-row__inner
+                -->
+                  <li class="list-row-box">
+                    <div class="list-col">
+                      <span class="txt-p5">Menu</span>
+                    </div>
+                    <ul class="list-row__inner">
+                      <li class="list-row">
+                        <div class="el__menu">
+                          <span class="txt-p5">Quote</span>
+                        </div>
+                        <div class="el__check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Quote" checked />
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="list-row">
+                        <div class="el__menu">
+                          <span class="txt-p5">Tools</span>
+                        </div>
+                        <div class="el__check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Tools" checked />
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="list-row">
+                        <div class="el__menu">
+                          <span class="txt-p5">Simulation Request</span>
+                        </div>
+                        <div class="el__check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="role setting" value="All" checked />
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="list-row">
+                        <div class="el__menu">
+                          <span class="txt-p5">Order</span>
+                        </div>
+                        <div class="el__check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Order" />
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="list-row">
+                        <div class="el__menu">
+                          <span class="txt-p6">Account Balance</span>
+                        </div>
+                        <div class="el__check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Account Balance" />
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="list-row">
+                        <div class="el__menu">
+                          <span class="txt-p5">User Management</span>
+                        </div>
+                        <div class="el__check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="role setting" value="User Management" />
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li class="list-row">
+                        <div class="el__menu">
+                          <span class="txt-p5">Proposal Setting</span>
+                        </div>
+                        <div class="el__check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Proposal Setting" />
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+              <div class="txt-error-wrap">
+                <p class="txt-error">This field is required.</p>
+                <p class="txt-error">Duplicated roles cannot be registered.</p>
+              </div>
+            </div>
+            <div class="popup__footer">
+              <button type="button" class="btn-block lg" onclick="window.hvachubFunc.closePopup('new-role-popup')">
+                <span class="btn-block__txt">Back</span>
+              </button>
+              <button type="button" class="btn-block type2 lg" data-layer-target="save-alert">
+                <span class="btn-block__txt">Save</span>
+              </button>
+            </div>
+            <button type="button" class="btn-icon icon-close">
+              <span class="txt-blind">Close</span>
+            </button>
+          </div>
+        </div>
+        <!-- //New Role popup -->
+
+        <!-- Delete alert -->
+        <!-- 2024-10-22 class 추가 : delete-alert -->
+        <div class="alert-wrap delete-alert" id="delete-alert">
+          <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+            <div class="alert__header">
+              <p class="txt-p3 txt-fw-b">Delete User</p>
+            </div>
+            <div class="aler__container">
+              <p class="txt-p6">
+                Are you sure you want to delete the user from your company? Deleted user IDs cannot be recovered.
+              </p>
+              <!-- 2024-10-22 문구 추가 -->
+              <p class="txt-caption">※ Changes must be saved to permanently delete the selected user</p>
+            </div>
+            <div class="alert__footer">
+              <button type="button" class="btn-block md">
+                <span class="btn-block__txt">No</span>
+              </button>
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Yes</span>
+              </button>
+            </div>
+            <button type="button" class="btn-icon icon-close">
+              <span class="txt-blind">Close</span>
+            </button>
+          </div>
+        </div>
+        <!-- //Delete alert -->
+      </section>
+      <!-- //permission Setting -->
+
+      <!-- 2024-10-22 save alert -->
+      <div class="alert-wrap" id="save-alert">
+        <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+          <div class="aler__container">
+            <p class="txt-p6">Successfully saved.</p>
+          </div>
+          <div class="alert__footer">
+            <button type="button" class="btn-block type2 md">
+              <span class="btn-block__txt">Ok</span>
+            </button>
+          </div>
+          <button type="button" class="btn-icon icon-close">
+            <span class="txt-blind">Close</span>
+          </button>
+        </div>
+      </div>
+      <!-- //save alert -->
+
+      <!-- 2024-10-22 common menu description popup-->
+      <div class="popup-wrap menu-desc-popup" id="menu-desc-popup">
+        <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+          <div class="popup__header">
+            <p class="txt-h4">Menu Description</p>
+          </div>
+          <div class="popup__container">
+            <div class="menu-info-box">
+              <p class="txt-p6 txt-fw-b">*All Data Access</p>
+              <div class="menu-ds-info">
+                <p class="txt-p6"><span class="txt-point2">- Checked</span>: can view, edit, and delete data of your company's other employees</p>
+                <p class="txt-p6"><span class="txt-point2">- Unchecked</span>: access limited to your own data</p>
+              </div>
+            </div>
+            <div class="basic-list__result">
+              <ul class="list-head">
+                <li class="el__menu">
+                  <p class="txt-p5 txt-fw-b">Menu</p>
+                </li>
+                <li class="el__info">
+                  <p class="txt-p5 txt-fw-b">Access Permissions</p>
+                </li>
+              </ul>
+              <ul class="list-body">
+                <li class="list-row">
+                  <div class="el__menu">
+                    <p class="txt-p6">Quote</p>
+                  </div>
+                  <div class="el__info">
+                    <p class="txt-p6">
+                      <span><strong>Project</strong>: access projects list, project details; select products; request quotations; generate proposals; request delivery schedule</span>
+                      <span><strong>Run-rate</strong>: select products; request delivery schedule</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="list-row">
+                  <div class="el__menu">
+                    <p class="txt-p6">Tools</p>
+                  </div>
+                  <div class="el__info">
+                    <p class="txt-p6">
+                      <span>Access Lifecycle Cost (LCC), Seasonal Energy Efficiency Ratio (SEER) and Seasonal Coefficient of Performance (SCOP) calculation tools</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="list-row">
+                  <div class="el__menu">
+                    <p class="txt-p6">Simulation<br />Request</p>
+                  </div>
+                  <div class="el__info">
+                    <p class="txt-p6">
+                      <span>Request detailed CFD and energy simulation reports</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="list-row">
+                  <div class="el__menu">
+                    <p class="txt-p6">Order</p>
+                  </div>
+                  <div class="el__info">
+                    <p class="txt-p6">
+                      <span><strong>Cart</strong>: add products, manage carts</span>
+                      <span><strong>Checkout</strong>: place and manage orders</span>
+                      <span><strong>Invoice</strong>: view invoices</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="list-row">
+                  <div class="el__menu">
+                    <p class="txt-p6">Account<br />Balance</p>
+                  </div>
+                  <div class="el__info">
+                    <p class="txt-p6">
+                      <span>View Account Balance, Invoice Payment Status</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="list-row">
+                  <div class="el__menu">
+                    <p class="txt-p6">User Management</p>
+                  </div>
+                  <div class="el__info">
+                    <p class="txt-p6">
+                      <span>Assign roles and permissions to account users</span>
+                    </p>
+                  </div>
+                </li>
+                <li class="list-row">
+                  <div class="el__menu">
+                    <p class="txt-p6">Proposal<br />SettingSettingSettingSettingSetting</p>
+                  </div>
+                  <div class="el__info">
+                    <p class="txt-p6">
+                      <span>Set proposal pdf template</span>
+                      <span>Include non-Samsung products and services in proposals</span>
+                      <span>Define standard markup margin for proposals</span>
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button type="button" class="btn-icon icon-close"><span class="txt-blind">Close</span></button>
+        </div>
+      </div>
+      <!-- //common menu description popup -->
+    </div>
+    <!-- //partner account setting component -->
+  </div>
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

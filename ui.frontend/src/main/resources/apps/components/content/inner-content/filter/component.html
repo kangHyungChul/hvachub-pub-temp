@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <div class="filter-wrap">
+    <div class="filter-wrap__top">
+      <!-- filter Top -->
+      <div class="filter-wrap__top-inner">
+        <!-- [F] plp -->
+        <div class="filter-left">
+          <ul class="filter-left__list">
+            <li class="txt-line-break">
+              <!-- [F] Filter가 펼쳐져 있을때 .on -->
+              <button type="button" class="btn-txt btn-filter on">
+                <i class="btn-txt__icon icon-filters"></i>
+                <span class="btn-txt__txt">Filters</span>
+              </button>
+            </li>
+            <li class="txt-line-break">
+              <p class="pc-display txt-p6 txt-fw-b"><span class="txt-point1">13</span> Results</p>
+              <p class="mo-display txt-p6 txt-fw-b txt-point1">00</p>
+            </li>
+          </ul>
+          <button type="button" class="btn-txt-underline pc-clear-all">
+            <span class="btn-txt__txt">Clear all</span>
+          </button>
+        </div>
+        <!-- // plp-->
+
+        <!-- [F] search, liblrary, quote -->
+        <div class="filter-left" style="display: none;">
+          <p class="txt-p6 txt-fw-b filter-btn">Filters</p>
+          <p class="txt-point2 mo-display">00</p>
+          <button type="button" class="btn-txt-underline pc-clear-all">
+            <span class="btn-txt__txt">Clear all</span>
+          </button>
+        </div>
+        <!-- //search, liblrary, quote -->
+
+        <div class="filter-right">
+          <!-- [F] plp, search -->
+          <div class="sort-box">
+            <span class="txt-p6 txt-fw-b">Sort by </span>
+            <div class="field-box">
+              <label class="txt-label txt-blind">Sort</label>
+              <div class="combo-box noline-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Newest</button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem" class="selected">Newest</li>
+                    <li role="menuitem">Price: Low to High</li>
+                    <li role="menuitem">Price: High to Low</li>
+                    <li role="menuitem">Name: Asending</li>
+                    <li role="menuitem">Name: Descending</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- //plp, search -->
+          <!-- [F] liblrary -->
+          <div class="view-type" style="display: none;">
+            <!-- [F] 선택시 .on -->
+            <button type="button" class="btn-icon icon-view-list on">
+              <span class="txt-blind">list view</span>
+            </button>
+            <button type="button" class="btn-icon icon-view-table">
+              <span class="txt-blind">table view</span>
+            </button>
+          </div>
+          <!-- //liblrary -->
+          <!-- [F] quote  -->
+          <!-- <div class="mo-display" >
+            <button type="button" class="btn-block type2">
+              <span class="btn-block__txt">New</span>
+            </button>
+          </div> -->
+          <!-- //quote -->
+        </div>
+      </div>
+      <!-- //filter Top -->
+    </div>
+    <!-- [F] Filter가 펼쳐져 있을때 .on-filter -->
+    <div class="filter-wrap__cont on-filter">
+      <!-- filter -->
+      <article class="filter-wrap__menu">
+
+        <!-- 2024-07-16 모바일용 -->
+        <div class="mo-filter-tit-box mo-display">
+          <p class="filter__tit">Filters</p>
+          <button type="button" class="btn-icon icon-close">
+            <span class="txt-blind">close</span>
+          </button>
+        </div>
+
+        <ul class="filter-list">
+          <!-- S: 240617 Date형 필터 레이아웃 추가 - jueun -->
+          <li class="accordion-box sm active">
+            <div class="accordion__tit">
+              <p class="txt-p6">Date</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <!-- updated date select -->
+              <div class="field-box field-select">
+                <label class="txt-label txt-blind">Updated date</label>
+                <div class="combo-box box-type">
+                  <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                    Created date
+                    <!-- <span class="txt-placeholder">Updated date</span> --><!-- placeholder -->
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">Created date</li>
+                      <li role="menuitem">Updated date</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- date calendar -->
+              <div class="date-box">
+                <div class="field-box">
+                  <label class="txt-label txt-blind">start date</label>
+                  <input type="text" id="datepicker1" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+                </div>
+                <span>~</span>
+                <div class="field-box">
+                  <label class="txt-label txt-blind">end date</label>
+                  <input type="text" id="datepicker2" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+                </div>
+              </div>
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Date">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">2024</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Date">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">2023</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Date">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">2022</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm active">
+            <div class="accordion__tit">
+              <p class="txt-p6">Product Group</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Product Group" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">DVM</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Product Group">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">EHS</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm active">
+            <div class="accordion__tit">
+              <p class="txt-p6">Combination Table</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Combination Table" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Combination Table name</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Combination Table">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Combination Table name</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Combination Table">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Combination Table name</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Combination Table">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Combination Table name</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm active">
+            <div class="accordion__tit">
+              <p class="txt-p6">Material Type</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Technical Data Book</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">DWG</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">BIM</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Tech. Video</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Catalog</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">User Manual</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Installation Manual</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Exploded View</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Material Type">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Others</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm active">
+            <div class="accordion__tit">
+              <p class="txt-p6">Category</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">RAC</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">FAC</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">WAC</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">CAC</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">EHS</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">FJM</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">DVM</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Chiller</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Ventilation</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Accessary</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Category">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Controls Systems</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm active">
+            <div class="accordion__tit">
+              <p class="txt-p6">Unit Type</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Unit Type" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Indoor Unit</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Unit Type">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Outdoor Unit</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm">
+            <div class="accordion__tit">
+              <p class="txt-p6">Type</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Type">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Cassette</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Type">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Dust</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Type">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Wall Mounted</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm">
+            <div class="accordion__tit">
+              <p class="txt-p6">Family</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Family">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">1 way</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Family">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">2 way</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Family">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">4 way(600x600)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Family">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">4 way</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Family">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">360</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm">
+            <div class="accordion__tit">
+              <p class="txt-p6">Technology</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Technology">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">WindFree</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm">
+            <div class="accordion__tit">
+              <p class="txt-p6">Capacity</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-inline-box">
+                <li>
+
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Capacity" checked>
+                    <span class="btn-radio__icon"></span>
+                    <span class="btn-radio__txt">kW</span>
+                  </label>
+                </li>
+                <li>
+                  <!-- [F] disabled 시 disabled -->
+                  <label class="btn-radio">
+                    <input type="radio" class="btn-radio__input" name="Capacity">
+                    <span class="btn-radio__icon"></span>
+                    <span class="btn-radio__txt">Btu/h</span>
+                  </label>
+                </li>
+              </ul>
+              <!-- [F] disabled 시 : aria-disabled="true" -->
+              <div class="range-slider">
+                <div class="range-slider__inner">
+                  <div class="range-slider__bar" style="left: 25.6%; width: 63.6%;"></div>
+                  <div tabindex="0" class="range-slider__hadler" style="left: 25.6%;">
+                    <span class="range-slider__hadler-icon">
+                      <em class="range-slider__txt">5.5</em>
+                    </span>
+                  </div>
+                  <div tabindex="0" class="range-slider__hadler" style="left: 89.2%;">
+                    <span class="range-slider__hadler-icon">
+                      <em class="range-slider__txt">5.5</em>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="accordion-box sm">
+            <div class="accordion__tit">
+              <p class="txt-p6">Operation Mode</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Cooling Only</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Heat Pump</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Operation mode">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">Heat Recovery</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm">
+            <div class="accordion__tit">
+              <p class="txt-p6">Refrigerant</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">R410A</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">R32</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Refrigerant">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">R290</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="accordion-box sm">
+            <div class="accordion__tit">
+              <p class="txt-p6">Power Supply</p>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">close</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+              <p class="align-box__tit txt-p7">Phase (Ø)</p>
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Phase (Ø)" checked>
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">1</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Phase (Ø)">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">3</span>
+                  </label>
+                </li>
+              </ul>
+
+              <p class="align-box__tit txt-p7">Voltage(V)</p>
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Voltage(V)">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">220</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Voltage(V)">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">221~240</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Voltage(V)">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">380</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Voltage(V)">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">381~415</span>
+                  </label>
+                </li>
+              </ul>
+
+              <p class="align-box__tit txt-p7">Hertz(Hz)</p>
+              <ul class="align-block-box">
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Hertz(Hz)">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">50</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Hertz(Hz)">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">60</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="Power Supply Hertz(Hz)">
+                    <span class="btn-checkbox__icon"></span>
+                    <span class="btn-checkbox__txt">50/60</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+
+        <!-- 2024-07-16 모바일용 -->
+        <div class="mo-filter-result-box mo-display">
+          <button type="button" class="btn-txt-underline">
+            <span class="btn-txt__txt">Clear all</span>
+          </button>
+          <button class="btn-block type2 md">
+            <span class="btn-block__txt"> (<em class="txt-point2">###</em>) Results </span>
+          </button>
+        </div>
+
+      </article>
+      <!-- //filter -->
+      <section class="filter-wrap__result">
+
+        <!-- [F] 2024-06-17 .filter-center 위치 이동(search, library, project, tools) -->
+        <div class="filter-center">
+          <p class="filter-txt">
+            <span class="txt-p6">Outdoeer Unit</span>
+            <button type="button" class="btn-icon icon-close-sm">
+              <span class="txt-blind">close</span>
+            </button>
+          </p>
+          <p class="filter-txt">
+            <span class="txt-p6">DVM</span>
+            <button type="button" class="btn-icon icon-close-sm">
+              <span class="txt-blind">close</span>
+            </button>
+          </p>
+          <p class="filter-txt">
+            <span class="txt-p6">kW1-50</span>
+            <button type="button" class="btn-icon icon-close-sm">
+              <span class="txt-blind">close</span>
+            </button>
+          </p>
+          <p class="filter-txt">
+            <span class="txt-p6">kW1-50</span>
+            <button type="button" class="btn-icon icon-close-sm">
+              <span class="txt-blind">close</span>
+            </button>
+          </p>
+        </div>
+        <!-- //-->
+
+
+        <!-- 
+                    [F]
+                    여기에 000-000-items 들어가요 
+                -->
+
+      </section>
+    </div>
+  </div>
+
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

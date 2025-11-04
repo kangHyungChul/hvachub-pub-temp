@@ -1,0 +1,116 @@
+.lnb {
+  max-width: 288px;
+  width: 100%;
+  padding: 24px;
+}
+/* .lnb .item-2depth + .item-2depth {
+  margin-top: 7px;
+} */
+.lnb .item-2depth > a,
+.lnb .item-2depth > span {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height:56px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--font-tit) !important;
+}
+
+
+/* .lnb .item-3depth__wrap {
+  padding-top: 7px;
+} */
+.lnb .item-2depth .item-3depth__wrap .txt-p4 { 
+  font-size:16px !important; 
+}
+
+.lnb .item-3depth a,
+.lnb .item-3depth span {
+  display: block;
+  width: 100%;
+  padding: 8px 28px 8px 16px;
+  line-height: 24px;
+}
+.lnb .item-4depth__wrap {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  /* margin-bottom: 16px; */
+  padding: 8px 0;
+}
+.lnb .item-4depth {
+  padding: 9.5px 24px;
+}
+.lnb .item-4depth a {
+  padding: 0;
+  line-height: 21px;
+}
+.lnb .item-2depth.clicked > a,
+.lnb .item-2depth.clicked a,
+.lnb .item-3depth.clicked > a,
+.lnb .item-4depth.clicked a {
+  font-weight: 700;
+  color: var(--primary_color1) !important;
+}
+.lnb .lock a {
+  color: #757575;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: unset;
+}
+.lnb .icon-lock {
+  display: none;
+}
+.lnb .lock .icon-lock {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-lock-footer.svg);
+}
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  .lnb {
+    max-width: 20vw;
+    padding: 1.667vw;
+  }
+  .lnb .item-2depth + .item-2depth {
+    margin-top: 0.486vw;
+  }
+  .lnb .item-2depth > a,
+  .lnb .item-2depth > span {
+    padding: 1.25vw 0;
+    line-height: 1.875vw;
+    font-size: 1.25vw;
+  }
+  .lnb .item-3depth__wrap {
+    padding-top: 0.486vw;
+  }
+  .lnb .item-3depth a,
+  .lnb .item-3depth span {
+    padding: 0.729vw 1.944vw 0.729vw 1.111vw;
+    line-height: 27px;
+  }
+  .lnb .item-4depth__wrap {
+    border-radius: 0.694vw;
+    margin-bottom: 1.111vw;
+    padding: 0.556vw 0;
+  }
+  .lnb .item-4depth {
+    padding: 0.66vw 1.667vw;
+  }
+  .lnb .item-4depth a {
+    line-height: 1.458vw;
+  }
+  .lnb .lock a {
+    gap: 0.556vw;
+  }
+  .lnb .lock .icon-lock {
+    width: 1.111vw;
+    height: 1.111vw;
+  }
+}

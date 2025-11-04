@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>commonUi</title>
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      padding-inline: 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      background: #f7f7f7;
+      padding: 10px;
+      z-index: 99;
+    }
+
+    header ul {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    header ul li {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .txt-h5 {
+      color: #aaaaaa;
+      padding-top: 40px;
+    }
+
+    .basic-table th {
+      text-align: left;
+    }
+  </style>
+  <script>
+    var commonLabel = {
+      ailsDropDownCloseLabel: 'ailsDropDownCloseLabel',
+      ailsOpenLabel: 'ailsOpenLabel',
+      dateType: 'YYYY/MM/DD',
+    }
+  </script>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <header role="navigation">
+    <ul>
+      <li><a href="#button">Button</a></li>
+      <li><a href="#src">switch/radio/check</a></li>
+      <li><a href="#tag">flag/badge/tag</a></li>
+      <li><a href="#input">input field</a></li>
+      <li><a href="#pagination">pagination</a></li>
+      <li><a href="#text">text</a></li>
+      <li><a href="#title">title area</a></li>
+      <li><a href="#tab">tab</a></li>
+      <li><a href="#list">list</a></li>
+      <li><a href="#accordion">accordion</a></li>
+      <li><a href="#table">table</a></li>
+      <li><a href="#list-table">list-table</a></li>
+      <li><a href="#productList">productList</a></li>
+    </ul>
+  </header>
+
+  <h5 class="txt-h5" id="button">button</h5>
+  <table class="basic-table">
+    <colgroup>
+      <col style="width: 200px;">
+      <col>
+      <col style="width: 200px;">
+      <col>
+      <col style="width: 200px;">
+      <col>
+    </colgroup>
+    <tbody>
+      <!-- *** block button *** -->
+      <tr>
+        <th>block button<br>(.btn-block)</th>
+        <td colspan="5">
+          <button type="button" class="btn-block">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block type2">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block type3">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <a role="button" class="btn-block" href="#">
+            <span class="btn-block__txt">A tag Button</span>
+          </a>
+          <a role="button" class="btn-block type2" href="#">
+            <span class="btn-block__txt">A tag Button</span>
+          </a>
+          <a role="button" class="btn-block type3" href="#">
+            <span class="btn-block__txt">A tag Button</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th>block button<br>icon</th>
+        <td colspan="5">
+          <button type="button" class="btn-block">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window"></i>
+          </button>
+          <button type="button" class="btn-block type2">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window-wh"></i>
+          </button>
+          <button type="button" class="btn-block type3">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window-wh"></i>
+          </button>
+          <a role="button" class="btn-block" href="#">
+            <span class="btn-block__txt">A tag Button</span>
+            <i class="btn-block__icon icon-window"></i>
+          </a>
+          <a role="button" class="btn-block type2" href="#">
+            <span class="btn-block__txt">A tag Button</span>
+            <i class="btn-block__icon icon-window-wh"></i>
+          </a>
+          <a role="button" class="btn-block type3" href="#">
+            <span class="btn-block__txt">A tag Button</span>
+            <i class="btn-block__icon icon-window-wh"></i>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th>block button<br>disabled</th>
+        <td colspan="5">
+          <button type="button" class="btn-block" disabled>
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window"></i>
+          </button>
+          <button type="button" class="btn-block type2" disabled>
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window-wh"></i>
+          </button>
+          <button type="button" class="btn-block type3" disabled>
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window-wh"></i>
+          </button>
+          <a role="button" class="btn-block" aria-disabled="true" href="#">
+            <span class="btn-block__txt">A tag Button disabled</span>
+          </a>
+          <a role="button" class="btn-block type2" aria-disabled="true" href="#">
+            <span class="btn-block__txt">A tag Button disabled</span>
+          </a>
+          <a role="button" class="btn-block type3" aria-disabled="true" href="#">
+            <span class="btn-block__txt">A tag Button disabled</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <th>block button<br>size(sm)</th>
+        <td colspan="5">
+          <button type="button" class="btn-block sm">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block type2 sm">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block type3 sm">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block sm">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window"></i>
+          </button>
+          <button type="button" class="btn-block type2 sm">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window-wh"></i>
+          </button>
+          <button type="button" class="btn-block type3 sm">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-window-wh"></i>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th>block button<br>size(md) </th>
+        <td colspan="5">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block type3 md">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-download"></i>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-download-wh"></i>
+          </button>
+          <button type="button" class="btn-block type3 md">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-download-wh"></i>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th>block button<br>size(lg) </th>
+        <td colspan="5">
+          <button type="button" class="btn-block lg">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block type2 lg">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block type3 lg">
+            <span class="btn-block__txt">Button text</span>
+          </button>
+          <button type="button" class="btn-block lg">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-arrow-bottom"></i>
+          </button>
+          <button type="button" class="btn-block type2 lg">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-arrow-bottom-wh"></i>
+          </button>
+          <button type="button" class="btn-block type3 lg">
+            <span class="btn-block__txt">Button text</span>
+            <i class="btn-block__icon icon-arrow-bottom-wh"></i>
+          </button>
+        </td>
+      </tr>
+
+      <!-- *** TEXT button *** -->
+      <tr>
+        <th>Text button<br>(.btn-txt)</th>
+        <td>
+          <button type="button" class="btn-txt">
+            <span class="btn-txt__txt">Button text</span>
+            <i class="btn-txt__icon icon-arrow-right"></i>
+          </button>
+          <button type="button" class="btn-txt">
+            <span class="btn-txt__txt">Button text</span>
+            <i class="btn-txt__icon icon-window"></i>
+          </button>
+        </td>
+        <th>Text button<br>regular (sm)</th>
+        <td colspan="3">
+          <button type="button" class="btn-txt sm">
+            <span class="btn-txt__txt">Button text small</span>
+          </button>
+          <button type="button" class="btn-txt sm">
+            <span class="btn-txt__txt">Button text small</span>
+            <i class="btn-txt__icon icon-window"></i>
+          </button>
+        </td>
+      </tr>
+
+      <!-- *** TEXT underline button *** -->
+      <tr>
+        <th>Text underline button<br>(.btn-txt-underline)</th>
+        <td>
+          <button type="button" class="btn-txt-underline">
+            <span class="btn-txt__txt">Button text underline</span>
+          </button>
+          <button type="button" class="btn-txt-underline">
+            <span class="btn-txt__txt">Button text underline</span>
+            <i class="btn-txt__icon icon-window"></i>
+          </button>
+        </td>
+        <th>Text underline button<br>small bold (sm)</th>
+        <td>
+          <button type="button" class="btn-txt-underline sm">
+            <span class="btn-txt__txt">Button text underline</span>
+          </button>
+          <button type="button" class="btn-txt-underline sm">
+            <span class="btn-txt__txt">Button text underline</span>
+            <i class="btn-txt__icon icon-window"></i>
+          </button>
+        </td>
+        <th>Text underline button<br>small reqular (xsm)</th>
+        <td>
+          <button type="button" class="btn-txt-underline xsm">
+            <span class="btn-txt__txt">Button text underline</span>
+          </button>
+          <button type="button" class="btn-txt-underline xsm">
+            <span class="btn-txt__txt">Button text underline</span>
+            <i class="btn-txt__icon icon-window"></i>
+          </button>
+        </td>
+      </tr>
+      <!-- *** Icon button *** -->
+      <tr>
+        <th>Icon button<br>(btn-icon)</th>
+        <td colspan="3">
+          <button type="button" class="btn-icon icon-trash">
+            <span class="txt-blind">delete</span>
+          </button>
+          <button type="button" class="btn-icon icon-search">
+            <span class="txt-blind">search</span>
+          </button>
+          <button type="button" class="btn-icon icon-share">
+            <span class="txt-blind">share</span>
+          </button>
+          <button type="button" class="btn-icon icon-user">
+            <span class="txt-blind">user</span>
+          </button>
+          <button type="button" class="btn-icon icon-user2">
+            <span class="txt-blind">user</span>
+          </button>
+          <button type="button" class="btn-icon icon-cart">
+            <span class="txt-blind">cart</span>
+          </button>
+          <button type="button" class="btn-icon icon-enlarge">
+            <span class="txt-blind">expanded</span>
+          </button>
+          <button type="button" class="btn-icon icon-close">
+            <span class="txt-blind">close</span>
+          </button>
+          <button type="button" class="btn-icon icon-btn-arrow">
+            <span class="txt-blind">arrow</span>
+          </button>
+          <button type="button" class="btn-icon icon-download">
+            <span class="txt-blind">download</span>
+          </button>
+          <button type="button" class="btn-icon icon-window">
+            <span class="txt-blind">window</span>
+          </button>
+          <button type="button" class="btn-icon icon-edit3">
+            <span class="txt-blind">edit</span>
+          </button>
+          <a role="button" class="btn-icon icon-trash" href="#">
+            <span class="txt-blind">delete</span>
+          </a>
+        </td>
+        <th>favorite button</th>
+        <td>
+          <div class="favorite-area">
+            <button class="btn-icon icon-favorite"> <!-- 체크시 .on -->
+              <span class="txt-blind">favorite</span>
+            </button>
+
+            <!-- 5초 후 사라짐 -->
+            <div class="favorite__contents favorite__contents-on">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Add to Favorite List</p>
+                <a role="button" class="btn-txt-underline xsm" href="#">
+                  <span class="btn-txt__txt">Favorite List</span>
+                </a>
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+            <div class="favorite__contents favorite__contents-off">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Remove from Favorite List</p>
+
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="favorite-area">
+            <button class="btn-icon icon-favorite"> <!-- 체크시 .on -->
+              <span class="txt-blind">favorite</span>
+            </button>
+
+            <!-- 5초 후 사라짐 -->
+            <div class="favorite__contents favorite__contents-on">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Add to Favorite List</p>
+                <a role="button" class="btn-txt-underline xsm" href="#">
+                  <span class="btn-txt__txt">Favorite List</span>
+                </a>
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+            <div class="favorite__contents favorite__contents-off">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Remove from Favorite List</p>
+
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="favorite-area">
+            <button class="btn-icon icon-favorite" id="on-toggle-test-1"> <!-- 체크시 .on -->
+              <span class="txt-blind">favorite</span>
+            </button>
+
+            <!-- 5초 후 사라짐 -->
+            <div class="favorite__contents favorite__contents-on">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Add to Favorite List</p>
+                <a role="button" class="btn-txt-underline xsm" href="#">
+                  <span class="btn-txt__txt">Favorite List</span>
+                </a>
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+            <div class="favorite__contents favorite__contents-off">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Remove from Favorite List</p>
+
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="favorite-area">
+            <button class="btn-icon icon-favorite" id="on-toggle-test-2"> <!-- 체크시 .on -->
+              <span class="txt-blind">favorite</span>
+            </button>
+
+            <!-- 5초 후 사라짐 -->
+            <div class="favorite__contents favorite__contents-on">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Add to Favorite List</p>
+                <a role="button" class="btn-txt-underline xsm" href="#">
+                  <span class="btn-txt__txt">Favorite List</span>
+                </a>
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+            <div class="favorite__contents favorite__contents-off">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Remove from Favorite List</p>
+
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="favorite-area">
+            <button class="btn-icon icon-favorite on"> <!-- 체크시 .on -->
+              <span class="txt-blind">favorite</span>
+            </button>
+
+            <!-- 5초 후 사라짐 -->
+            <div class="favorite__contents favorite__contents-on">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Add to Favorite List</p>
+                <a role="button" class="btn-txt-underline xsm" href="#">
+                  <span class="btn-txt__txt">Favorite List</span>
+                </a>
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+            <div class="favorite__contents favorite__contents-off">
+              <div class="favorite__contents-inner">
+                <p class="txt-p7">Remove from Favorite List</p>
+
+                <!-- 닫기 -->
+                <button type="button" class="btn-icon icon-close-xsm">
+                  <span class="txt-blind">close</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <th>btn-box</th>
+        <td colspan="5">
+          <div class="btn-box">
+            <button type="button" class="btn-block">
+              <span class="btn-block__txt">Button text</span>
+            </button>
+            <button type="button" class="btn-block type2">
+              <span class="btn-block__txt">Button text</span>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h5 class="txt-h5" id="src">switch/radio/check</h5>
+  <table class="basic-table">
+    <colgroup>
+      <col style="width: 200px;">
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>type</th>
+        <th>default</th>
+        <th>checked</th>
+        <th>disabled</th>
+        <th>checked disabled</th>
+        <th>icon only</th>
+        <th>size</th>
+      </tr>
+      <tr>
+        <!-- *** switch *** -->
+        <th>switch</th>
+        <td>
+          <label class="btn-switch">
+            <input role="switch" type="checkbox" class="btn-switch__input" />
+            <span class="btn-switch__icon"></span>
+            <span class="btn-switch__txt">switch</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-switch">
+            <input role="switch" type="checkbox" class="btn-switch__input" checked />
+            <span class="btn-switch__icon"></span>
+            <span class="btn-switch__txt">switch</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-switch">
+            <input role="switch" type="checkbox" class="btn-switch__input" disabled />
+            <span class="btn-switch__icon"></span>
+            <span class="btn-switch__txt">switch</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-switch">
+            <input role="switch" type="checkbox" class="btn-switch__input" checked disabled />
+            <span class="btn-switch__icon"></span>
+            <span class="btn-switch__txt">switch</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-switch">
+            <input role="switch" type="checkbox" class="btn-switch__input" />
+            <span class="btn-switch__icon"></span>
+          </label>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <!-- *** radio *** -->
+        <th>radio</th>
+        <td>
+          <label class="btn-radio">
+            <input type="radio" class="btn-radio__input" name="" value="">
+            <span class="btn-radio__icon"></span>
+            <span class="btn-radio__txt">radio</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-radio">
+            <input type="radio" class="btn-radio__input" name="" value="" checked>
+            <span class="btn-radio__icon"></span>
+            <span class="btn-radio__txt">radio</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-radio">
+            <input type="radio" class="btn-radio__input" name="" value="" disabled>
+            <span class="btn-radio__icon"></span>
+            <span class="btn-radio__txt">radio</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-radio">
+            <input type="radio" class="btn-radio__input" name="" value="" checked disabled>
+            <span class="btn-radio__icon"></span>
+            <span class="btn-radio__txt">radio</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-radio">
+            <input type="radio" class="btn-radio__input" name="" value="">
+            <span class="btn-radio__icon"></span>
+          </label>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <!-- *** checkbox *** -->
+        <th>checkbox</th>
+        <td>
+          <label class="btn-checkbox">
+            <input type="checkbox" class="btn-checkbox__input" name="" value="">
+            <span class="btn-checkbox__icon"></span>
+            <span class="btn-checkbox__txt">checkbox</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-checkbox">
+            <input type="checkbox" class="btn-checkbox__input" name="" value="" checked>
+            <span class="btn-checkbox__icon"></span>
+            <span class="btn-checkbox__txt">checkbox</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-checkbox">
+            <input type="checkbox" class="btn-checkbox__input" name="" value="" disabled>
+            <span class="btn-checkbox__icon"></span>
+            <span class="btn-checkbox__txt">checkbox</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-checkbox">
+            <input type="checkbox" class="btn-checkbox__input" name="" value="" checked disabled>
+            <span class="btn-checkbox__icon"></span>
+            <span class="btn-checkbox__txt">checkbox</span>
+          </label>
+        </td>
+        <td>
+          <label class="btn-checkbox">
+            <input type="checkbox" class="btn-checkbox__input" name="" value="">
+            <span class="btn-checkbox__icon"></span>
+          </label>
+        </td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h5 class="txt-h5" id="tag">flag/badge/tag</h5>
+  <table class="basic-table">
+    <colgroup>
+      <col style="width: 200px;">
+      <col>
+      <col style="width: 200px;">
+      <col style="width: 200px;">
+      <col style="width: 200px;">
+      <col style="width: 200px;">
+    </colgroup>
+    <tbody>
+      <tr>
+        <!-- *** Flag *** -->
+        <th>Flag</th>
+        <td>
+          <span class="tag-flag">New</span>
+          <span class="tag-flag st-open">open</span>
+          <span class="tag-flag st-completed">completed</span>
+          <span class="tag-flag st-shipped">shipped</span>
+          <span class="tag-flag st-prepared">prepared</span>
+          <span class="tag-flag st-cleared">cleared</span>
+        </td>
+        <th>size(md)</th>
+        <td>
+          <span class="tag-flag md">cleared</span>
+        </td>
+        <th>type(line)</th>
+        <td>
+          <span class="tag-flag line-type">flag type</span>
+        </td>
+      </tr>
+
+      <tr>
+        <!-- *** Img badge *** -->
+        <th>Img badge</th>
+        <td colspan="5">
+          <div class="tag-badge-icon">
+            <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-a.svg"
+              alt="텍스트">
+          </div>
+          <div class="tag-badge-icon">
+            <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-d.svg"
+              alt="텍스트">
+          </div>
+          <div class="tag-badge-icon">
+            <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-e.svg"
+              alt="텍스트">
+          </div>
+          <div class="tag-badge-icon">
+            <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-f.svg"
+              alt="텍스트">
+          </div>
+          <div class="tag-badge-icon">
+            <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-badge-energy-g.svg"
+              alt="텍스트">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <!-- *** tag *** -->
+        <th>tag</th>
+        <td colspan="5">
+
+          <div class="tag-box">
+            <p class="tag-box__tag">
+              <span class="txt-p6">Tag Tag</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="tag-box__tag">
+              <span class="txt-p6">Tag Tag</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="tag-box__tag">
+              <span class="txt-p6">Tag Tag</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+            <p class="tag-box__tag">
+              <span class="txt-p6">Tag Tag</span>
+              <button type="button" class="btn-icon icon-close-sm">
+                <span class="txt-blind">close</span>
+              </button>
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+    </tbody>
+  </table>
+
+  <h5 class="txt-h5" id="input">input (line-type : default)</h5>
+  <table class="basic-table">
+    <colgroup>
+      <col style="width: 200px;">
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>type</th>
+        <th>default</th>
+        <th>disabled</th>
+        <th>required</th>
+        <th>label이 없는 경우</th>
+        <th>etc</th>
+      </tr>
+      <tr>
+        <!-- *** input *** -->
+        <th>input</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description">
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description" disabled>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description" required>
+            </div>
+            <p class="txt-error">error message</p>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label txt-blind" for="">label</label>
+            <div class="input-box" aria-label="">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description">
+            </div>
+          </div>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <!-- *** search *** -->
+        <th>search</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box input-search">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box input-search">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description" disabled>
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box input-search">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description" required>
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+            </div>
+            <p class="txt-error">error message</p>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label txt-blind" for="">label</label>
+            <div class="input-box input-search">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">search icon 없을 때</label>
+            <div class="input-box input-search">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <!-- *** auto complete search *** -->
+        <th>auto complete search</th>
+        <td colspan="3">
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-search-box">
+              <!-- focus가 되면 active -->
+              <div class="input-search-box__inner">
+                <div class="input-box input-search">
+                  <input type="search" class="input-box__input" id="" placeholder="Type a description">
+                  <button type="button" class="btn-icon icon-search-delete"><span
+                      class="txt-blind">delete</span></button>
+                </div>
+                <div class="search-box__auto">
+                  <ul class="search-box__auto-list">
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                    <li class="autoitem"><span class="txt-point1">au</span>to text</li>
+                  </ul>
+                  <!-- <div class="search-box__no-list hidden"> 
+                          <span class="txt-p6">There are no related products.</span>
+                       </div> -->
+                </div>
+              </div>
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Search</span>
+              </button>
+            </div>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="field-box">
+            <label class="txt-label txt-blind" for="">label</label>
+            <div class="input-search-box">
+              <!-- focus가 되면 active -->
+              <div class="input-search-box__inner">
+                <div class="input-box input-search">
+                  <input type="search" class="input-box__input" id="" placeholder="Type a description">
+                  <button type="button" class="btn-icon icon-search-delete"><span
+                      class="txt-blind">delete</span></button>
+                </div>
+                <div class="search-box__auto">
+                  <ul class="search-box__auto-list">
+                    <li class="autoitem">auto text</li>
+                    <li class="autoitem">auto text</li>
+                    <li class="autoitem">auto text</li>
+                  </ul>
+                </div>
+              </div>
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Search</span>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <!-- *** combo box *** -->
+        <th>combo box</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false">
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false" disabled>
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false" aria-required="true">
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+            <p class="txt-error">error message</p>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label txt-blind">label</label>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false">
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">line 없는 타입</label>
+            <div class="combo-box noline-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false">
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <!-- *** date picker *** -->
+        <th>date picker</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD">
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD" disabled>
+          </div>
+
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD" required>
+            <p class="txt-error">error dlrj</p>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD">
+          </div>
+        </td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h5 class="txt-h5">input (box-type)</h5>
+  <table class="basic-table">
+    <colgroup>
+      <col style="width: 200px;">
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>type</th>
+        <th>default</th>
+        <th>disabled</th>
+        <th>required</th>
+        <th>label이 없는 경우</th>
+        <th>etc</th>
+      </tr>
+      <tr>
+        <!-- *** input *** -->
+        <th>input</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box box-type">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description">
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box box-type">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description" disabled>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box box-type">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description" required>
+            </div>
+            <p class="txt-error">error message</p>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label txt-blind" for="">label</label>
+            <div class="input-box box-type" aria-label="">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description">
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box sm">
+            <label class="txt-label" for="">sm size</label>
+            <div class="input-box box-type">
+              <input type="text" class="input-box__input" id="" placeholder="Type a description">
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <!-- *** search *** -->
+        <th>search</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description" disabled>
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description" required>
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+            </div>
+            <p class="txt-error">error message</p>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label txt-blind" for="">label</label>
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label" for="">search icon 없을 때</label>
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" id="" placeholder="Type a description">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <!-- *** auto complete search *** -->
+        <th>auto complete search</th>
+        <td colspan="3">
+          <div class="field-box">
+            <label class="txt-label" for="">label</label>
+            <div class="input-search-box">
+              <!-- focus가 되면 active -->
+              <div class="input-search-box__inner">
+                <div class="input-box input-search box-type">
+                  <input type="search" class="input-box__input" id="" placeholder="Type a description">
+                  <button type="button" class="btn-icon icon-search-delete"><span
+                      class="txt-blind">delete</span></button>
+                </div>
+                <div class="search-box__auto">
+                  <ul class="search-box__auto-list">
+                    <li class="autoitem">auto text</li>
+                    <li class="autoitem">auto text</li>
+                    <li class="autoitem">auto text</li>
+                  </ul>
+                </div>
+              </div>
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Search</span>
+              </button>
+            </div>
+          </div>
+        </td>
+        <td colspan="2">
+          <div class="field-box">
+            <label class="txt-label txt-blind" for="">label</label>
+            <div class="input-search-box">
+              <!-- focus가 되면 active -->
+              <div class="input-search-box__inner">
+                <div class="input-box input-search box-type">
+                  <input type="search" class="input-box__input" id="" placeholder="Type a description">
+                  <button type="button" class="btn-icon icon-search-delete"><span
+                      class="txt-blind">delete</span></button>
+                </div>
+                <div class="search-box__auto">
+                  <ul class="search-box__auto-list">
+                    <li class="autoitem">auto text</li>
+                    <li class="autoitem">auto text</li>
+                    <li class="autoitem">auto text</li>
+                  </ul>
+                </div>
+              </div>
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">Search</span>
+              </button>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <!-- *** combo box *** -->
+        <th>combo box</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false">
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션옵션옵션옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false" disabled>
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false" aria-required="true">
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+            <p class="txt-error">error message</p>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label txt-blind">label</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false">
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box sm">
+            <label class="txt-label">sm size</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                aria-expanded="false">
+                <span class="txt-placeholder">Type a description</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">옵션 1</li>
+                  <li role="menuitem">옵션 2</li>
+                  <li role="menuitem">옵션 3</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <!-- *** date picker *** -->
+        <th>date picker</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="YYYY-MM-DD" disabled>
+          </div>
+
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="YYYY-MM-DD" required>
+            <p class="txt-error">error dlrj</p>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+          </div>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <!-- *** number picker *** -->
+        <th>number picker</th>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <div class="input-number">
+              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span>
+              </button>
+              <input type="text" class="input-number__input" value="1">
+              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span>
+              </button>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label">label</label>
+            <div class="input-number">
+              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span>
+              </button>
+              <input type="text" class="input-number__input" value="1" disabled>
+              <button type="button" class="btn-icon btn-number__up" disabled><span class="txt-blind">plus</span>
+              </button>
+            </div>
+          </div>
+        </td>
+        <td>
+          -
+        </td>
+        <td>
+          <div class="field-box">
+            <label class="txt-label txt-blind">label</label>
+            <div class="input-number">
+              <button type="button" class="btn-icon btn-number__down" disabled><span class="txt-blind">minus</span>
+              </button>
+              <input type="text" class="input-number__input" value="1">
+              <button type="button" class="btn-icon btn-number__up"><span class="txt-blind">plus</span>
+              </button>
+            </div>
+          </div>
+        </td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <!-- *** range *** -->
+        <th>range</th>
+        <td colspan="2">
+          <div class="range-slider">
+            <div class="range-slider__inner">
+              <div class="range-slider__bar" style="left: 25.6%; width: 63.6%;"></div>
+              <div tabindex="0" class="range-slider__hadler" style="left: 25.6%;">
+                <span class="range-slider__hadler-icon">
+                  <em class="range-slider__txt">5.5</em>
+                </span>
+              </div>
+              <div tabindex="0" class="range-slider__hadler" style="left: 89.2%;">
+                <span class="range-slider__hadler-icon">
+                  <em class="range-slider__txt">5.5</em>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td colspan="3">
+          <div class="range-slider" aria-disabled="true">
+            <div class="range-slider__inner">
+              <div class="range-slider__bar" style="left: 25.6%; width: 63.6%;"></div>
+              <div tabindex="0" class="range-slider__hadler" style="left: 25.6%;">
+                <span class="range-slider__hadler-icon">
+                  <em class="range-slider__txt">5.5</em>
+                </span>
+              </div>
+              <div tabindex="0" class="range-slider__hadler" style="left: 89.2%;">
+                <span class="range-slider__hadler-icon">
+                  <em class="range-slider__txt">5.5</em>
+                </span>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- *** Pagination *** -->
+  <h5 class="txt-h5" id="pagination">Pagination</h5>
+  <div class="pagination">
+    <ul class="page-list">
+      <!-- disabled : aria-disabled="true" -->
+      <li class="btn-icon page-btn__prev" aria-disabled="true">
+        <a aria-label="prev" href="#">
+          <span class="txt-blind">prev</span>
+        </a>
+      </li>
+      <li class="page"> <a href="#" aria-label="Go to page 1" class="page-list__no selected">1</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 2" class="page-list__no">2</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 3" class="page-list__no">3</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 4" class="page-list__no">4</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 5" class="page-list__no">5</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 6" class="page-list__no">6</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 7" class="page-list__no">7</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 8" class="page-list__no">8</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 9" class="page-list__no">9</a> </li>
+      <li class="page"> <a href="#" aria-label="Go to page 10" class="page-list__no">10</a></li>
+      <li class="btn-icon page-btn__next">
+        <a aria-label="next" href="#">
+          <span class="txt-blind">next</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <h5 class="txt-h5" id="text">text</h5>
+  <table class="basic-table">
+    <colgroup>
+      <col style="width: 200px;">
+      <col>
+      <col style="width: 200px;">
+      <col>
+      <col style="width: 200px;">
+      <col>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>error mesaag</th>
+        <td>
+          <p class="txt-error">error mesaage</p>
+        </td>
+        <th>required</th>
+        <td>
+          <p class="txt-req">required</p>
+        </td>
+        <th>line-break</th>
+        <td>
+          <p> <span class="txt-line-break">item</span><span class="txt-line-break">item</span><span
+              class="txt-line-break">item</span> </p>
+        </td>
+      </tr>
+      <tr>
+        <th>underline</th>
+        <td>
+          <p class="txt-underline">underline</p>
+        </td>
+        <th>point color</th>
+        <td>
+          <p class="txt-point1">point1 #2189ff</p>
+          <p class="txt-point2">point2 #006bea</p>
+        </td>
+        <th>dott</th>
+        <td>
+          <p class="txt-dott">texttexttexttext</p>
+        </td>
+      </tr>
+      <tr>
+        <th>ellipsis 1</th>
+        <td>
+          <p class="txt-ellipsis" style="width:100px">texttexttexttext</p>
+
+        </td>
+        <th>ellipsis 2</th>
+        <td>
+          <p class="txt-ellipsis2" style="width:100px">wordwordwordwordwordword</p>
+        </td>
+        <th>ellipsis 3</th>
+        <td>
+          <p class="txt-ellipsis3" style="width:100px">wordwordwordwordwordword</p>
+        </td>
+      </tr>
+      <tr>
+        <th>txet-arrow</th>
+        <td>
+          <span class="txt-arrow">text</span><span class="txt-arrow">text</span><span class="txt-arrow">text</span>
+        </td>
+        <th>highlight</th>
+        <td>
+          <span class="is-highlight">wordwordwordwordwordword</span>
+        </td>
+        <th>※ mark</th>
+        <td>
+          <p class="txt-ref-mark">texttexttexttext</p>
+        </td>
+      </tr>
+      <tr>
+        <th>Tooltip</th>
+        <td>
+          <p class="txt-h6 dp-inline">텍스트텍스트텍스트</p>
+          <div class="tooltip">
+            <button type="button" class="btn-icon tooltip__btn"> <span class="txt-blind">tooltip view</span>
+            </button>
+            <div class="tooltip__contents">
+              <div class="tooltip__contents-inner" style="width:240px">
+                <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span>
+                </button>
+                <p>Address Management is a feature that manages the addresses of customers.</p>
+              </div>
+            </div>
+          </div>
+        </td>
+        <th>stock</th>
+        <td>
+          <!-- [F] .txt-stock : green / yellow / red -->
+          <span class="txt-p6 txt-stock green" aria-label="Stock available for over 20 days.">In Stock</span>
+          <span class="txt-p6 txt-stock yellow" aria-label="Stock available for the next 10~20 days.">In
+            Stock</span>
+          <span class="txt-p6 txt-stock red" aria-label="The stock is expected to be depleted within 10 days">In
+            Stock</span>
+          <div class="tooltip">
+            <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                view</span> </button>
+            <div class="tooltip__contents">
+              <div class="tooltip__contents-inner">
+                <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip close</span>
+                </button>
+                <p class="cont">
+                  <!-- 툴팁 문구 -->
+                <p class="txt-fw-b">'Stock' availability </p>
+                <div class="sotck-box">
+                  <p class="txt-p7 txt-stock green">Stock available for over 20 days.</p>
+                  <p class="txt-p7 txt-stock yellow">Stock available for the next 10~20 days.</p>
+                  <p class="txt-p7 txt-stock red">The stock is expected to be depleted within 10 days
+                  </p>
+                </div>
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </td>
+        <th>spinner</th>
+        <td>
+          <div class="icon-loading"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- *** tit area *** -->
+  <h5 class="txt-h5" id="title">title area</h5>
+  <div class="tit-area no-line">
+    <h3 class="txt-h7">page item title(h3) size 22</h3>
+  </div>
+  <br>
+  <div class="tit-area">
+    <h2 class="txt-h6">page sub title(h2) size 24</h2>
+  </div>
+  <br>
+  <div class="tit-area">
+    <h1 class="txt-h3">page title(h1) size 38</h1>
+  </div>
+
+  <!-- *** tab *** -->
+  <h5 class="txt-h5" id="tab">tab</h5>
+  <div class="tab-list-box">
+    <!--[F] tab이 왼쪽으로 넘어갔는때 보임 -->
+    <div class="tab-btn__prev">
+      <button type="button" class="btn-icon">
+        <span class="txt-blind">prev</span>
+      </button>
+    </div>
+    <div class="tab-list-box__inner">
+      <div role="tablist" class="tab-list" aria-label="탭타이틀">
+        <!--[F] 선택시 .active 추가 -->
+        <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+          <span class="tab-list__tab-txt">spec</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">capacity table</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">capacity correction</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">pipng diagram</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">pq curve</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">hydraulic performance</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">operation range</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">capacity correction</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">dimensional drawing</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">center of gravgravi</span>
+        </button>
+      </div>
+    </div>
+    <!--[F] tab이 오른쪽에 더 있을때 보임 -->
+    <div class="tab-btn__next">
+      <button type="button" class="btn-icon">
+        <span class="txt-blind">next</span>
+      </button>
+    </div>
+  </div>
+  <br>
+  <div class="tab-list-box custom-test">
+    <!--[F] tab이 왼쪽으로 넘어갔는때 보임 -->
+    <div class="tab-btn__prev">
+      <button type="button" class="btn-icon">
+        <span class="txt-blind">prev</span>
+      </button>
+    </div>
+    <div class="tab-list-box__inner">
+      <div role="tablist" class="tab-list" aria-label="탭타이틀">
+        <!--[F] 선택시 .active 추가 -->
+        <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+          <span class="tab-list__tab-txt">spec</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">capacity table</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">capacity correction</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">pipng diagram</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">pq curve</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">hydraulic performance</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">operation range</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">capacity correction</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">dimensional drawing</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">center of gravgravi</span>
+        </button>
+      </div>
+    </div>
+    <!--[F] tab이 오른쪽에 더 있을때 보임 -->
+    <div class="tab-btn__next">
+      <button type="button" class="btn-icon">
+        <span class="txt-blind">next</span>
+      </button>
+    </div>
+  </div>
+  <br>
+  <div class="tab-list-box">
+    <div class="tab-btn__prev">
+      <button type="button" class="btn-icon">
+        <span class="txt-blind">prev</span>
+      </button>
+    </div>
+    <div class="tab-list-box__inner">
+      <!--[F] type추가 --- medium : type2, large : type3 -->
+      <div role="tablist" class="tab-list type2" aria-label="탭타이틀">
+        <!--[F] 선택시 .active 추가 -->
+        <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+          <span class="tab-list__tab-txt">product</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">library</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">support</span>
+        </button>
+      </div>
+    </div>
+    <div class="tab-btn__next">
+      <button type="button" class="btn-icon">
+        <span class="txt-blind">next</span>
+      </button>
+    </div>
+  </div>
+  <br>
+  <div class="tab-list-box">
+    <div class="tab-btn__prev">
+      <button type="button" class="btn-icon">
+        <span class="txt-blind">prev</span>
+      </button>
+    </div>
+    <div class="tab-list-box__inner">
+      <!--[F] type추가 --- medium : type2, large : type3 -->
+      <div role="tablist" class="tab-list type3" aria-label="탭타이틀">
+        <!--[F] 선택시 .active 추가 -->
+        <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+          <span class="tab-list__tab-txt">product</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">library</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt">support</span>
+        </button>
+      </div>
+    </div>
+    <div class="tab-btn__next">
+      <button type="button" class="btn-icon">
+        <span class="txt-blind">next</span>
+      </button>
+    </div>
+  </div>
+  <br>
+  <!--[F] type추가 --- 좌우 버튼 및 border 없음 : type4 -->
+  <div role="tablist" class="tab-list type4" aria-label="탭타이틀">
+    <!--[F] 선택시 .active 추가 -->
+    <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+      <span class="tab-list__tab-txt">product</span>
+    </button>
+    <button type="button" class="tab-list__tab" role="tab">
+      <span class="tab-list__tab-txt">library</span>
+    </button>
+    <button type="button" class="tab-list__tab" role="tab">
+      <span class="tab-list__tab-txt">support</span>
+    </button>
+  </div>
+  <br>
+  <!--[F] type추가 --- text center 정렬 : type5 -->
+  <div role="tablist" class="tab-list type5" aria-label="탭타이틀">
+    <!--[F] 선택시 .active 추가 -->
+    <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+      <span class="tab-list__tab-txt">accidental damage & theft</span>
+    </button>
+    <button type="button" class="tab-list__tab" role="tab">
+      <span class="tab-list__tab-txt">accidental damage & theft</span>
+    </button>
+  </div>
+  <br>
+  <div class="tab-wrap">
+    <div class="tab-list-box">
+      <!--[F] tab이 왼쪽으로 넘어갔는때 보임 -->
+      <div class="tab-btn__prev">
+        <button type="button" class="btn-icon">
+          <span class="txt-blind">prev</span>
+        </button>
+      </div>
+      <div class="tab-list-box__inner">
+        <div role="tablist" class="tab-list" aria-label="탭타이틀">
+          <!--[F] 선택시 .active 추가 -->
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="" aria-selected="true">
+            <span class="tab-list__tab-txt">spec</span>
+          </button>
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">capacity table</span>
+          </button>
+          <button type="button" class="tab-list__tab active" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">capacity correction</span>
+          </button>
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">pipng diagram</span>
+          </button>
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">pq curve</span>
+          </button>
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">hydraulic performance</span>
+          </button>
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">operation range</span>
+          </button>
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">capacity correction</span>
+          </button>
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">dimensional drawing</span>
+          </button>
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt">center of gravgravi</span>
+          </button>
+        </div>
+      </div>
+      <!--[F] tab이 오른쪽에 더 있을때 보임 -->
+      <div class="tab-btn__next">
+        <button type="button" class="btn-icon">
+          <span class="txt-blind">next</span>
+        </button>
+      </div>
+    </div>
+    <!-- 
+            .tab-wrap으로 감싸고 .tab-wrap__contents가 있어야 함
+            컨텐츠는 div로 구분
+            컨텐츠의 hidden 속성과 관계 없이 탭 버튼의 active(하나만 허용)를 default contents로 설정
+        -->
+    <div role="presentation" class="tab-wrap__contents">
+      <div role="tabpanel" aria-labelledby="" tabindex="0">탭 1의 내용이 여기에 들어갑니다.</div>
+      <div role="tabpanel" aria-labelledby="" hidden>탭 2의 내용이 여기에 들어갑니다.</div>
+      <div role="tabpanel" aria-labelledby="" hidden>탭 3의 내용이 여기에 들어갑니다.</div>
+      <div role="tabpanel" aria-labelledby="" hidden>탭 4의 내용이 여기에 들어갑니다.</div>
+    </div>
+  </div>
+  <br>
+  <!-- 좌우 버튼이 없는 탭 -->
+  <div class="tab-wrap">
+    <div role="tablist" class="tab-list type4" aria-label="탭타이틀">
+      <!--[F] 선택시 .active 추가 -->
+      <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+        <span class="tab-list__tab-txt">product</span>
+      </button>
+      <button type="button" class="tab-list__tab" role="tab">
+        <span class="tab-list__tab-txt">library</span>
+      </button>
+      <button type="button" class="tab-list__tab" role="tab">
+        <span class="tab-list__tab-txt">support</span>
+      </button>
+    </div>
+    <div role="presentation" class="tab-wrap__contents">
+      <div role="tabpanel" aria-labelledby="" tabindex="0">탭 1의 내용.</div>
+      <div role="tabpanel" aria-labelledby="" hidden>탭 2의 내용.</div>
+      <div role="tabpanel" aria-labelledby="" hidden>탭 3의 내용.</div>
+    </div>
+  </div>
+  <!-- //좌우 버튼이 없는 탭 -->
+  <br>
+  <div class="tab-wrap">
+    <div role="tablist" class="tab-list type6" aria-label="탭타이틀">
+      <!--[F] 선택시 .active 추가 -->
+      <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+        <span class="tab-list__tab-txt">Heating</span>
+      </button>
+      <button type="button" class="tab-list__tab" role="tab">
+        <span class="tab-list__tab-txt">Cooling</span>
+      </button>
+    </div>
+    <div role="presentation" class="tab-wrap__contents">
+      <div role="tabpanel" aria-labelledby="" tabindex="0">탭 1의 내용.</div>
+      <div role="tabpanel" aria-labelledby="" hidden>탭 2의 내용.</div>
+    </div>
+  </div>
+
+  <!-- *** List *** -->
+  <h5 class="txt-h5" id="list">리스트</h5>
+  <ul class="list-box column-4">
+    <li class="list-box__item">
+      <div class="tit-box">
+        <p class="txt-h5">Announcement</p>
+        <button type="button" class="btn-txt-underline">
+          <span class="btn-txt__txt">Learn more</span>
+        </button>
+      </div>
+    </li>
+    <li class="list-box__item">
+      <div class="tit-box">
+        <div class="tit-box__inner">
+          <p class="txt-h6">Create Inquiry</p>
+          <p class="txt-p4">Check inquiries and answers</p>
+        </div>
+        <button type="button" class="btn-txt-underline">
+          <span class="btn-txt__txt">Learn more</span>
+        </button>
+      </div>
+    </li>
+    <li class="list-box__item">
+      <div class="tit-box">
+        <div class="tit-box__inner">
+          <p class="txt-h6">Create Inquiry</p>
+          <p class="txt-p4">Check inquiries and answers</p>
+        </div>
+        <button type="button" class="btn-txt-underline">
+          <span class="btn-txt__txt">Learn more</span>
+        </button>
+      </div>
+    </li>
+    <li class="list-box__item">
+      <div class="tit-box">
+        <div class="tit-box__inner">
+          <p class="txt-h6">Create Inquiry</p>
+          <p class="txt-p4">Check inquiries and answers</p>
+        </div>
+        <button type="button" class="btn-txt-underline">
+          <span class="btn-txt__txt">Learn more</span>
+        </button>
+      </div>
+    </li>
+    <li class="list-box__item">
+      <div class="tit-box">
+        <div class="tit-box__inner">
+          <p class="txt-h6">Create Inquiry</p>
+          <!-- <p class="txt-p4">Check inquiries and answers</p> -->
+        </div>
+        <button type="button" class="btn-txt-underline">
+          <span class="btn-txt__txt">Learn more</span>
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <!-- *** accordion *** -->
+  <h5 class="txt-h5" id="accordion">accordion</h5>
+  <!-- 기본이 닫힘,  열림 .active -->
+  <div class="accordion-box active">
+    <div class="accordion__tit">
+      <p class="txt-p1">accordion tit</p>
+      <button type="button" class="btn-icon icon-accordion">
+        <span class="txt-blind">close</span>
+      </button>
+    </div>
+    <div class="accordion_cont">
+
+    </div>
+  </div>
+
+  <div class="accordion-box sm">
+    <div class="accordion__tit">
+      <p class="txt-p6">small accordion tit</p>
+      <button type="button" class="btn-icon icon-accordion">
+        <span class="txt-blind">close</span>
+      </button>
+    </div>
+    <div class="accordion_cont">
+
+    </div>
+  </div>
+
+
+  <!-- *** accordion *** -->
+  <h5 class="txt-h5" id="table">table</h5>
+  <table class="basic-table">
+    <colgroup>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">qwer</th>
+        <th scope="col">qwr</th>
+        <th scope="col">qwer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>qwer</td>
+        <td>qwer</td>
+        <td>qwer</td>
+      </tr>
+      <tr>
+        <td>qwer</td>
+        <td>qwer</td>
+        <td>qwer</td>
+      </tr>
+      <tr>
+        <td>qwer</td>
+        <td>qwer</td>
+        <td>qwer</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- *** list-table *** -->
+  <h5 class="txt-h5">list-table</h5>
+  <div class="my-result__wrap">
+    <div class="result__num-btn">
+      <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+      <button type="button" class="btn-block md">
+        <span class="btn-block__txt">Create Inquiry</span>
+      </button>
+    </div>
+    <ul class="result-list__wrap ">
+      <li class="list__head"></li>
+      <li class="list__el-box">
+        <ul class="list-data">
+          <li class="list__el"></li>
+          <li class="list__el"></li>
+        </ul>
+
+        <!-- data가 없을때  -->
+        <div class="list-nodata">
+          <p class="txt-p5">결과가 없어요</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="basic-list__top">
+    <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+    <button type="button" class="btn-block md">
+      <span class="btn-block__txt">Create Inquiry</span>
+    </button>
+  </div>
+  <div class="basic-list__result">
+    <ul class="list-head">
+      <li class="el__menu"> <span class="txt-p5 txt-fw-b">Menu</span> </li>
+      <li class="el__check">
+        <div class="list-el">
+
+        </div>
+        <div class="list-el">
+          
+        </div>
+      </li>
+    </ul>
+    <ul class="list-body">
+      <li class="list-el">
+        <div class="el__menu"> 
+          <span class="txt-p6">Quote</span> 
+        </div>
+        <div class="el__check"> 
+          
+        </div>
+      </li>
+    </ul>
+    
+  </div>
+
+  <!-- *** productList *** -->
+  <h5 class="txt-h5" id="productList">productList</h5>
+  <div class="pdp-product-list">
+    <div class="pdp-product__tit">
+      <div class="pdp-category">
+        <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span> </p>
+      </div>
+      <p class="pdp-tit txt-h9">DVM S2 Outdoor Heat<br>Recovery High EER</p>
+      <p class="pdp-desc txt-p7">AM080AXVGGREU</p>
+    </div>
+    <div class="img-box">
+      <img src="/pub-only/images/product-sample.png" alt="제품이미지">
+    </div>
+    <div class="swiper unit-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide unit__item active"> <span class="txt-p7">235.2</span> </div>
+        <div class="swiper-slide unit__item"> <span class="txt-p7">261.1</span> </div>
+        <div class="swiper-slide unit__item"> <span class="txt-p7">254.8</span> </div>
+        <div class="swiper-slide unit__item"> <span class="txt-p7">249.4</span> </div>
+        <div class="swiper-slide unit__item"> <span class="txt-p7">523.4</span> </div>
+        <div class="swiper-slide unit__item"> <span class="txt-p7">456.3</span> </div>
+        <div class="swiper-slide unit__item"> <span class="txt-p7">380.4</span> </div>
+        <div class="swiper-slide unit__item"> <span class="txt-p7">234.5</span> </div>
+        <div class="swiper-slide unit__item"> <span class="txt-p7">432.1</span> </div>
+      </div>
+      <div class="swiper-button-next unit__next-btn"> <span class="txt-blind">next</span> </div>
+      <div class="swiper-button-prev unit__prev-btn"> <span class="txt-blind">prev</span> </div>
+      <div class="unit__unit-text"><span class="txt-p7">Btu/h</span> </div>
+    </div>
+    <div class="pdp-stock-box">
+      <span class="txt-p6">Tooltip</span>
+      <div class="tooltip bottom">
+        <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+            view</span> </button>
+        <div class="tooltip__contents">
+          <div class="tooltip__contents-inner">
+            <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                close</span> </button>
+            <p class="cont">
+              <!-- 툴팁 문구 -->
+              tooltip text.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tal-center">
+      <p class="txt-p4 txt-fw-b">$949.00</p>
+    </div>
+    <div class="btn-box">
+      <button type="button" class="btn-block md">
+        <span class="btn-block__txt">Learn more</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script>
+    // autoComplete 사용 예제
+    const findSearchResult = () => {
+      return new Promise((resolve, reject) => {
+        resolve([
+          '검색 결과 1',
+          '검색 결과 2',
+          '검색 결과 3',
+          '검색 결과 4',
+          '검색 결과 5',
+          'Search Result 6',
+          'Search Result 7',
+          'Search Result 8',
+          'Search Result 9',
+          'Search Result 10',
+        ]);
+      });
+    }
+
+    // item 선택시 이벤트 커스텀
+    const autoCompleteSelected = (selected) => {
+      console.log(selected);
+    };
+
+    const autoCompletes = $('.input-search-box');
+    autoCompletes.each((index, item) => {
+      const autoComplete = $(item)[0].autoComplete;
+      if (autoComplete) {
+        autoComplete.setCallbackSelected(autoCompleteSelected);
+        const autoInput = $(item).find('input');
+        autoInput.on('input', async (e) => {
+          let searchResult = [];
+          if (autoInput.val().length < 2) { // 최소 2글자 이상 입력
+            searchResult = [];
+          } else {
+            searchResult = await findSearchResult();
+          }
+          if (autoComplete) {
+            autoComplete.setResult(searchResult);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

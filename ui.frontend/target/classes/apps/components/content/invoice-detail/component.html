@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Invoice Details</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+
+<body>
+  <!-- component -->
+  <section class="invoice-datail-sect">
+    <div class="tit-area">
+      <h1 class="txt-h3">Invoice Details</h1>
+      <div class="btn-box">
+        <a class="btn-block md" href="#">
+          <span class="btn-block__txt">Invoice</span>
+          <i class="btn-block__icon icon-download"></i>
+        </a>
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">List</span>
+        </button>
+      </div>
+    </div>
+    <ul class="od-cm-info">
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">Invoice Number</p>
+        <div class="item-dd">
+          <p class="txt-p5 txt-point2 txt-fw-b">3000170736</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">Invoice Date</p>
+        <div class="item-dd">
+          <p class="txt-p5">2024-03-29</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">Billing Type</p>
+        <div class="item-dd">
+          <p class="txt-p5">[0011] Tibet Tokat</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">PO Number</p>
+        <div class="item-dd">
+          <p class="txt-p5">PQ123456789</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">SO Number</p>
+        <div class="item-dd">
+          <p class="txt-p5">1001776220</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">DO Number</p>
+        <div class="item-dd">
+          <p class="txt-p5">8000354221</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">Payer</p>
+        <div class="item-dd">
+          <p class="txt-p5">[2015709123] Bahadır Aydoğmuş</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">Bill To Party</p>
+        <div class="item-dd">
+          <p class="txt-p5">[20115709123] Alex marks</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">Payment Terms</p>
+        <div class="item-dd">
+          <p class="txt-p5">[TR32] 150 days</p>
+        </div>
+      </li>
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">Document Status</p>
+        <div class="item-dd">
+          <!-- 2025-01-10 class 변경  -->
+          <span class="txt-p6 txt-fw-b">Open</span>
+        </div>
+      </li>
+
+      <li class="od-cm-info__item col3">
+        <p class="item-dt txt-p5">Type</p>
+        <div class="item-dd">
+          <p class="txt-p5">HVAC Hub</p>
+        </div>
+      </li>
+    </ul>
+    <ul class="total-amount-box">
+      <li class="total-amount__item">
+        <p class="total__text txt-h8">Net Amount</p>
+        <p class="total__price">
+          <span class="txt-h8">717.499,00 TL</span>
+        </p>
+      </li>
+      <li class="total-amount__item">
+        <p class="total__text txt-p5">
+          <span class="txt-gray">VAT Amount(20%)</span>
+        </p>
+        <p class="total__price txt-p4 txt-gray txt-fw-b">148.397,88 TL</p>
+      </li>
+      <li class="total-amount__item">
+        <p class="total__text txt-h8">Total Amount (Tax Included)</p>
+        <p class="total__price txt-h7">717.499,99 TL</p>
+      </li>
+    </ul>
+    <!-- 2025-01-10 class 변경 my-result__wrap ==> basic-list-wrap -->
+    <div class="basic-list-wrap">
+      <!-- 2025-01-10 class 변경 result__num-btn ==> basic-list__top -->
+      <div class="basic-list__top">
+        <p class="txt-fw-b txt-p6">Item <span class="txt-point1">10</span></p>
+      </div>
+      <!-- 2025-01-10 div 삭제 invoice-detail -->
+      <!-- 2025-01-10 class 변경 result-list__wrap ==> basic-list__result / 태그 변경 ul ==> div -->
+      <div class="basic-list__result">
+        <!-- head -->
+        <!-- 2025-01-10 class 변경 list__head ==> list-head / 태그 변경 li ==> ul-->
+        <ul class="list-head">
+           <!--  2025-01-10 항목 추가 및 순서 변경 / class 추가 list-el / class 변경 ' ord-' ==> ' el- '  -->
+          <li class="list-el el-item">
+            <span class="txt-p5 txt-fw-b">Item</span>
+          </li>
+          <li class="list-el el-material">
+            <span class="txt-p5 txt-fw-b">Material</span>
+          </li>
+          <li class="list-el el-qud">
+            <span class="txt-p5 txt-fw-b">Quantity</span>
+          </li>
+          <li class="list-el el-price">
+            <span class="txt-p5 txt-fw-b">Unit Price</span>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Net Amount</span>
+          </li>
+          <li class="list-el el-price">
+            <span class="txt-p5 txt-fw-b">VAT Amount</span>
+          </li>
+          <li class="list-el el-total">
+            <span class="txt-p5 txt-fw-b">Total Amount</span>
+          </li>
+        </ul>
+        <!-- head -->
+        <!-- result -->
+        <!-- 2025-01-10 class 변경 list__el-box ==> list-body / 태그 변경 li ==> ul -->
+        <ul class="list-body">
+          <li class="list-row-box">
+            <ul class="list-row">
+              <li class="list-el el-item">
+                <span class="txt-p5">10</span>
+              </li>
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">18,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+            </ul>
+          </li>
+          <!-- [F] 모듈 형태인 경우 : class 추가 module-box-->
+          <li class="list-row-box module-box">
+            <ul class="list-row">
+              <li class="list-el el-item">
+                <span class="txt-p5">10</span>
+              </li>
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">18,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+            </ul>
+            <!-- [F] 모듈 : class 추가 row-module -->
+            <ul class="list-row row-module">
+              <li class="list-el el-item">
+                <span class="txt-p5">10</span>
+              </li>
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">18,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+            </ul>
+            <ul class="list-row row-module">
+              <li class="list-el el-item">
+                <span class="txt-p5">10</span>
+              </li>
+              <li class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </li>
+              <li class="list-el el-qud">
+                <span class="txt-p5">999</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+              <li class="list-el el-price">
+                <span class="txt-p5">18,00 TL</span>
+              </li>
+              <li class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <!-- result -->
+      </div>
+
+    </div>
+  </section>
+  <!-- //component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+</body>
+
+</html>

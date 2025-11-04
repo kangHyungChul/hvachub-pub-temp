@@ -1,0 +1,711 @@
+.permission-setting {
+  max-width: 1152px;
+  width: 100%;
+  background-color: #f7f7f7;
+  padding: 48px 24px 80px 56px;
+}
+.permission-setting .solting-field-box {
+  min-width: 360px;
+}
+.permission-setting .solting-field-box .combo-box.box-type {
+  width: 360px;
+}
+.permission-setting .permission-setting__tit {
+  line-height: 57px;
+  padding-bottom: 32px;
+}
+.permission-setting > .field-box {
+  margin-bottom: 24px;
+}
+.permission-setting .role-box {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 24px;
+}
+.permission-setting .add-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 16px;
+}
+.permission-setting .add-btn {
+  margin-left: 16px;
+}
+.permission-setting .role-list {
+  font-size: 16px;
+  display: flex;
+  line-height: 24px;
+}
+.permission-setting .role-list li {
+  border-bottom: 1px solid #dadada;
+}
+.permission-setting .role-list .list__top {
+  border-bottom: 1px solid #000;
+  justify-content: center;
+  height: 56px;
+  padding: 16px 0;
+  word-break: break-word;
+  align-items: center;
+}
+.permission-setting .role-list .user-id {
+  border-top: 2px solid #000;
+  border-bottom: 0;
+  background-color: #f2f2f2;
+  padding: 14px 0 16px;
+}
+.permission-setting .list-menu {
+  width: 324px;
+}
+.permission-setting .list-menu .user-id {
+  border-bottom: 1px solid #000;
+  padding: 0 4px;
+  align-items: center;
+  word-break: break-word;
+}
+.permission-setting .list-menu li {
+  display: flex;
+  height: 56px;
+  border-right: 2px solid #000;
+}
+.permission-setting .list-menu li span {
+  width: 50%;
+  height: 100%;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  word-break: break-all;
+}
+.permission-setting .list-menu .menu-row3 span:first-of-type {
+  border-right: 1px solid #dadada;
+}
+.permission-setting .list-menu ul {
+  width: 50%;
+  border-right: unset;
+}
+.permission-setting .list-menu ul li {
+  width: 100%;
+  border-right: 0;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  word-break: break-word;
+}
+.permission-setting .list-menu .menu-row3 {
+  height: 168px;
+}
+.permission-setting .list-menu .menu-row2 {
+  height: 112px;
+}
+.permission-setting .menu-delete {
+  background-color: #f2f2f2;
+  padding: 16px 0 16px 12px;
+  justify-content: center;
+  border-bottom: 1px solid #aaa !important;
+  height: 56px;
+}
+.permission-setting .list-check {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: calc(100% - 324px);
+  max-width: 700px;
+  overflow-x: scroll;
+  padding-bottom: 2px;
+}
+.permission-setting .role-list .list-check__role {
+  width: 160px;
+  text-align: center;
+  padding: 0;
+  border-bottom: unset;
+}
+.permission-setting .list__item {
+  height: 56px;
+  padding: 15px 56px;
+}
+.permission-setting .list-check .list__top {
+  max-width: 160px;
+  min-width: 136px;
+  padding: 7px 12px;
+}
+.permission-setting .list-check .user-id {
+  display: flex;
+  align-items: center;
+}
+.permission-setting .list-check .user-id span {
+  max-width: 116px;
+  word-break: break-word;
+  line-height: 1.1;
+}
+.permission-setting .list-check .user-id .btn-icon {
+  width: 16px;
+  height: 16px;
+  background: center / contain no-repeat
+    url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-search-delete.svg);
+  margin-left: 4px;
+  padding: 9px 0;
+}
+.permission-setting .list-check .combo-box {
+  min-width: unset;
+  width: 136px;
+}
+.permission-setting .role-btn-wrap {
+  width: fit-content;
+  margin-left: auto;
+  margin-top: 24px;
+}
+.permission-setting .role-btn-wrap .btn-block + .btn-block {
+  margin-left: 16px;
+}
+.permission-setting .new-popup-inner {
+  padding-top: 24px;
+}
+.permission-setting .new-popup-inner .field-box {
+  margin-bottom: 24px;
+  width: 428px;
+}
+.permission-setting .new-popup-inner .txt-label {
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+.permission-setting .table-head {
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #000;
+  display: flex;
+  text-align: center;
+}
+.permission-setting .table-head .menu {
+  display: block;
+  width: calc(100% - 160px);
+  padding: 16px 0;
+}
+.permission-setting .table-head .permission {
+  display: block;
+  width: 160px;
+  padding: 16px 0;
+}
+.permission-setting .table-list__item {
+  border-bottom: 1px solid #dadada;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.permission-setting .table-list__item .list__menu {
+  display: block;
+  width: 196px;
+  height: 56px;
+  padding: 16px 0 16px 12px;
+}
+.permission-setting .table-list__item .list__menu-detail {
+  display: block;
+  width: calc(100% - 320px);
+  height: 56px;
+  padding: 16px 0 16px 12px;
+  border-left: 1px solid #dadada;
+}
+.permission-setting .table-list__item .list__check {
+  display: block;
+  width: 160px;
+  text-align: center;
+  height: 56px;
+  padding: 16px 0 16px 12px;
+  border-left: 1px solid #dadada;
+}
+.permission-setting .table-list__item.multiple {
+  display: flex;
+}
+.permission-setting .table-list__item .multiple-wrap {
+  width: calc(100% - 160px);
+}
+.permission-setting .multiple-list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dadada;
+  padding-left: 0 !important;
+}
+.permission-setting .multiple-list:last-of-type {
+  border-bottom: 0;
+}
+.permission-setting .txt-error-wrap {
+  margin-top: 8px;
+}
+.permission-setting .list-check__role.blank {
+  flex: auto;
+  width: auto;
+}
+.permission-setting .list-check__role.blank .list__top {
+  max-width: unset;
+  min-width: auto;
+  width: auto;
+  padding: 0;
+}
+.permission-setting .list-check__role.blank .list__item {
+  padding: 0;
+}
+.permission-setting .tooltip-wrap {
+  position: relative;
+  margin-top: 8px;
+}
+.permission-setting .tooltip {
+  position: unset;
+}
+.permission-setting .new-popup-inner .tooltip-wrap {
+  margin-top: 16px;
+}
+.permission-setting .tooltip .tooltip__contents {
+  width: fit-content;
+  left: 0;
+}
+.permission-setting .tooltip .tooltip__contents .tooltip__contents-inner {
+  width: fit-content;
+  max-width: 734px;
+  padding: 24px 8px 8px;
+}
+.permission-setting
+  .tooltip
+  .tooltip__contents
+  .tooltip__contents-inner
+  .basic-table {
+  table-layout: unset;
+}
+.permission-setting .tooltip tbody {
+  background-color: #fff;
+}
+.permission-setting .tooltip th {
+  text-align: center;
+  border-top: 2px solid #dadada;
+  height: 40px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+.permission-setting .tooltip td {
+  height: 40px;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 21px;
+}
+.permission-setting .tooltip .basic-table::before,
+.basic-table::after {
+  display: none;
+}
+.new-role-popup .popup__header p {
+  padding-bottom: 24px;
+  border-bottom: 2px solid #000;
+}
+.new-role-popup .popup-wrap__inner .popup__header {
+  padding-bottom: 0;
+}
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  .permission-setting {
+    max-width: 80vw;
+    padding: 3.333vw 1.667vw 5.556vw 3.889vw;
+  }
+  .permission-setting .solting-field-box {
+    min-width: 25vw;
+  }
+  .permission-setting .solting-field-box .combo-box.box-type {
+    width: 25vw;
+  }
+  .permission-setting .permission-setting__tit {
+    line-height: 3.958vw;
+    padding-bottom: 2.222vw;
+  }
+  .permission-setting > .field-box {
+    margin-bottom: 1.667vw;
+  }
+  .permission-setting .role-box {
+    border-radius: 1.389vw;
+    padding: 1.667vw;
+  }
+  .permission-setting .add-wrap {
+    padding-bottom: 1.111vw;
+  }
+  .permission-setting .add-btn {
+    margin-left: 1.111vw;
+  }
+  .permission-setting .role-list {
+    font-size: 1.111vw;
+    line-height: 1.667vw;
+  }
+  .permission-setting .role-list .list__top {
+    height: 3.889vw;
+    padding: 1.111vw 0;
+  }
+  .permission-setting .role-list .user-id {
+    padding: 0.972vw 0 1.111vw;
+  }
+  .permission-setting .list-menu .user-id {
+    padding: 0 0.278vw;
+  }
+  .permission-setting .list-check .user-id span {
+    max-width: 8.056vw;
+  }
+  .permission-setting .list-menu {
+    width: 22.5vw;
+  }
+  .permission-setting .list-menu li {
+    height: 3.889vw;
+  }
+  .permission-setting .list-menu li span {
+    padding-left: 0.833vw;
+    padding-left: 0.833vw;
+  }
+  .permission-setting .list-menu ul li {
+    padding: 0 0.833vw;
+  }
+  .permission-setting .list-menu .menu-row3 {
+    height: 11.667vw;
+  }
+  .permission-setting .list-menu .menu-row2 {
+    height: 7.778vw;
+  }
+  .permission-setting .menu-delete {
+    padding: 1.111vw 0 1.111vw 0.833vw;
+    height: 3.889vw;
+  }
+  .permission-setting .list-check {
+    width: calc(100% - 22.5vw);
+    padding-bottom: 0.139vw;
+  }
+  .permission-setting .role-list .list-check__role {
+    width: 11.111vw;
+  }
+  .permission-setting .list__item {
+    height: 3.889vw;
+    padding: 1.042vw 3.889vw;
+  }
+  .permission-setting .list-check .list__top {
+    min-width: 9.444vw;
+    padding: 0.486vw 0.833vw;
+  }
+  .permission-setting .list-check .user-id .btn-icon {
+    width: 1.111vw;
+    height: 1.111vw;
+    margin-left: 0.278vw;
+    padding: 0.625vw 0;
+  }
+  .permission-setting .list-check .combo-box {
+    width: 9.444vw;
+  }
+  .permission-setting .role-btn-wrap {
+    margin-top: 1.667vw;
+  }
+  .permission-setting .role-btn-wrap .btn-block + .btn-block {
+    margin-left: 1.111vw;
+  }
+  .permission-setting .new-popup-inner {
+    padding-top: 1.667vw;
+  }
+  .permission-setting .new-popup-inner .field-box {
+    margin-bottom: 1.667vw;
+    width: 29.722vw;
+  }
+  .permission-setting .new-popup-inner .txt-label {
+    line-height: 2.5vw;
+    margin-bottom: 1.111vw;
+  }
+  .permission-setting .table-head .menu {
+    width: calc(100% - 11.111vw);
+    padding: 1.111vw 0;
+  }
+  .permission-setting .table-head .permission {
+    width: 11.111vw;
+    padding: 1.111vw 0;
+  }
+  .permission-setting .table-list__item .list__menu {
+    width: 13.611vw;
+    height: 3.889vw;
+    padding: 1.111vw 0 1.111vw 0.833vw;
+    font-size: 1.111vw;
+  }
+  .permission-setting .table-list__item .list__menu-detail {
+    width: calc(100% - 22.222vw);
+    height: 3.889vw;
+    padding: 1.111vw 0 1.111vw 0.833vw;
+    font-size: 1.111vw;
+  }
+  .permission-setting .table-list__item .list__check {
+    width: 11.111vw;
+    height: 3.889vw;
+    padding: 1.111vw 0 1.111vw 0.833vw;
+  }
+  .permission-setting .table-list__item .multiple-wrap {
+    width: calc(100% - 11.111vw);
+  }
+  .permission-setting .txt-error-wrap {
+    margin-top: 0.556vw;
+  }
+  .permission-setting .tooltip-wrap {
+    margin-top: 0.556vw;
+  }
+  .permission-setting .new-popup-inner .tooltip-wrap {
+    margin-top: 1.111vw;
+  }
+  .permission-setting .tooltip .tooltip__contents .tooltip__contents-inner {
+    max-width: 50.972vw;
+    padding: 1.667vw 0.556vw 0.556vw;
+  }
+  .permission-setting .tooltip th {
+    height: 2.778vw;
+    font-size: 0.972vw;
+    line-height: 1.458vw;
+  }
+  .permission-setting .tooltip td {
+    height: 2.778vw;
+    padding: 0 0.833vw;
+    font-size: 0.972vw;
+    line-height: 1.458vw;
+  }
+  .permission-setting .list__item img {
+    width: 1.667vw;
+    height: 1.667vw;
+  }
+  .new-role-popup .popup__header p {
+    padding-bottom: 1.667vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .permission-setting {
+    background-color: #fff;
+    padding: 0;
+    padding-bottom: 56px;
+  }
+  .permission-setting .permission-setting__tit {
+    padding: 32px 24px 24px;
+    font-size: 24px !important;
+    line-height: 36px;
+  }
+  .permission-setting .solting-field-box {
+    min-width: unset;
+    background-color: #f7f7f7;
+    padding: 24px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .permission-setting .solting-field-box .combo-box.box-type {
+    width: 100%;
+  }
+  .permission-setting .list-menu {
+    width: 139px;
+  }
+  .permission-setting .role-list .list__top {
+    height: 48px;
+    padding: 0;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+    min-width: unset;
+    padding: 7px 4px;
+  }
+  .permission-setting .list-check__role.default .list__top,
+  .permission-setting .list-check__role.sub-admin .list__top {
+    padding: 15px 0;
+  }
+  .permission-setting .list-check .input-box__input {
+    height: 32px;
+  }
+  .permission-setting .list-menu {
+    width: 139px;
+  }
+  .permission-setting .list-menu li span,
+  .permission-setting .list-menu ul li {
+    font-size: 12px;
+    line-height: 16px;
+    width: 100%;
+    padding-left: 0;
+  }
+  .permission-setting .list-menu ul li,
+  .permission-setting .list-menu li {
+    height: 40px;
+    padding: 0 12px;
+  }
+  .permission-setting .list-menu ul li {
+    width: 100%;
+    word-break: break-word;
+    padding: 0 4px;
+    justify-content: center;
+  }
+  .permission-setting .list-menu .menu-row3 {
+    padding: 0;
+    height: 120px;
+  }
+  .permission-setting .list-menu .menu-row3 span:first-of-type {
+    padding: 0 10px 0 11px;
+    width: 50%;
+  }
+  .permission-setting .list-menu .user-id {
+    background-color: #fff;
+  }
+  .permission-setting .list-check .combo-box {
+    width: 101px;
+  }
+  .permission-setting .list-check {
+    width: calc(100% - 139px);
+  }
+  .permission-setting .list__item {
+    height: 40px;
+    padding: 8px 0;
+  }
+  .permission-setting .list-check .user-id span {
+    font-size: 12px !important;
+    max-width: 81px;
+  }
+  .permission-setting .list__top .combo-box.box-type .combo-box__txt {
+    height: 32px;
+    width: 101px;
+    padding: 4px 6.5px;
+    font-size: 12px !important;
+  }
+  .permission-setting .tooltip-wrap {
+    margin-top: 16px;
+  }
+  .permission-setting .tooltip-wrap p {
+    font-size: 14px !important;
+  }
+  .permission-setting .role-btn-wrap {
+    margin-left: unset;
+    width: 100%;
+    display: flex;
+    margin-top: 32px;
+  }
+  .permission-setting .role-btn-wrap .btn-block {
+    width: 100%;
+  }
+  .permission-setting .role-btn-wrap .btn-block + .btn-block {
+    margin-left: 8px;
+  }
+  .alert-wrap .alert-wrap__inner .alert__header p {
+    font-size: 18px !important;
+    line-height: 27px;
+  }
+  .permission-setting .tooltip .tooltip__contents {
+    width: 312px;
+  }
+  .permission-setting .tooltip .basic-table col:first-of-type {
+    width: 71px !important;
+  }
+  .permission-setting .tooltip .basic-table col:nth-of-type(2) {
+    width: 74px !important;
+  }
+  .permission-setting .tooltip .basic-table col:nth-of-type(3) {
+    width: 151px !important;
+  }
+  .permission-setting .tooltip th {
+    font-size: 12px;
+    height: 34px;
+  }
+  .permission-setting .tooltip td {
+    font-size: 12px;
+    padding: 0 11px;
+  }
+  .permission-setting .combo-box .combo-box__menu-list > li {
+    font-size: 14px !important;
+    padding: 10px 12px;
+  }
+  .permission-setting .list__top .combo-box .combo-box__menu-list > li {
+    font-size: 12px !important;
+    padding: 4px 8px;
+    line-height: 24px;
+  }
+  .permission-setting .list__top .combo-box.box-type .combo-box__txt::after {
+    width: 12px;
+  }
+  .new-role-popup {
+    padding: 0;
+  }
+  .new-role-popup .popup-wrap__inner {
+    padding: 0;
+    height: 100%;
+    border-radius: unset;
+  }
+  .new-role-popup .popup-wrap__inner .popup__header {
+    padding: 16px 24px 13px;
+    height: 56px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  }
+  .new-role-popup .popup-wrap__inner .popup__header .txt-h4 {
+    border-bottom: 0;
+  }
+  .new-role-popup .popup-wrap__inner .popup__container {
+    padding: 24px;
+  }
+  .new-role-popup .new-popup-inner {
+    padding-top: unset;
+  }
+  .new-role-popup .new-popup-inner .field-box {
+    width: 100%;
+  }
+  .new-role-popup .txt-error {
+    line-height: 12px;
+    margin-top: 8px;
+  }
+  .new-role-popup .txt-error span.mo-display {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .new-role-popup .new-popup-inner .txt-label {
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  .new-role-popup .table-head {
+    height: 40px;
+  }
+  .new-role-popup .table-head .menu,
+  .new-role-popup .table-head .permission {
+    width: calc(100% - 151px);
+    padding: 11px 0;
+    font-size: 12px !important;
+    line-height: 18px;
+    word-break: break-word;
+    align-content: center;
+    padding: 0;
+  }
+  .new-role-popup .table-head .permission {
+    width: 151px;
+  }
+  .new-role-popup .table-list__item .list__menu,
+  .new-role-popup .table-list__item .list__check {
+    width: calc(100% - 151px);
+    height: 40px;
+    padding: 11px 12px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .new-role-popup .table-list__item .list__check {
+    width: 151px;
+    padding: 8px 12px;
+  }
+  .new-role-popup .table-list__item.multiple {
+    justify-content: unset;
+  }
+  .new-role-popup .table-list__item.multiple .list__menu {
+    width: 25.32%;
+    height: 100%;
+  }
+  .new-role-popup .table-list__item .multiple-wrap {
+    width: calc(100% - 79px);
+  }
+  .new-role-popup .multiple-list {
+    justify-content: unset;
+  }
+  .new-role-popup .table-list__item .list__menu-detail {
+    width: calc(100% - 151px);
+    font-size: 12px !important;
+    padding: 11px 12px;
+    height: 40px;
+  }
+  .new-role-popup .table-list__item.multiple .list__check {
+    width: 151px;
+  }
+  .new-role-popup .new-popup-inner .txt-error-wrap .txt-error {
+    line-height: 18px;
+  }
+  .new-role-popup .popup-wrap__inner .popup__footer {
+    border-top: 1px solid #ccc;
+  }
+}

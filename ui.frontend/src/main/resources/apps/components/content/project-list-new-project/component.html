@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Project List Items</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- component -->
+  <section class="project-new-prj">
+    <!-- 2025-01-20 타이틀 추가(기존 타이틀 컴포넌트 제거) -->
+    <div class="tit-area">
+      <!-- 2025-01-20 모바일 back 버튼 추가 -->
+      <div class="mo-display">
+        <button type="button" class="btn-icon icon-page-back">
+          <span class="txt-blind">back</span>
+        </button>
+      </div>
+      <h1 class="txt-h3">New Project</h1>
+    </div>
+    <div class="form__wrap">
+      <!-- 2025-08-04 col2 클래스 삭제 -->  
+      <div class="field-box">
+        <label class="txt-label txt-req" for="project-name">Project Name</label>
+        <div class="input-box">
+          <input type="text" class="input-box__input" id="project-name" placeholder="Please enter a name." maxlength="1000" required>
+          <p class="txt-error">This field is required.</p>
+        </div>
+      </div>
+      <!-- 2025-08-04 항목추가 // -->
+      <div class="field-box col2">
+        <label class="txt-label txt-req">Product Type</label>
+        <div class="radio-group-area">
+            <label class="btn-radio">
+                <input type="radio" class="btn-radio__input" name="functionality" value="" checked>
+                <span class="btn-radio__icon"></span>
+                <span class="btn-radio__txt">DVM</span>
+            </label>
+
+            <label class="btn-radio">
+                <input type="radio" class="btn-radio__input" name="functionality" value="">
+                <span class="btn-radio__icon"></span>
+                <span class="btn-radio__txt">Non-DVM</span>
+            </label>
+        </div>        
+      </div>
+      <!-- // 2025-08-04 항목추가  -->
+
+      <div class="field-box col2">
+        <label class="txt-label txt-req">Vertical Type</label>
+        <div class="combo-box">
+          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" aria-required="true">
+            <span class="txt-placeholder">Please select a vertical type.</span>
+          </button>
+          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+            <ul class="combo-box__menu-list">
+              <li role="menuitem">Residentia</li>
+              <li role="menuitem">Office</li>
+              <li role="menuitem">Hotel</li>
+              <li role="menuitem">Small shops</li>
+              <li role="menuitem">Shopping malls</li>
+              <li role="menuitem">Education</li>
+              <li role="menuitem">Healthcare</li>
+              <li role="menuitem">Publick / Government</li>
+              <li role="menuitem">Industrial</li>
+              <li role="menuitem">Others</li>
+            </ul>
+          </div>
+        </div>
+        <p class="txt-error">This field is required.</p>
+      </div>
+      <div class="field-box col2">
+        <label class="txt-label" for="">Customer</label>
+        <div class="input-box input-search">
+          <input type="search" class="input-box__input" id="" placeholder="Please search." value="Company AA" readonly>
+          <!-- [F] data is entered : edit 버튼 노출-->
+         <!-- 2025-06-18 edit button 삭제 -->
+          <!-- <button type="button" class="btn-icon icon-edit"><span class="txt-blind">edit</span></button> -->
+          <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+        </div>
+      </div>
+      <div class="field-box col2">
+        <label class="txt-label">Competitor</label>
+        <div class="combo-box">
+          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+            <span class="txt-placeholder">Please select a competitor.</span>
+          </button>
+          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+            <ul class="combo-box__menu-list">
+              <li role="menuitem">Daikin</li>
+              <li role="menuitem">Mitsubishi Electric</li>
+              <li role="menuitem">LG</li>
+              <li role="menuitem">Johnson Controls-Hitachi</li>
+              <li role="menuitem">Trane</li>
+              <li role="menuitem">Carrier</li>
+              <li role="menuitem">Hisense</li>
+              <li role="menuitem">Gree</li>
+              <li role="menuitem">Atlantic</li>
+              <li role="menuitem">Panasonic</li>
+              <li role="menuitem">Toshiba</li>
+              <li role="menuitem">Vaillant</li>
+              <li role="menuitem">Viessmann</li>
+              <li role="menuitem">Other</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="field-box col2">
+        <label class="txt-label txt-req">Estimated Closing Date</label>
+        <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD" required>
+        <p class="txt-error">This field is required.</p>
+      </div>
+      <div class="field-box col2">
+        <label class="txt-label">Roll-out Period</label>
+        <div class="period-box">
+          <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD">
+          <span>~</span>
+          <input type="text" id="datepicker" class="input-datepicker" placeholder="YYYY-MM-DD">
+        </div>
+      </div>
+      <div class="field-box col2">
+        <label class="txt-label" for="">End-customer</label>
+        <div class="input-box input-search">
+          <input type="search" class="input-box__input" id="" placeholder="Please search." readonly>
+          <!-- [F] data is entered : edit 버튼 노출-->
+          <!-- <button type="button" class="btn-icon icon-edit"><span class="txt-blind">edit</span></button> -->
+          <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+        </div>
+      </div>
+      <div class="field-box col2">
+        <label class="txt-label" for="">Consultant</label>
+        <div class="input-box input-search">
+          <input type="search" class="input-box__input" id="" placeholder="Please search." readonly>
+          <!-- [F] data is entered : edit 버튼 노출-->
+          <!-- <button type="button" class="btn-icon icon-edit"><span class="txt-blind">edit</span></button> -->
+          <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+        </div>
+      </div>
+      <!-- 2025-01-06 class 추가 : jobsite -->
+      <div class="field-box jobsite">
+        <label class="txt-label" for="">Jobsite Location</label>
+        <div class="input-box input-search">
+          <!-- 2025-01-06 태그 변경 : input ==> div -->
+          <div class="input-box__input">
+            <span class="txt-p4 txt-input">509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169) 509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1,
+              Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1, Teheran-ro, Gangnam-gu, Seoul,
+              Republic of Korea (06169)509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1,
+              Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea (06169)509-1</span>
+            <span class="txt-p4 txt-placeholder">Please search.</span>
+          </div>
+          <!-- [F] data is entered : edit 버튼 노출-->
+          <!-- 2025-06-18 edit button 삭제 -->
+          <!-- <button type="button" class="btn-icon icon-edit"><span class="txt-blind">edit</span></button> -->
+          <button type="button" class="btn-icon icon-search"><span class="txt-blind">search</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="btn-box page-bottom-btn">
+      <button type="button" class="btn-block md">
+        <span class="btn-block__txt">Cancel</span>
+      </button>
+      <button type="button" class="btn-block md type2">
+        <span class="btn-block__txt">Save</span>
+      </button>
+    </div>
+
+  </section>
+  <!-- component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/project-list-items/clientlibs/js/main.js"></script>
+
+</body>
+
+</html>

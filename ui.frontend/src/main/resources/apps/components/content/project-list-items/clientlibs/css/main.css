@@ -1,0 +1,112 @@
+.project-list-items { max-width: 1038px; width: 100%; margin: 0 auto; } 
+.project-list-items .list-top { padding-bottom: 16px; border-bottom: 2px solid #000; display: flex; align-items: flex-end; justify-content: space-between; } 
+.project-list-items .list-top .btn-box { width: auto; }
+/* list no data */
+.project-list-items .list-nodata { height: 400px; margin-top: 16px; } 
+/* list data */
+.project-list-items .list-data { padding-top: 8px; } 
+.project-list-items .list-el { padding: 16px 24px; border-radius: var(--border-base ); border: 1px solid #dadada; background-color: #fff; margin-top: 8px; } 
+.project-list-items .el-box { position: relative; display: flex; } 
+.project-list-items .el-box .list-el__left { flex: none; width: calc(100% - 352px); padding-right: 16px; } 
+.project-list-items .el-box .list-el__left .el-name { margin-bottom: 8px; } 
+.project-list-items .el-box .list-el__left .txt-p6 { color: #1c1c1c; } 
+.project-list-items .el-box .list-el__left .txt-p6 strong { margin-right: 4px; } 
+.project-list-items .el-box .list-el__left .el-id { display: block; margin-bottom: 4px; } 
+.project-list-items .el-box .list-el__left .el-date .txt-p6 { margin-bottom: 4px; } 
+.project-list-items .el-box .list-el__left .el-date .txt-line-break:not(:first-of-type) { padding-left: 7px; margin-left: 3px; } 
+.project-list-items .el-box .list-el__right { display: flex; justify-content: space-between; flex-direction: column; flex: 0 0 352px; text-align: right;  } 
+.project-list-items .el-box .list-el__right .btn-box { margin-bottom: 16px; } 
+.project-list-items .status-box { display: flex; padding: 6px 0; } 
+.project-list-items .status-box .status-el { position:relative; display: flex; flex-direction: column; align-items: center; min-width: 25%; } 
+.project-list-items .status-box .status-el:not(:last-of-type):after { content: ''; display: block; position: absolute; top: 10px; right: -50%; width: 100%; height: 3px; background-color: #dddddd; } 
+.project-list-items .status-box .status-el .round-box { display: flex; justify-content: center; align-items: center; width: 24px; height: 24px; } 
+.project-list-items .status-box .status-el .round { position: relative; width: 10px; height: 10px; background-color: #fff; display: block; border-radius: 50%; border: 1px solid #aaaaaa; z-index: 1; } 
+.project-list-items .status-box .status-el .txt { text-transform:uppercase; } 
+.project-list-items .status-box .status-el.active .round { width:16px; height:16px; border-width: 5px; border-color: var(--primary_color2); } 
+.project-list-items .status-box .status-el.active .txt { font-weight: 700; } 
+.project-list-items .status-box:has(.status2.active) .status1:after, 
+.project-list-items .status-box:has(.status3.active) .status1:after,
+.project-list-items .status-box:has(.status3.active) .status2:after, 
+.project-list-items .status-box:has(.status4.active) .status1:after,
+.project-list-items .status-box:has(.status4.active) .status2:after,
+.project-list-items .status-box:has(.status4.active) .status3:after { background: var(--primary_color3); } 
+.project-list-items .status-box:has(.status2.active) .status1 .round,
+.project-list-items .status-box:has(.status3.active) .status1 .round,
+.project-list-items .status-box:has(.status3.active) .status2 .round, 
+.project-list-items .status-box:has(.status4.active) .status1 .round,
+.project-list-items .status-box:has(.status4.active) .status2 .round,
+.project-list-items .status-box:has(.status4.active) .status3 .round { border-width: 3px; border-color: var(--primary_color1); } 
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .project-list-items { max-width: 72.083vw; } 
+ .project-list-items .list-top { padding-bottom: 1.111vw; border-bottom-width: 0.139vw; } 
+ /* list no data */
+ .project-list-items .list-nodata { height: 27.778vw; margin-top: 1.111vw; } 
+ /* list data */
+ .project-list-items .list-data { padding-top: 0.556vw; } 
+ .project-list-items .list-el { padding: 1.667vw; margin-top: 1.111vw; } 
+ .project-list-items .el-box .list-el__left { width: calc(100% - 24.444vw); padding-right: 1.111vw; } 
+ .project-list-items .el-box .list-el__left .el-name { margin-bottom: 0.556vw; } 
+ .project-list-items .el-box .list-el__left .txt-p6 strong { margin-right: 0.278vw; } 
+ .project-list-items .el-box .list-el__left .el-id { margin-bottom: 0.278vw; } 
+ .project-list-items .el-box .list-el__left .el-date .txt-p6 { margin-bottom: 0.556vw; } 
+ .project-list-items .el-box .list-el__left .el-date .txt-line-break:not(:first-of-type) { padding-left: 0.486vw; margin-left: 0.208vw; } 
+ .project-list-items .el-box .list-el__right { flex: 0 0 24.444vw; } 
+ .project-list-items .el-box .list-el__right .btn-box { margin-bottom: 2.917vw; } 
+ .project-list-items .status-box { padding: 0.417vw 0; } 
+ .project-list-items .status-box .status-el:not(:last-of-type):after { top: 0.694vw; height: 0.208vw; } 
+ .project-list-items .status-box .status-el .round-box { width: 1.667vw; height: 1.667vw; } 
+ .project-list-items .status-box .status-el .round { width: 0.694vw; height: 0.694vw; } 
+ .project-list-items .status-box .status-el.active .round { width: 1.111vw; height: 1.111vw; border-width: 0.347vw; } 
+ .project-list-items .status-box:has(.status2.active) .status1 .round,
+ .project-list-items .status-box:has(.status3.active) .status1 .round,
+ .project-list-items .status-box:has(.status3.active) .status2 .round,
+ .project-list-items .status-box:has(.status4.active) .status1 .round,
+ .project-list-items .status-box:has(.status4.active) .status2 .round,
+ .project-list-items .status-box:has(.status4.active) .status3 .round { border-width: 0.208vw; } 
+ 
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .project-list-items { padding-bottom: 80px; } 
+ .project-list-items .list-top { display: none; } 
+ /* list no data */
+ .project-list-items .list-nodata { height: 240px; margin-block: 0 16px; } 
+ /* list data */
+ .project-list-items .list-data { padding-top: 0; } 
+ .project-list-items .list-el { margin-top: 16px; padding: 12px 16px; } 
+ .project-list-items .list-el:first-of-type { margin-top: 0; } 
+ .project-list-items .el-box { display: block; } 
+ .project-list-items .el-box .list-el__left { width: 100%; padding-right: 30px; } 
+ .project-list-items .el-box .list-el__left .el-name { font-size: 14px !important; } 
+ .project-list-items .el-box .list-el__left .txt-p6 { font-size: 12px !important; } 
+ .project-list-items .el-box .list-el__left .el-id { display: none; } 
+ .project-list-items .el-box .list-el__left .el-date .txt-p6 { margin-bottom: 2px; } 
+ .project-list-items .el-box .list-el__left .el-date .txt-line-break { display: block; } 
+ .project-list-items .el-box .list-el__left .el-date .txt-line-break + .txt-line-break { margin-top: 2px; } 
+ .project-list-items .el-box .list-el__left .el-date .txt-line-break:not(:first-of-type) { padding-left: 0; margin-left: 0; } 
+ .project-list-items .el-box .list-el__left .el-date .txt-line-break:not(:first-of-type)::before { content: none; } 
+ .project-list-items .el-box .list-el__left .el-creat { font-size: 10px !important; font-weight: 700; margin-top: 8px; } 
+ .project-list-items .el-box .list-el__left .el-creat strong { display: none; } 
+ .project-list-items .el-box .list-el__right { display: flex; flex-direction: column-reverse; text-align: left; } 
+ .project-list-items .el-box .list-el__right .btn-box { text-align: left; margin-bottom: 0; margin-top: 16px; } 
+ .project-list-items .el-box .list-el__right .btn-box:has(.copy-btn:only-child) { margin-top: 0; } 
+ .project-list-items .el-box .list-el__right .btn-box .copy-btn { position: absolute; top: 0; right: 0; z-index: 1; } 
+ .project-list-items .el-box .list-el__right .btn-box .copy-btn,
+ .project-list-items .el-box .list-el__right .btn-box .copy-btn:hover,
+ .project-list-items .el-box .list-el__right .btn-box .copy-btn:focus-visible { height: 24px; min-width: 24px; padding: 0; border-radius: 0; border: 0; } 
+ .project-list-items .el-box .list-el__right .btn-box .copy-btn .btn-block__txt { overflow: hidden; position: absolute !important; height: 1px !important; width: 1px !important; padding: 0 !important; border: 0 !important; clip: rect(1px, 1px, 1px, 1px); color:transparent } 
+ .project-list-items .el-box .list-el__right .btn-box .copy-btn .icon-copy { width: 24px; height: 24px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-mo-copy-sm.svg); } 
+ .project-list-items .status-box { display: flex; padding: 6px 0; margin-top: 8px; } 
+ .project-list-items .status-box .status-el .txt-p7 { font-size: 10px !important; } 
+ 
+
+
+
+ /* [E]Mobile */ } 

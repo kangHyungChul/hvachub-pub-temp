@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcement List</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- component -->
+  <section class="announcement-list">
+    <div class="announce-list-search__wrap">
+      <!-- category select box -->
+      <div class="field-box category">
+        <label class="txt-label txt-blind">category</label>
+        <div class="combo-box box-type">
+          <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">All</button>
+          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+            <ul class="combo-box__menu-list">
+              <li role="menuitem">All</li>
+              <li role="menuitem">System</li>
+              <li role="menuitem">Error</li>
+              <li role="menuitem">Notice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- search field -->
+      <div class="field-box search">
+        <label class="txt-label txt-blind" for="announce-list-search">search</label>
+        <div class="input-search-box">
+          <!-- focus가 되면 active -->
+          <div class="input-box input-search box-type" aria-label="hidden label">
+            <input type="search" class="input-box__input" id="announce-list-search" placeholder="Type a keyword.">
+            <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+          </div>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Search</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- search result list -->
+    <!-- 2025-02-20 class 변경 my-result__wrap ==> basic-list-wrap / announce-list-result 삭제-->
+    <div class="basic-list-wrap">
+      <!-- 2025-02-20 class 변경 result__num-btn ==> basic-list__top -->
+      <div class="basic-list__top">
+        <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+      </div>
+      <!-- 2025-02-20 class 변경 result-list__wrap ==> basic-list__result / 태그 변경 ul ==> div -->
+      <div class="basic-list__result">
+        <!-- 2025-02-20 class 변경 list__head ==> list-head / 태그 변경 li ==> ul-->
+        <ul class="list-head">
+          <!-- 2025-02-20 box, txt 분리 -->
+          <li class="list-el el-no">
+            <span class="txt-p5 txt-fw-b"> No.</span>
+          </li>
+          <li class="list-el el-cate">
+            <span class="txt-p5 txt-fw-b">Type</span>
+          </li>
+          <li class="list-el el-title">
+            <span class="txt-p5 txt-fw-b">Title</span>
+          </li>
+          <li class="list-el el-date">
+            <span class="txt-p5 txt-fw-b">Date</span>
+          </li>
+        </ul>
+        <!-- 2025-02-20 ul 삭제 : list__el-box-->
+        <!-- 2025-02-20 class 변경 list__el-box ==> list-body / 태그 변경 li ==> ul -->
+        <ul class="list-body">
+          <!-- 2025-02-20 class 추가 : list-row -->
+          <li class="list-row">
+            <!-- 2025-02-20 class 삭제 : list__el  -->
+            <a href="#none">
+              <!-- 2025-02-20 box, txt 분리 -->
+              <div class="list-el el-no ">
+                <span class="txt-p5">1</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">Notice</span>
+              </div>
+              <!-- 2025-02-20 class 추가 : txt-ellipsis -->
+              <div class="list-el el-title txt-ellipsis">
+                <span class="txt-p5">Introducing Galaxy Book4 Series: The Most Intelligent and Powerful Galaxy Book Yet</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">2</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">Notice</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis ">
+                <span class="txt-p5">[Interview] Keep the Temperature Low and Electric Bills Lower: Useful Air Conditioner Tips From Samsung Engineers</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">3</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">Notice</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis ">
+                <span class="txt-p5">Introducing Galaxy Book4 Series: The Most Intelligent and Powerful Galaxy Book Yet</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">4</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">System Error</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis ">
+                <span class="txt-p5">Day in My Life: Barry the Cat and Samsung Home Appliances</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">5</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">System Error</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis">
+                <span class="txt-p5">[Interview] The Power of Simplicity: Meet the Innovators Who Brought SmartThings Station to Life</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">6</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">System Error</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis">
+                <span class="txt-p5">[Interview] The Power of Simplicity: Meet the Innovators Who Brought SmartThings Station to Life</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">7</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">System Error</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis">
+                <span class="txt-p5">[Interview] The Power of Simplicity: Meet the Innovators Who Brought SmartThings Station to Life</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">8</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">System Error</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis ">
+                <span class="txt-p5">[Accessibility for All] Exploring Samsung’s Accessibility Features</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">9</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">System Error</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis ">
+                <span class="txt-p5">The Bespoke Life: Samsung Brings Sustainable and Connected Design to Milan Design Week 2023</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+          <li class="list-row">
+            <a href="#none">
+              <div class="list-el el-no ">
+                <span class="txt-p5">10</span>
+              </div>
+              <div class="list-el el-cate">
+                <span class="txt-p5">Notice</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis ">
+                <span class="txt-p5">Privacy Policy Update Notification</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-02-06</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- [F] 결과 없음 -->
+        <div class="list-nodata">
+          <!-- 2025-02-20 class 변경 txt-p6 ==> txt-p5 -->
+          <p class="txt-p5">There is no registered content.</p>
+        </div>
+
+      </div>
+      <div class="pagination pc-display">
+        <ul class="page-list">
+          <li class="btn-icon page-btn__prev"> <a aria-label="prev" href="#"></a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 1" class="page-list__no selected">1</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 2" class="page-list__no">2</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 3" class="page-list__no">3</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 4" class="page-list__no">4</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 5" class="page-list__no">5</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 6" class="page-list__no">6</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 7" class="page-list__no">7</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 8" class="page-list__no">8</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 9" class="page-list__no">9</a> </li>
+          <li class="page"> <a href="#" aria-label="Go to page 10" class="page-list__no">10</a></li>
+          <li class="btn-icon page-btn__next"> <a aria-label="next" href="#"></a> </li>
+        </ul>
+      </div>
+
+      <!-- [F] 모바일 더보기 버튼 -->
+       <!-- 2025-02-20 class 변경 latest-list-more__btn ==> tal-center -->
+      <div class="tal-center mo-display">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">View more</span>
+          <i class="btn-block__icon icon-arrow-bottom"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+</body>
+
+</html>

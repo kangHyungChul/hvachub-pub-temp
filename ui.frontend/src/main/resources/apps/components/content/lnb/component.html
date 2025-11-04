@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LNB</title>
+
+    <link
+      rel="stylesheet"
+      href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/apps/components/content/lnb/clientlibs/css/main.css"
+    />
+
+    <!-- 2025-04-11 요청으로 삽입 //-->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+    <!-- End Google Tag Manager -->
+
+  </head>
+  <body>
+
+    <!-- 2025-04-11 요청으로 삽입 //-->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) --> 
+
+    <!-- component -->
+    <!-- 240626 태그 변경 및 클래스 추가 -->
+    <div id="lnb-wrap" class="lnb">
+      <ul class="lnb__inner">
+        <li class="item-2depth">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="item-2depth">
+          <span>Account Information</span>
+          <ul class="item-3depth__wrap">
+            <li class="txt-p4 item-3depth">
+              <a href="#" target="" aria-label="profile management"
+                >Profile Management
+              </a>
+            </li>
+            <li class="txt-p4 item-3depth">
+              <span>User management</span>
+              <ul class="item-4depth__wrap">
+                <!-- 240626 잠금상태인 경우 .lock 클래스 추가 -->
+                <li class="txt-p6 item-4depth">
+                  <a href="#" target="" aria-label="role setting"
+                    >Role Setting
+                     <i class="icon-block icon-lock">
+                      <span class="txt-blind">lock</span>
+                    </i>
+                  </a>
+                </li>
+                <li class="txt-p6 item-4depth lock">
+                  <a href="#" target="" aria-label="permission setting"
+                    >Permission setting
+                    <i class="icon-block icon-lock">
+                      <span class="txt-blind">lock</span>
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- 240626 잠금상태인 경우 .lock 클래스 추가 -->
+        <li class="item-2depth lock">
+          <a href="#"
+            >Saved Cart
+            <i class="icon-block icon-lock">
+              <span class="txt-blind">lock</span>
+            </i>
+          </a>
+        </li>
+        <li class="item-2depth">
+          <span>Proposal setting</span>
+          <ul class="item-3depth__wrap">
+            <li class="txt-p4 item-3depth"><a href="#">Template</a></li>
+            <li class="txt-p4 item-3depth"><a href="#">Offering</a></li>
+            <li class="txt-p4 item-3depth"><a href="#">Margin</a></li>
+          </ul>
+        </li>
+        <li class="item-2depth">
+          <a href="#">My Inquiry</a>
+        </li>
+        <li class="item-2depth">
+          <a href="#">My Favorite</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- common.js -->
+    <script src="/pub-only/js/main-lib.js"></script>
+    <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+    <!-- 컴포넌트.js -->
+    <script src="/apps/components/content/lnb/clientlibs/js/main.js"></script>
+  </body>
+</html>

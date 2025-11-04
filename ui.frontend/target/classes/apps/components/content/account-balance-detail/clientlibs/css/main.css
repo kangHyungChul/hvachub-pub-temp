@@ -1,0 +1,112 @@
+.acc-balance-datail-sect { max-width: 1440px; width: 100%; margin: 0 auto; padding:48px 24px 104px; } 
+
+/* info list */
+.od-cm-info { display: flex; flex-wrap: wrap; gap: 16px 24px; padding:24px; border-bottom: 1px solid #cccccc; } 
+.od-cm-info .od-cm-info__item { display: flex; align-items: flex-start; column-gap: 24px; width: 100%; } 
+.od-cm-info .od-cm-info__item.col2 { width: calc(50% - 12px); } 
+.od-cm-info .od-cm-info__item.col3 { width: calc(33.33% - 48px/3); } 
+.od-cm-info .od-cm-info__item .item-dt { width: 240px; font-weight: 700; } 
+.od-cm-info .od-cm-info__item.col3 .item-dt,
+.od-cm-info:has(.od-cm-info__item.col3) .item-dt { width: 152px; } 
+.od-cm-info .tag-flag { min-width: 86px; } 
+
+/* card list */
+.od-pjd-name { margin-bottom: 24px; padding-inline: 24px; } 
+.od-pjd-list-box { background: #f7f7f7; padding: 24px; border-radius: var(--border-base); } 
+.od-pjd-list .pjd-list__item { display: flex; align-items: center; column-gap: 12px; background: #ffffff; padding: 24px; border: 1px solid #dadada; border-radius: var(--border-base); } 
+.od-pjd-list .pjd-list__item:not(:first-of-type) { margin-top: 16px; } 
+.od-pjd-list .pjd-list__item .img-box,
+.od-pjd-list .pjd-list__item .pjd-count,
+.od-pjd-list .pjd-list__item .pjd-stock { flex:none}
+.od-pjd-list .pjd-list__item .img-box { display: flex; align-items: center; justify-content: center; width: 96px; height: 96px; } 
+.od-pjd-list .pjd-list__item .pjd-tit { flex: auto; } 
+.od-pjd-list .pjd-list__item .pjd-tit .txt-h9:hover a { text-decoration: underline; } 
+.od-pjd-list .pjd-list__item .pjd-count { width: 80px; font-weight: 700; } 
+.od-pjd-list .pjd-list__item .pjd-stock { text-align: right; } 
+.od-pjd-total { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; } 
+.od-pjd-total .date .txt-p5 {display: inline-block; margin-right: 32px;}
+.od-pjd-total .date .txt-p5 span  { margin-left: 16px; } 
+.od-pjd-total > .txt-p4 span { margin-left: 16px; } 
+.acc-balance-datail-sect .order-datail { margin-top: 40px; } 
+.acc-balance-datail-sect .tit-area .btn-box {margin-top: 32px;}
+.acc-balance-datail-sect .tit-area + .od-cm-info { padding-top: 0; } 
+
+
+/******* MOBILE *******/
+@media only screen and (min-width: 769px) and (max-width: 1440px)  {
+    .acc-balance-datail-sect { padding-inline: 1.667vw; } 
+
+    /* info list */
+    .od-cm-info { gap: 1.111vw 1.667vw; padding: 1.667vw; } 
+    .od-cm-info .od-cm-info__item { column-gap: 1.667vw; } 
+    .od-cm-info .od-cm-info__item.col2 { width: calc(50% - 0.833vw); } 
+    .od-cm-info .od-cm-info__item.col3 { width: calc(33.33% - 3.333vw / 3); } 
+    .od-cm-info .od-cm-info__item .item-dt { width: 16.667vw; } 
+    .od-cm-info .od-cm-info__item.col3 .item-dt,
+    .od-cm-info:has(.od-cm-info__item.col3) .item-dt { width: 10.556vw; } 
+    .od-cm-info .tag-flag { min-width: 5.972vw; } 
+
+    /* card list */
+    .od-pjd-name { margin-bottom: 1.667vw; padding-inline: 1.667vw; } 
+    
+    .od-pjd-list-box { padding: 1.667vw; } 
+    .od-pjd-list .pjd-list__item { column-gap: 0.833vw; padding: 1.667vw; } 
+    .od-pjd-list .pjd-list__item:not(:first-of-type) { margin-top: 1.111vw; } 
+    .od-pjd-list .pjd-list__item .img-box { width: 6.667vw; height: 6.667vw; } 
+    .od-pjd-list .pjd-list__item .pjd-count { width: 5.556vw; } 
+    .od-pjd-total { margin-top: 1.667vw;} 
+    .od-pjd-total .date .txt-p5 {margin-right: 2.222vw;}
+    .od-pjd-total .date .txt-p5 span  { margin-left: 1.111vw; } 
+    .od-pjd-total > .txt-p4 span { margin-left: 1.111vw; } 
+
+
+    .acc-balance-datail-sect .order-datail { margin-top: 2.778vw; } 
+    .acc-balance-datail-sect .tit-area .btn-box {margin-top: 2.222vw;}
+}
+@media only screen and (max-width: 768px) { 
+    .acc-balance-datail-sect { padding-block: 32px 80px; } 
+    
+    /* info list */
+    .od-cm-info { flex-direction: column; gap: 0; padding:0; border-bottom: 0; } 
+    .od-cm-info .od-cm-info__item { flex-direction: column; gap: 4px; width: 100%;padding: 0 12px 16px;border-bottom: 1px solid #cccccc;} 
+    .od-cm-info .od-cm-info__item + .od-cm-info__item {padding-top: 16px;}
+    .od-cm-info .od-cm-info__item.col2 { width: 100%; } 
+    .od-cm-info .od-cm-info__item.col3 { width: 100%; } 
+    .od-cm-info .od-cm-info__item .item-dt { width: 100%;} 
+    .od-cm-info .od-cm-info__item .item-dd .txt-p5 {font-size: 14px !important;}
+    .od-cm-info .od-cm-info__item.col3 .item-dt,
+    .od-cm-info:has(.od-cm-info__item.col3) .item-dt { width: 100%;} 
+ 
+    /* card list */
+    .od-pjd-name { margin-bottom: 16px; padding-inline: 0; } 
+    .od-pjd-name .txt-p4 {font-size: 14px !important;}
+
+    .od-pjd-list-box {padding:16px;} 
+    .od-pjd-list .pjd-list__item {position: relative; display: block; padding:16px 16px 16px 104px;} 
+    .od-pjd-list .pjd-list__item:not(:first-of-type) { margin-top: 12px; } 
+    .od-pjd-list .pjd-list__item .img-box {position: absolute;left: 16px;top: calc(50% - 40px); width: 80px; height: 80px; } 
+    .od-pjd-list .pjd-list__item .pjd-tit {width: 100%;} 
+    .od-pjd-list .pjd-list__item .pjd-tit .txt-p6 {font-size: 12px !important;color:#666666}
+    .od-pjd-list .pjd-list__item .pjd-tit .txt-h9 {font-size: 14px !important;}
+    .od-pjd-list .pjd-list__item .pjd-tit .txt-h9:hover a { text-decoration: none; } 
+    .od-pjd-list .pjd-list__item .pjd-code,
+    .od-pjd-list .pjd-list__item .pjd-count.mo-display { display: inline-block !important;width: auto;} 
+    .od-pjd-list .pjd-list__item .pjd-count {font-size: 12px;color:#666666;font-weight: 400;}
+    .od-pjd-list .pjd-list__item .pjd-count::before {content: "/";margin-right: 2px;}
+    .od-pjd-list .pjd-list__item .pjd-stock { width: 100%;text-align: left;margin-top: 4px; } 
+    .od-pjd-list .pjd-list__item .pjd-stock .txt-p4 {font-size: 16px !important;margin-bottom: 4px;}
+    .od-pjd-list .pjd-list__item .pjd-stock .tooltip {position: initial;}
+    .od-pjd-list .pjd-list__item .pjd-stock .tooltip .tooltip__contents {top: calc(100% - 10px);right:auto;left: 50%;transform: translateX(-50%);width: 100%;}
+    .od-pjd-total {display: block; margin-top: 16px;} 
+    .od-pjd-total .date .txt-p5 {display: flex;align-items: center;justify-content: space-between;width: 100%;font-size: 14px !important; margin-right:0;margin-top: 4px;}
+    .od-pjd-total .date .txt-p5 span  { margin-left:0; } 
+    .od-pjd-total .txt-p4 {display: flex;align-items: center;justify-content: space-between;font-size: 16px !important; margin-top: 16px;padding-top: 16px;border-top: 1px solid #dadada;}
+    .od-pjd-total .txt-p4 span.txt-p3 {font-size: 18px !important;}
+
+    .acc-balance-datail-sect .tit-area { margin-bottom: 16px; }
+    .acc-balance-datail-sect .tit-area .txt-h3 {font-size: 24px !important;}
+    .acc-balance-datail-sect .tit-area .txt-h6 {font-size: 16px !important;}
+
+    .acc-balance-datail-sect .tit-area .btn-box {margin-top: 24px;}
+    /* [E]mobile */    
+}

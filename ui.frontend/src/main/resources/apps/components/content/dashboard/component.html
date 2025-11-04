@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/dashboard/clientlibs/css/main.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- component -->
+  <section class="dashboard">
+    <h2 class="dashboard__title txt-h3">Dashboard</h2>
+    <div class="tab-wrap">
+      <div role="tablist" class="tab-list type5" aria-label="탭타이틀">
+        <!--[F] 선택시 .active 추가 -->
+        <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+          <span class="tab-list__tab-txt txt-h6">Pipeline</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt txt-h6">Order</span>
+        </button>
+      </div>
+      <div role="presentation" class="tab-wrap__contents">
+        <div role="tabpanel" aria-labelledby="" tabindex="0">
+          <div class="profile__boxWrap">
+            <article class="profile__box">
+              <div class="box-top">
+                <p class="txt-h6">By Stage</p>
+                <div class="combo-box box-type">
+                  <!-- 240626 .txt-ellipsis 추가 -->
+                  <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                    This month
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">This month</li>
+                      <li role="menuitem">This year</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="chart__area">
+                <p class="txt-p5 txt-fw-b total__desc">
+                  Total Opp.size: <span>$12.1M</span>
+                </p>
+                <div class="chart">
+                  <div id="by-stage-chart" class="stage-img" style="width:154px;"></div>
+                  <div class="stage-box-wrap">
+                    <div class="stage-box">
+                      <p class="about txt-p7 txt-fw-b">Opportunities</p>
+                      <p class="amount txt-h4 txt-fw-b">100</p>
+                    </div>
+                    <div class="stage-box">
+                      <p class="about txt-p7 txt-fw-b">Win rate</p>
+                      <p class="amount txt-h4 txt-fw-b">90<span>%</span></p>
+                    </div>
+                    <div class="stage-box">
+                      <p class="about txt-p7 txt-fw-b">Ave. lead time</p>
+                      <p class="amount txt-h4 txt-fw-b">
+                        5<span>days</span>
+                      </p>
+                    </div>
+                    <div class="stage-box">
+                      <p class="about txt-p7 txt-fw-b">Ave. deal size</p>
+                      <p class="amount txt-h4 txt-fw-b">
+                        <span>$</span>12.1<span>M</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="profile__box">
+              <div class="box-top">
+                <p class="txt-h6">By Closed date</p>
+              </div>
+              <div class="chart__area">
+                <div id="by-closed-date-chart"></div>
+              </div>
+            </article>
+            <article class="profile__box">
+              <div class="box-top">
+                <p class="txt-h6">By Vertical</p>
+                <div class="combo-box box-type">
+                  <!-- 240626 .txt-ellipsis 추가 및 터키버전 추가 -->
+                  <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                    All
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">All</li>
+                      <li role="menuitem">Residential</li>
+                      <li role="menuitem">Office</li>
+                      <li role="menuitem">Hotel</li>
+                      <li role="menuitem">Small shops</li>
+                      <li role="menuitem">Shopping malls</li>
+                      <li role="menuitem">Education</li>
+                      <li role="menuitem">Others</li>
+                    </ul>
+                  </div>
+
+                  <!-- 터키 버전 -->
+                  <!-- <div
+                        class="combo-box__menu"
+                        role="menu"
+                        aria-labelledby="combo-box__txt"
+                      >
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">All</li>
+                          <li role="menuitem">Hotel</li>
+                          <li role="menuitem">Office</li>
+                          <li role="menuitem">Commercial</li>
+                          <li role="menuitem">School</li>
+                          <li role="menuitem">Residential</li>
+                          <li role="menuitem">Hospital</li>
+                          <li role="menuitem">Villa</li>
+                          <li role="menuitem">Bank</li>
+                          <li role="menuitem">Production facility</li>
+                          <li role="menuitem">Public/Government</li>
+                          <li role="menuitem">Restaurant</li>
+                          <li role="menuitem">Others</li>
+                        </ul>
+                      </div> -->
+                </div>
+              </div>
+              <div class="chart__area">
+                <div id="by-vertical-chart"></div>
+              </div>
+            </article>
+            <article class="profile__box">
+              <div class="box-top">
+                <p class="txt-h6">By Product</p>
+                <div class="combo-box box-type">
+                  <!-- 240626 .txt-ellipsis 추가 -->
+                  <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                    All
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">All</li>
+                      <li role="menuitem">DVM</li>
+                      <li role="menuitem">CAC</li>
+                      <li role="menuitem">FJM</li>
+                      <li role="menuitem">EHS</li>
+                      <li role="menuitem">Chiller</li>
+                      <li role="menuitem">Others</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="chart__area">
+                <div id="by-product-chart"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="order-tab" role="tabpanel" aria-labelledby="" hidden>
+          <div class="combo-box box-type">
+            <!-- 240626 .txt-ellipsis 추가 -->
+            <button type="button" class="combo-box__txt txt-ellipsis" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+              All
+            </button>
+            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+              <ul class="combo-box__menu-list">
+                <li role="menuitem">All</li>
+                <li role="menuitem">HVAC Hub</li>
+              </ul>
+            </div>
+          </div>
+          <div class="profile__boxWrap">
+            <article class="profile__box">
+              <div class="box-top">
+                <p class="txt-h6">Order This Year</p>
+              </div>
+              <p class="txt-p7 box-desc">
+                Compared to &#40;<span>$ 3.2</span> last year&#41;
+              </p>
+              <div class="chart__area no-bg">
+                <div class="detail__amount">
+                  <p class="total__price txt-p3 txt-fw-b">
+                    $<span class="txt-h2">10.5</span>M
+                  </p>
+                  <div class="rate-wrap">
+                    <p class="rate-up txt-h6">
+                      +9.9<span class="txt-p6">%</span>
+                    </p>
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-rate-up-arrow.svg" alt="increase icon image" />
+                  </div>
+                </div>
+                <div class="detail-chart">
+                  <div id="order-this-year-chart"></div>
+                </div>
+              </div>
+            </article>
+            <article class="profile__box">
+              <div class="box-top">
+                <p class="txt-h6">Units Ordered This Year</p>
+              </div>
+              <p class="txt-p7 box-desc">
+                Compared to &#40;<span>16.2K</span> last year&#41;
+              </p>
+              <div class="chart__area no-bg">
+                <div class="detail__amount">
+                  <p class="total__price txt-p3 txt-fw-b">
+                    <span class="txt-h2">10.5</span>k
+                  </p>
+                  <div class="rate-wrap">
+                    <p class="rate-down txt-h6">
+                      -9.9<span class="txt-p6">%</span>
+                    </p>
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-rate-down-arrow.svg" alt="decrease icon image" />
+                  </div>
+                </div>
+                <div class="detail-chart">
+                  <div id="unit-this-year-chart"></div>
+                </div>
+              </div>
+            </article>
+            <article class="profile__box amount-box">
+              <div class="box-top">
+                <p class="txt-h6">Monthly order Amount</p>
+              </div>
+              <div class="chart__areaWrap">
+                <div class="chart__area">
+                  <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                  <p class="txt-h9 txt-fw-b chart-tit">Total</p>
+                  <div id="monthly-total-chart"></div>
+                </div>
+                <div class="chart__area">
+                  <!-- 24-06-03 class 변경 txt-h8 >> txt-h9 -->
+                  <p class="txt-h9 txt-fw-b chart-tit">By Product</p>
+                  <div id="monthly-product-chart"></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/dashboard/clientlibs/js/main.js"></script>
+</body>
+
+</html>

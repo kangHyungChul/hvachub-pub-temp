@@ -1,0 +1,72 @@
+.run-rate-list-items { max-width: 1038px; width: 100%; margin: 0 auto; } 
+.run-rate-list-items .list-top { border-bottom: 2px solid #000; display: flex; align-items: flex-end; justify-content: space-between; padding-bottom: 16px; } 
+/* list no data */
+.run-rate-list-items .list-nodata { height: 400px; } 
+/* list data */
+.run-rate-list-items .list-data { padding-top: 8px; } 
+.run-rate-list-items .list-el { padding: 16px; border-radius: var(--border-base); border: 1px solid #dadada; background-color: #fff; margin-top: 8px; } 
+.run-rate-list-items .el-box { display: flex; align-items: center; } 
+.run-rate-list-items .list-el__left { width: calc(100% - 352px); padding-right: 16px; } 
+.run-rate-list-items .list-el__left .el-name { line-height:24px; margin-bottom: 8px; } 
+.run-rate-list-items .list-el__left .el-date .txt-p6 { color: #1c1c1c; } 
+.run-rate-list-items .list-el__left .el-date .txt-p6 strong { margin-right: 4px; } 
+.run-rate-list-items .list-el__left .el-date .txt-p6 + .txt-p6 { margin-top: 8px; } 
+.run-rate-list-items .list-el__left .el-date .txt-p6 .txt-line-break:not(:first-of-type) { padding-left: 7px; margin-left: 3px; } 
+.run-rate-list-items .list-el__right { flex:0 0 352px; text-align: right; } 
+.run-rate-list-items .list-el__right .el-total .txt-p3 { display: inline-block; vertical-align: middle; margin-left: 24px; } 
+.run-rate-list-items .list-el__right .btn-box { margin-top: 16px; } 
+
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .run-rate-list-items .list-top { border-bottom-width: 0.139vw; padding-bottom: 1.111vw; } 
+ /* list no data */
+ .run-rate-list-items .list-nodata { height: 27.778vw; } 
+ /* list data */
+ .run-rate-list-items .list-data { padding-top: 0.556vw; } 
+ .run-rate-list-items .list-el { padding: 1.667vw; margin-top: 1.111vw; } 
+ .run-rate-list-items .list-el__left { width: calc(100% - 24.444vw); padding-right: 1.111vw; } 
+ .run-rate-list-items .list-el__left .el-name { margin-bottom: 0.556vw; } 
+ .run-rate-list-items .list-el__left .el-date .txt-p6 strong { margin-right: 0.278vw; } 
+ .run-rate-list-items .list-el__left .el-date .txt-p6 + .txt-p6 { margin-top: 0.556vw; } 
+ .run-rate-list-items .list-el__left .el-date .txt-p6 .txt-line-break:not(:first-of-type) { padding-left: 0.486vw; margin-left: 0.208vw; } 
+ .run-rate-list-items .list-el__right { flex: 0 0 24.444vw; } 
+ .run-rate-list-items .list-el__right .el-total .txt-p3 { margin-left: 1.667vw; } 
+ .run-rate-list-items .list-el__right .btn-box { margin-top: 1.111vw; } 
+
+ 
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .run-rate-list-items { padding-bottom: 80px; } 
+ .run-rate-list-items .list-top { display: none; } 
+ /* list no data */
+ .run-rate-list-items .list-nodata { margin-bottom: 16px; height: 240px; } 
+ /* list data */
+ .run-rate-list-items .list-data { padding-top: 0; } 
+ .run-rate-list-items .list-el { margin-top: 16px; padding: 12px 16px; } 
+ .run-rate-list-items .list-el:first-of-type { margin-top: 0; } 
+ .run-rate-list-items .el-box:has(.btn-box) { position: relative; padding-bottom: 40px; } 
+ .run-rate-list-items .list-el__left { width: calc(100% - 160px); padding-right: 4px; } 
+ .run-rate-list-items .list-el__left .el-name { font-size: 14px !important; } 
+ .run-rate-list-items .list-el__left .txt-p6 { font-size: 12px !important; } 
+ .run-rate-list-items .list-el__left .el-date .txt-line-slash { display: block; } 
+ .run-rate-list-items .list-el__left .el-date .txt-line-slash + .txt-line-slash { margin-top: 2px; } 
+ .run-rate-list-items .list-el__left .el-date .txt-line-slash:not(:first-of-type) { padding-left: 0; margin-left: 0; } 
+ .run-rate-list-items .list-el__left .el-date .txt-line-slash:not(:first-of-type)::before { content: none; } 
+ .run-rate-list-items .list-el__left .el-creat { font-size: 10px !important; font-weight: 700; margin-top: 8px; word-break: break-all; } 
+ .run-rate-list-items .list-el__left .el-creat strong { display: none; } 
+ .run-rate-list-items .list-el__right { flex:0 0 160px; } 
+ .run-rate-list-items .list-el__right .el-total .txt-p3,
+ .run-rate-list-items .list-el__right .el-total .txt-p6 { display: block; } 
+ .run-rate-list-items .list-el__right .el-total .txt-p3 { font-size: 16px !important; margin-left: 0; } 
+ .run-rate-list-items .list-el__right .el-total .txt-p6 { font-size: 12px !important; } 
+ .run-rate-list-items .list-el__right .btn-box { position: absolute; left: 0; right: 0; bottom: 0; margin-top: 16px; width: 100%; text-align: left; } 
+
+ 
+ /* [E]Mobile */ } 

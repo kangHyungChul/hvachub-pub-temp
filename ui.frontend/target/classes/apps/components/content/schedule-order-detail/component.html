@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Schedule & Order Detail</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+
+<body>
+  <!-- component -->
+  <section class="schedule-order-detail">
+    <div class="tit-area-box">
+      <div class="tit-area no-line">
+        <div class="tit__left">
+          <!-- 2025-01-20 모바일 back 버튼 추가 -->
+          <div class="mo-display">
+            <button type="button" class="btn-icon icon-page-back">
+              <span class="txt-blind">back</span>
+            </button>
+          </div>
+          <h1 class="txt-h3">Schedule</h1>
+          <!-- 2025-01-20 PC용 view 버튼 class 변경 btn-view-type ==> pc-view-type-->
+          <button type="button" class="btn-block md pc-view-type">
+            <span class="btn-block__txt date-view">Calendar View</span>
+            <i class="btn-block__icon icon-date date-view"></i>
+            <span class="btn-block__txt table-view">Table View</span>
+            <i class="btn-block__icon icon-table table-view"></i>
+          </button>
+        </div>
+
+        <div class="tit__right">
+          <!-- 2025-01-20 div 추가 (PC용 Place Oder, Request, Save) -->
+          <div class="pc-display">
+            <button type="button" class="btn-block md type3">
+              <span class="btn-block__txt">Place Oder</span>
+            </button>
+            <button type="button" class="btn-block type2 md" data-layer-target="alert-request">
+              <span class="btn-block__txt">Request</span>
+            </button>
+            <button type="button" class="btn-block md type2">
+              <span class="btn-block__txt">Save</span>
+            </button>
+          </div>
+
+          <!-- 2025-01-20 모바일 더보기 버튼 추가  -->
+          <button type="button" class="btn-icon icon-more mo-display">
+            <span class="txt-blind">모바일 더보기</span>
+          </button>
+          <!-- 2025-01-20 모바일 view 버튼 -->
+          <ul class="btn-more-list mo-display">
+            <li class="list-item">
+              <button type="button" class="btn-txt mo-view-type">
+                <span class="btn-txt__txt date-view">Calendar View</span>
+                <span class="btn-txt__txt table-view">Table View</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="schedule-cont-box">
+      <!-- table-type content -->
+      <!-- 2025-01-20 show-display 추가 (show/hide class 방식으로 변경) -->
+      <article class="schedule-cont__table show-display">
+        <!-- 2025-01-20 모바일용 project name/Rollout Period -->
+        <div class="fold-info-box mo-display">
+          <p class="txt-p7">
+            <span class="txt-fw-b">Project Name :&nbsp;</span>
+            <a href="">Project Samsung e-Biz</a>
+          </p>
+          <div class="folded-box">
+            <p class="txt-p7"><span class="txt-fw-b">Rollout Period</span>2024-07-11 ~ 2024-12-11</p>
+            <p class="txt-p7"><span class="txt-fw-b">Rollout Period</span>2024-07-11 ~ 2024-12-11</p>
+          </div>
+          <button type="button" class="btn-icon icon-folded mo-display">
+            <span class="txt-blind">fold</span>
+          </button>
+        </div>
+        <!-- //모바일용 -->
+        <div class="basic-list-wrap">
+          <div class="basic-list__top">
+            <div class="top__left">
+              <!-- [F] PC용 project name/Rollout Period -->
+              <p class="txt-p4">
+                <!-- 2025-01-09 a태그 추가 -->
+                <a href="">
+                  <span class="txt-fw-b">Project Name :&nbsp;</span>
+                  Project Samsung e-Biz
+                </a>
+              </p>
+              <p class="txt-p4"><span class="txt-fw-b">Rollout Period :&nbsp;</span>2024-07-11 ~ 2024-12-11</p>
+            </div>
+            <div class="btn-box">
+              <div class="stock-box">
+                <span class="txt-p6">Stock</span>
+                <div class="tooltip">
+                  <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                      view</span> </button>
+                  <div class="tooltip__contents">
+                    <div class="tooltip__contents-inner">
+                      <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                          close</span> </button>
+                      <div class="cont">
+                        <!-- 툴팁 문구 -->
+                        <p class="txt-fw-b">'Stock' availability </p>
+                        <div class="sotck-box">
+                          <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                          <p class="txt-p7 txt-stock yellow">Stock is not available now but will be available In 4 weeks.</p>
+                          <p class="txt-p7 txt-stock red">Stock will not be available in 4 weeks.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn-block" data-layer-target="alert-delete">
+                <span class="btn-block__txt">Delete</span>
+              </button>
+              <button type="button" class="btn-block type2">
+                <span class="btn-block__txt">Add</span>
+              </button>
+            </div>
+          </div>
+          <div class="basic-list__result">
+            <ul class="list-head">
+              <li class="list-row row-top">
+                <div class="list-el el-group"></div>
+                <div class="list-el el-type"></div>
+                <div class="list-el el-code"></div>
+                <div class="list-el el-quote"></div>
+                <div class="list-el el-balance"></div>
+                <!-- [F] Add 버튼 클릭시 복사 되는 영역-->
+                <div class="list-el el-unit">
+                  <div class="status-box">
+                    <p class="txt-p6 txt-fw-b">-</p>
+                  </div>
+                  <div class="btn-box">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Schedule Unit Status ">
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                    <p class="txt-p6 txt-fw-b">Week <span>(--)</span></p>
+                    <div class="btn-tooltip">
+                      <button type="button" class="btn-icon icon-quote-cart" disabled>
+                        <span class="txt-blind">Add all balance</span>
+                      </button>
+                      <p class="txt-tooltip">Add all balance</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- //[F] Add 버튼 클릭시 복사 되는 영역-->
+                <div class="list-el el-unit">
+                  <div class="status-box">
+                    <p class="txt-p6 txt-fw-b">Saved</p>
+                  </div>
+                  <div class="btn-box">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Schedule Unit Status ">
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                    <p class="txt-p6 txt-fw-b">Week <span>25</span></p>
+                    <div class="btn-tooltip">
+                      <button type="button" class="btn-icon icon-quote-cart">
+                        <span class="txt-blind">Add all balance</span>
+                      </button>
+                      <p class="txt-tooltip">Add all balance</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-el el-unit">
+                  <div class="status-box">
+                    <p class="txt-p6 txt-fw-b">Requested</p>
+                  </div>
+                  <div class="btn-box">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Schedule Unit Status" disabled>
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                    <p class="txt-p6 txt-fw-b">Week <span>25</span></p>
+                    <div class="btn-tooltip">
+                      <button type="button" class="btn-icon icon-quote-cart">
+                        <span class="txt-blind">Add all balance</span>
+                      </button>
+                      <p class="txt-tooltip">Add all balance</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-el el-unit">
+                  <div class="status-box">
+                    <p class="txt-p6 txt-fw-b">Confirmed</p>
+                  </div>
+                  <div class="btn-box">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="Schedule Unit Status " checked>
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                    <p class="txt-p6 txt-fw-b">Week <span>25</span></p>
+                    <div class="btn-tooltip">
+                      <button type="button" class="btn-icon icon-quote-cart">
+                        <span class="txt-blind">Add all balance</span>
+                      </button>
+                      <p class="txt-tooltip">Add all balance</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-row row-tit">
+                <div class="list-el el-group">
+                  <span class="txt-p5 txt-fw-b">Product Group</span>
+                </div>
+                <div class="list-el el-type">
+                  <span class="txt-p5 txt-fw-b">Type</span>
+                </div>
+                <div class="list-el el-code">
+                  <span class="txt-p5 txt-fw-b">Model Code</span>
+                </div>
+                <div class="list-el el-quote">
+                  <span class="txt-p5 txt-fw-b">
+                    <!-- 2025-01-20 pc/mo 텍스트 분리 -->
+                    <em class="pc-txt">Quote Qty</em>
+                    <em class="mo-txt">Qty</em>
+                  </span>
+                </div>
+                <div class="list-el el-balance">
+                  <span class="txt-p5 txt-fw-b">Balance Qty</span>
+                </div>
+                <!-- [F] Add 버튼 클릭시 복사 되는 영역-->
+                <div class="list-el el-unit">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">schedule Date</label>
+                    <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="Select date.">
+                  </div>
+                </div>
+                <!-- //[F] Add 버튼 클릭시 복사 되는 영역-->
+                <div class="list-el el-unit">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">schedule Date</label>
+                    <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="Select date." value="2024-06-20" required>
+                  </div>
+                </div>
+                <div class="list-el el-unit">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">schedule Date</label>
+                    <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="Select date." value="2024-06-20" disabled>
+                  </div>
+                </div>
+                <div class="list-el el-unit">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">schedule Date</label>
+                    <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="Select date." value="2024-06-20" disabled>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="list-body">
+              <li class="list-row-box">
+                <ul class="list-row">
+                  <li class="list-el el-group txt-ellipsis">
+                    <span class="txt-p5">DVM</span>
+                  </li>
+                  <li class="list-el el-type txt-ellipsis">
+                    <span class="txt-p5">IDU</span>
+                  </li>
+                  <li class="list-el el-code txt-ellipsis">
+                    <span class="txt-p5 txt-stock green">AM056CN2DKH/EU</span>
+                  </li>
+                  <li class="list-el el-quote">
+                    <span class="txt-p5">3</span>
+                  </li>
+                  <li class="list-el el-balance">
+                    <span class="txt-p5">3</span>
+                  </li>
+                  <!-- [F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0">
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //[F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="2">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0" disabled>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="1" disabled>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-row-box module-box">
+                <ul class="list-row">
+                  <li class="list-el el-group txt-ellipsis">
+                    <span class="txt-p5">DVM</span>
+                  </li>
+                  <li class="list-el el-type txt-ellipsis">
+                    <span class="txt-p5">ODU</span>
+                  </li>
+                  <li class="list-el el-code txt-ellipsis">
+                    <span class="txt-p5">AM120BXMWGH/EU</span>
+                  </li>
+                  <li class="list-el el-quote">
+                    <span class="txt-p5">2</span>
+                  </li>
+                  <li class="list-el el-balance">
+                    <span class="txt-p5">2</span>
+                  </li>
+                  <!-- [F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0">
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //[F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="2">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0" disabled>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="1" disabled>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="list-row row-module">
+                  <li class="list-el el-code txt-ellipsis">
+                    <span class="txt-p5 txt-stock green">AM040BXMWGH/EU</span>
+                  </li>
+                  <li class="list-el el-quote">
+                    <span class="txt-p5">2</span>
+                  </li>
+                  <li class="list-el el-balance">
+                    <span class="txt-p5">2</span>
+                  </li>
+                  <!-- [F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0" readonly>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //[F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="1" readonly>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0" readonly>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="1" readonly>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="list-row row-module">
+                  <li class="list-el el-code txt-ellipsis">
+                    <span class="txt-p5 txt-stock yellow">AM080BXMWGH/EU</span>
+                  </li>
+                  <li class="list-el el-quote">
+                    <span class="txt-p5">4</span>
+                  </li>
+                  <li class="list-el el-balance">
+                    <span class="txt-p5">4</span>
+                  </li>
+                  <!-- [F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0" readonly>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //[F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="2" readonly>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0" readonly>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="2" readonly>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-row-box">
+                <ul class="list-row">
+                  <li class="list-el el-group txt-ellipsis">
+                    <span class="txt-p5">Accessory</span>
+                  </li>
+                  <li class="list-el el-type txt-ellipsis">
+                    <span class="txt-p5">Indoor Unit</span>
+                  </li>
+                  <li class="list-el el-code txt-ellipsis">
+                    <span class="txt-p5 txt-stock red">MCR-SMC</span>
+                  </li>
+                  <li class="list-el el-quote">
+                    <span class="txt-p5">1</span>
+                  </li>
+                  <li class="list-el el-balance">
+                    <span class="txt-p5">1</span>
+                  </li>
+                  <!-- [F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0">
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //[F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="4" disabled>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0" disabled>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-row-box">
+                <ul class="list-row">
+                  <li class="list-el el-group txt-ellipsis">
+                    <span class="txt-p5">Controller</span>
+                  </li>
+                  <li class="list-el el-type txt-ellipsis">
+                    <span class="txt-p5">Individuallllllllllllllllll</span>
+                  </li>
+                  <li class="list-el el-code txt-ellipsis">
+                    <span class="txt-p5">AR-EH03E</span>
+                  </li>
+                  <li class="list-el el-quote">
+                    <span class="txt-p5">1</span>
+                  </li>
+                  <li class="list-el el-balance">
+                    <span class="txt-p5">1</span>
+                  </li>
+                  <!-- [F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0">
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //[F] Add 버튼 클릭시 복사 되는 영역-->
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="5">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="0" disabled>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-el el-unit">
+                    <div class="field-box">
+                      <label class="txt-label txt-blind" for="">Request Qty</label>
+                      <div class="input-box box-type">
+                        <input type="text" class="input-box__input" id="" placeholder="" value="5" disabled>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <!-- //table-type content -->
+      <!-- calendar-type content -->
+      <!-- 2025-01-20 style="display: none;" 삭제 (show/hide class 방식으로 변경) -->
+      <article class="schedule-cont__calendar">
+        <!-- 2025-01-20 모바일용 project name/Rollout Period -->
+        <div class="fold-info-box mo-display">
+          <p class="txt-p7">
+            <span class="txt-fw-b">Project Name :&nbsp;</span>
+            <a href="">Project Samsung e-Biz</a>
+          </p>
+          <div class="folded-box">
+            <p class="txt-p7"><span class="txt-fw-b">Rollout Period</span>2024-07-11 ~ 2024-12-11</p>
+            <p class="txt-p7"><span class="txt-fw-b">Rollout Period</span>2024-07-11 ~ 2024-12-11</p>
+          </div>
+          <button type="button" class="btn-icon icon-folded mo-display">
+            <span class="txt-blind">fold</span>
+          </button>
+        </div>
+
+        <div class="calendar-box">
+          <!-- 2025-01-20 PC용 project name/Rollout Period : class 추가 pc-display -->
+          <div class="period-box pc-display">
+            <p class="txt-p6"> <span class="txt-fw-b">Project Name :&nbsp;</span>Project Samsung e-Biz</p>
+            <p class="txt-p6"> <span class="txt-fw-b">Rollout Period :&nbsp;</span>YYYY-MM-DD ~ YYYY-MM-DD</p>
+          </div>
+          <!-- //PC용 project name/Rollout Period -->
+          <!-- 2025-01-20 모바일용 버튼 추가 -->
+          <div class="calendar-view mo-display">
+            <button type="button" class="btn-txt sm">
+              <span class="btn-txt__txt">Calendar</span>
+              <i class="btn-txt__icon icon-arrow-bottom"></i>
+            </button>
+          </div>
+          <!-- //모바일용 버튼 추가 -->
+          <div id="datepicker-inline" class="inline-calendar"></div>
+          <p class="txt-p7">※ Select a date to add a schedule.</p>
+        </div>
+
+        <div class="calendar-data">
+          <!-- [F] 
+            저장된 스케줄이 있는 경우 div.calendar-list-data 노출 / 
+            저장된 스케줄이 없는 경우 div.list-nodata 노출
+          -->
+          <div class="calendar-list-data">
+            <div class="data__top">
+              <button type="button" class="btn-block">
+                <span class="btn-block__txt">Delete</span>
+              </button>
+              <button type="button" class="btn-icon icon-folded">
+                <span class="txt-blind">folded</span>
+              </button>
+            </div>
+            <ul class="data__result">
+              <li class="accordion-box sm active">
+                <div class="accordion__tit">
+                  <div class="tit__left">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="selectList" disabled>
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                    <p class="txt-p5 txt-fw-b">Week32</p>
+                    <button type="button" class="btn-block" data-layer-target="popup-add-schedule">
+                      <span class="btn-block__txt">2024-05-31</span>
+                    </button>
+                    <p class="txt-status">Requested</p>
+                  </div>
+                  <button type="button" class="btn-icon icon-accordion">
+                    <span class="txt-blind">close</span>
+                  </button>
+                </div>
+                <div class="accordion_cont">
+                  <div class="prd-list-top">
+                    <p class="txt-p5 txt-fw-b">Product</p>
+                    <div class="top__right">
+                      <div class="stock-box">
+                        <span class="txt-p6">Stock</span>
+                        <div class="tooltip">
+                          <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                              view</span> </button>
+                          <div class="tooltip__contents">
+                            <div class="tooltip__contents-inner">
+                              <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                                  close</span> </button>
+                              <div class="cont">
+                                <!-- 툴팁 문구 -->
+                                <p class="txt-fw-b">'Stock' availability </p>
+                                <div class="sotck-box">
+                                  <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                                  <p class="txt-p7 txt-stock yellow">Stock is not available now but will be available In 4 weeks.</p>
+                                  <p class="txt-p7 txt-stock red">Stock will not be available in 4 weeks.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="txt-p5 txt-fw-b">Request Qty</p>
+                    </div>
+                  </div>
+                  <ul class="prd-list">
+                    <li class="list-row-box">
+                      <ul class="list-row">
+                        <li class="list-el el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="list-el el-txt">
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                          </p>
+                          <p class="txt-h9">DVM S ECO Simultaneous Cooling and Heating</p>
+                          <p class="txt-p6">AM120BXMWGH/EU</p>
+                        </li>
+                        <li class="list-el el-stock"></li>
+                        <li class="list-el el-qty">
+                          <span class="txt-p6 txt-fw-b">1</span>
+                        </li>
+                      </ul>
+                      <!-- [F] multi module 인 경우 -->
+                      <div class="row-module">
+                        <ul class="list-row ">
+                          <li class="list-el el-img">
+                            <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                          </li>
+                          <li class="list-el el-txt">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                            </p>
+                            <p class="txt-h9">DVM S ECO Simultaneous Cooling and Heating</p>
+                            <p class="txt-p6">AM120BXMWGH/EU</p>
+                          </li>
+                          <li class="list-el el-stock">
+                            <span class="txt-stock green">
+                              <em class="txt-blind">green</em>
+                            </span>
+                          </li>
+                          <li class="list-el el-qty">
+                            <span class="txt-p6 txt-fw-b">1</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="row-module">
+                        <ul class="list-row ">
+                          <li class="list-el el-img">
+                            <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                          </li>
+                          <li class="list-el el-txt">
+                            <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                            </p>
+                            <p class="txt-h9">DVM S ECO Simultaneous Cooling and Heating</p>
+                            <p class="txt-p6">AM120BXMWGH/EU</p>
+                          </li>
+                          <li class="list-el el-stock">
+                            <span class="txt-stock yellow">
+                              <em class="txt-blind">yellow</em>
+                            </span>
+                          </li>
+                          <li class="list-el el-qty">
+                            <span class="txt-p6 txt-fw-b">1</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="list-row-box">
+                      <ul class="list-row">
+                        <li class="list-el el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="list-el el-txt">
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                          </p>
+                          <p class="txt-h9">DVM S ECO Simultaneous Cooling and Heating</p>
+                          <p class="txt-p6">AM120BXMWGH/EU</p>
+                        </li>
+                        <li class="list-el el-stock">
+                          <span class="txt-stock red">
+                            <em class="txt-blind">red</em>
+                          </span>
+                        </li>
+                        <li class="list-el el-qty">
+                          <span class="txt-p6 txt-fw-b">1</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="list-row-box">
+                      <ul class="list-row">
+                        <li class="list-el el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="list-el el-txt">
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                          </p>
+                          <p class="txt-h9">DVM S ECO Simultaneous Cooling and Heating</p>
+                          <p class="txt-p6">AM120BXMWGH/EU</p>
+                        </li>
+                        <li class="list-el el-stock">
+                          <span class="txt-stock green">
+                            <em class="txt-blind">green</em>
+                          </span>
+                        </li>
+                        <li class="list-el el-qty">
+                          <span class="txt-p6 txt-fw-b">1</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accordion-box sm">
+                <div class="accordion__tit">
+                  <div class="tit__left">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="selectList" checked>
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                    <p class="txt-p5 txt-fw-b">Week42</p>
+                    <button type="button" class="btn-block" data-layer-target="popup-add-schedule">
+                      <span class="btn-block__txt">2024-05-31</span>
+                    </button>
+                    <p class="txt-status">Saved</p>
+                  </div>
+                  <button type="button" class="btn-icon icon-accordion">
+                    <span class="txt-blind">close</span>
+                  </button>
+                </div>
+                <div class="accordion_cont">
+                  <div class="prd-list-top">
+                    <p class="txt-p5 txt-fw-b">Product</p>
+                    <div class="top__right">
+                      <div class="stock-box">
+                        <span class="txt-p6">Stock</span>
+                        <div class="tooltip">
+                          <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                              view</span> </button>
+                          <div class="tooltip__contents">
+                            <div class="tooltip__contents-inner">
+                              <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                                  close</span> </button>
+                              <div class="cont">
+                                <!-- 툴팁 문구 -->
+                                <p class="txt-fw-b">'Stock' availability </p>
+                                <div class="sotck-box">
+                                  <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                                  <p class="txt-p7 txt-stock yellow">Stock is not available now but will be available In 4 weeks.</p>
+                                  <p class="txt-p7 txt-stock red">Stock will not be available in 4 weeks.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="txt-p5 txt-fw-b">Request Qty</p>
+                    </div>
+                  </div>
+                  <ul class="prd-list">
+                    <li class="list-row-box">
+                      <ul class="list-row">
+                        <li class="list-el el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="list-el el-txt">
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                          </p>
+                          <p class="txt-h9">DVM S ECO Simultaneous Cooling and Heating</p>
+                          <p class="txt-p6">AM120BXMWGH/EU</p>
+                        </li>
+                        <li class="list-el el-stock">
+                          <span class="txt-stock green">
+                            <em class="txt-blind">green</em>
+                          </span>
+                        </li>
+                        <li class="list-el el-qty">
+                          <span class="txt-p6 txt-fw-b">1</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="accordion-box sm">
+                <div class="accordion__tit">
+                  <div class="tit__left">
+                    <label class="btn-checkbox">
+                      <input type="checkbox" class="btn-checkbox__input" name="selectList">
+                      <span class="btn-checkbox__icon"></span>
+                    </label>
+                    <p class="txt-p5 txt-fw-b">Week42</p>
+                    <button type="button" class="btn-block" data-layer-target="popup-add-schedule">
+                      <span class="btn-block__txt">2024-05-31</span>
+                    </button>
+                    <p class="txt-status">Saved</p>
+                  </div>
+                  <button type="button" class="btn-icon icon-accordion">
+                    <span class="txt-blind">close</span>
+                  </button>
+                </div>
+                <div class="accordion_cont">
+                  <div class="prd-list-top">
+                    <p class="txt-p5 txt-fw-b">Product</p>
+                    <div class="top__right">
+                      <div class="stock-box">
+                        <span class="txt-p6">Stock</span>
+                        <div class="tooltip">
+                          <button type="button" class="btn-icon tooltip__btn type-black"> <span class="txt-blind">tooltip
+                              view</span> </button>
+                          <div class="tooltip__contents">
+                            <div class="tooltip__contents-inner">
+                              <button type="button" class="btn-icon tooltip-close__btn"> <span class="txt-blind">tooltip
+                                  close</span> </button>
+                              <div class="cont">
+                                <!-- 툴팁 문구 -->
+                                <p class="txt-fw-b">'Stock' availability </p>
+                                <div class="sotck-box">
+                                  <p class="txt-p7 txt-stock green">Stock is available now.</p>
+                                  <p class="txt-p7 txt-stock yellow">Stock is not available now but will be available In 4 weeks.</p>
+                                  <p class="txt-p7 txt-stock red">Stock will not be available in 4 weeks.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="txt-p5 txt-fw-b">Request Qty</p>
+                    </div>
+                  </div>
+                  <ul class="prd-list">
+                    <li class="list-row-box">
+                      <ul class="list-row">
+                        <li class="list-el el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="list-el el-txt">
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">OutdoorUnit</span>
+                          </p>
+                          <p class="txt-h9">DVM S ECO Simultaneous Cooling and Heating</p>
+                          <p class="txt-p6">AM120BXMWGH/EU</p>
+                        </li>
+                        <li class="list-el el-stock">
+                          <span class="txt-stock green">
+                            <em class="txt-blind">green</em>
+                          </span>
+                        </li>
+                        <li class="list-el el-qty">
+                          <span class="txt-p6 txt-fw-b">1</span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- //data -->
+          <!-- no data -->
+          <div class="list-nodata" style="display: none;">
+            <!-- 2025-03-02 class 변경 txt-p6 ==> txt-p5-->
+            <p class="txt-p5">Select a date to add a schedule.​</p>
+          </div>
+          <!-- //no data -->
+        </div>
+
+      </article>
+      <!-- //calendar-type content -->
+
+      <!-- 2025-01-20 모바일용 Place Oder, Request, Save 추가 -->
+      <div class="page-btn-box mo-display">
+        <button type="button" class="btn-block md" data-layer-target="alert-request">
+          <span class="btn-block__txt">Request</span>
+        </button>
+        <button type="button" class="btn-block md type2">
+          <span class="btn-block__txt">Save</span>
+        </button>
+        <button type="button" class="btn-block md type3">
+          <span class="btn-block__txt">Place Oder</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- add schedule popup -->
+    <div class="popup-wrap add-schedule" id="popup-add-schedule">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Add Schedule</p>
+        </div>
+        <div class="popup__container">
+          <div class="basic-list-wrap">
+            <div class="basic-list__top">
+              <div class="field-box">
+                <label class="txt-label txt-blind">calendar</label>
+                <input type="text" id="datepicker" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+              </div>
+              <button type="button" class="btn-block md">
+                <span class="btn-block__txt">Add all blance</span>
+              </button>
+            </div>
+            <div class="basic-list__result">
+              <ul class="list-head">
+                <li class="list-el el-group txt-ellipsis">
+                  <span class="txt-p5 txt-fw-b">Product Group </span>
+                </li>
+                <li class="list-el el-type txt-ellipsis">
+                  <span class="txt-p5 txt-fw-b">Type</span>
+                </li>
+                <li class="list-el el-code txt-ellipsis">
+                  <span class="txt-p5 txt-fw-b">Model Code</span>
+                </li>
+                <li class="list-el el-quote">
+                  <span class="txt-p5 txt-fw-b">
+                    <em class="pc-txt">Quote Qty</em>
+                    <em class="mo-txt">Qty</em>
+                  </span>
+                </li>
+                <li class="list-el el-balance">
+                  <span class="txt-p5 txt-fw-b">Balance Qty</span>
+                </li>
+                <li class="list-el el-req">
+                  <span class="txt-p5 txt-fw-b">Request Qty</span>
+                </li>
+              </ul>
+              <ul class="list-body">
+                <li class="list-row-box">
+                  <ul class="list-row">
+                    <li class="list-el el-group txt-ellipsis">
+                      <span class="txt-p5">DVM</span>
+                    </li>
+                    <li class="list-el el-type txt-ellipsis">
+                      <span class="txt-p5">ODU</span>
+                    </li>
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5 txt-stock green">AM160AXVHJH1</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">3</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">3</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-row-box">
+                  <ul class="list-row">
+                    <li class="list-el el-group txt-ellipsis">
+                      <span class="txt-p5">DVM</span>
+                    </li>
+                    <li class="list-el el-type txt-ellipsis">
+                      <span class="txt-p5">ODU</span>
+                    </li>
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5 txt-stock green">AM160AXVHJH1</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">3</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">0</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-row-box module-box">
+                  <ul class="list-row">
+                    <li class="list-el el-group txt-ellipsis">
+                      <span class="txt-p5">DVM</span>
+                    </li>
+                    <li class="list-el el-type txt-ellipsis">
+                      <span class="txt-p5">ODU</span>
+                    </li>
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5">AM160AXVHJH1</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">2</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">2</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="list-row row-module">
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5 txt-stock green">AM040BXMWGH/EU</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">2</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">2</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0" readonly>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="list-row row-module">
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5 txt-stock yellow">AM080BXMWGH/EU</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">4</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">4</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0" readonly>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-row-box">
+                  <ul class="list-row">
+                    <li class="list-el el-group txt-ellipsis">
+                      <span class="txt-p5">DVM</span>
+                    </li>
+                    <li class="list-el el-type txt-ellipsis">
+                      <span class="txt-p5">IDU</span>
+                    </li>
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5 txt-stock red">AM160AXVHJH1</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">4</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">4</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0" disabled>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-row-box">
+                  <ul class="list-row">
+                    <li class="list-el el-group txt-ellipsis">
+                      <span class="txt-p5">DVM</span>
+                    </li>
+                    <li class="list-el el-type txt-ellipsis">
+                      <span class="txt-p5">IDU</span>
+                    </li>
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5 txt-stock green">AM052AXVHJH1</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">10</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">10</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0" disabled>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-row-box">
+                  <ul class="list-row">
+                    <li class="list-el el-group txt-ellipsis">
+                      <span class="txt-p5">DVM</span>
+                    </li>
+                    <li class="list-el el-type txt-ellipsis">
+                      <span class="txt-p5">External Control kit </span>
+                    </li>
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5 txt-stock green">MXJ-0808</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">8</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">8</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0" disabled>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-row-box">
+                  <ul class="list-row">
+                    <li class="list-el el-group txt-ellipsis">
+                      <span class="txt-p5">DVM</span>
+                    </li>
+                    <li class="list-el el-type txt-ellipsis">
+                      <span class="txt-p5">Individual Control</span>
+                    </li>
+                    <li class="list-el el-code txt-ellipsis">
+                      <span class="txt-p5 txt-stock yellow">ACM-A202DN</span>
+                    </li>
+                    <li class="list-el el-quote">
+                      <span class="txt-p5">5</span>
+                    </li>
+                    <li class="list-el el-balance">
+                      <span class="txt-p5">5</span>
+                    </li>
+                    <li class="list-el el-req">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind" for="">Request Qty</label>
+                        <div class="input-box box-type">
+                          <input type="text" class="input-box__input" id="" placeholder="" value="0" disabled>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- shadow -->
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg" onclick="window.hvachubFunc.closePopup()">
+            <span class="btn-block__txt">Cancle</span>
+          </button>
+          <button type="button" class="btn-block type2 lg">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span></button>
+      </div>
+    </div>
+    <!-- //add schedule popup -->
+
+    <!-- alert sample request -->
+    <div class="alert-wrap" id="alert-request">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="aler__container">
+          <p class="txt-p4">Do you want to request all schedules that are 'Saved’? <br>
+            You cannot edit or delete it after requestion. 
+            Do you want to request?</p>
+        </div>
+        <div class="alert__footer">
+          <!-- 특정 버튼에 closePopup 적용 예시 -->
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('alert-request')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+
+    <!-- alert sample delete -->
+    <div class="alert-wrap" id="alert-delete">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="aler__container">
+          <p class="txt-p4">Only the schedule 'InProgress' is deleted from the selected schedule.<br>
+            Do you want to continue?
+          </p>
+        </div>
+        <div class="alert__footer">
+          <!-- 특정 버튼에 closePopup 적용 예시 -->
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('alert-delete')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

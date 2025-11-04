@@ -1,0 +1,11 @@
+.popup-wrap.pop-bim-spec-wrap .popup-wrap__inner .popup__header  {padding:16px 40px 24px; }
+.pop-bim-spec-wrap .popup__header .txt-h4 { line-height: 1.3; border-bottom: 2px solid #000;}
+.pop-bim-spec__cont .inner-top { display: flex; justify-content: flex-end; align-items: center; padding-bottom:24px;}
+
+.inner-cont .bim-item:first-child .tit {border-top:1px solid #ddd;}
+.bim-item .tit { padding:16px 12px; background-color:#f7f7f7; font-size:16px; font-weight: 700; line-height:1.5; }
+/* .bim-item table { border-top:1px solid #ddd; } */
+
+.bim-item table { width:100%; border-top:1px solid #ddd; }
+.bim-item table tr td:first-child { border-left:0; }
+.bim-item table td, .bim-item table tr td.line { padding:16px 12px; border-bottom:1px solid #ddd; border-left:1px solid #ddd; font-size:16px; color:#000; line-height: 1.5;}

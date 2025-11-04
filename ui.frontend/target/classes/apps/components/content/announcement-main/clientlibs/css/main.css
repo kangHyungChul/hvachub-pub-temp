@@ -1,0 +1,48 @@
+.announce-main { max-width: 1440px; margin: 0 auto; padding: 0 24px; } 
+.announce-main .announce-main__swiper { border-radius: var(--border-base); background: #f4f4f4; height: 75px; position: relative; } 
+.announce-main .announce-main__swiper::after { display: inline-block; width: 130px; height: 104px; background-color: #f4f4f4; content: ""; position: absolute; right: 0; top: 0; z-index: 1; } 
+.announce-main .announce-main__cont { width: 100%; height: 100%; display: flex; align-items: center; padding: 0 24px; } 
+.announce-main .announce-main__date { line-height: 24px; margin-right: 24px; } 
+.announce-main .announce-main__title { line-height: 27px; display: block; width: 100%; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; white-space: nowrap; -webkit-line-clamp: 1; max-width: 1133px; } 
+.announce-main .announce-main__title:hover { text-decoration: underline; } 
+.announce-main .swiper-control__wrap { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); display: flex; gap: 4px; width: 80px; z-index: 2; } 
+.announce-main .swiper-button-prev { width: 24px; height: 24px; position: unset; background:
+ center / contain no-repeat
+ url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-swiper-navigation-prev-gray.svg),
+ 100%; margin-top: unset; } 
+.announce-main .swiper-button-next { width: 24px; height: 24px; position: unset; background:
+ center / contain no-repeat
+ url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-swiper-navigation-next-gray.svg),
+ 100%; margin-top: unset; } 
+.announce-main .swiper-button-prev:after,
+.announce-main .swiper-button-next:after { display: none; } 
+.announce-main .swiper-button-autoplay { cursor: pointer; width: 24px; height: 24px; background:
+ center / contain no-repeat
+ url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-pause-gray.svg),
+ 100%; } 
+.announce-main .swiper-button-autoplay.stop { background:
+ center / contain no-repeat
+ url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-play-gray.svg),
+ 100%; } 
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .announce-main .announce-main__swiper { height: 5.208vw; } 
+ .announce-main .announce-main__cont { padding: 0 1.667vw; } 
+ .announce-main .announce-main__date { line-height: 1.667vw; margin-right: 1.667vw; } 
+ .announce-main .announce-main__title { line-height: 1.875vw; max-width: 78.681vw; } 
+ .announce-main .swiper-control__wrap { right: 1.667vw; gap: 0.278vw; width: 5.556vw; } 
+ .announce-main .swiper-button-prev,
+ .announce-main .swiper-button-autoplay,
+ .announce-main .swiper-button-next { width: 1.667vw; height: 1.667vw; } 
+ .announce-main .announce-main__swiper::after { width: 9.028vw; height: 7.222vw; } 
+ }
+
+@media only screen and (max-width: 768px){
+ .announce-main .announce-main__swiper { height: auto; } 
+ .announce-main .announce-main__cont { display: block; padding: 14px 16px; } 
+ .announce-main .announce-main__date { color: #555; font-size: 12px !important; margin-bottom: 14px; line-height: 18px; } 
+ .announce-main .announce-main__title { display: -webkit-box; font-weight: 400 !important; font-size: 14px !important; line-height: 21px; white-space: unset; word-break: break-word; -webkit-line-clamp: 2; } 
+ .announce-main .announce-main__swiper::after { width: auto; height: 100%; } 
+ .announce-main .swiper-control__wrap { top: 16px; transform: translateY(0); } 
+ }

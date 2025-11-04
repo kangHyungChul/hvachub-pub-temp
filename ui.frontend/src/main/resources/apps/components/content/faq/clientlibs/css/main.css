@@ -1,0 +1,63 @@
+.faq { max-width: 1440px; width: 100%; margin: 0 auto; padding: 0 24px; } 
+.faq .tab-list-box { height: 64px; margin-bottom: 24px; } 
+.faq .tab-list-box .tab-btn__prev, 
+.faq .tab-list-box .tab-btn__next { height: 63px; padding-top: 18px; } 
+.faq .tab-list-box .tab-list-box__inner .tab-list { height: 64px; } 
+.faq .tab-list .tab-list__tab { min-width: 199px; padding-inline: 16px;}
+.faq .tab-list .tab-list__tab .tab-list__tab-txt { font-size: 22px; font-weight: 700; } 
+.faq .tab-wrap__contents { border-top: 1px solid #dadada; } 
+/* list */
+.faq .faq-data { margin-bottom: 24px; } 
+.faq .faq-data .accordion__tit { height: 96px; background: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-question.svg) no-repeat 12px 24px; background-size: 48px 48px; padding:16px 80px; } 
+.faq .faq-data .accordion__tit .txt-p3 { word-break: break-all; } 
+.faq .faq-data .accordion__tit .icon-accordion { top: 36px; right: 28px; width: 16px; height: 16px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-plus.svg); transform: none; } 
+.faq .faq-data .accordion_cont { min-height: 104px; background: #f2f2f2 url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-answer.svg) no-repeat 12px 28px; background-size: 48px 48px; border-bottom: 1px solid #dadada; padding: 24px 16px 24px 84px; } 
+.faq .faq-data .accordion_cont .txt-p4 a { text-decoration: underline; font-weight: 700; } 
+.faq-data .accordion-box:has(.accordion__tit).active { border-bottom: none; padding-bottom: 0; } 
+.faq-data .accordion-box:has(.accordion__tit).active .icon-accordion { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-minus.svg); } 
+
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .faq { padding: 0 1.667vw; } 
+ .faq .tab-list-box { height: 4.444vw; margin-bottom: 1.667vw; } 
+ .faq .tab-list-box .tab-btn__prev,
+ .faq .tab-list-box .tab-btn__next { height: 4.375vw; padding-top: 1.25vw; } 
+ .faq .tab-list-box .tab-list-box__inner .tab-list { height: 4.444vw; } 
+ .faq .tab-list .tab-list__tab { min-width: 13.819vw; } 
+ .faq .tab-list .tab-list__tab .tab-list__tab-txt { font-size: 1.528vw; } 
+ /* list */
+ .faq .faq-data { margin-bottom: 1.667vw; } 
+ .faq .faq-data .accordion__tit { height: 6.667vw; background-position: 0.833vw 1.667vw; background-size: 3.333vw 3.333vw; padding: 1.111vw 5.556vw; } 
+ .faq .faq-data .accordion__tit .icon-accordion { top: 2.5vw; right: 1.944vw; width: 1.111vw; height: 1.111vw; } 
+ .faq .faq-data .accordion_cont { min-height: 7.222vw; background-position: 0.833vw 1.944vw; background-size: 3.333vw 3.333vw; padding: 1.667vw 1.111vw 1.667vw 5.833vw; } 
+ 
+ 
+/* [E]Tablet */ } 
+ /************************************************************************************** 
+ ======================================= Mobile ======================================== 
+ ***************************************************************************************/
+ @media only screen and (max-width: 768px){
+ .faq { padding-inline: 0; } 
+ .faq .tab-list-box { height: 40px; } 
+ .faq .tab-list-box .tab-btn__prev, 
+ .faq .tab-list-box .tab-btn__next { height: 39px; padding-top: 10px; } 
+ .faq .tab-list-box .tab-list-box__inner .tab-list { height: 40px; } 
+ .faq .tab-list .tab-list__tab { min-width: auto;  padding-inline: 16px; } 
+ .faq .tab-list .tab-list__tab .tab-list__tab-txt { font-size: 14px; line-height: 40px; } 
+ .faq .tab-wrap__contents { padding-inline: 24px; border-top: 0; } 
+ /* list */
+ .faq .faq-data { margin-bottom: 24px; } 
+ .faq .faq-data .accordion__tit { height: auto; background-position: 10px 12px; background-size: 20px 20px; padding: 12px 40px; } 
+ .faq .faq-data .accordion__tit .txt-p3 { font-size: 14px !important; } 
+ .faq .faq-data .accordion__tit .icon-accordion { top: 14px; right: 4px; } 
+ .faq .faq-data .accordion_cont { min-height: 52px; background-position: 10px 12px; background-size: 20px 20px; padding: 12px 16px 12px 40px; } 
+ .faq .faq-data .accordion_cont .txt-p4 { font-size: 14px !important; } 
+ .faq .faq-data .accordion_cont .txt-p4 a { text-decoration: underline; font-weight: 700; } 
+ .faq .list-nodata {border-top: 1px solid #aaaaaa;}
+
+ 
+/* [E]Mobile */ } 

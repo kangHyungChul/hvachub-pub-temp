@@ -1,0 +1,50 @@
+ 
+.project-list > .tit-area { max-width: 1440px; width: 100%; margin: 0 auto; padding: 24px 24px 8px; margin-bottom: 0; } 
+.project-list > .tit-area.no-line { border-bottom:0; }
+.project-list > .tit-area .txt-h3 { font-size:32px !important; }
+.filter-wrap__top .filter-left .filter-btn { position: relative; display: flex; align-items: center; }
+.filter-wrap__top .filter-left .filter-btn:before { content: ''; display:inline-block; width:24px; height:24px; background:url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-filters-on.svg) no-repeat center; }
+
+.project-list .filter-wrap__cont.on-filter .filter-wrap__menu .accordion-box.sm .accordion__tit { height:54px; }
+.project-list .filter-wrap__cont.on-filter .filter-wrap__menu .accordion-box.sm .accordion__tit .icon-accordion { top:15px; }
+
+/* search area */
+.project-list .prj-search { max-width: 1392px; background-color: #f7f7f7; padding: 16px; margin:0 auto; border-radius: var(--border-base); } 
+.project-list .prj-search .field-box { width: 100%; } 
+.project-list .prj-search .search-box { display: flex; gap: 16px; align-items: center; } 
+.project-list .prj-search .search-box .input-box.input-search .icon-search-delete { right: 16px; } 
+.project-list .prj-search .input-search-box__inner { flex-basis: 775px; } 
+.project-list .prj-search .input-box.box-type { width: 100%; } 
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .project-list > .tit-area { padding: 1.667vw 1.667vw 0.556vw; } 
+ /* search area */
+ /* search area */
+ .project-list .prj-search { padding: 1.667vw; margin:0 1.667vw 0.556vw; } 
+ .project-list .prj-search .input-search-box { gap: 1.111vw; } 
+ .project-list .prj-search .input-search-box__inner { flex-basis: 53.819vw; } 
+
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .project-list > .tit-area { overflow: initial; position: sticky; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; height: 56px; background: #ffffff; padding:0 24px; margin: 0; box-shadow: var(--base-shadow ); z-index: 9; } 
+ .project-list > .tit-area .txt-h3 { font-size: 18px !important; } 
+ .project-list > .tit-area .btn-box { width: auto; } 
+ .project-list > .tit-area .icon-home { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-home.svg); } 
+
+/* search area */
+ .project-list .prj-search { display: none; border-radius: 0; } 
+ .project-list .prj-search .input-search-box { display: block; }
+ .project-list .prj-search .input-search-box .btn-block { width: 100%; margin: 12px 0 0; }
+
+ /* header, breadcrumb hide */
+ #wrap .header-wrap,
+ #wrap .breadcrumb { display: none !important; } 
+
+ /* [E]Mobile */ } 

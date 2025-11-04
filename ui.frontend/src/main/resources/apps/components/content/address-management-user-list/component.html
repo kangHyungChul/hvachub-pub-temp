@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>address-management-list</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- component -->
+  <section class="address-managemtnt">
+    <h2 class="address__title txt-h3">Address Management</h2>
+    <div class="tab-wrap">
+      <div role="tablist" class="tab-list type5" aria-label="탭타이틀">
+        <!--[F] 선택시 .active 추가 -->
+        <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+          <span class="tab-list__tab-txt txt-h6">Shipping</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt txt-h6">Customer</span>
+        </button>
+      </div>     
+      <div role="presentation" class="tab-wrap__contents">
+        <!-- Shipping start // -->
+        <div role="tabpanel" aria-labelledby="" tabindex="0">          
+          <section class="Shipping-list-items white-box">
+            <!-- [F] PC용 ( 모바일 용을 filter에서 노출) -->
+            <div class="list-top flex-end">              
+              <button type="button" class="btn-block type2 md" >
+                <span class="btn-block__txt">New</span>
+              </button>
+            </div>            
+
+            <div class="lr-box-item-list">
+              <!-- no data -->
+              <div class="list-nodata" style="display:none;">
+                <p class="txt-p5">There is no registered content.</p>
+              </div>
+              <!-- //no data -->
+
+              <!-- lr-list-data-area // -->
+              <div class="lr-list-data-area">
+                <ul class="list-data">
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Ankara Office</p>
+                        <p class="txt">Alaçam Sok. No.5, Cinnah Caddesi, Ankara 06690 Turkey​</p>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Request</span>
+                        </button>
+                        <button type="button" class="btn-icon icon-trash">
+                          <span class="txt-blind">delete</span>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Istanbul Office</p>
+                        <p class="txt">Askerocağı Cad. Süzer Plaza, No:6, Kat:4, 34367, Elmadağ/Şişli, İstanbul</p>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Request</span>
+                        </button>
+                        <button type="button" class="btn-icon icon-trash">
+                          <span class="txt-blind">delete</span>
+                        </button>                       
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Ankara Office(0002015710)</p>
+                        <p class="txt">Alaçam Sok. No.5, Cinnah Caddesi, Ankara 06690 Turkey</p>
+                      </div>
+                      <div class="right">
+                        <p class="icon-ship-state"><span class="txt-blind">배송</span></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Ankara Office(0002015710)</p>
+                        <p class="txt">Alaçam Sok. No.5, Cinnah Caddesi, Ankara 06690 Turkey</p>
+                      </div>
+                      <div class="right">                       
+                        <p class="icon-ship-state comp"><span class="txt-blind">배송완료</span></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Ankara Office(0002015710)</p>
+                        <p class="txt">Alaçam Sok. No.5, Cinnah Caddesi, Ankara 06690 Turkey</p>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-icon icon-user2">
+                          <span class="txt-blind">user</span>
+                        </button>
+                        <button type="button" class="btn-icon icon-edit3">
+                          <span class="txt-blind">edit</span>
+                        </button>
+                        <!-- <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Request</span>
+                        </button> 
+                        <button type="button" class="btn-icon icon-trash">
+                          <span class="txt-blind">delete</span>
+                        </button>
+                        <p class="icon-ship-state"><span class="txt-blind">배송</span></p>
+                        <p class="icon-ship-state comp"><span class="txt-blind">배송완료</span></p>-->
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- // lr-list-data-area  -->
+
+            </div>
+          </section>
+        </div>
+        <!-- Shipping end // -->
+        
+        <!-- Customer start // -->
+        <div class="order-tab" role="tabpanel" aria-labelledby="" hidden>
+          <section class="customer-list-items white-box">
+            <!-- [F] PC용 ( 모바일 용을 filter에서 노출) -->
+            <div class="list-top flex-end">              
+              <button type="button" class="btn-block type2 md">
+                <span class="btn-block__txt">New</span>
+              </button>
+            </div>            
+
+            <div class="lr-box-item-list">
+              <!-- no data -->
+              <div class="list-nodata" style="display:none;">
+                <p class="txt-p5">There is no registered content.</p>
+              </div>
+              <!-- //no data -->
+
+              <!-- lr-list-data-area // -->
+              <div class="lr-list-data-area">
+                <ul class="list-data">
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Concentrix(5181752)</p>
+                        <p class="txt">Alaçam Sok. No.5, Cinnah Caddesi, Ankara 06690 Turkey</p>
+                        <p class="info">
+                          <span class="name">Alex *****</span>
+                          <span class="email">**aaa@aaa.com</span> 
+                          <span class="num">90212368****</span>
+                        </p>
+                      </div>
+                      <div class="right">    
+                        <button type="button" class="btn-icon icon-edit3">
+                          <span class="txt-blind">edit</span>
+                        </button>     
+                        <button type="button" class="btn-icon icon-trash">
+                          <span class="txt-blind">delete</span>
+                        </button>                                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Concentrix(5181752)</p>
+                        <p class="txt">Alaçam Sok. No.5, Cinnah Caddesi, Ankara 06690 Turkey</p>                      
+                      </div>
+                      <div class="right">                        
+                        <button type="button" class="btn-icon icon-user2">
+                          <span class="txt-blind">user</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item deactive">
+                      <div class="left">
+                        <p class="tit">Istanbul Office</p>
+                        <p class="txt">Askerocağl Cad. Süzer Plaza, No:6, Kat:4, 34367, Elmadağ/Şişli, İstanbul</p>
+                        <p class="info">
+                          <span class="name">Alex *****</span>
+                          <span class="email">**aaa@aaa.com</span> 
+                          <span class="num">90212368****</span>
+                        </p>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-icon icon-trash">
+                          <span class="txt-blind">delete</span>
+                        </button>  
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item deactive">
+                      <div class="left">
+                        <p class="tit">Istanbul Office</p>
+                        <p class="txt">Askerocağl Cad. Süzer Plaza, No:6, Kat:4, 34367, Elmadağ/Şişli, İstanbul</p>
+                        <p class="info">
+                          <span class="name">Alex *****</span>
+                          <span class="email">**aaa@aaa.com</span> 
+                          <span class="num">90212368****</span>
+                        </p>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-icon icon-trash">
+                          <span class="txt-blind">delete</span>
+                        </button>  
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item deactive">
+                      <div class="left">
+                        <p class="tit">Istanbul Office</p>
+                        <p class="txt">Askerocağl Cad. Süzer Plaza, No:6, Kat:4, 34367, Elmadağ/Şişli, İstanbul</p>
+                        <p class="info">
+                          <span class="name">Alex *****</span>
+                          <span class="email">**aaa@aaa.com</span> 
+                          <span class="num">90212368****</span>
+                        </p>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-icon icon-trash">
+                          <span class="txt-blind">delete</span>
+                        </button>  
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item deactive">
+                      <div class="left">
+                        <p class="tit">Istanbul Office</p>
+                        <p class="txt">Askerocağl Cad. Süzer Plaza, No:6, Kat:4, 34367, Elmadağ/Şişli, İstanbul</p>
+                        <p class="info">
+                          <span class="name">Alex *****</span>
+                          <span class="email">**aaa@aaa.com</span> 
+                          <span class="num">90212368****</span>
+                        </p>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-icon icon-trash">
+                          <span class="txt-blind">delete</span>
+                        </button>  
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- // lr-list-data-area  -->
+            </div>
+          </section>
+        </div>
+        <!-- // Customer end  -->
+      </div>
+    </div>
+
+    <!-- company search popup -->
+    <div class="popup-wrap company-search-popup" id="company-search-popup" >
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="search-title txt-h4 active">Company Search</p>         
+        </div>
+        <div class="popup__container">
+          <div class="comp-cont-inner" style="display:block;">
+            <article class="search-area">
+              <div class="field-box">
+                <label class="txt-label txt-p6 txt-req">
+                  Business Location
+                </label>
+                <div class="combo-box box-type">
+                  <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" aria-required="true">
+                    <span class="txt-placeholder">Country</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">옵션옵션옵션옵션 1</li>
+                      <li role="menuitem">옵션 2</li>
+                      <li role="menuitem">옵션 3</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="txt-error">This field is required</p>
+              </div>
+              <div class="field-box">
+                <label class="txt-label txt-p6 txt-req" for="comp-name-input">
+                  Company Name
+                </label>
+                <div class="input-box input-search box-type">
+                  <input type="search" class="input-box__input" id="comp-name-input" placeholder="Type a company name" required />
+                  <button type="button" class="btn-icon icon-search-delete" style="display: none">
+                    <span class="txt-blind">delete</span>
+                  </button>
+                </div>
+                <p class="txt-error">This field is required</p>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="btn-block md type2">
+                  <span class="btn-block__txt">Search</span>
+                </button>
+              </div>
+            </article>
+
+            <article class="search-result">
+              <div class="result__num-btn">
+                <p class="txt-fw-b txt-p6">
+                  <span class="txt-point1">10</span> Results
+                </p>
+                <div class="btn-wrap">
+                  <button type="button" class="btn-block type2 md">
+                    <span class="btn-block__txt">New</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="my-result__wrap">
+
+                <!-- no data -->
+                <div class="list-nodata" style="display:none;">  
+                  <!-- 검색 결과 없을 경우 문구 //-->
+                  <p class="txt-p6">No matching results found.</p>
+                  <!-- 검색 실행 전 문구 //-->
+                  <p class="txt-p6">Search for a company</p> 
+                </div>
+                <!-- //no data -->
+
+                <ul class="result-list__wrap">
+                  <li class="list__head">
+                    <ul>                      
+                      <li class="comp-name txt-p6 txt-fw-b">
+                        Company Name
+                      </li>
+                      <li class="location txt-p6 txt-fw-b">
+                        Business Location
+                      </li>
+                      <!-- table 항목명 변경 -->
+                      <!-- 2025-05-23 삭제 // -->
+                      <!-- <li class="business-num txt-p6 txt-fw-b">
+                        Biz License
+                      </li> -->
+                      <li class="city txt-p6 txt-fw-b">City</li>
+                      <li class="district txt-p6 txt-fw-b">District</li>
+                      <li class="addr-line txt-p6 txt-fw-b">Address Line</li>
+                      <li class="postal-code txt-p6 txt-fw-b">Postal Code</li>
+                      <li class="status txt-p6 txt-fw-b">Status</li>
+                    </ul>
+                  </li>
+                  <li class="list__el-box">
+                    <ul class="list-data">
+                      <!-- [F] pc일때 보이는 영역 -->
+                      <li class="list__el pc-display" aria-disabled="true">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <!-- [F] disabled시 disabled 추가 -->
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" disabled />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">ÇankayaÇankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <!-- <li class="business-num txt-p6">1234567890</li> -->
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                          <li class="status txt-p6">open</li>
+                        </ul>
+                      </li>
+
+                      <!-- [F] mo일때 보이는 영역 -->
+                      <!-- [F] disabled시 [aria-disabled="true"] -->
+                      <li class="list__el mo-display" aria-disabled="true">
+                        <div class="comp-check">
+                          <label class="btn-radio">
+                            <!-- [F] disabled시 disabled 추가 -->
+                            <input type="radio" class="btn-radio__input" name="company-item" value="samsung" disabled />
+                            <span class="btn-radio__icon"></span>
+                          </label>
+                        </div>
+                        <div class="cont-wrap">
+                          <p class="comp-name txt-p6 txt-fw-b">Samsung</p>
+                          <div>
+                            <p class="comp-detail txt-p6">
+                              <span class="location">Türkiye</span>
+                              <span class="city">Ankara</span>
+                              <span class="district">Çankaya</span>
+                              <!-- <span class="business-num txt-p6">
+                                1234567890
+                              </span> -->
+                              <span class="addr-line">
+                                Atatürk Bulvarı No: 123
+                              </span>
+                              <span class="postal-code">06680</span>
+                              <br />
+                              <span class="license-no">
+                                Biz License No.1:1234567890
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__el mo-display">
+                        <div class="comp-check">
+                          <label class="btn-radio">
+                            <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                            <span class="btn-radio__icon"></span>
+                          </label>
+                        </div>
+                        <div class="cont-wrap">
+                          <p class="comp-name txt-p6 txt-fw-b">Samsung</p>
+                          <div>
+                            <p class="comp-detail txt-p6">
+                              <span class="location">Türkiye</span>
+                              <span class="city">Ankara</span>
+                              <span class="district">Çankaya</span>
+                              <!-- <span class="business-num txt-p6">
+                                1234567890
+                              </span> -->
+                              <span class="addr-line">
+                                Atatürk Bulvarı No: 123
+                              </span>
+                              <span class="postal-code">06680</span>
+                              <br />
+                              <span class="license-no">
+                                Biz License No.1:1234567890
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>               
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>       
+        </div>
+        <div class="popup__footer">     
+         <button type="button" class="btn-block lg type2" >
+            <span class="btn-block__txt">Save</span>
+          </button>       
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- company info -->
+    <div class="popup-wrap company-info-popup" id="company-info-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">          
+          <p class="info-title txt-h4">Company Info.</p>
+        </div>
+        <div class="popup__container">   
+          <div class="new-cont-wrap">
+            <div class="field-box">
+              <label class="txt-label txt-req" for="company-name-input">Company Name</label>
+              <div class="input-box half-input-box">
+                <input type="text" class="input-box__input" id="company-name-input" placeholder="Type a company name" maxlength="1000" required />
+              </div>
+              <p class="txt-error">This field is required.</p>
+            </div>
+            
+            <p class="company-addr-tit txt-h7">Company Address</p>
+
+            <div class="field-box-wrap location-box-wrap">
+              <div class="field-box">
+                <label class="txt-label txt-req">Business Location</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="company-name-input" value="Turkey" maxlength="1000" required disabled />
+                </div>
+              </div>             
+            </div>
+
+            <div class="field-box-wrap">
+              <div class="field-box city-box">
+                <label class="txt-label txt-req">City</label>
+                <div class="input-wrap">                 
+                  <div class="input-box other-input-box">
+                    <input type="text" class="input-box__input" id="other-city-input" placeholder="Select a city" maxlength="1000" />
+                  </div>
+                </div>
+              </div>              
+              <div class="field-box">
+                <label class="txt-label txt-req" for="district-input">District</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="district-input" placeholder="Type a district" maxlength="1000" />
+                </div>
+              </div>              
+            </div>
+            
+            <div class="field-box-wrap">
+              <div class="field-box">
+                <label class="txt-label txt-req" for="addr-line-input">Address Line</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="addr-line-input" placeholder="Type an address line" maxlength="1000" />
+                </div>
+              </div>
+              <div class="field-box">
+                <label class="txt-label txt-req" for="postal-code-input">Postal Code</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="postal-code-input" placeholder="Type a postal code" maxlength="5" />
+                </div>
+              </div>            
+            </div>            
+          </div>
+        </div>
+        <div class="popup__footer">
+         <button type="button" class="btn-block lg">
+            <span class="btn-block__txt">Cancle</span>
+          </button>
+          <button type="button" class="btn-block lg type2">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="popup-wrap company-info-popup" id="company-info2-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">          
+          <p class="info-title txt-h4">Contact Info.</p>
+        </div>
+        <div class="popup__container">   
+          <p class="company-name txt-p6">Company Name : Concentrix</p>
+          <div class="new-cont-wrap">   
+            <div class="field-box-wrap">
+              <div class="field-box">
+                <label class="txt-label txt-req" for="first-name-input">First Name</label>
+                <div class="input-wrap">                 
+                  <div class="input-box other-input-box">
+                    <input type="text" class="input-box__input" id="first-name-input" placeholder=""  maxlength="1000" />
+                  </div>
+                </div>
+              </div>              
+              <div class="field-box">
+                <label class="txt-label txt-req" for="last-name-input">Last Name</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="last-name-input" placeholder=""  maxlength="1000" />
+                </div>
+              </div>              
+            </div>
+            
+            <div class="field-box-wrap">
+              <div class="field-box">
+                <label class="txt-label txt-req" for="email-input">Email</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="email-inpu" placeholder="" maxlength="1000" />
+                </div>
+              </div>
+              <div class="field-box">
+                <label class="txt-label txt-req" for="phone-number-input">Phone number</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="phone-number-input" placeholder="" maxlength="5" />
+                </div>
+              </div>            
+            </div>            
+          </div>
+        </div>
+        <div class="popup__footer">
+         <button type="button" class="btn-block lg">
+            <span class="btn-block__txt">Cancle</span>
+          </button>
+          <button type="button" class="btn-block lg type2">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/dashboard/clientlibs/js/main.js"></script>
+</body>
+
+</html>

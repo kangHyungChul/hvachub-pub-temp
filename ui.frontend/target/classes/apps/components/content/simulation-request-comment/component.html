@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation Request Comment</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+</head>
+
+<body>
+
+  <!-- component -->
+  <section class="simulation-request-comment">
+    <!-- 240705 h2.page-tit 제거 -> title 컴포넌트 사용 -->
+    <article class="simulation-comment-form__wrap">
+      <ul class="prev-req-info-box">
+        <!-- Request ID -->
+        <li class="req-info__el">
+          <strong class="list__el-tit txt-p5 txt-fw-b">Request ID</strong>
+          <p class="list__el-cont txt-p5 txt-fw-b">IS20512758</p>
+        </li>
+        <!-- Subject -->
+        <li class="req-info__el">
+          <strong class="list__el-tit txt-p5 txt-fw-b">Subject</strong>
+          <p class="list__el-cont txt-p5">Subject Name 123 AAAA</p>
+        </li>
+      </ul>
+      <div class="form-box">
+        <!-- Comment -->
+        <div class="field-box issue">
+          <label class="txt-label txt-req" for="issue-textbox">Comment</label>
+          <div class="box">
+            <!-- textarea에 error class 추가시 border red로 변경 -->
+            <textarea class="textarea error" id="issue-textbox" placeholder="Please explain your issue or questions"></textarea><!-- 240705 placeholder 문구 변경 / maxlength 제거 -->
+            <!-- 240705 p.maxlength__desc 제거 -->
+            <p class="txt-error">This field is required.</p>
+          </div>
+        </div>
+        <!-- Attachment File -->
+        <div class="field-box attachment">
+          <label class="txt-label">Attachment File</label>
+          <div class="attach-box">
+            <div class="attach-cont__wrap">
+
+              <!-- file-list가 없는 경우 ul.file-list__wrap display: none -->
+              <ul class="file-list__wrap">
+                <li class="file-list__el">
+                  <p class="file-name txt-p6">File name 1 File name 1 File name 1 File name 1 File name 1 File name 1 File name 1.png</p><!-- 파일명 --><!-- 240812 검수용 파일 확장 노출 -->
+                  <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <li class="file-list__el">
+                  <p class="file-name txt-p6">File name 2.pdf</p><!-- 파일명 -->
+                  <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <li class="file-list__el">
+                  <p class="file-name txt-p6">File name 3.jpeg</p><!-- 파일명 -->
+                  <button class="file-name-btn" type="button"></button><!-- x 버튼 -->
+                </li>
+                <!-- 240705 li 2개 제거 (파일 최대 3개 첨부가능) -->
+              </ul>
+              <div class="upload-btn__box">
+                <!-- 240807 [HVCHB-1035] Request Form Download 버튼 위치 변경 -->
+                <input type="file" id="upload-file" accept=".xlsx,.xls,.jpeg,.jpg,.gif,.pdf,.png,.tif,.pptx,.zip." multiple class="hidden-file-input" name="file-upload" />
+                <label for="upload-file">
+                  <div class="btn-block upload-btn">
+                    <span class="btn-block__txt">Upload</span>
+                  </div>
+                </label>
+                <div class="upload-caution">
+                  <span class="icon txt-p7">※</span>
+                  <p class="txt txt-p7">
+                    File must be less than 2GB. Allowed file types : xlsx, xls, jpeg, jpg, gif, pdf, png, tif, pptx, zip, ndps, ndpd, dwg.<br>
+                    Files larger than 50MB will be automatically deleted after 90 days.
+                  </p>
+                </div>
+                <div class="error-box">
+                  <p class="txt-error">You can register up to 3 files maximum.</p>
+                  <p class="txt-error">Please check the file types.</p>
+                  <!-- 240705 required msg 제거 -->
+                </div>
+              </div>
+            </div>
+            <!-- 2025-01-13 div 생성 btn-down-area -->
+            <div class="btn-down-area">
+              <!-- 2025-01-13 버튼 위치 이동 / class 삭제 btn-down / class 변경 btn-block ==> btn-txt -->
+              <a role="button" class="btn-txt">
+                <span class="btn-txt__txt">Request Form Download</span>
+                <i class="btn-txt__icon icon-download"></i>
+              </a>
+              <p class="txt-error">File download failed.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- button -->
+      <div class="btn-box">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">Cancel</span>
+        </button>
+        <!-- 
+            alert
+            button의 data-layer-target 값과 일치하는 div.alert-wrap id 값의 popup open
+            submit alert id = follow-inquiry-submit-alert
+          -->
+        <button type="button" class="btn-block md type2" data-layer-target="simulation-req-submit-alert">
+          <span class="btn-block__txt">Submit</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- submit arlert  -->
+    <div class="alert-wrap" id="simulation-req-submit-alert">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Submit</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">Are you sure you want to submit it?</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md" onclick="window.hvachubFunc.closePopup('simulation-req-submit-alert')">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

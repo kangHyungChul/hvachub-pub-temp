@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <title>Third Party List</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css" />
+
+  <!-- header -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/template-with-logo/clientlibs/css/main.css" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- template-width-logo component -->
+  <header class="logo-with-header">
+    <div class="header-inner">
+      <div class="logo-box">
+        <a href="#" target="_self" aria-label="samsung hvac hub">
+          <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/hvachub-logo.svg" alt="samsung hvac hub logo" />
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- //template-width-logo component -->
+
+  <!-- third party container -->
+  <!-- 240820 id -> third-container로 변경 -->
+  <div id="third-container">
+    <section class="third-party-list">
+      <!-- 2025-03-07  div 삭제 : list-inner -->
+
+      <article class="search-area">
+        <div class="field-box">
+          <label class="txt-label txt-blind" for="btn-required-search">검색</label>
+          <div class="input-search-box">
+            <!-- focus가 되면 active -->
+            <div class="input-search-box__inner search-word-box">
+              <div class="input-box input-search">
+                <input type="search" class="input-box__input" id="btn-required-search" placeholder="검색어를 입력해주세요." />
+                <button type="button" class="btn-icon icon-search-delete">
+                  <span class="txt-blind">삭제</span>
+                </button>
+              </div>
+              <div class="search-box__auto">
+                <ul class="search-box__auto-list">
+                  <li class="autoitem">auto text</li>
+                  <li class="autoitem">auto text</li>
+                  <li class="autoitem">auto text</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field-box-wrap">
+          <div class="field-box combo">
+            <label class="txt-label">타입</label>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                <span class="txt-placeholder">전체</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem" class="selected">전체</li>
+                  <li role="menuitem">Piping Diagram</li>
+                  <li role="menuitem">운전범위</li>
+                  <li role="menuitem">PQ Curve</li>
+                  <li role="menuitem">도면-IDU</li>
+                  <li role="menuitem">도면-ODU</li>
+                  <li role="menuitem">설치 매뉴얼</li>
+                  <li role="menuitem">BIM</li>
+                  <li role="menuitem">Appendix</li>
+                  <li role="menuitem">POD</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="field-box search">
+            <label class="txt-label" for="default-search">제작 번호</label>
+            <div class="input-box input-search">
+              <input type="search" class="input-box__input" id="default-search" placeholder="제작번호를 입력해주세요." />
+              <button type="button" class="btn-icon icon-search-delete" style="display: none">
+                <span class="txt-blind">삭제</span>
+              </button>
+              <!-- 2024-06-27 jira https://cnx33303.atlassian.net/browse/HVCHB-1189 삭제 요청-->
+              <!-- <button type="button" class="btn-icon icon-search">
+                    <span class="txt-blind">검색</span>
+                  </button> -->
+            </div>
+          </div>
+          <div class="field-box combo">
+            <label class="txt-label">상태</label>
+            <div class="combo-box">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                <span class="txt-placeholder">전체</span>
+              </button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem" class="selected">전체</li>
+                  <li role="menuitem">작업요청</li>
+                  <li role="menuitem">작업 중</li>
+                  <li role="menuitem">검수 중</li>
+                  <li role="menuitem">완료</li>
+                  <li role="menuitem">취소</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="datepicker-wrap">
+            <label class="txt-label">기간</label>
+            <div class="date-field-box">
+              <div class="field-box combo">
+                <div class="combo-box">
+                  <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                    <span class="txt-placeholder">선택</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem" class="selected">전체</li>
+                      <li role="menuitem">요청 날짜</li>
+                      <li role="menuitem">등록 날짜</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="field-box date">
+                <input type="text" class="input-datepicker" placeholder="YYYY-MM-DD" required id="dp1717120543657" />
+                <p class="txt-error">시작일과 종료일을 확인해주세요.</p>
+              </div>
+              <div class="field-box">
+                <input type="text" class="input-datepicker" placeholder="YYYY-MM-DD" id="dp1717120543657" />
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">검색</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- 2025-03-07  article 삭제 : search-result-->
+      <!-- 2025-03-07 class 변경 : my-result__wrap  ==> basic-list-wrap -->
+      <div class="basic-list-wrap">
+        <!-- 2025-03-07 class 변경 : result__num-btn  ==> basic-list__top  -->
+        <div class="basic-list__top">
+          <p class="txt-fw-b txt-p6">
+            All <span class="txt-point1">24</span>
+          </p>
+        </div>
+        <!-- 2025-03-07 class 변경 : result-list__wrap  ==> basic-list__result / 태그 변경 ul ==> div   -->
+        <div class="basic-list__result">
+          <!-- 2025-03-07 class 변경 : list__head  ==> list-head / 태그 변경 li ==> ul   -->
+          <ul class="list-head">
+            <!-- 2025-03-07 box, text 분리 / 태그 변경 span ==> li / class 변경 list-el el-*** -->
+            <li class="list-el el-no txt-fw-b">
+              <span class="txt-p5 txt-fw-b">No.</span>
+            </li>
+            <li class="list-el el-produce-num">
+              <span class="txt-p5 txt-fw-b">제작 번호</span>
+            </li>
+            <li class="list-el el-title">
+              <span class="txt-p5 txt-fw-b">제목</span>
+            </li>
+            <li class="list-el el-type">
+              <span class="txt-p5 txt-fw-b">타입</span>
+            </li>
+            <li class="list-el el-classification ">
+              <span class="txt-p5 txt-fw-b">분류</span>
+            </li>
+            <li class="list-el el-status">
+              <span class="txt-p5 txt-fw-b">상태</span>
+            </li>
+            <li class="list-el el-date">
+              <span class="txt-p5 txt-fw-b">요청 날짜</span>
+            </li>
+            <li class="list-el el-date">
+              <span class="txt-p5 txt-fw-b">완료 날짜</span>
+            </li>
+          </ul>
+          <!-- 2025-03-07 li 삭제 : list__el-box -->
+          <!-- 2025-03-07 class 변경 : list-data  ==> list-body   -->
+          <ul class="list-body">
+            <!-- 
+                  [F] 상태 관련 .tag-flag 색상 설정값
+                  .request -> 작업 요청 
+                  .working -> 작업중 
+                  .inspection -> 검수중 
+                  .complete -> 완료 
+                  .cancel -> 취소
+                -->
+
+            <!-- 2025-03-07 class 변경 : list__el  ==> list-row   -->
+            <li class="list-row">
+              <!-- 2025-03-07 box, text 분리 / 태그 변경 span ==> li / class 변경 list-el el-*** -->
+              <div class="list-el el-no">
+                <span class="txt-p5">1</span>
+              </div>
+              <div class="list-el el-produce-num">
+                <span class="txt-p5">CWD240111</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis">
+                <a href="#" target="" class="txt-p5">콘텐츠 제작 요청</a>
+              </div>
+              <div class="list-el el-type">
+                <span class="txt-p5">Piping Diagram</span>
+              </div>
+              <div class="list-el el-classification">
+                <span class="txt-p5">이미지</span>
+              </div>
+              <div class="list-el el-status">
+                <span class="tag-flag request">작업 요청</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-03-21</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">-</span>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="list-el el-no">
+                <span class="txt-p5">2</span>
+              </div>
+              <div class="list-el el-produce-num">
+                <span class="txt-p5">CWD240110</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis">
+                <a href="#" target="" class="txt-p5">콘텐츠 제작 요청 콘텐츠 제작 요청 콘텐츠 제작 요청 콘텐츠 제작 요청 콘텐츠 제작 요청 콘텐츠 제작 요청 콘텐츠 제작 요청</a>
+              </div>
+              <div class="list-el el-type">
+                <span class="txt-p5">소음 측정 위치 - ODU</span>
+              </div>
+              <div class="list-el el-classification">
+                <span class="txt-p5">이미지&DWG</span>
+              </div>
+              <div class="list-el el-status">
+                <span class="tag-flag working">작업 중</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-03-21</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">-</span>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="list-el el-no">
+                <span class="txt-p5">3</span>
+              </div>
+              <div class="list-el el-produce-num">
+                <span class="txt-p5">CWD240110</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis">
+                <a href="#" target="" class="txt-p5">콘텐츠 제작 요청</a>
+              </div>
+              <div class="list-el el-type">
+                <span class="txt-p5">측정위치 IDU</span>
+              </div>
+              <div class="list-el el-classification">
+                <span class="txt-p5">이미지&DWG</span>
+              </div>
+              <div class="list-el el-status">
+                <span class="tag-flag inspection">검수 중</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-03-21</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">-</span>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="list-el el-no">
+                <span class="txt-p5">4</span>
+              </div>
+              <div class="list-el el-produce-num">
+                <span class="txt-p5">CWD240110</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis">
+                <a href="#" target="" class="txt-p5">콘텐츠 제작 요청</a>
+              </div>
+              <div class="list-el el-type">
+                <span class="txt-p5">도면-IDU</span>
+              </div>
+              <div class="list-el el-classification">
+                <span class="txt-p5">이미지&DWG</span>
+              </div>
+              <div class="list-el el-status">
+                <span class="tag-flag complete">완료</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-03-21</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">-</span>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="list-el el-no">
+                <span class="txt-p5">5</span>
+              </div>
+              <div class="list-el el-produce-num">
+                <span class="txt-p5">CWD240111</span>
+              </div>
+              <div class="list-el el-title txt-ellipsis">
+                <a href="#" target="" class="txt-p5">콘텐츠 제작 요청</a>
+              </div>
+              <div class="list-el el-type">
+                <span class="txt-p5">운전범위</span>
+              </div>
+              <div class="list-el el-classification">
+                <span class="txt-p5">이미지&DWG</span>
+              </div>
+              <div class="list-el el-status">
+                <span class="tag-flag cancel">취소</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-03-21</span>
+              </div>
+              <div class="list-el el-date">
+                <span class="txt-p5">2024-05-21</span>
+              </div>
+            </li>
+          </ul>
+
+          <!-- [F]data가 없을때  -->
+          <div class="list-nodata" >
+            <!-- 2025-03-07 class 변경 txt-p6 ==> txt-p5 -->
+            <p class="txt-p5">등록된 게시물이 없습니다.</p>
+          </div>
+
+          <!-- 240618 pagination 위치이동 -->
+          <div class="pagination">
+            <ul class="page-list">
+              <li class="btn-icon page-btn__prev" aria-disabled="true">
+                <a aria-label="prev" href=""></a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 1" class="page-list__no selected">1</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 2" class="page-list__no">2</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 3" class="page-list__no">3</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 4" class="page-list__no">4</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 5" class="page-list__no">5</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 6" class="page-list__no">6</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 7" class="page-list__no">7</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 8" class="page-list__no">8</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 9" class="page-list__no">9</a>
+              </li>
+              <li class="page">
+                <a href="#" aria-label="Go to page 10" class="page-list__no">10</a>
+              </li>
+              <li class="btn-icon page-btn__next">
+                <a aria-label="next" href=""></a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <!-- 240814 js 추가 -->
+  <script src="clientlibs/js/main.js"></script>
+</body>
+
+</html>

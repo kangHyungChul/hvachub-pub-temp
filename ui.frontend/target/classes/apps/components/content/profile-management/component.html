@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <title>Profile management</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/profile-management/clientlibs/css/main.css" />
+</head>
+
+<body>
+  <!-- component -->
+  <!-- 
+      personal user 화면 일 경우 .personal-user 클래스 추가
+      해당 클래스 추가시 .personal-hidden 클래스 가진 항목, role & permission 영역박스 hidden 처리 됨 
+   -->
+  <section class="profile-manage">
+    <h2 class="profile__title txt-h3 txt-fw-b">Profile management</h2>
+    <div class="info-boxWrap">
+      <article class="info-box">
+        <div class="info-box__titWrap">
+          <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-company-info.svg" alt="company info icon image" />
+
+          <p class="info-tit txt-h6 txt-fw-b">Company Info</p>
+        </div>
+        <div class="info-box__detail">
+          <div class="detail-item">
+            <p class="detail__category">Company Name</p>
+            <p class="detail__info">Concentrix</p>
+          </div>
+          <div class="detail-item">
+            <p class="detail__category">Country</p>
+            <p class="detail__info">USA</p>
+          </div>
+          <div class="detail-item">
+            <p class="detail__category">City</p>
+            <p class="detail__info">New York</p>
+          </div>
+          <div class="detail-item">
+            <p class="detail__category">Address</p>
+            <p class="detail__info">123 Main Street, NY 10001</p>
+          </div>
+          <div class="detail-item">
+            <p class="detail__category">Phone Number</p>
+            <p class="detail__info">+90&#41; 212 555 1234</p>
+          </div>
+          <div class="detail-item">
+            <p class="personal-hidden detail__category">ERP Code</p>
+            <p class="personal-hidden detail__info">TDB</p>
+          </div>
+          <div class="detail-item">
+            <p class="personal-hidden detail__category">Credit Limit</p>
+            <p class="personal-hidden detail__info">TDB</p>
+          </div>
+          <div class="detail-item">
+            <p class="personal-hidden detail__category">Partner Level</p>
+            <p class="personal-hidden detail__info">TDB</p>
+          </div>
+        </div>
+      </article>
+      <article class="info-box">
+        <div class="info-box__titWrap">
+          <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-my-info.svg" alt="my info icon image" />
+          <p class="info-tit txt-h6 txt-fw-b">My Info</p>
+        </div>
+        <div class="info-box__detail">
+          <div class="detail-item">
+            <p class="detail__category">First Name</p>
+            <p class="detail__info">Sun***</p>
+          </div>
+          <div class="detail-item">
+            <p class="detail__category">Last Name</p>
+            <p class="detail__info">Heo***</p>
+          </div>
+          <div class="detail-item">
+            <p class="detail__category">E-mail</p>
+            <p class="detail__info">Air***@gmail.com</p>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="caption txt-p7">
+      ※ All personal information is managed through Business Account.<br />
+      (If you need to modify personal information, please do so through
+      <a href="#">here.</a>)
+    </p>
+    <article class="address-box">
+      <div class="address-box__titWrap">
+        <div class="address-box__tit">
+          <p class="txt-h6 dp-inline">Address Management</p>
+          <div class="tooltip">
+            <button type="button" class="btn-icon tooltip__btn">
+              <span class="txt-blind">tooltip view</span>
+            </button>
+            <div class="tooltip__contents">
+              <div class="tooltip__contents-inner" style="width: 240px">
+                <button type="button" class="btn-icon tooltip-close__btn">
+                  <span class="txt-blind">tooltip close</span>
+                </button>
+                <p>
+                  Address Management is a feature that manages the addresses
+                  of customers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn-block md add-btn" data-layer-target="addr-manage-popup">
+          <span class="btn-block__txt">Add</span>
+        </button>
+      </div>
+      <!-- [F] 데이터 있는 경우 -->
+      <div class="address-area">
+        <ul class="address-box__itemWrap">
+          <li class="address-box__item">
+            <p class="txt-p5 txt-fw-b name txt-ellipsis">
+              Emily Johnson Emily Johnson Emily Johnson Emily Johnson Emily
+              Johnson Emily Johnson Emily Johnson Emily Johnson Emily Johnson
+              Emily Johnson
+            </p>
+            <!-- [F] address list 관련 
+                aem 어써링시 line1 / line2(선택) 옵션 관련하여 text-ellipsis 적용되어야 해서 해당 부분 분기처리 하지 않고 한줄로 처리 -->
+            <p class="txt-p5 address txt-ellipsis2">
+              Mevlana Mahallesi, Gazi Caddesi No: 123, 06050 Ankara,
+              TürkiyeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            </p>
+            <div class="address-box__btnWrap">
+              <button type="button" class="btn-icon contact-info-btn">
+                <span class="txt-blind">Contact info</span>
+              </button>
+              <button type="button" class="btn-icon edit-btn" data-layer-target="addr-manage-popup">
+                <span class="txt-blind">edit</span>
+              </button>
+              <button type="button" class="btn-icon delete-btn">
+                <span class="txt-blind">delete</span>
+              </button>
+              <!-- [F] ship code 요청 후 일 경우엔 check 클래스 추가 -->
+              <button type="button" class="btn-icon ship-code-btn check" data-layer-target="ship-regist-popup">
+                <span class="txt-blind">ship state</span>
+              </button>
+            </div>
+          </li>
+          <li class="address-box__item">
+            <p class="txt-p5 txt-fw-b name txt-ellipsis">David Martinez</p>
+            <p class="txt-p5 address">
+              123 Main Street, Central District, Anytown,12345, United States
+            </p>
+            <div class="address-box__btnWrap">
+              <button type="button" class="btn-icon edit-btn" data-layer-target="addr-manage-popup">
+                <span class="txt-blind">edit</span>
+              </button>
+              <button type="button" class="btn-icon delete-btn">
+                <span class="txt-blind">delete</span>
+              </button>
+              <button type="button" class="btn-icon ship-code-btn" data-layer-target="ship-request-popup">
+                <span class="txt-blind">ship state</span>
+              </button>
+            </div>
+          </li>
+          <li class="address-box__item">
+            <p class="txt-p5 txt-fw-b name txt-ellipsis">Sarah Smith</p>
+            <p class="txt-p5 address">
+              123 Main Street, Central District, Anytown,12345, United States
+            </p>
+            <div class="address-box__btnWrap">
+              <button type="button" class="btn-icon edit-btn" data-layer-target="addr-manage-popup">
+                <span class="txt-blind">edit</span>
+              </button>
+              <button type="button" class="btn-icon delete-btn">
+                <span class="txt-blind">delete</span>
+              </button>
+              <!-- [F] ship code 요청 후 일 경우엔 check 클래스 추가 -->
+              <button type="button" class="btn-icon ship-code-btn check" data-layer-target="re-regist-popup">
+                <span class="txt-blind">ship state</span>
+              </button>
+            </div>
+          </li>
+          <li class="address-box__item">
+            <p class="txt-p5 txt-fw-b name txt-ellipsis">David Martinez</p>
+            <p class="txt-p5 address">
+              123 Main Street, Central District, Anytown,12345, United States
+            </p>
+            <div class="address-box__btnWrap">
+              <button type="button" class="btn-icon edit-btn" data-layer-target="addr-manage-popup">
+                <span class="txt-blind">edit</span>
+              </button>
+              <button type="button" class="btn-icon delete-btn">
+                <span class="txt-blind">delete</span>
+              </button>
+              <button type="button" class="btn-icon ship-code-btn" data-layer-target="ship-regist-popup">
+                <span class="txt-blind">ship state</span>
+              </button>
+            </div>
+          </li>
+          <li class="address-box__item">
+            <p class="txt-p5 txt-fw-b name txt-ellipsis">David Martinez</p>
+            <p class="txt-p5 address">
+              123 Main Street, Central District, Anytown,12345, United States
+            </p>
+            <div class="address-box__btnWrap">
+              <button type="button" class="btn-icon edit-btn" data-layer-target="addr-manage-popup">
+                <span class="txt-blind">edit</span>
+              </button>
+              <button type="button" class="btn-icon delete-btn">
+                <span class="txt-blind">delete</span>
+              </button>
+              <button type="button" class="btn-icon ship-code-btn" data-layer-target="ship-regist-popup">
+                <span class="txt-blind">ship state</span>
+              </button>
+            </div>
+          </li>
+          <li class="address-box__item">
+            <p class="txt-p5 txt-fw-b name txt-ellipsis">David Martinez</p>
+            <p class="txt-p5 address">
+              123 Main Street, Central District, Anytown,12345, United States
+            </p>
+            <div class="address-box__btnWrap">
+              <button type="button" class="btn-icon edit-btn" data-layer-target="addr-manage-popup">
+                <span class="txt-blind">edit</span>
+              </button>
+              <button type="button" class="btn-icon delete-btn">
+                <span class="txt-blind">delete</span>
+              </button>
+              <button type="button" class="btn-icon ship-code-btn" data-layer-target="ship-regist-popup">
+                <span class="txt-blind">ship state</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+        <div class="icon-loading-box">
+          <div class="icon-loading"></div>
+        </div>
+      </div>
+      <!-- //데이터 있는 경우 -->
+      <!-- 데이터 없는 경우 -->
+      <!-- <div class="address-box__itemWrap nodata">
+            <p class="txt-p6">There is no registered content.</p>
+          </div> -->
+      <!-- //데이터 없는 경우 -->
+    </article>
+    <article class="role-permission-box">
+      <div class="role-permission__titWrap">
+        <div class="role-permission__tit">
+          <p class="txt-h6">Role & Permission</p>
+        </div>
+      </div>
+      <div class="about-role">
+        <p class="category txt-p5 txt-fw-b">Role</p>
+        <p class="txt-p5 txt-fw-b">Sales</p>
+      </div>
+      <div class="about-permission">
+        <p class="category txt-p5 txt-fw-b">Permission</p>
+        <div class="role-box__table">
+          <table class="basic-table">
+            <colgroup>
+              <col width="27.298%" />
+              <col width="62.952%" />
+              <col width="9.749%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" colspan="2">Menu</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">Product</td>
+                <td>
+                  <!-- 2024-12-01 img ==> icon 교체 -->
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Library</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Tools</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Support</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Project</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Project Order</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Buy Online</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">Order List</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">User Management</td>
+                <td>
+                  <i class="icon-block icon-role-uncheck">
+                    <span class="txt-blind">role setting unchecked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td rowspan="3">Proposal Setting</td>
+                <td>Template</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td>Offering</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+              <tr>
+                <td>Margin</td>
+                <td>
+                  <i class="icon-block icon-role-check">
+                    <span class="txt-blind">role setting checked</span>
+                  </i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+    <div class="popup-wrap addr-manage-popup" id="addr-manage-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4 popup__tit">Address Management</p>
+        </div>
+        <div class="popup__container">
+          <div class="field-box addr-field-box">
+            <label class="txt-label" for="addr-name-input">Address Name</label>
+            <div class="input-box half-input-box">
+              <input type="text" class="input-box__input" id="addr-name-input" placeholder="Type an address name" maxlength="1000" />
+            </div>
+          </div>
+          <div class="field-box-wrap">
+            <div class="field-box">
+              <label class="txt-label txt-req" for="country-input">Country</label>
+              <div class="input-box">
+                <input type="text" class="input-box__input" id="country-input" placeholder="Type a country" maxlength="1000" disabled />
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label" for="region-input">Region</label>
+              <div class="input-box">
+                <input type="text" class="input-box__input" id="region-input" placeholder="Type a region" maxlength="1000" />
+              </div>
+            </div>
+          </div>
+          <div class="field-box-wrap">
+            <div class="field-box city-box">
+              <label class="txt-label">City</label>
+              <div class="input-wrap">
+                <div class="combo-box">
+                  <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                    <span class="txt-placeholder">Select a city</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <div class="field-box search-box">
+                      <label class="txt-label txt-blind" for="city-search">city search</label>
+                      <div class="input-box input-search">
+                        <input type="search" class="input-box__input" id="city-search" placeholder="Search" maxlength="1000" />
+                        <button type="button" class="btn-icon icon-search-delete">
+                          <span class="txt-blind">삭제</span>
+                        </button>
+                        <button type="button" class="btn-icon icon-search">
+                          <span class="txt-blind">검색</span>
+                        </button>
+                      </div>
+                    </div>
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">ADANA</li>
+                      <li role="menuitem">ADIYAMAN</li>
+                      <li role="menuitem">AFYONKARAHISAR</li>
+                      <li role="menuitem">ADIYAMAN</li>
+                      <li role="menuitem">AFYONKARAHISAR</li>
+                      <li role="menuitem">ADIYAMAN</li>
+                      <li role="menuitem">AFYONKARAHISAR</li>
+                      <!-- [F] select 값이 others 인 경우 .others 클래스 추가 필요 -->
+                      <li role="menuitem" class="others">Others</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="input-box other-input-box">
+                  <input type="text" class="input-box__input" id="other-city-input" placeholder="Select a city" maxlength="1000" />
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label" for="district-input">District</label>
+              <div class="input-box">
+                <input type="text" class="input-box__input" id="district-input" placeholder="Type a district" maxlength="1000" />
+              </div>
+            </div>
+          </div>
+          <div class="field-box-wrap">
+            <div class="field-box">
+              <label class="txt-label" for="addr-line-input">Address Line</label>
+              <div class="input-box">
+                <input type="text" class="input-box__input" id="addr-line-input" placeholder="Type the address line" maxlength="1000" />
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label" for="addr-line2-input">Address Line 2</label>
+              <div class="input-box">
+                <input type="text" class="input-box__input" id="addr-line2-input" placeholder="Type the address line 2" maxlength="1000" />
+              </div>
+            </div>
+          </div>
+          <div class="field-box">
+            <label class="txt-label" for="postal-code-input">Postal Code</label>
+            <div class="input-box half-input-box">
+              <input type="text" class="input-box__input" id="postal-code-input" placeholder="Type a postal code" maxlength="5" />
+            </div>
+          </div>
+          <div class="contact-info-wrap">
+            <p class="txt-h7 contact-info__tit">
+              Contract Info &#40;Optional&#41;
+            </p>
+            <div class="field-box-wrap optional-radio-wrap">
+              <label class="btn-radio">
+                <input type="radio" class="btn-radio__input" name="company-info" value="input" />
+                <span class="btn-radio__icon"></span>
+                <span class="btn-radio__txt">Input</span>
+              </label>
+              <label class="btn-radio">
+                <input type="radio" class="btn-radio__input" name="company-info" value="not-input" checked />
+                <span class="btn-radio__icon"></span>
+                <span class="btn-radio__txt">Not Input</span>
+              </label>
+            </div>
+            <div class="comp-info-cont">
+              <div class="field-box-wrap">
+                <p class="comp-name txt-req txt-p4 txt-fw-b">
+                  Company Name
+                </p>
+                <div class="required-wrap">
+                  <div class="search-cont">
+                    <!-- [F] company search 조회시, 노출되는 영역 -->
+                    <p class="name txt-p4">Concentrix</p>
+                    <button type="button" class="btn-block md" data-layer-target="company-search-popup">
+                      <span class="btn-block__txt">Search</span>
+                    </button>
+                  </div>
+                  <p class="txt-error">This field is required.</p>
+                </div>
+              </div>
+              <div class="field-list">
+                <div class="field-box">
+                  <label class="txt-label txt-req" for="first-name-input">First Name</label>
+                  <div class="required-wrap">
+                    <div class="input-box box-type">
+                      <input type="text" class="input-box__input" id="first-name-input" placeholder="Type a first name" />
+                    </div>
+                    <p class="txt-error">This field is required</p>
+                  </div>
+                </div>
+                <div class="field-box">
+                  <label class="txt-label txt-req" for="last-name-input">Last Name</label>
+                  <div class="required-wrap">
+                    <div class="input-box box-type">
+                      <input type="text" class="input-box__input" id="last-name-input" placeholder="Type a last name" />
+                    </div>
+                    <p class="txt-error">This field is required</p>
+                  </div>
+                </div>
+                <div class="field-box">
+                  <label class="txt-label txt-req" for="email-input">E-Mail</label>
+                  <div class="required-wrap">
+                    <div class="input-box box-type">
+                      <input type="text" class="input-box__input" id="email-input" placeholder="Type an E-mail" maxlength="1000" disabled />
+                    </div>
+                    <p class="txt-error">This field is required</p>
+                  </div>
+                </div>
+                <div class="field-box">
+                  <label class="txt-label" for="phone-num-input">Phone Number</label>
+                  <div class="input-box box-type">
+                    <input type="text" class="input-box__input" id="phone-num-input" placeholder="Type a phone number" />
+                  </div>
+                </div>
+              </div>
+              <div class="field-box agree-box">
+                <p class="txt-p6">
+                  I agree to the consent form for the provision of personal
+                  information to third parties. &#40;Required&#41;
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <button type="button" class="btn-block type2 lg">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- company search popup -->
+    <div class="popup-wrap company-search-popup" id="company-search-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="search-title txt-h4 active">Company Search</p>
+          <p class="info-title txt-h4">Company Information</p>
+        </div>
+        <div class="popup__container">
+          <div class="comp-cont-inner">
+            <article class="search-area">
+              <div class="field-box">
+                <label class="txt-label txt-p6 txt-req">
+                  Business Location
+                </label>
+                <div class="combo-box box-type">
+                  <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" aria-required="true">
+                    <span class="txt-placeholder">Country</span>
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem">옵션옵션옵션옵션 1</li>
+                      <li role="menuitem">옵션 2</li>
+                      <li role="menuitem">옵션 3</li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="txt-error">This field is required</p>
+              </div>
+              <div class="field-box">
+                <label class="txt-label txt-p6 txt-req" for="comp-name-input">
+                  Company Name
+                </label>
+                <div class="input-box input-search box-type">
+                  <input type="search" class="input-box__input" id="comp-name-input" placeholder="Type a company name" required />
+                  <button type="button" class="btn-icon icon-search-delete" style="display: none">
+                    <span class="txt-blind">delete</span>
+                  </button>
+                </div>
+                <p class="txt-error">This field is required</p>
+              </div>
+              <div class="btn-wrap">
+                <button type="button" class="btn-block type2">
+                  <span class="btn-block__txt">Search</span>
+                </button>
+              </div>
+            </article>
+            <article class="search-result">
+              <div class="result__num-btn">
+                <p class="txt-fw-b txt-p6">
+                  <span class="txt-point1">10</span> Results
+                </p>
+              </div>
+              <div class="my-result__wrap">
+                <ul class="result-list__wrap">
+                  <li class="list__head">
+                    <ul>
+                      <li class="comp-name txt-p6 txt-fw-b">
+                        Company Name
+                      </li>
+                      <li class="location txt-p6 txt-fw-b">
+                        Business Location
+                      </li>
+                      <li class="business-num txt-p6 txt-fw-b">
+                        Business No.1
+                      </li>
+                      <li class="city txt-p6 txt-fw-b">City</li>
+                      <li class="district txt-p6 txt-fw-b">District</li>
+                      <li class="addr-line txt-p6 txt-fw-b">
+                        Address Line
+                      </li>
+                      <li class="postal-code txt-p6 txt-fw-b">
+                        Postal Code
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="list__el-box">
+                    <ul class="list-data">
+                      <!-- [F] pc일때 보이는 영역 -->
+                      <li class="list__el pc-display" aria-disabled="true">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <!-- [F] disabled시 disabled 추가 -->
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" disabled />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <li class="business-num txt-p6">1234567890</li>
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                        </ul>
+                      </li>
+                      <li class="list__el pc-display">
+                        <ul>
+                          <li class="comp-check">
+                            <label class="btn-radio">
+                              <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                              <span class="btn-radio__icon"></span>
+                            </label>
+                          </li>
+                          <li class="comp-name txt-p6">Samsung</li>
+                          <li class="location txt-p6">Türkiye</li>
+                          <li class="business-num txt-p6">1234567890</li>
+                          <li class="city txt-p6">Ankara</li>
+                          <li class="district txt-p6">Çankaya</li>
+                          <li class="addr-line txt-p6">
+                            Atatürk Bulvarı No: 123
+                          </li>
+                          <li class="postal-code txt-p6">06680</li>
+                        </ul>
+                      </li>
+
+                      <!-- [F] mo일때 보이는 영역 -->
+                      <!-- [F] disabled시 [aria-disabled="true"] -->
+                      <li class="list__el mo-display" aria-disabled="true">
+                        <div class="comp-check">
+                          <label class="btn-radio">
+                            <!-- [F] disabled시 disabled 추가 -->
+                            <input type="radio" class="btn-radio__input" name="company-item" value="samsung" disabled />
+                            <span class="btn-radio__icon"></span>
+                          </label>
+                        </div>
+                        <div class="cont-wrap">
+                          <p class="comp-name txt-p6 txt-fw-b">Samsung</p>
+                          <div>
+                            <p class="comp-detail txt-p6">
+                              <span class="location">Türkiye</span>
+                              <span class="city">Ankara</span>
+                              <span class="district">Çankaya</span>
+                              <span class="business-num txt-p6">
+                                1234567890
+                              </span>
+                              <span class="addr-line">
+                                Atatürk Bulvarı No: 123
+                              </span>
+                              <span class="postal-code">06680</span>
+                              <br />
+                              <span class="license-no">
+                                Biz License No.1:1234567890
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list__el mo-display">
+                        <div class="comp-check">
+                          <label class="btn-radio">
+                            <input type="radio" class="btn-radio__input" name="company-item" value="samsung" />
+                            <span class="btn-radio__icon"></span>
+                          </label>
+                        </div>
+                        <div class="cont-wrap">
+                          <p class="comp-name txt-p6 txt-fw-b">Samsung</p>
+                          <div>
+                            <p class="comp-detail txt-p6">
+                              <span class="location">Türkiye</span>
+                              <span class="city">Ankara</span>
+                              <span class="district">Çankaya</span>
+                              <span class="business-num txt-p6">
+                                1234567890
+                              </span>
+                              <span class="addr-line">
+                                Atatürk Bulvarı No: 123
+                              </span>
+                              <span class="postal-code">06680</span>
+                              <br />
+                              <span class="license-no">
+                                Biz License No.1:1234567890
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <!-- [F] 검색 이전의 경우 -->
+                    <div class="list-nodata">
+                      <p class="txt-p6">Search for a company</p>
+                      <!-- <p class="txt-p6">No matching results found.</p> -->
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <div class="new-cont-wrap">
+            <div class="field-box">
+              <label class="txt-label txt-req" for="company-name-input">Company Name</label>
+              <div class="input-box half-input-box">
+                <input type="text" class="input-box__input" id="company-name-input" placeholder="Type a company name" maxlength="1000" required />
+              </div>
+              <p class="txt-error">This field is required.</p>
+            </div>
+            <p class="company-addr-tit txt-h7">Company Address</p>
+            <div class="field-box-wrap location-box-wrap">
+              <div class="field-box">
+                <label class="txt-label txt-req">Business Location</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="company-name-input" value="Turkey" maxlength="1000" required disabled />
+                </div>
+              </div>
+              <div class="field-box city-box">
+                <label class="txt-label">City</label>
+                <div class="input-wrap">
+                  <div class="combo-box">
+                    <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                      <span class="txt-placeholder">Select a city</span>
+                    </button>
+                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                      <div class="field-box search-box">
+                        <label class="txt-label txt-blind" for="city-search">city search</label>
+                        <div class="input-box input-search">
+                          <input type="search" class="input-box__input" id="city-search" placeholder="Search" maxlength="1000" />
+                          <button type="button" class="btn-icon icon-search-delete" style="display: none">
+                            <span class="txt-blind">삭제</span>
+                          </button>
+                          <button type="button" class="btn-icon icon-search">
+                            <span class="txt-blind">검색</span>
+                          </button>
+                        </div>
+                      </div>
+                      <ul class="combo-box__menu-list">
+                        <li role="menuitem">ADANA</li>
+                        <li role="menuitem">ADIYAMAN</li>
+                        <li role="menuitem">AFYONKARAHISAR</li>
+                        <li role="menuitem">ADIYAMAN</li>
+                        <li role="menuitem">AFYONKARAHISAR</li>
+                        <li role="menuitem">ADIYAMAN</li>
+                        <li role="menuitem">AFYONKARAHISAR</li>
+                        <!-- [F] select 값이 others 인 경우 .others 클래스 추가 -->
+                        <li role="menuitem" class="others">Others</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="input-box other-input-box">
+                    <input type="text" class="input-box__input" id="other-city-input" placeholder="Select a city" maxlength="1000" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field-box-wrap">
+              <div class="field-box">
+                <label class="txt-label" for="district-input">District</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="district-input" placeholder="Type a district" maxlength="1000" />
+                </div>
+              </div>
+              <div class="field-box">
+                <label class="txt-label" for="addr-line-input">Address Line</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="addr-line-input" placeholder="Type an address line" maxlength="1000" />
+                </div>
+              </div>
+            </div>
+            <div class="field-box-wrap">
+              <div class="field-box">
+                <label class="txt-label" for="postal-code-input">Postal Code</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="postal-code-input" placeholder="Type a postal code" maxlength="5" />
+                </div>
+              </div>
+              <div class="field-box">
+                <label class="txt-label" for="email-input">Business E-mail</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="email-input" placeholder="Type a business e-mail" maxlength="1000" />
+                </div>
+              </div>
+            </div>
+            <div class="field-box-wrap">
+              <div class="field-box">
+                <label class="txt-label" for="comp-phone-num-input">Company Phone Number</label>
+                <div class="input-box">
+                  <input type="text" class="input-box__input" id="comp-phone-num-input" placeholder="Type a company phone number" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <!-- 240808 popup__footer 내부 button 들에 클래스 추가 -->
+          <!-- 
+              240828 .select-btn, .new-btn disabled 속성 제거
+              추후 검색 데이터 유무에 따라 각 버튼 disabled 속성 추가 및 삭제 필요
+              (따라서 기존에 들어가 있던 속성 삭제 및 퍼블 js 기능 삭제하였습니다)
+          -->
+          <button type="button" class="btn-block type2 lg select-btn active" onclick="window.hvachubFunc.closePopup()">
+            <span class="btn-block__txt">Select</span>
+          </button>
+          <button type="button" class="btn-block type2 lg new-btn active">
+            <span class="btn-block__txt">New</span>
+          </button>
+          <button type="button" class="btn-block lg back-btn">
+            <span class="btn-block__txt">Back</span>
+          </button>
+          <button type="button" class="btn-block type2 lg save-btn" data-layer-target="company-new-submit">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ship to code registration alert -->
+    <div class="alert-wrap ship-regist-popup" id="ship-regist-popup">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-h7">New delivery address registration</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">
+            Are you sure you want to request the person in charge to
+            register the selected address as a new delivery destination?
+          </p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ship to code re-request alert -->
+    <div class="alert-wrap ship-request-popup" id="ship-request-popup">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <!-- <div class="alert__header">
+              <p class="txt-h7">Ship-To-Code Re-Request</p>
+            </div> -->
+        <div class="aler__container">
+          <p class="txt-p6">
+            The address has already been requested as a delivery
+            destination.
+          </p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block type2 md" onclick="window.hvachubFunc.closePopup('ship-request-popup')">
+            <span class="btn-block__txt">Confirm</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Re-register alert -->
+    <div class="alert-wrap re-regist-popup" id="re-regist-popup">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-h7">Re-register new delivery address</p>
+        </div>
+        <div class="aler__container">
+          <p class="txt-p6">
+            Are you sure you want to request the updated information as a
+            new delivery address?
+          </p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- company new submit -->
+    <div class="alert-wrap" id="company-new-submit">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="aler__container">
+          <p class="txt-p6">
+            Company information was submitted successfully. <br>
+            After review, it will be shown in company search window.
+          </p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/profile-management/clientlibs/js/main.js"></script>
+</body>
+
+</html>

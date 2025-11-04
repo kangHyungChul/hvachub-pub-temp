@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/create-inquiry/clientlibs/css/main.css">
+  <!-- <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css"> -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <button type="button" class="btn-block" data-layer-target="Select-Project">
+    <span class="btn-block__txt">Select Project</span>
+  </button>
+  <button type="button" class="btn-block" data-layer-target="submit">
+    <span class="btn-block__txt">submit</span>
+  </button>
+
+  <!-- Select-Project popup -->
+  <div class="popup-wrap Select-Project-popup" id="Select-Project">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Select-Project</p>
+      </div>
+      <div class="popup__container">   
+        <!-- 2025-05-16 추가 // -->
+        <p class="txt-p5">Please select the products.</p>
+
+        <!-- select_project__search //-->  
+        <div class="select_project__search">
+          <div class="field-box">
+            <label class="txt-label txt-blind">Created date</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Created</button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">Updated</li>
+                  <li role="menuitem" class="selected">Created</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="field-box">
+            <label class="txt-label txt-blind">period</label>
+            <input type="text" id="datepickerform" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+            <span class="txt-p4">~</span>
+            <input type="text" id="datepickerto" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+          </div>
+          <div class="field-box">
+            <label class="txt-label txt-blind">project name search</label>
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" placeholder="Project Name">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+              <!-- 모바일에만 사용 -->
+              <button type="button" class="btn-icon icon-search mo-search-btn"><span class="txt-blind">search</span></button>
+            </div>
+
+            <!-- PC에만 사용 -->
+            <button type="button" class="btn-block type2 md pc-search-btn">
+              <span class="btn-block__txt">Search</span>
+            </button>
+          </div>
+
+          <!-- 모바일용 열기/펼치기 버튼-->
+          <button class="btn-icon icon-mo-folded">
+            <span class="txt-blind">mobile search folded</span>
+          </button>
+        </div>
+        <!-- // select_project__search --> 
+
+        <!-- select-project-acc-area //-->
+        <div clas="select_project__acc">
+          
+          <div class="basic-list__top">
+            <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+          </div>
+
+          <!-- 데이터가 없을때 // -->
+          <div class="list-nodata">
+            <p class="txt-p5">No matching results found.</p>
+          </div>
+          <!-- // 데이터가 없을때 -->
+
+          <!-- accordion-box // -->
+          <div class="accordion-box sm active">
+            <div class="accordion__tit ">
+              <div class="left">
+                <p class="tit">Project Name</p>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">ailsOpenLabel</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+             <!-- 데이터가 없을때 // -->
+              <div class="list-nodata gray">
+                <p class="txt-p6">There is no registered content.</p>
+              </div>
+              <!-- // 데이터가 없을때 -->
+              
+              <div class="lr-list-data-area">
+                <ul class="list-data">
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block type2">
+                          <span class="btn-block__txt">Selected</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Select</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Select</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        
+            </div>
+          </div>
+          <!-- // accordion-box  -->
+
+          <!-- accordion-box // -->
+          <div class="accordion-box sm">
+            <div class="accordion__tit">
+              <div class="left">
+                <p class="tit">Project Name</p>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">ailsOpenLabel</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+             <!-- 데이터가 없을때 // -->
+              <div class="list-nodata gray">
+                <p class="txt-p6">There is no registered content.</p>
+              </div>
+              <!-- // 데이터가 없을때 -->
+              
+              <div class="lr-list-data-area">
+                <ul class="list-data">
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block type2">
+                          <span class="btn-block__txt">Selected</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Select</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Select</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        
+            </div>
+          </div>
+          <!-- // accordion-box  -->
+
+          <!-- accordion-box // -->
+          <div class="accordion-box sm">
+            <div class="accordion__tit">
+              <div class="left">
+                <p class="tit">Project Name</p>
+                <div class="txt-p6">
+                  <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                  <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                </div>
+              </div>
+              <button type="button" class="btn-icon icon-accordion">
+                <span class="txt-blind">ailsOpenLabel</span>
+              </button>
+            </div>
+            <div class="accordion_cont">
+             <!-- 데이터가 없을때 // -->
+              <div class="list-nodata gray">
+                <p class="txt-p6">There is no registered content.</p>
+              </div>
+              <!-- // 데이터가 없을때 -->
+              
+              <div class="lr-list-data-area">
+                <ul class="list-data">
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block type2">
+                          <span class="btn-block__txt">Selected</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Select</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="lr-line-item">
+                      <div class="left">
+                        <p class="tit">Quote Name</p>
+                        <div class="txt-p6">
+                          <p class="txt-line-slash"><strong>Created: </strong>YYYY-MM-DD</p>
+                          <p class="txt-line-slash"><strong>Updated: </strong>YYYY-MM-DD</p>
+                        </div>
+                      </div>
+                      <div class="right">
+                        <button type="button" class="btn-block">
+                          <span class="btn-block__txt">Select</span>
+                        </button>                        
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        
+            </div>
+          </div>
+          <!-- // accordion-box  -->
+        </div>
+        <!-- select-project-acc-area //-->  
+      </div>
+
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //Select-Project popup -->
+
+  <!-- submit alert -->
+  <div class="alert-wrap" id="submit">
+    <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="alert__header">
+        <p class="txt-p3 txt-fw-b">Submit</p>
+      </div>
+      <div class="aler__container">
+        <p class="txt-p6">Are you sure you want to submit it?</p>
+      </div>
+      <div class="alert__footer">
+        <button type="button" class="btn-block md">
+          <span class="btn-block__txt">No</span>
+        </button>
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Yes</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //compare close alert -->
+
+
+
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/create-inquiry/clientlibs/js/main.js"></script>
+</body>
+
+</html>

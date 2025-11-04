@@ -1,0 +1,37 @@
+.icon-column .box-wrap { max-width: 1392px; margin: 0 auto; display: flex; gap: 24px; flex-wrap: wrap; justify-content: flex-start; } 
+.icon-column .icon-column-box { width: calc((100% - 24px) / 2); max-width: 684px; min-height: 330px; border-radius: var(--border-base); background: #f3f3f3; padding: 24px 24px 32px; position: relative; } 
+.icon-column .box-wrap.col3 .icon-column-box { width: calc((100% - 48px) / 3); max-width: 448px; } 
+.icon-column .icon-column-box__title { line-height: 44px; margin-bottom: 16px; } 
+.icon-column .icon-column-box__desc { line-height: 27px; opacity: 0.6; margin-bottom: 32px; } 
+.icon-column .icon-column-box__icon { position: absolute; bottom: 24px; right: 24px; } 
+.icon-column .icon-col-swiper .swiper-button-wrap { display: none; } 
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .icon-column .box-wrap { width: 100%; gap: 1.667vw; margin: 0 1.667vw; } 
+ .icon-column .icon-column-box { width: calc((100% - 1.667vw) / 2); max-width: 47.5vw; min-height: 22.917vw; padding: 1.667vw 1.667vw 2.222vw; } 
+ .icon-column .mo-swiper .icon-column-box { gap: 0; } 
+ .icon-column .icon-column-box__title { line-height: 3.056vw; margin-bottom: 1.111vw; } 
+ .icon-column .icon-column-box__icon { bottom: 1.667vw; right: 1.667vw; width: 5vw; height: 5vw; } 
+ .icon-column .icon-column-box__desc { line-height: 1.875vw; margin-bottom: 2.222vw; } 
+ .icon-column .box-wrap.col3 .icon-column-box { width: calc((100% - 3.333vw) / 3); max-width: 31.111vw; } 
+ }
+
+@media only screen and (max-width: 768px){
+ .icon-column .icon-col-swiper { padding: 0 24px; } 
+ .icon-column .box-wrap { display: block; } 
+ .icon-column .icon-column-box,
+ .icon-column .box-wrap.col3 .icon-column-box { width: 100%; margin-bottom: 16px; max-width: unset; padding: 16px; min-height: 226px; } 
+ .icon-column .icon-column-box:last-of-type,
+ .icon-column .box-wrap.col3 .icon-column-box:last-of-type { margin-bottom: 0; } 
+ .icon-column .icon-column-box__title { font-size: 20px !important; line-height: 30px; margin-bottom: 8px; } 
+ .icon-column .icon-column-box__desc { font-size: 14px !important; line-height: 24px; margin-bottom: 0; } 
+ .icon-column .icon-column-box__icon { width: 48px; height: 48px; bottom: 16px; right: 16px; } 
+ .icon-column .btn-block { position: absolute; bottom: 64px; left: 16px; } 
+
+ .icon-column .mo-swiper { width: 100%; } 
+ .icon-column .mo-swiper .box-wrap { display: flex; flex-wrap: nowrap; gap: 0; } 
+ .icon-column .mo-swiper .swiper-button-wrap { width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; display: block; } 
+ .icon-column .mo-swiper .swiper-button-prev { left: 4px; } 
+ .icon-column .mo-swiper .swiper-button-next { right: 4px; } 
+ }

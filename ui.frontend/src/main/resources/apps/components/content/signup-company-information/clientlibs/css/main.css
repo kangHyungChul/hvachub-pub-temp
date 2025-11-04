@@ -1,0 +1,275 @@
+/* singup header 관련 */
+#company-information-container {
+  overflow-x:auto;
+  min-width:1440px; 
+  min-height:calc(100vh - 80px);
+}
+
+.compay-information-inner {
+  max-width:1022px;
+  width:100%;
+  padding:42px 0 100px;
+  margin:0 auto;
+}
+
+.compay-information-inner .tit-area {
+  text-align: center;
+}
+
+.step-box {
+  display:flex;
+  justify-content: center;
+}
+
+.status-num-box {
+  display:inline-flex; 
+}
+
+.status-num-box li {
+  position: relative;    
+  z-index:2;
+  margin-left:110px; 
+}
+
+.status-num-box li:before,
+.status-num-box li:after {
+  content: '';
+  position: absolute;
+  top:14px;  
+  z-index:1;
+  display: block;
+  height:3px;
+}  
+
+.status-num-box li .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status-num-box li .inner .number-box {
+  position: relative;
+  z-index:2;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+  width:32px;
+  height:32px;
+  border-radius: 50%;
+  border:2px solid #aaa;  
+  background-color:#fff;
+}
+
+.status-num-box li .inner .number-box .number {
+  font-size:12px;
+  font-weight:700;
+  color:#757575;  
+}
+.status-num-box li .inner .txt {
+  padding-top:8px;
+  color:#000;
+}
+
+.status-num-box li:before {  
+  left:0;
+  width:50%;  
+  background-color:#ddd;
+}
+.status-num-box li:after {
+  left:50%;
+  width:calc(50% + 111px);
+  background-color:#ddd;
+}
+
+.status-num-box li:first-child:before,
+.status-num-box li:last-child:after {
+  display:none;
+}
+
+/* active */
+.status-num-box li.active:first-child:after {
+  background-color: #ddd;
+}
+.status-num-box li.active .number-box {
+  border:4px solid #006bea;
+}
+.status-num-box li.active .number-box .number {
+  color:#006bea;  
+}
+
+.status-num-box li.active .txt {
+  font-weight:700;
+  color:#000;
+}
+
+.status-num-box li.active:before,
+.status-num-box li.active:after {
+  background-color: #68aeff;
+}
+
+/* prev active */
+.status-num-box li.active.prev:first-child:after {
+  background-color: #68aeff;
+}
+
+.status-num-box li.active.prev + li.active.prev:before,
+.status-num-box li.active.prev + li.active.prev:after {
+  background-color: #68aeff;
+}
+
+.status-num-box li.active.prev .number-box {
+  background-color: #006bea;  
+}
+
+.status-num-box li.active.prev .number-box .number {
+  color:#fff;
+}
+
+.status-num-box li.active.prev + li:after {
+  background-color:#ddd;
+}
+
+/* field-box-wrap  */
+.field-box-wrap {
+  margin-top:44px;
+}
+
+.field-head {
+  display: flex;  
+  width:100%;  
+}
+.field-head .tit {
+  position: relative;
+  display:flex;  
+  justify-content: center;
+  align-items: flex-start;
+  flex:1;
+  height:56px;
+  border-bottom:1px solid #ddd;
+  font-size:22px;
+  font-weight: 700;
+}
+
+.field-head .tit.active:after {
+  content:'';
+  position: absolute;
+  left:0;
+  bottom:-1px;
+  display: block;
+  width:100%;
+  height:3px;
+  background-color: #000;
+}
+
+.form__wrap .field-row-item {  
+  display:flex; 
+  width:100%;
+  margin-top:24px;
+}
+
+.field-row-item .field-box.col2 {
+  width:calc(50% - 12px);
+}
+
+.field-row-item .field-box.col2:first-child {
+  margin-right:12px;
+}
+
+.field-row-item .field-box.col2:nth-child(2){
+  margin-left:12px;
+} 
+
+.compay-information-inner .page-bottom-btn {  
+  display: flex;  
+  justify-content: space-between;
+  margin-top:48px;
+}
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen  and (max-width: 1440px) {
+
+  #company-information-container {
+    min-width: 100%;
+  }
+
+  .compay-information-inner {
+    padding:24px 0 0;
+  }
+
+  .compay-information-inner .tit-area {
+    padding:0 24px;
+    text-align: left;
+  }
+
+  .compay-information-inner .tit-area .txt-h3 {
+    font-size: 24px !important;
+    line-height: 36px;
+  }
+
+  .status-num-box li {
+    margin-left:25px;
+  }
+  .status-num-box li:first-child {
+    margin-left:0px;
+  }
+
+  .status-num-box li:after {
+    width:calc(50% + 25px);
+  }
+
+  .field-box-wrap {
+    margin-top:24px;
+  }
+
+  .field-head .tit {
+    height:40px;
+    font-size:14px;
+    align-items: center;
+  }
+
+  .compay-information-inner .form__wrap {
+    padding:0 24px;
+  }
+
+  .compay-information-inner .form__wrap .field-row-item {
+    flex-direction: column;
+    gap:24px;
+  }
+
+  .compay-information-inner  .field-row-item .field-box.col2  { 
+    width:100%;
+    margin-right: 0;
+    margin-left:0;
+  }
+
+
+  .compay-information-inner .page-bottom-btn {
+    justify-content: center;
+    margin-top:24px;
+    padding:16px 24px;
+    border-top:1px solid #ccc;    
+  }
+  .compay-information-inner .page-bottom-btn .btn-block {
+    flex:1;
+  }
+  
+
+/* [E]Tablet */ } 
+
+
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+
+  .status-num-box .txt-p5{
+    font-size:10px !important;
+  }
+  .status-num-box .txt-p5 .pc-txt {
+    display:block !important;
+  }
+
+  
+/* [E]Mobile */ } 

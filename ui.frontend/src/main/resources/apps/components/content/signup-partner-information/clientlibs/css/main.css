@@ -1,0 +1,141 @@
+/* singup header 관련 */
+#partner-information-container {
+  overflow-x:auto;
+  min-width:1440px; 
+  min-height:calc(100vh - 80px);
+}
+
+.partner-information-inner {
+  max-width:1022px;
+  width:100%;
+  padding:42px 0 100px;
+  margin:0 auto;
+}
+
+.partner-information-inner .tit-area {
+  text-align: center;
+}
+
+/* field-box-wrap  */
+.field-box-wrap {
+  margin-top:44px;
+}
+
+.field-box-wrap .field-title {
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000;
+}
+
+.form__wrap .field-row-item {  
+  display:flex; 
+  width:100%;
+  margin-top:24px;
+}
+
+.field-row-item .field-box.col2 {
+  width:calc(50% - 12px);
+}
+
+.field-row-item .field-box.col2:first-child {
+  margin-right:12px;
+}
+
+.field-row-item .field-box.col2:nth-child(2){
+  margin-left:12px;
+} 
+
+.field-row-item .field-box .multi-field {
+  display: flex;
+  gap: 8px;
+}
+.field-row-item .field-box .phone-code {
+  flex: 0 1 45%;
+  min-width: unset;
+}
+.field-row-item .field-box .phone-number {
+  flex: 1;
+  min-width: unset;
+}
+
+.partner-information-inner .page-bottom-btn {  
+  display: flex;  
+  justify-content: space-between;
+  margin-top:48px;
+}
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen  and (max-width: 1440px) {
+
+  #partner-information-container {
+    min-width: 100%;
+  }
+
+  .partner-information-inner {
+    padding:24px 0 0;
+  }
+
+  .partner-information-inner .tit-area {
+    padding:0 24px;
+    text-align: left;
+  }
+
+  .partner-information-inner .tit-area .txt-h3 {
+    font-size: 24px !important;
+    line-height: 36px;
+  }
+
+  .field-box-wrap {
+    margin-top: 48px;
+  }
+
+
+  .field-box-wrap .field-title {
+    margin-inline: 24px;
+  }
+
+  .partner-information-inner .form__wrap {
+    padding:0 24px;
+  }
+
+  .partner-information-inner .form__wrap .field-row-item {
+    flex-direction: column;
+    gap:24px;
+  }
+
+  .partner-information-inner  .field-row-item .field-box.col2  { 
+    width:100%;
+    margin-right: 0;
+    margin-left:0;
+  }
+
+
+  .partner-information-inner .page-bottom-btn {
+    justify-content: center;
+    margin-top:24px;
+    padding:16px 24px;
+    border-top:1px solid #ccc;    
+  }
+  .partner-information-inner .page-bottom-btn .btn-block {
+    flex:1;
+  }
+  
+
+/* [E]Tablet */ } 
+
+
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+
+  .status-num-box .txt-p5{
+    font-size:10px !important;
+  }
+  .status-num-box .txt-p5 .pc-txt {
+    display:block !important;
+  }
+
+  
+/* [E]Mobile */ } 

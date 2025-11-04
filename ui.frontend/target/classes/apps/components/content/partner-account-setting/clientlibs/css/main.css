@@ -1,0 +1,258 @@
+#container { min-height: calc(100vh - 80px); background: #f7f7f7; } 
+#container:not(:has(.container)) { min-height: 1000px; } 
+.partner-acc-set .partner-acc-set__inner { max-width: 1440px; width: 100%; height: auto; margin: 0 auto; padding: 24px 24px 80px; position: absolute; left: -99999%; visibility: hidden; opacity: 0; } 
+.partner-acc-set .partner-acc-set__inner.is-show { position: static; opacity: 1; visibility: visible; } 
+.partner-acc-set .partner-acc-set__inner .tit-area { overflow: initial; margin-bottom: 24px; } 
+.partner-acc-set .partner-acc-set__inner .tit-area .pas-desc { margin-top: 8px; } 
+.partner-acc-set .partner-acc-set__inner .tit-area .field-box { display: flex; justify-content: flex-end; width: 100%; margin-top: 24px; } 
+.partner-acc-set .partner-acc-set__inner .tit-area .field-box .combo-box { width: 360px; } 
+.partner-acc-set .partner-acc-set__inner .tit-area:has(.field-box) { margin-bottom: 24px; } 
+
+/* role setting */
+.pas-result-wrap .role-list { display: flex; border-top: 2px solid #000000; } 
+.pas-result-wrap .role-list .list__top,
+.pas-result-wrap .role-list .list__item,
+.pas-result-wrap .role-list .menu-delete { min-height: 56px; width: 100%; display: flex; word-wrap: break-word; word-break: break-all; overflow-wrap: anywhere; padding: 4px 12px; } 
+.pas-result-wrap .role-list .list__top,
+.pas-result-wrap .role-list .menu-delete { align-items: center; justify-content: center; background: #f2f2f2; } 
+.pas-result-wrap .role-list .list__top { flex-direction: column; border-bottom: 1px solid #000000; } 
+.pas-result-wrap .role-list .list__top .txt-p5 { line-height: 1.2; } 
+.pas-result-wrap .role-list .list__item { align-items: center; border-bottom: 1px solid #dadada; } 
+.pas-result-wrap .role-list .menu-delete { border-bottom: 1px solid #aaaaaa; } 
+.pas-result-wrap .role-list .delete-btn { width: 20px; height: 20px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-search-delete.svg); } 
+.pas-result-wrap .list-menu { position: relative; flex: none; min-width: 190px; max-width: 220px; } 
+.pas-result-wrap .list-menu > li { border-right: 2px solid #000000; } 
+.pas-result-wrap .list-menu .list__top { align-items: center; text-align: center; } 
+.pas-result-wrap .list-menu .list__item-box { display: flex; width: 100%; } 
+.pas-result-wrap .list-menu .list__item-box .list__menu { flex: auto; display: flex; align-items: center; justify-content: center; min-width: 70px; max-width: 80px; padding-inline: 12px; border-right: 1px solid #dadada; border-bottom: 1px solid #dadada; overflow-wrap: anywhere; word-break: break-all; } 
+.pas-result-wrap .list-menu .list__item-box .list__item-inner { flex: auto; min-width: 120px; max-width: 140px; } 
+.pas-result-wrap .list-menu .list__item-box .list__item { width: 100%; padding-block: 16px; } 
+.pas-result-wrap .list-check { position: relative; flex: auto; display: flex; justify-content: flex-start; overflow-x: scroll; padding-bottom: 2px; } 
+.pas-result-wrap .list-check__role { width: 160px; text-align: center; padding: 0; border-bottom: unset; flex: none; } 
+.pas-result-wrap .list-check__role .list__top .field-box,
+.pas-result-wrap .list-check__role .list__top .input-box,
+.pas-result-wrap .list-check__role .list__top .combo-box { width: 100%; min-width: auto; } 
+.pas-result-wrap .list-check__role .list__top .input-box__input { text-align: center; } 
+.pas-result-wrap .list-check__role .list__item { justify-content: center; } 
+.pas-result-wrap .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__icon { border-radius: 4px; } 
+.pas-result-wrap .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__input:checked ~ .btn-checkbox__icon { background: #000000; border-color: #000000; } 
+.pas-result-wrap .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__input:disabled ~ .btn-checkbox__icon { background: #d5d5d5; border-color: #d5d5d5; } 
+.pas-result-wrap .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__input:checked:disabled ~ .btn-checkbox__icon { background: #cccccc; border-color: #cccccc; } 
+.pas-result-wrap .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__input:disabled ~ .btn-checkbox__icon::after { opacity: 0.6; } 
+
+/* default, sub-admin */
+.pas-result-wrap .list-check__role.default,
+.pas-result-wrap .list-check__role.sub-admin { width: 136px; } 
+
+/* blank */
+.pas-result-wrap .list-check__role.blank,
+.pas-result-wrap .list-check__role.blank .list__top,
+.pas-result-wrap .list-check__role.blank .list__item,
+.pas-result-wrap .list-check__role.blank .menu-delete { width: auto; min-width: auto; max-width: auto; padding: 0; } 
+.pas-result-wrap .list-check__role.blank,
+.pas-result-wrap .list-check__role.blank .list__top,
+.pas-result-wrap .list-check__role.blank .list__item-box,
+.pas-result-wrap .list-check__role.blank .menu-delete { background-color: #eee; } 
+.pas-result-wrap .list-check__role.blank { flex: auto; } 
+
+/* page button */
+.partner-acc-set .tooltip-btn-box > .txt-p5 { display: inline-block; vertical-align: middle; } 
+.partner-acc-set .tooltip-btn-box .icon-tootip { width: 16px; height: 16px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-tooltip-on.svg); vertical-align: middle; } 
+.partner-acc-set .error-msg-wrap { margin-top: 12px; } 
+.partner-acc-set .error-msg-wrap .txt-error + .txt-error { margin-top: 4px; } 
+.partner-acc-set .setting-btn-wrap { width: fit-content; margin-left: auto; } 
+
+/* permission setting */
+.setting-permission .pas-result-wrap .role-list .list__top { min-height: 112px; padding: 0; } 
+.setting-permission .pas-result-wrap .role-list .list__top .list__top-row { display: flex; align-items: center; justify-content: center; width: 100%; padding: 4px 12px; } 
+.setting-permission .pas-result-wrap .role-list .list__top .list__top-row:first-of-type { flex: 0 0 56px; } 
+.setting-permission .pas-result-wrap .role-list .list__top .list__top-row:last-of-type { flex: 1 1 55px; } 
+.setting-permission .pas-result-wrap .list-check__role .list__top .txt-p5 { max-width: calc(100% - 24px); margin-right: 4px; } 
+.setting-permission .pas-result-wrap .list-check__role .list__item .txt-checked { position: relative; display: inline-block; width: 16px; height: 16px; background: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-checked-bk.svg) no-repeat center center; background-size: 100%; } 
+.partner-acc-set .setting-permission .setting-btn-wrap { margin-top: 16px; } 
+
+/* new role popup */
+.new-role-popup .popup-wrap__inner .popup__header { padding-bottom: 24px; } 
+.new-role-popup .basic-list__result .list-row { padding: 0; } 
+.new-role-popup .basic-list__result .el__menu,
+.new-role-popup .basic-list__result .el__check { display: flex; align-items: center; justify-content: center; min-height: 56px; padding: 8px 12px; } 
+.new-role-popup .basic-list__result .el__menu { flex: auto; border-right: 2px solid #000000; overflow-wrap: anywhere; word-break: break-all; } 
+.new-role-popup .basic-list__result .el__check { flex: none; width: 340px; } 
+.new-role-popup .basic-list__result .list-head { align-items: initial; background: #f2f2f2; padding: 0; border-bottom-width: 2px; } 
+.new-role-popup .basic-list__result .list-head .el__check .field-box,
+.new-role-popup .basic-list__result .list-head .el__check .input-box { width: 100%; min-width: auto; } 
+.new-role-popup .basic-list__result .list-head .el__check .input-box .input-box__input { text-align: center; } 
+.new-role-popup .basic-list__result .list-body .list-row { align-items: initial; border-bottom: 0; } 
+.new-role-popup .basic-list__result .list-body .el__menu { justify-content: initial; text-align: left; padding-right: 2px; border-bottom: 1px solid #dadada; } 
+.new-role-popup .basic-list__result .list-body .el__check { border-bottom: 1px solid #dadada; } 
+.new-role-popup .basic-list__result .list-body .list-row-box { display: flex; } 
+.new-role-popup .basic-list__result .list-body .list-row-box .list-col { flex: none; display: flex; align-items: center; justify-content: center; border-right: 1px solid #dadada; min-width: 64px; max-width: 90px; padding-inline: 12px; border-bottom: 1px solid #dadada; overflow-wrap: anywhere; word-break: break-all; } 
+.new-role-popup .basic-list__result .list-body .list-row-box .list-row__inner { flex: auto; } 
+.new-role-popup .basic-list__result .list-body > .list-row .btn-checkbox .btn-checkbox__icon { border-radius: 4px; } 
+.new-role-popup .basic-list__result .list-body > .list-row .btn-checkbox .btn-checkbox__input:checked ~ .btn-checkbox__icon { background: #000000; border-color: #000000; } 
+.new-role-popup .basic-list__result .list-body > .list-row .btn-checkbox .btn-checkbox__input:disabled ~ .btn-checkbox__icon { background: #d5d5d5; border-color: #d5d5d5; } 
+.new-role-popup .basic-list__result .list-body > .list-row .btn-checkbox .btn-checkbox__input:disabled ~ .btn-checkbox__icon::after { opacity: 0.8; } 
+.new-role-popup .basic-list__result + .txt-error-wrap { margin-block: 8px 24px; } 
+
+/* delete alert */
+.delete-alert .txt-caption { font-size: 12px; color: var(--secondary-color4); text-align: center; margin-top: 16px; } 
+
+/* menu description */
+.menu-desc-popup .menu-info-box { display: flex; align-items: center; gap: 12px; background: #f7f7f7; border-radius: var(--border-base); padding: 16px; margin-bottom: 16px; } 
+.menu-desc-popup .menu-info-box > .txt-p6 { flex: none; text-align: center; } 
+.menu-desc-popup .menu-info-box .menu-ds-info { flex: auto; } 
+.menu-desc-popup .basic-list__result { margin-bottom: 8px; } 
+.menu-desc-popup .basic-list__result .el__menu,
+.menu-desc-popup .basic-list__result .el__info { overflow-wrap: anywhere; word-break: break-all; } 
+.menu-desc-popup .basic-list__result .el__menu { flex: none; min-width: 150px; max-width: 180px; } 
+.menu-desc-popup .basic-list__result .el__menu > p { display: inline-block; padding-inline: 12px; } 
+.menu-desc-popup .basic-list__result .el__info { flex: auto; padding-inline: 12px; } 
+.menu-desc-popup .list-body .list-row { text-align: left; } 
+.menu-desc-popup .list-body .el__info .txt-p6 span { display: block; position: relative; padding-left: 10px; } 
+.menu-desc-popup .list-body .el__info .txt-p6 span::before { content: "-"; position: absolute; left: 0; top: 0px; } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ #container { min-height: calc(100dvh - 5.556vw); } 
+ #container:not(:has(.container)) { min-height: 69.444vw; } 
+ .partner-acc-set .partner-acc-set__inner { padding: 1.667vw 1.667vw 5.556vw; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area { margin-bottom: 1.667vw; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area .pas-desc { margin-top: 0.556vw; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area .field-box { margin-top: 1.667vw; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area .field-box .combo-box { width: 25vw; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area:has(.field-box) { margin-bottom: 1.667vw; } 
+
+ /* role setting */
+ .pas-result-wrap .role-list { border-top-width: 0.139vw; } 
+ .pas-result-wrap .role-list .list__top,
+ .pas-result-wrap .role-list .list__item,
+ .pas-result-wrap .role-list .menu-delete { min-height: 3.889vw; padding: 0.278vw 0.833vw; } 
+ .pas-result-wrap .list-menu { min-width: 13.194vw; max-width: 15.278vw; } 
+ .pas-result-wrap .list-menu > li { border-right-width: 0.139vw; } 
+ .pas-result-wrap .list-menu .list__item-box .list__menu { min-width: 4.861vw; max-width: 5.556vw; padding-inline: 0.833vw; } 
+ .pas-result-wrap .list-menu .list__item-box .list__item-inner { min-width: 8.333vw; max-width: 9.722vw; } 
+ .pas-result-wrap .list-menu .list__item-box .list__item { padding-block: 1.111vw; } 
+ .pas-result-wrap .list-check { padding-bottom: 0.139vw; } 
+ .pas-result-wrap .list-check__role { width: 11.111vw; } 
+ .pas-result-wrap .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__icon { border-radius: 0.278vw; } 
+
+ /* default, sub-admin */
+ .pas-result-wrap .list-check__role.default,
+ .pas-result-wrap .list-check__role.sub-admin { width: 9.444vw; } 
+
+ /* page button */
+ .partner-acc-set .tooltip-btn-box .icon-tootip { width: 1.111vw; height: 1.111vw; } 
+ .partner-acc-set .error-msg-wrap { margin-top: 0.833vw; } 
+ .partner-acc-set .error-msg-wrap .txt-error + .txt-error { margin-top: 0.278vw; } 
+
+ /* permission setting */
+ .setting-permission .pas-result-wrap .role-list .list__top { min-height: 7.778vw; } 
+ .setting-permission .pas-result-wrap .role-list .list__top .list__top-row { padding: 0.278vw 0.833vw; } 
+ .setting-permission .pas-result-wrap .role-list .list__top .list__top-row:first-of-type { flex: 0 0 3.889vw; } 
+ .setting-permission .pas-result-wrap .role-list .list__top .list__top-row:last-of-type { flex: 1 1 3.819vw; } 
+ .setting-permission .pas-result-wrap .list-check__role .list__top .txt-p5 { max-width: calc(100% - 1.667vw); margin-right: 0.278vw; } 
+ .setting-permission .pas-result-wrap .list-check__role .list__item .txt-checked { width: 1.111vw; height: 1.111vw; } 
+ .partner-acc-set .setting-permission .setting-btn-wrap { margin-top: 1.111vw; } 
+
+ /* new role popup */
+ .new-role-popup .popup-wrap__inner .popup__header { padding-bottom: 1.667vw; } 
+ .new-role-popup .basic-list__result .el__menu,
+ .new-role-popup .basic-list__result .el__check { min-height: 3.889vw; padding: 0.556vw 0.833vw; } 
+ .new-role-popup .basic-list__result .el__menu { border-right-width: 0.139vw; } 
+ .new-role-popup .basic-list__result .el__check { width: 23.611vw; } 
+ .new-role-popup .basic-list__result .list-head { border-bottom-width: 0.139vw; } 
+ .new-role-popup .basic-list__result .list-body .el__menu { padding-right: 0.139vw; } 
+ .new-role-popup .basic-list__result .list-body .list-row-box .list-col { min-width: 4.444vw; max-width: 6.25vw; padding-inline: 0.833vw; } 
+ .new-role-popup .basic-list__result .list-body > .list-row .btn-checkbox .btn-checkbox__icon { border-radius: 0.278vw; } 
+ .new-role-popup .basic-list__result + .txt-error-wrap { margin-block: 0.556vw 1.667vw; } 
+
+ /* delete alert */
+ .delete-alert .txt-caption { font-size: 0.833vw; margin-top: 1.111vw; } 
+
+ /* menu description */
+ .menu-desc-popup .menu-info-box { gap: 0.556vw; padding: 1.111vw; margin-bottom: 1.111vw; } 
+ .menu-desc-popup .basic-list__result { margin-bottom: 0.556vw; } 
+ .menu-desc-popup .basic-list__result .el__menu { min-width: 10.417vw; max-width: 12.5vw; } 
+ .menu-desc-popup .basic-list__result .el__menu > p { padding-inline: 0.833vw; } 
+ .menu-desc-popup .basic-list__result .el__info { padding-inline: 0.833vw; } 
+ .menu-desc-popup .list-body .el__info .txt-p6 span { padding-left: 0.694vw; } 
+
+ /* [E]Tablet */}
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ #container { min-height: calc(100dvh - 56px); background: #ffffff; } 
+ #container:not(:has(.container)) { min-height: auto; } 
+ .partner-acc-set .partner-acc-set__inner { padding: 0; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area { background: #f7f7f7; padding:24px; margin-bottom: 0; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area .txt-h4 { font-size: 24px !important; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area .pas-desc { margin-top: 8x; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area .pas-desc .txt-p5 { font-size: 14px !important; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area .field-box { margin-top: 16px; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area .field-box .combo-box { width: 100%; min-width: 100%; } 
+ .partner-acc-set .partner-acc-set__inner .tit-area:has(.field-box) { margin-bottom: 0; } 
+
+ /* role setting */
+ .pas-result-wrap .basic-list__top .btn-block { height: 32px; padding-inline: 16px; } 
+ .pas-result-wrap .basic-list__top .btn-block__txt { font-size: 12px; } 
+ .pas-result-wrap .role-list .txt-p5 { font-size: 12px !important; } 
+ .pas-result-wrap .role-list .list__top { min-height: 48px; padding: 7px 4px 8px; } 
+ .pas-result-wrap .role-list .list__item { min-height: 40px; padding: 8px; } 
+ .pas-result-wrap .role-list .menu-delete { min-height: 40px; padding: 8px 4px; } 
+ .pas-result-wrap .list-menu { min-width: 133px; max-width: 170px; } 
+ .pas-result-wrap .list-menu .list__item-box .list__menu { min-width: 46px; max-width: 60px; padding-inline: 8px; } 
+ .pas-result-wrap .list-menu .list__item-box .list__item-inner { min-width: 87px; max-width: 110px; } 
+ .pas-result-wrap .list-menu .list__item-box .list__item { padding-block: 8px; } 
+ .pas-result-wrap .list-check__role { width: 78px; } 
+ .pas-result-wrap .list-check__role .list__top .input-box__input,
+ .pas-result-wrap .list-check__role .list__top .combo-box .combo-box__txt { height: 32px; min-height: auto; font-size: 12px; padding-inline: 8px; } 
+ .pas-result-wrap .list-check__role .list__top .combo-box .combo-box__txt { padding-right: 26px; } 
+ .pas-result-wrap .list-check__role .list__top .combo-box .combo-box__txt:after { right: 8px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-selectbox-sm.svg); } 
+ .pas-result-wrap .list-check__role .list__top .combo-box .combo-box__menu-list > li { font-size: 12px; padding: 4px 8px; } 
+ .pas-result-wrap .list-check__role .list__item { padding-block: 0; } 
+
+ /* default, sub-admin */
+ .pas-result-wrap .list-check__role.default,
+ .pas-result-wrap .list-check__role.sub-admin { width: 78px; } 
+
+ /* page button */
+ .partner-acc-set .tooltip-btn-box > .txt-p5 { font-size: 14px !important; } 
+ .partner-acc-set .error-msg-wrap { margin-top: 8px; } 
+
+ /* permission setting */
+ .setting-permission .pas-result-wrap .role-list .list__top { min-height: 96px; } 
+ .setting-permission .pas-result-wrap .role-list .list__top .list__top-row { padding-inline: 8px; } 
+ .setting-permission .pas-result-wrap .role-list .list__top .list__top-row:first-of-type { flex: 0 0 48px; } 
+ .setting-permission .pas-result-wrap .role-list .list__top .list__top-row:last-of-type { flex: 1 1 47px; } 
+ .setting-permission .pas-result-wrap .list-check__role { width: 109px; } 
+
+ /* new role popup */
+ .new-role-popup .popup-wrap__inner .popup__header { padding-bottom: 16px; } 
+ .new-role-popup .basic-list__result .txt-p5,
+ .new-role-popup .basic-list__result .txt-p6 { font-size: 12px !important; } 
+ .new-role-popup .basic-list__result .list-row,
+ .new-role-popup .basic-list__result .el__menu,
+ .new-role-popup .basic-list__result .el__check { min-height: 40px; } 
+ .new-role-popup .basic-list__result .el__menu { padding: 8px; } 
+ .new-role-popup .basic-list__result .el__check { width: 145px; padding: 8px 4px; } 
+ .new-role-popup .basic-list__result .list-head,
+ .new-role-popup .basic-list__result .list-head .el__menu,
+ .new-role-popup .basic-list__result .list-head .el__check { min-height: 48px; } 
+ .new-role-popup .basic-list__result .list-head .el__check .input-box .input-box__input { height: 32px; } 
+ .new-role-popup .basic-list__result .list-body .list-row-box .list-col { min-width: 46px; max-width: 60px; padding-inline: 8px; } 
+ .new-role-popup .basic-list__result + .txt-error-wrap { margin-top: 16px; } 
+
+ /* delete alert */
+ .delete-alert .txt-caption { margin-top: 8px; } 
+
+ /* menu description */
+ .menu-desc-popup .menu-info-box { flex-direction: column; align-items: initial; } 
+ .menu-desc-popup .menu-info-box > .txt-p6 { flex-basis: auto; width: 100%; text-align: left; } 
+ .menu-desc-popup .menu-info-box .menu-ds-info { width: 100%; } 
+ .menu-desc-popup .basic-list__result .el__menu { min-width: 95px; max-width: 95px; } 
+ .menu-desc-popup .list-head .txt-p5,
+ .menu-desc-popup .list-body .txt-p6 { font-size: 12px !important; } 
+ /* [E]Mobile */}

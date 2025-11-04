@@ -1,0 +1,39 @@
+.run-rate-list > .tit-area { max-width: 1440px; width: 100%; margin: 0 auto; padding: 24px 24px 8px; margin-bottom: 0; } 
+.run-rate-list > .tit-area .txt-h3 { font-size: 32px !important; }
+
+/* search area */
+.run-rate-list .run-rate-search { max-width: 1392px; background-color: #f7f7f7; padding: 16px; margin:0 auto; border-radius: var(--border-base); } 
+.run-rate-list .run-rate-search .field-box { width: 100%; } 
+.run-rate-list .run-rate-search .search-box { display: flex; gap: 16px; align-items: center; } 
+.run-rate-list .run-rate-search .search-box .input-box.input-search .icon-search-delete { right: 16px; } 
+.run-rate-list .run-rate-search .input-search-box__inner { flex-basis: 775px; } 
+.run-rate-list .run-rate-search .input-box.box-type { width: 100%; } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .run-rate-list > .tit-area { padding: 1.667vw 1.667vw 0.556vw; } 
+ /* search area */
+ .run-rate-list .run-rate-search { padding: 1.667vw; margin:0 1.667vw 0.556vw; } 
+ .run-rate-list .run-rate-search .input-search-box { gap: 1.111vw; } 
+ .run-rate-list .run-rate-search .input-search-box__inner { flex-basis: 53.819vw; } 
+ 
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .run-rate-list > .tit-area { overflow: initial; position: sticky; left: 0; right: 0; top: 0; display: flex; align-items: center; justify-content: space-between; height: 56px; background: #ffffff; padding:0 24px; margin: 0; box-shadow: var(--base-shadow ); z-index: 9; } 
+ .run-rate-list > .tit-area .txt-h3 { font-size: 18px !important; } 
+ .run-rate-list > .tit-area .btn-box { width: auto; } 
+ .run-rate-list > .tit-area .icon-home { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-home.svg); } 
+
+ /* search area */
+ .run-rate-list .run-rate-search { display: none; } 
+
+ /* header, breadcrumb hide */
+ #wrap .header-wrap,
+ #wrap .breadcrumb { display: none !important; } 
+
+ /* [E]Mobile */ } 

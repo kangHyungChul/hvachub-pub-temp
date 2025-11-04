@@ -1,0 +1,113 @@
+.acc-balance-sect { max-width: 1440px; width: 100%; margin: 0 auto; padding-inline: 24px; } 
+
+/* search */
+.acc-balance-search { display: flex; gap: 24px; margin-bottom: 24px; } 
+.acc-balance-search .acc-summ,
+.acc-balance-search .credit-info,
+.acc-balance-search .acc-search { background: #f7f7f7; border-radius: var(--border-base); padding: 24px; } 
+.acc-balance-search .acc-summ { flex: none; width: 409px; } 
+.acc-summ .acc-summ__item { display: flex; align-items: center; justify-content: space-between; } 
+.acc-summ .acc-summ__item + .acc-summ__item { padding-top: 16px; } 
+.acc-summ .acc-summ__item:first-of-type { padding-bottom: 24px; margin-bottom: 8px; border-bottom: 1px solid #dddddd; } 
+.acc-summ .acc-summ__item .btn-checkbox { padding: 0 0 2px 0; margin-left: 16px; vertical-align: middle; } 
+.acc-summ .acc-summ__item .txt-red { color: var(--secondary-color4); } 
+
+.acc-balance-search .acc-seach-area { flex: auto; } 
+.acc-seach-area .credit-info { display: flex; align-items: center; padding-block: 16px; margin-bottom: 16px; } 
+.acc-seach-area .acc-search .field-group { display: flex; align-items: flex-end; gap: 24px; } 
+.acc-seach-area .acc-search .field-group + .field-group { margin-top: 16px; } 
+.acc-seach-area .acc-search .field-group .field-box { flex: 0 0 168px; } 
+.acc-seach-area .acc-search .field-group .field-box:has(.datepicker-area) { flex: 1; } 
+.acc-seach-area .acc-search .field-group .input-search,
+.acc-seach-area .acc-search .field-group .combo-box { width: 100%; } 
+.acc-seach-area .acc-search .field-group .input-datepicker { width: calc(50% - 13px); } 
+.acc-seach-area .acc-search .field-group .input-datepicker + .txt-p5 { color: #a9a9a9; margin-inline: 4px 5px; } 
+.acc-seach-area .acc-search .field-group > .btn-block { flex: none; } 
+
+/* list */
+.acc-balance-sect .basic-list-wrap { padding: 0; border-radius: 0; } 
+/* result */
+.acc-balance-sect .basic-list__result { overflow-x: scroll; margin-bottom: 16px; } 
+.acc-balance-sect .basic-list__result .el-status { width: 160px; } 
+.acc-balance-sect .basic-list__result .el-num { width: 140px; } 
+.acc-balance-sect .basic-list__result .el-pdf { width: 80px; } 
+.acc-balance-sect .basic-list__result .el-doc { flex: auto; } 
+.acc-balance-sect .basic-list__result .el-date { width: 140px; } 
+.acc-balance-sect .basic-list__result .el-arr { width: 120px; } 
+.acc-balance-sect .basic-list__result .el-amount { width: 200px; } 
+.acc-balance-sect .list-head, 
+.acc-balance-sect .list-body { width: fit-content; min-width: 100%; } 
+.acc-balance-sect .list-body .el-arr, 
+.acc-balance-sect .list-body .el-amount { text-align: right; } 
+
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .acc-balance-sect { padding-inline: 1.667vw; } 
+
+ /* search */
+ .acc-balance-search { gap: 1.667vw; margin-bottom: 1.667vw; } 
+ .acc-balance-search .acc-summ,
+ .acc-balance-search .credit-info,
+ .acc-balance-search .acc-search { padding: 1.667vw; } 
+ .acc-balance-search .acc-summ { width: 28.403vw; } 
+ .acc-summ .acc-summ__item+.acc-summ__item { padding-top: 1.111vw; } 
+ .acc-summ .acc-summ__item:first-of-type { padding-bottom: 1.667vw; margin-bottom: 0.556vw; } 
+ .acc-summ .acc-summ__item .btn-checkbox { padding: 0 0 0.139vw 0; margin-left: 1.111vw; } 
+ .acc-seach-area .credit-info { padding-block: 1.111vw; margin-bottom: 1.111vw; } 
+ .acc-seach-area .acc-search .field-group { gap: 1.667vw; } 
+ .acc-seach-area .acc-search .field-group+.field-group { margin-top: 1.111vw; } 
+ .acc-seach-area .acc-search .field-group .field-box { flex: 0 0 11.667vw; } 
+ .acc-seach-area .acc-search .field-group .input-datepicker+.txt-p5 { margin-inline: 0.278vw 0.347vw; } 
+ 
+ /* list */
+ .acc-balance-sect .basic-list__result { margin-bottom: 1.111vw; } 
+ .acc-balance-sect .basic-list__result .el-status { width: 11.111vw; } 
+ .acc-balance-sect .basic-list__result .el-num { width: 9.722vw; } 
+ .acc-balance-sect .basic-list__result .el-pdf { width: 5.556vw; } 
+ .acc-balance-sect .basic-list__result .el-date { width: 9.722vw; } 
+ .acc-balance-sect .basic-list__result .el-arr { width: 8.333vw; } 
+ .acc-balance-sect .basic-list__result .el-amount { width: 13.889vw; } 
+
+/* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px) { /* search */
+ /* search */
+ .acc-balance-search { flex-direction: column; } 
+ .acc-balance-search .acc-summ { width: 100%; } 
+ .acc-summ .acc-summ__item + .acc-summ__item { padding-top: 4px; } 
+ .acc-summ .acc-summ__item:first-of-type { padding-bottom: 12px; margin-bottom: 0; border-bottom: 0; } 
+ .acc-summ .acc-summ__item .txt-p4 { font-size: 16px !important; } 
+ .acc-summ .acc-summ__item .txt-p5 { font-size: 14px !important; } 
+ .acc-summ .acc-summ__item .btn-checkbox { margin-left: 8px; } 
+ .acc-balance-search .acc-seach-area { width: 100%; } 
+ .acc-seach-area .credit-info { flex-direction: column; align-items: initial; gap: 2px; padding-block: 24px; margin-bottom: 24px; } 
+ .acc-seach-area .credit-info .txt-p4 { font-size: 16px !important; } 
+ .acc-seach-area .acc-search .field-group { flex-direction: column; align-items: initial; gap: 12px; } 
+ .acc-seach-area .acc-search .field-group + .field-group { margin-top: 12px; } 
+ .acc-seach-area .acc-search .field-group .field-box { flex: none; width: 100%; } 
+ .acc-seach-area .acc-search .field-group .field-box:has(.datepicker-area) { flex: none; } 
+ .acc-seach-area .acc-search .field-group .input-search,
+ .acc-seach-area .acc-search .field-group .combo-box { width: 100%; } 
+ .acc-seach-area .acc-search .field-group .input-datepicker { width: calc(50% - 13px); } 
+ .acc-seach-area .acc-search .field-group .input-datepicker + .txt-p5 { color: #a9a9a9; margin-inline: 4px 5px; } 
+ .acc-seach-area .acc-search .field-group > .btn-block { width: 100%; } 
+ 
+ /* list */
+ .acc-balance-sect .basic-list__result { overflow-x: auto; margin-bottom: 24px; } 
+ .acc-balance-sect .basic-list__result .el-status { width: 120px; } 
+ .acc-balance-sect .basic-list__result .el-num { width: 120px; } 
+ .acc-balance-sect .basic-list__result .el-pdf { width: 70px; } 
+ .acc-balance-sect .basic-list__result .el-doc { flex: none; width: 150px; } 
+ .acc-balance-sect .basic-list__result .el-date { width: 120px; } 
+ .acc-balance-sect .basic-list__result .el-arr { width: 60px; } 
+ .acc-balance-sect .basic-list__result .el-amount { width: 140px; } 
+ .acc-balance-sect .list-head .txt-p5,
+ .acc-balance-sect .list-body .txt-p5,
+ .acc-balance-sect .list-body .txt-p6 { font-size: 12px !important; } 
+
+/* [E]Mobile */ } 

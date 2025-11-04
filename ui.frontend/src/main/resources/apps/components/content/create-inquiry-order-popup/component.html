@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/create-inquiry/clientlibs/css/main.css">
+  <!-- <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css"> -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <button type="button" class="btn-block" data-layer-target="Select-order">
+    <span class="btn-block__txt">Select order</span>
+  </button>  
+
+  <!-- Select-Project popup -->
+  <div class="popup-wrap Select-order-popup" id="Select-order">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Select Order</p>
+      </div>
+      <div class="popup__container">   
+        <p class="txt-p5">Please select the order list.</p>
+
+        <!-- select_order__search //-->  
+        <div class="select_order__search">
+          <div class="field-box">
+            <label class="txt-label">Type</label>
+            <div class="sel-inp-area">
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">All</button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem" class="selected">All</li>
+                    <li role="menuitem">Online (General)</li>
+                    <li role="menuitem">All</li>                    
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="input-box input-search box-type">
+                <input type="search" class="input-box__input" id="default-search" placeholder="Type a project name or PO number or order user or model code">
+                <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">delete</span></button>
+              </div>
+            </div>
+            
+          </div>
+          <div class="field-box-area">          
+            <div class="field-box">
+              <label class="txt-label">Credit Block</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">All</button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem" class="selected">All</li>
+                    <li role="menuitem">Y</li>
+                    <li role="menuitem">N</li>
+                  </ul>
+                </div>
+              </div>
+            </div>            
+            <div class="field-box">
+              <label class="txt-label">Status</label>
+              <div class="combo-box box-type">
+                <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">All</button>
+                <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                  <ul class="combo-box__menu-list">
+                    <li role="menuitem" class="selected">All</li>
+                    <li role="menuitem">Open</li>
+                    <li role="menuitem">Prepared</li>
+                    <li role="menuitem">Shipped</li>
+                    <li role="menuitem">Completed</li>
+                    <li role="menuitem">Canceled</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="field-box">
+              <label class="txt-label" for="">Order date</label>
+              <div class="datepicker-area">
+                <input type="text" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+                <span class="txt-p5">~</span>
+                <input type="text" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+              </div>
+            </div>
+            <button type="button" class="btn-block type2 md">
+              <span class="btn-block__txt">Search</span>
+            </button>
+          </div>
+
+          <!-- 모바일용 열기/펼치기 버튼-->
+          <button class="btn-icon icon-mo-folded">
+            <span class="txt-blind">mobile search folded</span>
+          </button>
+        </div>
+        <!-- // select_order__search --> 
+
+        <!-- select-order-area //-->
+        <div class="select-order-area">
+          
+          <div class="basic-list__top">
+            <p class="txt-fw-b txt-p6"><span class="txt-point1">10</span> Results</p>
+          </div>
+
+          
+          <div class="list-nodata">
+            <!-- 데이터가 없을때 // -->
+            <p class="txt-p5">No matching results found.</p>
+            <p class="txt-p5">There is no registered content.</p>
+          </div>
+         
+          <div class="lr-list-data-area">
+            <ul class="list-data">
+              <li>
+                <div class="lr-line-item">
+                  <div class="left">
+                    <p class="tit">[HVAC Hub] Commercial Space Air Solution Implementation Project</p>
+                    <div class="txt-p6">
+                      <p class="txt-line-slash"><strong>Sales Order Number: </strong>812345678</p>
+                      <p class="txt-line-slash"><strong>PO Number: </strong>PQ12345678</p>
+                    </div>     
+                    <div class="txt-p6">
+                      <p class="txt-line-slash"><strong>Order Date: </strong>YYYY-MM-DD</p>
+                      <p class="txt-line-slash"><strong>Credit Block: </strong>Y</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="amout-area">
+                      <strong>Total Amount</strong>
+                      <span>808.500,00 TL</span>
+                    </div> 
+                    <button type="button" class="btn-block type2">
+                      <span class="btn-block__txt">Selected</span>
+                    </button>                        
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="lr-line-item">
+                  <div class="left">
+                    <p class="tit">[HVAC Hub] Samsung hvac Aircon</p>
+                    <div class="txt-p6">
+                      <p class="txt-line-slash"><strong>Sales Order Number: </strong>812345678</p>
+                      <p class="txt-line-slash"><strong>PO Number: </strong>PQ12345678</p>
+                    </div>     
+                    <div class="txt-p6">
+                      <p class="txt-line-slash"><strong>Order Date: </strong>YYYY-MM-DD</p>
+                      <p class="txt-line-slash"><strong>Credit Block: </strong>Y</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="amout-area">
+                      <strong>Total Amount</strong>
+                      <span>808.500,00 TL</span>
+                    </div> 
+                    <button type="button" class="btn-block">
+                      <span class="btn-block__txt">Select</span>
+                    </button>                        
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="lr-line-item">
+                  <div class="left">
+                    <p class="tit">[HVAC Hub] Samsung hvac Aircon</p>
+                    <div class="txt-p6">
+                      <p class="txt-line-slash"><strong>Sales Order Number: </strong>812345678</p>
+                      <p class="txt-line-slash"><strong>PO Number: </strong>PQ12345678</p>
+                    </div>     
+                    <div class="txt-p6">
+                      <p class="txt-line-slash"><strong>Order Date: </strong>YYYY-MM-DD</p>
+                      <p class="txt-line-slash"><strong>Credit Block: </strong>Y</p>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <div class="amout-area">
+                      <strong>Total Amount</strong>
+                      <span>808.500,00 TL</span>
+                    </div> 
+                    <button type="button" class="btn-block">
+                      <span class="btn-block__txt">Select</span>
+                    </button>                        
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- select-order-area //-->  
+      </div>
+      <div class="popup__footer shadow">     
+        <button type="button" class="btn-block type2 md">
+          <span class="btn-block__txt">Add</span>
+        </button>
+      </div>
+
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //Select-Project popup -->
+
+
+
+
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/create-inquiry/clientlibs/js/main.js"></script>
+</body>
+
+</html>

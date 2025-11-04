@@ -1,0 +1,38 @@
+.dvm-pro2-manual { max-width: 1440px; margin: 0 auto; padding: 0 24px; } 
+.dvm-pro2-manual .basic-list__result { margin-bottom: 24px; } 
+.dvm-pro2-manual .basic-list__result .el-no { flex-basis: 64px; } 
+.dvm-pro2-manual .basic-list__result .el-tit { flex: auto; } 
+.dvm-pro2-manual .basic-list__result .el-down, 
+.dvm-pro2-manual .basic-list__result .el-date { flex-basis: 159px; } 
+.dvm-pro2-manual .list-body .el-no .txt-p5 { color: #666; } 
+.dvm-pro2-manual .list-body .el-tit { text-align: left; } 
+.dvm-pro2-manual .list-body .el-date .txt-p5 { color: #555; } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .dvm-pro2-manual { padding: 0 1.667vw; } 
+ .dvm-pro2-manual .basic-list__result { margin-bottom: 1.667vw;; } 
+ .dvm-pro2-manual .basic-list__result .el-no { flex-basis: 4.444vw; } 
+ .dvm-pro2-manual .basic-list__result .el-down, 
+ .dvm-pro2-manual .basic-list__result .el-date { flex-basis: 11.042vw; } 
+
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .dvm-pro2-manual .basic-list__top { margin-bottom: 12px; } 
+ .dvm-pro2-manual .basic-list__top .txt-h6 { font-size: 18px !important; } 
+ .dvm-pro2-manual .basic-list__result { margin-bottom: 28px; } 
+ .dvm-pro2-manual .basic-list__result .list-el { text-align: left; padding-inline: 0; } 
+ .dvm-pro2-manual .list-head { display: none; } 
+ .dvm-pro2-manual .list-body .txt-p5 { font-size: 14px !important; } 
+ .dvm-pro2-manual .list-body .list-row { position: relative; display: block; text-align: left; padding: 8px 40px 8px 8px; } 
+ .dvm-pro2-manual .list-body .el-no { display: none; } 
+ .dvm-pro2-manual .list-body .el-tit { margin-bottom: 10px; } 
+ .dvm-pro2-manual .list-body .el-tit .txt-p5 { font-weight: 700; } 
+ .dvm-pro2-manual .list-body .el-down { position: absolute; top: 16px; right: 8px; } 
+ 
+ /* [E]Mobile */ } 

@@ -1,0 +1,85 @@
+.project-new-prj { max-width: 1440px; width: 100%; background: #ffffff; margin: 0 auto; padding: 24px 24px 80px; } 
+.project-new-prj .tit-area { display: flex; align-items: center; justify-content: space-between; padding-bottom: 8px; } 
+.project-new-prj .tit-area .date-info-detail { text-align: right; } 
+/* form list */
+.project-new-prj .form__wrap { display: flex; flex-wrap: wrap; gap: 24px 80px; } 
+.project-new-prj .field-box { width: 100%; } 
+.project-new-prj .field-box.col2 { width: calc(50% - 40px); } 
+.project-new-prj .field-box .input-search { display: flex; } 
+.project-new-prj .field-box .input-search .input-box__input { flex: auto; padding-right: 30px; } 
+.project-new-prj .field-box .input-search .icon-search,
+.project-new-prj .field-box .input-search .icon-edit { position: static; flex: none; width: 24px; height: 36px; margin-left: 8px; } 
+.project-new-prj .field-box .input-search .input-box__input:read-only { background: #eeeeee; border-bottom-color: #dddddd; } 
+.project-new-prj .field-box .input-search .icon-edit { background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-prj-edit.svg); } 
+.project-new-prj .field-box .input-datepicker { width: 100%; } 
+.project-new-prj .field-box .period-box { font-size: 0; } 
+.project-new-prj .field-box .period-box .input-datepicker { width: calc((100% - 27px) / 2); } 
+.project-new-prj .field-box .period-box > span { display: inline-block; width: 27px; text-align: center; font-size: 18px; color: #a9a9a9; } 
+.project-new-prj .jobsite .input-box__input { height: auto; padding: 6px 8px; line-height: 1.5; } 
+.project-new-prj .jobsite .input-box__input { height: auto; padding: 6px 8px; line-height: 1.5; } 
+.project-new-prj .jobsite .txt-input:not(:empty) + .txt-placeholder { display: none; } 
+.project-new-prj .jobsite .txt-input:empty + .txt-placeholder { display: block; } 
+.project-new-prj .field-box .radio-group-area .btn-radio { margin-right:80px; }
+.project-new-prj .field-box .radio-group-area .btn-radio .btn-radio__txt { font-size:18px; }
+
+/* page button */
+.project-new-prj .page-bottom-btn { text-align: center; margin-top: 48px; } 
+.project-new-prj .page-bottom-btn button { min-width: 104px; } 
+.project-new-prj .page-bottom-btn button:not(:first-child) { margin-left: 16px; } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .project-new-prj { padding: 1.667vw 1.667vw 5.556vw; } 
+ .project-new-prj .tit-area { padding-bottom: 0.556vw; } 
+ /* form list */
+ .project-new-prj .form__wrap { gap: 1.667vw 5.556vw; } 
+ .project-new-prj .field-box.col2 { width: calc(50% - 2.778vw); } 
+ .project-new-prj .field-box .input-search .input-box__input { padding-right: 0.556vw; } 
+ .project-new-prj .field-box .input-search .icon-search,
+ .project-new-prj .field-box .input-search .icon-edit { width: 1.667vw; height: 2.5vw; margin-left: 0.556vw; } 
+ .project-new-prj .field-box .period-box .input-datepicker { width: calc((100% - 1.875vw) / 2); } 
+ .project-new-prj .field-box .period-box > span { width: 1.875vw; font-size: 1.25vw; } 
+ .project-new-prj .jobsite .input-box__input { padding: 0.417vw 0.556vw; } 
+ /* page button */
+ .project-new-prj .page-bottom-btn { margin-top: 3.333vw; } 
+ .project-new-prj .page-bottom-btn button { min-width: 7.222vw; } 
+ .project-new-prj .page-bottom-btn button:not(:first-child) { margin-left: 1.111vw; } 
+
+ /* [E]Tablet */ } 
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .project-new-prj { position: fixed; left: 0; right: 0; top: 0; bottom: 0; overflow-y: auto; height: 100dvh; padding: 0; z-index: 9; } 
+ .project-new-prj .tit-area { position: sticky; left: 0; right: 0; top: 0; justify-content: initial; height: 56px; background: #ffffff; padding-bottom: 0; padding-inline: 24px; margin-bottom: 0; border-bottom: 0; box-shadow: var(--base-shadow ); z-index: 1; } 
+ .project-new-prj .tit-area .icon-page-back { margin-right: 16px; } 
+ .project-new-prj .tit-area .txt-h3 { font-size: 18px !important; } 
+ .project-new-prj .date-info-detail { background: #f7f7f7; padding: 12px 16px; margin: 16px 24px 0; border-radius: var(--border-base); } 
+ .project-new-prj .date-info-detail .el-date { padding-top: 4px; } 
+ .project-new-prj .date-info-detail .el-date .txt-fw-b { display: block; margin-block: 4px; } 
+
+ /* form list */
+ .project-new-prj .form__wrap { flex-direction: column; gap: 16px; min-height: calc(100% - 128px); padding: 16px 24px 24px; } 
+ .project-new-prj .field-box.col2 { width: 100%; } 
+ .project-new-prj .field-box .txt-label { margin-bottom: 8px; } 
+ .project-new-prj .field-box .period-box .input-datepicker { width: calc(50% - (8px / 2)); } 
+ .project-new-prj .field-box .period-box > span { width: 8px; font-size: 0; color: transparent; } 
+ .project-new-prj .jobsite .txt-input, 
+ .project-new-prj .jobsite .txt-placeholder { font-size: 16px !important; } 
+ /* page button */
+ .project-new-prj .page-bottom-btn { position: sticky; left: 0; right: 0; bottom: 0; display: flex; align-items: center; column-gap: 8px; width: 100%; height: 72px; background: #ffffff; margin-top: 0; padding-inline: 24px; border-top: 1px solid #cccccc; } 
+ .project-new-prj .page-bottom-btn button { flex: 1; } 
+ .project-new-prj .page-bottom-btn button:not(:first-child) { margin-left: 0; } 
+
+
+ /* header, breadcrumb, footer hide */
+ #wrap .header-wrap,
+ #wrap .breadcrumb,
+ #wrap .footer-wrap { display: none !important; } 
+
+
+
+
+ /* [E]Mobile */ } 

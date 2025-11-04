@@ -1,0 +1,161 @@
+.role-setting { max-width: 1152px; width: 100%; background: #f7f7f7; padding: 48px 24px 80px 56px; } 
+.role-setting .role-setting__tit { margin-bottom: 32px; } 
+
+/* role setting */
+.role-setting .role-list { display: flex; border-top: 2px solid #000000; } 
+.role-setting .role-list .list__top,
+.role-setting .role-list .list__item,
+.role-setting .role-list .menu-delete { min-height: 56px; width: 100%; display: flex; word-wrap: break-word; word-break: break-all; overflow-wrap: anywhere; padding: 4px 12px; } 
+.role-setting .role-list .list__top,
+.role-setting .role-list .menu-delete { align-items: center; justify-content: center; background: #f2f2f2; } 
+.role-setting .role-list .list__top { flex-direction: column; border-bottom: 1px solid #000000; } 
+.role-setting .role-list .list__top .txt-p5 { line-height: 1.2; } 
+.role-setting .role-list .list__item { align-items: center; border-bottom: 1px solid #dadada; } 
+.role-setting .role-list .menu-delete { border-bottom: 1px solid #aaaaaa; } 
+.role-setting .role-list .delete-btn { width: 20px; height: 20px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-search-delete.svg); } 
+.role-setting .list-menu { position: relative; flex: none; min-width: 190px; max-width: 220px; } 
+.role-setting .list-menu > li { border-right: 2px solid #000000; } 
+.role-setting .list-menu .list__top { align-items: center; text-align: center; } 
+.role-setting .list-menu .list__item-box { display: flex; width: 100%; } 
+.role-setting .list-menu .list__item-box .list__menu { flex: auto; display: flex; align-items: center; justify-content: center; min-width: 70px; max-width: 80px; padding-inline: 12px; border-right: 1px solid #dadada; border-bottom: 1px solid #dadada; overflow-wrap: anywhere; word-break: break-all; } 
+.role-setting .list-menu .list__item-box .list__item-inner { flex: auto; min-width: 120px; max-width: 140px; } 
+.role-setting .list-menu .list__item-box .list__item { width: 100%; padding-block: 16px; } 
+.role-setting .list-check { position: relative; flex: auto; display: flex; justify-content: flex-start; overflow-x: scroll; padding-bottom: 2px; } 
+.role-setting .list-check__role { width: 160px; text-align: center; padding: 0; border-bottom: unset; flex: none; } 
+.role-setting .list-check__role .list__top .field-box,
+.role-setting .list-check__role .list__top .input-box,
+.role-setting .list-check__role .list__top .combo-box { width: 100%; min-width: auto; } 
+.role-setting .list-check__role .list__top .input-box__input { text-align: center; } 
+.role-setting .list-check__role .list__item { justify-content: center; } 
+.role-setting .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__icon { border-radius: 4px; } 
+.role-setting .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__input:checked ~ .btn-checkbox__icon { background: #000000; border-color: #000000; } 
+.role-setting .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__input:disabled ~ .btn-checkbox__icon { background: #d5d5d5; border-color: #d5d5d5; } 
+.role-setting .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__input:checked:disabled ~ .btn-checkbox__icon { background: #cccccc; border-color: #cccccc; } 
+.role-setting .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__input:disabled ~ .btn-checkbox__icon::after { opacity: 0.6; } 
+
+/* default, sub-admin */
+.role-setting .list-check__role.default,
+.role-setting .list-check__role.sub-admin { width: 136px; } 
+
+/* blank */
+.role-setting .list-check__role.blank,
+.role-setting .list-check__role.blank .list__top,
+.role-setting .list-check__role.blank .list__all,
+.role-setting .list-check__role.blank .list__item,
+.role-setting .list-check__role.blank .menu-delete { width: auto; min-width: auto; max-width: auto; padding: 0; } 
+.role-setting .list-check__role.blank,
+.role-setting .list-check__role.blank .list__top,
+.role-setting .list-check__role.blank .list__item-box,
+.role-setting .list-check__role.blank .menu-delete { background-color: #eee; } 
+.role-setting .list-check__role.blank { flex: auto; } 
+
+/* page button */
+.role-setting .tooltip-btn-box > .txt-p5 { display: inline-block; vertical-align: middle; } 
+.role-setting .tooltip-btn-box .icon-tootip { width: 16px; height: 16px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-tooltip-on.svg); vertical-align: middle; } 
+.role-setting .error-msg-wrap { margin-top: 12px; } 
+.role-setting .error-msg-wrap .txt-error + .txt-error { margin-top: 4px; } 
+.role-setting .role-btn-wrap { display: flex; gap: 16px; width: fit-content; margin-left: auto; } 
+
+
+/* menu description */
+.menu-desc-popup .menu-info-box { display: flex; align-items: center; gap: 12px; background: #f7f7f7; border-radius: var(--border-base); padding: 16px; margin-bottom: 16px; } 
+.menu-desc-popup .menu-info-box > .txt-p6 { flex: none; text-align: center; } 
+.menu-desc-popup .menu-info-box .menu-ds-info { flex: auto; } 
+.menu-desc-popup .basic-list__result { margin-bottom: 8px; } 
+.menu-desc-popup .basic-list__result .el__menu,
+.menu-desc-popup .basic-list__result .el__info { overflow-wrap: anywhere; word-break: break-all; } 
+.menu-desc-popup .basic-list__result .el__menu { flex: none; min-width: 150px; max-width: 180px; } 
+.menu-desc-popup .basic-list__result .el__menu > p { display: inline-block; padding-inline: 12px; } 
+.menu-desc-popup .basic-list__result .el__info { flex: auto; padding-inline: 12px; } 
+.menu-desc-popup .basic-list__result .list-row { padding-block: 8px; } 
+.menu-desc-popup .basic-list__result .list-body .list-row { text-align: left; } 
+.menu-desc-popup .basic-list__result .list-body .el__info .txt-p6 span { display: block; position: relative; padding-left: 10px; } 
+.menu-desc-popup .basic-list__result .list-body .el__info .txt-p6 span::before { content: "-"; position: absolute; left: 0; top: 0px; } 
+
+/************************************************************************************** 
+======================================= Tablet ======================================== 
+***************************************************************************************/
+@media only screen and (min-width: 769px) and (max-width: 1440px){
+ .role-setting { padding: 3.333vw 1.667vw 5.556vw 3.889vw; } 
+ .role-setting .role-setting__tit { margin-bottom: 2.222vw; } 
+
+ /* role setting */
+ .role-setting .role-list { border-top-width: 0.139vw; } 
+ .role-setting .role-list .list__top,
+ .role-setting .role-list .list__item,
+ .role-setting .role-list .menu-delete { min-height: 3.889vw; padding: 0.278vw 0.833vw; } 
+ .role-setting .list-menu { min-width: 13.194vw; max-width: 15.278vw; } 
+ .role-setting .list-menu > li { border-right-width: 0.139vw; } 
+ .role-setting .list-menu .list__item-box .list__menu { min-width: 4.861vw; max-width: 5.556vw; padding-inline: 0.833vw; } 
+ .role-setting .list-menu .list__item-box .list__item-inner { min-width: 8.333vw; max-width: 9.722vw; } 
+ .role-setting .list-menu .list__item-box .list__item { padding-block: 1.111vw; } 
+ .role-setting .list-check { padding-bottom: 0.139vw; } 
+ .role-setting .list-check__role { width: 11.111vw; } 
+ .role-setting .list-check__role .list__top + .list__item .btn-checkbox .btn-checkbox__icon { border-radius: 0.278vw; } 
+
+ /* default, sub-admin */
+ .role-setting .list-check__role.default,
+ .role-setting .list-check__role.sub-admin { width: 9.444vw; } 
+
+ /* page button */
+ .role-setting .tooltip-btn-box .icon-tootip { width: 1.111vw; height: 1.111vw; } 
+ .role-setting .error-msg-wrap { margin-top: 0.833vw; } 
+ .role-setting .error-msg-wrap .txt-error + .txt-error { margin-top: 0.278vw; } 
+ .role-setting .role-btn-wrap { gap: 1.111vw; } 
+
+ /* menu description */
+ .menu-desc-popup .menu-info-box { gap: 0.556vw; padding: 1.111vw; margin-bottom: 1.111vw; } 
+ .menu-desc-popup .basic-list__result { margin-bottom: 0.556vw; } 
+ .menu-desc-popup .basic-list__result .el__menu { min-width: 10.417vw; max-width: 12.5vw; } 
+ .menu-desc-popup .basic-list__result .el__menu > p { padding-inline: 0.833vw; } 
+ .menu-desc-popup .basic-list__result .el__info { padding-inline: 0.833vw; } 
+ .menu-desc-popup .basic-list__result .list-row { padding-block: 0.556vw; } 
+ .menu-desc-popup .basic-list__result .list-body .el__info .txt-p6 span { padding-left: 0.694vw; } 
+/* [E]Tablet */ } 
+
+/************************************************************************************** 
+======================================= Mobile ======================================== 
+***************************************************************************************/
+@media only screen and (max-width: 768px){
+ .role-setting { background: #fff; padding: 0 0 56px 0; } 
+ .role-setting .role-setting__tit { padding: 32px 24px 24px; font-size: 24px !important; border-bottom: 1px solid #ddd; } 
+
+ /* role setting */
+ .role-setting .basic-list__top .btn-block { height: 32px; padding-inline: 16px; } 
+ .role-setting .basic-list__top .btn-block__txt { font-size: 12px; } 
+ .role-setting .role-list .txt-p5 { font-size: 12px !important; } 
+ .role-setting .role-list .list__top { min-height: 48px; padding:7px 4px 8px; } 
+ .role-setting .role-list .list__item { min-height: 40px; padding: 8px; } 
+ .role-setting .role-list .menu-delete { min-height: 40px; padding: 8px 4px; } 
+ .role-setting .list-menu { min-width: 133px; max-width: 170px; } 
+ .role-setting .list-menu .list__item-box .list__menu { min-width: 46px; max-width: 60px; padding-inline: 8px; } 
+ .role-setting .list-menu .list__item-box .list__item-inner { min-width: 87px; max-width: 110px; } 
+ .role-setting .list-menu .list__item-box .list__item { padding-block: 8px; } 
+ .role-setting .list-check__role { width: 78px; } 
+ .role-setting .list-check__role .list__top .input-box__input,
+ .role-setting .list-check__role .list__top .combo-box .combo-box__txt { height: 32px; min-height: auto; font-size: 12px; padding-inline: 8px; } 
+ .role-setting .list-check__role .list__top .combo-box .combo-box__txt { padding-right: 26px; } 
+ .role-setting .list-check__role .list__top .combo-box .combo-box__txt:after { right: 8px; background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-selectbox-sm.svg); } 
+ .role-setting .list-check__role .list__top .combo-box .combo-box__menu-list > li { font-size: 12px; padding: 4px 8px; } 
+ .role-setting .list-check__role .list__item { padding-block: 0; } 
+
+ /* default, sub-admin */
+ .role-setting .list-check__role.default,
+ .role-setting .list-check__role.sub-admin { width: 78px; } 
+
+ /* page button */
+ .role-setting .tooltip-btn-box > .txt-p5 { font-size: 14px !important; } 
+ .role-setting .error-msg-wrap { margin-top: 8px; } 
+ .role-setting .role-btn-wrap { gap: 8px; width: 100%; margin-top: 24px; } 
+ .role-setting .role-btn-wrap .btn-block { flex: 1; } 
+
+ /* menu description */
+ .menu-desc-popup .menu-info-box { flex-direction: column; align-items: initial; } 
+ .menu-desc-popup .menu-info-box > .txt-p6 { flex-basis: auto; width: 100%; text-align: left; } 
+ .menu-desc-popup .menu-info-box .menu-ds-info { width: 100%; } 
+ .menu-desc-popup .basic-list__result .txt-p5,
+ .menu-desc-popup .basic-list__result .txt-p6 { font-size: 12px !important; } 
+ .menu-desc-popup .basic-list__result .list-head { min-height: 40px; } 
+ .menu-desc-popup .basic-list__result .el__menu { min-width: 95px; max-width: 95px; } 
+
+/* Mobile */ } 

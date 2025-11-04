@@ -1,0 +1,8 @@
+.menu-gray-box { display:flex; padding:14px 16px; margin-bottom:22px; background-color: #f7f7f7; border-radius: var(--border-base);}
+.menu-gray-box .txt-p6 { width:120px; margin-right:8px; }
+.menu-gray-box .list strong, .menu-gray-box .list span { font-size:14px; font-weight: 400; }
+.menu-gray-box .list strong { color:#006bea; }
+
+.list-el.menu { flex-basis: 150px; font-size:14px; line-height:21px;}
+.list-el.acess { flex-basis:calc(100% - 150px); }
+.list-body .list-el.menu { text-align: left; }

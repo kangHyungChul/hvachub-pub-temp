@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <title>Offering Setting</title>
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/offering-setting/clientlibs/css/main.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+  
+  <!-- component -->
+  <section class="offering">
+    <h2 class="offering__tit txt-h3">Offering</h2>
+    <div class="tab-wrap">
+      <div role="tablist" class="tab-list type5" aria-label="offering">
+        <!--[F] 선택시 .active 추가 -->
+        <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+          <span class="tab-list__tab-txt txt-h6">Product</span>
+        </button>
+        <button type="button" class="tab-list__tab" role="tab">
+          <span class="tab-list__tab-txt txt-h6">Service</span>
+        </button>
+      </div>
+      <div role="presentation" class="tab-wrap__contents">
+        <!-- 240805 tabpanel 클래스 추가 -->
+        <div role="tabpanel" aria-labelledby="product" tabindex="0" class="product-tab tabpanel">
+          <div class="add-wrap">
+            <p class="quantity__desc txt-p7">
+              ※ You can register up to 30 category maximum
+              (<span>0</span>/30)
+            </p>
+            <button type="button" class="btn-block type2 md add-btn" data-layer-target="product-category-popup">
+              <span class="btn-block__txt">Add Category</span>
+            </button>
+          </div>
+          <!-- 240821 category 미 등록 화면 제거 및 default DVM Pro 추가 -->
+          <div class="my-result__wrap">
+            <div class="box-top">
+              <p class="box-tit txt-h6 txt-fw-b">Category</p>
+              <!-- 240805 edit-wrap 구조 추가 -->
+              <div class="edit-wrap">
+                <p class="category-name txt-p5">DVM Pro</p>
+                <button type="button" class="btn-block category-edit-btn" data-layer-target="product-category-popup"
+                  disabled>
+                  <span class="btn-block__txt">Edit</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="result__num-btn">
+              <button type="button" class="btn-block md add-prod-btn" data-layer-target="product-popup" disabled>
+                <span class="btn-block__txt">Add Product</span>
+              </button>
+            </div>
+            <ul class="result-list__wrap">
+              <li class="list__head">
+                <span class="txt-p6 txt-fw-b no">No</span>
+                <span class="txt-p6 txt-fw-b image">Image</span>
+                <span class="txt-p6 txt-fw-b code">Model Code</span>
+                <span class="txt-p6 txt-fw-b name">Name</span>
+                <span class="txt-p6 txt-fw-b desc">Description</span>
+                <span class="txt-p6 txt-fw-b val-unit">Value/Unit</span>
+                <span class="txt-p6 txt-fw-b price">Price</span>
+              </li>
+              <li class="list__el-box">
+                <ul class="list-data">
+                  <li class="list__el">
+                    <span class="no txt-p5">1</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">DVMR41</span>
+                      <span class="name txt-p5">R410A</span>
+                      <span class="desc txt-p5">The free repair period is valid for 2 years
+                        from
+                        the date of purchase.The free repair free repair
+                        free repair free repair</span>
+                      <span class="val-unit txt-p5">1/kg</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <!-- 2024-09-19 class 추가 : .btn-icon / 접근성 추가 : txt-blind  하기 버튼 동일 -->
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn" disabled>
+                        <span class="txt-blind">delete</span>
+                      </button>
+                      <!-- //2024-09-19 -->
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">2</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">DVMP06</span>
+                      <span class="name txt-p5">6.35&#40;1/4”&#41;</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">1/m</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn" disabled>
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">3</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">DVMP06</span>
+                      <span class="name txt-p5">9.52&#40;3/8”&#41;</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">1/m</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn" disabled>
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">4</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">DVMP09</span>
+                      <span class="name txt-p5">19.05&#40;3/4”&#41;</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">1/m</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn" disabled>
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">5</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">DVMP06</span>
+                      <span class="name txt-p5">6.35&#40;1/4”&#41;</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">1/m</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn" disabled>
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                </ul>
+                <div class="icon-loading-box">
+                  <div class="icon-loading"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 등록된 카테고리의 product 등록 전 화면 -->
+          <div class="my-result__wrap">
+            <div class="box-top">
+              <p class="box-tit txt-h6 txt-fw-b">Category</p>
+              <!-- 240805 edit-wrap 구조 추가 -->
+              <div class="edit-wrap">
+                <p class="category-name txt-p5 txt-ellipsis">
+                  Name 1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                </p>
+                <button type="button" class="btn-block category-edit-btn" data-layer-target="product-category-popup"
+                  disabled>
+                  <span class="btn-block__txt">Edit</span>
+                </button>
+              </div>
+              <button class="close-btn"></button>
+            </div>
+            <div class="result__num-btn">
+              <button type="button" class="btn-block md add-prod-btn" data-layer-target="product-popup">
+                <span class="btn-block__txt">Add Product</span>
+              </button>
+            </div>
+            <!-- 240821 .before-register 클래스 제거 및 .list-head 변경 -->
+            <ul class="result-list__wrap">
+              <li class="list__head">
+                <span class="txt-p6 txt-fw-b no">No</span>
+                <span class="txt-p6 txt-fw-b image">Image</span>
+                <span class="txt-p6 txt-fw-b code">Model code</span>
+                <span class="txt-p6 txt-fw-b name">Name</span>
+                <span class="txt-p6 txt-fw-b desc">Description</span>
+                <span class="txt-p6 txt-fw-b val-unit">Value/Unit</span>
+                <span class="txt-p6 txt-fw-b price">Price</span>
+              </li>
+              <li class="list__el-box">
+                <!-- 240626 문구 수정 -->
+                <div class="list-nodata">
+                  <p class="txt-p6">There is no registered content.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 등록된 카테고리의 product 등록 후 화면 -->
+          <div class="my-result__wrap">
+            <div class="box-top">
+              <p class="box-tit txt-h6 txt-fw-b">Category</p>
+              <!-- 240805 edit-wrap 구조 추가 -->
+              <div class="edit-wrap">
+                <p class="category-name txt-p5">Name 2</p>
+                <button type="button" class="btn-block category-edit-btn" data-layer-target="product-category-popup">
+                  <span class="btn-block__txt">Edit</span>
+                </button>
+              </div>
+              <!-- 240821 .close-btn 삭제 -->
+            </div>
+            <div class="result__num-btn">
+              <button type="button" class="btn-block md add-prod-btn" data-layer-target="product-popup">
+                <span class="btn-block__txt">Add Product</span>
+              </button>
+            </div>
+            <ul class="result-list__wrap">
+              <li class="list__head">
+                <span class="txt-p6 txt-fw-b no">No</span>
+                <span class="txt-p6 txt-fw-b image">Image</span>
+                <!-- 240821 텍스트 변경 -->
+                <span class="txt-p6 txt-fw-b code">Model code</span>
+                <span class="txt-p6 txt-fw-b name">Name</span>
+                <span class="txt-p6 txt-fw-b desc">Description</span>
+                <span class="txt-p6 txt-fw-b val-unit">Value/Unit</span>
+                <span class="txt-p6 txt-fw-b price">Price</span>
+              </li>
+              <li class="list__el-box">
+                <ul class="list-data">
+                  <li class="list__el">
+                    <span class="no txt-p5">1</span>
+                    <span class="image txt-p5">
+                      <img src="/pub-only/images/offering-category-img-sample.png" alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY12</span>
+                      <span class="name txt-p5">CoolFlow FlexPipe</span>
+                      <span class="desc txt-p5">The free repair period is valid for 2 years
+                        from
+                        the date of purchase.The free repair</span>
+                      <span class="val-unit txt-p5">3/m</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">420,480,000</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn">
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">2</span>
+                    <span class="image txt-p5">
+                      <img src="/pub-only/images/offering-category-img-sample.png" alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY12</span>
+                      <span class="name txt-p5">ArcticDuct Pro</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">5/kg</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn">
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">3</span>
+                    <span class="image txt-p5">
+                      <img src="/pub-only/images/offering-category-img-sample.png" alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY12</span>
+                      <span class="name txt-p5">FrostGuard FlexTube</span>
+                      <span class="desc txt-p5">After the warranty period, maintenance
+                        services may
+                        incur additional charges After the warranty period,
+                        maintenance services may incur additional charges
+                        After the warranty period, maintenance services may
+                        incur additional charges</span>
+                      <span class="val-unit txt-p5">15/m²</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn">
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">4</span>
+                    <span class="image txt-p5">
+                      <img src="/pub-only/images/offering-category-img-sample.png" alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY12</span>
+                      <span class="name txt-p5">ChillTech FlexFlow</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">20/ft</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">420,480,000</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn" disabled>
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">5</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY12</span>
+                      <span class="name txt-p5">ChillTech FlexFlow</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">10L</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn">
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">6</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY12</span>
+                      <span class="name txt-p5">ChillTech FlexFlow</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">10L</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="product-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn">
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                </ul>
+                <div class="icon-loading-box">
+                  <div class="icon-loading"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 240702 caution 관련 구조 수정 -->
+          <div class="caution-wrap">
+            <p class="caution txt-p7">
+              You can only edit and delete categories, products, and
+              services that you have registered.<br />
+              If you wish to edit items registered by other users, please
+              contact the Admin or Sub Admin.
+            </p>
+          </div>
+        </div>
+        <!-- 240805 .tabpanel 클래스 추가 -->
+        <!-- 240821 .service-tab 클래스 추가 -->
+        <div role="tabpanel" aria-labelledby="service" hidden="hidden" class="service-tab tabpanel">
+          <div class="add-wrap">
+            <p class="quantity__desc txt-p7">
+              ※ You can register up to 30 category maximum
+              (<span>0</span>/30)
+            </p>
+            <button type="button" class="btn-block type2 md add-btn" data-layer-target="product-category-popup">
+              <span class="btn-block__txt">Add Category</span>
+            </button>
+          </div>
+
+          <!-- category 미 등록 화면 / 240821 추가 -->
+          <div class="my-result__wrap">
+            <ul class="result-list__wrap no-register">
+              <li class="list__el-box">
+                <!-- 240626 문구 수정 -->
+                <div class="list-nodata">
+                  <p class="txt-p6">There is no registered content.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 등록된 카테고리의 product 등록 전 화면 / 240821 추가 -->
+          <div class="my-result__wrap">
+            <div class="box-top">
+              <p class="box-tit txt-h6 txt-fw-b">Category</p>
+              <div class="edit-wrap">
+                <p class="category-name txt-p5 txt-ellipsis">
+                  Name 1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                </p>
+                <button type="button" class="btn-block category-edit-btn" data-layer-target="product-category-popup"
+                  disabled="">
+                  <span class="btn-block__txt">Edit</span>
+                </button>
+              </div>
+              <button class="close-btn"></button>
+            </div>
+            <div class="result__num-btn">
+              <button type="button" class="btn-block md add-prod-btn" data-layer-target="service-popup">
+                <span class="btn-block__txt">Add Service</span>
+              </button>
+            </div>
+            <!-- 240821 .before-register 클래스 제거 및 .list-head 변경 -->
+            <ul class="result-list__wrap">
+              <li class="list__head">
+                <span class="txt-p6 txt-fw-b no">No</span>
+                <span class="txt-p6 txt-fw-b image">Image</span>
+                <span class="txt-p6 txt-fw-b code">Model code</span>
+                <span class="txt-p6 txt-fw-b name">Name</span>
+                <span class="txt-p6 txt-fw-b desc">Description</span>
+                <span class="txt-p6 txt-fw-b val-unit">Value/Unit</span>
+                <span class="txt-p6 txt-fw-b price">Price</span>
+              </li>
+              <li class="list__el-box">
+                <div class="list-nodata">
+                  <p class="txt-p6">There is no registered content.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- 등록된 카테고리의 product 등록 후 화면 -->
+          <div class="my-result__wrap">
+            <div class="box-top">
+              <p class="box-tit txt-h6 txt-fw-b">Category</p>
+              <div class="edit-wrap">
+                <p class="category-name txt-p5">Name 1</p>
+                <button type="button" class="btn-block category-edit-btn" data-layer-target="product-category-popup">
+                  <span class="btn-block__txt">Edit</span>
+                </button>
+              </div>
+              <!-- 240821 .close-btn 삭제 -->
+            </div>
+            <div class="result__num-btn">
+              <button type="button" class="btn-block md add-prod-btn" data-layer-target="service-popup">
+                <span class="btn-block__txt">Add Service</span>
+              </button>
+            </div>
+            <ul class="result-list__wrap">
+              <li class="list__head">
+                <span class="txt-p6 txt-fw-b no">No</span>
+                <span class="txt-p6 txt-fw-b image">Image</span>
+                <span class="txt-p6 txt-fw-b code">Model code</span>
+                <span class="txt-p6 txt-fw-b name">Name</span>
+                <span class="txt-p6 txt-fw-b desc">Description</span>
+                <span class="txt-p6 txt-fw-b val-unit">Value/Unit</span>
+                <span class="txt-p6 txt-fw-b price">Price</span>
+              </li>
+              <li class="list__el-box">
+                <ul class="list-data">
+                  <li class="list__el">
+                    <span class="no txt-p5">1</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY12</span>
+                      <span class="name txt-p5">CoolFlow FlexPipe</span>
+                      <span class="desc txt-p5">Available only within the warranty period of 2
+                        years.</span>
+                      <span class="val-unit txt-p5">3/person</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="service-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn">
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">2</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY13</span>
+                      <span class="name txt-p5">CoolFlow FlexPipe</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">5/h</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">420,480,000</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="service-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn">
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">3</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">-</span>
+                      <span class="name txt-p5">CoolFlow FlexPipe</span>
+                      <span class="desc txt-p5">After the warranty period, maintenance
+                        services may
+                        incur additional charges..</span>
+                      <span class="val-unit txt-p5">2/min</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="service-popup">
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn">
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">4</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY14</span>
+                      <span class="name txt-p5">CoolFlow FlexPipe</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">10/day</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="service-popup" disabled>
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn" disabled>
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                  <li class="list__el">
+                    <span class="no txt-p5">5</span>
+                    <span class="image txt-p5">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="category image" />
+                    </span>
+                    <!-- 240805 .list__detail 구조 추가 -->
+                    <div class="list__detail">
+                      <span class="code txt-p5">ABCCOMPANY14</span>
+                      <span class="name txt-p5">CoolFlow FlexPipe</span>
+                      <span class="desc txt-p5">-</span>
+                      <span class="val-unit txt-p5">1/year</span>
+                      <!-- 240821 TL 텍스트 제거 -->
+                      <span class="price txt-p5">0</span>
+                    </div>
+                    <span class="list-btn">
+                      <button type="button" class="btn-icon edit-btn" data-layer-target="service-popup" disabled>
+                        <span class="txt-blind">edit</span>
+                      </button>
+                      <button type="button" class="btn-icon delete-btn" disabled>
+                        <span class="txt-blind">delete</span>
+                      </button>
+                    </span>
+                  </li>
+                </ul>
+                <div class="icon-loading-box">
+                  <div class="icon-loading"></div>
+                </div>
+                <!-- data가 없을때  -->
+                <!-- <div class="list-nodata">
+                    <p class="txt-p6">There is no registered content.</p>
+                </div> -->
+              </li>
+            </ul>
+          </div>
+
+          <!-- 240702 caution 관련 구조 수정 -->
+          <div class="caution-wrap">
+            <p class="caution txt-p7">
+              You can only edit and delete categories, products, and
+              services that you have registered.<br />
+              If you wish to edit items registered by other users, please
+              contact the Admin or Sub Admin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- category setting popup -->
+    <!-- 240626 .product-category-popup 클래스 추가 -->
+    <div class="alert-wrap product-category-popup" id="product-category-popup">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Category Setting</p>
+        </div>
+        <div class="aler__container">
+          <div class="category-popup-inner">
+            <div class="field-box">
+              <label class="txt-label txt-req" for="required-input">Name</label>
+              <div class="input-box">
+                <input type="text" class="input-box__input" id="required-input" placeholder="Type a category name"
+                  maxlength="1000" />
+              </div>
+              <!-- 240626 문구 수정 -->
+              <p class="txt-error">This field is required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- product setting popup -->
+    <!-- 240805 .product-popup 클래스 추가 -->
+    <div class="popup-wrap product-popup" id="product-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Product Setting</p>
+        </div>
+        <div class="popup__container">
+          <div class="popup-cont-inner">
+            <div class="setting-popup-inner">
+              <!-- edit 일 경우에만 해당 field box.category-box 노출 -->
+              <div class="field-box category-box">
+                <label class="txt-label txt-req">Category</label>
+                <div class="combo-box">
+                  <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                    aria-expanded="false">
+                    Main Pipeline
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem" class="selected">
+                        Main Pipeline
+                      </li>
+                      <li role="menuitem">Cover</li>
+                      <li role="menuitem">Category name 3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- add 일 경우에만 해당 field box.method-box 노출 필요 -->
+              <div class="field-box method-box">
+                <p class="txt-p4 txt-fw-b">Registration Method</p>
+                <label class="btn-radio">
+                  <input type="radio" class="btn-radio__input" name="registration" value="single_item_input" checked />
+                  <span class="btn-radio__icon"></span>
+                  <span class="btn-radio__txt">Single item input</span>
+                </label>
+                <label class="btn-radio">
+                  <input type="radio" class="btn-radio__input" name="registration" value="bulk_upload" />
+                  <span class="btn-radio__icon"></span>
+                  <span class="btn-radio__txt">Bulk Upload</span>
+                </label>
+              </div>
+              <div class="single-item-input">
+                <div class="field-box__wrap code-name-box">
+                  <div class="field-box">
+                    <label class="txt-label" for="default-input">Model Code</label>
+                    <div class="input-box">
+                      <!-- 240821 default로 고정출력되는 DVM Pro 상품일 경우 해당 input disabled 처리 -->
+                      <input type="text" class="input-box__input" id="default-input" placeholder="Type a model code"
+                        maxlength="1000" />
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-req" for="required-input">Name</label>
+                    <div class="input-box">
+                      <!-- 240821 default로 고정출력되는 DVM Pro 상품일 경우 해당 input disabled 처리 -->
+                      <input type="text" class="input-box__input" id="required-input" placeholder="Type a product name"
+                        maxlength="1000" />
+                    </div>
+                    <!-- 240626 문구 수정 -->
+                    <p class="txt-error">This field is required.</p>
+                  </div>
+                </div>
+                <div class="field-box__wrap val-unit-box">
+                  <div class="field-box">
+                    <label class="txt-label" for="default-input">Value</label>
+                    <div class="input-box">
+                      <!-- 240821 default로 고정출력되는 DVM Pro 상품일 경우 해당 input disabled 처리 -->
+                      <input type="text" class="input-box__input" id="default-input" placeholder="Type a value"
+                        maxlength="1000" />
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label" for="default-input">Unit</label>
+                    <div class="input-box">
+                      <!-- 240821 default로 고정출력되는 DVM Pro 상품일 경우 해당 input disabled 처리 -->
+                      <input type="text" class="input-box__input" id="default-input" placeholder="e.g. m/kg/cm"
+                        maxlength="1000" />
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label" for="default-input">Price</label>
+                    <div class="input-box">
+                      <!-- 240821 default로 고정출력되는 DVM Pro 상품일 경우 해당 input disabled 처리 -->
+                      <input type="text" class="input-box__input" id="default-input" placeholder="Type a price"
+                        maxlength="1000" />
+                    </div>
+                  </div>
+                </div>
+                <div class="field-box desc-box">
+                  <label class="txt-label" for="default-input">Description</label>
+                  <div class="input-box">
+                    <!-- 240821 default로 고정출력되는 DVM Pro 상품일 경우 해당 input disabled 처리 -->
+                    <input type="text" class="input-box__input" id="default-input" placeholder="Type a description"
+                      maxlength="1000" />
+                  </div>
+                </div>
+                <div class="file-input-wrap image-box">
+                  <p class="txt-p4 txt-fw-b">Image</p>
+                  <div class="file-field-box">
+                    <div class="prev-img">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="preview image" />
+                    </div>
+                    <div class="field-box">
+                      <div class="input-box">
+                        <!-- 240709 클래스 제거 -->
+                        <p class="file-name txt-p6"></p>
+                        <button class="file-name-btn" type="button"></button>
+                        <input type="file" id="single-item-file" accept=".jpg,.jpeg,.png,.gif,.bmp"
+                          class="hidden-file-input" />
+                      </div>
+                      <label for="single-item-file">
+                        <!-- 240821 default로 고정출력되는 DVM Pro 상품일 경우 해당 .upload-btn에 .disabled 클래스 추가 필요 -->
+                        <div class="btn-block upload-btn">
+                          <span class="btn-block__txt">Upload</span>
+                        </div>
+                      </label>
+                      <p class="caution txt-p7">
+                        File must be less than 10MB. Allowed file types :
+                        jpg, jpeg, png, gif, bmp.
+                      </p>
+                      <p class="txt-error">
+                        Please check the file size and types.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bulk-upload hidden">
+                <!-- 240702 .md class 제거 -->
+                <!-- 240709 excel download button 태그 변경 -->
+                <a href="#" role="button" class="btn-block excel-download-btn">
+                  <span class="btn-block__txt">Excel Download</span>
+                  <i class="btn-block__icon icon-download"></i>
+                </a>
+                <div class="file-input-wrap image-box">
+                  <div class="file-field-box">
+                    <div class="field-box">
+                      <div class="input-box">
+                        <!-- 240709 클래스 제거 -->
+                        <p class="file-name txt-p6"></p>
+                        <button class="file-name-btn" type="button"></button>
+                        <input type="file" id="bulk-upload-file" accept=".xlsx,.xls" class="hidden-file-input" />
+                      </div>
+                      <div class="bulk-upload-wrap">
+                        <label for="bulk-upload-file">
+                          <div class="btn-block upload-btn">
+                            <span class="btn-block__txt">Upload</span>
+                          </div>
+                        </label>
+                        <div>
+                          <p class="caution txt-p7">
+                            File must be less than 20MB. Allowed file types
+                            : .xlsx, .xls
+                          </p>
+                          <p class="txt-error">
+                            Please check the file size and types.
+                          </p>
+                          <p class="txt-error">
+                            The data is missing. Please fill in all required
+                            fields.
+                          </p>
+                          <p class="txt-error">
+                            An error occurred while loading the results.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg" onclick="window.hvachubFunc.closePopup()">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <button type="button" class="btn-block type2 lg" data-layer-target="popup-layer00">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+    <!-- service setting popup -->
+    <!-- 240805 .service-popup 클래스 추가 -->
+    <div class="popup-wrap service-popup" id="service-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Service Setting</p>
+        </div>
+        <div class="popup__container">
+          <div class="popup-cont-inner">
+            <div class="setting-popup-inner">
+              <!-- edit 일 경우에만 해당 field box.category-box 노출 -->
+              <div class="field-box category-box">
+                <label class="txt-label txt-req">Category</label>
+                <div class="combo-box">
+                  <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu"
+                    aria-expanded="false">
+                    Service Name 1
+                  </button>
+                  <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                    <ul class="combo-box__menu-list">
+                      <li role="menuitem" class="selected">
+                        Service Name 1
+                      </li>
+                      <li role="menuitem">Service Name 2</li>
+                      <li role="menuitem">Service Name 3</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- add 일 경우에만 해당 field box.method-box 노출 필요 -->
+              <div class="field-box method-box">
+                <p class="txt-p4 txt-fw-b">Registration Method</p>
+                <label class="btn-radio">
+                  <input type="radio" class="btn-radio__input" name="registration_method" value="single_item_input"
+                    checked="" />
+                  <span class="btn-radio__icon"></span>
+                  <span class="btn-radio__txt">Single item input</span>
+                </label>
+                <label class="btn-radio">
+                  <input type="radio" class="btn-radio__input" name="registration_method" value="bulk_upload" />
+                  <span class="btn-radio__icon"></span>
+                  <span class="btn-radio__txt">Bulk Upload</span>
+                </label>
+              </div>
+              <div class="single-item-input">
+                <div class="field-box__wrap code-name-box">
+                  <div class="field-box">
+                    <label class="txt-label" for="default-input">Model Code</label>
+                    <div class="input-box">
+                      <input type="text" class="input-box__input" id="default-input" placeholder="Type a model code"
+                        maxlength="1000" />
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-req" for="required-input">Name</label>
+                    <div class="input-box">
+                      <input type="text" class="input-box__input" id="required-input" placeholder="Type a product name"
+                        maxlength="1000" />
+                    </div>
+                    <!-- 240626 문구 수정 -->
+                    <p class="txt-error">This field is required.</p>
+                  </div>
+                </div>
+                <div class="field-box__wrap val-unit-box">
+                  <div class="field-box">
+                    <label class="txt-label" for="default-input">Value</label>
+                    <div class="input-box">
+                      <input type="text" class="input-box__input" id="default-input" placeholder="Type a value"
+                        maxlength="1000" />
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label" for="default-input">Unit</label>
+                    <div class="input-box">
+                      <input type="text" class="input-box__input" id="default-input" placeholder="e.g. person, h, min"
+                        maxlength="1000" />
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label" for="default-input">Price</label>
+                    <div class="input-box">
+                      <input type="text" class="input-box__input" id="default-input" placeholder="Type a price"
+                        maxlength="1000" />
+                    </div>
+                  </div>
+                </div>
+                <!-- 240702 .desc-box 구조 수정 -->
+                <div class="field-box desc-box">
+                  <label class="txt-label" for="default-input">Description</label>
+                  <div class="input-box">
+                    <input type="text" class="input-box__input" id="default-input" placeholder="Type a description"
+                      maxlength="1000" />
+                  </div>
+                </div>
+                <div class="file-input-wrap image-box">
+                  <p class="txt-p4 txt-fw-b">Image</p>
+                  <div class="file-field-box">
+                    <div class="prev-img">
+                      <img
+                        src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-no-image.svg"
+                        alt="preview image" />
+                    </div>
+                    <div class="field-box">
+                      <div class="input-box">
+                        <!-- 240709 클래스 제거 -->
+                        <!-- 240709 input id 수정 -->
+                        <p class="file-name txt-p6"></p>
+                        <button class="file-name-btn" type="button"></button>
+                        <input type="file" id="single-item-file02" accept=".jpg,.jpeg,.png,.gif,.bmp"
+                          class="hidden-file-input" />
+                      </div>
+                      <label for="single-item-file02">
+                        <div class="btn-block upload-btn">
+                          <span class="btn-block__txt">Upload</span>
+                        </div>
+                      </label>
+                      <p class="caution txt-p7">
+                        File must be less than 10MB. Allowed file types :
+                        jpg, jpeg, png, gif, bmp.
+                      </p>
+                      <p class="txt-error">
+                        Please check the file size and types.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bulk-upload hidden">
+                <!-- 240702 .md class 제거 -->
+                <!-- 240709 excel download button 태그 변경 -->
+                <a href="#" role="button" class="btn-block excel-download-btn">
+                  <span class="btn-block__txt">Excel Download</span>
+                  <i class="btn-block__icon icon-download"></i>
+                </a>
+                <div class="file-input-wrap image-box">
+                  <div class="file-field-box">
+                    <div class="field-box">
+                      <div class="input-box">
+                        <!-- 240709 클래스 제거 -->
+                        <!-- 240709 input id 및 accept 수정 -->
+                        <p class="file-name txt-p6"></p>
+                        <button class="file-name-btn" type="button"></button>
+                        <input type="file" id="bulk-upload-file02" accept=".xlsx,.xls" class="hidden-file-input" />
+                      </div>
+                      <div class="bulk-upload-wrap">
+                        <label for="bulk-upload-file02">
+                          <div class="btn-block upload-btn">
+                            <span class="btn-block__txt">Upload</span>
+                          </div>
+                        </label>
+                        <div>
+                          <p class="caution txt-p7">
+                            File must be less than 20MB. Allowed file types
+                            : .xlsx, .xls
+                          </p>
+                          <p class="txt-error">
+                            Please check the file size and types.
+                          </p>
+                          <p class="txt-error">
+                            The data is missing. Please fill in all required
+                            fields.
+                          </p>
+                          <p class="txt-error">
+                            An error occurred while loading the results.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg" onclick="window.hvachubFunc.closePopup()">
+            <span class="btn-block__txt">Cancel</span>
+          </button>
+          <button type="button" class="btn-block type2 lg" data-layer-target="popup-layer00">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- //component -->
+
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/offering-setting/clientlibs/js/main.js"></script>
+</body>
+
+</html>

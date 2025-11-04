@@ -1,0 +1,103 @@
+.lib-list-sect {
+  padding-inline: 24px;
+}
+/* search area */
+.lib-list-sect .lib-search-area {
+  display: block;
+  max-width: 1392px;
+  width: 100%;
+  background: #f7f7f7;
+  padding: 16px;
+  margin: 0 auto;
+  border-radius: var(--border-base);
+}
+.lib-list-sect .filter-wrap__top .filter-left .filter-btn {
+   position: relative; 
+   display: flex; 
+   align-items: center;
+}
+
+.lib-list-sect .filter-wrap__top .filter-left .filter-btn:before {
+  content: ''; 
+  display:inline-block; 
+  width:24px; 
+  height:24px; 
+  background:url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-filters-on.svg) no-repeat center;
+}
+
+.lib-list-sect .filter-wrap__cont.on-filter .filter-wrap__menu .accordion-box.sm .accordion__tit {
+  height:54px;
+}
+
+.lib-list-sect .filter-wrap__cont.on-filter .filter-wrap__menu .accordion-box.sm .accordion__tit .icon-accordion { 
+  top:15px; 
+}
+.lib-list-sect  .filter-wrap__cont .align-box__tit {
+  display:flex;
+  align-items: center;
+  height:32px;
+  margin-top:0;
+}
+.lib-list-sect .filter-wrap__cont .align-box__tit + .align-block-box {
+  margin-top:0;
+}
+.lib-list-sect .lib-view__imgcard .lib-view-select-all {
+  padding-top:16px;
+}
+.lib-view-select-all + .lib-img-list { margin-top:8px; }
+.lib-list-sect .lib-img-list .lib-view-list__item { padding-left:24px;}
+
+.lib-search-area .input-search-box .input-box.input-search {
+  position: relative;
+  width: 775px;
+  z-index: 9;
+}
+.lib-list-sect .filter-wrap {
+  margin-inline: -24px;
+}
+
+/* ===================== Tablet ===================== */
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  /* search area */
+  .lib-list-sect .lib-search-area {
+    padding: 1.667vw;
+    margin-bottom: 0.556vw;
+  }
+  .lib-search-area .input-search-box .input-box.input-search {
+    width: 53.819vw;
+  }
+/* [E]Tablet */
+}
+/* ===================== Mobile ===================== */
+@media only screen and (max-width: 768px) {
+  .lib-list-sect {
+    padding: 0;
+  }
+  /* search area */
+  .lib-list-sect .lib-search-area {
+    padding-inline: 24px;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .lib-search-area .input-search-box {
+    display: block;
+  }
+  .lib-search-area .input-search-box .input-box.input-search {
+    width: 100%;
+  }
+  .lib-search-area .input-search-box > .btn-block {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 12px;
+  }
+  .lib-list-sect .filter-wrap {
+    margin-inline: 0;
+  }
+  .lib-list-sect .filter-wrap .filter-wrap__top {
+    border-top: 1px solid #dddddd;
+  }
+  .lib-view-select-all + .lib-img-list { 
+    margin-top: 0; 
+  }
+/* [E]Mobile */
+}

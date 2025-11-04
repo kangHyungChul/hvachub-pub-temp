@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <title>Permission Setting</title>
+
+  <link rel="stylesheet" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/permission-setting/clientlibs/css/main.css" />
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- component -->
+  <section class="permission-setting">
+    <h2 class="permission-setting__tit txt-h3">Permission setting</h2>
+    <!-- 240626 .solting-field-box 클래스 추가 -->
+    <div class="field-box solting-field-box">
+      <label class="txt-label txt-blind">Select Role</label>
+      <div class="combo-box box-type">
+        <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">All</button>
+        <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+          <ul class="combo-box__menu-list">
+            <li role="menuitem">Sub Admin</li>
+            <li role="menuitem">Base</li>
+            <li role="menuitem">New1</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <article class="role-box">
+      <div class="role-list">
+        <ul class="list-menu">
+          <li class="list__top">User ID</li>
+          <li class="list__top">Menu</li>
+          <li class="list__top bg-white">
+              <span>All Data Access</span>
+          </li>
+          <li class="list__item-box">
+            <div class="list__menu">Menu</div>
+            <ul class="list__item-inner">
+              <li class="menu-row">        
+                <span>Quote</span>          
+            </li>
+            <li class="menu-row">        
+                <span>Tools</span>          
+            </li>
+            <li class="menu-row">        
+                <span>Simulation Request</span>          
+            </li>
+            <li class="menu-row">        
+                <span>Order</span>          
+            </li>
+            <li class="menu-row">        
+                <span>Account Balance</span>          
+            </li>
+            <li class="menu-row">        
+                <span>User Management</span>          
+            </li>
+            <li class="menu-row">        
+                <span>Proposal Setting</span>          
+            </li>
+            </ul>
+          </li>          
+        </ul>
+        <ul class="list-check">      
+          <li class="list-check__role list-role-wrap role-wrap-default">
+              <ul class="list-check__inner">           
+                  <li class="list__top user-id">
+                      <span class="txt-p5">hvaccistest006@yopmail.com</span>
+                      <button type="button" class="btn-icon delete-btn" data-layer-target="delete-popup" data-role-id="default" data-user-id="hvaccistest006@yopmail.com">
+                        <span class="txt-blind">Delete</span>
+                      </button>
+                  </li>
+                  <li class="list__top bg-white">
+                      <div class="field-box">
+                      <label class="txt-label txt-blind">Default</label>
+                      <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt permission-list" aria-haspopup="true" data-role-id="default" data-role-userid="hvaccistest006@yopmail.com" aria-controls="combo-box__menu" aria-expanded="false">
+                          Default
+                          </button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                          <ul class="combo-box__menu-list role-menu-list">
+                              <li role="menuitem" class="new-role-btn" data-layer-target="new-role-popup">
+                              + New Role
+                              </li>
+                          <li role="menuitem" data-role-id="default" class="role-wrapdefault">Default</li><li role="menuitem" data-role-id="sub_admin" class="role-wrapsub_admin">Sub Admin</li></ul>
+                          </div>
+                      </div>
+                      </div>
+                  </li>
+                  <li class="list__top">
+                    <!-- 기본상태 클래스 .state 클래스 사용, check상태 .state.chk //-->
+                    <span class="state">-</span>
+                  </li>        
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+              </ul>
+          </li>
+          
+          <li class="list-check__role list-role-wrap role-wrap-default">
+              <ul class="list-check__inner">           
+                  <li class="list__top user-id">
+                      <span class="txt-p5">hvaccistest007@yopmail.com</span>
+                      <button type="button" class="btn-icon delete-btn" data-layer-target="delete-popup" data-role-id="default" data-user-id="hvaccistest007@yopmail.com">
+                      <span class="txt-blind">Delete</span>
+                      </button>
+                  </li>
+                  <li class="list__top bg-white">
+                      <div class="field-box">
+                      <label class="txt-label txt-blind">Default</label>
+                      <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt permission-list" aria-haspopup="true" data-role-id="default" data-role-userid="hvaccistest007@yopmail.com" aria-controls="combo-box__menu" aria-expanded="false">
+                          Default
+                          </button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                          <ul class="combo-box__menu-list role-menu-list">
+                              <li role="menuitem" class="new-role-btn" data-layer-target="new-role-popup">
+                              + New Role
+                              </li>
+                          <li role="menuitem" data-role-id="default" class="role-wrapdefault">Default</li><li role="menuitem" data-role-id="sub_admin" class="role-wrapsub_admin">Sub Admin</li></ul>
+                          </div>
+                      </div>
+                      </div>
+                  </li>
+                  <li class="list__top">
+                    <span class="state chk">-</span>
+                  </li>        
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>     
+              </ul>
+          </li>
+          
+          <li class="list-check__role list-role-wrap role-wrap-default">
+              <ul class="list-check__inner">           
+                  <li class="list__top user-id">
+                      <span class="txt-p5">hvaccistest007@yopmail.com</span>
+                      <button type="button" class="btn-icon delete-btn" data-layer-target="delete-popup" data-role-id="default" data-user-id="hvaccistest007@yopmail.com">
+                      <span class="txt-blind">Delete</span>
+                      </button>
+                  </li>
+                  <li class="list__top bg-white">
+                      <div class="field-box">
+                        <label class="txt-label txt-blind">Default</label>
+                        <div class="combo-box box-type">
+                            <button type="button" class="combo-box__txt permission-list" aria-haspopup="true" data-role-id="default" data-role-userid="hvaccistest007@yopmail.com" aria-controls="combo-box__menu" aria-expanded="false">
+                            Default
+                            </button>
+                            <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                            <ul class="combo-box__menu-list role-menu-list">
+                                <li role="menuitem" class="new-role-btn" data-layer-target="new-role-popup">
+                                + New Role
+                                </li>
+                            <li role="menuitem" data-role-id="default" class="role-wrapdefault">Default</li><li role="menuitem" data-role-id="sub_admin" class="role-wrapsub_admin">Sub Admin</li></ul>
+                            </div>
+                        </div>
+                      </div>
+                  </li>
+                  <li class="list__top">
+                    <span class="state">-</span>
+                  </li>        
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>    
+              </ul>
+          </li>
+          
+          <li class="list-check__role list-role-wrap role-wrap-default">
+              <ul class="list-check__inner">           
+                  <li class="list__top user-id">
+                      <span class="txt-p5">hvaccistest008@yopmail.com</span>
+                      <button type="button" class="btn-icon delete-btn" data-layer-target="delete-popup" data-role-id="default" data-user-id="hvaccistest008@yopmail.com">
+                      <span class="txt-blind">Delete</span>
+                      </button>
+                  </li>
+                  <li class="list__top bg-white">
+                      <div class="field-box">
+                      <label class="txt-label txt-blind">Default</label>
+                      <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt permission-list" aria-haspopup="true" data-role-id="default" data-role-userid="hvaccistest008@yopmail.com" aria-controls="combo-box__menu" aria-expanded="false">
+                          Default
+                          </button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                          <ul class="combo-box__menu-list role-menu-list">
+                              <li role="menuitem" class="new-role-btn" data-layer-target="new-role-popup">
+                              + New Role
+                              </li>
+                          <li role="menuitem" data-role-id="default" class="role-wrapdefault">Default</li><li role="menuitem" data-role-id="sub_admin" class="role-wrapsub_admin">Sub Admin</li></ul>
+                          </div>
+                      </div>
+                      </div>
+                  </li>
+                  <li class="list__top">
+                    <span class="state chk">-</span>
+                  </li>        
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+              </ul>
+          </li>
+          
+          <li class="list-check__role list-role-wrap role-wrap-default">
+              <ul class="list-check__inner">           
+                  <li class="list__top user-id">
+                      <span class="txt-p5">hvaccistest009@yopmail.com</span>
+                      <button type="button" class="btn-icon delete-btn" data-layer-target="delete-popup" data-role-id="default" data-user-id="hvaccistest009@yopmail.com">
+                      <span class="txt-blind">Delete</span>
+                      </button>
+                  </li>
+                  <li class="list__top bg-white">
+                      <div class="field-box">
+                      <label class="txt-label txt-blind">Default</label>
+                      <div class="combo-box box-type">
+                          <button type="button" class="combo-box__txt permission-list" aria-haspopup="true" data-role-id="default" data-role-userid="hvaccistest009@yopmail.com" aria-controls="combo-box__menu" aria-expanded="false">
+                          Default
+                          </button>
+                          <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                          <ul class="combo-box__menu-list role-menu-list">
+                              <li role="menuitem" class="new-role-btn" data-layer-target="new-role-popup">
+                              + New Role
+                              </li>
+                          <li role="menuitem" data-role-id="default" class="role-wrapdefault">Default</li><li role="menuitem" data-role-id="sub_admin" class="role-wrapsub_admin">Sub Admin</li></ul>
+                          </div>
+                      </div>
+                      </div>
+                  </li>
+                  <li class="list__top">
+                    <span class="state">-</span>
+                  </li>        
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-yes.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>
+                  <li class="list__item">
+                    <img src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-status-no.svg" alt="permission role status image">
+                  </li>  
+              </ul>
+          </li>
+        
+          <!-- 갯수에 따른 여백용 영역  -->
+          <li class="list-check__role blank">
+            <ul class="list-check__inner">
+              <li class="list__top user-id"></li>
+              <li class="list__top bg-white"></li>                  
+              <li class="list__top"></li>                  
+              <li class="list__item"></li>
+              <li class="list__item"></li>
+              <li class="list__item"></li>
+              <li class="list__item"></li>
+              <li class="list__item"></li>
+              <li class="list__item"></li>
+              <li class="list__item"></li>
+            </ul>
+          </li>
+              
+        </ul>        
+      </div>
+  
+      <!-- 240626 tooltip 영역 추가 추후 수정 -->
+      <div class="tooltip-btn-box">
+        <p class="txt-p5">Menu Description</p>
+        <button type="button" class="btn-icon icon-tootip" data-layer-target="menu-desc-popup">
+          <span class="txt-blind">menu description button</span>
+        </button>
+      </div>
+
+      <div class="role-btn-wrap">
+        <button type="button" class="btn-block md cancel-btn">
+          <span class="btn-block__txt">Cancel</span>
+        </button>
+        <button type="button" class="btn-block md type2 btn-save">
+          <span class="btn-block__txt">Save</span>
+        </button>
+      </div>
+    </article>
+
+    <!-- 2024-10-22 New Role popup -->
+    <div class="popup-wrap new-role-popup" id="new-role-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">New Role</p>
+        </div>
+        <div class="popup__container">
+          <div class="basic-list__result">
+            <ul class="list-head">
+              <li class="el__menu"><span class="txt-p5 txt-fw-b">Role</span></li>
+              <li class="el__check">
+                <!-- 2024-11-12 div 삭제 : list-row -->
+                <div class="field-box">
+                  <label class="txt-label txt-blind" for="">menu name</label>
+                  <div class="input-box box-type">
+                    <input type="text" class="input-box__input" id="" placeholder="" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="list-body">
+              <!-- 2024-11-12 li 추가 : list-row  -->
+              <li class="list-row">
+                <div class="el__menu">
+                  <span class="txt-p5">All Data Access</span>
+                </div>
+                <div class="el__check">
+                  <!-- 2024-11-12 위치이동( list-head ==> list-body ) : btn-checkbox  -->
+                  <label class="btn-checkbox">
+                    <input type="checkbox" class="btn-checkbox__input" name="role setting" value="All" />
+                    <span class="btn-checkbox__icon"></span>
+                  </label>
+                </div>
+              </li>
+              <!-- 2024-11-12 li/div 추가 : 
+                list-row-box 
+                list-col
+                list-row__inner
+            -->
+              <li class="list-row-box">
+                <div class="list-col">
+                  <span class="txt-p5">Menu</span>
+                </div>
+                <ul class="list-row__inner">
+                  <li class="list-row">
+                    <div class="el__menu">
+                      <span class="txt-p5">Quote</span>
+                    </div>
+                    <div class="el__check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Quote" checked />
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-row">
+                    <div class="el__menu">
+                      <span class="txt-p5">Tools</span>
+                    </div>
+                    <div class="el__check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Tools" checked />
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-row">
+                    <div class="el__menu">
+                      <span class="txt-p5">Simulation Request</span>
+                    </div>
+                    <div class="el__check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="role setting" value="All" checked />
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-row">
+                    <div class="el__menu">
+                      <span class="txt-p5">Order</span>
+                    </div>
+                    <div class="el__check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Order" />
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-row">
+                    <div class="el__menu">
+                      <span class="txt-p6">Account Balance</span>
+                    </div>
+                    <div class="el__check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Account Balance" />
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-row">
+                    <div class="el__menu">
+                      <span class="txt-p5">User Management</span>
+                    </div>
+                    <div class="el__check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="role setting" value="User Management" />
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-row">
+                    <div class="el__menu">
+                      <span class="txt-p5">Proposal Setting</span>
+                    </div>
+                    <div class="el__check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="role setting" value="Proposal Setting" />
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+          <div class="txt-error-wrap">
+            <p class="txt-error">This field is required.</p>
+            <p class="txt-error">Duplicated roles cannot be registered.</p>
+          </div>
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg" onclick="window.hvachubFunc.closePopup('new-role-popup')">
+            <span class="btn-block__txt">Back</span>
+          </button>
+          <button type="button" class="btn-block type2 lg" data-layer-target="save-alert">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+    <!-- //New Role popup -->
+    
+  
+  <!-- 2024-10-22 common menu description popup-->
+  <div class="popup-wrap menu-desc-popup" id="menu-desc-popup">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Menu Description</p>
+      </div>
+      <div class="popup__container">
+        <div class="menu-info-box">
+          <p class="txt-p6 txt-fw-b">*All Data Access</p>
+          <div class="menu-ds-info">
+            <p class="txt-p6"><span class="txt-point2">- Checked</span>: can view, edit, and delete data of your company's other employees</p>
+            <p class="txt-p6"><span class="txt-point2">- Unchecked</span>: access limited to your own data</p>
+          </div>
+        </div>
+        <div class="basic-list__result">
+          <ul class="list-head">
+            <li class="el__menu">
+              <p class="txt-p5 txt-fw-b">Menu</p>
+            </li>
+            <li class="el__info">
+              <p class="txt-p5 txt-fw-b">Access Permissions</p>
+            </li>
+          </ul>
+          <ul class="list-body">
+            <li class="list-row">
+              <div class="el__menu">
+                <p class="txt-p6">Quote</p>
+              </div>
+              <div class="el__info">
+                <p class="txt-p6">
+                  <span><strong>Project</strong>: access projects list, project details; select products; request quotations; generate proposals; request delivery schedule</span>
+                  <span><strong>Run-rate</strong>: select products; request delivery schedule</span>
+                </p>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="el__menu">
+                <p class="txt-p6">Tools</p>
+              </div>
+              <div class="el__info">
+                <p class="txt-p6">
+                  <span>Access Lifecycle Cost (LCC), Seasonal Energy Efficiency Ratio (SEER) and Seasonal Coefficient of Performance (SCOP) calculation tools</span>
+                </p>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="el__menu">
+                <p class="txt-p6">Simulation<br />Request</p>
+              </div>
+              <div class="el__info">
+                <p class="txt-p6">
+                  <span>Request detailed CFD and energy simulation reports</span>
+                </p>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="el__menu">
+                <p class="txt-p6">Order</p>
+              </div>
+              <div class="el__info">
+                <p class="txt-p6">
+                  <span><strong>Cart</strong>: add products, manage carts</span>
+                  <span><strong>Checkout</strong>: place and manage orders</span>
+                  <span><strong>Invoice</strong>: view invoices</span>
+                </p>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="el__menu">
+                <p class="txt-p6">Account<br />Balance</p>
+              </div>
+              <div class="el__info">
+                <p class="txt-p6">
+                  <span>View Account Balance, Invoice Payment Status</span>
+                </p>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="el__menu">
+                <p class="txt-p6">User Management</p>
+              </div>
+              <div class="el__info">
+                <p class="txt-p6">
+                  <span>Assign roles and permissions to account users</span>
+                </p>
+              </div>
+            </li>
+            <li class="list-row">
+              <div class="el__menu">
+                <p class="txt-p6">Proposal<br />SettingSettingSettingSettingSetting</p>
+              </div>
+              <div class="el__info">
+                <p class="txt-p6">
+                  <span>Set proposal pdf template</span>
+                  <span>Include non-Samsung products and services in proposals</span>
+                  <span>Define standard markup margin for proposals</span>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button type="button" class="btn-icon icon-close"><span class="txt-blind">Close</span></button>
+    </div>
+  </div>
+  <!-- //common menu description popup -->
+  
+
+    <!-- Delete popup -->
+    <!-- 2024-11-12 class 추가 : delete-alert -->
+    <div class="alert-wrap delete-alert" id="delete-alert">
+      <div class="alert-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="alert__header">
+          <p class="txt-p3 txt-fw-b">Delete Account</p>
+        </div>
+        <div class="aler__container">
+          <!-- 240805 br태그 클래스 추가 -->
+          <p class="txt-p6">
+            Are you sure you want to delete the user from your company? Deleted user IDs cannot be recovered.
+          </p>
+          <!-- 2024-10-22 문구 추가 -->
+          <p class="txt-caption">※ Changes must be saved to permanently delete the selected user</p>
+        </div>
+        <div class="alert__footer">
+          <button type="button" class="btn-block md">
+            <span class="btn-block__txt">No</span>
+          </button>
+          <button type="button" class="btn-block type2 md">
+            <span class="btn-block__txt">Yes</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close">
+          <span class="txt-blind">Close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 2024-11-12 common menu description popup-->
+    <div class="popup-wrap menu-desc-popup" id="menu-desc-popup">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Menu Description</p>
+        </div>
+        <div class="popup__container">
+          <div class="menu-info-box">
+            <p class="txt-p6 txt-fw-b">*All Data Access</p>
+            <div class="menu-ds-info">
+              <p class="txt-p6"><span class="txt-point2">- Checked</span>: can view, edit, and delete data of your company's other employees</p>
+              <p class="txt-p6"><span class="txt-point2">- Unchecked</span>: access limited to your own data</p>
+            </div>
+          </div>
+          <div class="basic-list__result">
+            <ul class="list-head">
+              <li class="el__menu">
+                <p class="txt-p5 txt-fw-b">Menu</p>
+              </li>
+              <li class="el__info">
+                <p class="txt-p5 txt-fw-b">Access Permissions</p>
+              </li>
+            </ul>
+            <ul class="list-body">
+              <li class="list-row">
+                <div class="el__menu">
+                  <p class="txt-p6">Quote</p>
+                </div>
+                <div class="el__info">
+                  <p class="txt-p6">
+                    <span><strong>Project</strong>: access projects list, project details; select products; request quotations; generate proposals; request delivery schedule</span>
+                    <span><strong>Run-rate</strong>: select products; request delivery schedule</span>
+                  </p>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="el__menu">
+                  <p class="txt-p6">Tools</p>
+                </div>
+                <div class="el__info">
+                  <p class="txt-p6">
+                    <span>Access Lifecycle Cost (LCC), Seasonal Energy Efficiency Ratio (SEER) and Seasonal Coefficient of Performance (SCOP) calculation tools</span>
+                  </p>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="el__menu">
+                  <p class="txt-p6">Simulation<br />Request</p>
+                </div>
+                <div class="el__info">
+                  <p class="txt-p6">
+                    <span>Request detailed CFD and energy simulation reports</span>
+                  </p>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="el__menu">
+                  <p class="txt-p6">Order</p>
+                </div>
+                <div class="el__info">
+                  <p class="txt-p6">
+                    <span><strong>Cart</strong>: add products, manage carts</span>
+                    <span><strong>Checkout</strong>: place and manage orders</span>
+                    <span><strong>Invoice</strong>: view invoices</span>
+                  </p>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="el__menu">
+                  <p class="txt-p6">Account<br />Balance</p>
+                </div>
+                <div class="el__info">
+                  <p class="txt-p6">
+                    <span>View Account Balance, Invoice Payment Status</span>
+                  </p>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="el__menu">
+                  <p class="txt-p6">User Management</p>
+                </div>
+                <div class="el__info">
+                  <p class="txt-p6">
+                    <span>Assign roles and permissions to account users</span>
+                  </p>
+                </div>
+              </li>
+              <li class="list-row">
+                <div class="el__menu">
+                  <p class="txt-p6">Proposal<br />SettingSettingSettingSettingSetting</p>
+                </div>
+                <div class="el__info">
+                  <p class="txt-p6">
+                    <span>Set proposal pdf template</span>
+                    <span>Include non-Samsung products and services in proposals</span>
+                    <span>Define standard markup margin for proposals</span>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="btn-icon icon-close"><span class="txt-blind">Close</span></button>
+      </div>
+    </div>
+    <!-- //common menu description popup -->
+  </section>
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/permission-setting/clientlibs/js/main.js"></script>
+</body>
+
+</html>

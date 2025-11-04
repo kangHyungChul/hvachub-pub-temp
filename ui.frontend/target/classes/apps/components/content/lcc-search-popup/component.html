@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+</head>
+
+<body>
+  <button type="button" class="btn-block" data-layer-target="lccp-prj"> <span class="btn-block__txt"> Project Search Layer Popup </span> </button>
+  <button type="button" class="btn-block" data-layer-target="lccp-prd1"> <span class="btn-block__txt"> Product Search Layer Popup : LCC진입 </span> </button>
+  <button type="button" class="btn-block" data-layer-target="lccp-prd2"> <span class="btn-block__txt"> Product Search Layer Popup : SEER/SCOP/IEER진입 </span> </button>
+  <button type="button" class="btn-block" data-layer-target="lccp-dvmpro"> <span class="btn-block__txt"> DVM Pro Upload Result </span> </button>
+
+  <!-- Project Search Layer Popup -->
+  <div class="popup-wrap lccp-prj-pop" id="lccp-prj">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Project Search</p>
+      </div>
+      <div class="popup__container">
+        <div class="prj__search">
+          <div class="field-box">
+            <label class="txt-label txt-blind">Created date</label>
+            <div class="combo-box box-type">
+              <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Created</button>
+              <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                <ul class="combo-box__menu-list">
+                  <li role="menuitem">Updated</li>
+                  <li role="menuitem" class="selected">Created</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="field-box">
+            <label class="txt-label txt-blind">period</label>
+            <input type="text" id="datepickerform" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+            <span class="txt-p4">~</span>
+            <input type="text" id="datepickerto" class="input-datepicker box-type" placeholder="YYYY-MM-DD">
+          </div>
+          <div class="field-box">
+            <label class="txt-label txt-blind">project name search</label>
+            <div class="input-box input-search box-type">
+              <input type="search" class="input-box__input" placeholder="Project Name">
+              <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+              <!-- 모바일에만 사용 -->
+              <button type="button" class="btn-icon icon-search mo-search-btn"><span class="txt-blind">search</span></button>
+            </div>
+
+            <!-- PC에만 사용 -->
+            <button type="button" class="btn-block type2 md pc-search-btn">
+              <span class="btn-block__txt">Search</span>
+            </button>
+          </div>
+
+          <!-- 모바일용 열기/펼치기 버튼-->
+          <button class="btn-icon icon-mo-folded">
+            <span class="txt-blind">mobile search folded</span>
+          </button>
+        </div>
+        <!-- result -->
+        <div class="lcc-sh__result">
+          <div class="lcc-sh__result-el left">
+            <div class="result-el__top">
+              <p class="txt-p6 txt-fw-b"> <span class="txt-point1">10</span> Results </p>
+            </div>
+            <div class="result-el__result">
+              <ul class="lcc-prj-list">
+                <li class="accordion-box sm active">
+                  <div class="accordion__tit">
+                    <p class="txt-p4">Project name</p>
+                    <div class="date-box">
+                      <p class="txt-p6">Created <span class="txt-fw-r">YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                      <p class="txt-p6">Updated <span class="txt-fw-r">YYYY-MM-DD</span></p>
+                    </div>
+                    <button type="button" class="btn-icon icon-accordion">
+                      <span class="txt-blind">close</span>
+                    </button>
+                  </div>
+                  <ul class="accordion_cont lcc-quote-list">
+                    <li class="lcc-quote__item selected">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+                <li class="accordion-box sm">
+                  <div class="accordion__tit">
+                    <p class="txt-p4">Project name</p>
+                    <div class="date-box">
+                      <p class="txt-p6">Created <span class="txt-fw-r">YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                      <p class="txt-p6">Updated <span class="txt-fw-r">YYYY-MM-DD</span></p>
+                    </div>
+                    <button type="button" class="btn-icon icon-accordion">
+                      <span class="txt-blind">close</span>
+                    </button>
+                  </div>
+                  <ul class="accordion_cont lcc-quote-list">
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote NameQuote NameQuote NameQuote NameQuote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+                <li class="accordion-box sm">
+                  <div class="accordion__tit">
+                    <p class="txt-p4">Project nameProject nameProject nameProject nameProject name</p>
+                    <div class="date-box">
+                      <p class="txt-p6">Created <span class="txt-fw-r">YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                      <p class="txt-p6">Updated <span class="txt-fw-r">YYYY-MM-DD</span></p>
+                    </div>
+                    <button type="button" class="btn-icon icon-accordion">
+                      <span class="txt-blind">close</span>
+                    </button>
+                  </div>
+                  <ul class="accordion_cont lcc-quote-list">
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+                <li class="accordion-box sm">
+                  <div class="accordion__tit">
+                    <p class="txt-p4">Project name</p>
+                    <div class="date-box">
+                      <p class="txt-p6">Created <span class="txt-fw-r">YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                      <p class="txt-p6">Updated <span class="txt-fw-r">YYYY-MM-DD</span></p>
+                    </div>
+                    <button type="button" class="btn-icon icon-accordion">
+                      <span class="txt-blind">close</span>
+                    </button>
+                  </div>
+                  <ul class="accordion_cont lcc-quote-list">
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                    <li class="lcc-quote__item">
+                      <div class="left">
+                        <p class="txt-p5 txt-fw-b">Quote Name</p>
+                        <div class="date-box">
+                          <p class="txt-p7">Created <span>YYYY-MM-DD</span></p>&nbsp;/&nbsp;
+                          <p class="txt-p7">Updated <span>YYYY-MM-DD</span></p>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-block view-prd-btn">
+                        <span class="btn-block__txt">View Product</span>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="lcc-sh__result-el right">
+            <!-- 모바일 전용 -->
+            <div class="mo-display quote-title">
+              <button type="button" class="btn-icon icon-mo-back">
+                <span class="txt-blind">back</span>
+              </button>
+              <span class="txt-h9">Quote Name</span>
+            </div>
+            <!-- //모바일 전용 -->
+            <div class="result-el__top">
+              <div class="txt-error">
+                <p class="txt-ref-mark">Currently, "Tools Service" only supports select products from DVM, EHS.</p>
+                <p class="txt-ref-mark">Only outdoor and indoor units are shown, excluding discontinued products and user equipment.</p>
+              </div>
+              <div class="btn-box pc-display">
+                <button type="button" class="btn-block md type2">
+                  <span class="btn-block__txt">Add</span>
+                </button>
+              </div>
+            </div>
+            <div class="result-el__result">
+              <div class="lcc-unit-detail-box">
+                <p class="txt-h8 txt-fw-b">System 1</p>
+                <ul class="lcc-unit-detail-table">
+                  <li class="unit-detail__head">
+                    <div class="unit-check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="all">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="unit-prd">
+                      <span class="txt-p5 txt-fw-b">Product</span>
+                    </div>
+                    <div class="unit-qty">
+                      <span class="txt-p5 txt-fw-b">Qty</span>
+                    </div>
+                  </li>
+                  <li class="unit-detail__body">
+                    <ul class="lcc-unit-detail-list">
+                      <!-- unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                        <div class="unit-qty">
+                          <span class="txt-p6 txt-fw-b">10</span>
+                        </div>
+                      </li>
+                      <!-- //unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                        <div class="unit-qty">
+                          <span class="txt-p6 txt-fw-b">10</span>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM460AXVHJH1SY<span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                        <div class="unit-qty">
+                          <span class="txt-p6 txt-fw-b">10</span>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM460AXVHJH1SY<span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                        <div class="unit-qty">
+                          <span class="txt-p6 txt-fw-b">10</span>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM460AXVHJH1SY<span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                        <div class="unit-qty">
+                          <span class="txt-p6 txt-fw-b">10</span>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM460AXVHJH1SY<span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                        <div class="unit-qty">
+                          <span class="txt-p6 txt-fw-b">10</span>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM460AXVHJH1SY<span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                        <div class="unit-qty">
+                          <span class="txt-p6 txt-fw-b">10</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 모바일 전용 -->
+            <div class="btn-box mo-display">
+              <button type="button" class="btn-block md type2">
+                <span class="btn-block__txt">Add</span>
+              </button>
+            </div>
+            <!-- //모바일 전용 -->
+          </div>
+        </div>
+        <!-- //result -->
+        <!-- no result -->
+        <div class="list-nodata">
+          <p class="txt-p5">Search for your project.</p>
+        </div>
+        <!-- //no result -->
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //Project Search Layer Popup -->
+
+  <!-- Product Search Layer Popup : LCC진입 -->
+  <div class="popup-wrap lccp-prd-pop" id="lccp-prd1">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Product Search</p>
+      </div>
+      <div class="popup__container">
+        <div class="lccp-prd-box">
+          <!-- search area -->
+          <div class="prd__search">
+
+            <div class="mo-prd-sh-box">
+              <div class="mo-prd-sh-box__inner">
+                <!-- 모바일 전용 -->
+                <p class="txt-h8 mo-display">Category Search</p>
+                <!-- //모바일 전용 -->
+                <div class="mo-prd-sh__area">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 1</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">DVM</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 3</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Outdoor</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem" class="selected">Outdoor</li>
+                          <li role="menuitem">Indoor</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 3</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">DVM S2</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 4</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Level 4</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 5</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Level 5</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Combination Table</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Combination Table</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Model Code</label>
+                    <div class="input-box input-search box-type">
+                      <input type="search" class="input-box__input" placeholder="Model Code">
+                      <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+                      <button type="button" class="btn-icon icon-search"><span class="txt-blind">검색</span></button>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Power Specification</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Power Specification</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-block type2 md">
+                    <span class="btn-block__txt">Search</span>
+                  </button>
+                  <p class="txt-error">Currently, "Tools Service" only supports select products from DVM, EHS.</p>
+                </div>
+
+                <!-- 모바일 전용 -->
+                <button type="button" class="btn-icon icon-close mo-prd-sh__close mo-display">
+                  <span class="txt-blind">close</span>
+                </button>
+
+              </div>
+            </div>
+
+            <!-- 모바일 전용 -->
+            <div class="mo-display mo-prd-search">
+              <button type="button" class="btn-block type3 md">
+                <span class="btn-block__txt">Category Search</span>
+              </button>
+              <p class="txt-p7 txt-ref-mark">Search for products by selecting a category.</p>
+            </div>
+
+          </div>
+          <!-- //search area -->
+          <div class="lcc-sh__result">
+
+            <!-- 모바일 전용 -->
+            <div class="mo-display mo-prd-search-check">
+              <p class="txt-arrow-area">
+                <span class="txt-arrow">LevelLevel1</span>
+                <span class="txt-arrow">LevelLevel2</span>
+                <span class="txt-arrow">LevelLevel3</span>
+                <span class="txt-arrow">LevelLevel4</span>
+                <span class="txt-arrow">LevelLevel5</span>
+              </p>
+              <p class="txt-p7 txt-ref-mark">Selections in a Combination Table, Model Code Search Values Selections in a Power Specification</p>
+            </div>
+            <!-- //모바일 전용 -->
+
+            <div class="lcc-sh__result-el left">
+              <div class="result-el__top">
+                <p class="txt-p6 txt-fw-b"> <span class="txt-point1">10</span> Results </p>
+                <button type="button" class="btn-block type2 mo-display">
+                  <span class="btn-block__txt">Add To System </span>
+                </button>
+              </div>
+              <!-- result -->
+              <div class="result-el__result">
+                <ul class="lcc-unit-detail-table">
+                  <li class="unit-detail__head">
+                    <div class="unit-check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="all">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="unit-prd">
+                      <span class="txt-p5 txt-fw-b">Product</span>
+                    </div>
+                  </li>
+                  <li class="unit-detail__body">
+                    <ul class="lcc-unit-detail-list">
+                      <!-- unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- //unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6 ">
+                            <p class="dp-inline">AM460AXVHJH1SY <span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- //result -->
+              <!-- no result -->
+              <div class="list-nodata">
+                <p class="txt-p5">Search for products by selecting a category.</p>
+              </div>
+              <!-- //no result -->
+            </div>
+            <div class="lcc-sh__result-el right">
+              <!-- 모바일 전용 -->
+              <div class="mo-view-btn mo-display ">
+                <button type="button" class="btn-block md">
+                  <span class="btn-block__txt">View System</span>
+                  <span class="btn-block__icon icon-arrow-bottom">
+                    <span class="txt-blind">close</span>
+                  </span>
+                </button>
+              </div>
+              <!-- //모바일 전용 -->
+              <div class="add-btn-box ">
+                <button type="button" class="btn-icon icon-add-prd">
+                  <span class="txt-blind">Add</span>
+                </button>
+              </div>
+              <div class="result-el__top">
+                <p class="txt-h7">System name</p>
+                <div class="btn-box">
+                  <button type="button" class="btn-block md type2">
+                    <span class="btn-block__txt">Add</span>
+                  </button>
+                </div>
+              </div>
+              <div class="result-el__result">
+                <ul class="lcc-unit-detail-table">
+                  <li class="unit-detail__head">
+                    <div class="unit-check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="all">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="unit-prd">
+                      <span class="txt-p5 txt-fw-b">Outdoor Unit</span>
+                    </div>
+                    <div class="unit-btn">
+                      <button type="button" class="btn-block">
+                        <span class="btn-block__txt">Delete</span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="unit-detail__body">
+                    <ul class="lcc-unit-detail-list">
+                      <!-- unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- //unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- no result -->
+                  <div class="list-nodata">
+                    <p class="txt-p5">Please add an Outdoor unit</p>
+                  </li>
+                  <!-- //no result -->
+                </ul>
+                <ul class="lcc-unit-detail-table">
+                  <li class="unit-detail__head">
+                    <div class="unit-check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="all">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="unit-prd">
+                      <span class="txt-p5 txt-fw-b">Indoor Unit</span>
+                    </div>
+                    <div class="unit-btn">
+                      <button type="button" class="btn-block" disabled>
+                        <span class="btn-block__txt">Delete</span>
+                      </button>
+                    </div>
+                  </li>
+                  <!-- result -->
+                  <li class="unit-detail__body" style="display: none;">
+                    <ul class="lcc-unit-detail-list">
+                      <!-- unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- //unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- result -->
+                  <!-- no result -->
+                  <div class="list-nodata">
+                    <p class="txt-p5">Please add an Indoor unit</p>
+                  </li>
+                  <!-- //no result -->
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //Product Search Layer Popup -->
+
+  <!-- Product Search Layer Popup : SEER/SCOP/IEER진입 -->
+  <div class="popup-wrap lccp-prd-pop" id="lccp-prd2">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Product Search</p>
+      </div>
+      <div class="popup__container">
+        <div class="lccp-prd-box">
+          <!-- search area -->
+          <div class="prd__search">
+            <div class="mo-prd-sh-box">
+              <div class="mo-prd-sh-box__inner">
+                <!-- 모바일 전용 -->
+                <p class="txt-h8 mo-display">Category Search</p>
+                <!-- //모바일 전용 -->
+                <div class="mo-prd-sh__area">
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 1</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">DVM</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 3</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false" disabled>Outdoor</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem" class="selected">Outdoor</li>
+                          <li role="menuitem">Indoor</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 3</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">DVM S2</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 4</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Level 4</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Level 5</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Level 5</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Combination Table</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Combination Table</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Model Code</label>
+                    <div class="input-box input-search box-type">
+                      <input type="search" class="input-box__input" placeholder="Model Code">
+                      <button type="button" class="btn-icon icon-search-delete"><span class="txt-blind">삭제</span></button>
+                      <button type="button" class="btn-icon icon-search"><span class="txt-blind">검색</span></button>
+                    </div>
+                  </div>
+                  <div class="field-box">
+                    <label class="txt-label txt-blind">Power Specification</label>
+                    <div class="combo-box box-type">
+                      <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">Power Specification</button>
+                      <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                        <ul class="combo-box__menu-list">
+                          <li role="menuitem">옵션 1</li>
+                          <li role="menuitem">옵션 2</li>
+                          <li role="menuitem">옵션 3</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-block type2 md">
+                    <span class="btn-block__txt">Search</span>
+                  </button>
+                  <p class="txt-error">Currently, "Tools Service" only supports select products from DVM, EHS.</p>
+                </div>
+
+                <!-- 모바일 전용 -->
+                <button type="button" class="btn-icon icon-close mo-prd-sh__close mo-display">
+                  <span class="txt-blind">close</span>
+                </button>
+
+              </div>
+            </div>
+
+            <!-- 모바일 전용 -->
+            <div class="mo-display mo-prd-search">
+              <button type="button" class="btn-block type3 md">
+                <span class="btn-block__txt">Category Search</span>
+              </button>
+              <p class="txt-p7 txt-ref-mark">Search for products by selecting a category.</p>
+            </div>
+
+          </div>
+          <!-- //search area -->
+          <div class="lcc-sh__result">
+            <!-- 모바일 전용 -->
+            <div class="mo-display mo-prd-search-check">
+              <p class="txt-arrow-area">
+                <span class="txt-arrow">LevelLevel1</span>
+                <span class="txt-arrow">LevelLevel2</span>
+                <span class="txt-arrow">LevelLevel3</span>
+                <span class="txt-arrow">LevelLevel4</span>
+                <span class="txt-arrow">LevelLevel5</span>
+              </p>
+              <p class="txt-p7 txt-ref-mark">Selections in a Combination Table, Model Code Search Values Selections in a Power Specification</p>
+            </div>
+            <!-- //모바일 전용 -->
+
+
+            <div class="lcc-sh__result-el left">
+              <div class="result-el__top">
+                <p class="txt-p6 txt-fw-b"> <span class="txt-point1">10</span> Results </p>
+                <div class="btn-box prd-top-add-box">
+                  <button type="button" class="btn-block md type2">
+                    <span class="btn-block__txt">Add</span>
+                  </button>
+                </div>
+              </div>
+              <!-- result -->
+              <div class="result-el__result">
+                <ul class="lcc-unit-detail-table">
+                  <li class="unit-detail__head">
+                    <div class="unit-check">
+                      <label class="btn-checkbox">
+                        <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="all">
+                        <span class="btn-checkbox__icon"></span>
+                      </label>
+                    </div>
+                    <div class="unit-prd">
+                      <span class="txt-p5 txt-fw-b">Product</span>
+                    </div>
+                  </li>
+                  <li class="unit-detail__body">
+                    <ul class="lcc-unit-detail-list">
+                      <!-- unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- //unit detail -->
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6">
+                            <p class="dp-inline">AM056NN1DEH/EU</p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6 ">
+                            <p class="dp-inline">AM460AXVHJH1SY<span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <p class="txt-p5 txt-fw-b">
+                            <span>Product Name</span> | <span>Premium Energy Efficiency</span>
+                          </p>
+                          <div class="txt-p6 ">
+                            <p class="dp-inline">AM460AXVHJH1SY<span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="lcc-unit-detail__item">
+                        <div class="unit-check">
+                          <label class="btn-checkbox">
+                            <input type="checkbox" class="btn-checkbox__input" name="unit-detail" value="">
+                            <span class="btn-checkbox__icon"></span>
+                          </label>
+                        </div>
+                        <div class="img-box">
+                          <img src="/pub-only/images/prd-thum-sample2.png" alt="">
+                        </div>
+                        <div class="unit-tit">
+                          <div class="flag-area">
+                            <span class="tag-flag">R410A</span><span class="tag-flag">Heat Recoverey</span>
+                          </div>
+                          <p class="txt-p6"> <span class="txt-arrow">DVM</span><span class="txt-arrow">Indoor Unit</span> </p>
+                          <!-- 2024-07-15 name분리 -->
+                          <p class="txt-p5 txt-fw-b">Product NameName NameName Name</p>
+                          <p class="txt-p6 txt-fw-b">Premium Energy Efficiency</p>
+                          <div class="txt-p6 ">
+                            <p class="dp-inline">AM460AXVHJH1SY<span class="dp-inline">(AM660AXVHJH1SYx2, AM320NXVSHH1SYx1)</span></p>
+                            <p class="dp-inline">3Ø, 380~415V, 50Hz &nbsp;|&nbsp; 22.4kW</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- //result -->
+              <!-- no result -->
+              <div class="list-nodata">
+                <p class="txt-p5">Search for products by selecting a category.</p>
+              </div>
+              <!-- //no result -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- //Product Search Layer Popup -->
+
+  <!--  DVM Pro Upload Result -->
+  <div class="popup-wrap lccp-dvmpro-pop" id="lccp-dvmpro">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">DVM Pro Fille Upload Result</p>
+      </div>
+      <div class="popup__container">
+
+        <div class="dvm-top-area">
+          <div class="txt-msg-box">
+            <p class="txt-error">Currently, "Tools Service" only supports select products from DVM, EHS.<br>
+              Other products, user equipment and discontinued products are excluded.
+            </p>
+          </div>
+
+          <div class="btn-box">
+            <button type="button" class="btn-block md type2">
+              <span class="btn-block__txt">Add</span>
+            </button>
+          </div>
+        </div>
+        <div class="tab-wrap">
+          <div role="tablist" class="tab-list type5" aria-label="DVM Pro Upload">
+            <button type="button" class="tab-list__tab active" role="tab" aria-selected="true">
+              <span class="tab-list__tab-txt">All</span>
+            </button>
+            <button type="button" class="tab-list__tab" role="tab">
+              <span class="tab-list__tab-txt">System</span>
+            </button>
+          </div>
+          <div role="presentation" class="tab-wrap__contents">
+            <div role="tabpanel" tabindex="0">
+              <div class="table-box">
+                <p class="txt-h7">Samsung Product</p>
+                <table class="basic-table">
+                  <colgroup>
+                    <col class="dvmpro-type1-th1">
+                    <col class="dvmpro-type1-th2">
+                    <col class="dvmpro-type1-th3">
+                    <col class="dvmpro-type1-th4">
+                    <col class="dvmpro-type1-th5">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Group</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Model Code </th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Qty</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>DVM</td>
+                      <td>ODU</td>
+                      <td>AM460AXVHJH1SY</td>
+                      <td class="tal-left">Product Name</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Chiller</td>
+                      <td>ODU</td>
+                      <td>AM460AXVHJH1SY</td>
+                      <td class="tal-left">Product Name</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-box">
+                <p class="txt-h7">Others</p>
+                <table class="basic-table">
+                  <colgroup>
+                    <col class="dvmpro-type1-th1">
+                    <col class="dvmpro-type1-th2">
+                    <col class="dvmpro-type1-th3">
+                    <col class="dvmpro-type1-th4">
+                    <col class="dvmpro-type1-th5">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Group</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Model Code </th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Qty</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chiller</td>
+                      <td>IDU</td>
+                      <td>UserEquipment1</td>
+                      <td class="tal-left">Product Name</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Accessary</td>
+                      <td>Add. Ref.</td>
+                      <td>R410A</td>
+                      <td class="tal-left">-</td>
+                      <td>1.83</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div role="tabpanel">
+              <div class="table-box">
+                <p class="txt-h7">System 1</p>
+                <table class="basic-table">
+                  <colgroup>
+                    <col class="dvmpro-type1-th1">
+                    <col class="dvmpro-type1-th2">
+                    <col class="dvmpro-type1-th3">
+                    <col class="dvmpro-type1-th4">
+                    <col class="dvmpro-type1-th5">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Group</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Model Code </th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Qty</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chiller</td>
+                      <td>IDU</td>
+                      <td>UserEquipment1</td>
+                      <td class="tal-left">Product Name</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Accessary</td>
+                      <td>Add. Ref.</td>
+                      <td>R410A</td>
+                      <td class="tal-left">-</td>
+                      <td>1.83</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-box">
+                <p class="txt-h7">System 2</p>
+                <table class="basic-table">
+                  <colgroup>
+                    <col class="dvmpro-type1-th1">
+                    <col class="dvmpro-type1-th2">
+                    <col class="dvmpro-type1-th3">
+                    <col class="dvmpro-type1-th4">
+                    <col class="dvmpro-type1-th5">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Group</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Model Code </th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Qty</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chiller</td>
+                      <td>IDU</td>
+                      <td>UserEquipment1</td>
+                      <td class="tal-left">Product Name</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Accessary</td>
+                      <td>Add. Ref.</td>
+                      <td>R410A</td>
+                      <td class="tal-left">-</td>
+                      <td>1.83</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-box">
+                <p class="txt-h7">System 3</p>
+                <table class="basic-table">
+                  <colgroup>
+                    <col class="dvmpro-type1-th1">
+                    <col class="dvmpro-type1-th2">
+                    <col class="dvmpro-type1-th3">
+                    <col class="dvmpro-type1-th4">
+                    <col class="dvmpro-type1-th5">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Group</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Model Code </th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Qty</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chiller</td>
+                      <td>IDU</td>
+                      <td>UserEquipment1</td>
+                      <td class="tal-left">Product Name</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Accessary</td>
+                      <td>Add. Ref.</td>
+                      <td>R410A</td>
+                      <td class="tal-left">-</td>
+                      <td>1.83</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="table-box">
+                <p class="txt-h7">Controls Systems</p>
+                <table class="basic-table">
+                  <colgroup>
+                    <col class="dvmpro-type2-th1">
+                    <col class="dvmpro-type2-th2">
+                    <col class="dvmpro-type2-th3">
+                    <col class="dvmpro-type2-th4">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col">Type</th>
+                      <th scope="col">Model Code </th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Qty</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Individual Controller</td>
+                      <td>Watt-hour meter</td>
+                      <td class="tal-left">Product Name</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Integrated Management System</td>
+                      <td>MWR-SH10N</td>
+                      <td class="tal-left">Product Name</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+    </div>
+  </div>
+  <!-- // DVM Pro Upload Result -->
+
+
+
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+
+</body>
+
+</html>

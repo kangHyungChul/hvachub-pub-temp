@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css"> <!-- 공통 css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/><!-- swiper css -->
+  <link rel="stylesheet" type="text/css" href="/apps/components/content/tab-with-content/clientlibs/css/main.css"><!-- 컴포넌트 css-->
+  <!-- 240620 swiper, jquery script 제거 -->
+  <title>Tab with Content</title>
+</head>
+<body>
+  <div>
+    <!-- component -->
+    <section class="tab-with-content">
+      <div class="tab-wrap">
+        <div role="tablist" class="tab-list type5" aria-label="탭타이틀">
+          <!-- default로 활성화되는 탭에 .active 추가 -->
+          <button type="button" class="tab-list__tab active" role="tab" aria-controls="" tabindex="" aria-selected="true">
+            <span class="tab-list__tab-txt txt-h6 txt-fw-b">Sales Mode</span><!-- tab1 title -->
+          </button> 
+          <button type="button" class="tab-list__tab" role="tab" aria-controls="" tabindex="">
+            <span class="tab-list__tab-txt txt-h6 txt-fw-b">Designer Mode</span><!-- tab2 title -->
+          </button>
+        </div>
+        <div role="presentation" class="tab-wrap__contents">
+          <!-- tab1 content -->
+          <div role="tabpanel" class="content-box" aria-labelledby="" tabindex="0">
+            <p class="intro-txt txt-p5"><!-- description -->
+              All design processes, including product selection, piping, wiring and system checks, are seamlessly integrated to provide a streamlined user experience,<br/>
+              so you can respond to client requests rapidly.<br/>
+              And, it includes an intuitive interface and a range of convenient features to simplify and speed-up the whole design process.
+            </p><!-- 240813 text 변경 -->
+            <div class="swiper tab-with-content__swiper">
+              <div class="swiper-wrapper">
+                <!-- slide1 -->
+                <div class="swiper-slide">
+                  <!-- img align 오른쪽으로 변경시 article.tab-with-content__contwrap에 img-right 클래스 추가 (default -> left) -->
+                  <article class="tab-with-content__contwrap">
+                    <div class="tab-with-content__img">
+                      <img src="/pub-only/images/tab-with-content-sample01.png" alt="swiper sample image"/>
+                    </div>
+                    <div class="tab-with-content__cont tal-left">
+                      <strong class="title txt-h4 txt-fw-b">Product Selection</strong><!-- 240813 text 변경 -->
+                      <p class="desc txt-p5">
+                        Simply find and quickly select any Samsung air conditioners
+                        with product thumbnails and “favorites” functions.
+                      </p><!-- 240813 text 변경 -->
+                    </div>
+                  </article>
+                </div>
+                <!-- slide2 -->
+                <div class="swiper-slide">
+                  <!-- img align 오른쪽으로 변경시 article.tab-with-content__contwrap에 img-right 클래스 추가 (default -> left) -->
+                  <article class="tab-with-content__contwrap img-right">
+                    <div class="tab-with-content__img">
+                      <img src="/pub-only/images/tab-with-content-sample01.png" alt="swiper sample image"/>
+                    </div>
+                    <div class="tab-with-content__cont tal-left">
+                      <strong class="title txt-h4 txt-fw-b">Equipment selection</strong>
+                      <p class="desc txt-p5">You can select from the full range of Samsung Electronics system air conditioner products. Intuitive product selection through images and a favorite function enable quick selection.</p>
+                    </div>
+                  </article>
+                </div>
+                <!-- slide3 -->
+                <div class="swiper-slide">
+                  <article class="tab-with-content__contwrap">Slide 3</article>
+                </div>
+                <!-- slide4 -->
+                <div class="swiper-slide">
+                  <article class="tab-with-content__contwrap">Slide 4</article>
+                </div>
+                <!-- slide5 -->
+                <div class="swiper-slide">
+                  <article class="tab-with-content__contwrap">Slide 5</article>
+                </div>
+              </div>
+    
+              <div class="swiper-pagination-wrap">
+                <div class="swiper-pagination">
+                  <span class="txt-blind">prev</span> / <span class="txt-blind">next</span><!-- 240718 swiper button txt-blind 추가(접근성 관련) -->
+                </div>
+                <div class="swiper-button-autoplay">
+                  <span class="txt-blind">pause</span><!-- 240718 swiper button txt-blind 추가(접근성 관련) -->
+                </div>
+              </div>
+    
+              <div class="swiper-button-prev">
+                <span class="txt-blind">prev</span><!-- 240718 swiper button txt-blind 추가(접근성 관련) -->
+              </div>
+              <div class="swiper-button-next">
+                <span class="txt-blind">next</span><!-- 240718 swiper button txt-blind 추가(접근성 관련) -->
+              </div>
+            </div>
+          </div>
+          <!-- tab2 content -->
+          <div role="tabpanel" class="content-box" aria-labelledby="">
+            <p class="intro-txt txt-p5"><!-- description -->
+              A dedicated CAD program, developed by Samsung, lets you design systems without the need for any expensive commercial CAD programs. <br/>
+              It is also optimized with specialized features to design air conditioning systems.
+            </p><!-- 240813 text 변경 -->
+            <div class="swiper tab-with-content__swiper">
+              <div class="swiper-wrapper">
+                <!-- slide1 -->
+                <div class="swiper-slide">
+                  <!-- img align 오른쪽으로 변경시 article.tab-with-content__contwrap에 img-right 클래스 추가 (default -> left) -->
+                  <article class="tab-with-content__contwrap">
+                    <div class="tab-with-content__img">
+                      <img src="/pub-only/images/tab-with-content-sample02.png" alt="swiper sample image"/>
+                    </div>
+                    <div class="tab-with-content__cont tal-left">
+                      <strong class="title txt-h4 txt-fw-b">Piping Design</strong><!-- 240813 text 변경 -->
+                      <p class="desc txt-p5">
+                        Refrigerant piping and drainpipes can be drawn automatically, Refrigerant piping and drainpipes can be drawn automatically, Refrigerant piping and drainpipes can be drawn automatically,
+                        using the correct material and size to suit the installation guidelines perfectly.</p>
+                    </div><!-- 240813 text 변경 -->
+                  </article>
+                </div>
+                <!-- slide2 -->
+                <div class="swiper-slide">
+                  <!-- img align 오른쪽으로 변경시 article.tab-with-content__contwrap에 img-right 클래스 추가 (default -> left) -->
+                  <article class="tab-with-content__contwrap img-right">
+                    <div class="tab-with-content__img">
+                      <img src="/pub-only/images/tab-with-content-sample02.png" alt="swiper sample image"/>
+                    </div>
+                    <div class="tab-with-content__cont tal-left">
+                      <strong class="title txt-h4 txt-fw-b">Piping Design</strong>
+                      <p class="desc txt-p5">Our proprietary design program allows us to operate without the need for commercial software. It's optimized for functionalities required in HVAC system design.</p>
+                    </div>
+                  </article>
+                </div>
+                <!-- slide3 -->
+                <div class="swiper-slide">
+                  <article class="tab-with-content__contwrap">Slide 3</article>
+                </div>
+                <!-- slide4 -->
+                <div class="swiper-slide">
+                  <article class="tab-with-content__contwrap">Slide 4</article>
+                </div>
+                <!-- slide5 -->
+                <div class="swiper-slide">
+                  <article class="tab-with-content__contwrap">Slide 5</article>
+                </div>
+              </div>
+    
+              <div class="swiper-pagination-wrap">
+                <div class="swiper-pagination">
+                  <span class="txt-blind">prev</span> / <span class="txt-blind">next</span><!-- 240723 swiper button txt-blind 추가(접근성 관련) -->
+                </div>
+                <div class="swiper-button-autoplay">
+                  <span class="txt-blind">pause</span><!-- 240723 swiper button txt-blind 추가(접근성 관련) -->
+                </div>
+              </div>
+    
+              <div class="swiper-button-prev">
+                <span class="txt-blind">prev</span><!-- 240723 swiper button txt-blind 추가(접근성 관련) -->
+              </div>
+              <div class="swiper-button-next">
+                <span class="txt-blind">next</span><!-- 240723 swiper button txt-blind 추가(접근성 관련) -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 240819 영역 구분용 margin 제거 -->
+
+    <!-- 240819 tab없는 type 제거 -> no-tab-with-content 컴포넌트로 분리 -->
+  </div>
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="/apps/components/content/tab-with-content/clientlibs/js/main.js"></script><!-- 컴포넌트 js -->
+</body>
+</html>

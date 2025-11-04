@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Result</title>
+  <link rel="stylesheet" type="text/css" href="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/css/main.css">
+  <link rel="stylesheet" type="text/css" href="clientlibs/css/main.css">
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K73ZNKWB');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+  <!-- 2025-04-11 요청으로 삽입 //-->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K73ZNKWB"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --> 
+
+  <!-- component -->
+  <section class="checkout-result">
+    <!-- success -->
+    <div class="result__success">
+      <div class="msg-box">
+        <p class="txt-h3">Thanks for Your order</p>
+        <p class="txt-p4 txt-fw-b">You will receive a confirmation email.</p>
+      </div>
+      <div class="btn-box">
+        <!-- 2025-02-13 버튼 추가 / 버튼 미노출시 태그 자체 삭제 (hidden, display=none 안됨) -->
+        <a role="button" href="#" class="btn-block md">
+          <span class="btn-block__txt">Proforma</span>
+          <i class="btn-block__icon icon-download"></i>
+        </a>
+        <button type="button" class="btn-block md type2">
+          <span class="btn-block__txt">Order Details</span>
+        </button>
+      </div>
+      <!-- order info (buy online) -->
+      <ul class="order-info-list">
+        <!-- [F] project / run-rate 인경우 삭제 -->
+        <li class="list-el col2">
+          <div class="el-label">
+            <span class="txt-p5 txt-fw-b">Request Delivery Date</span>
+          </div>
+          <div class="el-info">
+            <p class="txt-p5">2024-03-20</p>
+          </div>
+        </li>
+        <!-- [F] project / run-rate 인경우 class 삭제 : col2 -->
+        <li class="list-el col2">
+          <div class="el-label">
+            <span class="txt-p5 txt-fw-b">PO Number</span>
+          </div>
+          <div class="el-info">
+            <p class="txt-p5">PQ12345678</p>
+          </div>
+        </li>
+        <li class="list-el">
+          <div class="el-label">
+            <span class="txt-p5 txt-fw-b">Shipping Address</span>
+          </div>
+          <div class="el-info">
+            <p class="txt-p5">COST LOJISTIK / 0002015709</p>
+            <p class="txt-p5">Alaçam Sok. No.5, Cinnah Caddesi, Cankaya / Ankara 06690, Turkey</p>
+          </div>
+        </li>
+        <li class="list-el">
+          <div class="el-label">
+            <span class="txt-p5 txt-fw-b">Contact info.</span>
+          </div>
+          <div class="el-info">
+            <p class="txt-p5">Alex*****</p>
+            <p class="txt-p5 txt-point2"><a href="mailto:">bc*****@samsung.com</a></p>
+            <p class="txt-p5">90212368****</p>
+          </div>
+        </li>
+      </ul>
+      <!-- //order info (buy online) -->
+
+      <!-- 20250827 추가 / multiple 타입 -->
+      <div class="prd-detail-info">
+        <div class="prd-list-top">
+          <h2 class="txt-h6">Item (##)</h2>
+          <button type="button" class="btn-icon icon-arrow-bottom ">
+            <span class="txt-blind">folded</span>
+          </button>
+        </div>
+        <div class="prd-list-total">
+          <p class="txt-p4 txt-fw-b">Total Amount(Tax Included)</p>
+          <p class="txt-p2 txt-fw-b">717.499,00 TL</p>
+        </div>
+        <div class="prd-list-cont">
+
+          <!-- multiple group list repeat -->
+          <div class="multiple-group">
+            <p class="prj-name txt-p4">
+              <span>Project</span>
+              <strong>Samsung hvac Aircon</strong>
+            </p>
+            <!-- product list -->
+            <ul class="prd-list">
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <!-- 2025-02-05 p 추가 : txt-price -->
+                    <p class="txt-price">
+                      <span class="txt-p4 txt-fw-b">$21,053.75</span>
+                      <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                    </p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-p6">AM840DXVGGH/SA</p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <p class="txt-price">
+                      <span class="txt-p4 txt-fw-b">$21,053.75</span>
+                      <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                    </p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                      <!-- [F] 모듈이 있는 경우 -->
+                      <div class="module-box">
+                        <ul class="list-el">
+                          <li class="el-img">
+                            <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                          </li>
+                          <li class="el-txt">
+                            <p class="txt-p6">
+                              <span class="txt-arrow">Outdoor</span>
+                              <span class="txt-arrow">Indoor Unit</span>
+                            </p>
+                            <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                            <p class="txt-code txt-p6">AM200AXVAGH</p>
+                            <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                          </li>
+                          <li class="el-qty pc-display">
+                            <span class="txt-p6 txt-fw-b">999</span>
+                          </li>
+                          <li class="el-price">
+                            <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                            <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+
+                          </li>
+                        </ul>
+                        <ul class="list-el">
+                          <li class="el-img">
+                            <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                          </li>
+                          <li class="el-txt">
+                            <p class="txt-p6">
+                              <span class="txt-arrow">Outdoor</span>
+                              <span class="txt-arrow">Indoor Unit</span>
+                            </p>
+                            <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                            <p class="txt-code txt-p6">AM200AXVAGH</p>
+                            <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                          </li>
+                          <li class="el-qty pc-display">
+                            <span class="txt-p6 txt-fw-b">999</span>
+                          </li>
+                          <li class="el-price">
+                            <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                            <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <p class="txt-price">
+                      <span class="txt-p5 txt-del">808.499,00 TL </span>
+                      <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                    </p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+              <!-- //product list -->
+            </ul>
+          </div>
+          <!-- //multiple group list repeat -->
+
+          <!-- multiple group list repeat -->
+          <div class="multiple-group">
+            <p class="prj-name txt-p4">
+              <span>Project</span>
+              <strong>Samsung hvac Aircon</strong>
+            </p>
+            <!-- product list -->
+            <ul class="prd-list">
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <!-- 2025-02-05 p 추가 : txt-price -->
+                    <p class="txt-price">
+                      <span class="txt-p4 txt-fw-b">$21,053.75</span>
+                      <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                    </p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-p6">AM840DXVGGH/SA</p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <p class="txt-price">
+                      <span class="txt-p4 txt-fw-b">$21,053.75</span>
+                      <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                    </p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                      <!-- [F] 모듈이 있는 경우 -->
+                      <div class="module-box">
+                        <ul class="list-el">
+                          <li class="el-img">
+                            <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                          </li>
+                          <li class="el-txt">
+                            <p class="txt-p6">
+                              <span class="txt-arrow">Outdoor</span>
+                              <span class="txt-arrow">Indoor Unit</span>
+                            </p>
+                            <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                            <p class="txt-code txt-p6">AM200AXVAGH</p>
+                            <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                          </li>
+                          <li class="el-qty pc-display">
+                            <span class="txt-p6 txt-fw-b">999</span>
+                          </li>
+                          <li class="el-price">
+                            <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                            <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+
+                          </li>
+                        </ul>
+                        <ul class="list-el">
+                          <li class="el-img">
+                            <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                          </li>
+                          <li class="el-txt">
+                            <p class="txt-p6">
+                              <span class="txt-arrow">Outdoor</span>
+                              <span class="txt-arrow">Indoor Unit</span>
+                            </p>
+                            <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                            <p class="txt-code txt-p6">AM200AXVAGH</p>
+                            <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                          </li>
+                          <li class="el-qty pc-display">
+                            <span class="txt-p6 txt-fw-b">999</span>
+                          </li>
+                          <li class="el-price">
+                            <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                            <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+              <li class="list-item">
+                <!-- product list total -->
+                <div class="item__total">
+                  <div class="total__left">
+                    <p class="txt-p6">Week22</p>
+                    <p class="txt-p6">2024-03-20</p>
+                  </div>
+                  <div class="total__right">
+                    <p class="txt-p4 txt-total">Total</p>
+                    <p class="txt-price">
+                      <span class="txt-p5 txt-del">808.499,00 TL </span>
+                      <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                    </p>
+                    <button type="button" class="btn-icon icon-arrow-bottom">
+                      <span class="txt-blind">folded</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- //product list total -->
+                <!-- product list contents -->
+                <div class="item__cont">
+                  <!-- product detail list -->
+                  <ul class="prd-detail-list">
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="detail-list-item">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                          <p class="txt-p6 txt-del">808.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- //product detail list -->
+                </div>
+                <!-- //product list contents -->
+              </li>
+              <!-- //product list -->
+            </ul>
+          </div>
+          <!-- //multiple group list repeat -->
+
+        </div>
+      </div>
+
+      <!-- [F]buy online 진입시  -->
+      <div class="prd-detail-info">
+        <div class="prd-list-top">
+          <h2 class="txt-h6">Item (##)</h2>
+          <button type="button" class="btn-icon icon-arrow-bottom">
+            <span class="txt-blind">folded</span>
+          </button>
+        </div>
+        <div class="prd-list-total">
+          <p class="txt-p4 txt-fw-b">Total Amount(Tax Included)</p>
+          <p class="txt-p2 txt-fw-b">717.499,00 TL</p>
+        </div>
+        <div class="prd-list-cont">
+          <ul class="prd-detail-list">
+            <li class="detail-list-item">
+              <ul class="list-el">
+                <li class="el-img">
+                  <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                </li>
+                <li class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-arrow">Outdoor</span>
+                    <span class="txt-arrow">Indoor Unit</span>
+                  </p>
+                  <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER Heat Recovery High EER Heat Recovery High EER Heat Recovery High EER Heat Recovery High EER High EER</p>
+                  <!-- 2025-02-05 class 추가 : txt-code-->
+                  <p class="txt-code txt-p6">AM200AXVAGH</p>
+                  <!-- 2025-02-05 추가 (MO용 수량) -->
+                  <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                </li>
+                <!-- 2025-02-05 class 추가 : pc-display (PC용 수량)-->
+                <li class="el-qty pc-display">
+                  <span class="txt-p6 txt-fw-b">999</span>
+                </li>
+                <li class="el-price">
+                  <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                  <p class="txt-p6 txt-del">808.499,00 TL</p>
+                </li>
+              </ul>
+            </li>
+            <li class="detail-list-item">
+              <ul class="list-el">
+                <li class="el-img">
+                  <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                </li>
+                <li class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-arrow">Outdoor</span>
+                    <span class="txt-arrow">Indoor Unit</span>
+                  </p>
+                  <a href="#none" class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</a>
+                  <p class="txt-code txt-p6">AM200AXVAGH</p>
+                  <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                </li>
+                <!-- 2025-02-05 class 추가 : pc-display (PC용 수량)-->
+                <li class="el-qty pc-display">
+                  <span class="txt-p6 txt-fw-b">999</span>
+                </li>
+                <li class="el-price">
+                  <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                  <p class="txt-p6 txt-del">808.499,00 TL</p>
+                </li>
+              </ul>
+            </li>
+            <li class="detail-list-item">
+              <ul class="list-el">
+                <li class="el-img">
+                  <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                </li>
+                <li class="el-txt">
+                  <p class="txt-p6">
+                    <span class="txt-arrow">Outdoor</span>
+                    <span class="txt-arrow">Indoor Unit</span>
+                  </p>
+                  <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                  <p class="txt-code txt-p6">AM200AXVAGH</p>
+                  <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                </li>
+                <li class="el-qty pc-display">
+                  <span class="txt-p6 txt-fw-b">999</span>
+                </li>
+                <li class="el-price">
+                  <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                  <p class="txt-p6 txt-del">808.499,00 TL</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //buy online -->
+      <!-- [F] poject / run-rate 진입시 -->
+      <div class="prd-detail-info">
+        <div class="prd-list-top">
+          <h2 class="txt-h6">Item (##)</h2>
+          <button type="button" class="btn-icon icon-arrow-bottom ">
+            <span class="txt-blind">folded</span>
+          </button>
+        </div>
+        <!-- 2025-08-27 수정 : prd-name 타이틀 마크업구조 수정 -->
+        <p class="prd-name txt-p4">
+          <span>Project</span>
+          <strong>Samsung hvac Aircon</strong>
+        </p>
+        <div class="prd-list-total">
+          <p class="txt-p4 txt-fw-b">Total Amount(Tax Included)</p>
+          <p class="txt-p2 txt-fw-b">717.499,00 TL</p>
+        </div>
+        <div class="prd-list-cont">
+          <!-- product list -->
+          <ul class="prd-list">
+            <li class="list-item">
+              <!-- product list total -->
+              <div class="item__total">
+                <div class="total__left">
+                  <p class="txt-p6">Week22</p>
+                  <p class="txt-p6">2024-03-20</p>
+                </div>
+                <div class="total__right">
+                  <p class="txt-p4 txt-total">Total</p>
+                  <!-- 2025-02-05 p 추가 : txt-price -->
+                  <p class="txt-price">
+                    <span class="txt-p4 txt-fw-b">$21,053.75</span>
+                    <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                  </p>
+                  <button type="button" class="btn-icon icon-arrow-bottom">
+                    <span class="txt-blind">folded</span>
+                  </button>
+                </div>
+              </div>
+              <!-- //product list total -->
+              <!-- product list contents -->
+              <div class="item__cont">
+                <!-- product detail list -->
+                <ul class="prd-detail-list">
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                        <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-p6">AM840DXVGGH/SA</p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-code txt-p6">AM200AXVAGH</p>
+                        <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <!-- //product detail list -->
+              </div>
+              <!-- //product list contents -->
+            </li>
+            <li class="list-item">
+              <!-- product list total -->
+              <div class="item__total">
+                <div class="total__left">
+                  <p class="txt-p6">Week22</p>
+                  <p class="txt-p6">2024-03-20</p>
+                </div>
+                <div class="total__right">
+                  <p class="txt-p4 txt-total">Total</p>
+                  <p class="txt-price">
+                    <span class="txt-p4 txt-fw-b">$21,053.75</span>
+                    <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                  </p>
+                  <button type="button" class="btn-icon icon-arrow-bottom">
+                    <span class="txt-blind">folded</span>
+                  </button>
+                </div>
+              </div>
+              <!-- //product list total -->
+              <!-- product list contents -->
+              <div class="item__cont">
+                <!-- product detail list -->
+                <ul class="prd-detail-list">
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-code txt-p6">AM200AXVAGH</p>
+                        <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                      </li>
+                    </ul>
+                    <!-- [F] 모듈이 있는 경우 -->
+                    <div class="module-box">
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+
+                        </li>
+                      </ul>
+                      <ul class="list-el">
+                        <li class="el-img">
+                          <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                        </li>
+                        <li class="el-txt">
+                          <p class="txt-p6">
+                            <span class="txt-arrow">Outdoor</span>
+                            <span class="txt-arrow">Indoor Unit</span>
+                          </p>
+                          <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                          <p class="txt-code txt-p6">AM200AXVAGH</p>
+                          <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                        </li>
+                        <li class="el-qty pc-display">
+                          <span class="txt-p6 txt-fw-b">999</span>
+                        </li>
+                        <li class="el-price">
+                          <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                          <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-code txt-p6">AM200AXVAGH</p>
+                        <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-code txt-p6">AM200AXVAGH</p>
+                        <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">$21,053.75</p>
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <!-- //product detail list -->
+              </div>
+              <!-- //product list contents -->
+            </li>
+            <li class="list-item">
+              <!-- product list total -->
+              <div class="item__total">
+                <div class="total__left">
+                  <p class="txt-p6">Week22</p>
+                  <p class="txt-p6">2024-03-20</p>
+                </div>
+                <div class="total__right">
+                  <p class="txt-p4 txt-total">Total</p>
+                  <p class="txt-price">
+                    <span class="txt-p5 txt-del">808.499,00 TL </span>
+                    <span class="txt-p4 txt-fw-b">717.499,00 TL</span>
+                  </p>
+                  <button type="button" class="btn-icon icon-arrow-bottom">
+                    <span class="txt-blind">folded</span>
+                  </button>
+                </div>
+              </div>
+              <!-- //product list total -->
+              <!-- product list contents -->
+              <div class="item__cont">
+                <!-- product detail list -->
+                <ul class="prd-detail-list">
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                        <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        <p class="txt-p6 txt-del">808.499,00 TL</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                        <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        <p class="txt-p6 txt-del">808.499,00 TL</p>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="detail-list-item">
+                    <ul class="list-el">
+                      <li class="el-img">
+                        <img src="/pub-only/images/cart-sample.png" alt="sample image" />
+                      </li>
+                      <li class="el-txt">
+                        <p class="txt-p6">
+                          <span class="txt-arrow">Outdoor</span>
+                          <span class="txt-arrow">Indoor Unit</span>
+                        </p>
+                        <p class="txt-p5 txt-fw-b txt-ellipsis2">DVM S2 Outdoor Heat Recovery High EER</p>
+                        <p class="txt-code txt-p6">AM840DXVGGH/SA</p>
+                        <p class="txt-qty txt-p7 mo-display">&#32;/&#32;<span>999</span> </p>
+                      </li>
+                      <li class="el-qty pc-display">
+                        <span class="txt-p6 txt-fw-b">999</span>
+                      </li>
+                      <li class="el-price">
+                        <p class="txt-p4 txt-fw-b">717.499,00 TL</p>
+                        <p class="txt-p6 txt-del">808.499,00 TL</p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <!-- //product detail list -->
+              </div>
+              <!-- //product list contents -->
+            </li>
+          </ul>
+          <!-- //product list -->
+        </div>
+      </div>
+
+      <!-- banner -->
+      <ul class="list-box banner-box">
+        <li class="list-box__item">
+          <div class="tit-box">
+            <div class="tit-box__inner">
+              <p class="txt-h6">
+                <span class="pc-txt">Contact Info</span>
+                <span class="mo-txt">Contact Info</span>
+              </p>
+              <p class="txt-p6">
+                 <!-- 2025-02-06 span, a태그 추가 -->
+                 <span>Monday - Friday : 9:00am - 6:00pm​​</span>
+                 <span>Any questions, call <a href="tel:4447711">444 77 11</a></span>
+              </p>
+            </div>
+            <div class="btn-box">
+              <!-- 2025-02-06 a태그 제거 -->
+              <p class="txt-h9">444 77 11</p>
+            </div>
+          </div>
+          <img class="list-box__icon" src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-contac-call.svg">
+        </li>
+        <li class="list-box__item">
+          <div class="tit-box">
+            <div class="tit-box__inner">
+              <p class="txt-h6">
+                <span class="pc-txt">Inquiry</span>
+                <span class="mo-txt">Inquiry</span>
+              </p>
+              <p class="txt-p6">Our members will respond within 1-2 days. If you have any inquiries, please feel free to write them down.</p>
+            </div>
+            <div class="btn-box">
+              <a role="button" class="btn-block type2 md" href="#" target="">
+                <span class="btn-block__txt">Create Inquiry</span>
+              </a>
+            </div>
+          </div>
+          <img class="list-box__icon" src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-myinquiry.svg">
+        </li>
+      </ul>
+      <!-- //banner -->
+    </div>
+    <!-- //success -->
+    <!-- failed -->
+    <div class="result__failed">
+      <div class="msg-box">
+        <p class="txt-h3">Sorry for your inconvenience</p>
+        <p class="txt-p4 txt-fw-b">Order is failed.<br>Please try again or contact the support team for assistance.</p>
+      </div>
+      <div class="btn-box">
+        <button type="button" class="btn-block md type2">
+          <span class="btn-block__txt">Retry</span>
+        </button>
+      </div>
+      <!-- banner -->
+      <ul class="list-box banner-box">
+        <li class="list-box__item">
+          <div class="tit-box">
+            <div class="tit-box__inner">
+              <p class="txt-h6">
+                <span class="pc-txt">Contact Info</span>
+                <span class="mo-txt">Contact Info</span>
+              </p>
+              <p class="txt-p6">
+                <!-- 2025-02-06 span, a태그 추가 -->
+                <span> Monday - Friday : 9:00am - 6:00pm</span>
+                <span>Any questions, call <a href="tel:4447711">444 77 11</a></span>
+              </p>
+            </div>
+            <div class="btn-box">
+              <!-- 2025-02-06 a태그 제거 -->
+              <p class="txt-h9">444 77 11</p>
+            </div>
+          </div>
+          <img class="list-box__icon" src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-contac-call.svg">
+        </li>
+        <li class="list-box__item">
+          <div class="tit-box">
+            <div class="tit-box__inner">
+              <p class="txt-h6">
+                <span class="pc-txt">Inquiry</span>
+                <span class="mo-txt">Inquiry</span>
+              </p>
+              <p class="txt-p6">Our members will respond within 1-2 days. If you have any inquiries, please feel free to write them down.</p>
+            </div>
+            <div class="btn-box">
+              <a role="button" class="btn-block type2 md" href="#" target="">
+                <span class="btn-block__txt">Create Inquiry</span>
+              </a>
+            </div>
+          </div>
+          <img class="list-box__icon" src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-myinquiry.svg">
+        </li>
+      </ul>
+      <!-- //banner -->
+    </div>
+    <!-- //failed -->
+  </section>
+  <!-- //component -->
+  <!-- common.js -->
+  <script src="/pub-only/js/main-lib.js"></script>
+  <script src="/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/js/main.js"></script>
+  <script src="clientlibs/js/main.js"></script>
+  <script>
+    // 퍼블화인용
+    // product detail list 접고 펼치기
+    function resultFoldedEvent() {
+      const prdBoxs = document.querySelectorAll(".checkout-result .prd-detail-info");
+      prdBoxs.forEach((box) => {
+        const btnAllFold = box.querySelector(".prd-list-top .icon-arrow-bottom");
+        const parent = btnAllFold.closest(".prd-detail-info");
+        btnAllFold.addEventListener("click", () => {
+          if (parent.classList.contains("folded")) {
+            parent.classList.remove("folded");
+          } else {
+            parent.classList.add("folded");
+          }
+        });
+      });
+    }
+
+    function prdDetailOpenEvent() {
+      const items = document.querySelectorAll(".prd-list .list-item .item__total .icon-arrow-bottom");
+      items?.forEach((item) => {
+        const parent = item.closest(".item__total");
+        item.addEventListener("click", () => {
+          if (parent.classList.contains("active")) {
+            parent.classList.remove("active");
+          } else {
+            parent.classList.add("active");
+          }
+        });
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      resultFoldedEvent();
+      prdDetailOpenEvent();
+    });
+
+  </script>
+</body>
+
+</html>

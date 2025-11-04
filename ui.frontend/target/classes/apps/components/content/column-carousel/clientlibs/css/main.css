@@ -1,0 +1,127 @@
+.col-carousel {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.col-carousel .col-carousel__swiper {
+  padding: 0 24px;
+}
+.col-carousel .list-box {
+  height: 100%;
+}
+.col-carousel .list-box__item {
+  width: 100%;
+  padding: 32px;
+  min-height: 240px;
+  position: relative;
+}
+.col-carousel .tit-box .title {
+  line-height: 33px;
+  margin-bottom: 12px;
+}
+.col-carousel .tit-box .title span {
+  line-height: inherit;
+}
+.col-carousel .tit-box .desc {
+  color: #555;
+  line-height: 27px;
+  padding-bottom: 77px;
+}
+.col-carousel .swiper-button-prev::after,
+.col-carousel .swiper-button-next::after {
+  background-size: 100%;
+}
+.col-carousel .swiper-button-prev {
+  left: 6px;
+}
+.col-carousel .swiper-button-next {
+  right: 6px;
+}
+.col-carousel .swiper-button-disabled {
+  display: none;
+}
+.col-carousel .col-carousel__moreBtn {
+  padding: 4px 0;
+  position: absolute;
+  bottom: 66px;
+  margin: 0;
+}
+.col-carousel .col-carousel-box__icon {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+}
+
+/* =============== media query =============== */
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  .col-carousel .col-carousel__swiper {
+    padding: 0 1.667vw;
+  }
+  .col-carousel .list-box__item {
+    padding: 2.222vw;
+    min-height: 16.667vw;
+  }
+  .col-carousel .tit-box .title {
+    line-height: 2.292vw;
+    margin-bottom: 0.833vw;
+  }
+  .col-carousel .tit-box .desc {
+    line-height: 1.875vw;
+    padding-bottom: 5.347vw;
+  }
+  .col-carousel .swiper-button-prev {
+    left: 0.417vw;
+  }
+  .col-carousel .swiper-button-next {
+    right: 0.417vw;
+  }
+  .col-carousel .col-carousel__moreBtn {
+    padding: 0.278vw 0;
+    bottom: 4.583vw;
+  }
+  .col-carousel .col-carousel-box__icon {
+    bottom: 2.222vw;
+    right: 2.222vw;
+    width: 3.889vw;
+    height: 3.889vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col-carousel .list-box__item {
+    padding: 24px 16px;
+    min-height: 160px;
+  }
+  .col-carousel .tit-box .title {
+    font-size: 18px !important;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+  .col-carousel .tit-box .desc {
+    font-size: 14px !important;
+    line-height: 21px;
+    padding-bottom: 40px;
+  }
+  .tit-box .col-carousel__moreBtn {
+    margin-top: 8px;
+    bottom: 40px;
+  }
+  .col-carousel .col-carousel-box__icon {
+    bottom: 24px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
+  .btn-txt-underline .btn-txt__txt {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .col-carousel .swiper-button-prev {
+    left: 16px;
+  }
+  .col-carousel .swiper-button-next {
+    right: 16px;
+  }
+}
