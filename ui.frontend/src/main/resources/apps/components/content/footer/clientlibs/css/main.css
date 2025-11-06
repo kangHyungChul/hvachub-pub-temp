@@ -15,7 +15,8 @@
   flex-wrap: wrap;
 }
 .footer-wrap .sitemap__item {
-  width: 232px;
+  /* width: 232px; */
+  width: auto;
   height: 100%;
   padding: 32px 24px;
   border-right: 1px solid #dddddd;
@@ -185,7 +186,7 @@
 @media only screen and (min-width: 769px) and (max-width: 1440px) {
   /**** sitemap ****/
   .footer-wrap .sitemap__item {
-    width: 16.111vw;
+    /* width: 16.111vw; */
     padding: 2.222vw 1.667vw;
   }
   .footer-wrap .sitemap__item.single-item {

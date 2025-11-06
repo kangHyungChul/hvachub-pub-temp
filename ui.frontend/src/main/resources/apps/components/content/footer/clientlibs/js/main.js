@@ -4,12 +4,15 @@ function setParentHeight() {
   if (parent) {
     const children = parent.querySelectorAll(".sitemap__item");
     let maxHeight = Math.max(...Array.from(children, (child) => child.offsetHeight));
+    let minHeight = 0;
     children?.forEach((child) => {
       const childHeight = child.offsetHeight;
+      childHeight < minHeight || minHeight === 0 ? minHeight = childHeight : minHeight;
       if (childHeight > maxHeight) {
         maxHeight = childHeight;
       }
     });
+    maxHeight = maxHeight + minHeight + 32;
     heightCalculate(parent, maxHeight);
   }
 }
