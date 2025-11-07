@@ -14,7 +14,7 @@
 .saved-cart-result__wrap .btn-checkbox__wrap .btn-block__txt { font-family: var(--font-txt); } 
 .saved-cart .result-list__wrap { border-top: 2px solid #000; } 
 .saved-cart-accor__wrap { border-bottom: 1px solid #ccc; padding: 0 12px; } 
-.saved-cart-accor__wrap .btn-checkbox__txt { flex: 1; } 
+.saved-cart-accor__wrap .btn-checkbox__txt { flex: 1; word-break: keep-all; overflow-wrap: anywhere; } 
 .saved-cart-accor__tit { position: relative; display: flex; justify-content: flex-start; align-items: center; min-height: 56px; padding-right:32px; } 
 .saved-cart-accor__tit .btn-checkbox { display:inline-block; height: auto; } 
 .saved-cart-accor__tit .title-area, .saved-cart-accor__tit .input-area  { display:flex; align-items: center; gap:10px; width:100%; }

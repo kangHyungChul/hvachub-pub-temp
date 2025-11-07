@@ -16,12 +16,13 @@
 .order-list-sect .basic-list-wrap { padding: 0; border-radius: 0; } 
 /* result */
 .order-list-sect .basic-list__result { overflow-x: scroll; margin-bottom: 16px; } 
+.order-list-sect .basic-list__result .list-el { flex-grow: 1; flex-shrink: 1; }
 .order-list-sect .basic-list__result .el-snum { width: 168px; } 
 .order-list-sect .basic-list__result .el-num { width: 126px; } 
 .order-list-sect .basic-list__result .el-type,
 .order-list-sect .basic-list__result .el-total { width: 180px; } 
 .order-list-sect .basic-list__result .el-date { width: 170px; } 
-.order-list-sect .basic-list__result .el-name { flex: auto; } 
+.order-list-sect .basic-list__result .el-name { width: 246px; } 
 .order-list-sect .basic-list__result .el-pdf { width: 92px; } 
 .order-list-sect .basic-list__result .el-credit { width: 120px; } 
 .order-list-sect .basic-list__result .el-status { width: 110px; } 
@@ -81,7 +82,7 @@
  .order-list-sect .basic-list__result .el-snum,
  .order-list-sect .basic-list__result .el-num { width: 120px; } 
  .order-list-sect .basic-list__result .el-type { width: 113px; } 
- .order-list-sect .basic-list__result .el-name { flex: none; width: 240px; } 
+ .order-list-sect .basic-list__result .el-name { width: 240px; } 
  .order-list-sect .basic-list__result .el-total { width: 122px; } 
  .order-list-sect .basic-list__result .el-date { width: 122px; } 
  .order-list-sect .basic-list__result .el-pdf { width: 76px; } 
