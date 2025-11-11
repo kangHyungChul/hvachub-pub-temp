@@ -39,7 +39,13 @@
 .order-datail-sect .module-box .row-module .el-material { background: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 6.83011H8.5V8H0.5V6.83011ZM0.5 0H1.78754V7.26022H0.5V0Z' fill='black'/%3E%3C/svg%3E") no-repeat 24px 50%; padding-left: 56px; } 
 /* multi project */
 .order-datail-sect .basic-list__resulit--multiple .el-rdd,
-.order-datail-sect .basic-list__resulit--multiple .el-date { flex: 0 1 120px; } 
+.order-datail-sect .basic-list__resulit--multiple .el-date { width: 120px; } 
+/* buy online */
+.order-datail-sect .basic-list__resulit--online .el-material { width: 208px; } 
+.order-datail-sect .basic-list__resulit--online .el-number { width: 120px; } 
+.order-datail-sect .basic-list__resulit--online .el-carrier { width: 76px; } 
+.order-datail-sect .basic-list__resulit--online .el-rdd,
+.order-datail-sect .basic-list__resulit--online .el-date { width: 120px; } 
 
 
 /************************************************************************************** 
@@ -126,5 +132,11 @@
  .order-datail-sect .list-body .list-el .txt-p5,
  .order-datail-sect .list-body .list-el .txt-p6 { font-size: 12px !important; } 
  .order-datail-sect .list-body .el-material .img-box { width: 40px; height: 40px; } 
+
+ /* buy online */
+.order-datail-sect .basic-list__resulit--online .el-number { width: 100px; } 
+.order-datail-sect .basic-list__resulit--online .el-rdd,
+.order-datail-sect .basic-list__resulit--online .el-date { width: 100px; } 
+
 
 /* [E]Mobile */ } 
