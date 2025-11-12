@@ -727,12 +727,6 @@
           <li class="list-el el-number">
             <span class="txt-p5 txt-fw-b">DO Number</span>
           </li>
-          <li class="list-el el-carrier">
-            <span class="txt-p5 txt-fw-b">Carrier</span>
-          </li>
-          <li class="list-el el-number">
-            <span class="txt-p5 txt-fw-b">Tracking<br>Number</span>
-          </li>
           <li class="list-el el-date">
             <span class="txt-p5 txt-fw-b">Delivered<br>Date</span>
           </li>
@@ -771,13 +765,8 @@
                 <span class="txt-p5">2024-03-20</span>
               </li>
               <li class="list-el el-number">
-                <span class="txt-p5">123123123</span>
-              </li>
-              <li class="list-el el-carrier">
-                <span class="txt-p5">Fedex</span>
-              </li>
-              <li class="list-el el-number">
-                <span class="txt-p5">123123123</span>
+                <!-- 링크 사용 시 span대신 a사용, point-link class 추가 -->
+                <a href="#" class="txt-p5 point-link" data-layer-target="delivery-detail-popup">123123123</a>
               </li>
               <li class="list-el el-date">
                 <span class="txt-p5">2024-03-25</span>
@@ -835,6 +824,41 @@
     </div>
   </div>
   <!-- //Cancel Order confirm -->
+
+  <!-- delivery detail popup-->
+  <div class="popup-wrap delivery-detail-popup " id="delivery-detail-popup">
+    <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+      <div class="popup__header">
+        <p class="txt-h4">Delivery Detail</p>
+      </div>
+      <div class="popup__container">
+        <table class="basic-table">
+          <tbody>
+            <tr>
+              <th scope="row" class="txt-left">DO Number</th>
+              <td>7313835227</td>
+            </tr>
+            <tr>
+              <th scope="row" class="txt-left">Carrier</th>
+              <td>
+                HELLMANN WORLDWIDE LOGISTIC POLSKA<br>POLSK
+              </td>
+            </tr>
+            <tr>
+              <th scope="row" class="txt-left">Tracking Number</th>
+              <td>PT19H36M40S</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="popup__footer">
+        <button type="button" class="btn-block type2 lg" onclick="window.hvachubFunc.closePopup('delivery-detail-popup')">
+          <span class="btn-block__txt">Close</span>
+        </button>
+      </div>
+      <button type="button" class="btn-icon icon-close"><span class="txt-blind">Close</span></button>
+    </div>
+  </div>
 
   <!-- //component -->
 
