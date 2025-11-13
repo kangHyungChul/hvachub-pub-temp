@@ -173,8 +173,37 @@ document.addEventListener("DOMContentLoaded", function () {
   prdSearchEvent();
   prdSearchMoEvent();
 });
-window.addEventListener("resize", function () {
-  prdSearchEvent();
+
+// window.addEventListener("resize", function () {
+//   // prdSearchEvent();
+//   prdSearchMoEvent();
+//   containerHeight();
+// });
+
+// 2025-11-13 추가
+// debounce 처리
+// prdSearchEvent 리사이즈에서 제거거
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+const handleResize = debounce(function() {
   prdSearchMoEvent();
-  containerHeight();
-});
+  
+  // 팝업이 열려있을 때만 높이 재계산
+  const popupActive = document.querySelector(".prd-sh-wrap");
+  if (popupActive && popupActive.classList.contains("active")) {
+    containerHeight();
+  }
+}, 150);
+
+// Resize
+window.addEventListener("resize", handleResize);
