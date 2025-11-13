@@ -5,6 +5,7 @@
 /* left - delivery */
 .detail__delivery .sect-box + .sect-box { margin-top: 24px; } 
 .detail__delivery .sect-box .sect-box-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; } 
+.detail__delivery .sect-box .btn-group { display: flex; column-gap: 12px; }
 .detail__delivery .shipping-list { padding-bottom: 16px; border-bottom: 1px solid #dddddd; } 
 .detail__delivery .shipping-list .list-el { display: flex; align-items: flex-start; margin-bottom: 16px; } 
 .detail__delivery .shipping-list .el-label { flex: 0 0 168px; font-size: 18px; font-weight: 700; padding-block:4px 5px; } 
@@ -109,6 +110,11 @@
 .pop-select-address .address-list .list-el { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; border-bottom: 1px solid #ddd; } 
 .pop-select-address .address-list .el-txt .txt-p6 { text-align: left; } 
 .pop-select-address .popup__footer.inshadow { box-shadow: var(--footer-shadow); } 
+
+ /* popup: custom address */
+ .custom-address .field-row-item { display:flex; gap:24px; margin-top:24px; }
+ .custom-address .field-row-item .field-box.col2 {flex-basis: calc(50% - 12px);}
+ .custom-address .field-row-item .txt-label { line-height:36px; margin-bottom:8px; }
 
 /************************************************************************************** 
 ======================================= Tablet ======================================== 
@@ -323,6 +329,11 @@
  .pop-select-address .popup__footer.shadow,
  .pop-select-address .popup__footer.inshadow { box-shadow: none; border-top: 1px solid #cccccc; } 
  .pop-select-address .popup__footer .btn-block { max-width: none !important; width: 100%; } 
+
+  /* popup: custom address */
+ .custom-address.pophead-line .popup-wrap__inner .popup__header { margin-inline: 16px; }
+ .custom-address .field-row-item { flex-direction: column; }
+ .custom-address .field-row-item .field-box.col2 {flex-basis: 100%;}
  
  
  /* [E]Mobile */ } 

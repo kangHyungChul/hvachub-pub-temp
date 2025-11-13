@@ -40,10 +40,17 @@
           </div>
           <div class="sect-box">
             <div class="sect-box-top">
-              <p class="txt-h7">Shipping Address </p>
-              <button type="button" class="btn-block md" data-layer-target="popup-select-address">
-                <span class="btn-block__txt">Select</span>
-              </button>
+              <p class="txt-h7">Shipping Address</p>
+              <!-- 2025-11-13 추가 // 버튼 그룹핑 -->
+              <div class="btn-group">
+                <!-- 2025-11-13 추가 // Custom Address 버튼 -->
+                <button type="button" class="btn-block type2 md" data-layer-target="popup-custom-address">
+                  <span class="btn-block__txt">Custom Address</span>
+                </button>
+                <button type="button" class="btn-block md" data-layer-target="popup-select-address">
+                  <span class="btn-block__txt">Select</span>
+                </button>
+              </div>
             </div>
             <ul class="shipping-list">
               <li class="list-el">
@@ -1680,6 +1687,114 @@
       </div>
     </div>
     <!-- //error alert -->
+
+    <!-- 2025-11-13 추가 // custom address popup -->
+    <div class="popup-wrap pophead-line custom-address" id="popup-custom-address">
+      <div class="popup-wrap__inner" role="alertdialog" aria-modal="true">
+        <div class="popup__header">
+          <p class="txt-h4">Custom Address</p>
+        </div>
+        <div class="popup__container">
+          <!-- field-box-wrap start // -->
+          <div class="field-box-wrap">
+            <!-- form__wrap start //-->
+            <div class="form__wrap">
+  
+              <div class="field-row-item">    
+                <div class="field-box col2">
+                  <label class="txt-label txt-req" for="address-name">Address Name</label>
+                  <div class="input-box">
+                    <input type="text" class="input-box__input" id="address-name" placeholder="Type an Address Name" value="UK Office"  maxlength="1000" disabled>
+                  </div>
+                </div>
+              </div>    
+  
+              <div class="field-row-item">
+                <div class="field-box col2">
+                  <label class="txt-label txt-req" for="Country">Country</label>
+                  <div class="input-box">
+                    <input type="text" class="input-box__input" id="Country" placeholder="Type an country" value="United Kingdom"  maxlength="1000" disabled>
+                  </div>
+                </div>
+    
+                <div class="field-box col2">
+                  <label class="txt-label txt-req">Region</label>
+                  <div class="combo-box">
+                    <button type="button" class="combo-box__txt" aria-haspopup="true" aria-controls="combo-box__menu" aria-expanded="false">
+                      <span class="txt-placeholder">Select a region</span>
+                    </button>
+                    <div class="combo-box__menu" role="menu" aria-labelledby="combo-box__txt">
+                      <ul class="combo-box__menu-list">
+                        <li role="menuitem" class="active">All</li>                  
+                      </ul>
+                    </div>
+                  </div>
+                  <p class="txt-error">This field is required.</p>
+                </div>
+              </div>  
+  
+              <div class="field-row-item">
+                <div class="field-box col2">
+                  <label class="txt-label txt-req" for="city">City</label>
+                  <div class="input-box">
+                    <input type="text" class="input-box__input" id="city" placeholder="Type a city​" value=""  maxlength="1000" required="">
+                    <p class="txt-error">This field is required.</p>
+                  </div>
+                </div>
+    
+                <div class="field-box col2">
+                  <label class="txt-label txt-req" for="District">District</label>
+                  <div class="input-box">
+                    <input type="text" class="input-box__input" id="District" placeholder="Type a district" value=""  maxlength="1000" required="">
+                    <p class="txt-error">This field is required.</p>
+                  </div>
+                </div>
+              </div>  
+  
+              <div class="field-row-item">
+                <div class="field-box col2">
+                  <label class="txt-label txt-req" for="Address-Line1">Address Line1</label>
+                  <div class="input-box">
+                    <input type="text" class="input-box__input" id="Address-Line1" placeholder="Type the address line " value=""  maxlength="1000"  required="">
+                    <p class="txt-error">This field is required.</p>
+                  </div>
+                </div>
+    
+                <div class="field-box col2">
+                  <label class="txt-label" for="Address-Line2">Address Line2</label>
+                  <div class="input-box">
+                    <input type="text" class="input-box__input" id="Address-Line2" placeholder="Type the address line 2" value=""  maxlength="1000">
+                  </div>
+                </div>
+              </div>  
+  
+              <div class="field-row-item">
+                <div class="field-box col2">
+                  <label class="txt-label txt-req" for="Postal-Code">Postal Code</label>
+                  <div class="input-box">
+                    <input type="text" class="input-box__input" id="Postal-Code" placeholder="Type a postal code " value=""  maxlength="1000" required="">
+                    <p class="txt-error">This field is required.</p>
+                  </div>
+                </div>              
+              </div>  
+
+            </div>
+            <!-- form__wrap end //--> 
+          </div> 
+          <!-- // field-box-wrap start -->
+        </div>
+        <div class="popup__footer">
+          <button type="button" class="btn-block lg" onclick="window.hvachubFunc.closePopup('popup-custom-address')">
+            <span class="btn-block__txt">Cancle</span>
+          </button>
+          <button type="button" class="btn-block type2 lg">
+            <span class="btn-block__txt">Save</span>
+          </button>
+        </div>
+        <button type="button" class="btn-icon icon-close"> <span class="txt-blind">Close</span> </button>
+      </div>
+    </div>
+    <!-- //custom address popup -->
   </section>
   <!-- //component -->
 
