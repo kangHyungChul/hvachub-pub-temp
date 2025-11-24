@@ -7,7 +7,7 @@
 
 .prd-sh-wrap .popup-wrap__inner { width:1440px; height: min(1080px, 95%); max-height: min(1080px, 95%);} 
 .prd-sh-wrap .popup-wrap__inner:not(:has(.popup__footer)) .popup__header {padding-top:0; padding-bottom: 8px; } 
-.prd-sh-wrap .popup-wrap__inner .popup__container { position: relative; overflow-y: hidden;  height: calc(100% - 72px) !important; padding-right: 40px; } 
+.prd-sh-wrap .popup-wrap__inner .popup__container { position: relative; overflow-y: unset;  height: calc(100% - 72px) !important; padding-right: 40px; } 
 
 .sh-inner-area {display:flex; flex-wrap:nowrap; height:100%; border-top:1px solid #ddd;}
 
