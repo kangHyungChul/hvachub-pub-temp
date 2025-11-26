@@ -3,6 +3,7 @@ function setParentHeight() {
 
   if (parent) {
     const children = parent.querySelectorAll(".sitemap__item");
+    parent.style.height = "auto";
     let maxHeight = Math.max(...Array.from(children, (child) => child.offsetHeight));
     let minHeight = 0;
     children?.forEach((child) => {
@@ -93,7 +94,7 @@ function FooterInitialize() {
 
 document.addEventListener("DOMContentLoaded", FooterInitialize);
 window.addEventListener("resize", () => {
-  FooterInitialize();
+  // FooterInitialize();
   handleWindowSizeChangeFooter();
 });
 
