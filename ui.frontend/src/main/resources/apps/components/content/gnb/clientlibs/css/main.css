@@ -248,6 +248,8 @@
  .header-gnb .gnb-4depth .gnb-4depth__tit { font-size: 14px; } 
  .header-gnb .gnb-3depth:has(.gnb-4depth-box) { padding-bottom: 0; } 
  .header-gnb .gnb-3depth:has(.gnb-4depth-box) .gnb-3depth__tit { cursor: default; } 
+ .header-gnb .gnb-3depth.is-lock .gnb-3depth__tit { background: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-lock-header.svg)
+    no-repeat right 2px; background-size: 18px; color: #757575; padding-right: 26px; cursor: default; } 
  
  /**** quick, uility ****/
  .header-wrap .quick-menu-box { display: none; } 
