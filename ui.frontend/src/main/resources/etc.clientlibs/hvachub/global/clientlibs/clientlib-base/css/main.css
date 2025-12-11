@@ -1260,6 +1260,8 @@ p, span, label, a, b, strong, dt, dd, th, td {
 /* line-list */
 .line-list li .item { position: relative; display:flex; justify-content: flex-start; padding-left:10px; font-size:14px; font-weight: 400; }
 .line-list li .item:before {content:'-'; position: absolute; top:0; left:0; align-items: flex-start; }
+.line-list li .item.non-bullet { padding-left: 0; }
+.line-list li .item.non-bullet:before { display: none; }
 .line-list li .item strong { padding-right:2px; font-size:14px; font-weight: 700; }
 .line-list li .item span { font-size:14px; font-weight:400; text-align: left;}
 .line-list.bold li .item { font-weight:700; }
