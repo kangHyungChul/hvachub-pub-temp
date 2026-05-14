@@ -2020,10 +2020,39 @@
             <!-- 2025-07-28 result-right 추가 // -->
             <div class="result-right">
               <!--  compatibility product시 class 추가 : comp-type -->              
-              <div class="comp-type-wrap" style="display: ;">
+              <div class="comp-type-wrap compatible-area" style="display: ;"> <!-- 260514 live와 맞추기 위해 class 추가 (compatible-area)-->
                 <!--  tit-area // -->
                 <div class="tit-area">
-                    <strong class="tit">Compatibility Product</strong>
+                    <!-- 260514 툴팁 아이콘 및 문구 추가를 위해 라이브 환경에서 코드 가져옴 -->
+                    <div style="display: inline-flex; align-items: center; gap: 4px;">
+                      <strong class="tit">Compatibility Product</strong>
+                      <div class="tooltip-box">
+                        <div class="tooltip">
+                          <button type="button" class="btn-icon tooltip__btn type-black">
+                            <span class="txt-blind">Tooltip</span>
+                          </button>
+                          <div class="tooltip__contents">
+                            <div class="tooltip__contents-inner">
+                              <button type="button" class="btn-icon tooltip-close__btn">
+                                <span class="txt-blind">tooltip close</span>
+                              </button>
+                              <div class="cont">
+                                <!-- 툴팁 문구 -->
+                                 <ul class="status-box">
+                                   <li class="txt-p7">
+                                    <strong>Compatibility Product</strong>
+                                   </li>
+                                   <li class="txt-p7">
+                                    Compatible Products are items that are  commonly purchased together as a bundle.  Items listed here will be automatically added to cart  when you select the 'cart button on the main products.  If you do not wish to add compatible products,  remove by clicking the trash can button.
+                                   </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //260514 툴팁 아이콘 및 문구 추가를 위해 라이브 환경에서 코드 가져옴-->
                     <button type="button" class="btn-icon icon-refresh2">
                       <span class="txt-blind">refresh</span>
                     </button>
