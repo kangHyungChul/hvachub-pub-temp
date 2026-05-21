@@ -84,108 +84,106 @@
       <!-- 2025-01-10 div 삭제 invoice-list-result -->
       <!-- 2025-01-10 class 변경 result-list__wrap ==> basic-list__result / 태그 변경 ul ==> div -->
       <div class="basic-list__result">
-        <!-- head -->
-        <!-- 2025-01-10 class 변경 list__head ==> list-head / 태그 변경 li ==> ul-->
-        <ul class="list-head">
-          <!--  2025-01-10 항목 추가 및 순서 변경 / class 추가 list-el / class 변경 ' ord-' ==> ' el- '  -->
-          <!-- 260414 가변적인 변경을 위해 강제 줄바꿈 제거 -->
-          <li class="list-el el-status"> <span class="txt-p5 txt-fw-b">Document Status</span> </li>
-          <li class="list-el el-num"> <span class="txt-p5 txt-fw-b">PO Number</span> </li>
-          <li class="list-el el-num"> <span class="txt-p5 txt-fw-b">SO Number</span> </li>
-          <li class="list-el el-num"> <span class="txt-p5 txt-fw-b">DO Number​</span> </li>
-          <li class="list-el el-doc"> <span class="txt-p5 txt-fw-b">Billing Document</span> </li>
-          <li class="list-el el-num"> <span class="txt-p5 txt-fw-b">Invoice Number</span> </li>
-          <li class="list-el el-date"> <span class="txt-p5 txt-fw-b">Invoice Date</span> </li>
-          <li class="list-el el-price"> <span class="txt-p5 txt-fw-b">Net Amount</span> </li>
-          <li class="list-el el-price"> <span class="txt-p5 txt-fw-b">VAT Amount</span> </li>
-          <li class="list-el el-total"> <span class="txt-p5 txt-fw-b">Total Amount</span> </li>
-          <li class="list-el el-pdf"> <span class="txt-p5 txt-fw-b">Invoice</span> </li>
-        </ul>
-        <!-- //head -->
-        <!-- result -->
-        <!-- 2025-01-10 class 변경 list__el-box ==> list-body / 태그 변경 li ==> ul -->
-        <ul class="list-body">
-          <!-- 2025-01-10 class 변경 : list__el ==> list-row  -->
-          <li class="list-row">
-            <div class="list-el el-status">
-              <span class="txt-p6 txt-fw-b">Open</span>
-            </div>
-            <div class="list-el el-num">
-              <span class="txt-p5">PQ12345678</span>
-            </div>
-            <div class="list-el el-num">
-              <a href="">
-                <span class="txt-p5">8123456789</span>
-              </a>
-            </div>
-            <div class="list-el el-num">
-              <span class="txt-p5">8000354221​</span>
-            </div>
-            <div class="list-el el-doc">
-              <span class="txt-p5">D023456789</span>
-            </div>
-            <div class="list-el el-num">
-              <span class="txt-p5">7600000676</span>
-            </div>
-            <div class="list-el el-date">
-              <span class="txt-p5">2024-03-28</span>
-            </div>
-            <div class="list-el el-price">
-              <span class="txt-p5">64.699,00 TL</span>
-            </div>
-            <div class="list-el el-price">
-              <span class="txt-p5">1.166,00 TL</span>
-            </div>
-            <div class="list-el el-total">
-              <span class="txt-p5  txt-fw-b">129.398,00 TL</span>
-            </div>
-            <div class="list-el el-pdf">
-              <a role="button" class="btn-icon icon-pdf" href="#">
-                <span class="txt-blind">PDF Download</span>
-              </a>
-            </div>
-          </li>
-          <li class="list-row">
-            <div class="list-el el-status">
-              <span class="txt-p6 txt-fw-b">Cleared</span>
-            </div>
-            <div class="list-el el-num">
-              <span class="txt-p5">PQ12345678</span>
-            </div>
-            <div class="list-el el-num">
-              <a href="">
-                <span class="txt-p5">8123456789</span>
-              </a>
-            </div>
-            <div class="list-el el-num">
-              <span class="txt-p5">8000354221​</span>
-            </div>
-            <div class="list-el el-doc">
-              <span class="txt-p5">D023456789</span>
-            </div>
-            <div class="list-el el-num">
-              <span class="txt-p5">7600000676</span>
-            </div>
-            <div class="list-el el-date">
-              <span class="txt-p5">2024-03-28</span>
-            </div>
-            <div class="list-el el-price">
-              <span class="txt-p5">64.699,00 TL</span>
-            </div>
-            <div class="list-el el-price">
-              <span class="txt-p5">1.166,00 TL</span>
-            </div>
-            <div class="list-el el-total">
-              <span class="txt-p5  txt-fw-b">129.398,00 TL</span>
-            </div>
-            <div class="list-el el-pdf">
-              <a role="button" class="btn-icon icon-pdf" href="#">
-                <span class="txt-blind">PDF Download</span>
-              </a>
-            </div>
-          </li>
-        </ul>
-        <!-- //result -->
+
+        <!-- 260521 ul/li 분리 구조 → table 구조로 변경 (헤더/바디 컬럼 정렬 동기화) -->
+        <table class="invoice-list-table">
+          <thead>
+            <tr>
+              <th scope="col" class="list-el el-status"><span class="txt-p5 txt-fw-b">Document Status</span></th>
+              <th scope="col" class="list-el el-num"><span class="txt-p5 txt-fw-b">PO Number</span></th>
+              <th scope="col" class="list-el el-num"><span class="txt-p5 txt-fw-b">SO Number</span></th>
+              <th scope="col" class="list-el el-num"><span class="txt-p5 txt-fw-b">DO Number</span></th>
+              <th scope="col" class="list-el el-doc"><span class="txt-p5 txt-fw-b">Billing Document</span></th>
+              <th scope="col" class="list-el el-num"><span class="txt-p5 txt-fw-b">Invoice Number</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Invoice Date</span></th>
+              <th scope="col" class="list-el el-price"><span class="txt-p5 txt-fw-b">Net Amount</span></th>
+              <th scope="col" class="list-el el-price"><span class="txt-p5 txt-fw-b">VAT Amount</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Total Amount</span></th>
+              <th scope="col" class="list-el el-pdf"><span class="txt-p5 txt-fw-b">Invoice</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="list-row">
+              <td class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Open</span>
+              </td>
+              <td class="list-el el-num">
+                <span class="txt-p5">PQ12345678</span>
+              </td>
+              <td class="list-el el-num">
+                <a href="">
+                  <span class="txt-p5">8123456789</span>
+                </a>
+              </td>
+              <td class="list-el el-num">
+                <span class="txt-p5">8000354221</span>
+              </td>
+              <td class="list-el el-doc">
+                <span class="txt-p5">D023456789</span>
+              </td>
+              <td class="list-el el-num">
+                <span class="txt-p5">7600000676</span>
+              </td>
+              <td class="list-el el-date">
+                <span class="txt-p5">2024-03-28</span>
+              </td>
+              <td class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </td>
+              <td class="list-el el-price">
+                <span class="txt-p5">1.166,00 TL</span>
+              </td>
+              <td class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </td>
+              <td class="list-el el-pdf">
+                <a role="button" class="btn-icon icon-pdf" href="#">
+                  <span class="txt-blind">PDF Download</span>
+                </a>
+              </td>
+            </tr>
+            <tr class="list-row">
+              <td class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Cleared</span>
+              </td>
+              <td class="list-el el-num">
+                <span class="txt-p5">PQ12345678</span>
+              </td>
+              <td class="list-el el-num">
+                <a href="">
+                  <span class="txt-p5">8123456789</span>
+                </a>
+              </td>
+              <td class="list-el el-num">
+                <span class="txt-p5">8000354221</span>
+              </td>
+              <td class="list-el el-doc">
+                <span class="txt-p5">D023456789</span>
+              </td>
+              <td class="list-el el-num">
+                <span class="txt-p5">7600000676</span>
+              </td>
+              <td class="list-el el-date">
+                <span class="txt-p5">2024-03-28</span>
+              </td>
+              <td class="list-el el-price">
+                <span class="txt-p5">64.699,00 TL</span>
+              </td>
+              <td class="list-el el-price">
+                <span class="txt-p5">1.166,00 TL</span>
+              </td>
+              <td class="list-el el-total">
+                <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
+              </td>
+              <td class="list-el el-pdf">
+                <a role="button" class="btn-icon icon-pdf" href="#">
+                  <span class="txt-blind">PDF Download</span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
         <!-- no result -->
         <div class="list-nodata" style="display: none;">
           <!-- 2025-03-02 txt-p6 ==> txt-p5 -->

@@ -71,6 +71,63 @@
   flex: 1 1 auto;
 }
 
+.invoice-list-sect .list-head,
+.invoice-list-sect .list-body {
+  width: fit-content;
+  min-width: 100%;
+}
+
+.invoice-list-sect .list-body .el-num a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.invoice-list-sect .list-body .el-price,
+.invoice-list-sect .list-body .el-total {
+  text-align: right;
+}
+
+/* 260521 table 구조 (하단 복사 영역) */
+.invoice-list-sect .invoice-list-table {
+  width: 100%;
+  min-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.invoice-list-sect .invoice-list-table th,
+.invoice-list-sect .invoice-list-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 12px;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
+}
+
+.invoice-list-sect .invoice-list-table thead th {
+  min-height: 56px;
+  border-bottom: 1px solid #000;
+}
+
+.invoice-list-sect .invoice-list-table tbody td {
+  min-height: 56px;
+  border-bottom: 1px solid #dadada;
+}
+
+/* global .basic-list__result .list-row flex 스타일 초기화 */
+.invoice-list-sect .invoice-list-table .list-row {
+  display: table-row;
+  min-height: auto;
+  padding-block: 0;
+  border-bottom: 0;
+}
+
+.invoice-list-sect .invoice-list-table .list-el {
+  flex: none;
+  display: table-cell;
+}
+
 .invoice-list-sect .basic-list__result .el-status {
   width: 110px;
 }
@@ -87,19 +144,13 @@
   width: 75px;
 }
 
-.invoice-list-sect .list-head,
-.invoice-list-sect .list-body {
-  width: fit-content;
-  min-width: 100%;
-}
-
-.invoice-list-sect .list-body .el-num a:hover {
+.invoice-list-sect .invoice-list-table tbody .el-num a:hover {
   text-decoration: underline;
   font-weight: 700;
 }
 
-.invoice-list-sect .list-body .el-price,
-.invoice-list-sect .list-body .el-total {
+.invoice-list-sect .invoice-list-table tbody .el-price,
+.invoice-list-sect .invoice-list-table tbody .el-total {
   text-align: right;
 }
 
@@ -253,7 +304,10 @@
 
   .invoice-list-sect .list-head .txt-p5,
   .invoice-list-sect .list-body .txt-p5,
-  .invoice-list-sect .list-body .txt-p6 {
+  .invoice-list-sect .list-body .txt-p6,
+  .invoice-list-sect .invoice-list-table thead .txt-p5,
+  .invoice-list-sect .invoice-list-table tbody .txt-p5,
+  .invoice-list-sect .invoice-list-table tbody .txt-p6 {
     font-size: 12px !important;
   }
 

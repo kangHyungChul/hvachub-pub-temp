@@ -148,240 +148,212 @@
       <!-- 2025-01-10 div 삭제 orser-detail -->
       <!-- 2025-01-10 class 변경 result-list__wrap ==> basic-list__result / 태그 변경 ul ==> div -->
       <div class="basic-list__result">
-        <!-- head -->
-        <!-- 2025-01-10 class 변경 list__head ==> list-head / 태그 변경 li ==> ul-->
-        <ul class="list-head">
-          <!--  2025-01-10 항목 추가 및 순서 변경 / class 추가 list-el / class 변경 ' ord-' ==> ' el- '  -->
-          <li class="list-el el-material">
-            <span class="txt-p5 txt-fw-b">Material</span>
-          </li>
-          <li class="list-el el-qud">
-            <span class="txt-p5 txt-fw-b">Quantity</span>
-          </li>
-          <li class="list-el el-price">
-            <span class="txt-p5 txt-fw-b">Unit Price(USD)</span>
-          </li>
-          <li class="list-el el-total">
-            <span class="txt-p5 txt-fw-b">Net Amount (USD)​</span>
-          </li>
-          <li class="list-el el-price">
-            <span class="txt-p5 txt-fw-b">Unit Price(TL)</span>
-          </li>
-          <li class="list-el el-total">
-            <span class="txt-p5 txt-fw-b">Net Amount (TL)​</span>
-          </li>
-          <li class="list-el el-rdd">
-            <span class="txt-p5 txt-fw-b">RDD</span>
-          </li>
-          <li class="list-el el-date">
-            <span class="txt-p5 txt-fw-b">Estimated Date</span>
-          </li>
-          <li class="list-el el-date">
-            <span class="txt-p5 txt-fw-b">Delivered Date</span>
-          </li>
-          <li class="list-el el-status">
-            <span class="txt-p5 txt-fw-b">Status</span>
-          </li>
-        </ul>
-        <!-- head -->
-        <!-- result -->
-        <!-- 2025-01-10 class 변경 list__el-box ==> list-body / 태그 변경 li ==> ul -->
-        <ul class="list-body">
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+        <!-- 260521 ul/li 분리 구조 → table 구조로 변경 (헤더/바디 컬럼 정렬 동기화) -->
+        <table class="order-detail-table">
+          <thead>
+            <tr>
+              <th scope="col" class="list-el el-material"><span class="txt-p5 txt-fw-b">Material</span></th>
+              <th scope="col" class="list-el el-qud"><span class="txt-p5 txt-fw-b">Quantity</span></th>
+              <th scope="col" class="list-el el-price"><span class="txt-p5 txt-fw-b">Unit Price(USD)</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Net Amount (USD)</span></th>
+              <th scope="col" class="list-el el-price"><span class="txt-p5 txt-fw-b">Unit Price(TL)</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Net Amount (TL)</span></th>
+              <th scope="col" class="list-el el-rdd"><span class="txt-p5 txt-fw-b">RDD</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Estimated Date</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Delivered Date</span></th>
+              <th scope="col" class="list-el el-status"><span class="txt-p5 txt-fw-b">Status</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">999</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Open</span>
-              </li>
-            </ul>
-          </li>
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+              </td>
+            </tr>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">999</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">-</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Shipped</span>
-              </li>
-            </ul>
-          </li>
-          <!-- [F] 모듈 형태인 경우 : class 추가 module-box-->
-          <li class="lis-row-box module-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+              </td>
+            </tr>
+            <!-- [F] 모듈 형태인 경우 : class 추가 module-box-->
+            <tr class="list-row module-box">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">999</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Completed</span>
-              </li>
-            </ul>
+              </td>
+            </tr>
             <!-- [F] 모듈 : class 추가 row-module -->
-            <ul class="list-row row-module">
-              <li class="list-el el-material">
+            <tr class="list-row row-module">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">999</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Prepared</span>
-              </li>
-            </ul>
-            <ul class="list-row row-module">
-              <li class="list-el el-material">
+              </td>
+            </tr>
+            <tr class="list-row row-module">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">999</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Canceled</span>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- result -->       
+              </td>
+            </tr>
+          </tbody>
+        </table>       
           
         <!-- no data(2025-07-10 add start) // -->
         <div class="list-nodata">
@@ -394,390 +366,389 @@
 
       <!-- [F] Run-rate, buy online -->
       <div class="basic-list__result">
-        <!-- head -->
-        <ul class="list-head">
-          <li class="list-el el-material">
-            <span class="txt-p5 txt-fw-b">Material</span>
-          </li>
-          <li class="list-el el-qud">
-            <span class="txt-p5 txt-fw-b">Quantity</span>
-          </li>
-          <li class="list-el el-price">
-            <span class="txt-p5 txt-fw-b">Unit Price</span>
-          </li>
-          <li class="list-el el-total">
-            <span class="txt-p5 txt-fw-b">Net Amount</span>
-          </li>
-          <li class="list-el el-rdd">
-            <span class="txt-p5 txt-fw-b">RDD</span>
-          </li>
-          <li class="list-el el-date">
-            <span class="txt-p5 txt-fw-b">Estimated Date</span>
-          </li>
-          <li class="list-el el-date">
-            <span class="txt-p5 txt-fw-b">Delivered Date</span>
-          </li>
-          <li class="list-el el-status">
-            <span class="txt-p5 txt-fw-b">Status</span>
-          </li>
-        </ul>
-        <!-- head -->
-        <!-- result -->
-        <ul class="list-body">
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+        <!-- 260521 ul/li 분리 구조 → table 구조로 변경 -->
+        <table class="order-detail-table">
+          <thead>
+            <tr>
+              <th scope="col" class="list-el el-material"><span class="txt-p5 txt-fw-b">Material</span></th>
+              <th scope="col" class="list-el el-qud"><span class="txt-p5 txt-fw-b">Quantity</span></th>
+              <th scope="col" class="list-el el-price"><span class="txt-p5 txt-fw-b">Unit Price</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Net Amount</span></th>
+              <th scope="col" class="list-el el-rdd"><span class="txt-p5 txt-fw-b">RDD</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Estimated Date</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Delivered Date</span></th>
+              <th scope="col" class="list-el el-status"><span class="txt-p5 txt-fw-b">Status</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">999</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5 txt-del">808.499,00 TL</span>
                 <span class="txt-p5">74.198,94 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-del">140.998,00 TL</span>
                 <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Open</span>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- result -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <!-- // Run-rate, buy online  -->
 
       <!-- 2025-09-01 추가 / multi project / class 추가 basic-list__resulit--multiple -->
       <div class="basic-list__result basic-list__resulit--multiple"> 
-        <!-- head -->
-        <ul class="list-head">
-          <li class="list-el el-material">
-            <span class="txt-p5 txt-fw-b">Material</span>
-          </li>
-          <li class="list-el el-qud">
-            <span class="txt-p5 txt-fw-b">Quantity</span>
-          </li>
-          <li class="list-el el-price">
-            <span class="txt-p5 txt-fw-b">Unit Price(USD)</span>
-          </li>
-          <li class="list-el el-total">
-            <span class="txt-p5 txt-fw-b">Net Amount(USD)</span>
-          </li>
-          <li class="list-el el-total">
-            <span class="txt-p5 txt-fw-b">Unit Price(TL)</span>
-          </li>
-          <li class="list-el el-total">
-            <span class="txt-p5 txt-fw-b">Net Amount(TL)</span>
-          </li>
-          <li class="list-el el-rdd">
-            <span class="txt-p5 txt-fw-b">RDD</span>
-          </li>
-          <li class="list-el el-date">
-            <span class="txt-p5 txt-fw-b">Estimated<br>Date</span>
-          </li>
-          <li class="list-el el-date">
-            <span class="txt-p5 txt-fw-b">Delivered<br>Date</span>
-          </li>
-          <li class="list-el el-status">
-            <span class="txt-p5 txt-fw-b">Status</span>
-          </li>
-        </ul>
-        <!-- head -->
-        <!-- result -->
-        <ul class="list-body">
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+        <!-- 260521 ul/li 분리 구조 → table 구조로 변경 -->
+        <table class="order-detail-table">
+          <thead>
+            <tr>
+              <th scope="col" class="list-el el-material"><span class="txt-p5 txt-fw-b">Material</span></th>
+              <th scope="col" class="list-el el-qud"><span class="txt-p5 txt-fw-b">Quantity</span></th>
+              <th scope="col" class="list-el el-price"><span class="txt-p5 txt-fw-b">Unit Price(USD)</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Net Amount(USD)</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Unit Price(TL)</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Net Amount(TL)</span></th>
+              <th scope="col" class="list-el el-rdd"><span class="txt-p5 txt-fw-b">RDD</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Estimated<br>Date</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Delivered<br>Date</span></th>
+              <th scope="col" class="list-el el-status"><span class="txt-p5 txt-fw-b">Status</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">2</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">129.398,00 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-25</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">-</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Open</span>
-              </li>
-            </ul>
-          </li>
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+              </td>
+            </tr>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">2</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">74.198,94 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">148.397,88 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-22</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-04-01</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Shipped</span>
-              </li>
-            </ul>
-          </li>
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+              </td>
+            </tr>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">3</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">148.397,88 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-23</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-04-02</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Completed</span>
-              </li>
-            </ul>
-          </li>
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+              </td>
+            </tr>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">888</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">148.397,88 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-21</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">-</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Canceled</span>
-              </li>
-            </ul>
-          </li>
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+              </td>
+            </tr>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">888</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5">64.699,00 TL</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-fw-b">148.397,88 TL</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-25</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">-</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Prepared</span>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- result -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <!-- //multi project -->
 
       <!-- 2025-11-11 추가 / buy online / class 추가 basic-list__resulit--online -->
       <div class="basic-list__result basic-list__resulit--online"> 
-        <!-- head -->
-        <ul class="list-head">
-          <li class="list-el el-material">
-            <span class="txt-p5 txt-fw-b">Material</span>
-          </li>
-          <li class="list-el el-qud">
-            <span class="txt-p5 txt-fw-b">Quantity</span>
-          </li>
-          <li class="list-el el-price">
-            <span class="txt-p5 txt-fw-b">Unit Price</span>
-          </li>
-          <li class="list-el el-total">
-            <span class="txt-p5 txt-fw-b">Net Amount</span>
-          </li>
-          <li class="list-el el-rdd">
-            <span class="txt-p5 txt-fw-b">RDD</span>
-          </li>
-          <li class="list-el el-date">
-            <span class="txt-p5 txt-fw-b">Estimated<br>Date</span>
-          </li>
-          <li class="list-el el-number">
-            <span class="txt-p5 txt-fw-b">DO Number</span>
-          </li>
-          <li class="list-el el-date">
-            <span class="txt-p5 txt-fw-b">Delivered<br>Date</span>
-          </li>
-          <li class="list-el el-status">
-            <span class="txt-p5 txt-fw-b">Status</span>
-          </li>
-        </ul>
-        <!-- head -->
-        <!-- result -->
-        <ul class="list-body">
-          <li class="lis-row-box">
-            <ul class="list-row">
-              <li class="list-el el-material">
+        <!-- 260521 ul/li 분리 구조 → table 구조로 변경 -->
+        <table class="order-detail-table">
+          <thead>
+            <tr>
+              <th scope="col" class="list-el el-material"><span class="txt-p5 txt-fw-b">Material</span></th>
+              <th scope="col" class="list-el el-qud"><span class="txt-p5 txt-fw-b">Quantity</span></th>
+              <th scope="col" class="list-el el-price"><span class="txt-p5 txt-fw-b">Unit Price</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Net Amount</span></th>
+              <th scope="col" class="list-el el-rdd"><span class="txt-p5 txt-fw-b">RDD</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Estimated<br>Date</span></th>
+              <th scope="col" class="list-el el-number"><span class="txt-p5 txt-fw-b">DO Number</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Delivered<br>Date</span></th>
+              <th scope="col" class="list-el el-status"><span class="txt-p5 txt-fw-b">Status</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="list-row">
+              <td class="list-el el-material">
                 <a href="javascript:void(0)" target="_blank">
                   <div class="img-box">
                     <img src="/pub-only/images/sample48_48.png" alt="">
                   </div>
                   <span class="txt-p5">AM200AXVAGH</span>
                 </a>
-              </li>
-              <li class="list-el el-qud">
+              </td>
+              <td class="list-el el-qud">
                 <span class="txt-p5">2</span>
-              </li>
-              <li class="list-el el-price">
+              </td>
+              <td class="list-el el-price">
                 <span class="txt-p5 txt-del">808.499,00 TL</span>
                 <span class="txt-p5">$21,053.75</span>
-              </li>
-              <li class="list-el el-total">
+              </td>
+              <td class="list-el el-total">
                 <span class="txt-p5 txt-del">808.499,00 TL</span>
                 <span class="txt-p5 txt-fw-b">$21,053.75</span>
-              </li>
-              <li class="list-el el-rdd">
+              </td>
+              <td class="list-el el-rdd">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-20</span>
-              </li>
-              <li class="list-el el-number">
+              </td>
+              <td class="list-el el-number">
                 <!-- 링크 사용 시 span대신 a사용, point-link class 추가 -->
                 <a href="#" class="txt-p5 point-link" data-layer-target="delivery-detail-popup">123123123</a>
-              </li>
-              <li class="list-el el-date">
+              </td>
+              <td class="list-el el-date">
                 <span class="txt-p5">2024-03-25</span>
-              </li>
-              <li class="list-el el-status">
+              </td>
+              <td class="list-el el-status">
                 <span class="txt-p6 txt-fw-b">Open</span>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <!-- result -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- //multi project -->
+
+      <!-- 260511 추가 / buy online 항목 추가 -->
+       <!-- 2025-11-11 추가 / buy online / class 추가 basic-list__resulit--online -->
+      <div class="basic-list__result basic-list__resulit--online"> 
+        <table class="order-detail-table">
+          <thead>
+            <tr>
+              <th scope="col" class="list-el el-material"><span class="txt-p5 txt-fw-b">Material</span></th>
+              <th scope="col" class="list-el el-qud"><span class="txt-p5 txt-fw-b">Quantity</span></th>
+              <th scope="col" class="list-el el-price"><span class="txt-p5 txt-fw-b">Unit Price</span></th>
+              <th scope="col" class="list-el el-total"><span class="txt-p5 txt-fw-b">Net Amount</span></th>
+              <th scope="col" class="list-el el-rdd"><span class="txt-p5 txt-fw-b">RDD</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Estimated<br>Date</span></th>
+              <th scope="col" class="list-el el-number"><span class="txt-p5 txt-fw-b">DO Number</span></th>
+              <th scope="col" class="list-el el-billing"><span class="txt-p5 txt-fw-b">Billing Document</span></th>
+              <th scope="col" class="list-el el-date"><span class="txt-p5 txt-fw-b">Delivered<br>Date</span></th>
+              <th scope="col" class="list-el el-status"><span class="txt-p5 txt-fw-b">Status</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="list-row">
+              <td class="list-el el-material">
+                <a href="javascript:void(0)" target="_blank">
+                  <div class="img-box">
+                    <img src="/pub-only/images/sample48_48.png" alt="">
+                  </div>
+                  <span class="txt-p5">AM200AXVAGH</span>
+                </a>
+              </td>
+              <td class="list-el el-qud">
+                <span class="txt-p5">2</span>
+              </td>
+              <td class="list-el el-price">
+                <span class="txt-p5 txt-del">808.499,00 TL</span>
+                <span class="txt-p5">$21,053.75</span>
+              </td>
+              <td class="list-el el-total">
+                <span class="txt-p5 txt-del">808.499,00 TL</span>
+                <span class="txt-p5 txt-fw-b">$21,053.75</span>
+              </td>
+              <td class="list-el el-rdd">
+                <span class="txt-p5">2024-03-20</span>
+              </td>
+              <td class="list-el el-date">
+                <span class="txt-p5">2024-03-20</span>
+              </td>
+              <td class="list-el el-number">
+                <!-- 링크 사용 시 span대신 a사용, point-link class 추가 -->
+                <a href="#" class="txt-p5 point-link" data-layer-target="delivery-detail-popup">123123123</a>
+              </td>
+              <td class="list-el el-number">
+                <span class="txt-p5">D023456789</span>
+              </td>
+              <td class="list-el el-billing">
+                <span class="txt-p5">2024-03-25</span>
+              </td>
+              <td class="list-el el-status">
+                <span class="txt-p6 txt-fw-b">Open</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <!-- //multi project -->
     </div>
