@@ -258,13 +258,24 @@
  .total-amount-box .total-amount__item .total__price .txt-p4 .txt-fw-b { font-weight: 400 !important; } 
 
  /* detail list */
- .order-datail-sect .basic-list__result { overflow-x: auto; } 
+ .order-datail-sect .basic-list-wrap { max-width: 100%; overflow: hidden; } 
+ .order-datail-sect .basic-list__result { overflow-x: auto; -webkit-overflow-scrolling: touch; } 
  .order-datail-sect .basic-list__result .el-material { width:210px; } 
  .order-datail-sect .basic-list__result .el-qud { width:80px; } 
  .order-datail-sect .basic-list__result .el-price,
  .order-datail-sect .basic-list__result .el-total,
  .order-datail-sect .basic-list__result .el-rdd,
  .order-datail-sect .basic-list__result .el-date { flex: none; width: 120px; } 
+ /* table: 뷰포트에 맞춰 압축하지 않고 가로 스크롤 (기존 ul list-head/body 방식) */
+ .order-datail-sect .order-detail-table {
+   width: max-content;
+   min-width: 100%;
+   table-layout: fixed;
+ }
+ .order-datail-sect .order-detail-table th,
+ .order-datail-sect .order-detail-table td {
+   padding-inline: 8px;
+ }
  .order-datail-sect .order-detail-table .el-material { width: 210px; min-width: 210px; } 
  .order-datail-sect .order-detail-table .el-qud { width: 100px; min-width: 100px; } 
  .order-datail-sect .order-detail-table .el-status { width: 122px; min-width: 122px; } 
@@ -273,9 +284,9 @@
  .order-datail-sect .order-detail-table .el-rdd,
  .order-datail-sect .order-detail-table .el-date,
  .order-datail-sect .order-detail-table .el-billing,
- .order-datail-sect .order-detail-table .el-number { width: auto; min-width: 120px; } 
- .order-datail-sect .basic-list__resulit--multiple .order-detail-table .el-rdd,
- .order-datail-sect .basic-list__resulit--multiple .order-detail-table .el-date { min-width: 120px; } 
+ .order-datail-sect .order-detail-table .el-number { width: 120px; min-width: 120px; } 
+ .order-datail-sect .order-detail-table tbody .el-material > a { gap: 12px; } 
+ .order-datail-sect .order-detail-table tr.row-module .el-material { padding-left: 40px; background-position: 12px 50%; } 
  .order-datail-sect .list-head .list-el .txt-p5,
  .order-datail-sect .list-body .list-el .txt-p5,
  .order-datail-sect .list-body .list-el .txt-p6,
@@ -284,7 +295,8 @@
  .order-datail-sect .order-detail-table tbody .txt-p6 { font-size: 12px !important; } 
  .order-datail-sect .list-body .el-material .img-box,
  .order-datail-sect .order-detail-table tbody .el-material .img-box { width: 40px; height: 40px; } 
- .order-datail-sect .order-detail-table thead th { height: 40px; } 
+ .order-datail-sect .order-detail-table thead th { height: 40px; padding-block: 6px; } 
+ .order-datail-sect .order-detail-table tbody td { padding-block: 6px; } 
 
  /********* bulk discount popup **********/
  .delivery-detail-popup .popup-wrap__inner .popup__header { margin-inline: 16px;}
