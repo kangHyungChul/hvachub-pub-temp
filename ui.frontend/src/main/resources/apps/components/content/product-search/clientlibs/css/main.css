@@ -483,6 +483,85 @@
   margin-top: 16px;
 }
 
+/* MO_Form index select (Figma) */
+.comp-type-item .index-select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.comp-type-item .index-select-wrap .field-box {
+  width: 100%;
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type {
+  width: 100%;
+  min-width: 100%;
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type .combo-box__txt {
+  display: flex;
+  align-items: center;
+  height: auto;
+  min-height: 40px;
+  padding: 8px 36px 8px 12px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  text-align: left;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type .combo-box__txt .txt-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #aaa;
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type .combo-box__txt::after {
+  top: 50%;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  transform: translateY(-50%);
+  background: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-selectbox-sm.svg) no-repeat 50% 50%;
+  background-size: 100%;
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type.active .combo-box__txt {
+  border-color: var(--primary_color1);
+  border-radius: 8px;
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type.active .combo-box__txt::after {
+  background-image: url(/etc.clientlibs/hvachub/global/clientlibs/clientlib-base/resources/images/icon-selectbox-active.svg);
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type .combo-box__menu {
+  top: calc(100% + 4px);
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type.active .combo-box__menu {
+  border-color: var(--primary_color1);
+}
+
+.comp-type-item .index-select-wrap .combo-box.box-type .combo-box__menu-list > li {
+  font-family: SamsungOne, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  padding: 8px 12px;
+}
+
 .result-right .comp-list-area .list-nodata {
   background: #fff;
 }
